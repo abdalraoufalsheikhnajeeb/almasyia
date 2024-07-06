@@ -87,6 +87,43 @@ const EgyptAir: React.FC = () => {
           website or contact their customer service at +20 2 2265 0000. Follow
           them on social media for the latest updates and promotions.
         </p>
+        <div>
+          <h2 className="text-2xl font-semibold mb-4">General Information</h2>
+          <table className="w-full text-left text-gray-700">
+            <tbody>
+              <tr>
+                <td className="font-semibold py-2">Code IATA</td>
+                <td className="py-2">MS</td>
+              </tr>
+              <tr>
+                <td className="font-semibold py-2">ICAO Code</td>
+                <td className="py-2">MSR</td>
+              </tr>
+              <tr>
+                <td className="font-semibold py-2">The owner</td>
+                <td className="py-2">The Egyptian government</td>
+              </tr>
+              <tr>
+                <td className="font-semibold py-2">Company Headquarters</td>
+                <td className="py-2">Cairo – Arab Republic of Egypt</td>
+              </tr>
+              <tr>
+                <td className="font-semibold py-2">
+                  The Main Operational Airport
+                </td>
+                <td className="py-2">Cairo International Airport</td>
+              </tr>
+              <tr>
+                <td className="font-semibold py-2">Number of destinations</td>
+                <td className="py-2">80 destinations</td>
+              </tr>
+              <tr>
+                <td className="font-semibold py-2">Year of establishment</td>
+                <td className="py-2">1932</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
