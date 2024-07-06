@@ -50,7 +50,7 @@ const WorldClock = ({ params: { lang } }: { params: { lang: Locale } }) => {
               <Image
                 loading="lazy"
                 quality={1}
-                className="flex-shrink-0 h-10 me-4"
+                className="flex-shrink-0 h-10 me-5"
                 width={50}
                 height={50}
                 src="/images/clock.svg"
