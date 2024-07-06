@@ -91,7 +91,18 @@ const Partners = ({ dic, data, title }: PartnersProps) => {
                     <h5 className="mb-2 text-2xl font-bold tracking-tight text-primary text-center">
                       {title}
                     </h5>
-                    <p className="mb-3 font-normal text-primary dark:text-gray-400"></p>
+
+                    <span className=" flex items-center justify-center  font-bold py-2 px-4 scale-110  mt-4 transition-all duration-300">
+                      Learn More
+                      <Image
+                        width={50}
+                        height={50}
+                        quality={1}
+                        src="/images/arrow.svg"
+                        alt="arrow"
+                        className="ml-2 transition-transform duration-300 hover:translate-x-1"
+                      />
+                    </span>
                   </div>
                 </div>
               </Link>
