@@ -196,7 +196,7 @@ export const ourProjects = [
     titleen: "Airport taxi services",
     titlear: "خدمات سيارات الأجرة في المطار",
     titleru: "Услуги такси в аэропорту",
-    src: "/images/taxis.webp",
+    src: "/images/Taxis.webp",
     route: "taxis",
   },
 ];
