@@ -7,10 +7,6 @@ const S7Airlines = async ({
 }: {
   params: { lang: Locale };
 }) => {
-  
- 
-
-
 if (lang === "en") {
   return (
     <div className="container mx-auto p-4">
