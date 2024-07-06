@@ -88,7 +88,7 @@ export default async function Home({
               }
 
               return (
-                <Link href={`/${lang}/Services/${card.rout}`} key={card.id}>
+                <Link href={`/${lang}/Services/${card.route}`} key={card.id}>
                   <div className="max-w-[90vw] relative bg-white border rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                     <Image
                       loading="lazy"
@@ -96,8 +96,8 @@ export default async function Home({
                       width={400}
                       height={200}
                       className="rounded-t-lg aspect-video object-cover"
-                      src={`/images/${card.rout}.webp`}
-                      alt=""
+                      src={card.src}
+                      alt="service image"
                     />
                     <div className="p-4 pb-7 flex-grow flex flex-col justify-between h-28">
                       <h5 className="mb-2 text-2xl font-bold tracking-tight text-primary text-center">

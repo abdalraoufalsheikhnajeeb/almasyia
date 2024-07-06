@@ -131,7 +131,7 @@ export const agents = [
     titlear: "وكيل معتمد للخطوط السورية للطيران",
     titleru: "Авторизованный агент SyrianAir",
   },
-];
+]
 
 export const ourProjects = [
   {
@@ -140,56 +140,64 @@ export const ourProjects = [
     titleen: "Flight reservations to all parts of the world",
     titlear: "حجوزات الطيران إلى جميع أنحاء العالم",
     titleru: "Бронирование авиабилетов во все уголки мира",
-    rout: "airLines",
+    src: "/images/airLines.webp",
+    route: "airLines",
   },
   {
     id: 6,
     titleen: "Tours, UAE, Russia, Türkiye,...",
     titlear: "جولات، الإمارات، روسيا، تركيا",
     titleru: "Туры, ОАЭ, Россия, Турция ,...",
-    rout: "tours",
+    src: "/images/tours.webp",
+    route: "tours",
   },
   {
     id: 7,
     titleen: "Hotel reservations",
     titlear: "حجوزات الفنادق",
     titleru: "Бронирование отелей",
-    rout: "hotelsReservation",
+    src: "/images/hotelsReservation.webp",
+    route: "hotelsReservation",
   },
   {
     id: 8,
     titleen: "Travel visas",
     titlear: "تأشيرات السفر",
     titleru: "Туристические визы",
-    rout: "visas",
+    src: "/images/visas.webp",
+    route: "visas",
   },
   {
     id: 9,
     titleen: "Travel insurance",
     titlear: "تأمين السفر",
     titleru: "Страхование путешествий",
-    rout: "travelinsurance",
+    src: "/images/travelinsurance.webp",
+    route: "travelinsurance",
   },
   {
     id: 10,
     titleen: "Tourism services",
     titlear: "خدمات السياحة",
     titleru: "Туристические услуги",
-    rout: "traveltourism",
+    src: "/images/traveltourism.webp",
+    route: "traveltourism",
   },
   {
     id: 11,
     titleen: "Honeymoon trips",
     titlear: "رحلات شهر العسل",
     titleru: "Свадебные путешествия",
-    rout: "honeymoon",
+    src: "/images/honeymoon.webp",
+    route: "honeymoon",
   },
   {
     id: 12,
     titleen: "Airport taxi services",
     titlear: "خدمات سيارات الأجرة في المطار",
     titleru: "Услуги такси в аэропорту",
-    rout: "taxis",
+    src: "/images/taxis.webp",
+    route: "taxis",
   },
 ];
 export const visas = [
