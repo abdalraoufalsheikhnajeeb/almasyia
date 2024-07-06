@@ -126,6 +126,7 @@ const Navbar = ({
               pathname === `/${lang}/WorldClock` ? "active" : ""
             }`}
             href={`/${lang}/WorldClock`}
+            onClick={() => setIsBurgerOpen(false)}
           >
             <span>{dic.worldClock}</span>
           </Link>

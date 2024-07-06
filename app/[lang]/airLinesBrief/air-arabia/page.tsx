@@ -1,9 +1,11 @@
 import Image from "next/image";
 import React from "react";
+import { Locale } from "../../../../i18n-config";
 
-const page: React.FC = () => {
-  return (
-    <div className="container mx-auto p-4">
+const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
+  if (lang === "en") {
+    return(
+      <div className="container mx-auto p-4">
       <div className="bg-white shadow-md rounded-lg p-6">
         <h1 className="text-3xl font-bold mb-4">Air Arabia</h1>
         <Image
@@ -84,9 +86,290 @@ const page: React.FC = () => {
           Arabia website or contact their customer service at +971 6 558 0000.
           Follow them on social media for the latest updates and promotions.
         </p>
+
+        <h2 className="text-2xl font-semibold mb-4">
+          General Information about Air Arabia
+        </h2>
+        <table className="w-fit text-left text-gray-700">
+          <tbody>
+            <tr className="border-b">
+              <td className="font-semibold py-2 pe-8">"IATA" Code</td>
+              <td className="py-2">G9</td>
+            </tr>
+            <tr className="border-b">
+              <td className="font-semibold py-2 pe-8">ICAO Code</td>
+              <td className="py-2">ABY</td>
+            </tr>
+            <tr className="border-b">
+              <td className="font-semibold py-2 pe-8">Company Headquarters</td>
+              <td className="py-2">Sharjah - State of United Arab Emirates</td>
+            </tr>
+            <tr className="border-b">
+              <td className="font-semibold py-2 pe-8">
+                The main operating main hub Airport
+              </td>
+              <td className="py-2">Sharjah International Airport</td>
+            </tr>
+            <tr className="border-b">
+              <td className="font-semibold py-2 pe-8">
+                Number of destinations
+              </td>
+              <td className="py-2">130 destinations</td>
+            </tr>
+            <tr className="border-b">
+              <td className="font-semibold py-2 pe-8">Date of establishment</td>
+              <td className="py-2">2003</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
-  );
-};
+    )
+  
+  } 
+  else if (lang === "ar") {
+    return (
+      <div className="container mx-auto p-4">
+        <div className="bg-white shadow-md rounded-lg p-6">
+          <h1 className="text-3xl font-bold mb-4">العربية للطيران</h1>
+          <Image
+            width={420}
+            height={300}
+            quality={10}
+            src="/images/arabia.webp"
+            alt="العربية للطيران"
+            className="w-32 h-32 mb-4"
+          />
+          <p className="text-gray-700 mb-4">
+            العربية للطيران هي شركة طيران منخفضة التكلفة مقرها في الشارقة،
+            الإمارات العربية المتحدة. تأسست في عام 2003، وتشغل رحلات منتظمة إلى
+            أكثر من 170 وجهة عبر الشرق الأوسط وشمال أفريقيا وآسيا وأوروبا.
+          </p>
+          <h2 className="text-2xl font-semibold mb-2">التاريخ</h2>
+          <p className="text-gray-700 mb-4">
+            تأسست كأول شركة طيران منخفضة التكلفة في الشرق الأوسط، ونمت العربية
+            للطيران لتصبح لاعبًا رئيسيًا في صناعة الطيران في المنطقة. تركز
+            الشركة على توفير خيارات سفر ميسورة التكلفة مع الحفاظ على معايير
+            السلامة والخدمة العالية.
+          </p>
+          <h2 className="text-2xl font-semibold mb-2">الأسطول</h2>
+          <p className="text-gray-700 mb-4">
+            يتكون أسطول العربية للطيران في الأساس من طائرات إيرباص A320،
+            المعروفة بكفاءتها وموثوقيتها. تقوم الشركة بتحديث وصيانة أسطولها بشكل
+            مستمر لضمان سلامة وراحة الركاب.
+          </p>
+          <h2 className="text-2xl font-semibold mb-2">الوجهات</h2>
+          <p className="text-gray-700 mb-4">
+            تخدم العربية للطيران مجموعة واسعة من الوجهات، بما في ذلك المدن
+            الرئيسية وأماكن الجذب السياحي الشهيرة في الشرق الأوسط وشمال أفريقيا
+            وآسيا وأوروبا. تشمل الوجهات الرئيسية القاهرة، مومباي، إسطنبول،
+            موسكو، ونيروبي.
+          </p>
+          <h2 className="text-2xl font-semibold mb-2">الخدمات</h2>
+          <p className="text-gray-700 mb-4">
+            تقدم الشركة مجموعة متنوعة من الخدمات لتحسين تجربة السفر، بما في ذلك
+            الترفيه على متن الطائرة، خيارات الوجبات، والمقاعد المريحة. توفر
+            العربية للطيران أيضًا خدمات إضافية مثل التأمين على السفر، حجز
+            الفنادق، وتأجير السيارات من خلال موقعها الإلكتروني.
+          </p>
+          <h2 className="text-2xl font-semibold mb-2">تجربة الطيران</h2>
+          <p className="text-gray-700 mb-4">
+            يمكن للركاب الاستمتاع بمجموعة من خيارات الترفيه على متن الطائرة، بما
+            في ذلك الأفلام، البرامج التلفزيونية، الموسيقى، والألعاب. تقدم الشركة
+            أيضًا قائمة طعام على متن الطائرة تحتوي على مجموعة من الوجبات،
+            الوجبات الخفيفة، والمشروبات.
+          </p>
+          <h2 className="text-2xl font-semibold mb-2">برنامج المسافر الدائم</h2>
+          <p className="text-gray-700 mb-4">
+            يتيح برنامج المسافر الدائم الخاص بالعربية للطيران، Airewards،
+            للأعضاء كسب النقاط مع كل رحلة واستبدالها بمجموعة متنوعة من المكافآت،
+            بما في ذلك الرحلات المجانية، ترقيات المقاعد، والخدمات الإضافية.
+          </p>
+          <h2 className="text-2xl font-semibold mb-2">الحجز وخدمة العملاء</h2>
+          <p className="text-gray-700 mb-4">
+            يعد حجز الرحلات مع العربية للطيران سهلاً من خلال موقعهم الرسمي،
+            التطبيق المحمول، ووكلاء السفر المعتمدين. يتوفر فريق خدمة العملاء
+            لمساعدتك في الحجوزات، الاستفسارات، والطلبات الخاصة. كما توفر الشركة
+            خيار تسجيل الوصول عبر الإنترنت وبطاقة الصعود المتنقلة.
+          </p>
+          <h2 className="text-2xl font-semibold mb-2">
+            المسؤولية الاجتماعية للشركات
+          </h2>
+          <p className="text-gray-700 mb-4">
+            تلتزم العربية للطيران بالممارسات المستدامة ودعم المجتمعات المحلية.
+            تشارك الشركة في مبادرات المسؤولية الاجتماعية للشركات المختلفة، بما
+            في ذلك جهود الحفاظ على البيئة، برامج التعليم، والشراكات الخيرية.
+          </p>
+          <h2 className="text-2xl font-semibold mb-2">معلومات الاتصال</h2>
+          <p className="text-gray-700">
+            لمزيد من المعلومات أو لحجز رحلة، قم بزيارة الموقع الرسمي للعربية
+            للطيران أو اتصل بخدمة العملاء على +971 6 558 0000. تابعهم على وسائل
+            التواصل الاجتماعي للحصول على أحدث التحديثات والعروض.
+          </p>
 
-export default page;
+          <h2 className="text-2xl font-semibold mb-4">
+            معلومات عامة عن العربية للطيران
+          </h2>
+          <table className="w-fit text-left text-gray-700">
+            <tbody>
+              <tr className="border-b">
+                <td className="font-semibold py-2 pe-8">رمز "IATA"</td>
+                <td className="py-2">G9</td>
+              </tr>
+              <tr className="border-b">
+                <td className="font-semibold py-2 pe-8">رمز ICAO</td>
+                <td className="py-2">ABY</td>
+              </tr>
+              <tr className="border-b">
+                <td className="font-semibold py-2 pe-8">مقر الشركة</td>
+                <td className="py-2">
+                  الشارقة - دولة الإمارات العربية المتحدة
+                </td>
+              </tr>
+              <tr className="border-b">
+                <td className="font-semibold py-2 pe-8">المطار الرئيسي</td>
+                <td className="py-2">مطار الشارقة الدولي</td>
+              </tr>
+              <tr className="border-b">
+                <td className="font-semibold py-2 pe-8">عدد الوجهات</td>
+                <td className="py-2">130 وجهة</td>
+              </tr>
+              <tr className="border-b">
+                <td className="font-semibold py-2 pe-8">سنة التأسيس</td>
+                <td className="py-2">2003</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    );
+  } else if (lang === "ru") {
+    return (
+      <div className="container mx-auto p-4">
+        <div className="bg-white shadow-md rounded-lg p-6">
+          <h1 className="text-3xl font-bold mb-4">Эйр Арабия</h1>
+          <Image
+            width={420}
+            height={300}
+            quality={10}
+            src="/images/arabia.webp"
+            alt="Эйр Арабия"
+            className="w-32 h-32 mb-4"
+          />
+          <p className="text-gray-700 mb-4">
+            Эйр Арабия — бюджетная авиакомпания, штаб-квартира которой находится
+            в Шардже, ОАЭ. Основанная в 2003 году, она выполняет регулярные
+            рейсы более чем в 170 направлений на Ближнем Востоке, в Северной
+            Африке, Азии и Европе.
+          </p>
+          <h2 className="text-2xl font-semibold mb-2">История</h2>
+          <p className="text-gray-700 mb-4">
+            Будучи первой бюджетной авиакомпанией на Ближнем Востоке, Эйр Арабия
+            выросла до значимого игрока в авиационной отрасли региона.
+            Авиакомпания сосредоточена на предоставлении доступных вариантов
+            путешествий при сохранении высоких стандартов безопасности и
+            обслуживания.
+          </p>
+          <h2 className="text-2xl font-semibold mb-2">Флот</h2>
+          <p className="text-gray-700 mb-4">
+            Флот Эйр Арабии состоит в основном из самолетов Airbus A320,
+            известных своей эффективностью и надежностью. Авиакомпания постоянно
+            обновляет и поддерживает свой флот для обеспечения безопасности и
+            комфорта пассажиров.
+          </p>
+          <h2 className="text-2xl font-semibold mb-2">Направления</h2>
+          <p className="text-gray-700 mb-4">
+            Эйр Арабия обслуживает широкий спектр направлений, включая крупные
+            города и популярные туристические места на Ближнем Востоке, в
+            Северной Африке, Азии и Европе. Ключевые направления включают Каир,
+            Мумбаи, Стамбул, Москву и Найроби.
+          </p>
+          <h2 className="text-2xl font-semibold mb-2">Услуги</h2>
+          <p className="text-gray-700 mb-4">
+            Авиакомпания предлагает разнообразные услуги для улучшения
+            впечатлений от полета, включая развлечения на борту, варианты
+            питания и комфортные сиденья. Эйр Арабия также предоставляет
+            дополнительные услуги, такие как страхование путешествий,
+            бронирование отелей и аренда автомобилей через свой веб-сайт.
+          </p>
+          <h2 className="text-2xl font-semibold mb-2">Впечатления от полета</h2>
+          <p className="text-gray-700 mb-4">
+            Пассажиры могут наслаждаться разнообразными вариантами развлечений
+            на борту, включая фильмы, телепередачи, музыку и игры. Авиакомпания
+            также предлагает меню покупки на борту с выбором блюд, закусок и
+            напитков.
+          </p>
+          <h2 className="text-2xl font-semibold mb-2">Программа лояльности</h2>
+          <p className="text-gray-700 mb-4">
+            Программа лояльности Эйр Арабии, Airewards, позволяет участникам
+            зарабатывать баллы за каждый полет и обменивать их на различные
+            награды, включая бесплатные полеты, улучшенные места и
+            дополнительные услуги.
+          </p>
+          <h2 className="text-2xl font-semibold mb-2">
+            Бронирование и обслуживание клиентов
+          </h2>
+          <p className="text-gray-700 mb-4">
+            Бронирование рейсов с Эйр Арабией легко осуществляется через их
+            официальный веб-сайт, мобильное приложение и авторизованных
+            туристических агентов. Служба поддержки клиентов доступна для помощи
+            с бронированием, запросами и специальными запросами. Авиакомпания
+            также предлагает онлайн-регистрацию и возможность мобильного
+            посадочного талона.
+          </p>
+          <h2 className="text-2xl font-semibold mb-2">
+            Корпоративная социальная ответственность
+          </h2>
+          <p className="text-gray-700 mb-4">
+            Эйр Арабия привержена устойчивым практикам и поддержке местных
+            сообществ. Авиакомпания участвует в различных инициативах КСО,
+            включая усилия по сохранению окружающей среды, образовательные
+            программы и благотворительные партнерства.
+          </p>
+          <h2 className="text-2xl font-semibold mb-2">Контактная информация</h2>
+          <p className="text-gray-700">
+            Для получения дополнительной информации или бронирования рейса
+            посетите официальный веб-сайт Эйр Арабии или свяжитесь с их службой
+            поддержки клиентов по телефону +971 6 558 0000. Следите за ними в
+            социальных сетях для получения последних новостей и акций.
+          </p>
+          <h2 className="text-2xl font-semibold mb-4">
+            Общая информация об Эйр Арабии
+          </h2>
+          <table className="w-fit text-left text-gray-700">
+            <tbody>
+              <tr className="border-b">
+                <td className="font-semibold py-2 pe-8">Код IATA</td>
+                <td className="py-2">G9</td>
+              </tr>
+              <tr className="border-b">
+                <td className="font-semibold py-2 pe-8">Код ICAO</td>
+                <td className="py-2">ABY</td>
+              </tr>
+              <tr className="border-b">
+                <td className="font-semibold py-2 pe-8">
+                  Штаб-квартира компании
+                </td>
+                <td className="py-2">Шарджа, ОАЭ</td>
+              </tr>
+              <tr className="border-b">
+                <td className="font-semibold py-2 pe-8">Основной хаб</td>
+                <td className="py-2">Международный аэропорт Шарджа</td>
+              </tr>
+              <tr className="border-b">
+                <td className="font-semibold py-2 pe-8">
+                  Количество направлений
+                </td>
+                <td className="py-2">130 направлений</td>
+              </tr>
+              <tr className="border-b">
+                <td className="font-semibold py-2 pe-8">Дата основания</td>
+                <td className="py-2">2003</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    );
+  }
+};
