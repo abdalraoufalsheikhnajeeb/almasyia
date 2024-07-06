@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import AnTitle from "./AnTitle.tsx";
-
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -75,7 +74,7 @@ const Partners = ({ dic, data, title }: PartnersProps) => {
           return (
             <div key={index} className="p-4">
               <Link href={`/${dic.currLang}/airLinesBrief/${card.route}`}>
-                <div className="bg-gray-200 border rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg h-full flex flex-col justify-center items-center overflow-hidden">
+                <div className="bg-gray-200 relative border rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg h-full flex flex-col justify-center items-center overflow-hidden">
                   <div className="bg-white w-full">
                     <Image
                       loading="lazy"
@@ -87,20 +86,20 @@ const Partners = ({ dic, data, title }: PartnersProps) => {
                       alt={title}
                     />
                   </div>
-                  <div className="p-4 flex-grow flex flex-col justify-between h-28">
+                  <div className="p-4 pb-7 flex-grow flex flex-col justify-between h-28">
                     <h5 className="mb-2 text-2xl font-bold tracking-tight text-primary text-center">
                       {title}
                     </h5>
 
-                    <span className=" flex items-center justify-center  font-bold py-2 px-4 scale-110  mt-4 transition-all duration-300">
-                      Learn More
+                    <span className={`flex items-center justify-center font-bold mt-4 absolute ${dic.currLang == "ar" ?  `left-2 flex-row-reverse` : `right-2` } bottom-2`}>
+                      {dic.learnMore}
                       <Image
                         width={50}
                         height={50}
                         quality={1}
                         src="/images/arrow.svg"
                         alt="arrow"
-                        className="ml-2 transition-transform duration-300 hover:translate-x-1"
+                        className={`ms-2 h-10 w-10 aspect-square transition-transform duration-300 hover:translate-x-1 ${dic.currLang == "ar" ?  `rotate-180` : `` }  `}
                       />
                     </span>
                   </div>

@@ -90,7 +90,41 @@ export default async function Home({
 
               return (
                 <Link href={`/${lang}/Services/${card.rout}`} key={card.id}>
-                  <AnCard title={title} src={`/images/${card.rout}.webp`} />
+                  <div className="max-w-[90vw] relative bg-white border rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                    <Image
+                      loading="lazy"
+                      quality={10}
+                      width={400}
+                      height={200}
+                      className="rounded-t-lg aspect-video object-cover"
+                      src={`/images/${card.rout}.webp`}
+                      alt=""
+                    />
+                    <div className="p-4 pb-7 flex-grow flex flex-col justify-between h-28">
+                      <h5 className="mb-2 text-2xl font-bold tracking-tight text-primary text-center">
+                        {title}
+                      </h5>
+                      <span
+                        className={`flex items-center justify-center font-bold mt-4 absolute ${
+                          dic.currLang == "ar"
+                            ? `left-2 flex-row-reverse`
+                            : `right-2`
+                        } bottom-2`}
+                      >
+                        {dic.learnMore}
+                        <Image
+                          width={50}
+                          height={50}
+                          quality={1}
+                          src="/images/arrow.svg"
+                          alt="arrow"
+                          className={`ms-2 h-10 w-10 aspect-square transition-transform duration-300 hover:translate-x-1 ${
+                            dic.currLang == "ar" ? `rotate-180` : ``
+                          }  `}
+                        />
+                      </span>
+                    </div>
+                  </div>
                 </Link>
               );
             })}
