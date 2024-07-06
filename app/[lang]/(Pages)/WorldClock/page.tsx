@@ -61,7 +61,9 @@ const WorldClock = ({ params: { lang } }: { params: { lang: Locale } }) => {
                   ? zone.nameEN
                   : lang === "ar"
                   ? zone.nameAR
-                  : zone.nameRU } {zone.flag}
+                  : zone.nameRU }
+                  <span className="text-transparent"> {zone.flag}</span>
+                  
               </h2>
                   
             </div>
