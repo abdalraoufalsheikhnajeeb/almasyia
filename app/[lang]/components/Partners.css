@@ -1,0 +1,21 @@
+.our-partners-section {
+  
+  width: 100%;
+}
+
+.slick-dots {
+  margin-top: 2rem;
+  transform: translateY(2rem);
+}
+
+.slick-dots li button:before {
+  font-size: 0.75rem;
+  color: #fcd600;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #e9ed12;
+}
+.slick-list {
+  margin-bottom: 2rem;
+}
