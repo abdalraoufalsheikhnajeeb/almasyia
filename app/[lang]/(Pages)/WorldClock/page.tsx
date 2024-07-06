@@ -44,25 +44,25 @@ const WorldClock = ({ params: { lang } }: { params: { lang: Locale } }) => {
         {timeZones.map((zone) => (
           <div
             key={zone.nameEN}
-            className="bg-white shadow-lg rounded-lg p-3 text-center w-60 transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+            className="bg-white relative shadow-lg rounded-lg p-3 text-center w-64 transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
           >
-            <div className="flex items-center">
+            <div className="flex items-center justify-center ">
               <Image
                 loading="lazy"
                 quality={1}
-                className="flex-shrink-0 h-10 me-5"
+                className="absolute h-8 left-0 bottom-1/4 -translate-y-1/2 "
                 width={50}
                 height={50}
                 src="/images/clock.svg"
                 alt="clock"
               />
-              <h2 className="text-2xl font-bold text-primary mb-2">
+              <h2 className="text-2xl font-bold text-primary ">
                 {lang === "en"
                   ? zone.nameEN
                   : lang === "ar"
                   ? zone.nameAR
                   : zone.nameRU }
-                  <span className="text-white text-xl"> {zone.flag}</span>
+                  <span className="text-white text-xl ms-2"> {zone.flag}</span>
                   
               </h2>
                   

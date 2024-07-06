@@ -367,19 +367,27 @@ export const visas = [
 
 export const timeZones = [
   {
-    nameAR: "روما",
-    nameEN: "Rome",
-    nameRU: "Рим",
-    tz: "Europe/Rome",
-    flag: "🇮🇹",
-  },
-  {
     nameAR: "دمشق",
     nameEN: "Damascus",
     nameRU: "Дамаск",
     tz: "Asia/Damascus",
     flag: "🇸🇾",
   },
+  {
+    nameAR: "موسكو",
+    nameEN: "Moscow",
+    nameRU: "Москва",
+    tz: "Europe/Moscow",
+    flag: "🇷🇺",
+  },
+  {
+    nameAR: "روما",
+    nameEN: "Rome",
+    nameRU: "Рим",
+    tz: "Europe/Rome",
+    flag: "🇮🇹",
+  },
+
   {
     nameAR: "بيروت",
     nameEN: "Beirut",
@@ -457,13 +465,7 @@ export const timeZones = [
     tz: "Africa/Cairo",
     flag: "🇪🇬",
   },
-  {
-    nameAR: "موسكو",
-    nameEN: "Moscow",
-    nameRU: "Москва",
-    tz: "Europe/Moscow",
-    flag: "🇷🇺",
-  },
+
   {
     nameAR: "دبي",
     nameEN: "Dubai",
@@ -520,11 +522,5 @@ export const timeZones = [
     tz: "Europe/Madrid",
     flag: "🇪🇸",
   },
-  {
-    nameAR: "كوالالمبور",
-    nameEN: "Kuala Lumpur",
-    nameRU: "Куала-Лумпур",
-    tz: "Asia/Kuala_Lumpur",
-    flag: "🇲🇾",
-  },
+
 ];
