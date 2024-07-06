@@ -1,7 +1,6 @@
 import { getDictionary } from "../../get-dictionary";
 import { Locale } from "../../i18n-config";
 import Image from "next/image";
-import AnCard from "./components/AnCard/AnCard";
 import Link from "next/link";
 import { ourProjects } from "./data";
 import AnTitle from "./components/AnTitle";
