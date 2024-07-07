@@ -10,11 +10,11 @@
 
 .slick-dots li button:before {
   font-size: 0.75rem;
-  color: #fcd600;
+  color: #c3a705;
 }
 
 .slick-dots li.slick-active button:before {
-  color: #e9ed12;
+  color: #938000;
 }
 .slick-list {
   margin-bottom: 2rem;

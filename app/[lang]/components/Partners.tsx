@@ -91,7 +91,7 @@ const Partners = ({ dic, data, title }: PartnersProps) => {
                       {title}
                     </h5>
 
-                    <span className={`flex items-center justify-center font-bold mt-4 absolute ${dic.currLang == "ar" ?  `left-2 flex-row-reverse` : `right-2` } bottom-2`}>
+                    <span className={`flex animate-bounce items-center justify-center font-bold mt-4 absolute ${dic.currLang == "ar" ?  `left-2 flex-row-reverse` : `right-2` } bottom-2`}>
                       {dic.learnMore}
                       <Image
                         width={50}
@@ -99,7 +99,7 @@ const Partners = ({ dic, data, title }: PartnersProps) => {
                         quality={1}
                         src="/images/arrow.svg"
                         alt="arrow"
-                        className={`ms-2 h-10 w-10 aspect-square transition-transform duration-300 hover:translate-x-1 ${dic.currLang == "ar" ?  `rotate-180` : `` }  `}
+                        className={`ms-2 h-10 w-10 aspect-square transition-transform  duration-300 hover:translate-x-1 ${dic.currLang == "ar" ?  `rotate-180` : `` }  `}
                       />
                     </span>
                   </div>

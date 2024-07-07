@@ -56,37 +56,69 @@ export default async function Page({
           return (
             <div
               key={index}
-              className=" flex justify-center items-center flex-col gap-14"
+              className=" flex justify-center items-center lg:ps-4 flex-col gap-4 bg-white bg-opacity-50 "
             >
-              <hr />  
-              <h2 className="text-5xl my-4 font-bold text-center ">
-                {country}
-              </h2>
+              <hr />
+              <AnTitle title={country} />
+
               <div className="flex flex-col lg:flex-row-reverse justify-between">
                 <Image
-                  width={890}
-                  height={512}
+                  width={445}
+                  height={260}
                   quality={20}
                   src={image}
                   alt={country}
-                  className=" lg:h-72 object-cover"
+                  className=" lg:h-96 w-full   object-fill"
                 />
                 <div className="p-4 flex flex-col gap-3">
                   {duration && (
-                    <p className="text-primary text-3xl  font-bold">
-                      - {duration}
+                    <p className="text-primary text-3xl flex gap-2 items-center font-bold">
+                      <Image
+                        loading="lazy"
+                        quality={1}
+                        src="/images/point.png"
+                        className={`w-10 h-10 ${
+                          lang == "ar" ? "-scale-x-100" : ""
+                        } `}
+                        alt="pointer"
+                        width={40}
+                        height={40}
+                      />{" "}
+                      <span>{duration}</span>
                     </p>
                   )}
                   {requirements && (
-                    <p className="text-primary mt-2 text-3xl font-bold">
+                    <p className="text-primary flex gap-2 mt-2 text-3xl font-bold">
                       {" "}
-                      - {requirements}
+                      <Image
+                        loading="lazy"
+                        quality={1}
+                        src="/images/point.png"
+                        className={`w-10 h-10 ${
+                          lang == "ar" ? "-scale-x-100" : ""
+                        } `}
+                        alt="pointer"
+                        width={40}
+                        height={40}
+                      />{" "}
+                      <span> {requirements}</span>
                     </p>
                   )}
                   {description && (
-                    <p className="text-primary mt-2 text-3xl  font-bold">
+                    <p className="text-primary flex gap-2 mt-2 text-3xl  font-bold">
                       {" "}
-                      - {description}
+                      <Image
+                        loading="lazy"
+                        quality={1}
+                        src="/images/point.png"
+                        className={`w-10 h-10 ${
+                          lang == "ar" ? "-scale-x-100" : ""
+                        } `}
+                        alt="pointer"
+                        width={40}
+                        height={40}
+                      />{" "}
+                      <span>{description}</span>
                     </p>
                   )}
                 </div>

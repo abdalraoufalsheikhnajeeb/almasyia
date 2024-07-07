@@ -104,9 +104,9 @@ export default async function Home({
                         {title}
                       </h5>
                       <span
-                        className={`flex items-center justify-center font-bold mt-4 absolute ${
+                        className={`flex animate-bounce delay-1000 items-center justify-center font-bold mt-4 absolute ${
                           dic.currLang == "ar"
-                            ? `left-2 flex-row-reverse`
+                            ? `left-2`
                             : `right-2`
                         } bottom-2`}
                       >

@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 // Importing Tajawal for Arabic with weights 400 and 700
-const tajawal = Tajawal({ subsets: ["latin", "arabic"], weight: ["400", "700", "900"] });
+const tajawal = Tajawal({ subsets: ["latin", "arabic"], weight: ["400", "700"] });
 
 
 
