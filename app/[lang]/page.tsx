@@ -89,13 +89,13 @@ export default async function Home({
 
               return (
                 <Link href={`/${lang}/Services/${card.route}`} key={card.id}>
-                  <div className="max-w-[90vw] relative bg-white border rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                  <div className="max-w-[90vw] relative bg-white border flex flex-col justify-center items-center rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                     <Image
                       loading="lazy"
                       quality={10}
                       width={400}
                       height={200}
-                      className="rounded-t-lg aspect-video object-cover"
+                      className="rounded-t-lg aspect-square object-cover"
                       src={card.src}
                       alt="service image"
                     />

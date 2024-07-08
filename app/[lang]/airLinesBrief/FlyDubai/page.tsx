@@ -6,7 +6,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   if (lang === "en") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6">
+        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
           <h1 className="text-3xl font-bold mb-4">Flydubai</h1>
           <Image
             width={420}
@@ -149,7 +149,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   } else if (lang === "ar") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6">
+        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
           <h1 className="text-3xl font-bold mb-4">فلاي دبي</h1>
           <Image
             width={420}
@@ -277,7 +277,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   } else if (lang === "ru") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6">
+        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
           <h1 className="text-3xl font-bold mb-4">Flydubai</h1>
           <Image
             width={420}

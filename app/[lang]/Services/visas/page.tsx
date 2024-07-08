@@ -56,7 +56,7 @@ export default async function Page({
           return (
             <div
               key={index}
-              className=" flex justify-center items-center lg:ps-4 flex-col gap-4 bg-white bg-opacity-50 "
+              className=" flex justify-center items-center lg:ps-4 flex-col gap-4 bg-white bg-opacity-70 "
             >
               <hr />
               <AnTitle title={country} />
@@ -65,7 +65,7 @@ export default async function Page({
                 <Image
                   width={445}
                   height={260}
-                  quality={20}
+                  quality={10}
                   src={image}
                   alt={country}
                   className=" lg:h-96 w-full   object-fill"

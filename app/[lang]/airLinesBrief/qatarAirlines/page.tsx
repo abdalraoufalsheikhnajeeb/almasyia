@@ -10,7 +10,7 @@ const QatarAirways = async ({
   if (lang === "en") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6">
+        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
           <h1 className="text-3xl font-bold mb-4">Qatar Airways</h1>
           <Image
             width={420}
@@ -154,7 +154,7 @@ const QatarAirways = async ({
   } else if (lang === "ar") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6">
+        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
           <h1 className="text-3xl font-bold mb-4">الخطوط الجوية القطرية</h1>
           <Image
             width={420}
@@ -293,7 +293,7 @@ const QatarAirways = async ({
   } else if (lang === "ru") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6">
+        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
           <h1 className="text-3xl font-bold mb-4">Qatar Airways</h1>
           <Image
             width={420}

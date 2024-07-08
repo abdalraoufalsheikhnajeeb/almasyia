@@ -10,7 +10,7 @@ const RoyalJordanian = async ({
   if (lang === "en") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6">
+        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto mx-auto">
           <h1 className="text-3xl font-bold mb-4">Royal Jordanian Airlines</h1>
           <Image
             width={420}
@@ -94,13 +94,57 @@ const RoyalJordanian = async ({
             0000. Follow them on social media for the latest updates and
             promotions.
           </p>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-4">
+              General Information about Royal Jordanian Airlines
+            </h2>
+            <table className="w-fit text-left text-gray-700">
+              <tbody>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">IATA Code</td>
+                  <td className="py-2">RJ</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">ICAO Code</td>
+                  <td className="py-2">RJA</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">The owner</td>
+                  <td className="py-2">Government of Jordan</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Company Headquarters</td>
+                  <td className="py-2">
+                    Amman - the Hashemite Kingdom of Jordan
+                  </td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">
+                    The Main Operational Airport
+                  </td>
+                  <td className="py-2">Queen Alia International Airport</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">
+                    Number of destinations
+                  </td>
+                  <td className="py-2">45 destinations</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Date of establishment</td>
+                  <td className="py-2">1963</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     );
   } else if (lang === "ar") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6">
+        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
           <h1 className="text-3xl font-bold mb-4">الخطوط الملكية الأردنية</h1>
           <Image
             width={420}
@@ -174,13 +218,51 @@ const RoyalJordanian = async ({
             تابعهم على وسائل التواصل الاجتماعي للحصول على أحدث التحديثات
             والعروض.
           </p>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-4">
+              معلومات عامة عن الخطوط الملكية الأردنية
+            </h2>
+            <table className="w-fit text-left text-gray-700">
+              <tbody>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">رمز إياتا</td>
+                  <td className="py-2">RJ</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">رمز إيكو</td>
+                  <td className="py-2">RJA</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">المالك</td>
+                  <td className="py-2">حكومة الأردن</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">مقر الشركة</td>
+                  <td className="py-2">عمان - المملكة الأردنية الهاشمية</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">المطار الرئيسي</td>
+                  <td className="py-2">مطار الملكة علياء الدولي</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">عدد الوجهات</td>
+                  <td className="py-2">45 وجهة</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">تاريخ التأسيس</td>
+                  <td className="py-2">1963</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     );
   } else if (lang === "ru") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6">
+        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
           <h1 className="text-3xl font-bold mb-4">Royal Jordanian Airlines</h1>
           <Image
             width={420}
@@ -266,6 +348,52 @@ const RoyalJordanian = async ({
             поддержки клиентов по телефону +962 6 510 0000. Следите за ними в
             социальных сетях, чтобы получать последние обновления и акции.
           </p>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-4">
+              Общая информация о авиакомпании Royal Jordanian Airlines
+            </h2>
+            <table className="w-fit text-left text-gray-700">
+              <tbody>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Код IATA</td>
+                  <td className="py-2">RJ</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Код ICAO</td>
+                  <td className="py-2">RJA</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Владелец</td>
+                  <td className="py-2">Правительство Иордании</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">
+                    Штаб-квартира компании
+                  </td>
+                  <td className="py-2">
+                    Амман - Хашимитское Королевство Иордания
+                  </td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">
+                    Основной операционный аэропорт
+                  </td>
+                  <td className="py-2">Международный аэропорт королевы Алии</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">
+                    Количество направлений
+                  </td>
+                  <td className="py-2">45 направлений</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Дата основания</td>
+                  <td className="py-2">1963</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     );

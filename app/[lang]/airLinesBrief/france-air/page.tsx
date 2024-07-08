@@ -10,7 +10,7 @@ const AirFrance = async ({
   if (lang == "en") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6">
+        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
           <h1 className="text-3xl font-bold mb-4">Air France</h1>
           <Image
             width={420}
@@ -138,7 +138,7 @@ const AirFrance = async ({
   } else if (lang == "ar") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6">
+        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
           <h1 className="text-3xl font-bold mb-4">الخطوط الجوية الفرنسية</h1>
           <Image
             width={420}
@@ -252,7 +252,7 @@ const AirFrance = async ({
   } else if (lang == "ru") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6">
+        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
           <h1 className="text-3xl font-bold mb-4">Air France</h1>
           <Image
             width={420}
