@@ -257,6 +257,14 @@ export const ourProjects = [
     src: "/images/Taxis.webp",
     route: "taxis",
   },
+  {
+    id: 13,
+    titlear: "خدمة توصيل المستندات والأوراق ",
+    titleen: "Documents and papers delivery service",
+    titleru: "Служба доставки документов и бумаг",
+    src: "/images/papers.webp",
+    route: "papers-Delivery",
+  },
 ];
 export const visas = [
   {
@@ -1105,9 +1113,12 @@ export const Thailand = [
     nameAR: "معبد وات تشالونج",
     nameRU: "Ват Чалонг",
     src: "/images/chapters/.webp",
-    descriptionAR: "يعتبر وات تشالونج من أهم الأماكن السياحية في بوكيت تايلاند حيث يعكس صورة واضحة عن ثقافة تايلاند بشكل عام، يعد هذا المعبد من أكبر المعابد في العالم و أحد أكبر المعابد البوذية في جزيرة بوكيت، يستقطب المكان الكثير من الزوار سواء السكان المحليين أو السياح ممن يرغبون في التعرف على ثقافة تايلاند",
-    descriptionEN: "Wat Chalong is considered one of the most important tourist places in Phuket, Thailand, as it reflects a clear image of the culture of Thailand in general. This temple is one of the largest temples in the world and one of the largest Buddhist temples on the island of Phuket. The place attracts many visitors, whether local residents or tourists who want to visit Learn about the culture of Thailand",
-    descriptionRU: "Ват Чалонг считается одним из самых важных туристических мест на Пхукете, Таиланд, поскольку он отражает четкий образ культуры Таиланда в целом. Этот храм является одним из крупнейших храмов в мире и одним из крупнейших буддийских храмов на острове. Остров Пхукет Место привлекает множество посетителей, будь то местные жители или туристы, желающие посетить. Узнайте о культуре Таиланда.",
+    descriptionAR:
+      "يعتبر وات تشالونج من أهم الأماكن السياحية في بوكيت تايلاند حيث يعكس صورة واضحة عن ثقافة تايلاند بشكل عام، يعد هذا المعبد من أكبر المعابد في العالم و أحد أكبر المعابد البوذية في جزيرة بوكيت، يستقطب المكان الكثير من الزوار سواء السكان المحليين أو السياح ممن يرغبون في التعرف على ثقافة تايلاند",
+    descriptionEN:
+      "Wat Chalong is considered one of the most important tourist places in Phuket, Thailand, as it reflects a clear image of the culture of Thailand in general. This temple is one of the largest temples in the world and one of the largest Buddhist temples on the island of Phuket. The place attracts many visitors, whether local residents or tourists who want to visit Learn about the culture of Thailand",
+    descriptionRU:
+      "Ват Чалонг считается одним из самых важных туристических мест на Пхукете, Таиланд, поскольку он отражает четкий образ культуры Таиланда в целом. Этот храм является одним из крупнейших храмов в мире и одним из крупнейших буддийских храмов на острове. Остров Пхукет Место привлекает множество посетителей, будь то местные жители или туристы, желающие посетить. Узнайте о культуре Таиланда.",
   },
 
   {
@@ -1124,64 +1135,50 @@ export const Thailand = [
     nameAR: "حديقة دوى أنتانون الوطنية شنغماي",
     nameRU: "Национальный парк Дой Интанон",
     src: "/images/chapters/.webp",
-    descriptionAR: "حديقة دوي أنتانون الوطنية تقع في أعلى جبل في تايلاند، وتتمتع بالمناظر الخلابة الطبيعية، وهي من أفضل الأماكن السياحية في شنغماي التي تمتد على مساحة 482 كيلو متر مربع.",
-    descriptionEN: "Doi Anthanon National Park is located on the highest mountain in Thailand, enjoys stunning natural scenery, and is one of the best tourist places in Chiang Mai, which extends over an area of ​​482 square kilometers.",
-    descriptionRU: "Национальный парк Дой-Антанон расположен на самой высокой горе Таиланда, наслаждается потрясающими природными пейзажами и является одним из лучших туристических мест Чиангмая, занимающим площадь 482 квадратных километра.",
+    descriptionAR:
+      "حديقة دوي أنتانون الوطنية تقع في أعلى جبل في تايلاند، وتتمتع بالمناظر الخلابة الطبيعية، وهي من أفضل الأماكن السياحية في شنغماي التي تمتد على مساحة 482 كيلو متر مربع.",
+    descriptionEN:
+      "Doi Anthanon National Park is located on the highest mountain in Thailand, enjoys stunning natural scenery, and is one of the best tourist places in Chiang Mai, which extends over an area of ​​482 square kilometers.",
+    descriptionRU:
+      "Национальный парк Дой-Антанон расположен на самой высокой горе Таиланда, наслаждается потрясающими природными пейзажами и является одним из лучших туристических мест Чиангмая, занимающим площадь 482 квадратных километра.",
   },
   {
     nameEN: "Chiang Mai Night Safari",
     nameAR: "حديقة سفاري شنغماي الليلية",
     nameRU: "Ночной сафари-парк Чиангмай",
     src: "/images/chapters/.webp",
-    descriptionAR: "يمكنك الاشتراك في الحياة في شنغماي من خلال السفاري ليوم، حيث تبلغ مساحة الحديقة الممتدة 328 فدانًا، كما يمكنك مشاهدة مجموعة واسعة من الحيوانات بما في ذلك زر ذلكاف، المطور، الأسود من أفضل الأماكن السياحية في شنغماي تستحق الزيارة.",
-    descriptionEN: "You can enjoy the nightlife in Chiang Mai through a night safari, as the park extends over an area of ​​328 acres, and you can see a wide range of animals, including giraffes, tigers, and lions, and it is one of the best tourist places in Chiang Mai that is worth a visit.",
-    descriptionRU: "Вы можете насладиться ночной жизнью Чиангмая во время ночного сафари, поскольку парк занимает площадь в 328 акров, и вы можете увидеть множество животных, включая жирафов, тигров и львов, и это один из лучшие туристические места Чиангмая, которые стоит посетить.",
+    descriptionAR:
+      "يمكنك الاشتراك في الحياة في شنغماي من خلال السفاري ليوم، حيث تبلغ مساحة الحديقة الممتدة 328 فدانًا، كما يمكنك مشاهدة مجموعة واسعة من الحيوانات بما في ذلك زر ذلكاف، المطور، الأسود من أفضل الأماكن السياحية في شنغماي تستحق الزيارة.",
+    descriptionEN:
+      "You can enjoy the nightlife in Chiang Mai through a night safari, as the park extends over an area of ​​328 acres, and you can see a wide range of animals, including giraffes, tigers, and lions, and it is one of the best tourist places in Chiang Mai that is worth a visit.",
+    descriptionRU:
+      "Вы можете насладиться ночной жизнью Чиангмая во время ночного сафари, поскольку парк занимает площадь в 328 акров, и вы можете увидеть множество животных, включая жирафов, тигров и львов, и это один из лучшие туристические места Чиангмая, которые стоит посетить.",
   },
   {
     nameEN: "Huay Kaew Waterfall",
     nameAR: "شلال هواي كايو شنغماي",
     nameRU: "Водопад Хуай Каев",
     src: "/images/chapters/.webp",
-    descriptionAR: "تعتبر شيلال هواي كايو شنغماي من أفضل أماكن السياحة في شنغماي، يمكنك رحلة استكشافية لاستكشاف هذا المكان الرائع والخبرة الرائعة.",
-    descriptionEN: "Huai Kaew Chiang Mai Waterfall is considered one of the best tourist places in Chiang Mai. You can go on an excursion to discover this wonderful place and enjoy the wonderful running water.",
-    descriptionRU: "Водопад Хуай Кео Чиангмай считается одним из лучших туристических мест Чиангмая. Вы можете отправиться на экскурсию, чтобы открыть для себя это чудесное место и насладиться чудесной проточной водой.",
+    descriptionAR:
+      "تعتبر شيلال هواي كايو شنغماي من أفضل أماكن السياحة في شنغماي، يمكنك رحلة استكشافية لاستكشاف هذا المكان الرائع والخبرة الرائعة.",
+    descriptionEN:
+      "Huai Kaew Chiang Mai Waterfall is considered one of the best tourist places in Chiang Mai. You can go on an excursion to discover this wonderful place and enjoy the wonderful running water.",
+    descriptionRU:
+      "Водопад Хуай Кео Чиангмай считается одним из лучших туристических мест Чиангмая. Вы можете отправиться на экскурсию, чтобы открыть для себя это чудесное место и насладиться чудесной проточной водой.",
   },
   {
     nameEN: "Wat Phra Singh",
     nameAR: "معبد وات فرا سينغ شنغماي",
     nameRU: "Ват Пхра Сингх",
     src: "/images/chapters/.webp",
-    descriptionAR: "معبد الجبل الذهبي في شنغماي، أفضل الأماكن السياحية في شنغماي، حيث تعلق على سفح الجبل وسط إطلالات بانورامية على مدينة شنغماي.",
-    descriptionEN: "The Temple of the Golden Mountain in Chiang Mai is one of the best tourist places in Chiang Mai, as the temple is located on the foot of the mountain amid panoramic views of the city of Chiang Mai.",
-    descriptionRU: "Храм Золотой Горы в Чиангмае – одно из лучших туристических мест Чиангмая, так как храм расположен у подножия горы на фоне панорамных видов на город Чиангмай.",
+    descriptionAR:
+      "معبد الجبل الذهبي في شنغماي، أفضل الأماكن السياحية في شنغماي، حيث تعلق على سفح الجبل وسط إطلالات بانورامية على مدينة شنغماي.",
+    descriptionEN:
+      "The Temple of the Golden Mountain in Chiang Mai is one of the best tourist places in Chiang Mai, as the temple is located on the foot of the mountain amid panoramic views of the city of Chiang Mai.",
+    descriptionRU:
+      "Храм Золотой Горы в Чиангмае – одно из лучших туристических мест Чиангмая, так как храм расположен у подножия горы на фоне панорамных видов на город Чиангмай.",
   },
-  {
-    nameEN: "Bella Nara Hotel",
-    nameAR: "فنادق شنغماي",
-    nameRU: "Отели Чиангмая",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "The Dhara Dhevi Chiang Mai Hotel",
-    nameAR: "فنادق شنغماي",
-    nameRU: "Отели Чиангмая",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Shangri-La Chiang Mai",
-    nameAR: "فنادق شنغماي",
-    nameRU: "Отели Чиангмая",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
+
   {
     nameEN: "Pattaya",
     nameAR: "بتايا",
@@ -1196,45 +1193,60 @@ export const Thailand = [
     nameAR: "شاطئ جومتين",
     nameRU: "Пляж Джомтьен",
     src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
+    descriptionAR:
+      "يتميز بموقعه الرائع ورماله الناعمة البيضاء ومياهه النقية وشمسه الدافئة حيث يأتي إليه السياح عند السياحة إلى تايلاند لقضاء أوقات ممتعة والقيام برحلة شيقة لا تنسى.يعتبر شاطئ جومتين من أهم الوجهات السياحية في بتايا حيث يتيح الفرصة للسائح التمتع بالتنزه في الشاطئ ورؤية سحر الطبيعة والاستمتاع بالأمواج المتلاحقة، كما يتيح فرصة ممارسة بعض الرياضات المائية مثل السباحة والغوص في مياهه الدافئة والنقية.",
+    descriptionEN:
+      "It is distinguished by its wonderful location, soft white sand, pure water, and warm sun, where tourists come to it when visiting Thailand to spend enjoyable times and take an interesting and unforgettable trip.Jomtien Beach is considered one of the most important tourist destinations in Pattaya, as it provides the opportunity for tourists to enjoy strolling on the beach, seeing the magic of nature, and enjoying the cascading waves. It also provides the opportunity to practice some water sports such as swimming and diving in its warm and pure waters.",
+    descriptionRU:
+      "Он отличается прекрасным расположением, мягким белым песком, чистой водой и теплым солнцем, куда приезжают туристы, посещающие Таиланд, чтобы приятно провести время и совершить интересное и незабываемое путешествие.Пляж Джомтьен считается одним из самых важных туристических направлений в Паттайе, поскольку он дает туристам возможность насладиться прогулкой по пляжу, увидеть волшебство природы и насладиться каскадными волнами. Он также дает возможность заняться водными видами спорта. например, плавание и дайвинг в его теплых и чистых водах.",
   },
   {
     nameEN: "Ramayana Water Park",
     nameAR: "حديقة راميانا المائية",
     nameRU: "Водный парк Рамаяна",
     src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
+    descriptionAR:
+      "تعتبر حديقة راميانا من أكبر الحدائق المائية في بتايا، توجد هذه الحديقة على بعد 15كم في جنوب مدينة باتايا تم افتتاحها بشكل رسمي في عام 2016م، تعتبر من أفضل الأماكن المثالية لقضاء وقت ممتع وعطلة ترفيهية مع الأصدقاء والعائلة",
+    descriptionEN:
+      "Ramayana Park is considered one of the largest water parks in Pattaya. This park is located 15 km south of Pattaya.It was officially opened in 2016 AD, and is considered one of the best ideal places to spend a fun time and an entertaining holiday with friends and family.",
+    descriptionRU:
+      "Парк Рамаяна считается одним из крупнейших аквапарков Паттайи. Этот парк расположен в 15 км к югу от Паттайи.Он был официально открыт в 2016 году нашей эры и считается одним из лучших идеальных мест для веселого времяпрепровождения и развлекательного отдыха с друзьями и семьей.",
   },
   {
     nameEN: "Teddy Bear Museum",
     nameAR: "متحف تيدي بير",
     nameRU: "Музей плюшевых мишек",
     src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
+    descriptionAR:
+      "يعتبر متحف تيدي بير أو ما يطلق عليه أيضاً جزيرة تيدي هو من أجمل الأماكن السياحية في بتايا حيث يذهب إليها السائح لخوض تجربة مثيرة ومدهشة جداً أثناء السياحة في تايلاند. يوجد المتحف في شمال بتايا في نهاية ساحل المدينة، الهيكل الخارجي للمتحف مصمم على هيئة قارب تنين ضخم على ارتفاع 40متراً.",
+    descriptionEN:
+      "الاً All rights reserved. All the same. يوجد المتحف في شمال بتايا في نهاية ساحل المدينة، الهيكل الخارجي لل متحف مصمم على هيئة قارب تنين ضخم على ارتفاع 40متراً.",
+    descriptionRU:
+      "Его персонаж - Дэниел Джонс и его коллега по работе с Джоном Сейном. Он сыграл в фильме 'Берег' в фильме 'Самоооооооооооооооооооооооо' Стив в Тайланде. Он сыграл в фильме 'Сент-Луис' в фильме 'Лиллестер' . Он умер в 40-летнем возрасте.",
   },
   {
     nameEN: "Sanctuary of Truth",
     nameAR: "معبد الحقيقة",
     nameRU: "Святилище Истины",
     src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
+    descriptionAR:
+      "هو من أهم الوجهات السياحية في تايلاند، ومن أشهر معابد بتايا فهو يعتبر تحفة من التحف المصنوعة بالكامل من الخشب بدون مسامير معدنية، حيث تم إنشاؤه بهدف الحفاظ على تقنيات البناء التقليدية ولعرض مهارات الأعمال الخشبية والتي تم حفرها يدوياً. يقع المعبد في شمال بتايا على طريق نا كلوا فهي عبارة عن قلعة خشبية كبيرة ذات اطلالات ساحرة علي البحر.",
+    descriptionEN:
+      "It is one of the most important tourist destinations in Thailand, and one of the most famous temples of Pattaya. It is considered a masterpiece made entirely of wood without metal nails. It was created with the aim of preserving traditional building techniques and to display woodworking skills, which were hand-carved. The temple is located in northern Pattaya on Na Klua Road. It is a large wooden castle with charming views of the sea.It is one of the most important tourist destinations in Thailand, and one of the most famous temples of Pattaya. It is considered a masterpiece made entirely of wood without metal nails. It was created with the aim of preserving traditional building techniques and to display woodworking skills, which were hand-carved. The temple is located in northern Pattaya on Na Klua Road. It is a large wooden castle with charming views of the sea.",
+    descriptionRU:
+      "Это одно из важнейших туристических направлений Таиланда и один из самых известных храмов Паттайи. Он считается шедевром, полностью сделанным из дерева без металлических гвоздей. Он был создан с целью сохранить традиционные методы строительства и продемонстрировать работу по дереву. навыки, которые были вырезаны вручную. Храм расположен в северной части Паттайи на улице На Клуа. Это большой деревянный замок с очаровательным видом на море.Это одно из важнейших туристических направлений Таиланда и один из самых известных храмов Паттайи. Он считается шедевром, полностью сделанным из дерева без металлических гвоздей. Он был создан с целью сохранить традиционные методы строительства и продемонстрировать работу по дереву. навыки, которые были вырезаны вручную. Храм расположен в северной части Паттайи на улице На Клуа. Это большой деревянный замок с очаровательным видом на море.",
   },
   {
     nameEN: "Sriracha Tiger Zoo",
     nameAR: "حديقة حيوان سريراتشا تايجر",
     nameRU: "Тигровый зоопарк Срирача",
     src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
+    descriptionAR:
+      'تعتبر حديقة حيوان سريراتشا تايجر بتايا "Sriracha Tiger Zoo" من أهم الاماكن السياحية في بتايا، تبلغ مساحتها 400000 متر مربع، وتقع على بعد 30 دقيقة من جنوب بتايا تم افتتاحها رسمياً في عام 1997م.تنقسم الحديقة إلى أربع مناطق رئيسية منها منطقة تتكاثر فيها النمور ومنطقة لعرض المواهب وأخري للحيوانات المختلفة والأخيرة فهي مخصصة للتماسيح.',
+    descriptionEN:
+      "The Sriracha Tiger Zoo, Pattaya, is considered one of the most important tourist places in Pattaya. It covers an area of ​​400,000 square meters and is located 30 minutes south of Pattaya. It was officially opened in 1997.The park is divided into four main areas, including an area where tigers breed, an area for talent shows, another for various animals, and the last is designated for crocodiles.",
+    descriptionRU:
+      "Зоопарк Шрирача в Паттайе считается одним из самых важных туристических мест в Паттайе. Он занимает площадь 400 000 квадратных метров и расположен в 30 минутах к югу от Паттайи. Он был официально открыт в 1997 году.Парк разделен на четыре основные зоны, в том числе зону, где размножаются тигры, зону для шоу талантов, еще одну для различных животных и последнюю, предназначенную для крокодилов.",
   },
   {
     nameEN: "Mercure Pattaya Ocean Resort",
@@ -1259,18 +1271,25 @@ export const Thailand = [
     nameAR: "ملاحظات",
     nameRU: "Заметки",
     src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
+    descriptionAR:
+      "يمكن زيارة تايلاند على مدار العام ولكن أفضل الأشهر للزيارة: أيلول، تشرين الأول، تشرين الثاني.العملة المتداولة: الباهت التايلاندي",
+    descriptionEN:
+      "Thailand can be visited throughout the year, but the best months to visit are: September, October, and November.Currency: Thai Baht",
+    descriptionRU:
+      "Таиланд можно посещать круглый год, но лучшие месяцы для посещения: сентябрь, октябрь и ноябрь.Валюта: Тайский бат",
   },
   {
     nameEN: "Suggested Places to Visit",
     nameAR: "أماكن مقترحة للزيارة",
     nameRU: "Рекомендуемые места для посещения",
     src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
+    descriptionAR:
+      "أسواق مقترحة للزيارة:أسواق مقترحة في بوكيت	أسواق مقترحة في بانكوك :سوق خلونج لات ماتو	سوق تشاتوشاك [ للهدايا ]سوق لارد ياي	مجمع آسيا تيك لا يم لايت أفينيو	سوق روت فايبانزان بوكيت	مول بلاتينومسوق ناكا	سوق واروروتسوق النساء	السوق الصيني مطاعم مقترحة للزيارة:	مطاعم مقترحة في بوكيت :	مطاعم مقترحة في شنغماي :مطعم مور مو دونج بوكيت	مطعم رواميت شنغمايمطعم القرود الثلاثة	مطعم غولف شنغمايمطعم كان اينج بوكيت	مطعم ليتيل إسطنبول شنغمايمطعم سافوي بوكيت	مطعم كباب بار شنغماي مطعم نوتي نوري بوكيت	مطعم كازا وبيتزا شنغماي",
+    descriptionEN:
+      "Suggested markets to visit:Suggested markets in Phuket Suggested markets in Bangkok: /nKhlong Lat Matu Market Chatuchak Market [for gifts] /nLard Yai Market, Asia Tech Complex /nLa Yum Light Avenue Root Fi Market /nBanzan Phuket Mall Platinum /nNaka Market Warorot Market /nWomen's market Chinese market /nSuggested restaurants to visit: /nSuggested restaurants in Phuket: Suggested restaurants in Chiang Mai: /nMore Mu Dong Phuket Restaurant Ruamit Chiang Mai Restaurant /nThree Monkeys Restaurant Chiang Mai Golf Restaurant /nCan Eng Phuket Restaurant Little Istanbul Chiang Mai Restaurant /n Savoy Phuket Restaurant Kebab Bar Chiang Mai /n  Nutty Nori Pocket Restaurant Casa Restaurant and Pizza Chiang Mai",
+
+    descriptionRU:
+      "Рекомендуемые рынки для посещения: /n Рекомендуемые рынки Пхукета Рекомендуемые рынки Бангкока: /n Рынок Кхлонг Лат Мату Рынок Чатучак [для подарков] /n Рынок Лард Яй, Азиатский технологический комплекс /n Рынок Ла-Юм Лайт-Авеню Корневой Фи /n Банзан Пхукет Молл Платинум /n Рынок Нака Рынок Варорот /n Женский рынок Китайский рынок /n  Рекомендуемые рестораны для посещения: /n Рекомендуемые рестораны на Пхукете: Рекомендуемые рестораны в Чиангмае: /n Ресторан Mu Dong Phuket Ресторан Ruamit Chiang Mai /n Ресторан Three Monkeys Гольф-ресторан Чиангмая /n Ресторан Can Eng Phuket Ресторан Little Istanbul  /nChiang Mai /n Ресторан Savoy Phuket Кебаб-бар Чиангмай /n Ресторан Nutty Nori Pocket Restaurant Casa Restaurant and Pizza Чиангмай",
   },
 ];
 

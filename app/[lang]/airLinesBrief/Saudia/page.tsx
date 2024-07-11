@@ -147,6 +147,14 @@ const SaudiaAir = async ({
                     </a>
                   </td>
                 </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">website</td>
+                  <td className="py-2">
+                    <a href="https://www.saudia.com" className="text-blue-500">
+                      https://www.saudia.com
+                    </a>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -280,6 +288,14 @@ const SaudiaAir = async ({
                   <td className="py-2">
                     <a href="tel:920022222" className="text-blue-500">
                       920022222
+                    </a>
+                  </td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">website</td>
+                  <td className="py-2">
+                    <a href="https://www.saudia.com" className="text-blue-500">
+                      https://www.saudia.com
                     </a>
                   </td>
                 </tr>
@@ -434,6 +450,14 @@ const SaudiaAir = async ({
                   <td className="py-2">
                     <a href="tel:920022222" className="text-blue-500">
                       920022222
+                    </a>
+                  </td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">website</td>
+                  <td className="py-2">
+                    <a href="https://www.saudia.com" className="text-blue-500">
+                      https://www.saudia.com
                     </a>
                   </td>
                 </tr>

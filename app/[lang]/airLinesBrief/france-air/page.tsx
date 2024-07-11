@@ -130,6 +130,15 @@ const AirFrance = async ({
                 <td className="font-bold py-2 pe-8">Date of establishment</td>
                 <td className="py-2">1933</td>
               </tr>
+
+              <tr className="border-b">
+                <td className="font-bold py-2 pe-8">website</td>
+                <td className="py-2">
+                  <a href="https://www.airfrance.com" className="text-blue-500">
+                    https://www.airfrance.com
+                  </a>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -243,6 +252,15 @@ const AirFrance = async ({
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">تاريخ التأسيس</td>
                 <td className="py-2">1933</td>
+              </tr>
+
+              <tr className="border-b">
+                <td className="font-bold py-2 pe-8">website</td>
+                <td className="py-2">
+                  <a href="https://www.airfrance.com" className="text-blue-500">
+                    https://www.airfrance.com
+                  </a>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -370,6 +388,15 @@ const AirFrance = async ({
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">Дата основания</td>
                 <td className="py-2">1933</td>
+              </tr>
+
+              <tr className="border-b">
+                <td className="font-bold py-2 pe-8">website</td>
+                <td className="py-2">
+                  <a href="https://www.airfrance.com" className="text-blue-500">
+                    https://www.airfrance.com
+                  </a>
+                </td>
               </tr>
             </tbody>
           </table>

@@ -125,6 +125,17 @@ const TurkishAirlines = async ({
                 <td className="font-bold py-2 pe-8">Date of establishment</td>
                 <td className="py-2">1933</td>
               </tr>
+              <tr className="border-b">
+                <td className="font-bold py-2 pe-8">website</td>
+                <td className="py-2">
+                  <a
+                    href="https://www.turkishairlines.com"
+                    className="text-blue-500"
+                  >
+                    https://www.turkishairlines.com
+                  </a>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -235,6 +246,18 @@ const TurkishAirlines = async ({
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">سنة التأسيس</td>
                 <td className="py-2">1933</td>
+              </tr>
+
+              <tr className="border-b">
+                <td className="font-bold py-2 pe-8">website</td>
+                <td className="py-2">
+                  <a
+                    href="https://www.turkishairlines.com"
+                    className="text-blue-500"
+                  >
+                    https://www.turkishairlines.com
+                  </a>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -358,6 +381,18 @@ const TurkishAirlines = async ({
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">Год основания</td>
                 <td className="py-2">1933</td>
+              </tr>
+
+              <tr className="border-b">
+                <td className="font-bold py-2 pe-8">website</td>
+                <td className="py-2">
+                  <a
+                    href="https://www.turkishairlines.com"
+                    className="text-blue-500"
+                  >
+                    https://www.turkishairlines.com
+                  </a>
+                </td>
               </tr>
             </tbody>
           </table>

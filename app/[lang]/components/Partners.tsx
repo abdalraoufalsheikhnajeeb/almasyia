@@ -75,13 +75,13 @@ const Partners = ({ dic, data, title }: PartnersProps) => {
             <div key={index} className="p-4">
               <Link href={`/${dic.currLang}/airLinesBrief/${card.route}`}>
                 <div className="bg-gray-200 relative border rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg h-full flex flex-col justify-center items-center overflow-hidden">
-                  <div className="bg-white w-full">
+                  <div className="bg-white flex justify-center items-center w-full">
                     <Image
                       loading="lazy"
                       quality={10}
                       width={400}
                       height={200}
-                      className="rounded-t-lg aspect-video object-contain"
+                      className="rounded-t-lg aspect-video  object-contain"
                       src={card.src}
                       alt={title}
                     />
@@ -90,8 +90,7 @@ const Partners = ({ dic, data, title }: PartnersProps) => {
                     <h5 className="mb-2 text-2xl font-bold tracking-tight text-primary text-center">
                       {title}
                     </h5>
-
-                    <span className={`flex animate-bounce items-center justify-center font-bold mt-4 absolute ${dic.currLang == "ar" ?  `left-2 flex-row-reverse` : `right-2` } bottom-2`}>
+                    <span className={`flex items-center justify-center font-bold mt-4 absolute ${dic.currLang == "ar" ?  `left-2 flex-row-reverse` : `right-2` } bottom-2`}>
                       {dic.learnMore}
                       <Image
                         width={50}

@@ -18,9 +18,9 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           />
           <p className="text-gray-700 mb-4">
             Cham Wings Airlines is a private Syrian airline founded in 2007. It
-            operates scheduled and charter flights across the Middle East,
-            Europe, and North Africa. The airline aims to provide high-quality
-            service and comfortable travel experiences for its passengers.
+            operates scheduled and charter flights across the Middle East, and
+            North Africa. The airline aims to provide high-quality service and
+            comfortable travel experiences for its passengers.
           </p>
           <h2 className="text-2xl font-bold mb-2">History</h2>
           <p className="text-gray-700 mb-4">
@@ -40,7 +40,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <h2 className="text-2xl font-bold mb-2">Destinations</h2>
           <p className="text-gray-700 mb-4">
             Cham Wings Airlines serves a variety of destinations including major
-            cities in the Middle East, Europe, and North Africa. Some of the key
+            cities in the Middle East and North Africa. Some of the key
             destinations include Dubai, Beirut, Kuwait, Baghdad, Khartoum, and
             Yerevan. The airline continually evaluates and adds new routes based
             on passenger demand and market opportunities.
@@ -96,6 +96,68 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
             +963 11 9999. Follow them on social media for the latest updates and
             promotions.
           </p>
+          <div>
+            <h2 className="text-2xl font-bold mb-4">Airline Information</h2>
+            <table className="w-fit text-left text-gray-700">
+              <tbody>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">IATA Code</td>
+                  <td className="py-2">6Q</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">ICAO Code</td>
+                  <td className="py-2">SAW</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Main Company</td>
+                  <td className="py-2">Cham Wings Airlines</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Company Headquarters</td>
+                  <td className="py-2">Damascus, Syria</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">
+                    Number of destinations
+                  </td>
+                  <td className="py-2">20 destinations</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Year of operation</td>
+                  <td className="py-2">2007</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Slogan</td>
+                  <td className="py-2">"Wings of the Sky"</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Alliances</td>
+                  <td className="py-2">None</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">
+                    Customer Service Number
+                  </td>
+                  <td className="py-2">
+                    <a href="tel:+963112232220" className="text-blue-500">
+                      +963 11 223 2220
+                    </a>
+                  </td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">website</td>
+                  <td className="py-2">
+                    <a
+                      href="https://www.chamwings.com"
+                      className="text-blue-500"
+                    >
+                      https://www.chamwings.com
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     );
@@ -196,6 +258,73 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
             Следите за ними в социальных сетях для получения последних
             обновлений и акций.
           </p>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-4">
+              Информация об авиакомпании
+            </h2>
+            <table className="w-fit text-left text-gray-700">
+              <tbody>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Код IATA</td>
+                  <td className="py-2">6Q</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Код ICAO</td>
+                  <td className="py-2">SAW</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Основная компания</td>
+                  <td className="py-2">Cham Wings Airlines</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">
+                    Штаб-квартира компании
+                  </td>
+                  <td className="py-2">Дамаск, Сирия</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">
+                    Количество направлений
+                  </td>
+                  <td className="py-2">20 направлений</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Год основания</td>
+                  <td className="py-2">2007</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Слоган</td>
+                  <td className="py-2">"Крылья неба"</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Альянсы</td>
+                  <td className="py-2">Нет альянсов</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">
+                    Номер службы поддержки клиентов
+                  </td>
+                  <td className="py-2">
+                    <a href="tel:+963112232220" className="text-blue-500">
+                      +963 11 223 2220
+                    </a>
+                  </td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">website</td>
+                  <td className="py-2">
+                    <a
+                      href="https://www.chamwings.com"
+                      className="text-blue-500"
+                    >
+                      https://www.chamwings.com
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     );
@@ -214,9 +343,8 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           />
           <p className="text-gray-700 mb-4">
             طيران أجنحة الشام هو شركة طيران خاصة سورية تأسست في عام 2007. تقوم
-            بتشغيل رحلات مجدولة وشارتر عبر الشرق الأوسط وأوروبا وشمال إفريقيا.
-            تهدف شركة الطيران إلى تقديم خدمة عالية الجودة وتجربة سفر مريحة
-            لركابها.
+            بتشغيل رحلات مجدولة وشارتر عبر الشرق الأوسط وشمال إفريقيا. تهدف شركة
+            الطيران إلى تقديم خدمة عالية الجودة وتجربة سفر مريحة لركابها.
           </p>
           <h2 className="text-2xl font-bold mb-2">التاريخ</h2>
           <p className="text-gray-700 mb-4">
@@ -234,9 +362,9 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <h2 className="text-2xl font-bold mb-2">الوجهات</h2>
           <p className="text-gray-700 mb-4">
             تخدم طيران أجنحة الشام مجموعة متنوعة من الوجهات بما في ذلك المدن
-            الرئيسية في الشرق الأوسط وأوروبا وشمال إفريقيا. تشمل بعض الوجهات
-            الرئيسية دبي، بيروت، الكويت، بغداد، الخرطوم، ويريفان. تقوم شركة
-            الطيران بتقييم وإضافة مسارات جديدة بناءً على طلب الركاب وفرص السوق.
+            الرئيسية في الشرق الأوسط وشمال إفريقيا. تشمل بعض الوجهات الرئيسية
+            دبي، بيروت، الكويت، بغداد، الخرطوم، ويريفان. تقوم شركة الطيران
+            بتقييم وإضافة مسارات جديدة بناءً على طلب الركاب وفرص السوق.
           </p>
           <h2 className="text-2xl font-bold mb-2">الخدمات</h2>
           <p className="text-gray-700 mb-4">
@@ -281,6 +409,65 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
             أجنحة الشام أو الاتصال بخدمة العملاء على الرقم +963 11 9999. تابعوهم
             على وسائل التواصل الاجتماعي للحصول على آخر التحديثات والعروض.
           </p>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-4">معلومات عن شركة الطيران</h2>
+            <table className="w-fit text-left text-gray-700">
+              <tbody>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">رمز إياتا</td>
+                  <td className="py-2">6Q</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">رمز إيكاو</td>
+                  <td className="py-2">SAW</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">الشركة الرئيسية</td>
+                  <td className="py-2">أجنحة الشام للطيران</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">مقر الشركة</td>
+                  <td className="py-2">دمشق، سوريا</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">عدد الوجهات</td>
+                  <td className="py-2">20 وجهة</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">سنة التشغيل</td>
+                  <td className="py-2">2007</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">الشعار</td>
+                  <td className="py-2">"أجنحة السماء"</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">التحالفات</td>
+                  <td className="py-2">بدون تحالف</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">رقم خدمة العملاء</td>
+                  <td className="py-2">
+                    <a href="tel:+963112232220" className="text-blue-500">
+                      +963 11 223 2220
+                    </a>
+                  </td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">website</td>
+                  <td className="py-2">
+                    <a
+                      href="https://www.chamwings.com"
+                      className="text-blue-500"
+                    >
+                      https://www.chamwings.com
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     );

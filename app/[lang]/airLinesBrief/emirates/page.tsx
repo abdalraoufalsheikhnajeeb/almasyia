@@ -90,6 +90,57 @@ const Emirates = async ({ params: { lang } }: { params: { lang: Locale } }) => {
             555555. Follow them on social media for the latest updates and
             promotions.
           </p>
+          <div>
+            <h2 className="text-2xl font-bold mb-4">Airline Information</h2>
+            <table className="w-fit text-left text-gray-700">
+              <tbody>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">IATA Code</td>
+                  <td className="py-2">EK</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">ICAO Code</td>
+                  <td className="py-2">UAE</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Main Company</td>
+                  <td className="py-2">Emirates</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Company Headquarters</td>
+                  <td className="py-2">Dubai, United Arab Emirates</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">
+                    Number of destinations
+                  </td>
+                  <td className="py-2">157 destinations</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Year of operation</td>
+                  <td className="py-2">1985</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Slogan</td>
+                  <td className="py-2">"Fly Better"</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Alliances</td>
+                  <td className="py-2">No alliance</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">
+                    Customer Service Number
+                  </td>
+                  <td className="py-2">
+                    <a href="tel:+971600555555" className="text-blue-500">
+                      +971 600 555 555
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     );
@@ -178,6 +229,65 @@ const Emirates = async ({ params: { lang } }: { params: { lang: Locale } }) => {
             الإمارات أو اتصل بخدمة العملاء على الرقم +971 600 555555. تابعهم على
             وسائل التواصل الاجتماعي للحصول على آخر التحديثات والعروض الترويجية.
           </p>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-4">معلومات عن شركة الطيران</h2>
+            <table className="w-fit text-left text-gray-700">
+              <tbody>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">رمز إياتا</td>
+                  <td className="py-2">EK</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">رمز إيكاو</td>
+                  <td className="py-2">UAE</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">الشركة الرئيسية</td>
+                  <td className="py-2">طيران الإمارات</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">مقر الشركة</td>
+                  <td className="py-2">دبي، الإمارات العربية المتحدة</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">عدد الوجهات</td>
+                  <td className="py-2">157 وجهة</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">سنة التشغيل</td>
+                  <td className="py-2">1985</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">الشعار</td>
+                  <td className="py-2">"سافر أفضل"</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">التحالفات</td>
+                  <td className="py-2">بدون تحالف</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">رقم خدمة العملاء</td>
+                  <td className="py-2">
+                    <a href="tel:+971600555555" className="text-blue-500">
+                      +971 600 555 555
+                    </a>
+                  </td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">website</td>
+                  <td className="py-2">
+                    <a
+                      href="https://www.emirates.com"
+                      className="text-blue-500"
+                    >
+                      https://www.emirates.com
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     );
@@ -274,6 +384,73 @@ const Emirates = async ({ params: { lang } }: { params: { lang: Locale } }) => {
             поддержки клиентов по телефону +971 600 555555. Следите за ними в
             социальных сетях для получения последних новостей и акций.
           </p>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-4">
+              Информация об авиакомпании
+            </h2>
+            <table className="w-fit text-left text-gray-700">
+              <tbody>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Код IATA</td>
+                  <td className="py-2">EK</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Код ICAO</td>
+                  <td className="py-2">UAE</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Основная компания</td>
+                  <td className="py-2">Emirates</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">
+                    Штаб-квартира компании
+                  </td>
+                  <td className="py-2">Дубай, Объединенные Арабские Эмираты</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">
+                    Количество направлений
+                  </td>
+                  <td className="py-2">157 направлений</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Год основания</td>
+                  <td className="py-2">1985</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Слоган</td>
+                  <td className="py-2">"Летайте лучше"</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Альянсы</td>
+                  <td className="py-2">Нет альянсов</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">
+                    Номер службы поддержки клиентов
+                  </td>
+                  <td className="py-2">
+                    <a href="tel:+971600555555" className="text-blue-500">
+                      +971 600 555 555
+                    </a>
+                  </td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">website</td>
+                  <td className="py-2">
+                    <a
+                      href="https://www.emirates.com"
+                      className="text-blue-500"
+                    >
+                      https://www.emirates.com
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     );

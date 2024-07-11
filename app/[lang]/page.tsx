@@ -89,7 +89,7 @@ export default async function Home({
 
               return (
                 <Link href={`/${lang}/Services/${card.route}`} key={card.id}>
-                  <div className="max-w-[90vw] relative bg-white border flex flex-col justify-center items-center rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                  <div className="max-w-[90vw] relative w-96 bg-white border flex flex-col justify-center items-center rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                     <Image
                       loading="lazy"
                       quality={10}
@@ -104,7 +104,7 @@ export default async function Home({
                         {title}
                       </h5>
                       <span
-                        className={`flex animate-bounce delay-1000 items-center justify-center font-bold mt-4 absolute ${
+                        className={`flex delay-1000 items-end justify-center font-bold mt-4 absolute ${
                           dic.currLang == "ar"
                             ? `left-2`
                             : `right-2`
@@ -117,7 +117,7 @@ export default async function Home({
                           quality={1}
                           src="/images/arrow.svg"
                           alt="arrow"
-                          className={`ms-2 h-10 w-10 aspect-square transition-transform duration-300 hover:translate-x-1 ${
+                          className={`ms-2 h-8 w-8 aspect-square transition-transform duration-300 hover:translate-x-1 ${
                             dic.currLang == "ar" ? `rotate-180` : ``
                           }  `}
                         />

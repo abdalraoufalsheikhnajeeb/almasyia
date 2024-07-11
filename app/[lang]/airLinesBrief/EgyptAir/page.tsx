@@ -126,6 +126,15 @@ const EgyptAir = async ({ params: { lang } }: { params: { lang: Locale } }) => {
                   <td className="font-bold py-2 pe-8">Year of establishment</td>
                   <td className="py-2">1932</td>
                 </tr>
+                <tr className="border-b">
+    <td className="font-bold py-2 pe-8">website</td>
+    <td className="py-2">
+        <a href="https://www.egyptair.com" className="text-blue-500">
+            https://www.egyptair.com
+        </a>
+    </td>
+</tr>
+
               </tbody>
             </table>
           </div>
@@ -248,6 +257,15 @@ const EgyptAir = async ({ params: { lang } }: { params: { lang: Locale } }) => {
                   <td className="font-bold py-2 pe-8">سنة التأسيس</td>
                   <td className="py-2">1932</td>
                 </tr>
+                <tr className="border-b">
+    <td className="font-bold py-2 pe-8">website</td>
+    <td className="py-2">
+        <a href="https://www.egyptair.com" className="text-blue-500">
+            https://www.egyptair.com
+        </a>
+    </td>
+</tr>
+
               </tbody>
             </table>
           </div>
@@ -384,6 +402,16 @@ const EgyptAir = async ({ params: { lang } }: { params: { lang: Locale } }) => {
                   <td className="font-bold py-2 pe-8">Год основания</td>
                   <td className="py-2">1932</td>
                 </tr>
+
+                <tr className="border-b">
+    <td className="font-bold py-2 pe-8">website</td>
+    <td className="py-2">
+        <a href="https://www.egyptair.com" className="text-blue-500">
+            https://www.egyptair.com
+        </a>
+    </td>
+</tr>
+
               </tbody>
             </table>
           </div>

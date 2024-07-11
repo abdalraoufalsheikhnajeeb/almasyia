@@ -92,6 +92,66 @@ const S7Airlines = async ({
             0707. Follow them on social media for the latest updates and
             promotions.
           </p>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-4">Airline Information</h2>
+            <table className="w-fit text-left text-gray-700">
+              <tbody>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">IATA Code</td>
+                  <td className="py-2">S7</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">ICAO Code</td>
+                  <td className="py-2">SBI</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Main Company</td>
+                  <td className="py-2">S7 Airlines</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Company Headquarters</td>
+                  <td className="py-2">Novosibirsk, Russia</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">
+                    Number of destinations
+                  </td>
+                  <td className="py-2">150 destinations</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Year of operation</td>
+                  <td className="py-2">1992</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Slogan</td>
+                  <td className="py-2">"Flying in the Name of Love"</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Alliances</td>
+                  <td className="py-2">Oneworld</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">
+                    Customer Service Number
+                  </td>
+                  <td className="py-2">
+                    <a href="tel:+74952282282" className="text-blue-500">
+                      +7 495 228 22 82
+                    </a>
+                  </td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Website</td>
+                  <td className="py-2">
+                    <a href="https://www.s7.ru" className="text-blue-500">
+                      https://www.s7.ru
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     );
@@ -172,6 +232,62 @@ const S7Airlines = async ({
             الجوية أو اتصل بخدمة العملاء على الرقم +7 495 783 0707. تابعهم على
             وسائل التواصل الاجتماعي للحصول على أحدث التحديثات والعروض.
           </p>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-4">معلومات عن شركة الطيران</h2>
+            <table className="w-fit text-left text-gray-700">
+              <tbody>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">رمز إياتا</td>
+                  <td className="py-2">S7</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">رمز إيكاو</td>
+                  <td className="py-2">SBI</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">الشركة الرئيسية</td>
+                  <td className="py-2">S7 Airlines</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">مقر الشركة</td>
+                  <td className="py-2">نوفوسيبيرسك، روسيا</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">عدد الوجهات</td>
+                  <td className="py-2">150 وجهة</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">سنة التشغيل</td>
+                  <td className="py-2">1992</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">الشعار</td>
+                  <td className="py-2">"الطيران باسم الحب"</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">التحالفات</td>
+                  <td className="py-2">تحالف عالم واحد</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">رقم خدمة العملاء</td>
+                  <td className="py-2">
+                    <a href="tel:+74952282282" className="text-blue-500">
+                      +7 495 228 22 82
+                    </a>
+                  </td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">الموقع الإلكتروني</td>
+                  <td className="py-2">
+                    <a href="https://www.s7.ru" className="text-blue-500">
+                      https://www.s7.ru
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     );
@@ -265,6 +381,70 @@ const S7Airlines = async ({
             поддержки клиентов по телефону +7 495 783 0707. Следите за ними в
             социальных сетях, чтобы получать последние обновления и акции.
           </p>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-4">
+              Информация об авиакомпании
+            </h2>
+            <table className="w-fit text-left text-gray-700">
+              <tbody>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Код IATA</td>
+                  <td className="py-2">S7</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Код ICAO</td>
+                  <td className="py-2">SBI</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Основная компания</td>
+                  <td className="py-2">S7 Airlines</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">
+                    Штаб-квартира компании
+                  </td>
+                  <td className="py-2">Новосибирск, Россия</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">
+                    Количество направлений
+                  </td>
+                  <td className="py-2">150 направлений</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Год основания</td>
+                  <td className="py-2">1992</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Слоган</td>
+                  <td className="py-2">"Летаем во имя любви"</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Альянсы</td>
+                  <td className="py-2">Oneworld</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">
+                    Номер службы поддержки клиентов
+                  </td>
+                  <td className="py-2">
+                    <a href="tel:+74952282282" className="text-blue-500">
+                      +7 495 228 22 82
+                    </a>
+                  </td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">Веб-сайт</td>
+                  <td className="py-2">
+                    <a href="https://www.s7.ru" className="text-blue-500">
+                      https://www.s7.ru
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     );

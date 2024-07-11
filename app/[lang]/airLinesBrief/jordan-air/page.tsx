@@ -135,6 +135,14 @@ const RoyalJordanian = async ({
                   <td className="font-bold py-2 pe-8">Date of establishment</td>
                   <td className="py-2">1963</td>
                 </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">website</td>
+                  <td className="py-2">
+                    <a href="https://www.rj.com" className="text-blue-500">
+                      https://www.rj.com
+                    </a>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -252,6 +260,14 @@ const RoyalJordanian = async ({
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">تاريخ التأسيس</td>
                   <td className="py-2">1963</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">website</td>
+                  <td className="py-2">
+                    <a href="https://www.rj.com" className="text-blue-500">
+                      https://www.rj.com
+                    </a>
+                  </td>
                 </tr>
               </tbody>
             </table>
