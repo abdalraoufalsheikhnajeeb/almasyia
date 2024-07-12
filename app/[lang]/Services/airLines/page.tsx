@@ -12,7 +12,7 @@ export default async function page({
   return (
     <div className="pt-28  py-10">
       <Slider dic={dic} title={dic.agents} data={agents} />
-      <Slider dic={dic} title={dic.OurSlider} data={partners} />
+      <Slider dic={dic} title={dic.OurPartners} data={partners} />
     </div>
   );
 }

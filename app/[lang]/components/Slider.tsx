@@ -8,7 +8,7 @@ import Link from "next/link";
 import { getDictionary } from "../../../get-dictionary.ts";
 import Autoplay from "embla-carousel-autoplay";
 
-type Partner = {
+type Slider = {
   id: number;
   src: string;
   titleen: string;
@@ -19,7 +19,7 @@ type Partner = {
 
 type SliderProps = {
   dic: Awaited<ReturnType<typeof getDictionary>>;
-  data: Partner[];
+  data: Slider[];
   title: string;
 };
 
