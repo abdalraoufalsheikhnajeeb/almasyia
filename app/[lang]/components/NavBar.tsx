@@ -45,15 +45,19 @@ const Navbar = ({
     <nav
       className={`bg-gray-100 backdrop-brightness-125 h-20 w-full px-[5vw] py-2 flex items-center top-0 justify-between z-[100] fixed`}
     >
+      <Link href={`/${lang}`}>
+
       <Image
         loading="lazy"
         quality={1}
-        className="flex-shrink-0 h-full   "
+        className="flex-shrink-0 h-full"
         width={100}
         height={80}
         src="/images/logo.webp"
         alt="Logo"
       />
+      </Link>
+
 
       <div className="hidden lg:flex ms-10  items-baseline space-x-4">
         <Link

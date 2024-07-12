@@ -97,7 +97,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
   return (
     <div className={`w-screen ${addClass}`}>
       <div className="max-w-7xl mx-auto rounded-lg overflow-hidden my-4">
-        <div className="flex justify-center items-center p-4">
+        <div className="flex justify-center items-center gap-4">
           <Image
             width={400}
             height={200}
@@ -139,7 +139,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
             <p className="text-2xl text-primary font-bold">{phoneNumber}</p>
           </div>
         </Link>
-        <div className="relative">
+        <div dir="ltr" className="relative">
           <div className="embla" ref={emblaRef}>
             <div className="embla__container flex">
               {images.map((image, index) => (

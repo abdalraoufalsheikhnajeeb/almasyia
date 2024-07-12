@@ -54,12 +54,13 @@ const Locations: NextPage<LocationsProps> = async ({ params: { lang } }) => {
 
   return (
     <main className="flex  flex-col items-center justify-center min-h-[100dvh] py-2 ">
-      <br />
+ 
 
       <AnTitle title={dic.OurLocations} />
 
       <LocationCard {...uaeLocation} />
-      <hr />
+     <br />
+     <br />
       <LocationCard {...syriaLocation} />
     </main>
   );

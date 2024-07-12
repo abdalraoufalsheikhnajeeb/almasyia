@@ -25,7 +25,7 @@ export default async function Home({
         height={720}
       />
       <div className=" bg-gradient absolute -z-[1]  h-[100dvh] w-screen" />
-      <main className={" max-w-[90vw]  mx-auto flex items-center flex-col"}>
+      <main className=" max-w-[90vw]  mx-auto flex items-center flex-col gap-8">
         <header className="h-[100dvh] gap-8 pb-8 flex flex-col items-center justify-end ">
           <Image
             loading="lazy"
