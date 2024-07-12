@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import AnTitle from "./AnTitle.tsx";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
-import "./Partners.css";
+import "./Slider.css";
 import Link from "next/link";
 import { getDictionary } from "../../../get-dictionary.ts";
 import Autoplay from "embla-carousel-autoplay";
@@ -17,15 +17,17 @@ type Partner = {
   route: string;
 };
 
-type PartnersProps = {
+type SliderProps = {
   dic: Awaited<ReturnType<typeof getDictionary>>;
   data: Partner[];
   title: string;
 };
 
-const Partners = ({ dic, data, title }: PartnersProps) => {
-  const autoplayOptions = { delay: 20000 }; // Delay in milliseconds
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay(autoplayOptions)]);
+const Slider = ({ dic, data, title }: SliderProps) => {
+  const autoplayOptions = { delay: 2000 }; // Delay in milliseconds
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay(autoplayOptions),
+  ]);
 
   useEffect(() => {
     if (!emblaApi) return;
@@ -39,7 +41,7 @@ const Partners = ({ dic, data, title }: PartnersProps) => {
   }, [emblaApi]);
 
   return (
-    <section className="our-partners-section px-[5vw] py-8">
+    <section dir="ltr" className="our-partners-section px-[5vw] py-8">
       <AnTitle title={title} />
       <br />
       <br />
@@ -75,7 +77,13 @@ const Partners = ({ dic, data, title }: PartnersProps) => {
                       <h5 className="mb-2 text-2xl font-bold tracking-tight text-primary text-center">
                         {cardTitle}
                       </h5>
-                      <span className={`flex items-center justify-center font-bold mt-4 absolute ${dic.currLang == "ar" ?  `left-2 flex-row-reverse` : `right-2` } bottom-2`}>
+                      <span
+                        className={`flex items-center justify-center font-bold mt-4 absolute ${
+                          dic.currLang == "ar"
+                            ? `left-2 flex-row-reverse`
+                            : `right-2`
+                        } bottom-2`}
+                      >
                         {dic.learnMore}
                         <Image
                           width={50}
@@ -83,7 +91,9 @@ const Partners = ({ dic, data, title }: PartnersProps) => {
                           quality={1}
                           src="/images/arrow.svg"
                           alt="arrow"
-                          className={`ms-2 h-10 w-10 aspect-square transition-transform  duration-300 hover:translate-x-1 ${dic.currLang == "ar" ?  `rotate-180` : `` }  `}
+                          className={`ms-2 h-10 w-10 aspect-square transition-transform  duration-300 hover:translate-x-1 ${
+                            dic.currLang == "ar" ? `rotate-180` : ``
+                          }  `}
                         />
                       </span>
                     </div>
@@ -98,4 +108,4 @@ const Partners = ({ dic, data, title }: PartnersProps) => {
   );
 };
 
-export default Partners;
+export default Slider;
