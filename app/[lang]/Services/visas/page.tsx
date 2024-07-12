@@ -56,72 +56,51 @@ export default async function Page({
           return (
             <div
               key={index}
-              className=" flex justify-center items-center lg:ps-4 flex-col gap-4 bg-white bg-opacity-70 "
+              className=" flex justify-center items-center lg:ps-4 flex-col gap-4 bg-white bg-opacity-80 p-2 rounded-lg"
             >
               <hr />
-              <AnTitle title={country} />
 
-              <div className="flex flex-col lg:flex-row-reverse justify-between">
+              <h2 className="text-primary text-5xl font-bold">{country}</h2>
+              <div className="flex flex-col lg:flex-row-reverse w-full justify-between">
                 <Image
                   width={445}
                   height={260}
                   quality={10}
                   src={image}
                   alt={country}
-                  className=" lg:h-96 w-full   object-fill"
+                  className=" lg:h-72 w-full lg:w-1/2 object-contain"
                 />
-                <div className="p-4 flex flex-col gap-3">
+                <ul className="p-4 flex flex-col gap-3">
                   {duration && (
-                    <p className="text-primary text-3xl flex gap-2 items-center font-bold">
-                      <Image
-                        loading="lazy"
-                        quality={1}
-                        src="/images/point.png"
-                        className={`w-10 h-10 ${
-                          lang == "ar" ? "-scale-x-100" : ""
-                        } `}
-                        alt="pointer"
-                        width={40}
-                        height={40}
-                      />{" "}
-                      <span>{duration}</span>
-                    </p>
+                    <li className="text-primary text-3xl items-center font-bold list-style ms-6">
+                      {dic.duration}
+
+                      <p className="text-gray-500 font-normal text-xl">
+                        {duration}
+                      </p>
+                    </li>
                   )}
                   {requirements && (
-                    <p className="text-primary flex gap-2 mt-2 text-3xl font-bold">
-                      {" "}
-                      <Image
-                        loading="lazy"
-                        quality={1}
-                        src="/images/point.png"
-                        className={`w-10 h-10 ${
-                          lang == "ar" ? "-scale-x-100" : ""
-                        } `}
-                        alt="pointer"
-                        width={40}
-                        height={40}
-                      />{" "}
-                      <span> {requirements}</span>
-                    </p>
+                    <li className="text-primary list-style ms-6 text-3xl items-center font-bold">
+                      {dic.requirements}
+                      <ul className="text-gray-500 font-normal text-xl">
+                        {requirements.map((req, i) => (
+                          <li key={i}>
+                            {i + 1}. {req}
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
                   )}
                   {description && (
-                    <p className="text-primary flex gap-2 mt-2 text-3xl  font-bold">
-                      {" "}
-                      <Image
-                        loading="lazy"
-                        quality={1}
-                        src="/images/point.png"
-                        className={`w-10 h-10 ${
-                          lang == "ar" ? "-scale-x-100" : ""
-                        } `}
-                        alt="pointer"
-                        width={40}
-                        height={40}
-                      />{" "}
-                      <span>{description}</span>
-                    </p>
+                    <li className="text-primary list-style ms-6 text-3xl items-center font-bold">
+                      {dic.description}
+                      <p className="text-gray-500 font-normal text-xl">
+                        {description}
+                      </p>
+                    </li>
                   )}
-                </div>
+                </ul>
               </div>
             </div>
           );
