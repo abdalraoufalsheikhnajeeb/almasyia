@@ -45,7 +45,7 @@ export default async function Home({
           </button>
           <div className="flex gap-4">
             <div className="flex  hover:bg-gray-100 text-primary font-bold py-2 px-4 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 transition ease-in-out duration-200 ">
-              <Link href="https://wa.me/971545866066">
+              <Link target="_blank" href="https://wa.me/971545866066">
                 <Image
                   loading="lazy"
                   quality={1}
@@ -58,7 +58,7 @@ export default async function Home({
               </Link>
             </div>
             <div className="flex  hover:bg-gray-100 text-primary font-bold py-2 px-4 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 transition ease-in-out duration-200 ">
-              <Link href="https://wa.me/963950026610">
+              <Link target="_blank" href="https://wa.me/963950026610">
                 <Image
                   loading="lazy"
                   quality={1}
@@ -105,9 +105,7 @@ export default async function Home({
                       </h5>
                       <span
                         className={`flex delay-1000 items-end justify-center font-bold mt-4 absolute ${
-                          dic.currLang == "ar"
-                            ? `left-2`
-                            : `right-2`
+                          dic.currLang == "ar" ? `left-2` : `right-2`
                         } bottom-2`}
                       >
                         {dic.learnMore}

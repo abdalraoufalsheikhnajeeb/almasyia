@@ -10,15 +10,15 @@ const TurkishAirlines = async ({
   if (lang === "en") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">Turkish Airlines</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">Turkish Airlines</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/turkishairlines.webp"
             alt="Turkish Airlines"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             Turkish Airlines is the national flag carrier airline of Turkey.
@@ -129,6 +129,7 @@ const TurkishAirlines = async ({
                 <td className="font-bold py-2 pe-8">website</td>
                 <td className="py-2">
                   <a
+                    target="_blank"
                     href="https://www.turkishairlines.com"
                     className="text-blue-500"
                   >
@@ -144,15 +145,17 @@ const TurkishAirlines = async ({
   } else if (lang === "ar") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">الخطوط الجوية التركية</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">
+            الخطوط الجوية التركية
+          </h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/turkishairlines.webp"
             alt="الخطوط الجوية التركية"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             الخطوط الجوية التركية هي الناقل الوطني لتركيا. تأسست في عام 1933،
@@ -252,6 +255,7 @@ const TurkishAirlines = async ({
                 <td className="font-bold py-2 pe-8">website</td>
                 <td className="py-2">
                   <a
+                    target="_blank"
                     href="https://www.turkishairlines.com"
                     className="text-blue-500"
                   >
@@ -267,15 +271,15 @@ const TurkishAirlines = async ({
   } else if (lang === "ru") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">Turkish Airlines</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">Turkish Airlines</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/turkishairlines.webp"
             alt="Turkish Airlines"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             Turkish Airlines - национальная авиакомпания Турции. Основанная в
@@ -387,6 +391,7 @@ const TurkishAirlines = async ({
                 <td className="font-bold py-2 pe-8">website</td>
                 <td className="py-2">
                   <a
+                    target="_blank"
                     href="https://www.turkishairlines.com"
                     className="text-blue-500"
                   >

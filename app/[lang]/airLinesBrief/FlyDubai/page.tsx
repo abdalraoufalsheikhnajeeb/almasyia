@@ -6,15 +6,15 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   if (lang === "en") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">Flydubai</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">Flydubai</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/flyDubai.webp"
             alt="Flydubai"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             Flydubai, legally known as Dubai Aviation Corporation, is a
@@ -128,7 +128,11 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">Website</td>
                 <td className="py-2">
-                  <a href="https://www.flydubai.com" className="text-blue-500">
+                  <a
+                    target="_blank"
+                    href="https://www.flydubai.com"
+                    className="text-blue-500"
+                  >
                     www.flydubai.com
                   </a>
                 </td>
@@ -136,20 +140,27 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">Customer Service Number</td>
                 <td className="py-2">
-                  <a href="tel:+971600544445" className="text-blue-500">
+                  <a
+                    target="_blank"
+                    href="tel:+971600544445"
+                    className="text-blue-500"
+                  >
                     +971600544445
                   </a>
                 </td>
               </tr>
               <tr className="border-b">
-    <td className="font-bold py-2 pe-8">website</td>
-    <td className="py-2">
-        <a href="https://www.flydubai.com" className="text-blue-500">
-            https://www.flydubai.com
-        </a>
-    </td>
-</tr>
-
+                <td className="font-bold py-2 pe-8">website</td>
+                <td className="py-2">
+                  <a
+                    target="_blank"
+                    href="https://www.flydubai.com"
+                    className="text-blue-500"
+                  >
+                    https://www.flydubai.com
+                  </a>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -158,15 +169,15 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   } else if (lang === "ar") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">فلاي دبي</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">فلاي دبي</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/flyDubai.webp"
             alt="فلاي دبي"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             فلاي دبي، المعروفة قانونيًا باسم مؤسسة دبي للطيران، هي شركة طيران
@@ -265,7 +276,11 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">الموقع الإلكتروني</td>
                 <td className="py-2">
-                  <a href="https://www.flydubai.com" className="text-blue-500">
+                  <a
+                    target="_blank"
+                    href="https://www.flydubai.com"
+                    className="text-blue-500"
+                  >
                     www.flydubai.com
                   </a>
                 </td>
@@ -273,20 +288,27 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">رقم خدمة العملاء</td>
                 <td className="py-2">
-                  <a href="tel:+971600544445" className="text-blue-500">
+                  <a
+                    target="_blank"
+                    href="tel:+971600544445"
+                    className="text-blue-500"
+                  >
                     +971600544445
                   </a>
                 </td>
               </tr>
               <tr className="border-b">
-    <td className="font-bold py-2 pe-8">website</td>
-    <td className="py-2">
-        <a href="https://www.flydubai.com" className="text-blue-500">
-            https://www.flydubai.com
-        </a>
-    </td>
-</tr>
-
+                <td className="font-bold py-2 pe-8">website</td>
+                <td className="py-2">
+                  <a
+                    target="_blank"
+                    href="https://www.flydubai.com"
+                    className="text-blue-500"
+                  >
+                    https://www.flydubai.com
+                  </a>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -295,15 +317,15 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   } else if (lang === "ru") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">Flydubai</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">Flydubai</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/flyDubai.webp"
             alt="Flydubai"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             Flydubai, официально известная как Dubai Aviation Corporation,
@@ -419,7 +441,11 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">Вебсайт</td>
                 <td className="py-2">
-                  <a href="https://www.flydubai.com" className="text-blue-500">
+                  <a
+                    target="_blank"
+                    href="https://www.flydubai.com"
+                    className="text-blue-500"
+                  >
                     www.flydubai.com
                   </a>
                 </td>
@@ -427,20 +453,27 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">Номер службы поддержки</td>
                 <td className="py-2">
-                  <a href="tel:+971600544445" className="text-blue-500">
+                  <a
+                    target="_blank"
+                    href="tel:+971600544445"
+                    className="text-blue-500"
+                  >
                     +971600544445
                   </a>
                 </td>
               </tr>
               <tr className="border-b">
-    <td className="font-bold py-2 pe-8">website</td>
-    <td className="py-2">
-        <a href="https://www.flydubai.com" className="text-blue-500">
-            https://www.flydubai.com
-        </a>
-    </td>
-</tr>
-
+                <td className="font-bold py-2 pe-8">website</td>
+                <td className="py-2">
+                  <a
+                    target="_blank"
+                    href="https://www.flydubai.com"
+                    className="text-blue-500"
+                  >
+                    https://www.flydubai.com
+                  </a>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>

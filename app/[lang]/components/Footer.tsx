@@ -17,6 +17,7 @@ export default async function Footer({
         <a
           title="facebook"
           target="_blank"
+         
           href={
             "https://www.facebook.com/profile.php?id=61561523323618&mibextid=ZbWKwL"
           }
@@ -34,6 +35,7 @@ export default async function Footer({
         <a
           title="instagram"
           target="_blank"
+       
           href={
             "https://www.instagram.com/alnujoom_almasiya?igsh=Z3duaThqemhtZXpr&utm_source=qr"
           }
@@ -51,6 +53,7 @@ export default async function Footer({
         <a
           title="UAE location"
           target="_blank"
+         
           href={"https://maps.app.goo.gl/7qC5aEFBgittwxY68"}
         >
           <Image
@@ -66,6 +69,7 @@ export default async function Footer({
         <a
           title="SAR location"
           target="_blank"
+     
           href={"https://maps.app.goo.gl/AURZZ5qdu8yfD9NH9"}
         >
           <Image

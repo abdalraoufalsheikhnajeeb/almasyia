@@ -6,15 +6,15 @@ const AirIndia = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   if (lang === "en") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">Air India</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">Air India</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/indianair.webp"
             alt="Air India"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             Air India is the flag carrier airline of India, headquartered in New
@@ -125,7 +125,11 @@ const AirIndia = async ({ params: { lang } }: { params: { lang: Locale } }) => {
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">Website</td>
                 <td className="py-2">
-                  <a href="https://www.airindia.com" className="text-blue-500">
+                  <a
+                    target="_blank"
+                    href="https://www.airindia.com"
+                    className="text-blue-500"
+                  >
                     www.airindia.com
                   </a>
                 </td>
@@ -138,15 +142,17 @@ const AirIndia = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   } else if (lang === "ar") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">الخطوط الجوية الهندية</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">
+            الخطوط الجوية الهندية
+          </h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/indianair.webp"
             alt="الخطوط الجوية الهندية"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             الخطوط الجوية الهندية هي الناقل الوطني للهند، ويقع مقرها الرئيسي في
@@ -251,7 +257,11 @@ const AirIndia = async ({ params: { lang } }: { params: { lang: Locale } }) => {
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">الموقع الإلكتروني</td>
                 <td className="py-2">
-                  <a href="https://www.airindia.com" className="text-blue-500">
+                  <a
+                    target="_blank"
+                    href="https://www.airindia.com"
+                    className="text-blue-500"
+                  >
                     www.airindia.com
                   </a>
                 </td>
@@ -264,15 +274,15 @@ const AirIndia = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   } else if (lang === "ru") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">Air India</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">Air India</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/indianair.webp"
             alt="Air India"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             Air India является национальной авиакомпанией Индии, со
@@ -390,7 +400,11 @@ const AirIndia = async ({ params: { lang } }: { params: { lang: Locale } }) => {
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">Вебсайт</td>
                 <td className="py-2">
-                  <a href="https://www.airindia.com" className="text-blue-500">
+                  <a
+                    target="_blank"
+                    href="https://www.airindia.com"
+                    className="text-blue-500"
+                  >
                     www.airindia.com
                   </a>
                 </td>

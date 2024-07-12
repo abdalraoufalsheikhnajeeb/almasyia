@@ -6,15 +6,15 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   if (lang === "en") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">Syrian Air</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">Syrian Air</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/syrianair.webp"
             alt="Syrian Air"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             Syrian Air, also known as Syrian Arab Airlines, is the national
@@ -130,20 +130,27 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
                     Customer Service Number
                   </td>
                   <td className="py-2">
-                    <a href="tel:+963112240774" className="text-blue-500">
+                    <a
+                      target="_blank"
+                      href="tel:+963112240774"
+                      className="text-blue-500"
+                    >
                       +963 11 224 0774
                     </a>
                   </td>
                 </tr>
                 <tr className="border-b">
-    <td className="font-bold py-2 pe-8">website</td>
-    <td className="py-2">
-        <a href="https://www.syriaair.com" className="text-blue-500">
-            https://www.syriaair.com
-        </a>
-    </td>
-</tr>
-
+                  <td className="font-bold py-2 pe-8">website</td>
+                  <td className="py-2">
+                    <a
+                      target="_blank"
+                      href="https://www.syriaair.com"
+                      className="text-blue-500"
+                    >
+                      https://www.syriaair.com
+                    </a>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -153,15 +160,17 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   } else if (lang === "ar") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">الخطوط الجوية السورية</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">
+            الخطوط الجوية السورية
+          </h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/syrianair.webp"
             alt="الخطوط الجوية السورية"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             الخطوط الجوية السورية، المعروفة أيضًا باسم الخطوط الجوية العربية
@@ -267,20 +276,27 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">رقم خدمة العملاء</td>
                   <td className="py-2">
-                    <a href="tel:+963112240774" className="text-blue-500">
+                    <a
+                      target="_blank"
+                      href="tel:+963112240774"
+                      className="text-blue-500"
+                    >
                       +963 11 224 0774
                     </a>
                   </td>
                 </tr>
                 <tr className="border-b">
-    <td className="font-bold py-2 pe-8">website</td>
-    <td className="py-2">
-        <a href="https://www.syriaair.com" className="text-blue-500">
-            https://www.syriaair.com
-        </a>
-    </td>
-</tr>
-
+                  <td className="font-bold py-2 pe-8">website</td>
+                  <td className="py-2">
+                    <a
+                      target="_blank"
+                      href="https://www.syriaair.com"
+                      className="text-blue-500"
+                    >
+                      https://www.syriaair.com
+                    </a>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -290,15 +306,15 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   } else if (lang === "ru") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">Syrian Air</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">Syrian Air</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/syrianair.webp"
             alt="Syrian Air"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             Syrian Air, также известная как Syrian Arab Airlines, является
@@ -421,20 +437,27 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
                     Номер службы поддержки клиентов
                   </td>
                   <td className="py-2">
-                    <a href="tel:+963112240774" className="text-blue-500">
+                    <a
+                      target="_blank"
+                      href="tel:+963112240774"
+                      className="text-blue-500"
+                    >
                       +963 11 224 0774
                     </a>
                   </td>
                 </tr>
                 <tr className="border-b">
-    <td className="font-bold py-2 pe-8">website</td>
-    <td className="py-2">
-        <a href="https://www.syriaair.com" className="text-blue-500">
-            https://www.syriaair.com
-        </a>
-    </td>
-</tr>
-
+                  <td className="font-bold py-2 pe-8">website</td>
+                  <td className="py-2">
+                    <a
+                      target="_blank"
+                      href="https://www.syriaair.com"
+                      className="text-blue-500"
+                    >
+                      https://www.syriaair.com
+                    </a>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>

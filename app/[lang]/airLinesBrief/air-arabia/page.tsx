@@ -6,15 +6,15 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   if (lang === "en") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto max-w-7xl">
-          <h1 className="text-3xl font-bold mb-4">Air Arabia</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">Air Arabia</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/arabia.webp"
             alt="Air Arabia"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             Air Arabia is a low-cost airline headquartered in Sharjah, United
@@ -125,14 +125,17 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
                 <td className="py-2">2003</td>
               </tr>
               <tr className="border-b">
-    <td className="font-bold py-2 pe-8">website</td>
-    <td className="py-2">
-        <a href="https://www.airarabia.com" className="text-blue-500">
-            https://www.airarabia.com
-        </a>
-    </td>
-</tr>
-
+                <td className="font-bold py-2 pe-8">website</td>
+                <td className="py-2">
+                  <a
+                    target="_blank"
+                    href="https://www.airarabia.com"
+                    className="text-blue-500"
+                  >
+                    https://www.airarabia.com
+                  </a>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -141,15 +144,15 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   } else if (lang === "ar") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">العربية للطيران</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">العربية للطيران</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/arabia.webp"
             alt="العربية للطيران"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             العربية للطيران هي شركة طيران منخفضة التكلفة مقرها في الشارقة،
@@ -250,14 +253,17 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
                 <td className="py-2">2003</td>
               </tr>
               <tr className="border-b">
-    <td className="font-bold py-2 pe-8">website</td>
-    <td className="py-2">
-        <a href="https://www.airarabia.com" className="text-blue-500">
-            https://www.airarabia.com
-        </a>
-    </td>
-</tr>
-
+                <td className="font-bold py-2 pe-8">website</td>
+                <td className="py-2">
+                  <a
+                    target="_blank"
+                    href="https://www.airarabia.com"
+                    className="text-blue-500"
+                  >
+                    https://www.airarabia.com
+                  </a>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -266,15 +272,15 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   } else if (lang === "ru") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">Эйр Арабия</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">Эйр Арабия</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/arabia.webp"
             alt="Эйр Арабия"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             Эйр Арабия — бюджетная авиакомпания, штаб-квартира которой находится
@@ -383,14 +389,17 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
                 <td className="py-2">2003</td>
               </tr>
               <tr className="border-b">
-    <td className="font-bold py-2 pe-8">website</td>
-    <td className="py-2">
-        <a href="https://www.airarabia.com" className="text-blue-500">
-            https://www.airarabia.com
-        </a>
-    </td>
-</tr>
-
+                <td className="font-bold py-2 pe-8">website</td>
+                <td className="py-2">
+                  <a
+                    target="_blank"
+                    href="https://www.airarabia.com"
+                    className="text-blue-500"
+                  >
+                    https://www.airarabia.com
+                  </a>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>

@@ -190,6 +190,14 @@ export const countries = [
     titlear: "اكشف عن الألغاز القديمة في مصر",
     titleru: "Раскройте древние тайны Египта",
   },
+  {
+    route: "Malaysia",
+    id: 8,
+    src: "/images/malaysia.webp",
+    titleen: "Experience the Diverse Wonders of Malaysia",
+    titlear: "استمتع بعجائب ماليزيا المتنوعة",
+    titleru: "Ощутите разнообразные чудеса Малайзии",
+  },
 ];
 
 export const ourProjects = [
@@ -274,22 +282,20 @@ export const visas = [
     durationAR: "يتوفر شهر / شهرين",
     durationEN: "Available for 1 or 2 months",
     durationRU: "Доступно на 1 или 2 месяца",
-    requirementsAR: [
-      "صورة جواز سفر ملونة دقة عالية",
-      "صورة شخصية"
-    ],
+    requirementsAR: ["صورة جواز سفر ملونة دقة عالية", "صورة شخصية"],
     requirementsEN: [
       "High-resolution colored passport photo",
-      "Personal photo required"
+      "Personal photo required",
     ],
     requirementsRU: [
       "Требуется цветная фотография паспорта высокого разрешения",
-      "Личное фото"
+      "Личное фото",
     ],
     src: "/images/chapters/.webp",
     descriptionAR: "سرعة وانجاز في العمل - أسعار رائعة - خدمات احترافية",
     descriptionEN: "Fast processing - Great prices - Professional services",
-    descriptionRU: "Быстрое оформление - Отличные цены - Профессиональные услуги",
+    descriptionRU:
+      "Быстрое оформление - Отличные цены - Профессиональные услуги",
     image: "/images/uae.webp",
   },
   {
@@ -299,22 +305,21 @@ export const visas = [
     durationAR: "موافقة دخول الأراضي المصرية",
     durationEN: "Entry approval for Egypt",
     durationRU: "Одобрение на въезд в Египет",
-    requirementsAR: [
-      "صورة جواز سفر ملونة دقة عالية",
-      "صورة شخصية"
-    ],
+    requirementsAR: ["صورة جواز سفر ملونة دقة عالية", "صورة شخصية"],
     requirementsEN: [
       "High-resolution colored passport photo",
-      "Personal photo required"
+      "Personal photo required",
     ],
     requirementsRU: [
       "Требуется цветная фотография паспорта высокого разрешения",
-      "Личное фото"
+      "Личное фото",
     ],
     src: "/images/chapters/.webp",
     descriptionAR: "سريعة / بطيئة - لا تتردد في الاستفسار عن أسعارنا",
-    descriptionEN: "Fast/slow processing - Don't hesitate to inquire about our prices",
-    descriptionRU: "Быстрое/медленное оформление - Не стесняйтесь узнать наши цены",
+    descriptionEN:
+      "Fast/slow processing - Don't hesitate to inquire about our prices",
+    descriptionRU:
+      "Быстрое/медленное оформление - Не стесняйтесь узнать наши цены",
     image: "/images/egypt.webp",
   },
   {
@@ -322,19 +327,18 @@ export const visas = [
     countryEN: "Jordan",
     countryRU: "Иордания",
     durationAR: "سياحية / موعد سفارة / امتحان لغة او دورات تعليمية",
-    durationEN: "Tourist / Embassy appointment / Language test or educational courses",
-    durationRU: "Туристическая / Встреча в посольстве / Языковой тест или образовательные курсы",
-    requirementsAR: [
-      "صورة جواز سفر ملونة دقة عالية",
-      "صورة شخصية"
-    ],
+    durationEN:
+      "Tourist / Embassy appointment / Language test or educational courses",
+    durationRU:
+      "Туристическая / Встреча в посольстве / Языковой тест или образовательные курсы",
+    requirementsAR: ["صورة جواز سفر ملونة دقة عالية", "صورة شخصية"],
     requirementsEN: [
       "High-resolution colored passport photo",
-      "Personal photo required"
+      "Personal photo required",
     ],
     requirementsRU: [
       "Требуется цветная фотография паспорта высокого разрешения",
-      "Личное фото"
+      "Личное фото",
     ],
     src: "/images/chapters/.webp",
     descriptionAR: "أسعار مناسبة وإصدار سريع",
@@ -348,18 +352,16 @@ export const visas = [
     countryRU: "Индонезия",
     durationAR: "سياحية مرة واحدة / متعددة الدخول / عمل",
     durationEN: "Single-entry tourist / Multiple-entry tourist / Work",
-    durationRU: "Однократная туристическая / Многократная туристическая / Рабочая",
-    requirementsAR: [
-      "صورة جواز سفر ملونة دقة عالية",
-      "صورة شخصية"
-    ],
+    durationRU:
+      "Однократная туристическая / Многократная туристическая / Рабочая",
+    requirementsAR: ["صورة جواز سفر ملونة دقة عالية", "صورة شخصية"],
     requirementsEN: [
       "High-resolution colored passport photo",
-      "Personal photo required"
+      "Personal photo required",
     ],
     requirementsRU: [
       "Требуется цветная фотография паспорта высокого разрешения",
-      "Личное фото"
+      "Личное фото",
     ],
     src: "/images/chapters/.webp",
     descriptionAR: "مدة إنجاز سريعة - أسعار مميزة",
@@ -378,24 +380,25 @@ export const visas = [
       "صورة جواز سفر ملونة دقة عالية",
       "صورة شخصية",
       "صورة الإقامة",
-      "كشف حساب بنكي"
+      "كشف حساب بنكي",
     ],
     requirementsEN: [
       "High-resolution colored passport photo",
       "Personal photo",
       "Residence permit",
-      "Bank statement required"
+      "Bank statement required",
     ],
     requirementsRU: [
       "Требуется цветная фотография паспорта высокого разрешения",
       "Личное фото",
       "Вид на жительство",
-      "Выписка из банка"
+      "Выписка из банка",
     ],
     src: "/images/chapters/.webp",
     descriptionAR: "لا تتردد بالتواصل معنا للاستفسار عن المزيد",
     descriptionEN: "Feel free to contact us for more information",
-    descriptionRU: "Не стесняйтесь связаться с нами для получения дополнительной информации",
+    descriptionRU:
+      "Не стесняйтесь связаться с нами для получения дополнительной информации",
     image: "/images/schengen.webp",
   },
   {
@@ -409,19 +412,19 @@ export const visas = [
       "صورة جواز سفر ملونة دقة عالية",
       "صورة شخصية",
       "صورة الإقامة",
-      "كشف حساب بنكي"
+      "كشف حساب بنكي",
     ],
     requirementsEN: [
       "High-resolution colored passport photo",
       "Personal photo",
       "Residence permit",
-      "Bank statement required"
+      "Bank statement required",
     ],
     requirementsRU: [
       "Требуется цветная фотография паспорта высокого разрешения",
       "Личное фото",
       "Вид на жительство",
-      "Выписка из банка"
+      "Выписка из банка",
     ],
     src: "/images/chapters/.webp",
     descriptionAR: "",
@@ -436,22 +439,21 @@ export const visas = [
     durationAR: "سريعة و بطيئة",
     durationEN: "Fast and slow processing",
     durationRU: "Быстрое и медленное оформление",
-    requirementsAR: [
-      "صورة جواز سفر ملونة دقة عالية",
-      "صورة شخصية"
-    ],
+    requirementsAR: ["صورة جواز سفر ملونة دقة عالية", "صورة شخصية"],
     requirementsEN: [
       "High-resolution colored passport photo",
-      "Personal photo required"
+      "Personal photo required",
     ],
     requirementsRU: [
       "Требуется цветная фотография паспорта высокого разрешения",
-      "Личное фото"
+      "Личное фото",
     ],
     src: "/images/chapters/.webp",
     descriptionAR: "أسعار مناسبة - خدمات احترافية - لتفاصيل اكثر تواصل معنا",
-    descriptionEN: "Affordable prices - Professional services - For more details contact us",
-    descriptionRU: "Доступные цены - Профессиональные услуги - Свяжитесь с нами для получения дополнительной информации",
+    descriptionEN:
+      "Affordable prices - Professional services - For more details contact us",
+    descriptionRU:
+      "Доступные цены - Профессиональные услуги - Свяжитесь с нами для получения дополнительной информации",
     image: "/images/qatar.webp",
   },
   {
@@ -464,17 +466,17 @@ export const visas = [
     requirementsAR: [
       "صورة جواز سفر ملونة دقة عالية",
       "صورة شخصية",
-      "صورة الإقامة"
+      "صورة الإقامة",
     ],
     requirementsEN: [
       "High-resolution colored passport photo",
       "Personal photo",
-      "Residence permit required"
+      "Residence permit required",
     ],
     requirementsRU: [
       "Требуется цветная фотография паспорта высокого разрешения",
       "Личное фото",
-      "Вид на жительство"
+      "Вид на жительство",
     ],
     src: "/images/chapters/.webp",
     descriptionAR: "",
@@ -489,18 +491,13 @@ export const visas = [
     durationAR: "",
     durationEN: "",
     durationRU: "",
-    requirementsAR: [],
-    requirementsEN: [],
-    requirementsRU: [],
     src: "/images/chapters/.webp",
-    descriptionAR: "روسيا 🇷🇺 ألمانيا 🇩🇪 ماليزيا 🇲🇾",
-    descriptionEN: "Russia 🇷🇺 Germany 🇩🇪 Malaysia 🇲🇾",
-    descriptionRU: "Россия 🇷🇺 Германия 🇩🇪 Малайзия 🇲🇾",
+    descriptionAR: "روسيا 🇷🇺   ألمانيا 🇩🇪   ماليزيا 🇲🇾",
+    descriptionEN: "Russia 🇷🇺   Germany 🇩🇪   Malaysia 🇲🇾",
+    descriptionRU: "Россия 🇷🇺   Германия 🇩🇪   Малайзия 🇲🇾",
     image: "/images/student.webp",
   },
 ];
-
-
 
 export const timeZones = [
   {

@@ -10,8 +10,8 @@ const SaudiaAir = async ({
   if (lang === "en") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">
             Saudia (Saudi Arabian Airlines)
           </h1>
           <Image
@@ -20,7 +20,7 @@ const SaudiaAir = async ({
             quality={10}
             src="/images/saudia.webp"
             alt="Saudia"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             Saudia, also known as Saudi Arabian Airlines, is the national
@@ -142,15 +142,23 @@ const SaudiaAir = async ({
                     Customer Service Number
                   </td>
                   <td className="py-2">
-                    <a href="tel:920022222" className="text-blue-500">
-                      920022222
+                    <a
+                      target="_blank"
+                      href="tel:+966 920022222"
+                      className="text-blue-500"
+                    >
+                      +966 920022222
                     </a>
                   </td>
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">website</td>
                   <td className="py-2">
-                    <a href="https://www.saudia.com" className="text-blue-500">
+                    <a
+                      target="_blank"
+                      href="https://www.saudia.com"
+                      className="text-blue-500"
+                    >
                       https://www.saudia.com
                     </a>
                   </td>
@@ -164,8 +172,8 @@ const SaudiaAir = async ({
   } else if (lang === "ar") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">
             الخطوط الجوية السعودية (السعودية)
           </h1>
           <Image
@@ -174,7 +182,7 @@ const SaudiaAir = async ({
             quality={10}
             src="/images/saudia.webp"
             alt="الخطوط الجوية السعودية"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             السعودية، والمعروفة أيضًا باسم الخطوط الجوية السعودية، هي الناقل
@@ -286,15 +294,23 @@ const SaudiaAir = async ({
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">رقم خدمة العملاء</td>
                   <td className="py-2">
-                    <a href="tel:920022222" className="text-blue-500">
-                      920022222
+                    <a
+                      target="_blank"
+                      href="tel:+966 920022222"
+                      className="text-blue-500"
+                    >
+                      +966 920022222
                     </a>
                   </td>
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">website</td>
                   <td className="py-2">
-                    <a href="https://www.saudia.com" className="text-blue-500">
+                    <a
+                      target="_blank"
+                      href="https://www.saudia.com"
+                      className="text-blue-500"
+                    >
                       https://www.saudia.com
                     </a>
                   </td>
@@ -308,8 +324,8 @@ const SaudiaAir = async ({
   } else if (lang === "ru") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">
             Saudia (Saudi Arabian Airlines)
           </h1>
           <Image
@@ -318,7 +334,7 @@ const SaudiaAir = async ({
             quality={10}
             src="/images/saudia.webp"
             alt="Saudia"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             Saudia, также известная как Saudi Arabian Airlines, является
@@ -448,15 +464,23 @@ const SaudiaAir = async ({
                     Номер службы поддержки клиентов
                   </td>
                   <td className="py-2">
-                    <a href="tel:920022222" className="text-blue-500">
-                      920022222
+                    <a
+                      target="_blank"
+                      href="tel:+966 920022222"
+                      className="text-blue-500"
+                    >
+                      +966 920022222
                     </a>
                   </td>
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">website</td>
                   <td className="py-2">
-                    <a href="https://www.saudia.com" className="text-blue-500">
+                    <a
+                      target="_blank"
+                      href="https://www.saudia.com"
+                      className="text-blue-500"
+                    >
                       https://www.saudia.com
                     </a>
                   </td>

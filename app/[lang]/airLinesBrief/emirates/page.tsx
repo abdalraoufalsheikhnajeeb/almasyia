@@ -6,15 +6,15 @@ const Emirates = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   if (lang === "en") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">Emirates</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">Emirates</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/emirates.webp"
             alt="Emirates"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             Emirates is a state-owned airline based in Dubai, United Arab
@@ -133,8 +133,24 @@ const Emirates = async ({ params: { lang } }: { params: { lang: Locale } }) => {
                     Customer Service Number
                   </td>
                   <td className="py-2">
-                    <a href="tel:+971600555555" className="text-blue-500">
+                    <a
+                      target="_blank"
+                      href="tel:+971600555555"
+                      className="text-blue-500"
+                    >
                       +971 600 555 555
+                    </a>
+                  </td>
+                </tr>
+                <tr className="border-b">
+                  <td className="font-bold py-2 pe-8">website</td>
+                  <td className="py-2">
+                    <a
+                      target="_blank"
+                      href="https://www.emirates.com"
+                      className="text-blue-500"
+                    >
+                      https://www.emirates.com
                     </a>
                   </td>
                 </tr>
@@ -147,15 +163,15 @@ const Emirates = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   } else if (lang === "ar") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">طيران الإمارات</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">طيران الإمارات</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/emirates.webp"
             alt="طيران الإمارات"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             طيران الإمارات هي شركة طيران مملوكة للدولة ومقرها في دبي، الإمارات
@@ -269,7 +285,11 @@ const Emirates = async ({ params: { lang } }: { params: { lang: Locale } }) => {
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">رقم خدمة العملاء</td>
                   <td className="py-2">
-                    <a href="tel:+971600555555" className="text-blue-500">
+                    <a
+                      target="_blank"
+                      href="tel:+971600555555"
+                      className="text-blue-500"
+                    >
                       +971 600 555 555
                     </a>
                   </td>
@@ -278,6 +298,7 @@ const Emirates = async ({ params: { lang } }: { params: { lang: Locale } }) => {
                   <td className="font-bold py-2 pe-8">website</td>
                   <td className="py-2">
                     <a
+                      target="_blank"
                       href="https://www.emirates.com"
                       className="text-blue-500"
                     >
@@ -294,15 +315,15 @@ const Emirates = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   } else if (lang === "ru") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">Emirates</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">Emirates</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/emirates.webp"
             alt="Emirates"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             Emirates — государственная авиакомпания, базирующаяся в Дубае,
@@ -432,7 +453,11 @@ const Emirates = async ({ params: { lang } }: { params: { lang: Locale } }) => {
                     Номер службы поддержки клиентов
                   </td>
                   <td className="py-2">
-                    <a href="tel:+971600555555" className="text-blue-500">
+                    <a
+                      target="_blank"
+                      href="tel:+971600555555"
+                      className="text-blue-500"
+                    >
                       +971 600 555 555
                     </a>
                   </td>
@@ -441,6 +466,7 @@ const Emirates = async ({ params: { lang } }: { params: { lang: Locale } }) => {
                   <td className="font-bold py-2 pe-8">website</td>
                   <td className="py-2">
                     <a
+                      target="_blank"
                       href="https://www.emirates.com"
                       className="text-blue-500"
                     >

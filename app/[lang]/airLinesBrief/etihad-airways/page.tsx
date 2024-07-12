@@ -10,15 +10,15 @@ const EtihadAirways = async ({
   if (lang === "en") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">Etihad Airways</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24 pt-24">
+          <h1 className="text-4xl text-center font-bold">Etihad Airways</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/etihadairways.webp"
             alt="Etihad Airways"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5 self-center "
           />
           <p className="text-gray-700 mb-4">
             Etihad Airways is the national airline of the United Arab Emirates,
@@ -128,21 +128,15 @@ const EtihadAirways = async ({
                 <td className="font-bold py-2 pe-8">Date of establishment</td>
                 <td className="py-2">2003</td>
               </tr>
-              <tr className="border-b">
-                <td className="font-bold py-2 pe-8">
-                  Customer service number (inside Saudi Arabia)
-                </td>
-                <td className="py-2">
-                  <a href="tel:8008447893" className="text-blue-500">
-                    8008447893 - 8008500027
-                  </a>
-                </td>
-              </tr>
 
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">website</td>
                 <td className="py-2">
-                  <a href="https://www.etihad.com" className="text-blue-500">
+                  <a
+                    target="_blank"
+                    href="https://www.etihad.com"
+                    className="text-blue-500"
+                  >
                     https://www.etihad.com
                   </a>
                 </td>
@@ -155,15 +149,15 @@ const EtihadAirways = async ({
   } else if (lang === "ar") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">طيران الاتحاد</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">طيران الاتحاد</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/etihadairways.webp"
             alt="طيران الاتحاد"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             طيران الاتحاد هو الناقل الوطني لدولة الإمارات العربية المتحدة، مقره
@@ -262,20 +256,15 @@ const EtihadAirways = async ({
                 <td className="font-bold py-2 pe-8">تاريخ التأسيس</td>
                 <td className="py-2">2003</td>
               </tr>
-              <tr className="border-b">
-                <td className="font-bold py-2 pe-8">
-                  رقم خدمة العملاء (داخل المملكة العربية السعودية)
-                </td>
-                <td className="py-2">
-                  <a href="tel:8008447893" className="text-blue-500">
-                    8008447893 - 8008500027
-                  </a>
-                </td>
-              </tr>
+
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">website</td>
                 <td className="py-2">
-                  <a href="https://www.etihad.com" className="text-blue-500">
+                  <a
+                    target="_blank"
+                    href="https://www.etihad.com"
+                    className="text-blue-500"
+                  >
                     https://www.etihad.com
                   </a>
                 </td>
@@ -288,15 +277,15 @@ const EtihadAirways = async ({
   } else if (lang === "ru") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">Etihad Airways</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">Etihad Airways</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/etihadairways.webp"
             alt="Etihad Airways"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             Etihad Airways является национальной авиакомпанией Объединенных
@@ -412,21 +401,15 @@ const EtihadAirways = async ({
                 <td className="font-bold py-2 pe-8">Дата основания</td>
                 <td className="py-2">2003</td>
               </tr>
-              <tr className="border-b">
-                <td className="font-bold py-2 pe-8">
-                  Номер службы поддержки (внутри Саудовской Аравии)
-                </td>
-                <td className="py-2">
-                  <a href="tel:8008447893" className="text-blue-500">
-                    8008447893 - 8008500027
-                  </a>
-                </td>
-              </tr>
 
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">website</td>
                 <td className="py-2">
-                  <a href="https://www.etihad.com" className="text-blue-500">
+                  <a
+                    target="_blank"
+                    href="https://www.etihad.com"
+                    className="text-blue-500"
+                  >
                     https://www.etihad.com
                   </a>
                 </td>

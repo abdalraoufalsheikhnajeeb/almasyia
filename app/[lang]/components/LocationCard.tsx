@@ -108,7 +108,12 @@ const LocationCard: React.FC<LocationCardProps> = ({
           />
           <h2 className="text-5xl font-bold">{locationName}</h2>
         </div>
-        <Link href={googleMapsUrl} target="_blank" rel="noopener noreferrer">
+        <Link
+          target="_blank"
+          href={googleMapsUrl}
+          
+          rel="noopener noreferrer"
+        >
           <div className="flex items-center pt-12">
             <Image
               width={400}
@@ -121,7 +126,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
             <p className="text-2xl text-primary font-bold">{locationDetails}</p>
           </div>
         </Link>
-        <Link href={whatsLink}>
+        <Link target="_blank" href={whatsLink}>
           <div className="flex items-center">
             <Image
               width={400}
@@ -159,8 +164,9 @@ const LocationCard: React.FC<LocationCardProps> = ({
         </div>
         <div className="p-4">
           <Link
-            href={googleMapsUrl}
             target="_blank"
+            href={googleMapsUrl}
+            
             rel="noopener noreferrer"
             className="block w-full text-center mt-4 bg-litePrimary text-white font-bold py-2 px-4 rounded-full hover:bg-blue-700 transition duration-300"
           >

@@ -10,15 +10,15 @@ const S7Airlines = async ({
   if (lang === "en") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">S7 Airlines</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">S7 Airlines</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/s7airlines.webp"
             alt="S7 Airlines"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             S7 Airlines, also known as Siberia Airlines, is a major Russian
@@ -136,7 +136,11 @@ const S7Airlines = async ({
                     Customer Service Number
                   </td>
                   <td className="py-2">
-                    <a href="tel:+74952282282" className="text-blue-500">
+                    <a
+                      target="_blank"
+                      href="tel:+74952282282"
+                      className="text-blue-500"
+                    >
                       +7 495 228 22 82
                     </a>
                   </td>
@@ -144,7 +148,11 @@ const S7Airlines = async ({
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Website</td>
                   <td className="py-2">
-                    <a href="https://www.s7.ru" className="text-blue-500">
+                    <a
+                      target="_blank"
+                      href="https://www.s7.ru"
+                      className="text-blue-500"
+                    >
                       https://www.s7.ru
                     </a>
                   </td>
@@ -158,15 +166,15 @@ const S7Airlines = async ({
   } else if (lang === "ar") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">خطوط إس 7 الجوية</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">خطوط إس 7 الجوية</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/s7airlines.webp"
             alt="خطوط إس 7 الجوية"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             خطوط إس 7 الجوية، والمعروفة أيضًا باسم خطوط سيبيريا الجوية، هي شركة
@@ -272,7 +280,11 @@ const S7Airlines = async ({
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">رقم خدمة العملاء</td>
                   <td className="py-2">
-                    <a href="tel:+74952282282" className="text-blue-500">
+                    <a
+                      target="_blank"
+                      href="tel:+74952282282"
+                      className="text-blue-500"
+                    >
                       +7 495 228 22 82
                     </a>
                   </td>
@@ -280,7 +292,11 @@ const S7Airlines = async ({
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">الموقع الإلكتروني</td>
                   <td className="py-2">
-                    <a href="https://www.s7.ru" className="text-blue-500">
+                    <a
+                      target="_blank"
+                      href="https://www.s7.ru"
+                      className="text-blue-500"
+                    >
                       https://www.s7.ru
                     </a>
                   </td>
@@ -294,15 +310,15 @@ const S7Airlines = async ({
   } else if (lang === "ru") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">Авиакомпания S7</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">Авиакомпания S7</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/s7airlines.webp"
             alt="Авиакомпания S7"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             Авиакомпания S7, также известная как Сибирь, является крупной
@@ -429,7 +445,11 @@ const S7Airlines = async ({
                     Номер службы поддержки клиентов
                   </td>
                   <td className="py-2">
-                    <a href="tel:+74952282282" className="text-blue-500">
+                    <a
+                      target="_blank"
+                      href="tel:+74952282282"
+                      className="text-blue-500"
+                    >
                       +7 495 228 22 82
                     </a>
                   </td>
@@ -437,7 +457,11 @@ const S7Airlines = async ({
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Веб-сайт</td>
                   <td className="py-2">
-                    <a href="https://www.s7.ru" className="text-blue-500">
+                    <a
+                      target="_blank"
+                      href="https://www.s7.ru"
+                      className="text-blue-500"
+                    >
                       https://www.s7.ru
                     </a>
                   </td>

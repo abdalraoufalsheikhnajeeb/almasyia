@@ -6,15 +6,15 @@ const EgyptAir = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   if (lang === "en") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">EgyptAir</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">EgyptAir</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/egyptair.webp"
             alt="EgyptAir"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             EgyptAir is the flag carrier airline of Egypt, headquartered at
@@ -127,14 +127,17 @@ const EgyptAir = async ({ params: { lang } }: { params: { lang: Locale } }) => {
                   <td className="py-2">1932</td>
                 </tr>
                 <tr className="border-b">
-    <td className="font-bold py-2 pe-8">website</td>
-    <td className="py-2">
-        <a href="https://www.egyptair.com" className="text-blue-500">
-            https://www.egyptair.com
-        </a>
-    </td>
-</tr>
-
+                  <td className="font-bold py-2 pe-8">website</td>
+                  <td className="py-2">
+                    <a
+                      target="_blank"
+                      href="https://www.egyptair.com"
+                      className="text-blue-500"
+                    >
+                      https://www.egyptair.com
+                    </a>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -144,15 +147,15 @@ const EgyptAir = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   } else if (lang === "ar") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">مصر للطيران</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">مصر للطيران</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/egyptair.webp"
             alt="مصر للطيران"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             مصر للطيران هي شركة الطيران الوطنية لجمهورية مصر العربية، مقرها
@@ -258,14 +261,17 @@ const EgyptAir = async ({ params: { lang } }: { params: { lang: Locale } }) => {
                   <td className="py-2">1932</td>
                 </tr>
                 <tr className="border-b">
-    <td className="font-bold py-2 pe-8">website</td>
-    <td className="py-2">
-        <a href="https://www.egyptair.com" className="text-blue-500">
-            https://www.egyptair.com
-        </a>
-    </td>
-</tr>
-
+                  <td className="font-bold py-2 pe-8">website</td>
+                  <td className="py-2">
+                    <a
+                      target="_blank"
+                      href="https://www.egyptair.com"
+                      className="text-blue-500"
+                    >
+                      https://www.egyptair.com
+                    </a>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -275,15 +281,15 @@ const EgyptAir = async ({ params: { lang } }: { params: { lang: Locale } }) => {
   } else if (lang === "ru") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">EgyptAir</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">EgyptAir</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/egyptair.webp"
             alt="EgyptAir"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             EgyptAir — национальная авиакомпания Египта, штаб-квартира которой
@@ -404,14 +410,17 @@ const EgyptAir = async ({ params: { lang } }: { params: { lang: Locale } }) => {
                 </tr>
 
                 <tr className="border-b">
-    <td className="font-bold py-2 pe-8">website</td>
-    <td className="py-2">
-        <a href="https://www.egyptair.com" className="text-blue-500">
-            https://www.egyptair.com
-        </a>
-    </td>
-</tr>
-
+                  <td className="font-bold py-2 pe-8">website</td>
+                  <td className="py-2">
+                    <a
+                      target="_blank"
+                      href="https://www.egyptair.com"
+                      className="text-blue-500"
+                    >
+                      https://www.egyptair.com
+                    </a>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>

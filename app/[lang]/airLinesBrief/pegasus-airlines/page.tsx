@@ -10,15 +10,15 @@ const PegasusAirlines = async ({
   if (lang === "en") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">Pegasus Airlines</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">Pegasus Airlines</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/pegasusairlines.webp"
             alt="Pegasus Airlines"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             Pegasus Airlines is a Turkish low-cost airline headquartered in
@@ -137,7 +137,11 @@ const PegasusAirlines = async ({
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">website</td>
                   <td className="py-2">
-                    <a href="https://www.flypgs.com" className="text-blue-500">
+                    <a
+                      target="_blank"
+                      href="https://www.flypgs.com"
+                      className="text-blue-500"
+                    >
                       https://www.flypgs.com
                     </a>
                   </td>
@@ -151,15 +155,15 @@ const PegasusAirlines = async ({
   } else if (lang === "ar") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">طيران بيجاسوس</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">طيران بيجاسوس</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/pegasusairlines.webp"
             alt="طيران بيجاسوس"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             طيران بيجاسوس هي شركة طيران تركية منخفضة التكلفة مقرها في إسطنبول.
@@ -264,7 +268,11 @@ const PegasusAirlines = async ({
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">website</td>
                   <td className="py-2">
-                    <a href="https://www.flypgs.com" className="text-blue-500">
+                    <a
+                      target="_blank"
+                      href="https://www.flypgs.com"
+                      className="text-blue-500"
+                    >
                       https://www.flypgs.com
                     </a>
                   </td>
@@ -278,15 +286,15 @@ const PegasusAirlines = async ({
   } else if (lang === "ru") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">Pegasus Airlines</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">Pegasus Airlines</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/pegasusairlines.webp"
             alt="Pegasus Airlines"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             Pegasus Airlines - турецкая бюджетная авиакомпания со штаб-квартирой
@@ -412,7 +420,11 @@ const PegasusAirlines = async ({
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">website</td>
                   <td className="py-2">
-                    <a href="https://www.flypgs.com" className="text-blue-500">
+                    <a
+                      target="_blank"
+                      href="https://www.flypgs.com"
+                      className="text-blue-500"
+                    >
                       https://www.flypgs.com
                     </a>
                   </td>

@@ -10,15 +10,15 @@ const QatarAirways = async ({
   if (lang === "en") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">Qatar Airways</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">Qatar Airways</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/qatarairways.webp"
             alt="Qatar Airways"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             Qatar Airways is the state-owned flag carrier of Qatar. Established
@@ -139,6 +139,7 @@ const QatarAirways = async ({
                 <td className="font-bold py-2 pe-8">Website</td>
                 <td className="py-2">
                   <a
+                    target="_blank"
                     href="https://www.qatarairways.com"
                     className="text-blue-500"
                   >
@@ -154,15 +155,17 @@ const QatarAirways = async ({
   } else if (lang === "ar") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">الخطوط الجوية القطرية</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">
+            الخطوط الجوية القطرية
+          </h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/qatarairways.webp"
             alt="الخطوط الجوية القطرية"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             الخطوط الجوية القطرية هي الناقل الوطني لدولة قطر. تأسست في عام 1993،
@@ -278,6 +281,7 @@ const QatarAirways = async ({
                 <td className="font-bold py-2 pe-8">الموقع الإلكتروني</td>
                 <td className="py-2">
                   <a
+                    target="_blank"
                     href="https://www.qatarairways.com"
                     className="text-blue-500"
                   >
@@ -293,15 +297,15 @@ const QatarAirways = async ({
   } else if (lang === "ru") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold mb-4">Qatar Airways</h1>
+        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+          <h1 className="text-4xl text-center font-bold">Qatar Airways</h1>
           <Image
             width={420}
             height={300}
             quality={10}
             src="/images/qatarairways.webp"
             alt="Qatar Airways"
-            className="w-32 h-32 mb-4"
+            className="w-96 mb-5"
           />
           <p className="text-gray-700 mb-4">
             Qatar Airways - государственная авиакомпания Катара. Основанная в
@@ -427,6 +431,7 @@ const QatarAirways = async ({
                 <td className="font-bold py-2 pe-8">Вебсайт</td>
                 <td className="py-2">
                   <a
+                    target="_blank"
                     href="https://www.qatarairways.com"
                     className="text-blue-500"
                   >
