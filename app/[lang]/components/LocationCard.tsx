@@ -1,15 +1,10 @@
 "use client";
-import React from "react";
-import dynamic from "next/dynamic";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Link from "next/link";
+import React, { useEffect, useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
-
-// Dynamic import for the Slider component
-const Slider = dynamic(() => import("react-slick").then((mod) => mod.default), {
-  ssr: false,
-});
+import Link from "next/link";
+import "./Partners.css";
 
 interface LocationCardProps {
   flagSrc: string;
@@ -76,112 +71,92 @@ const LocationCard: React.FC<LocationCardProps> = ({
   addClass,
   whatsLink,
 }) => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    speed: 800,
-    cssEase: "ease-in-out",
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 1440,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-    nextArrow: (
-      <SampleNextArrow
-        onClick={function (): void {
-          throw new Error("Function not implemented.");
-        }}
-      />
-    ),
-    prevArrow: (
-      <SamplePrevArrow
-        onClick={function (): void {
-          throw new Error("Function not implemented.");
-        }}
-      />
-    ),
-  };
+  const autoplayOptions = { delay: 2000 };
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay(autoplayOptions),
+  ]);
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    emblaApi.on("pointerDown", () => emblaApi.plugins().autoplay.stop());
+    emblaApi.on("pointerUp", () => emblaApi.plugins().autoplay.play());
+
+    return () => {
+      if (emblaApi) emblaApi.destroy();
+    };
+  }, [emblaApi]);
 
   return (
     <div className={`w-screen ${addClass}`}>
-      <div className="max-w-7xl mx-auto  rounded-lg overflow-hidden my-4">
-        <div className="flex justify-center  items-center p-4">
+      <div className="max-w-7xl mx-auto rounded-lg overflow-hidden my-4">
+        <div className="flex justify-center items-center p-4">
           <Image
             width={400}
             height={200}
             quality={20}
             src={flagSrc}
             alt={`${locationName} flag`}
-            className="w-20  mr-4"
+            className="w-20 mr-4"
           />
-          <h2 className="text-5xl  font-bold">{locationName}</h2>
+          <h2 className="text-5xl font-bold">{locationName}</h2>
         </div>
         <Link href={googleMapsUrl} target="_blank" rel="noopener noreferrer">
-          <div className="flex  items-center pt-12">
+          <div className="flex items-center pt-12">
             <Image
               width={400}
               height={200}
               quality={20}
               src="/images/location.webp"
               alt={`${locationName} flag`}
-              className="w-16  mr-4"
+              className="w-16 mr-4"
             />
             <p className="text-2xl text-primary font-bold">{locationDetails}</p>
           </div>
         </Link>
         <Link href={whatsLink}>
-          <div className="flex  items-center">
+          <div className="flex items-center">
             <Image
               width={400}
               height={200}
               quality={20}
               src="/images/phone.webp"
               alt={`${locationName} flag`}
-              className="w-16  mr-4"
+              className="w-16 mr-4"
             />
-            <p className="text-2xl  text-primary font-bold">{phoneNumber}</p>
+            <p className="text-2xl text-primary font-bold">{phoneNumber}</p>
           </div>
         </Link>
-
-        <Slider {...settings}>
-          {images.map((image, index) => (
-            <div key={index} className="px-2">
-              {" "}
-              <Image
-                width={400}
-                height={200}
-                quality={20}
-                src={image}
-                alt={`Office ${index + 1}`}
-                className="w-full h-64 object-cover"
-              />
+        <div className="relative">
+          <div className="embla" ref={emblaRef}>
+            <div className="embla__container flex">
+              {images.map((image, index) => (
+                <div
+                  key={index}
+                  className="embla__slide px-2 flex-shrink-0 w-1/3"
+                >
+                  <Image
+                    width={400}
+                    height={200}
+                    quality={20}
+                    src={image}
+                    alt={`Office ${index + 1}`}
+                    className="w-full h-64 object-cover"
+                  />
+                </div>
+              ))}
             </div>
-          ))}
-        </Slider>
+          </div>
+          <SamplePrevArrow onClick={scrollPrev} />
+          <SampleNextArrow onClick={scrollNext} />
+        </div>
         <div className="p-4">
           <Link
             href={googleMapsUrl}
@@ -189,7 +164,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
             rel="noopener noreferrer"
             className="block w-full text-center mt-4 bg-litePrimary text-white font-bold py-2 px-4 rounded-full hover:bg-blue-700 transition duration-300"
           >
-            FindUs on Google Maps
+            Find Us on Google Maps
           </Link>
         </div>
       </div>

@@ -9,8 +9,8 @@ export default async function page({
 }) {
   const dic = await getDictionary(lang);
   return (
-    <div>
-      <Partners dic={dic} title={dic.OurPartners} data={countries} />
+    <div className="pt-9">
+      <Partners dic={dic} title={dic.ourTours} data={countries} />
     </div>
   );
 }

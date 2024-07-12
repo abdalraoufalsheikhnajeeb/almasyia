@@ -20,3 +20,25 @@
 .list-style{
   list-style-type: "\1F44D";
 }
+
+/* Partners.css */
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  position: relative;
+  min-width: 0;
+}
+@media (max-width: 1024px) {
+  .embla__slide {
+    width: 50%;
+  }
+}
+@media (max-width: 600px) {
+  .embla__slide {
+    width: 100%;
+  }
+}

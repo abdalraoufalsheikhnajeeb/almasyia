@@ -68,22 +68,22 @@ export default async function Page({
                   quality={10}
                   src={image}
                   alt={country}
-                  className=" lg:h-72 w-full lg:w-1/2 object-contain"
+                  className=" lg:h-96 w-full lg:w-1/2 object-contain"
                 />
-                <ul className="p-4 flex flex-col gap-3">
+                <ul className="p-4 flex flex-col gap-3 ">
                   {duration && (
-                    <li className="text-primary text-3xl items-center font-bold list-style ms-6">
-                      {dic.duration}
+                    <li className="text-primary text-3xl items-center font-bold list-style ms-6 mb-4">
+                      {dic.duration}:
 
-                      <p className="text-gray-500 font-normal text-xl">
+                      <p className="text-gray-500 font-normal text-xl mt-2">
                         {duration}
                       </p>
                     </li>
                   )}
                   {requirements && (
-                    <li className="text-primary list-style ms-6 text-3xl items-center font-bold">
-                      {dic.requirements}
-                      <ul className="text-gray-500 font-normal text-xl">
+                    <li className="text-primary list-style ms-6 text-3xl items-center font-bold mb-4">
+                      {dic.requirements}:
+                      <ul className="text-gray-500 font-normal text-xl mt-2">
                         {requirements.map((req, i) => (
                           <li key={i}>
                             {i + 1}. {req}
@@ -93,9 +93,9 @@ export default async function Page({
                     </li>
                   )}
                   {description && (
-                    <li className="text-primary list-style ms-6 text-3xl items-center font-bold">
-                      {dic.description}
-                      <p className="text-gray-500 font-normal text-xl">
+                    <li className="text-primary list-style ms-6 text-3xl items-center font-bold mb-4">
+                      {dic.description}:
+                      <p className="text-gray-500 font-normal text-xl mt-2">
                         {description}
                       </p>
                     </li>
