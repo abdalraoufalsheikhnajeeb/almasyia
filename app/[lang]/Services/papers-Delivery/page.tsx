@@ -26,7 +26,13 @@ export default function Page({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const message = `Documents Delivery:\nName: ${formData.name}\nPlace of Delivery: ${formData.placeOfDelivery}\nDelivery Location: ${formData.deliveryLocation}\nRecipient Number: ${formData.recipientNumber}\nUrgent: ${formData.isUrgent ? "Yes" : "No"}`;
+    const message = `*Documents Delivery:*\nName: ${
+      formData.name
+    }\nPlace of Delivery: ${formData.placeOfDelivery}\nDelivery Location: ${
+      formData.deliveryLocation
+    }\nRecipient Number: ${formData.recipientNumber}\nUrgent: ${
+      formData.isUrgent ? "Yes" : "No"
+    }`;
     const whatsappUrl = `https://wa.me/971545866066?text=${encodeURIComponent(
       message
     )}`;
@@ -79,7 +85,7 @@ export default function Page({
             </div>
             <div>
               <label className="block text-lg font-medium text-gray-900">
-                Delivery Location
+                Receiving location
               </label>
               <input
                 type="text"
@@ -156,7 +162,7 @@ export default function Page({
             </div>
             <div>
               <label className="block text-lg font-medium text-gray-900">
-                موقع التسليم
+                موقع الاستلام
               </label>
               <input
                 type="text"
@@ -220,7 +226,7 @@ export default function Page({
             </div>
             <div>
               <label className="block text-lg font-medium text-gray-900">
-                Место доставки
+                Место получения
               </label>
               <input
                 type="text"
