@@ -1351,914 +1351,1147 @@ export const Thailand = [
   },
 ];
 
-export const Maldives = [
-  {
-    nameEN: "Maldives",
-    nameAR: "جزر المالديف",
-    nameRU: "Мальдивы",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Malé",
-    nameAR: "جزيرة مالي",
-    nameRU: "Мале",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Grand Park Kodhipparu Maldives",
-    nameAR: "Grand Park Kodhipparu Maldives",
-    nameRU: "Grand Park Kodhipparu Maldives",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Kandima Maldives",
-    nameAR: "Kandima Maldives",
-    nameRU: "Kandima Maldives",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Marukab Plaza",
-    nameAR: "Marukab Plaza",
-    nameRU: "Marukab Plaza",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Cocoa Island",
-    nameAR: "جزيرة الكاكاو",
-    nameRU: "Какао Айленд",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "COMO Cocoa Island",
-    nameAR: "COMO Cocoa Island",
-    nameRU: "COMO Cocoa Island",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Adroit Beach inn",
-    nameAR: "Adroit Beach inn",
-    nameRU: "Adroit Beach inn",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Addu City",
-    nameAR: "مدينة أدو المرجانية",
-    nameRU: "Адду-Сити",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Ayada Maldives",
-    nameAR: "Ayada Maldives",
-    nameRU: "Ayada Maldives",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Centara Grand Island Resort & Spa Maldives",
-    nameAR: "Centara Grand Island Resort & Spa Maldives",
-    nameRU: "Centara Grand Island Resort & Spa Maldives",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Notes",
-    nameAR: "ملاحظات",
-    nameRU: "Заметки",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Male Local Market",
-    nameAR: "سوق ماليه المحلي",
-    nameRU: "Мале Локальный рынок",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Le Cute",
-    nameAR: "لو كيوت",
-    nameRU: "Ле Кут",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Majeedhee Magu",
-    nameAR: "ماجيدهي ماجو",
-    nameRU: "Маджидхи Магу",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Chaandhanee Magu",
-    nameAR: "شانداني ماجو",
-    nameRU: "Чаандхани Магу",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "STO Trade Centre",
-    nameAR: "المركز التجاري أس تي أو",
-    nameRU: "Торговый центр STO",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Centro Mall",
-    nameAR: "سنترو مول",
-    nameRU: "Центро Молл",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Island Bazaar",
-    nameAR: "بازار الجزيرة",
-    nameRU: "Островной базар",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Oevaali Art Shop & Studio",
-    nameAR: "متجر واستوديو أوفالي الفني",
-    nameRU: "Художественный магазин и студия Оеваали",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Belle Amie Bistro",
-    nameAR: "مطعم بيلامي",
-    nameRU: "Бистро Белль Ами",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Marrybrown",
-    nameAR: "مطعم ماري براون",
-    nameRU: "Маррибраун",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Lemongrass Fifth Restaurant",
-    nameAR: "مطعم ليمون جراس الخامس",
-    nameRU: "Пятый ресторан Лемонграсс",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Sea House restaurant",
-    nameAR: "مطعم بيت البحر",
-    nameRU: "Ресторан Си Хаус",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Dinemore",
-    nameAR: "مطعم داين مور",
-    nameRU: "Дайнемор",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Asian Wok",
-    nameAR: "مطعم الوعاء الآسيوي",
-    nameRU: "Азиатская вок",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Azur",
-    nameAR: "مطعم آزور",
-    nameRU: "Азур",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Symphony Restaurant",
-    nameAR: "مطعم سيمفوني",
-    nameRU: "Ресторан Симфония",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Food Bank Restaurant",
-    nameAR: "مطعم بنك الطعام",
-    nameRU: "Ресторан Фуд Банк",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "The Manhattan Fish Market",
-    nameAR: "مطعم سوق سمك منهاتن",
-    nameRU: "Рынок рыбы Манхэттена",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Pizza Mia",
-    nameAR: "مطعم بيتزا ميا",
-    nameRU: "Пицца Миа",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Salt Cafe & Restaurant",
-    nameAR: "مطعم و كافيه سالت",
-    nameRU: "Кафе и ресторан Соль",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-];
+// export const Maldives = [
+//   {
+//     nameEN: "Maldives",
+//     nameAR: "جزر المالديف",
+//     nameRU: "Мальдивы",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "تقع جزر المالديف في جنوب قارة آسيا في المحيط الهندي، ويمر عليها خط الاستواء جنوبًا، وتقع جنوب غرب سريلانكا والهند.
+// وتعتبر مالي العاصمة الرسمية لجزر المالديف، ويبلغ عدد سكانها حوالي 103,693 نسمة وتعتبر المدينة الأكبر من حيث عدد السكان  تسمى جزر المالديف بجمهورية جزر المالديف التي اشتق اسمها من الكلمة ماهال التي تعني باللغة العربية (جزر القصر) والإسلام السني يعتبر الديانة الرسمية في الدولة تحتوي جزرالمالديف حوالي 1,200 جزيرة، 200 جزيرة منها تعتبرمأهولة بالسكان، وتقع جميع هذه الجزر شمال خط الاستواء في المحيط الهندي، وتتوزع إلى عدد من الجزز المرجانية الجميلة.والرائعة.
+// قصد جزر المالديف العديد من محبي السياحة في العالم ويمكن لأصحاب الميزانية المحدودة التخطيط بشكل مدروس لزيارتها كما يمكن ممارسة نشاطات الغطس والغوص الفريدة في آسيا،كما يميزها الشواطئ الرملية البيضاء الناعمة لتي تجذب السياح من جميع أنحاء العالم وأيضا تتميز جزر المالديف بمياهها الفيروزية الصافية التي تسمح للزوار بمشاهدة الأسماك والشعاب المرجانية عن قرب.
+// تعتبر جزر المالديف من الجهات المحببة للأزواج الرومانسيين التي تمكنهم من التمتع بظاهرة النجوم المتوهجة والمشرقة ومشاهدة عدد كبير من النجوم والمخطط الخافت لدرب الثوبان وايضا الاسترخاء ومشاهدة غروب الشمس والتي تعتبر من أفضل المناظر الرائعة في العالم، كما يمكن الاسترخاء والاستمتاع بالأنشطة المختلفة مثل السباحة والغوص وركوب الأمواج.
 
-export const Indonesia = [
-  {
-    nameEN: "Indonesia",
-    nameAR: "اندونيسيا",
-    nameRU: "Индонезия",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Jakarta",
-    nameAR: "جاكرتا",
-    nameRU: "Джакарта",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Ancol Beach",
-    nameAR: "شاطئ انشول جاكرتا",
-    nameRU: "Пляж Анчол",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Fantasy World",
-    nameAR: "ملاهي فنتازيا جاكرتا",
-    nameRU: "Фэнтези Ворлд",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "National Museum of Indonesia",
-    nameAR: "المتحف الوطنى جاكرتا",
-    nameRU: "Национальный музей Индонезии",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Ragunan Zoo",
-    nameAR: "حديقة راجوانا جاكرتا",
-    nameRU: "Зоопарк Рагунан",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Puppet Museum",
-    nameAR: "متحف الدمى",
-    nameRU: "Музей кукол",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Doubletree by Hilton Hotel",
-    nameAR: "فنادق في جاكرتا",
-    nameRU: "Отели в Джакарте",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Grand Hyatt Jakarta",
-    nameAR: "جراند حياة جاكرتا",
-    nameRU: "Гранд Хаят Джакарта",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Hotel Borobudur Jakarta",
-    nameAR: "فندق بوروبودور جاكارتا",
-    nameRU: "Отель Бородобудур Джакарта",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Bali",
-    nameAR: "بالي",
-    nameRU: "Бали",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Lake Bratan",
-    nameAR: "بحيرة بورا أولان دانو براتان",
-    nameRU: "Озеро Братан",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Bali Bird Park",
-    nameAR: "بالي بيرد بارك",
-    nameRU: "Парк птиц Бали",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Bali Zoo",
-    nameAR: "حديقة الحيوان بالي",
-    nameRU: "Зоопарк Бали",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Sanur",
-    nameAR: "سانور بالي",
-    nameRU: "Санур Бали",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Meliá Bali",
-    nameAR: "فنادق بالي",
-    nameRU: "Отели Бали",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "AYANA Resort Bali",
-    nameAR: "منتجع أيانا بالي",
-    nameRU: "Курорт AYANA Бали",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Anantara Uluwatu Bali Resort",
-    nameAR: "منتجع أنانتارا أولواتو بالي",
-    nameRU: "Курорт Anantara Uluwatu Bali",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Puncak",
-    nameAR: "بونشاك",
-    nameRU: "Пунчак",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Taman Matahari",
-    nameAR: "حديقة تامان ماتا هاري بونشاك",
-    nameRU: "Парк Таман Мата Хари Пунчак",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Safari Park",
-    nameAR: "حديقة سفاري بونشاك",
-    nameRU: "Сафари-парк Пунчак",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Seven Waterfalls",
-    nameAR: "الشلالات السبعة بونشاك",
-    nameRU: "Семь водопадов Пунчак",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Pesona Alam Resort & Spa",
-    nameAR: "منتجع وسبا بسيونا ألام",
-    nameRU: "Курорт и спа Песона Алам",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Le Eminence Puncak Hotel",
-    nameAR: "فندق لي إميننس بونشاك",
-    nameRU: "Отель Le Eminence Пунчак",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Notes",
-    nameAR: "ملاحظات",
-    nameRU: "Заметки",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Jakarta Markets",
-    nameAR: "أسواق جاكرتا",
-    nameRU: "Рынки Джакарты",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Bali Markets",
-    nameAR: "أسواق بالي",
-    nameRU: "Рынки Бали",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Chinese Market",
-    nameAR: "السوق الصيني",
-    nameRU: "Китайский рынок",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Kuta Art Market",
-    nameAR: "سوق كاتا للفنون",
-    nameRU: "Рынок искусств Кута",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Jalan Surabaya Market",
-    nameAR: "سوق جالان سولابايا",
-    nameRU: "Рынок Джалан Сурабая",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Bali Galeria Mall",
-    nameAR: "مال بالي جاليريا",
-    nameRU: "Торговый центр Бали Галерия",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Central Park Mall",
-    nameAR: "سنترال بارك",
-    nameRU: "Торговый центр Центральный парк",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Sukawati Art Market",
-    nameAR: "سوق سو كاتي للفنون",
-    nameRU: "Рынок искусств Сукавати",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Antique Market",
-    nameAR: "سوق التحف القديمة",
-    nameRU: "Рынок антиквариата",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Dusun Anu Machina",
-    nameAR: "دوس اكنو ماشينا",
-    nameRU: "Дусун Ану Машина",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Jakarta Restaurants",
-    nameAR: "مطاعم جاكرتا",
-    nameRU: "Рестораны Джакарты",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Bali Restaurants",
-    nameAR: "مطاعم بالي",
-    nameRU: "Рестораны Бали",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Tom's by Tom",
-    nameAR: "تومس باي توم",
-    nameRU: "Томс бай Том",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Village Square",
-    nameAR: "فيلاج سكوير",
-    nameRU: "Вилладж Сквер",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Bandar Jakarta",
-    nameAR: "بندر جاكرتا",
-    nameRU: "Бандар Джакарта",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Herb Library",
-    nameAR: "هيرب ليبراري",
-    nameRU: "Травяная библиотека",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Hadrami House",
-    nameAR: "البيت الحضرمي",
-    nameRU: "Дом Хадрами",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Warung Made",
-    nameAR: "مطعم وارنكالي",
-    nameRU: "Варунг Мадэ",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
-  },
-];
+// ",
+//     descriptionEN: "The Maldives are located in southern Asia in the Indian Ocean, with the equator passing to the south, and they are located southwest of Sri Lanka and India.
+// Male is considered the official capital of the Maldives, with a population of about 103,693 people. It is considered the largest city in terms of population. The Maldives is called the Republic of the Maldives, whose name is derived from the word Mahal, which means in Arabic (Palace Islands). Sunni Islam is considered the official religion in the country. The Maldives contains about 1,200 islands, 200 of which are considered inhabited. All of these islands are located north of the equator in the Indian Ocean, and are divided into a number of beautiful and wonderful coral islands.
+// The Maldives is visited by many tourism lovers in the world, and those with a limited budget can plan their visit thoughtfully. It is also possible to practice unique snorkeling and diving activities in Asia. It is also distinguished by soft white sandy beaches that attract tourists from all over the world. The Maldives is also distinguished by its clear turquoise waters that allow visitors Watch fish and coral reefs up close.
+// The Maldives is considered one of the favorite destinations for romantic couples, as it enables them to enjoy the phenomenon of glowing and bright stars, see a large number of stars and the faint outline of the Thuban Trail, and also relax and watch the sunset, which is considered one of the best wonderful views in the world. They can also relax and enjoy various activities such as swimming, diving and surfing. .",
+//     descriptionRU: "Мальдивы расположены в южной части Азии в Индийском океане, экватор проходит на юг, и расположены к юго-западу от Шри-Ланки и Индии.Официальной столицей Мальдив считается Мале с населением около 103 693 человек. Он считается крупнейшим по численности населения городом. Мальдивы называют Мальдивской Республикой, название которой происходит от слова Махал, что означает. на арабском языке (Дворцовые острова). Официальной религией в стране считается суннитский ислам. На Мальдивах находится около 1200 островов, 200 из которых считаются обитаемыми. Все эти острова расположены к северу от экватора в Индийском океане. на ряд прекрасных и чудесных коралловых островов.Мальдивы посещают многие любители туризма со всего мира, и те, у кого ограниченный бюджет, могут тщательно спланировать свое посещение. В Азии также можно заняться уникальными видами подводного плавания и дайвинга. Они также отличаются мягкими белыми песчаными пляжами, которые привлекают туристов. Мальдивы также отличаются своими чистыми бирюзовыми водами, которые позволяют посетителям наблюдать за рыбами и коралловыми рифами вблизи.Мальдивы считаются одним из излюбленных мест романтических пар, поскольку они позволяют им насладиться феноменом сияющих и ярких звезд, увидеть большое количество звезд и слабые очертания тропы Тубан, а также расслабиться и полюбоваться закатом. который считается одним из лучших прекрасных видов в мире. Здесь также можно расслабиться и заняться различными видами деятельности, такими как плавание, дайвинг и серфинг.",
+//   },
+//   {
+//     nameEN: "Malé",
+//     nameAR: "جزيرة مالي",
+//     nameRU: "Мале",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "تتميز جزيرة مالي بصغر حجمها، وتنفرد عن باقي الجزر الأخرى بكونها الجزيرة الأكثر تطوّرا، يبلغ طولها بحدود 2كم وبعرض أكثر من 1كم بقليل، وتقع جزيرة مالي في المحيط الهندي حيث تحيط بها مياه البحر من كافّة الجوانب، وتقع في الجزء الشمالي لجزر المالديف، وتعتبر عاصمة جزر المالديف، ويميزها عن غيرها الأسواق التجارية المختلفة وأبنيتها الملونة، وتضم الجزيرة مجموعة من المطاعم وكذلك الفنادق الفاخرة وشواطئ ساحرة، والعديد من المعالم التاريخية والسياحية والثقافية",
+//     descriptionEN: "The Maldives are located in southern Asia in the Indian Ocean, with the equator passing to the south, and they are located southwest of Sri Lanka and India.
+// Male is considered the official capital of the Maldives, with a population of about 103,693 people. It is considered the largest city in terms of population. The Maldives is called the Republic of the Maldives, whose name is derived from the word Mahal, which means in Arabic (Palace Islands). Sunni Islam is considered the official religion in the country. The Maldives contains about 1,200 islands, 200 of which are considered inhabited. All of these islands are located north of the equator in the Indian Ocean, and are divided into a number of beautiful and wonderful coral islands.
+// The Maldives is visited by many tourism lovers in the world, and those with a limited budget can plan their visit thoughtfully. It is also possible to practice unique snorkeling and diving activities in Asia. It is also distinguished by soft white sandy beaches that attract tourists from all over the world. The Maldives is also distinguished by its clear turquoise waters that allow visitors Watch fish and coral reefs up close.
+// The Maldives is considered one of the favorite destinations for romantic couples, as it enables them to enjoy the phenomenon of glowing and bright stars, see a large number of stars and the faint outline of the Thuban Trail, and also relax and watch the sunset, which is considered one of the best wonderful views in the world. They can also relax and enjoy various activities such as swimming, diving and surfing. .",
+//     descriptionRU: "Мальдивы расположены в южной части Азии в Индийском океане, экватор проходит на юг, и расположены к юго-западу от Шри-Ланки и Индии.
+// Официальной столицей Мальдив считается Мале с населением около 103 693 человек. Он считается крупнейшим по численности населения городом. Мальдивы называют Мальдивской Республикой, название которой происходит от слова Махал, что означает. на арабском языке (Дворцовые острова). Официальной религией в стране считается суннитский ислам. На Мальдивах находится около 1200 островов, 200 из которых считаются обитаемыми. Все эти острова расположены к северу от экватора в Индийском океане. на ряд прекрасных и чудесных коралловых островов.
+// Мальдивы посещают многие любители туризма со всего мира, и те, у кого ограниченный бюджет, могут тщательно спланировать свое посещение. В Азии также можно заняться уникальными видами подводного плавания и дайвинга. Они также отличаются мягкими белыми песчаными пляжами, которые привлекают туристов. Мальдивы также отличаются своими чистыми бирюзовыми водами, которые позволяют посетителям наблюдать за рыбами и коралловыми рифами вблизи.
+// Мальдивы считаются одним из излюбленных мест романтических пар, поскольку они позволяют им насладиться феноменом сияющих и ярких звезд, увидеть большое количество звезд и слабые очертания тропы Тубан, а также расслабиться и полюбоваться закатом. который считается одним из лучших прекрасных видов в мире. Здесь также можно расслабиться и заняться различными видами деятельности, такими как плавание, дайвинг и серфинг.Мальдивы расположены в южной части Азии в Индийском океане, экватор проходит на юг, и расположены к юго-западу от Шри-Ланки и Индии.
+// Официальной столицей Мальдив считается Мале с населением около 103 693 человек. Он считается крупнейшим по численности населения городом. Мальдивы называют Мальдивской Республикой, название которой происходит от слова Махал, что означает. на арабском языке (Дворцовые острова). Официальной религией в стране считается суннитский ислам. На Мальдивах находится около 1200 островов, 200 из которых считаются обитаемыми. Все эти острова расположены к северу от экватора в Индийском океане. на ряд прекрасных и чудесных коралловых островов.
+// Мальдивы посещают многие любители туризма со всего мира, и те, у кого ограниченный бюджет, могут тщательно спланировать свое посещение. В Азии также можно заняться уникальными видами подводного плавания и дайвинга. Они также отличаются мягкими белыми песчаными пляжами, которые привлекают туристов. Мальдивы также отличаются своими чистыми бирюзовыми водами, которые позволяют посетителям наблюдать за рыбами и коралловыми рифами вблизи.
+// Мальдивы считаются одним из излюбленных мест романтических пар, поскольку они позволяют им насладиться феноменом сияющих и ярких звезд, увидеть большое количество звезд и слабые очертания тропы Тубан, а также расслабиться и полюбоваться закатом. который считается одним из лучших прекрасных видов в мире. Здесь также можно расслабиться и заняться различными видами деятельности, такими как плавание, дайвинг и серфинг.",
+//   },
+//   {
+//     nameEN: "Grand Park Kodhipparu Maldives",
+//     nameAR: "Grand Park Kodhipparu Maldives",
+//     nameRU: "Grand Park Kodhipparu Maldives",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Kandima Maldives",
+//     nameAR: "Kandima Maldives",
+//     nameRU: "Kandima Maldives",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Marukab Plaza",
+//     nameAR: "Marukab Plaza",
+//     nameRU: "Marukab Plaza",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Cocoa Island",
+//     nameAR: "جزيرة الكاكاو",
+//     nameRU: "Какао Айленд",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "جزيرة الكاكاو تعتبر من أهم المعالم السياحة في المالديف وتتميز بمائها الكريستال الصافي، مع الرمال البيضاء ويقصدها الكثيرون كوجهة مميزة لقضاء شهر عسل ممتع وتضم العديد من الفلل والأجنحة الراقية، وتوفر ايضا علاجات السامبا للنزلاء للراحة والاسترخاء، وتتمتع ايضا بشمس ساطعة في أغلب أوقات العام.",
+//     descriptionEN: "Cocoa Island is considered one of the most important tourist attractions in the Maldives. It is distinguished by its crystal clear waters and white sand. Many people visit it as a distinctive destination for spending an enjoyable honeymoon. It includes many high-end villas and suites. It also provides samba treatments for guests to rest and relax. It also enjoys bright sunshine most times of the year.",
+//     descriptionRU: "Остров Какао считается одной из самых важных туристических достопримечательностей на Мальдивах. Он отличается кристально чистой водой и белым песком. Многие люди посещают его как уникальное место для проведения приятного медового месяца. Он включает в себя множество роскошных вилл и люксов. Здесь также проводятся процедуры самбы для отдыха и расслабления. Большую часть года здесь светит яркое солнце.Остров Какао считается одной из самых важных туристических достопримечательностей на Мальдивах. Он отличается кристально чистой водой и белым песком. Многие люди посещают его как уникальное место для проведения приятного медового месяца. Он включает в себя множество роскошных вилл и люксов. Здесь также проводятся процедуры самбы для отдыха и расслабления. Большую часть года здесь светит яркое солнце.Остров Какао считается одной из самых важных туристических достопримечательностей на Мальдивах. Он отличается кристально чистой водой и белым песком. Многие люди посещают его как уникальное место для проведения приятного медового месяца. Он включает в себя множество роскошных вилл и люксов. Здесь также проводятся процедуры самбы для отдыха и расслабления. Большую часть года здесь светит яркое солнце.",
+//   },
+//   {
+//     nameEN: "COMO Cocoa Island",
+//     nameAR: "COMO Cocoa Island",
+//     nameRU: "COMO Cocoa Island",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Adroit Beach inn",
+//     nameAR: "Adroit Beach inn",
+//     nameRU: "Adroit Beach inn",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Addu City",
+//     nameAR: "مدينة أدو المرجانية",
+//     nameRU: "Адду-Сити",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "تقع مدينة أدو جنوب المالديف، وتعتبر من أهم المعالم البارزة، وتعتبر المدينة الثانية بعد العاصمة مالي كمركز اقتصادي وإداري مهم للبلاد، وتحتوي على عدد من الشعب المرجانية الجميلة ذات الشواطئ الساحرة
+// تعتبر السياحة في جزر المالديف من اهم الأنشطة لما تشمله من تنوع من الأنشطة الترفيهية والمناظر الطبيعية الرائعة والممتعة وكذلك المياه الصافية والأنشطة البحرية المختلفة والمميزة التي تلبي معظم احتياجات الزائرين
+// تقع مدينة أدو جنوب المالديف، وتعتبر من أهم المعالم البارزة، وتعتبر المدينة الثانية بعد العاصمة مالي كمركز اقتصادي وإداري مهم للبلاد، وتحتوي على عدد من الشعب المرجانية الجميلة ذات الشواطئ الساحرة
+// تعتبر السياحة في جزر المالديف من اهم الأنشطة لما تشمله من تنوع من الأنشطة الترفيهية والمناظر الطبيعية الرائعة والممتعة وكذلك المياه الصافية والأنشطة البحرية المختلفة والمميزة التي تلبي معظم احتياجات الزائرين
+// ",
+//     descriptionEN: "The city of Addu is located in the south of the Maldives, and is considered one of the most important landmarks. It is considered the second city after the capital, Male, as an important economic and administrative center for the country. It contains a number of beautiful coral reefs with charming beaches.
+// Tourism in the Maldives is considered one of the most important activities because it includes a variety of recreational activities, wonderful and enjoyable landscapes, as well as clear waters and different and distinctive marine activities that meet most of the needs of visitors.The city of Addu is located in the south of the Maldives, and is considered one of the most important landmarks. It is considered the second city after the capital, Male, as an important economic and administrative center for the country. It contains a number of beautiful coral reefs with charming beaches.
+// Tourism in the Maldives is considered one of the most important activities because it includes a variety of recreational activities, wonderful and enjoyable landscapes, as well as clear waters and different and distinctive marine activities that meet most of the needs of visitors.",
+//     descriptionRU: "Город Адду расположен на юге Мальдивских островов и считается одной из важнейших достопримечательностей. Он считается вторым городом после столицы Мале как важный экономический и административный центр страны. красивых коралловых рифов с очаровательными пляжами.
+// Туризм на Мальдивах считается одним из наиболее важных видов деятельности, поскольку он включает в себя разнообразные развлекательные мероприятия, прекрасные и приятные пейзажи, а также чистую воду и разнообразные и самобытные морские развлечения, отвечающие большинству потребностей посетителей.Город Адду расположен на юге Мальдивских островов и считается одной из важнейших достопримечательностей. Он считается вторым городом после столицы Мале как важный экономический и административный центр страны. красивых коралловых рифов с очаровательными пляжами.
+// Туризм на Мальдивах считается одним из наиболее важных видов деятельности, поскольку он включает в себя разнообразные развлекательные мероприятия, прекрасные и приятные пейзажи, а также чистую воду и разнообразные и самобытные морские развлечения, отвечающие большинству потребностей посетителей.",
+//   },
+//   {
+//     nameEN: "Ayada Maldives",
+//     nameAR: "Ayada Maldives",
+//     nameRU: "Ayada Maldives",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Centara Grand Island Resort & Spa Maldives",
+//     nameAR: "Centara Grand Island Resort & Spa Maldives",
+//     nameRU: "Centara Grand Island Resort & Spa Maldives",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Notes",
+//     nameAR: "ملاحظات",
+//     nameRU: "Заметки",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Male Local Market",
+//     nameAR: "سوق ماليه المحلي",
+//     nameRU: "Мале Локальный рынок",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Le Cute",
+//     nameAR: "لو كيوت",
+//     nameRU: "Ле Кут",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Majeedhee Magu",
+//     nameAR: "ماجيدهي ماجو",
+//     nameRU: "Маджидхи Магу",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Chaandhanee Magu",
+//     nameAR: "شانداني ماجو",
+//     nameRU: "Чаандхани Магу",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "STO Trade Centre",
+//     nameAR: "المركز التجاري أس تي أو",
+//     nameRU: "Торговый центр STO",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Centro Mall",
+//     nameAR: "سنترو مول",
+//     nameRU: "Центро Молл",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Island Bazaar",
+//     nameAR: "بازار الجزيرة",
+//     nameRU: "Островной базар",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Oevaali Art Shop & Studio",
+//     nameAR: "متجر واستوديو أوفالي الفني",
+//     nameRU: "Художественный магазин и студия Оеваали",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Belle Amie Bistro",
+//     nameAR: "مطعم بيلامي",
+//     nameRU: "Бистро Белль Ами",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Marrybrown",
+//     nameAR: "مطعم ماري براون",
+//     nameRU: "Маррибраун",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Lemongrass Fifth Restaurant",
+//     nameAR: "مطعم ليمون جراس الخامس",
+//     nameRU: "Пятый ресторан Лемонграсс",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Sea House restaurant",
+//     nameAR: "مطعم بيت البحر",
+//     nameRU: "Ресторан Си Хаус",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Dinemore",
+//     nameAR: "مطعم داين مور",
+//     nameRU: "Дайнемор",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Asian Wok",
+//     nameAR: "مطعم الوعاء الآسيوي",
+//     nameRU: "Азиатская вок",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Azur",
+//     nameAR: "مطعم آزور",
+//     nameRU: "Азур",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Symphony Restaurant",
+//     nameAR: "مطعم سيمفوني",
+//     nameRU: "Ресторан Симфония",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Food Bank Restaurant",
+//     nameAR: "مطعم بنك الطعام",
+//     nameRU: "Ресторан Фуд Банк",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "The Manhattan Fish Market",
+//     nameAR: "مطعم سوق سمك منهاتن",
+//     nameRU: "Рынок рыбы Манхэттена",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Pizza Mia",
+//     nameAR: "مطعم بيتزا ميا",
+//     nameRU: "Пицца Миа",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Salt Cafe & Restaurant",
+//     nameAR: "مطعم و كافيه سالت",
+//     nameRU: "Кафе и ресторан Соль",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+// ];
 
-export const Turkey = [
-  {
-    nameEN: "Turkey",
-    nameAR: "تركيا",
-    nameRU: "Турция",
-    descriptionEN: "",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Istanbul",
-    nameAR: "اسطنبول",
-    nameRU: "Стамбул",
-    descriptionEN: "",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Bosphorus",
-    nameAR: "البوسفور",
-    nameRU: "Босфор",
-    descriptionEN: "",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Hagia Sophia",
-    nameAR: "آيا صوفيا",
-    nameRU: "Айя-София",
-    descriptionEN: "",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Ankara",
-    nameAR: "أنقرة",
-    nameRU: "Анкара",
-    descriptionEN: "",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Blue Mosque",
-    nameAR: "جامع السلطان أحمد",
-    nameRU: "Голубая мечеть",
-    descriptionEN: "",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Topkapi Palace",
-    nameAR: "قصر توبكابي",
-    nameRU: "Топкапы",
-    descriptionEN: "",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Cappadocia",
-    nameAR: "كبادوكيا",
-    nameRU: "Каппадокия",
-    descriptionEN: "",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Pamukkale",
-    nameAR: "باموكالي",
-    nameRU: "Памуккале",
-    descriptionEN: "",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Ephesus",
-    nameAR: "أفسس",
-    nameRU: "Эфес",
-    descriptionEN: "",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Mount Ararat",
-    nameAR: "جبل أرارات",
-    nameRU: "Арарат",
-    descriptionEN: "",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Antalya",
-    nameAR: "أنطاليا",
-    nameRU: "Анталья",
-    descriptionEN: "",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Izmir",
-    nameAR: "إزمير",
-    nameRU: "Измир",
-    descriptionEN: "",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Bodrum",
-    nameAR: "بودروم",
-    nameRU: "Бодрум",
-    descriptionEN: "",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Trabzon",
-    nameAR: "طرابزون",
-    nameRU: "Трабзон",
-    descriptionEN: "",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Van Lake",
-    nameAR: "بحيرة وان",
-    nameRU: "Ван",
-    descriptionEN: "",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Sumela Monastery",
-    nameAR: "دير سوميلا",
-    nameRU: "Сумела",
-    descriptionEN: "",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Goreme National Park",
-    nameAR: "منتزه غوريم الوطني",
-    nameRU: "Гёреме",
-    descriptionEN: "",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Uludag",
-    nameAR: "أولوداغ",
-    nameRU: "Улудаг",
-    descriptionEN: "",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Mardin",
-    nameAR: "ماردين",
-    nameRU: "Мардин",
-    descriptionEN: "",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Marmaris",
-    nameAR: "مرمريس",
-    nameRU: "Мармарис",
-    descriptionEN: "",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Pergamon",
-    nameAR: "برغامون",
-    nameRU: "Пергамон",
-    descriptionEN: "",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Harran",
-    nameAR: "حاران",
-    nameRU: "Харран",
-    descriptionEN: "",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Patara Beach",
-    nameAR: "شاطئ باتارا",
-    nameRU: "Патара",
-    descriptionEN: "",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionRU: "",
-  },
-  {
-    nameEN: "Bursa",
-    nameAR: "بورصة",
-    nameRU: "Бурса",
-    descriptionEN: "",
-    src: "/images/chapters/.webp",
-    descriptionAR: "",
-    descriptionRU: "",
-  },
-];
+// export const Indonesia = [
+//   {
+//     nameEN: "Indonesia",
+//     nameAR: "اندونيسيا",
+//     nameRU: "Индонезия",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "
+// اندونيسيا هي دولة آسيوية، تسمى جمهورية إندونيسيا، تقع في الجنوب الشرقي من قارة آسيا، ذات مساحة ضخمة، حيث تبلغ مساحتها حوالى 1.919.440 كيلومتر مربع، وتضم نحو 17508 جزيرة.
+//  تحتل إندونيسيا المركز الرابع عالميا في قياس عدد السكان، يوجد في جمهورية إندونيسيا مئات اللغات واللهجات، فيقدر عدد اللغات بحوالى 642 لغة ولهجة، ولكن اللغة الإندونيسية هي اللغة الرسمية هناك، وفى دولة إندونيسيا ستة أديان معترف بهم جميعا، وبالرغم من إقرارهم بحرية الأديان إلا أن أكبر عدد السكان مسلمين, وعدد المسلمين في إندونيسيا حوالى 230 مليون مسلم من عدد السكان الإجمالي 238 مليون نسمة، وهناك أيضا الكاثوليكية والبوذية والبروتستانتية وهناك الكونفوشيوسية والهندوسية .
+// تحتل إندونيسيا موقعا متميزا، فهي تقع بين خطى عرض 11 درجة جنوبا و6 درجة شمالا وبين خطى طول 95 درجة و141 درجة شرقا.
+// تتمتع الدولة بنظام اقتصادي مختلط، أن الملكية حق للقطاع الخاص والقطاع العام، وتحتل المركز الأول اقتصاديا في المنطقة الجنوبية الشرقية من قارة آسيا , ومعدل إنتاجها المحلى حوالى 706.7 مليار دولار, ويتصدر القطاع الصناعي فيشغل حوالى 46.4% من الإنتاج المحلى ثم يليه قطاع الخدمات ثم 
+
+// اندونيسيا هي دولة آسيوية، تسمى جمهورية إندونيسيا، تقع في الجنوب الشرقي من قارة آسيا، ذات مساحة ضخمة، حيث تبلغ مساحتها حوالى 1.919.440 كيلومتر مربع، وتضم نحو 17508 جزيرة.
+//  تحتل إندونيسيا المركز الرابع عالميا في قياس عدد السكان، يوجد في جمهورية إندونيسيا مئات اللغات واللهجات، فيقدر عدد اللغات بحوالى 642 لغة ولهجة، ولكن اللغة الإندونيسية هي اللغة الرسمية هناك، وفى دولة إندونيسيا ستة أديان معترف بهم جميعا، وبالرغم من إقرارهم بحرية الأديان إلا أن أكبر عدد السكان مسلمين, وعدد المسلمين في إندونيسيا حوالى 230 مليون مسلم من عدد السكان الإجمالي 238 مليون نسمة، وهناك أيضا الكاثوليكية والبوذية والبروتستانتية وهناك الكونفوشيوسية والهندوسية .
+// تحتل إندونيسيا موقعا متميزا، فهي تقع بين خطى عرض 11 درجة جنوبا و6 درجة شمالا وبين خطى طول 95 درجة و141 درجة شرقا.
+// تتمتع الدولة بنظام اقتصادي مختلط، أن الملكية حق للقطاع الخاص والقطاع العام، وتحتل المركز الأول اقتصاديا في المنطقة الجنوبية الشرقية من قارة آسيا , ومعدل إنتاجها المحلى حوالى 706.7 مليار دولار, ويتصدر القطاع الصناعي فيشغل حوالى 46.4% من الإنتاج المحلى ثم يليه قطاع الخدمات ثم 
+// ",
+//     descriptionEN: "Indonesia is an Asian country, called the Republic of Indonesia, located in the southeast of the continent of Asia, with a huge area, with an area of ​​about 1,919,440 square kilometers, and includes about 17,508 islands.
+//  Indonesia occupies fourth place in the world in terms of population. There are hundreds of languages ​​and dialects in the Republic of Indonesia. The number of languages ​​is estimated at about 642 languages ​​and dialects, but the Indonesian language is the official language there, and in the State of Indonesia there are six religions, all of which are recognized. Despite their recognition of freedom of religion, The largest population is Muslims, and the number of Muslims in Indonesia is about 230 million Muslims out of a total population of 238 million people. There is also Catholicism, Buddhism, Protestantism, and there is Confucianism and Hinduism.
+// Indonesia occupies a unique location, as it is located between latitudes 11 degrees south and 6 degrees north and longitudes 95 degrees and 141 degrees east.
+// The country enjoys a mixed economic system, with ownership being the right of the private sector and the public sector. It occupies the first place economically in the southeastern region of the continent of Asia, and its average domestic production is about 706.7 billion dollars. The industrial sector is at the forefront, occupying about 46.4% of domestic production, followed by the services sector, thenIndonesia is an Asian country, called the Republic of Indonesia, located in the southeast of the continent of Asia, with a huge area, with an area of ​​about 1,919,440 square kilometers, and includes about 17,508 islands.
+// Indonesia occupies fourth place in the world in terms of population. There are hundreds of languages ​​and dialects in the Republic of Indonesia. The number of languages ​​is estimated at about 642 languages ​​and dialects, but the Indonesian language is the official language there, and in the State of Indonesia there are six religions, all of which are recognized. Despite their recognition of freedom of religion, The largest population is Muslims, and the number of Muslims in Indonesia is about 230 million Muslims out of a total population of 238 million people. There is also Catholicism, Buddhism, Protestantism, and there is Confucianism and Hinduism.
+// Indonesia occupies a unique location, as it is located between latitudes 11 degrees south and 6 degrees north and longitudes 95 degrees and 141 degrees east.
+// The country enjoys a mixed economic system, with ownership being the right of the private sector and the public sector. It occupies the first place economically in the southeastern region of the continent of Asia, and its average domestic production is about 706.7 billion dollars. The industrial sector is at the forefront, occupying about 46.4% of domestic production, followed by the services sector, then",
+//     descriptionRU: "Индонезия – азиатская страна, называемая Республикой Индонезия, расположенная на юго-востоке азиатского континента, имеющая огромную территорию, площадью около 1 919 440 квадратных километров, и включающая около 17 508 островов.
+//  Индонезия занимает четвертое место в мире по численности населения. В Республике Индонезия существуют сотни языков и диалектов. Число языков оценивается примерно в 642 языка и диалектов, но индонезийский язык является самым популярным. Официальный язык там, а в государстве Индонезия существует шесть религий, все из которых признаны, несмотря на признание свободы вероисповедания. Наибольшее население составляют мусульмане, а число мусульман в Индонезии составляет около 230 миллионов мусульман. общая численность населения 238 миллионов человек. Есть также католицизм, буддизм, протестантизм, а также конфуцианство и индуизм.
+// Индонезия занимает уникальное положение, поскольку она расположена между 11 градусами южной широты и 6 градусами северной широты и 95 градусами и 141 градусом восточной долготы.
+// Страна имеет смешанную экономическую систему, в которой собственность принадлежит как частному, так и государственному сектору. Она занимает первое место в экономическом отношении в юго-восточном регионе азиатского континента, а средний объем внутреннего производства составляет около 706,7 миллиардов долларов. на переднем крае находится промышленный сектор, занимающий около 46,4% внутреннего производства, за ним следует сектор услуг, затем",
+//   },
+//   {
+//     nameEN: "Jakarta",
+//     nameAR: "جاكرتا",
+//     nameRU: "Джакарта",
+//     src: "/images/chapters/.webp",
+  
+//   },
+//   {
+//     nameEN: "Ancol Beach",
+//     nameAR: "شاطئ انشول جاكرتا",
+//     nameRU: "Пляж Анчол",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "يقع شاطئ انشول في منطقة انشول التابعة لـ مدينة جاكرتا الاندونيسية، وهي منطقة هادئة جداً ومناسبة جداً للسياحة حيث يوجد بالقرب منها العديد من الأماكن الترفيهية التي تستحق المشاهدة، منها ملاهي فنتازيا، وعالم بحار سي وورلد، وغيرها الكثير من الأماكن الترفيهية.
+//     وبالنسبة لأماكن الإقامة فالمنطقة هناك تتضمن المئات من فنادق جاكرتا الفاخرة منها بوتري هوتيل، وفندق ميركوري.
+//     يقع شاطئ انشول في منطقة انشول التابعة لـ مدينة جاكرتا الاندونيسية، وهي منطقة هادئة جداً ومناسبة جداً للسياحة حيث يوجد بالقرب منها العديد من الأماكن الترفيهية التي تستحق المشاهدة، منها ملاهي فنتازيا، وعالم بحار سي وورلد، وغيرها الكثير من الأماكن الترفيهية.
+//     وبالنسبة لأماكن الإقامة فالمنطقة هناك تتضمن المئات من فنادق جاكرتا الفاخرة منها بوتري هوتيل، وفندق ميركوري.
+//     ",
+//         descriptionEN: "Ancol Beach is located in the Ancol area of ​​the Indonesian city of Jakarta. It is a very quiet area and very suitable for tourism, as there are many entertainment places near it that are worth seeing, including Fantasia amusement park, Sea World, and many other entertainment places.
+//     As for accommodation, the area includes hundreds of luxury hotels in Jakarta, including Putri Hotel and Mercury Hotel.Ancol Beach is located in the Ancol area of ​​the Indonesian city of Jakarta. It is a very quiet area and very suitable for tourism, as there are many entertainment places near it that are worth seeing, including Fantasia amusement park, Sea World, and many other entertainment places.
+//     As for accommodation, the area includes hundreds of luxury hotels in Jakarta, including Putri Hotel and Mercury Hotel.",
+//         descriptionRU: "Пляж Анкол расположен в районе Анкол индонезийского города Джакарта. Это очень тихий район, очень подходящий для туризма, так как рядом с ним расположено множество развлекательных заведений, которые стоит посетить, в том числе парк развлечений «Фантазия», «Морской мир», и многие другие развлекательные места.
+//     Что касается размещения, то в этом районе находятся сотни роскошных отелей Джакарты, в том числе Putri Hotel и Mercury Hotel.Пляж Анкол расположен в районе Анкол индонезийского города Джакарта. Это очень тихий район, очень подходящий для туризма, так как рядом с ним расположено множество развлекательных заведений, которые стоит посетить, в том числе парк развлечений «Фантазия», «Морской мир», и многие другие развлекательные места.
+//     Что касается размещения, то в этом районе находятся сотни роскошных отелей Джакарты, в том числе Putri Hotel и Mercury Hotel.",
+//   },
+//   {
+//     nameEN: "Fantasy World",
+//     nameAR: "ملاهي فنتازيا جاكرتا",
+//     nameRU: "Фэнтези Ворлд",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "  descriptionAR: "يقع شاطئ انشول في منطقة انشول التابعة لـ مدينة جاكرتا الاندونيسية، وهي منطقة هادئة جداً ومناسبة جداً للسياحة حيث يوجد بالقرب منها العديد من الأماكن الترفيهية التي تستحق المشاهدة، منها ملاهي فنتازيا، وعالم بحار سي وورلد، وغيرها الكثير من الأماكن الترفيهية.
+// وبالنسبة لأماكن الإقامة فالمنطقة هناك تتضمن المئات من فنادق جاكرتا الفاخرة منها بوتري هوتيل، وفندق ميركوري.
+// يقع شاطئ انشول في منطقة انشول التابعة لـ مدينة جاكرتا الاندونيسية، وهي منطقة هادئة جداً ومناسبة جداً للسياحة حيث يوجد بالقرب منها العديد من الأماكن الترفيهية التي تستحق المشاهدة، منها ملاهي فنتازيا، وعالم بحار سي وورلد، وغيرها الكثير من الأماكن الترفيهية.
+// وبالنسبة لأماكن الإقامة فالمنطقة هناك تتضمن المئات من فنادق جاكرتا الفاخرة منها بوتري هوتيل، وفندق ميركوري.
+// ",
+//     descriptionEN: "Ancol Beach is located in the Ancol area of ​​the Indonesian city of Jakarta. It is a very quiet area and very suitable for tourism, as there are many entertainment places near it that are worth seeing, including Fantasia amusement park, Sea World, and many other entertainment places.
+// As for accommodation, the area includes hundreds of luxury hotels in Jakarta, including Putri Hotel and Mercury Hotel.Ancol Beach is located in the Ancol area of ​​the Indonesian city of Jakarta. It is a very quiet area and very suitable for tourism, as there are many entertainment places near it that are worth seeing, including Fantasia amusement park, Sea World, and many other entertainment places.
+// As for accommodation, the area includes hundreds of luxury hotels in Jakarta, including Putri Hotel and Mercury Hotel.",
+//     descriptionRU: "Пляж Анкол расположен в районе Анкол индонезийского города Джакарта. Это очень тихий район, очень подходящий для туризма, так как рядом с ним расположено множество развлекательных заведений, которые стоит посетить, в том числе парк развлечений «Фантазия», «Морской мир», и многие другие развлекательные места.
+// Что касается размещения, то в этом районе находятся сотни роскошных отелей Джакарты, в том числе Putri Hotel и Mercury Hotel.Пляж Анкол расположен в районе Анкол индонезийского города Джакарта. Это очень тихий район, очень подходящий для туризма, так как рядом с ним расположено множество развлекательных заведений, которые стоит посетить, в том числе парк развлечений «Фантазия», «Морской мир», и многие другие развлекательные места.
+// Что касается размещения, то в этом районе находятся сотни роскошных отелей Джакарты, в том числе Putri Hotel и Mercury Hotel.",  descriptionAR: "يقع شاطئ انشول في منطقة انشول التابعة لـ مدينة جاكرتا الاندونيسية، وهي منطقة هادئة جداً ومناسبة جداً للسياحة حيث يوجد بالقرب منها العديد من الأماكن الترفيهية التي تستحق المشاهدة، منها ملاهي فنتازيا، وعالم بحار سي وورلد، وغيرها الكثير من الأماكن الترفيهية.
+// وبالنسبة لأماكن الإقامة فالمنطقة هناك تتضمن المئات من فنادق جاكرتا الفاخرة منها بوتري هوتيل، وفندق ميركوري.
+// يقع شاطئ انشول في منطقة انشول التابعة لـ مدينة جاكرتا الاندونيسية، وهي منطقة هادئة جداً ومناسبة جداً للسياحة حيث يوجد بالقرب منها العديد من الأماكن الترفيهية التي تستحق المشاهدة، منها ملاهي فنتازيا، وعالم بحار سي وورلد، وغيرها الكثير من الأماكن الترفيهية.
+// وبالنسبة لأماكن الإقامة فالمنطقة هناك تتضمن المئات من فنادق جاكرتا الفاخرة منها بوتري هوتيل، وفندق ميركوري.
+// ",
+//     descriptionEN: "Ancol Beach is located in the Ancol area of ​​the Indonesian city of Jakarta. It is a very quiet area and very suitable for tourism, as there are many entertainment places near it that are worth seeing, including Fantasia amusement park, Sea World, and many other entertainment places.
+// As for accommodation, the area includes hundreds of luxury hotels in Jakarta, including Putri Hotel and Mercury Hotel.Ancol Beach is located in the Ancol area of ​​the Indonesian city of Jakarta. It is a very quiet area and very suitable for tourism, as there are many entertainment places near it that are worth seeing, including Fantasia amusement park, Sea World, and many other entertainment places.
+// As for accommodation, the area includes hundreds of luxury hotels in Jakarta, including Putri Hotel and Mercury Hotel.",
+//     descriptionRU: "Пляж Анкол расположен в районе Анкол индонезийского города Джакарта. Это очень тихий район, очень подходящий для туризма, так как рядом с ним расположено множество развлекательных заведений, которые стоит посетить, в том числе парк развлечений «Фантазия», «Морской мир», и многие другие развлекательные места.
+// Что касается размещения, то в этом районе находятся сотни роскошных отелей Джакарты, в том числе Putri Hotel и Mercury Hotel.Пляж Анкол расположен в районе Анкол индонезийского города Джакарта. Это очень тихий район, очень подходящий для туризма, так как рядом с ним расположено множество развлекательных заведений, которые стоит посетить, в том числе парк развлечений «Фантазия», «Морской мир», и многие другие развлекательные места.
+// Что касается размещения, то в этом районе находятся сотни роскошных отелей Джакарты, в том числе Putri Hotel и Mercury Hotel.",",
+//     descriptionEN: "descriptionAR: "Ancol Beach is located in the Ancol area of ​​the Indonesian city of Jakarta. It is a very quiet area and very suitable for tourism, as there are many entertainment places near it that are worth seeing, including Fantasia amusement park, Sea World, and many other entertainment places.
+// As for accommodation, the area includes hundreds of luxury hotels in Jakarta, including Putri Hotel and Mercury Hotel.
+// Ancol Beach is located in the Ancol area of ​​the Indonesian city of Jakarta. It is a very quiet area and very suitable for tourism, as there are many entertainment places near it that are worth seeing, including Fantasia amusement park, Sea World, and many other entertainment places.
+// As for accommodation, the area includes hundreds of luxury hotels in Jakarta, including Putri Hotel and Mercury Hotel.
+// ",
+//  descriptionEN: "Ancol Beach is located in the Ancol area of ​​the Indonesian city of Jakarta. It is a very quiet area and very suitable for tourism, as there are many entertainment places near it that are worth seeing, including Fantasia amusement park, Sea World, and many other entertainment places.
+// As for accommodation, the area includes hundreds of luxury hotels in Jakarta, including Putri Hotel and Mercury Hotel. Ancol Beach is located in the Ancol area of ​​the Indonesian city of Jakarta. It is a very quiet area and very suitable for tourism, as there are many entertainment places near it that are worth seeing, including Fantasia amusement park, Sea World, and many other entertainment places.
+// As for accommodation, the area includes hundreds of luxury hotels in Jakarta, including Putri Hotel and Mercury Hotel.",
+//  Descriptionru: пляж а анкол расположен в районе анкол индонелилского голода длакалта. это очень тихилйрарон, ченcture подрийурурийурийурийийурийурий зма, так как рядом с ним раслолено мнолество развлекательных заведенил, которе Стот посетить, в тор числе "Фантария", "морскол мир" , and the most beautiful ones.
+// Что касатеся размещенил, то втом районе находртсл сотни росколнных отелер длакарт, в тор числе public hotel и mercury Hotel.пляж распололен в районе анкол индонелилсколо года длакалта. Тточень тихил район, очень подродлил длляила, так как рядом с ним раслолено мнолестворзвлекательных завений е стоит посетить, в тор числе парк развленил «фантазил», “морскол мир”, и многие дрие развлекательне места.
+// When the phone is closed, the phone is closed There are also other places in Putri Hotel and Mercury Hotel.",
+//     descriptionRU: "описаниеAR: "Пляж Анкол расположен в районе Анкол индонезийского города Джакарта. Это очень тихий район и очень подходящий для туризма, так как рядом с ним много развлекательных мест, которые стоит посмотреть, в том числе парк развлечений Фантазия, Морской мир и многие другие развлекательные места.
+// Что касается размещения, то в этом районе находятся сотни роскошных отелей Джакарты, в том числе Putri Hotel и Mercury Hotel.
+// Пляж Анкол расположен в районе Анкол индонезийского города Джакарта. Это очень тихий район, очень подходящий для туризма, так как рядом с ним расположено множество развлекательных заведений, которые стоит посетить, в том числе парк развлечений «Фантазия», «Морской мир», и многие другие развлекательные места.
+// Что касается размещения, то в этом районе находятся сотни роскошных отелей Джакарты, в том числе Putri Hotel и Mercury Hotel.
+// ",
+//  описаниеRU: "Пляж Анкол расположен в районе Анкол индонезийского города Джакарта. Это очень тихий район и очень подходящий для туризма, так как рядом с ним много развлекательных мест, которые стоит посмотреть, в том числе парк развлечений Фантазия, Морской мир и многие другие развлекательные места.
+// Что касается размещения, то в этот район входят сотни роскошных отелей Джакарты, в том числе Putri Hotel и Mercury Hotel, расположенный в районе Анкол индонезийского города Джакарта. Это очень тихий район и очень подходит для туризма, так как рядом с ним много развлекательных мест, которые стоит посетить, в том числе парк развлечений «Фантазия», «Морской мир» и многие другие развлекательные места.
+// Что касается размещения, то в этом районе находятся сотни роскошных отелей Джакарты, в том числе Putri Hotel и Mercury Hotel.
+//  Описание: пляж анкол расположен в районе анкол индонельского голода далакалта. красивые.
+// Что касается размещенного, то в этом районе находртсл стоит росколких отелей для карт, в том числе общественная гостиница и гостиница Меркурий. Пляж распололен в районе индонезийского колледжа года Дакалта. Очень тихий район, очень подродлил длилаила, так как рядом с раслолено мнолестворзвлекательных завений стоит посетить, в том числе тор парк развленил «фантазил», «морскольский мир» и многие другие развлекательные места.
+// Когда телефон закрыт, телефон закрыт. Есть и другие места в отеле «Путри» и отеле «Меркурий».",
+//   },
+//   {
+//     nameEN: "National Museum of Indonesia",
+//     nameAR: "المتحف الوطنى جاكرتا",
+//     nameRU: "Национальный музей Индонезии",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "هو متحف أثري وتاريخي وإثنولوجي وجغرافي يقع في جالان ميدان ميرديكا بارات، وسط مدينة جاكرتا، على الجانب الغربي من ساحة مرديكا. المعروف شعبيا باسم بناء الفيل (باللغة الاندونيسية: جيدونغ غجاه) وذلك لوجود تمثال الفيل في طاحونة له
+// وتغطي مجموعاته الواسعة جميع أراضي إندونيسيا وتقريبا كل تاريخها. وقد سعى المتحف للحفاظ على التراث الإندونيسي لمدة قرنين من الزمان
+// ",
+//     descriptionEN: "It is an archaeological, historical, ethnological and geographical museum located in Jalan Merdeka Barat Square, downtown Jakarta, on the western side of Merdeka Square. Popularly known as the Elephant Building (in Indonesian: Gedung Gajah) due to the presence of an elephant statue in its mill.
+// Its extensive collections cover the entire territory of Indonesia and almost all of its history. The museum has sought to preserve Indonesian heritage for two centuries",
+//     descriptionRU: "описаниеAR: "Пляж Анкол расположен в районе Анкол индонезийского города Джакарта. Это очень тихий район и очень подходящий для туризма, так как рядом с ним много развлекательных мест, которые стоит посмотреть, в том числе парк развлечений Фантазия, Морской мир и многие другие развлекательные места.
+// Что касается размещения, то в этом районе находятся сотни роскошных отелей Джакарты, в том числе Putri Hotel и Mercury Hotel.
+// Пляж Анкол расположен в районе Анкол индонезийского города Джакарта. Это очень тихий район, очень подходящий для туризма, так как рядом с ним расположено множество развлекательных заведений, которые стоит посетить, в том числе парк развлечений «Фантазия», «Морской мир», и многие другие развлекательные места.
+// Что касается размещения, то в этом районе находятся сотни роскошных отелей Джакарты, в том числе Putri Hotel и Mercury Hotel.
+// ",
+//  описаниеRU: "Пляж Анкол расположен в районе Анкол индонезийского города Джакарта. Это очень тихий район и очень подходящий для туризма, так как рядом с ним много развлекательных мест, которые стоит посмотреть, в том числе парк развлечений Фантазия, Морской мир и многие другие развлекательные места.
+// Что касается размещения, то в этот район входят сотни роскошных отелей Джакарты, в том числе Putri Hotel и Mercury Hotel, расположенный в районе Анкол индонезийского города Джакарта. Это очень тихий район и очень подходит для туризма, так как рядом с ним много развлекательных мест, которые стоит посетить, в том числе парк развлечений «Фантазия», «Морской мир» и многие другие развлекательные места.
+// Что касается размещения, то в этом районе находятся сотни роскошных отелей Джакарты, в том числе Putri Hotel и Mercury Hotel.
+//  Описание: пляж анкол расположен в районе анкол индонельского голода далакалта. красивые.
+// Что касается размещенного, то в этом районе находртсл стоит росколких отелей для карт, в том числе общественная гостиница и гостиница Меркурий. Пляж распололен в районе индонезийского колледжа года Дакалта. Очень тихий район, очень подродлил длилаила, так как рядом с раслолено мнолестворзвлекательных завений стоит посетить, в том числе тор парк развленил «фантазил», «морскольский мир» и многие другие развлекательные места.
+// Когда телефон закрыт, телефон закрыт. Есть и другие места в отеле «Путри» и отеле «Меркурий».",
+//   },
+//   {
+//     nameEN: "Ragunan Zoo",
+//     nameAR: "حديقة راجوانا جاكرتا",
+//     nameRU: "Зоопарк Рагунан",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "تقع هذه الحديقة التي تبلغ مساحتها 147 هكتارا في جالان هارسونو آرإم، باسار مينغجو، جنوب جاكرتا.",
+//     descriptionEN: "This 147-hectare park is located in Jalan Harsono ARM, Pasar Mingju, South Jakarta.",
+//     descriptionRU: "Этот парк площадью 147 гектаров расположен в районе Джалан Харсоно ARM, Пасар Мингджу, Южная Джакарта.",
+//   },
+//   {
+//     nameEN: "Puppet Museum",
+//     nameAR: "متحف الدمى",
+//     nameRU: "Музей кукол",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "يقع المتحف داخل جاكرتا، وهي من أهم المدن الاندونيسية التي تقدم لكم المئات من المعالم الترفيهية المثيرة للإعجاب والتي تستحق الزيارة تحديداً في المنطقة الشرقية من جاكرتا تحديداً في شارع بينتو.
+// لم يبنى المتحف على أنه متحف مخصص للدمي منذ بدايته، ولكنه في البداية كان عبارة عن كنيسة تاريخية يرجع تاريخها إلى عام 1640 م، كان قد بناها الهولنديين في الماضي وبعد فترة طويلة من الزمن تحديداً في عام 1975 م، تم تحويل الكنيسة إلى المتحف، يضم العديد من الدمي المختلفة الأشكال والأنواع وفي داخل المتحف ستجدون المئات من أنواع الدمي التي تم صنعها من الجلد، والقماش، بالإضافة إلى دمى تم صناعتها من الخشب وكل دمية لديها تاريخ معين، وجزيرة معينة، وقبيلة بعينها كانت تبرع في تصنيع هذا النوع من الدمى ولقد تم وضع الدمي في بترينات عرض زجاجية لحفظها من التلف.
+// ",
+//     descriptionEN: "The museum is located inside Jakarta, which is one of the most important Indonesian cities that offers you hundreds of impressive entertainment attractions that are worth visiting, specifically in the eastern region of Jakarta, specifically on Pinto Street.
+// The museum was not built as a museum dedicated to dolls from its beginning, but in the beginning it was a historical church dating back to the year 1640 AD, which had been built by the Dutch in the past. After a long period of time, specifically in the year 1975 AD, the church was converted into a museum, which includes... There are many different shapes and types of dolls, and inside the museum you will find hundreds of types of dolls that were made of leather and cloth, in addition to dolls that were made of wood. Each doll has a specific history, a specific island, and a specific tribe that excelled in manufacturing this type of dolls. Place the dolls in glass display cases to protect them from damage.",
+//     descriptionRU: "Музей расположен в Джакарте, одном из самых важных индонезийских городов, который предлагает вам сотни впечатляющих развлекательных достопримечательностей, которые стоит посетить, особенно в восточном районе Джакарты, особенно на улице Пинто.
+// Музей с самого начала не строился как музей, посвященный куклам, а изначально это была историческая церковь, построенная в 1640 году нашей эры и построенная голландцами в прошлом. в частности, в 1975 году нашей эры церковь была преобразована в музей, который включает в себя... Существует множество кукол разных форм и типов, а внутри музея вы найдете сотни типов кукол, сделанных из кожи и ткани, Помимо кукол, сделанных из дерева, каждая кукла имеет особую историю, определенный остров и определенное племя, которое преуспело в производстве кукол этого типа. Поместите куклы в стеклянные витрины, чтобы защитить их от повреждений.",
+//   },
+//   {
+//     nameEN: "Doubletree by Hilton Hotel",
+//     nameAR: "فنادق في جاكرتا",
+//     nameRU: "Отели в Джакарте",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Grand Hyatt Jakarta",
+//     nameAR: "جراند حياة جاكرتا",
+//     nameRU: "Гранд Хаят Джакарта",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Hotel Borobudur Jakarta",
+//     nameAR: "فندق بوروبودور جاكارتا",
+//     nameRU: "Отель Бородобудур Джакарта",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Bali",
+//     nameAR: "بالي",
+//     nameRU: "Бали",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "تقع البحيرة في جزيرة بالي أفضل الجزر الإندونيسية على الإطلاق، بالقرب من جبال بيديغول، المنطقة هناك طبيعية ونقية، وهي تمتاز بالنظافة الشديدة لذا فإن المكان يقدم للزائر فرصة لاستنشاق هواء نقي خالي من الملوثات التي تسببها العوادم الحديثة التي أصبحت محاطة بنا من كل اتجاه.
+// كما أن المكان يتسم بالهدوء لذا فهو فرصة جيدة للاستمتاع ببعض من الصفاء الذهني
+// ",
+//     descriptionEN: "The lake is located on the island of Bali, the best Indonesian island of all, near the Bedigul Mountains. The area there is natural and pure, and is characterized by extreme cleanliness, so the place offers the visitor the opportunity to breathe pure air free of pollutants caused by modern exhausts that have become surrounding us from every direction.
+// The place is also quiet, so it is a good opportunity to enjoy some mental clarity",
+//     descriptionRU: "Озеро расположено на острове Бали, лучшем индонезийском острове, недалеко от гор Бедигул. Местность здесь естественная и чистая, отличается исключительной чистотой, поэтому это место дает посетителю возможность свободно дышать чистым воздухом. загрязняющих веществ, вызванных современными выхлопами, которые окружают нас со всех сторон.
+// Здесь также тихо, так что это хорошая возможность насладиться ясностью ума.",
+//   },
+//   {
+//     nameEN: "Lake Bratan",
+//     nameAR: "بحيرة بورا أولان دانو براتان",
+//     nameRU: "Озеро Братан",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "تقع البحيرة في جزيرة بالي أفضل الجزر الإندونيسية على الإطلاق، بالقرب من جبال بيديغول، المنطقة هناك طبيعية ونقية، وهي تمتاز بالنظافة الشديدة لذا فإن المكان يقدم للزائر فرصة لاستنشاق هواء نقي خالي من الملوثات التي تسببها العوادم الحديثة التي أصبحت محاطة بنا من كل اتجاه.
+// كما أن المكان يتسم بالهدوء لذا فهو فرصة جيدة للاستمتاع ببعض من الصفاء الذهني
+// ",
+//     descriptionEN: "The lake is located on the island of Bali, the best Indonesian island of all, near the Bedigul Mountains. The area there is natural and pure, and is characterized by extreme cleanliness, so the place offers the visitor the opportunity to breathe pure air free of pollutants caused by modern exhausts that have become surrounding us from every direction.
+// The place is also quiet, so it is a good opportunity to enjoy some mental clarity",
+//     descriptionRU: "Озеро расположено на острове Бали, лучшем индонезийском острове, недалеко от гор Бедигул. Местность здесь естественная и чистая, отличается исключительной чистотой, поэтому это место дает посетителю возможность свободно дышать чистым воздухом. загрязняющих веществ, вызванных современными выхлопами, которые окружают нас со всех сторон.
+// Здесь также тихо, так что это хорошая возможность насладиться ясностью ума.",
+//   },
+//   {
+//     nameEN: "Bali Bird Park",
+//     nameAR: "بالي بيرد بارك",
+//     nameRU: "Парк птиц Бали",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "تقع الحديقة بداخل أفضل الجزر الإندونيسية جزيرة بالي، وهي تقدم فرص ممتعة لا تضاهي للزوار للاستمتاع بها.
+// فالجزيرة موطن يزخر بالمئات من الأماكن الترفيهية والكثير من خيارات التسوق الممتازة، والجزيرة لديها الكثير من الفنادق  التي تقدم لكم أماكن إقامة مريحة ومميزة.
+// والحديقة مكان مثالي إذا كانت تستهويك رؤية الطيور الملونة، وتستغرق الرحلة بداخلها حوالي 3 ساعات تقريباً للتعرف على كافة أرجائها.
+// ",
+//     descriptionEN: "The park is located within the best Indonesian island, Bali, and offers unparalleled fun opportunities for visitors to enjoy.
+// The island is home to hundreds of entertainment places and many excellent shopping options, and the island has many hotels that offer you comfortable and distinctive accommodations.
+// The garden is an ideal place if you like seeing colorful birds, and the trip inside it takes approximately 3 hours to get to know all its parts.",
+//     descriptionRU: "Парк расположен на лучшем индонезийском острове Бали и предлагает посетителям беспрецедентные возможности для развлечений.
+// На острове расположены сотни развлекательных заведений и множество отличных магазинов, а также множество отелей, которые предлагают вам удобные и уникальные номера.
+// Сад — идеальное место, если вам нравится наблюдать за разноцветными птицами, а поездка по нему займет около 3 часов, чтобы познакомиться со всеми его частями.",
+//   },
+//   {
+//     nameEN: "Bali Zoo",
+//     nameAR: "حديقة الحيوان بالي",
+//     nameRU: "Зоопарк Бали",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "Это красивый парк, расположенный на территории Индонезии, а именно в деревне Синг Баду, Сукавати, Ганаяр.
+// До парка можно добраться за 45 минут, если вы находитесь внутри Куты или Нусадуа, но если вы находитесь в Сануре или Убуде, то поездка займет у вас всего 30 минут на машине, а дорога до него легкая. в любых обстоятельствах и без стресса.",
+//     descriptionEN: "Это красивый парк, расположенный на территории Индонезии, а именно в деревне Синг Баду, Сукавати, Ганаяр.
+// До парка можно добраться за 45 минут, если вы находитесь внутри Куты или Нусадуа, но если вы находитесь в Сануре или Убуде, то поездка займет у вас всего 30 минут на машине, а дорога до него легкая. в любых обстоятельствах и без стресса.",
+//     descriptionRU: "Парк расположен на лучшем индонезийском острове Бали и предлагает посетителям беспрецедентные возможности для развлечений.
+// На острове расположены сотни развлекательных заведений и множество отличных магазинов, а также множество отелей, которые предлагают вам удобные и уникальные номера.
+// Сад — идеальное место, если вам нравится наблюдать за разноцветными птицами, а поездка по нему займет около 3 часов, чтобы познакомиться со всеми его частями.",
+//   },
+//   {
+//     nameEN: "Sanur",
+//     nameAR: "سانور بالي",
+//     nameRU: "Санур Бали",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "تقع القرية في جزيرة بالي ، والقرية تشبه إلى حد كامل الطابع التي تتزين بها باقي مناطق الجزيرة فهي مثلها فائقة الجمال، وتوفر العديد من الأنشطة الترفيهية لزوارها، كما أنها لديها المئات من الفنادق الإندونيسية، التي تسهل الإقامة عند الذهاب لزيارتها، وهي أماكن إقامة مريحة حقاً.
+//  كما تأخذ القرية أيضاً نصيبها من المجمعات التجارية، والمطاعم والمقاهي المميزة.
+// ",
+//     descriptionEN: "The village is located on the island of Bali, and the village is very similar to the character that adorns the rest of the island’s areas. Like it, it is extremely beautiful, and provides many recreational activities for its visitors. It also has hundreds of Indonesian hotels, which facilitate accommodation when you go to visit it, and they are truly comfortable accommodations. .
+//  The village also has its share of commercial complexes, restaurants and cafes.",
+//     descriptionRU: "The village is located on the island of Bali, and the village is very similar to the character that adorns the rest of the island’s areas. Like it, it is extremely beautiful, and provides many recreational activities for its visitors. It also has hundreds of Indonesian hotels, which facilitate accommodation when you go to visit it, and they are truly comfortable accommodations. .
+//  The village also has its share of commercial complexes, restaurants and cafes.",
+//   },
+//   {
+//     nameEN: "Meliá Bali",
+//     nameAR: "فنادق بالي",
+//     nameRU: "Отели Бали",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "AYANA Resort Bali",
+//     nameAR: "منتجع أيانا بالي",
+//     nameRU: "Курорт AYANA Бали",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Anantara Uluwatu Bali Resort",
+//     nameAR: "منتجع أنانتارا أولواتو بالي",
+//     nameRU: "Курорт Anantara Uluwatu Bali",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Puncak",
+//     nameAR: "بونشاك",
+//     nameRU: "Пунчак",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "تقع الحديقة في مدينه بونشاك الإندونيسية تحديداً في المنطقة الغربية من جاوه على بعد مسافه تمتد حوالى 100  كيلو متر من جاكرتا، تم تأسيسها في عام 2007 م.
+// وهي كانت من المشاريع التجارية الخاصة، تمتاز الحديقة بحجمها الشاسع حيث تمتد على مساحة 16.5 هكتار، وبسبب هذه المساحة الضخمة تضم الحديقة بداخلها العديد من العوالم الترفيهية الممتعة
+// ",
+//     descriptionEN: "The park is located in the Indonesian city of Puncak, specifically in the western region of Java, about 100 kilometers from Jakarta. It was established in 2007 AD.
+// It was a private commercial project. The park is distinguished by its vast size, as it extends over an area of ​​16.5 hectares. Because of this huge area, the park includes many enjoyable entertainment worlds within it.",
+//     descriptionRU: "Парк расположен в индонезийском городе Пунчак, в западном регионе Явы, примерно в 100 километрах от Джакарты. Он был основан в 2007 году нашей эры.
+// Это был частный коммерческий проект. Парк отличается огромными размерами, поскольку занимает площадь 16,5 га. Благодаря такой огромной территории парк включает в себя множество развлекательных миров.",
+//   },
+//   {
+//     nameEN: "Taman Matahari",
+//     nameAR: "حديقة تامان ماتا هاري بونشاك",
+//     nameRU: "Парк Таман Мата Хари Пунчак",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "تقع حديقة سفاري بونشاك في الجبل الاخضر بالمنطقة الغربية من إقليم جوة على بعد خطوات قليلة من الطريق السريع الذى يصل فيما بين باندونق و جاكرتا.
+// وهناك العديد من فنادق بونشاك التي تقع على بعد خطوات قليلة منها من اهمها منتجع وسبا بسيونا ألام الحاصل على أربع نجوم والذي يقدم إقامة فاخرة للنزلاء، ويبعد فقط عن الحديقة مسافة تستغرق مدتها خمس دقائق بواسطة السيارة و فندق سيروني  .
+// هناك أيضاً فندق رويال سفاري وهو منتجع فاخر حاصل على 4 نجوم ويبعد خطوات من الحديقة تم إعداد الحديقة بشكل أشبه بالمحميات الطبيعية لذا فستجدون الحيوانات تتصرف فيها بحرية تامة كيفما يحلو لها، ويمكنكم أنتم بالتالي التمتع بالتقرب منها والتعامل معها بشكل مباشر
+// ",
+//     descriptionEN: "",Puncak Safari Park is located in the Green Mountain in the western region of Goa Province, a few steps from the highway that connects Bandung and Jakarta.
+//     There are many Puncak hotels located a few steps away, the most important of which is the four-star Pesona Alam Resort and Spa, which offers luxurious accommodation for guests. It is only a five-minute car ride from the park and the Sironi Hotel.
+//     There is also the Royal Safari Hotel, which is a 4-star luxury resort just steps away from the park. The park has been prepared in a way similar to a natural reserve, so you will find the animals behaving completely freely as they please, and you can therefore enjoy getting close to them and interacting with them directly.
+//     descriptionRU: "Сафари-парк Пунчак расположен на Зеленой горе в западном регионе провинции Гоа, в нескольких шагах от шоссе, соединяющего Бандунг и Джакарту.
+// В нескольких шагах от отеля расположено множество отелей Пунчака, самым важным из которых является четырехзвездочный курортный спа-отель Pesona Alam, предлагающий гостям роскошные номера. Он находится всего в пяти минутах езды на машине от парка и отеля Sironi. .
+// В нескольких шагах от парка также находится отель Royal Safari, роскошный 4-звездочный курорт. Парк подготовлен так же, как природный заповедник, поэтому животные ведут себя совершенно свободно, как им заблагорассудится. и поэтому вы можете получать удовольствие от близости к ним и непосредственного взаимодействия с ними.",
+//   },
+//   {
+//     nameEN: "Safari Park",
+//     nameAR: "حديقة سفاري بونشاك",
+//     nameRU: "Сафари-парк Пунчак",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "المعالم الطبيعية السياحية داخل اندونيسيا لا تعد ولا تحصي حيث هناك العديد منها، واليوم معنا أحدها ألا وهي الشلالات السبعة بونشاك ، يأتي إلى هذه المياه العديد من السكان المحليين، كون أن هناك اعتقاد سائد بإن هذه المياه لديها قدرات شفائية عجيبة يمكن من خلالها التخلص من الأمراض التي تصيب الجسم كالأمراض الجلدية، وأمراض القلب، والروماتيزم، وأمراض الكلى وغيرها من الأمراض المتنوعة .",
+//     descriptionEN: "The natural tourist attractions within Indonesia are countless, as there are many of them, and today with us is one of them, which is the seven waterfalls of Puncak. Many local residents come to these waters, because there is a widespread belief that these waters have amazing healing powers through which diseases can be eliminated. That affect the body, such as skin diseases, heart diseases, rheumatism, kidney diseases and other various diseases.",
+//     descriptionRU: "Природные туристические достопримечательности Индонезии бесчисленны, так как их много, и сегодня с нами одна из них – семь водопадов Пунчак. Многие местные жители приезжают к этим водам, поскольку существует широко распространенное мнение, что именно эти воды. обладают удивительной целебной силой, с помощью которой можно устранить болезни, поражающие организм, такие как кожные заболевания, болезни сердца, ревматизм, заболевания почек и другие различные заболевания.",
+//   },
+//   {
+//     nameEN: "Seven Waterfalls",
+//     nameAR: "الشلالات السبعة بونشاك",
+//     nameRU: "Семь водопадов Пунчак",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "المعالم الطبيعية السياحية داخل اندونيسيا لا تعد ولا تحصي حيث هناك العديد منها، واليوم معنا أحدها ألا وهي الشلالات السبعة بونشاك ، يأتي إلى هذه المياه العديد من السكان المحليين، كون أن هناك اعتقاد سائد بإن هذه المياه لديها قدرات شفائية عجيبة يمكن من خلالها التخلص من الأمراض التي تصيب الجسم كالأمراض الجلدية، وأمراض القلب، والروماتيزم، وأمراض الكلى وغيرها من الأمراض المتv",
+//     descriptionEN: "The natural tourist attractions within Indonesia are countless, as there are many of them, and today with us is one of them, which is the seven waterfalls of Puncak. Many local residents come to these waters, because there is a widespread belief that these waters have amazing healing powers through which diseases can be eliminated. Which affect the body, such as skin diseases, heart diseases, rheumatism, kidney diseases and other diseases",
+//     descriptionRU: "Природные туристические достопримечательности Индонезии бесчисленны, так как их много, и сегодня с нами одна из них – семь водопадов Пунчак. Многие местные жители приезжают к этим водам, поскольку существует широко распространенное мнение, что именно эти воды. обладают удивительной целительной силой, с помощью которой можно устранить болезни, поражающие организм, такие как кожные заболевания, болезни сердца, ревматизм, болезни почек и другие заболевания.",
+//   },
+//   {
+//     nameEN: "Pesona Alam Resort & Spa",
+//     nameAR: "منتجع وسبا بسيونا ألام",
+//     nameRU: "Курорт и спа Песона Алам",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Le Eminence Puncak Hotel",
+//     nameAR: "فندق لي إميننس بونشاك",
+//     nameRU: "Отель Le Eminence Пунчак",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Notes",
+//     nameAR: "ملاحظات",
+//     nameRU: "Заметки",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Jakarta Markets",
+//     nameAR: "أسواق جاكرتا",
+//     nameRU: "Рынки Джакарты",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Bali Markets",
+//     nameAR: "أسواق بالي",
+//     nameRU: "Рынки Бали",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Chinese Market",
+//     nameAR: "السوق الصيني",
+//     nameRU: "Китайский рынок",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Kuta Art Market",
+//     nameAR: "سوق كاتا للفنون",
+//     nameRU: "Рынок искусств Кута",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Jalan Surabaya Market",
+//     nameAR: "سوق جالان سولابايا",
+//     nameRU: "Рынок Джалан Сурабая",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Bali Galeria Mall",
+//     nameAR: "مال بالي جاليريا",
+//     nameRU: "Торговый центр Бали Галерия",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Central Park Mall",
+//     nameAR: "سنترال بارك",
+//     nameRU: "Торговый центр Центральный парк",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Sukawati Art Market",
+//     nameAR: "سوق سو كاتي للفنون",
+//     nameRU: "Рынок искусств Сукавати",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Antique Market",
+//     nameAR: "سوق التحف القديمة",
+//     nameRU: "Рынок антиквариата",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Dusun Anu Machina",
+//     nameAR: "دوس اكنو ماشينا",
+//     nameRU: "Дусун Ану Машина",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Jakarta Restaurants",
+//     nameAR: "مطاعم جاكرتا",
+//     nameRU: "Рестораны Джакарты",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Bali Restaurants",
+//     nameAR: "مطاعم بالي",
+//     nameRU: "Рестораны Бали",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Tom's by Tom",
+//     nameAR: "تومس باي توم",
+//     nameRU: "Томс бай Том",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Village Square",
+//     nameAR: "فيلاج سكوير",
+//     nameRU: "Вилладж Сквер",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Bandar Jakarta",
+//     nameAR: "بندر جاكرتا",
+//     nameRU: "Бандар Джакарта",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Herb Library",
+//     nameAR: "هيرب ليبراري",
+//     nameRU: "Травяная библиотека",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Hadrami House",
+//     nameAR: "البيت الحضرمي",
+//     nameRU: "Дом Хадрами",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Warung Made",
+//     nameAR: "مطعم وارنكالي",
+//     nameRU: "Варунг Мадэ",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionEN: "",
+//     descriptionRU: "",
+//   },
+// ];
+
+// export const Turkey = [
+//   {
+//     nameEN: "Turkey",
+//     nameAR: "تركيا",
+//     nameRU: "Турция",
+//     descriptionEN: "هي دولة عابرة للقارات يقع أغلبها ف ش به جزيرة ا لناضول ف غرب أ س يا، والجزء ا لصغر ف ش به جزيرة البلقان ف جنوب شرق أوروبا،
+// وهي الجزء ا لوروبي من تركيا، مفصولة عن ا لناضول ببحر مرمرة، ومضيقي البوسفور والدردنيل، فيها مدينة اسطنبول التي تمتد بين أوروبا
+// وأ س يا، هي أكبر مدينة ف البلاد، بي نم أنقرة هي العاصمة ويحد تركيا من الشمال الغربي اليونان وبلغاريا ومن الشمال البحر ا لسود، ومن الشمال
+// الشرقي جورجيا، وشرقا أرمينيا، والمس تحاطة ا لذربيجانية نخجوان و ايران، ومن الجنوب الشرقي العراق، ومن الجنوب سوريا والبحر ا لبيض
+// المتوسط، ويطل الغرب على بحر ايجه.هي دولة عابرة للقارات يقع أغلبها ف ش به جزيرة ا لناضول ف غرب أ س يا، والجزء ا لصغر ف ش به جزيرة البلقان ف جنوب شرق أوروبا،
+// وهي الجزء ا لوروبي من تركيا، مفصولة عن ا لناضول ببحر مرمرة، ومضيقي البوسفور والدردنيل، فيها مدينة اسطنبول التي تمتد بين أوروبا
+// وأ س يا، هي أكبر مدينة ف البلاد، بي نم أنقرة هي العاصمة ويحد تركيا من الشمال الغربي اليونان وبلغاريا ومن الشمال البحر ا لسود، ومن الشمال
+// الشرقي جورجيا، وشرقا أرمينيا، والمس تحاطة ا لذربيجانية نخجوان و ايران، ومن الجنوب الشرقي العراق، ومن الجنوب سوريا والبحر ا لبيض
+// المتوسط، ويطل الغرب على بحر ايجه.",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "It is a transcontinental country, most of which is located on the island of Anatolia in western Asia, and a small part is located on the island of the Balkans in southeastern Europe.
+// It is the European part of Turkey, separated from Anatolia by the Sea of ​​Marmara, and the Bosphorus and Dardanelles straits, and includes the city of Istanbul, which extends between Europe.
+// In Asia, it is the largest city in the country, while Ankara is the capital. Turkey is bordered to the northwest by Greece and Bulgaria, to the north by the Black Sea, and to the north by
+// To the east is Georgia, to the east is Armenia, it is surrounded by Azerbaijan, Nakhchivan and Iran, to the southeast is Iraq, and to the south is Syria and the White Sea.
+// The Mediterranean, overlooking the west on the Aegean Sea.",
+//     descriptionRU: "Это трансконтинентальная страна, большая часть которой расположена на острове Анатолия в Западной Азии, а небольшая часть — на острове Балканы в юго-восточной Европе.
+// Это европейская часть Турции, отделенная от Анатолии Мраморным морем и проливами Босфор и Дарданеллы и включающая город Стамбул, простирающийся между Европой.
+// В Азии это крупнейший город страны, а Анкара — столица Турции. На северо-западе она граничит с Грецией и Болгарией, на севере — с Черным морем, а на севере — с Черным морем.
+// На востоке находится Грузия, на востоке — Армения, она окружена Азербайджаном, Нахчываном и Ираном, на юго-востоке — Ирак, а на юге — Сирия и Белое море.
+// Средиземное море с видом на запад, на Эгейское море.Это трансконтинентальная страна, большая часть которой расположена на острове Анатолия в Западной Азии, а небольшая часть — на острове Балканы в юго-восточной Европе.
+// Это европейская часть Турции, отделенная от Анатолии Мраморным морем и проливами Босфор и Дарданеллы и включающая город Стамбул, простирающийся между Европой.
+// В Азии это крупнейший город страны, а Анкара — столица Турции. На северо-западе она граничит с Грецией и Болгарией, на севере — с Черным морем, а на севере — с Черным морем.
+// На востоке находится Грузия, на востоке — Армения, она окружена Азербайджаном, Нахчываном и Ираном, на юго-востоке — Ирак, а на юге — Сирия и Белое море.
+// Средиземное море с видом на запад, на Эгейское море.",
+//   },
+//   {
+//     nameEN: "Istanbul",
+//     nameAR: "اسطنبول",
+//     nameRU: "Стамбул",
+//     descriptionEN: "",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Bosphorus",
+//     nameAR: "البوسفور",
+//     nameRU: "Босфор",
+//     descriptionEN: "",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Hagia Sophia",
+//     nameAR: "آيا صوفيا",
+//     nameRU: "Айя-София",
+//     descriptionEN: "",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Ankara",
+//     nameAR: "أنقرة",
+//     nameRU: "Анкара",
+//     descriptionEN: "ترتفع مدينة أنقرة فوق منحدر شديد على ضفاف نهر انغوري
+// سو، وهي عاصمة تركيا وثاني أكبر مدنها من حيث عدد
+// السكان، كما أنها تتميز بطابعها ا لوروبي الحديث الذي لا يخلو
+// من معالم تُ ذ كر زائريها بتاريخها المتنوع. ويضم المشهد الثقاف
+// للمدينة قلاعًا عتيقة وبقايا أثرية من حضارات متعددة، منها
+// الحضارة الحيثية والفريجية والهيلينستية والرومانية والب ن يزطية
+// والعثمانية .",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "The city of Ankara rises above a steep cliff on the banks of the Anguri River
+// Su, the capital of Türkiye and its second largest city in terms of number
+// population, and is characterized by its modern European character
+// It is a landmark that reminds visitors of its diverse history. It includes the cultural scene
+// The city has ancient castles and archaeological remains from multiple civilizations, including
+// Hittite, Phrygian, Hellenistic, Roman and Byzantine civilizations
+// And the Ottoman.",
+//     descriptionRU: "Город Анкара возвышается над крутым утесом на берегу реки Ангури.
+// Су, столица Турции и второй по величине город по численности.
+// населения и характеризуется своим современным европейским характером
+// Это достопримечательность, которая напоминает посетителям о своей разнообразной истории. Он включает в себя культурную сцену
+// В городе есть древние замки и археологические находки разных цивилизаций, в том числе
+// Хеттская, фригийская, эллинистическая, римская и византийская цивилизации.
+// И Османская.",
+//   },
+//   {
+//     nameEN: "Blue Mosque",
+//     nameAR: "جامع السلطان أحمد",
+//     nameRU: "Голубая мечеть",
+//     descriptionEN: "أحم د
+// Sultan Ahmet Camii ويُعرف أيضا خارج تركيا باسم الجامع
+// ا لزرق The Blue Mosque بنا السلطان أحمد ا لول وهو أحد
+// أشهر و أهم المساجد ف مدينة اسطنبول التركية . يقع المسجد ف ميدان
+// السلطان أحمد ويقابله مسجد أ يا صوفيا، الذي حوله أتاتورك الى
+// متحف ثم أُعيد مسجد اً . ويش تهر جامع السلطان أحمد بعمارته المميزة
+// حيث يُعد من أهم و أضخم المساجد ف العالم ا لاسلامي . بُني المسجد بين عامي 1018 ه - 1026 ه / 1609 م - 1616 م،
+// بحسب أحد النقوش الموجودة على أحد أبوابه. وكان مهندسه
+// المعماري محمد أ غا أشهر المعماريين ا لتراك بعد س نان باشا وداود أغا . يقع المسجد جنوب جامع أ يا صوفيا وشرق ميدان الس باق الب ن يزطي القدم.
+// ولهُ سور مرتفع يحيط به من ثلاث جهات، وف السور خمسة أبواب، ثلاثة منها تؤدي الى صحن المسجد واثنان الى قاعة الصلاة .",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "Ahmed
+// Sultan Ahmet Camii is also known outside Türkiye as the Mosque
+// The Blue Mosque was built by Sultan Ahmed Al-Lul, one of the...
+// The most famous and important mosques in the Turkish city of Istanbul. The mosque is located in a square
+// Sultan Ahmed and opposite it is the Aya Sofia Mosque, which Ataturk turned into
+// A museum and then converted into a mosque. What is the admiration of the Sultan Ahmed Mosque with its distinctive architecture?
+// It is considered one of the most important and largest mosques in the Islamic world. The mosque was built between the years 1018 AH - 1026 AH / 1609 AD - 1616 AD.
+// According to one of the inscriptions on one of its doors. He was his engineer
+// Architect Muhammad Agha is the most famous Turkish architect after Sinan Pasha and Davut Agha. The mosque is located south of the Hagia Sophia Mosque and east of the Grand Prix Square.
+// It has a high wall surrounding it on three sides, and within the wall are five doors, three of which lead to the courtyard of the mosque and two to the prayer hall.",
+//     descriptionRU: "Ахмед
+// Султан Ахмет Джами также известен за пределами Турции как мечеть.
+// Голубая мечеть была построена султаном Ахмедом аль-Лулем, одним из...
+// Самые известные и важные мечети турецкого города Стамбула. Мечеть расположена на площади
+// Султана Ахмеда, а напротив нее – мечеть Айя София, которую превратил Ататюрк.
+// Музей, а затем переоборудованный в мечеть. В чем восхищение мечети Султана Ахмеда с ее самобытной архитектурой?
+// Она считается одной из самых важных и крупнейших мечетей в исламском мире. Мечеть была построена в период с 1018 по 1026 год хиджры / 1609 по 1616 год нашей эры.
+// Согласно одной из надписей на одной из его дверей. Он был его инженером
+// Архитектор Мухаммад-ага — самый известный турецкий архитектор после Синан-паши и Давута-аги. Мечеть расположена к югу от мечети Святой Софии и к востоку от площади Гран-при.
+// Его окружает высокая стена с трех сторон, внутри стены пять дверей, три из которых ведут во двор мечети, а две - в молитвенный зал.",
+//   },
+//   {
+//     nameEN: "Topkapi Palace",
+//     nameAR: "قصر توبكابي",
+//     nameRU: "Топкапы",
+//     descriptionEN: "بالعثمانية : طوپقپو سرايا وبالتركية الحديثة Topkapı Sarayı) ) أكبر
+// قصور مدينة اسطنبول التركية، ومركز اقامة سلاطين الدولة
+// العثمانية لربعة قرون من عام 1465 م الى 1856 م، يتآ لف القصر من
+// أربعة أفنية رليس ية وعدد من المباني من مساكن ومطابخ ومساجد
+// ومستشفى وغيرها، وكان يقم فيه بذروة الدولة ما يقرب من 4,000
+// شخص، بد أ بناء قصر طوب قابي ف 1459 م بآ مر من السلطان
+// العثماني محمد خان الثاني فاتح القسطنطينية، و أطلق عليه ف بداية ا لمر
+// لكي يميز عن مقر ا لاقامة السابق، » القصر الجديد « أي » يني سراي «
+// بمعا الباب العال ف القرن » طوب قابي « و أخذ القصر اسمه الجديد
+// التاسع عشر، وقد جرى توس يعه على مر العصور",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "In the Ottoman language: Topkapı Sarayı, and in modern Turkish: Topkapı Sarayı)) Greater
+// Palaces of the Turkish city of Istanbul, the residence center of the sultans of the state
+// Ottoman Empire for four centuries from 1465 AD to 1856 AD. The palace consists of
+// Four courtyards and a number of buildings, including residences, kitchens, and mosques
+// A hospital and others, and at the peak of the state there were approximately 4,000 people staying there
+// Someone, the construction of Topkapi Palace began in 1459 AD on the orders of the Sultan
+// The Ottoman Mehmed Khan II, the conqueror of Constantinople, was named at the beginning of the era
+// In order to distinguish it from the previous residence, the “New Palace”, i.e. “Yeni Saray”
+// With the High Gate of the century “Tobkapi” and the palace took its new name
+// The nineteenth century, and it has been expanded over the centuries",
+//     descriptionRU: "На османском языке: Топкапы Сарайы, а на современном турецком языке: Топкапы Сарайы)) Большой
+// Дворцы турецкого города Стамбула, центра резиденции султанов государства
+// Османская империя на протяжении четырех столетий с 1465 по 1856 год нашей эры. Дворец состоит из.
+// Четыре двора и ряд построек, включая жилые дома, кухни и мечети.
+// Больница и другие, а на пике состояния там проживало около 4000 человек.
+// Кто-то, строительство дворца Топкапы началось в 1459 году нашей эры по приказу султана.
+// Османский Мехмед-хан II, завоеватель Константинополя, был назван в начале эпохи
+// Чтобы отличить его от предыдущей резиденции, «Новый дворец», то есть «Ени Сарай»,
+// С появлением Высоких ворот века «Тобкапы» дворец получил новое название.
+// Девятнадцатый век, и он расширялся на протяжении веков",
+//   },
+//   {
+//     nameEN: "Cappadocia",
+//     nameAR: "كبادوكيا",
+//     nameRU: "Каппадокия",
+//     descriptionEN: "",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Pamukkale",
+//     nameAR: "باموكالي",
+//     nameRU: "Памуккале",
+//     descriptionEN: "",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Ephesus",
+//     nameAR: "أفسس",
+//     nameRU: "Эфес",
+//     descriptionEN: "",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Mount Ararat",
+//     nameAR: "جبل أرارات",
+//     nameRU: "Арарат",
+//     descriptionEN: "",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Antalya",
+//     nameAR: "أنطاليا",
+//     nameRU: "Анталья",
+//     descriptionEN: "",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Izmir",
+//     nameAR: "إزمير",
+//     nameRU: "Измир",
+//     descriptionEN: "",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Bodrum",
+//     nameAR: "بودروم",
+//     nameRU: "Бодрум",
+//     descriptionEN: "",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Trabzon",
+//     nameAR: "طرابزون",
+//     nameRU: "Трабзон",
+//     descriptionEN: "",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Van Lake",
+//     nameAR: "بحيرة وان",
+//     nameRU: "Ван",
+//     descriptionEN: "",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Sumela Monastery",
+//     nameAR: "دير سوميلا",
+//     nameRU: "Сумела",
+//     descriptionEN: "",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Goreme National Park",
+//     nameAR: "منتزه غوريم الوطني",
+//     nameRU: "Гёреме",
+//     descriptionEN: "",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Uludag",
+//     nameAR: "أولوداغ",
+//     nameRU: "Улудаг",
+//     descriptionEN: "",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Mardin",
+//     nameAR: "ماردين",
+//     nameRU: "Мардин",
+//     descriptionEN: "",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Marmaris",
+//     nameAR: "مرمريس",
+//     nameRU: "Мармарис",
+//     descriptionEN: "",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Pergamon",
+//     nameAR: "برغامون",
+//     nameRU: "Пергамон",
+//     descriptionEN: "",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Harran",
+//     nameAR: "حاران",
+//     nameRU: "Харран",
+//     descriptionEN: "",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Patara Beach",
+//     nameAR: "شاطئ باتارا",
+//     nameRU: "Патара",
+//     descriptionEN: "",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionRU: "",
+//   },
+//   {
+//     nameEN: "Bursa",
+//     nameAR: "بورصة",
+//     nameRU: "Бурса",
+//     descriptionEN: "",
+//     src: "/images/chapters/.webp",
+//     descriptionAR: "",
+//     descriptionRU: "",
+//   },
+// ];
 export const UAE = [
   {
     nameAR: "الإمارات العربية المتحدة",
