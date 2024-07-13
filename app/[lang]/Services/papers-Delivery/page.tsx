@@ -26,7 +26,7 @@ export default function Page({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const message = `*Documents Delivery:*\n\n*Name*: ${
+    const message = `*Documents Delivery:*\n\n*- Name*: ${
       formData.name
     }\n\n- *Place of Delivery*: ${
       formData.placeOfDelivery
