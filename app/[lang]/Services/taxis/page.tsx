@@ -26,10 +26,18 @@ export default function Page({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const message = `*Taxi Airport delivery:*\nName: ${formData.name}\nArrival Date: ${formData.arrivalDate}\nNumber of Passengers: ${formData.numberOfPassengers}\nDelivery Location: ${formData.deliveryLocation}`;
+    const message = `*Taxi Airport delivery: ✈️🚖*\n\n- *Name*: ${
+      formData.name
+    } 👤\n\n- *Arrival Date*: ${
+      formData.arrivalDate
+    } 📅\n\n- *Number of Passengers*: ${
+      formData.numberOfPassengers
+    } 👥\n\n- *Delivery Location*: ${
+      formData.deliveryLocation
+    } 📍`;
     const whatsappUrl = `https://wa.me/971545866066?text=${encodeURIComponent(
       message
-    )}`;
+    )}`;  
     window.open(whatsappUrl, "_blank");
   };
   const today = new Date().toISOString().split("T")[0];

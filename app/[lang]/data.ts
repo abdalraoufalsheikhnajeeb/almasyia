@@ -200,7 +200,7 @@ export const countries = [
   },
 ];
 
-export const ourProjects = [
+export const ourServecis = [
   {
     id: 5,
     titleen: "Flight reservations to all parts of the world",
@@ -211,9 +211,9 @@ export const ourProjects = [
   },
   {
     id: 6,
-    titleen: "Tours, UAE, Russia, Türkiye,...",
-    titlear: "جولات، الإمارات، روسيا، تركيا",
-    titleru: "Туры, ОАЭ, Россия, Турция ,...",
+    titleen: "Our tourist destinations",
+    titlear: "وجهاتنا السياحية",
+    titleru: "Наши туристические направления",
     src: "/images/countries.webp",
     route: "tours",
   },

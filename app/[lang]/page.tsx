@@ -2,7 +2,7 @@ import { getDictionary } from "../../get-dictionary";
 import { Locale } from "../../i18n-config";
 import Image from "next/image";
 import Link from "next/link";
-import { ourProjects } from "./data";
+import { ourServecis } from "./data";
 import AnTitle from "./components/AnTitle";
 import Locations from "./components/Locations";
 
@@ -76,7 +76,7 @@ export default async function Home({
           <AnTitle title={dic?.someProjects} />
 
           <div className="flex flex-wrap justify-center items-center gap-8 px-4 lg:px-12 pt-4 ">
-            {ourProjects.map((card) => {
+            {ourServecis.map((card) => {
               let title;
 
               if (dic.currLang === "ar") {
