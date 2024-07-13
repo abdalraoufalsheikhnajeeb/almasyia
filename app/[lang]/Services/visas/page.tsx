@@ -3,6 +3,7 @@ import { getDictionary } from "../../../../get-dictionary";
 import { Locale } from "../../../../i18n-config";
 import AnTitle from "../../components/AnTitle";
 import { visas } from "../../data";
+import VisaForm from "../../components/VisasForm.tsx"; 
 
 export default async function Page({
   params: { lang },
@@ -12,9 +13,9 @@ export default async function Page({
   const dic = await getDictionary(lang);
 
   return (
-    <div className="flex flex-col container mx-auto  pt-28 px-4 lg:p-28">
+    <div className="flex flex-col container mx-auto pt-28 px-4 lg:p-28">
       <AnTitle title={dic.viasa} />
-      <div className="flex flex-col gap-8 ">
+      <div className="flex flex-col gap-8">
         {visas.map((visa, index) => {
           const {
             countryAR,
@@ -56,10 +57,9 @@ export default async function Page({
           return (
             <div
               key={index}
-              className=" flex justify-center items-center lg:ps-4 flex-col gap-4 bg-white bg-opacity-80 p-2 rounded-lg"
+              className="flex justify-center items-center lg:ps-4 flex-col gap-4 bg-white bg-opacity-80 p-2 rounded-lg"
             >
               <hr />
-
               <h2 className="text-primary text-5xl font-bold">{country}</h2>
               <div className="flex flex-col lg:flex-row-reverse w-full justify-between">
                 <Image
@@ -68,13 +68,12 @@ export default async function Page({
                   quality={10}
                   src={image}
                   alt={country}
-                  className=" lg:h-96 w-full lg:w-1/2 object-contain"
+                  className="lg:h-96 w-full lg:w-1/2 object-contain"
                 />
-                <ul className="p-4 flex flex-col gap-3 ">
+                <ul className="p-4 flex flex-col gap-3">
                   {duration && (
                     <li className="text-primary text-3xl items-center font-bold list-style ms-6 mb-4">
                       {dic.duration}:
-
                       <p className="text-gray-500 font-normal text-xl mt-2">
                         {duration}
                       </p>
@@ -106,6 +105,7 @@ export default async function Page({
           );
         })}
       </div>
+      <VisaForm dic={dic} />
     </div>
   );
 }
