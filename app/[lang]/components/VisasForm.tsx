@@ -11,7 +11,8 @@ export default function VisaForm({
     name: "",
     requiredVisa: "",
     numberOfPeople: "",
-    isAdult: false,
+    hasChildren: false,
+    numberOfChildren: "",
   });
 
   const handleChange = (
@@ -38,8 +39,10 @@ export default function VisaForm({
       formData.name
     } 👤\n\n- *Required Visa*: ${
       formData.requiredVisa
-    } 📝\n\n- *Number of People*: ${formData.numberOfPeople} 👥\n\n- *Adult*: ${
-      formData.isAdult ? "Yes 👔" : "No 🚸"
+    } 📝\n\n- *Number of People*: ${formData.numberOfPeople} 👥\n\n- *Has Children*: ${
+      formData.hasChildren ? "Yes 🚸" : "No 🚸"
+    }\n\n${
+      formData.hasChildren ? `- *Number of Children*: ${formData.numberOfChildren} 👶` : ""
     }`;
     const whatsappUrl = `https://wa.me/971545866066?text=${encodeURIComponent(
       message
@@ -107,19 +110,38 @@ export default function VisaForm({
         <div className="flex items-center">
           <input
             type="checkbox"
-            name="isAdult"
-            checked={formData.isAdult}
+            name="hasChildren"
+            checked={formData.hasChildren}
             onChange={handleChange}
             className="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
           />
           <label className="ml-2 block text-lg font-medium text-gray-900">
             {dic.currLang === "ar"
-              ? "بالغ"
+              ? "هل لديك أطفال؟"
               : dic.currLang === "ru"
-              ? "Взрослый"
-              : "Adult"}
+              ? "У вас есть дети?"
+              : "Do you have children?"}
           </label>
         </div>
+        {formData.hasChildren && (
+          <div>
+            <label className="block text-lg font-medium text-gray-900">
+              {dic.currLang === "ar"
+                ? "عدد الأطفال"
+                : dic.currLang === "ru"
+                ? "Количество детей"
+                : "Number of Children"}
+            </label>
+            <input
+              type="number"
+              name="numberOfChildren"
+              value={formData.numberOfChildren}
+              onChange={handleChange}
+              className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
+              required
+            />
+          </div>
+        )}
         <button
           type="submit"
           className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
