@@ -26,11 +26,13 @@ export default function Page({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const message = `*Documents Delivery:*\nName: ${
+    const message = `*Documents Delivery:*\n\n*Name*: ${
       formData.name
-    }\nPlace of Delivery: ${formData.placeOfDelivery}\nDelivery Location: ${
+    }\n\n- *Place of Delivery*: ${
+      formData.placeOfDelivery
+    }\n\n- *Delivery Location*: ${
       formData.deliveryLocation
-    }\nRecipient Number: ${formData.recipientNumber}\nUrgent: ${
+    }\n\n- *Recipient Number*: ${formData.recipientNumber}\n\n- *Urgent*: ${
       formData.isUrgent ? "Yes" : "No"
     }`;
     const whatsappUrl = `https://wa.me/971545866066?text=${encodeURIComponent(
