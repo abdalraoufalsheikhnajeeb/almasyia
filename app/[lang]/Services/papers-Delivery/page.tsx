@@ -9,35 +9,29 @@ export default function Page({
   params: { lang: Locale };
 }) {
   const [formData, setFormData] = useState({
-    name: "",
     placeOfDelivery: "",
-    deliveryLocation: "",
     recipientNumber: "",
-    isUrgent: false,
+    urgency: "normal",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: type === "checkbox" ? checked : value,
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const message = `*Documents Delivery: 📄*\n\n- *Name*: ${
-      formData.name
-    } 👤\n\n- *Place of Delivery*: ${
+    const message = `*Documents Delivery: 📄*\n\n- *Place of Delivery*: ${
       formData.placeOfDelivery
-    } 📍\n\n- *Delivery Location*: ${
-      formData.deliveryLocation
-    } 🗺️\n\n- *Recipient Number*: ${
+    } 📍\n\n- *Recipient Number*: ${
       formData.recipientNumber
-    } ☎️\n\n- *Urgent*: ${
-      formData.isUrgent ? "Yes 🚨" : "No"
+    } ☎️\n\n- *Urgency*: ${
+      formData.urgency === "urgent" ? "Urgent 🚨" : "Normal"
     }`;
-    
+
     const whatsappUrl = `https://wa.me/971545866066?text=${encodeURIComponent(
       message
     )}`;
@@ -64,38 +58,12 @@ export default function Page({
           >
             <div>
               <label className="block text-lg font-medium text-gray-900">
-                Name
-              </label>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
-                required
-              />
-            </div>
-            <div>
-              <label className="block text-lg font-medium text-gray-900">
-                Place of Delivery
+                Select the place you want to send from
               </label>
               <input
                 type="text"
                 name="placeOfDelivery"
                 value={formData.placeOfDelivery}
-                onChange={handleChange}
-                className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
-                required
-              />
-            </div>
-            <div>
-              <label className="block text-lg font-medium text-gray-900">
-                Receiving location
-              </label>
-              <input
-                type="text"
-                name="deliveryLocation"
-                value={formData.deliveryLocation}
                 onChange={handleChange}
                 className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
                 required
@@ -114,17 +82,36 @@ export default function Page({
                 required
               />
             </div>
-            <div className="flex items-center">
-              <input
-                type="checkbox"
-                name="isUrgent"
-                checked={formData.isUrgent}
-                onChange={handleChange}
-                className="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
-              />
-              <label className="ml-2 block text-lg font-medium text-gray-900">
-                Urgent
+            <div>
+              <label className="block text-lg font-medium text-gray-900">
+                Urgency
               </label>
+              <div className="flex items-center mt-2">
+                <input
+                  type="radio"
+                  name="urgency"
+                  value="normal"
+                  checked={formData.urgency === "normal"}
+                  onChange={handleChange}
+                  className="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
+                />
+                <label className="ml-2 text-lg font-medium text-gray-900">
+                  Normal
+                </label>
+              </div>
+              <div className="flex items-center mt-2">
+                <input
+                  type="radio"
+                  name="urgency"
+                  value="urgent"
+                  checked={formData.urgency === "urgent"}
+                  onChange={handleChange}
+                  className="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
+                />
+                <label className="ml-2 text-lg font-medium text-gray-900">
+                  Urgent
+                </label>
+              </div>
             </div>
             <button
               type="submit"
@@ -141,38 +128,12 @@ export default function Page({
           >
             <div>
               <label className="block text-lg font-medium text-gray-900">
-                الاسم
-              </label>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
-                required
-              />
-            </div>
-            <div>
-              <label className="block text-lg font-medium text-gray-900">
-                مكان التسليم
+                اختر مكان الإرسال
               </label>
               <input
                 type="text"
                 name="placeOfDelivery"
                 value={formData.placeOfDelivery}
-                onChange={handleChange}
-                className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
-                required
-              />
-            </div>
-            <div>
-              <label className="block text-lg font-medium text-gray-900">
-                موقع الاستلام
-              </label>
-              <input
-                type="text"
-                name="deliveryLocation"
-                value={formData.deliveryLocation}
                 onChange={handleChange}
                 className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
                 required
@@ -191,17 +152,36 @@ export default function Page({
                 required
               />
             </div>
-            <div className="flex items-center">
-              <input
-                type="checkbox"
-                name="isUrgent"
-                checked={formData.isUrgent}
-                onChange={handleChange}
-                className="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
-              />
-              <label className="ml-2 block text-lg font-medium text-gray-900">
-                عاجل
+            <div>
+              <label className="block text-lg font-medium text-gray-900">
+                نوع الخدمة
               </label>
+              <div className="flex items-center mt-2">
+                <input
+                  type="radio"
+                  name="urgency"
+                  value="normal"
+                  checked={formData.urgency === "normal"}
+                  onChange={handleChange}
+                  className="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
+                />
+                <label className="ml-2 text-lg font-medium text-gray-900">
+                  عادي
+                </label>
+              </div>
+              <div className="flex items-center mt-2">
+                <input
+                  type="radio"
+                  name="urgency"
+                  value="urgent"
+                  checked={formData.urgency === "urgent"}
+                  onChange={handleChange}
+                  className="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
+                />
+                <label className="ml-2 text-lg font-medium text-gray-900">
+                  عاجل
+                </label>
+              </div>
             </div>
             <button
               type="submit"
@@ -218,38 +198,12 @@ export default function Page({
           >
             <div>
               <label className="block text-lg font-medium text-gray-900">
-                Имя
-              </label>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
-                required
-              />
-            </div>
-            <div>
-              <label className="block text-lg font-medium text-gray-900">
-                Место получения
+                Выберите место отправления
               </label>
               <input
                 type="text"
                 name="placeOfDelivery"
                 value={formData.placeOfDelivery}
-                onChange={handleChange}
-                className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
-                required
-              />
-            </div>
-            <div>
-              <label className="block text-lg font-medium text-gray-900">
-                Место доставки
-              </label>
-              <input
-                type="text"
-                name="deliveryLocation"
-                value={formData.deliveryLocation}
                 onChange={handleChange}
                 className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
                 required
@@ -268,17 +222,36 @@ export default function Page({
                 required
               />
             </div>
-            <div className="flex items-center">
-              <input
-                type="checkbox"
-                name="isUrgent"
-                checked={formData.isUrgent}
-                onChange={handleChange}
-                className="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
-              />
-              <label className="ml-2 block text-lg font-medium text-gray-900">
-                Срочно
+            <div>
+              <label className="block text-lg font-medium text-gray-900">
+                Срочность
               </label>
+              <div className="flex items-center mt-2">
+                <input
+                  type="radio"
+                  name="urgency"
+                  value="normal"
+                  checked={formData.urgency === "normal"}
+                  onChange={handleChange}
+                  className="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
+                />
+                <label className="ml-2 text-lg font-medium text-gray-900">
+                  Обычная
+                </label>
+              </div>
+              <div className="flex items-center mt-2">
+                <input
+                  type="radio"
+                  name="urgency"
+                  value="urgent"
+                  checked={formData.urgency === "urgent"}
+                  onChange={handleChange}
+                  className="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
+                />
+                <label className="ml-2 text-lg font-medium text-gray-900">
+                  Срочная
+                </label>
+              </div>
             </div>
             <button
               type="submit"

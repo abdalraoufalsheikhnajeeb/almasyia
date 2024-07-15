@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { getDictionary } from "../../../../get-dictionary";
-import { Locale } from "../../../../i18n-config";
-import AnTitle from "../../components/AnTitle";
-import { visas } from "../../data";
+import { getDictionary } from "../../../../get-dictionary.ts";
+import { Locale } from "../../../../i18n-config.ts";
+import AnTitle from "../../components/AnTitle.tsx";
 import VisaForm from "../../components/VisasForm.tsx"; 
+import { visas } from "../../data.ts";
 
 export default async function Page({
   params: { lang },
