@@ -24,6 +24,14 @@ export default async function page({
         <p>
           <span className="text-3xl font-bold">{dic?.ayatAnimation} </span>
           <span className="text-2xl ">{dic?.prev1}</span>
+          <p className="mt-4 text-lg text-primary">
+            <a
+              className="text-2xl underline underline-offset-4"
+              href="mailto:farouk@alnujoomalmasiya.com"
+            >
+              farouk@alnujoomalmasiya.com
+            </a>
+          </p>
         </p>
       </div>
       <Image

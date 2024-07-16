@@ -95,6 +95,22 @@ export const partners = [
     titlear: "الخطوط الجوية الفرنسية",
     titleru: "Air France",
   },
+  {
+    route: "singapore-airlines",
+    id: 13,
+    src: "/images/singapore-airlines.png",
+    titleen: "Singapore Airlines",
+    titlear: "الخطوط الجوية السنغافورية",
+    titleru: "Singapore Airlines",
+  },
+  {
+    route: "British-Airways",
+    id: 14,
+    src: "/images/britishAirways.png",
+    titleen: "British Airways",
+    titlear: "الخطوط الجوية البريطانية",
+    titleru: "British Airways",
+  },
 ];
 
 export const agents = [
@@ -661,6 +677,88 @@ export const timeZones = [
     flag: "🇪🇸",
   },
 ];
+
+
+
+
+
+
+
+
+
+
+
+export type Language = 'en' | 'ar' | 'ru';
+
+export interface Cities {
+  en: string[];
+  ar: string[];
+  ru: string[];
+}
+
+export interface CitiesByCountry {
+  [key: string]: Cities;
+}
+
+export const citiesByCountry: CitiesByCountry = {
+  Syria: {
+    en: ["Damascus", "Aleppo", "Latakia"],
+    ar: ["دمشق", "حلب", "اللاذقية"],
+    ru: ["Дамаск", "Алеппо", "Латакия"],
+  },
+  Russia: {
+    en: ["Moscow", "St. Petersburg", "Kazan", "Sochi"],
+    ar: ["موسكو", "سانت بطرسبرغ", "قازان", "سوتشي"],
+    ru: ["Москва", "Санкт-Петербург", "Казань", "Сочи"],
+  },
+  UAE: {
+    en: ["Abu Dhabi", "Dubai", "Sharjah"],
+    ar: ["أبوظبي", "دبي", "الشارقة"],
+    ru: ["Абу-Даби", "Дубай", "Шарджа"],
+  },
+  Egypt: {
+    en: ["Cairo", "Sharm El-Sheikh", "Alexandria"],
+    ar: ["القاهرة", "شرم الشيخ", "الإسكندرية"],
+    ru: ["Каир", "Шарм-эль-Шейх", "Александрия"],
+  },
+  Malaysia: {
+    en: ["Kuala Lumpur", "Langkawi", "Selangor"],
+    ar: ["كوالالمبور", "لانكاوي", "سلانغور"],
+    ru: ["Куала-Лумпур", "Лангкави", "Селангор"],
+  },
+  Thailand: {
+    en: ["Bangkok", "Phuket", "Pattaya", "Chiangmai"],
+    ar: ["بانكوك", "بوكيت", "باتايا", "شيانغماي"],
+    ru: ["Бангкок", "Пхукет", "Паттайя", "Чиангмай"],
+  },
+  Indonesia: {
+    en: ["Jakarta", "Bali", "Puncak"],
+    ar: ["جاكرتا", "بالي", "بونكاك"],
+    ru: ["Джакарта", "Бали", "Пунчак"],
+  },
+  Maldives: {
+    en: ["Finance", "Cocoa"],
+    ar: ["مالية", "كوكو"],
+    ru: ["Финанс", "Какао"],
+  },
+  Turkey: {
+    en: ["Ankara", "Istanbul", "Trabzon", "Antalya"],
+    ar: ["أنقرة", "إسطنبول", "طرابزون", "أنطاليا"],
+    ru: ["Анкара", "Стамбул", "Трабзон", "Анталья"],
+  },
+};
+
+
+
+
+
+
+
+
+
+
+
+
 
 // export const Egypt = [
 //   {

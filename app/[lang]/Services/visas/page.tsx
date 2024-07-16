@@ -92,7 +92,7 @@ export default async function Page({
                     </li>
                   )}
                   {description && (
-                    <li className="text-primary list-style ms-6 text-3xl items-center font-bold mb-4">
+                    <li className="text-primary list-style   ms-6 text-3xl items-center font-bold mb-4">
                       {dic.description}:
                       <p className="text-gray-500 font-normal text-xl mt-2">
                         {description}

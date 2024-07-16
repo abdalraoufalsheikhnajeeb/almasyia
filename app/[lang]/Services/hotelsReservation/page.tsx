@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Locale } from "../../../../i18n-config";
+import { CitiesByCountry, citiesByCountry } from "../../data";
 
 export default function Page({
   params: { lang },
@@ -17,6 +18,8 @@ export default function Page({
     numberOfChildren: "",
   });
 
+  const [cities, setCities] = useState<string[]>([]);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
@@ -25,6 +28,15 @@ export default function Page({
       ...prevData,
       [name]: value,
     }));
+
+    if (name === "country") {
+      const selectedCountry = citiesByCountry[value as keyof CitiesByCountry];
+      setCities(selectedCountry ? selectedCountry[lang] : []);
+      setFormData((prevData) => ({
+        ...prevData,
+        city: "",
+      }));
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -46,12 +58,12 @@ export default function Page({
   };
 
   return (
-    <div className="lg:pt-20  pt-24 flex flex-col-reverse lg:flex-row gap-4 py-12">
+    <div className="lg:pt-20 pt-24 flex flex-col-reverse lg:flex-row gap-4 py-12">
       <div className="relative">
         <Image
           loading="lazy"
           quality={1}
-          className=" w-full -z-10 object-cover h-full"
+          className="w-full -z-10 object-cover h-full"
           width={1280}
           height={720}
           src="/images/hotelHero.webp"
@@ -59,8 +71,7 @@ export default function Page({
         />
         <div className="bg-white lg:absolute w-full opacity-80 py-16 px-8 bottom-0 h-auto">
           {lang === "en" && (
-            <p className="text-center text-2xl ">
-              {" "}
+            <p className="text-center text-2xl">
               I feel special... Through the high-end hotel services provided to
               you, with the high attention and diligent follow-up by our team,
               you will feel the true distinction that enriches your tourism
@@ -75,7 +86,7 @@ export default function Page({
             </p>
           )}
           {lang === "ar" && (
-            <p className="text-center text-2xl ">
+            <p className="text-center text-2xl">
               اشعر بالتميّز... من خلال الخدمات الفندقية الراقية المقدمة لكم، مع
               الاهتمام العالي والمتابعة الحثيثة من قبل فريقنا ستشعرون بالتميز
               الحقيقي الذي يغني تجربتكم السياحية معنا. ولأن الإقامة الهنيَّة من
@@ -88,7 +99,7 @@ export default function Page({
           )}
 
           {lang === "ru" && (
-            <p className="text-center text-2xl ">
+            <p className="text-center text-2xl">
               Я чувствую себя особенным... Благодаря предоставленным вам
               высококлассным гостиничным услугам, а также высокому вниманию и
               усердному контролю со стороны нашей команды, вы почувствуете
@@ -123,30 +134,31 @@ export default function Page({
                 required
               >
                 <option value="">-- Select Country --</option>
-                <option value="Syria">Syria</option>
-                <option value="UAE">UAE</option>
-                <option value="Russia">Russia</option>
-                <option value="Turkey">Turkey</option>
-                <option value="Egypt">Egypt</option>
-                <option value="Malaysia">Malaysia</option>
-                <option value="Europe">Europe</option>
-                <option value="Maldives">Maldives</option>
-                <option value="Indonesia">Indonesia</option>
-                <option value="Thailand">Thailand</option>
+                {Object.keys(citiesByCountry).map((country) => (
+                  <option key={country} value={country}>
+                    {country}
+                  </option>
+                ))}
               </select>
             </div>
             <div>
               <label className="block text-lg font-medium text-gray-900">
                 City
               </label>
-              <input
-                type="text"
+              <select
                 name="city"
                 value={formData.city}
                 onChange={handleChange}
                 className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
                 required
-              />
+              >
+                <option value="">-- Select City --</option>
+                {cities.map((city) => (
+                  <option key={city} value={city}>
+                    {city}
+                  </option>
+                ))}
+              </select>
             </div>
             <div>
               <label className="block text-lg font-medium text-gray-900">
@@ -224,30 +236,31 @@ export default function Page({
                 required
               >
                 <option value="">-- اختر الدولة --</option>
-                <option value="Syria">سوريا</option>
-                <option value="UAE">الإمارات</option>
-                <option value="Russia">روسيا</option>
-                <option value="Turkey">تركيا</option>
-                <option value="Egypt">مصر</option>
-                <option value="Malaysia">ماليزيا</option>
-                <option value="Europe">أوروبا</option>
-                <option value="Maldives">المالديف</option>
-                <option value="Indonesia">إندونيسيا</option>
-                <option value="Thailand">تايلاند</option>
+                {Object.keys(citiesByCountry).map((country) => (
+                  <option key={country} value={country}>
+                    {country}
+                  </option>
+                ))}
               </select>
             </div>
             <div>
               <label className="block text-lg font-medium text-gray-900">
                 المدينة
               </label>
-              <input
-                type="text"
+              <select
                 name="city"
                 value={formData.city}
                 onChange={handleChange}
                 className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
                 required
-              />
+              >
+                <option value="">-- اختر المدينة --</option>
+                {cities.map((city) => (
+                  <option key={city} value={city}>
+                    {city}
+                  </option>
+                ))}
+              </select>
             </div>
             <div>
               <label className="block text-lg font-medium text-gray-900">
@@ -325,30 +338,31 @@ export default function Page({
                 required
               >
                 <option value="">-- Выберите страну --</option>
-                <option value="Syria">Сирия</option>
-                <option value="UAE">ОАЭ</option>
-                <option value="Russia">Россия</option>
-                <option value="Turkey">Турция</option>
-                <option value="Egypt">Египет</option>
-                <option value="Malaysia">Малайзия</option>
-                <option value="Europe">Европа</option>
-                <option value="Maldives">Мальдивы</option>
-                <option value="Indonesia">Индонезия</option>
-                <option value="Thailand">Таиланд</option>
+                {Object.keys(citiesByCountry).map((country) => (
+                  <option key={country} value={country}>
+                    {country}
+                  </option>
+                ))}
               </select>
             </div>
             <div>
               <label className="block text-lg font-medium text-gray-900">
                 Город
               </label>
-              <input
-                type="text"
+              <select
                 name="city"
                 value={formData.city}
                 onChange={handleChange}
                 className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
                 required
-              />
+              >
+                <option value="">-- Выберите город --</option>
+                {cities.map((city) => (
+                  <option key={city} value={city}>
+                    {city}
+                  </option>
+                ))}
+              </select>
             </div>
             <div>
               <label className="block text-lg font-medium text-gray-900">
