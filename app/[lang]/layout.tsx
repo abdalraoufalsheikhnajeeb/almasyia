@@ -6,8 +6,6 @@ import { getDictionary } from "../../get-dictionary";
 import Navbar from "./components/NavBar"; 
 import { Tajawal } from "next/font/google";
 import Footer from "./components/Footer";
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Analytics } from "@vercel/analytics/react"
 const tajawal = Tajawal({ subsets: ["latin", "arabic"], weight: ["400", "700"] });
 
 
