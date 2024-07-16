@@ -2,7 +2,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Locale } from "../../../../i18n-config";
-import { encode } from 'js-base64';
+import EmojiConvertor from "emoji-js";
+
 export default function Page({
   params: { lang },
 }: {
@@ -29,24 +30,30 @@ export default function Page({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-  const message = `*Travel Insurance: 🏖️*\n\n- *Destination*: ${
-    formData.destination === "Other countries" ? formData.otherCountry : formData.destination
-  } 🌍\n\n- *Insurance Starting Date*: ${
-    formData.insuranceStartDate
-  } 📅\n\n- *Insurance Ending Date*: ${
-    formData.insuranceEndDate
-  } 📅\n\n- *Number of People*: ${
-    formData.numberOfPeople
-  } 👥\n\n- *Trip Type*: ${
-    formData.tripType === "oneTrip"
-      ? "One Trip 🚗"
-      : "Multiple Trips Annually 🌐"
-  }`;
 
-  const encodedMessage = encode(message);
-  const whatsappUrl = `https://wa.me/971545866066?text=${encodedMessage}`;
-  window.open(whatsappUrl, "_blank");
+    const emoji = new EmojiConvertor();
+    emoji.replace_mode = "unified";
+    emoji.allow_native = true;
+
+    const message = `*Travel Insurance: 🏖️*\n\n- *Destination*: ${
+      formData.destination === "Other countries"
+        ? formData.otherCountry
+        : formData.destination
+    } 🌍\n\n- *Insurance Starting Date*: ${
+      formData.insuranceStartDate
+    } 📅\n\n- *Insurance Ending Date*: ${
+      formData.insuranceEndDate
+    } 📅\n\n- *Number of People*: ${
+      formData.numberOfPeople
+    } 👥\n\n- *Trip Type*: ${
+      formData.tripType === "oneTrip"
+        ? "One Trip 🚗"
+        : "Multiple Trips Annually 🌐"
+    }`;
+
+    const encodedMessage = encodeURIComponent(emoji.replace_unified(message));
+    const whatsappUrl = `https://wa.me/971545866066?text=${encodedMessage}`;
+    window.open(whatsappUrl, "_blank");
   };
 
   return (

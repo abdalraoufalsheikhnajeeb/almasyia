@@ -11,6 +11,7 @@
     "@vercel/speed-insights": "^1.0.12",
     "embla-carousel-autoplay": "^8.1.6",
     "embla-carousel-react": "^8.1.6",
+    "emoji-js": "^3.8.0",
     "js-base64": "^3.7.7",
     "negotiator": "0.6.3",
     "next": "^14.2.5",
@@ -20,6 +21,7 @@
     "server-only": "0.0.1"
   },
   "devDependencies": {
+    "@types/emoji-js": "^3.5.2",
     "@types/negotiator": "^0.6.3",
     "@types/node": "^20.14.1",
     "@types/react": "^18.3.3",
