@@ -3,12 +3,13 @@ import { i18n, type Locale } from "../../i18n-config";
 import Head from "next/head";
 import "./globals.css";
 import { getDictionary } from "../../get-dictionary";
-import Navbar from "./components/NavBar"; 
+import Navbar from "./components/NavBar";
 import { Tajawal } from "next/font/google";
 import Footer from "./components/Footer";
-const tajawal = Tajawal({ subsets: ["latin", "arabic"], weight: ["400", "700"] });
-
-
+const tajawal = Tajawal({
+  subsets: ["latin", "arabic"],
+  weight: ["400", "700"],
+});
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
