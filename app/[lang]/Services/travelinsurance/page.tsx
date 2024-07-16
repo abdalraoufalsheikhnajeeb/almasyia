@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Locale } from "../../../../i18n-config";
-
+import { encode } from 'js-base64';
 export default function Page({
   params: { lang },
 }: {
@@ -10,9 +10,11 @@ export default function Page({
 }) {
   const [formData, setFormData] = useState({
     destination: "",
-    travelDuration: "",
+    insuranceStartDate: "",
+    insuranceEndDate: "",
     numberOfPeople: "",
     tripType: "oneTrip", // default to one trip
+    otherCountry: "", // for other country input
   });
 
   const handleChange = (
@@ -27,35 +29,49 @@ export default function Page({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const message = `*Travel Insurance: 🏖️*\n\n- *Destination*: ${
-      formData.destination
-    } 🌍\n\n- *Travel Duration*: ${
-      formData.travelDuration
-    } 📅\n\n- *Number of People*: ${
-      formData.numberOfPeople
-    } 👥\n\n- *Trip Type*: ${
-      formData.tripType === "oneTrip"
-        ? "One Trip 🚗"
-        : "Multiple Trips Annually 🌐"
-    }`;
+    
+  const message = `*Travel Insurance: 🏖️*\n\n- *Destination*: ${
+    formData.destination === "Other countries" ? formData.otherCountry : formData.destination
+  } 🌍\n\n- *Insurance Starting Date*: ${
+    formData.insuranceStartDate
+  } 📅\n\n- *Insurance Ending Date*: ${
+    formData.insuranceEndDate
+  } 📅\n\n- *Number of People*: ${
+    formData.numberOfPeople
+  } 👥\n\n- *Trip Type*: ${
+    formData.tripType === "oneTrip"
+      ? "One Trip 🚗"
+      : "Multiple Trips Annually 🌐"
+  }`;
 
-    const whatsappUrl = `https://wa.me/971545866066?text=${encodeURIComponent(
-      message
-    )}`;
-    window.open(whatsappUrl, "_blank");
+  const encodedMessage = encode(message);
+  const whatsappUrl = `https://wa.me/971545866066?text=${encodedMessage}`;
+  window.open(whatsappUrl, "_blank");
   };
 
   return (
     <div className="lg:pt-20 pt-24 flex flex-col-reverse lg:flex-row gap-4">
-      <Image
-        loading="lazy"
-        quality={1}
-        className="lg:w-2/3 w-full -z-10 object-cover"
-        width={1280}
-        height={720}
-        src="/images/travelInsuranceHero.webp"
-        alt="Travel Insurance"
-      />
+      <div className="relative">
+        <Image
+          loading="lazy"
+          quality={1}
+          className=" w-full -z-10 object-cover h-full"
+          width={1280}
+          height={720}
+          src="/images/travelInsuranceHero.webp"
+          alt="Hotel Reservation"
+        />
+        <div className="bg-white lg:absolute w-full opacity-80 py-16 px-8 bottom-0 h-auto">
+          {lang === "en" && (
+            <p className="text-center text-2xl ">Travel safely</p>
+          )}
+          {lang === "ar" && <p className="text-center text-2xl ">سافر بأمان</p>}
+
+          {lang === "ru" && (
+            <p className="text-center text-2xl ">Путешествуй безопасно</p>
+          )}
+        </div>
+      </div>
 
       <div className="flex lg:w-1/3 w-full justify-center items-center">
         {lang === "en" && (
@@ -82,16 +98,41 @@ export default function Page({
                 <option value="Schengen insurance">Schengen insurance</option>
                 <option value="America insurance">America insurance</option>
                 <option value="Canada Insurance 🇨🇦">Canada Insurance 🇨🇦</option>
+                <option value="Other countries">Other countries</option>
               </select>
+              {formData.destination === "Other countries" && (
+                <input
+                  type="text"
+                  name="otherCountry"
+                  value={formData.otherCountry}
+                  onChange={handleChange}
+                  placeholder="Enter country"
+                  className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
+                  required
+                />
+              )}
             </div>
             <div>
               <label className="block text-lg font-medium text-gray-900">
-                Travel Duration
+                Insurance Starting Date
               </label>
               <input
-                type="text"
-                name="travelDuration"
-                value={formData.travelDuration}
+                type="date"
+                name="insuranceStartDate"
+                value={formData.insuranceStartDate}
+                onChange={handleChange}
+                className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
+                required
+              />
+            </div>
+            <div>
+              <label className="block text-lg font-medium text-gray-900">
+                Insurance Ending Date
+              </label>
+              <input
+                type="date"
+                name="insuranceEndDate"
+                value={formData.insuranceEndDate}
                 onChange={handleChange}
                 className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
                 required
@@ -173,16 +214,41 @@ export default function Page({
                 <option value="Schengen insurance">تأمين شنغن</option>
                 <option value="America insurance">تأمين أمريكا</option>
                 <option value="Canada Insurance 🇨🇦">تأمين كندا 🇨🇦</option>
+                <option value="Other countries">دول أخرى</option>
               </select>
+              {formData.destination === "Other countries" && (
+                <input
+                  type="text"
+                  name="otherCountry"
+                  value={formData.otherCountry}
+                  onChange={handleChange}
+                  placeholder="ادخل الدولة"
+                  className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
+                  required
+                />
+              )}
             </div>
             <div>
               <label className="block text-lg font-medium text-gray-900">
-                مدة السفر
+                تاريخ بدء التأمين
               </label>
               <input
-                type="text"
-                name="travelDuration"
-                value={formData.travelDuration}
+                type="date"
+                name="insuranceStartDate"
+                value={formData.insuranceStartDate}
+                onChange={handleChange}
+                className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
+                required
+              />
+            </div>
+            <div>
+              <label className="block text-lg font-medium text-gray-900">
+                تاريخ انتهاء التأمين
+              </label>
+              <input
+                type="date"
+                name="insuranceEndDate"
+                value={formData.insuranceEndDate}
                 onChange={handleChange}
                 className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
                 required
@@ -240,6 +306,7 @@ export default function Page({
             </button>
           </form>
         )}
+
         {lang === "ru" && (
           <form
             onSubmit={handleSubmit}
@@ -267,16 +334,41 @@ export default function Page({
                 <option value="Canada Insurance 🇨🇦">
                   Страхование Канады 🇨🇦
                 </option>
+                <option value="Other countries">Другие страны</option>
               </select>
+              {formData.destination === "Other countries" && (
+                <input
+                  type="text"
+                  name="otherCountry"
+                  value={formData.otherCountry}
+                  onChange={handleChange}
+                  placeholder="Введите страну"
+                  className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
+                  required
+                />
+              )}
             </div>
             <div>
               <label className="block text-lg font-medium text-gray-900">
-                Продолжительность путешествия
+                Дата начала страхования
               </label>
               <input
-                type="text"
-                name="travelDuration"
-                value={formData.travelDuration}
+                type="date"
+                name="insuranceStartDate"
+                value={formData.insuranceStartDate}
+                onChange={handleChange}
+                className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
+                required
+              />
+            </div>
+            <div>
+              <label className="block text-lg font-medium text-gray-900">
+                Дата окончания страхования
+              </label>
+              <input
+                type="date"
+                name="insuranceEndDate"
+                value={formData.insuranceEndDate}
                 onChange={handleChange}
                 className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
                 required
