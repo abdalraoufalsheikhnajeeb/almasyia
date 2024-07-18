@@ -29,12 +29,13 @@ export default async function Home({
         <header className="h-[100dvh] gap-8 pb-8 flex flex-col items-center justify-end ">
           <Image
             loading="lazy"
-            quality={1}
+            quality={10} // Adjust the quality to balance performance and visual fidelity
             src="/images/logo.png"
-            className="w-72 lg:w-96"
             alt="arrow"
             width={452}
             height={243}
+            sizes="(max-width: 640px) 100vw, (max-width: 1080px) 50vw, 33vw"
+            className="w-72 lg:w-96"
           />
           <h2 className="text-5xl lg:text-5xl max-w-3xl font-bold  text-primary  text-center">
             {dic?.homeText}
@@ -100,9 +101,9 @@ export default async function Home({
                       alt="service image"
                     />
                     <div className="p-4 pb-7 flex-grow flex flex-col justify-between h-28">
-                      <h5 className="mb-2 text-2xl font-bold tracking-tight text-primary text-center">
+                      <h2 className="mb-2 text-2xl font-bold tracking-tight text-primary text-center">
                         {title}
-                      </h5>
+                      </h2>
                       <span
                         className={`flex delay-1000 items-end justify-center font-bold mt-4 absolute ${
                           dic.currLang == "ar" ? `left-2` : `right-2`

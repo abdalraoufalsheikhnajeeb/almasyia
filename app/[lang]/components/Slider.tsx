@@ -74,9 +74,9 @@ const Slider = ({ dic, data, title }: SliderProps) => {
                       />
                     </div>
                     <div className="p-4 pb-7 flex-grow flex flex-col justify-between h-28">
-                      <h5 className="mb-2 text-2xl font-bold tracking-tight text-primary text-center">
+                      <h2 className="mb-2 text-2xl font-bold tracking-tight text-primary text-center">
                         {cardTitle}
-                      </h5>
+                      </h2>
                       <span
                         className={`flex items-center justify-center font-bold mt-4 absolute ${
                           dic.currLang == "ar"

@@ -162,13 +162,13 @@ const LocationCard: React.FC<LocationCardProps> = ({
           <SamplePrevArrow onClick={scrollPrev} />
           <SampleNextArrow onClick={scrollNext} />
         </div>
-        <div className="p-4">
+        <div className="p-4 flex justify-center items-center">
           <Link
             target="_blank"
             href={googleMapsUrl}
             
             rel="noopener noreferrer"
-            className="block w-full text-center mt-4 bg-litePrimary text-white font-bold py-2 px-4 rounded-full hover:bg-blue-700 transition duration-300"
+            className=" w-auto   text-center mt-4 bg-litePrimary text-white font-bold py-4 px-6 rounded-full hover:bg-blue-700 transition duration-300"
           >
             Find Us on Google Maps
           </Link>
