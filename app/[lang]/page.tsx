@@ -32,8 +32,8 @@ export default async function Home({
             quality={10} // Adjust the quality to balance performance and visual fidelity
             src="/images/logo.png"
             alt="arrow"
-            width={452}
-            height={243}
+            width={226}
+            height={122}
             sizes="(max-width: 640px) 100vw, (max-width: 1080px) 50vw, 33vw"
             className="w-72 lg:w-96"
           />
