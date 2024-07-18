@@ -19,7 +19,7 @@ export default async function Home({
         loading="lazy"
         quality={20}
         src="/images/hero.webp"
-        className="bg-gradient absolute -z-10 object-cover  h-[100dvh] w-screen opacity-70"
+        className="bg-gradient absolute -z-10 object-cover h-[100dvh] w-screen opacity-70"
         alt="arrow"
         width={1280}
         height={720}
@@ -30,11 +30,11 @@ export default async function Home({
           <Image
             loading="lazy"
             quality={1}
-            src="/images/logo.webp"
-            className="w-40 lg:w-60"
+            src="/images/logo.png"
+            className="w-72 lg:w-96"
             alt="arrow"
-            width={250}
-            height={200}
+            width={452}
+            height={243}
           />
           <h2 className="text-5xl lg:text-5xl max-w-3xl font-bold  text-primary  text-center">
             {dic?.homeText}
@@ -75,7 +75,7 @@ export default async function Home({
         <section className="w-screen flex flex-col items-center">
           <AnTitle title={dic?.someProjects} />
 
-          <div className="flex flex-wrap justify-center items-center gap-8 px-4 lg:px-12 pt-4 ">
+          <div className="max-w-7xl flex flex-wrap justify-center items-center gap-8 px-4 lg:px-12 pt-4 ">
             {ourServecis.map((card) => {
               let title;
 
@@ -89,7 +89,7 @@ export default async function Home({
 
               return (
                 <Link href={`/${lang}/Services/${card.route}`} key={card.id}>
-                  <div className="max-w-[90vw] relative w-96 bg-white border flex flex-col justify-center items-center rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                  <div className="max-w-[90vw] relative w-80 bg-white border flex flex-col justify-center items-center rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                     <Image
                       loading="lazy"
                       quality={10}

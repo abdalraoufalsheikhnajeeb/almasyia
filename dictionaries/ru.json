@@ -23,5 +23,6 @@
   "learnMore": "Узнать больше",
   "requirements": "требования",
   "duration": "продолжительность",
-  "description": "описание"
+  "description": "описание",
+      "hotelReservation" : "Hotel Reservation"
 }

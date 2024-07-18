@@ -53,7 +53,7 @@ const Navbar = ({
         className="flex-shrink-0 h-full"
         width={100}
         height={80}
-        src="/images/logo.webp"
+        src="/images/logo.png"
         alt="Logo"
       />
       </Link>

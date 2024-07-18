@@ -11,7 +11,7 @@ export default async function page({
 }) {
   const dic = await getDictionary(lang);
   return (
-    <div className="pt-28  py-10">
+    <div className="pt-28 flex flex-col justify-center items-center py-4">
       <Slider dic={dic} title={dic.agents} data={agents} />
       <Slider dic={dic} title={dic.OurPartners} data={partners} />
       <FlightBookingForm dic={dic} />

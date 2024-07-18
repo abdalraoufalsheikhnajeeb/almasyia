@@ -23,5 +23,6 @@
   "learnMore" : "Learn More",
   "requirements" : "Requirements",
   "duration" : "Duration",
-  "description" : "Description"
+  "description" : "Description",
+      "hotelReservation" : "Hotel Reservation"
 }

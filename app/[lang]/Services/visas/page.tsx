@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { getDictionary } from "../../../../get-dictionary.ts";
-import { Locale } from "../../../../i18n-config.ts";
-import AnTitle from "../../components/AnTitle.tsx";
-import VisaForm from "../../components/VisasForm.tsx"; 
-import { visas } from "../../data.ts";
+import { getDictionary } from "../../../../get-dictionary";
+import { Locale } from "../../../../i18n-config";
+import AnTitle from "../../components/AnTitle";
+import VisaForm from "../../components/VisasForm";
+import { visas } from "../../data";
 
 export default async function Page({
   params: { lang },
@@ -13,7 +13,7 @@ export default async function Page({
   const dic = await getDictionary(lang);
 
   return (
-    <div className="flex flex-col container mx-auto pt-28 px-4 lg:p-28">
+    <div className="container mx-auto pt-28 px-4 lg:px-28 flex flex-col">
       <AnTitle title={dic.viasa} />
       <div className="flex flex-col gap-8">
         {visas.map((visa, index) => {
@@ -36,11 +36,7 @@ export default async function Page({
           const country =
             lang === "ar" ? countryAR : lang === "en" ? countryEN : countryRU;
           const duration =
-            lang === "ar"
-              ? durationAR
-              : lang === "en"
-              ? durationEN
-              : durationRU;
+            lang === "ar" ? durationAR : lang === "en" ? durationEN : durationRU;
           const requirements =
             lang === "ar"
               ? requirementsAR
@@ -57,11 +53,13 @@ export default async function Page({
           return (
             <div
               key={index}
-              className="flex justify-center items-center lg:ps-4 flex-col gap-4 bg-white bg-opacity-80 p-2 rounded-lg"
+              className="flex flex-col lg:flex-row-reverse gap-4 bg-white bg-opacity-80 p-4 rounded-lg"
             >
-              <hr />
-              <h2 className="text-primary text-5xl font-bold">{country}</h2>
-              <div className="flex flex-col lg:flex-row-reverse w-full justify-between">
+              <hr className="w-full" />
+              <h2 className="text-primary text-5xl font-bold text-center">
+                {country}
+              </h2>
+              <div className="flex flex-col lg:flex-row-reverse w-full justify-between items-center">
                 <Image
                   width={445}
                   height={260}
@@ -70,9 +68,9 @@ export default async function Page({
                   alt={country}
                   className="lg:h-96 w-full lg:w-1/2 object-contain"
                 />
-                <ul className="p-4 flex flex-col gap-3">
+                <ul className="p-4 flex flex-col gap-3 lg:w-1/2">
                   {duration && (
-                    <li className="text-primary text-3xl items-center font-bold list-style ms-6 mb-4">
+                    <li className="text-primary text-3xl font-bold list-disc mb-4">
                       {dic.duration}:
                       <p className="text-gray-500 font-normal text-xl mt-2">
                         {duration}
@@ -80,19 +78,17 @@ export default async function Page({
                     </li>
                   )}
                   {requirements && (
-                    <li className="text-primary list-style ms-6 text-3xl items-center font-bold mb-4">
+                    <li className="text-primary text-3xl font-bold list-disc mb-4">
                       {dic.requirements}:
-                      <ul className="text-gray-500 font-normal text-xl mt-2">
+                      <ul className="text-gray-500 font-normal text-xl mt-2 ml-6 list-disc">
                         {requirements.map((req, i) => (
-                          <li key={i}>
-                            {i + 1}. {req}
-                          </li>
+                          <li key={i}>{req}</li>
                         ))}
                       </ul>
                     </li>
                   )}
                   {description && (
-                    <li className="text-primary list-style   ms-6 text-3xl items-center font-bold mb-4">
+                    <li className="text-primary text-3xl font-bold list-disc mb-4">
                       {dic.description}:
                       <p className="text-gray-500 font-normal text-xl mt-2">
                         {description}

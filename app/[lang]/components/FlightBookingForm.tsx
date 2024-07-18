@@ -2,38 +2,31 @@
 import { useState } from "react";
 import { type getDictionary } from "../../../get-dictionary";
 
-export default function FlightBookingForm({
-  dic,
-}: {
+interface FlightBookingFormProps {
   dic: Awaited<ReturnType<typeof getDictionary>>;
-}) {
+}
+
+const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
   const [formData, setFormData] = useState({
     departure: "",
     arrival: "",
     outboundDate: "",
     returnDate: "",
-    numberOfPassengers: "",
     numberOfAdults: "",
     numberOfChildren: "",
     numberOfInfants: "",
-    travelClass: "tourist",
+    travelClass: "economy",
   });
   const [focused, setFocused] = useState(false);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    const { name, value, type } = e.target;
-    if (type === "checkbox") {
-      setFormData((prevData) => ({
-        ...prevData,
-        [name]: (e.target as HTMLInputElement).checked,
-      }));
-    } else {
-      setFormData((prevData) => ({
-        ...prevData,
-        [name]: value,
-      }));
-    }
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -43,8 +36,6 @@ export default function FlightBookingForm({
       formData.departure
     }\n\n- *Arrival Area*: ${formData.arrival}\n\n- *Outbound Date*: ${
       formData.outboundDate
-    }\n\n- *Return Date*: ${formData.returnDate}\n\n- *Number of Passengers*: ${
-      formData.numberOfPassengers
     }\n\n- *Number of Adults*: ${
       formData.numberOfAdults
     }\n\n- *Number of Children*: ${
@@ -60,13 +51,13 @@ export default function FlightBookingForm({
   };
 
   return (
-    <div className="flex flex-col items-center mt-12">
-      <form
-        onSubmit={handleSubmit}
-        className="space-y-6 w-96 p-6 flex flex-col backdrop-blur-sm border-2 border-white rounded-xl bg-white bg-opacity-50"
-      >
+    <form
+      onSubmit={handleSubmit}
+      className="max-w-7xl space-y-6 w-full p-6 flex flex-col backdrop-blur-sm border-2 border-white rounded-xl bg-white bg-opacity-50"
+    >
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
-          <label className="block text-lg font-medium text-gray-900">
+          <label htmlFor="departure" className="block text-lg  text-gray-900">
             {dic.currLang === "ar"
               ? "مكان المغادرة"
               : dic.currLang === "ru"
@@ -74,6 +65,7 @@ export default function FlightBookingForm({
               : "Place of Departure"}
           </label>
           <input
+            id="departure"
             type="text"
             name="departure"
             value={formData.departure}
@@ -83,7 +75,7 @@ export default function FlightBookingForm({
           />
         </div>
         <div>
-          <label className="block text-lg font-medium text-gray-900">
+          <label htmlFor="arrival" className="block text-lg  text-gray-900">
             {dic.currLang === "ar"
               ? "منطقة الوصول"
               : dic.currLang === "ru"
@@ -91,6 +83,7 @@ export default function FlightBookingForm({
               : "Arrival Area"}
           </label>
           <input
+            id="arrival"
             type="text"
             name="arrival"
             value={formData.arrival}
@@ -100,7 +93,10 @@ export default function FlightBookingForm({
           />
         </div>
         <div>
-          <label className="block text-lg font-medium text-gray-900">
+          <label
+            htmlFor="outboundDate"
+            className="block text-lg  text-gray-900"
+          >
             {dic.currLang === "ar"
               ? "تاريخ السفر (ذهاب)"
               : dic.currLang === "ru"
@@ -108,6 +104,7 @@ export default function FlightBookingForm({
               : "Outbound Date"}
           </label>
           <input
+            id="outboundDate"
             type="date"
             name="outboundDate"
             value={formData.outboundDate}
@@ -117,45 +114,30 @@ export default function FlightBookingForm({
           />
         </div>
         <div>
-          <label className="block text-lg font-medium text-gray-900">
+          <label htmlFor="returnDate" className="block text-lg  text-gray-900">
             {dic.currLang === "ar"
               ? "تاريخ العودة"
               : dic.currLang === "ru"
               ? "Дата возвращения"
               : "Return Date"}
           </label>
-          <div className="relative">
-      <input
-        type="date"
-        name="returnDate"
-        value={formData.returnDate}
-        onChange={handleChange}
-        onFocus={() => setFocused(true)}
-        onBlur={() => setFocused(false)}
-        className="date-input mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
-        data-placeholder={!focused && !formData.returnDate ? ' ' : ''}
-      />
-    </div>
-        </div>
-        <div>
-          <label className="block text-lg font-medium text-gray-900">
-            {dic.currLang === "ar"
-              ? "عدد الركاب"
-              : dic.currLang === "ru"
-              ? "Количество пассажиров"
-              : "Number of Passengers"}
-          </label>
           <input
-            type="number"
-            name="numberOfPassengers"
-            value={formData.numberOfPassengers}
+            id="returnDate"
+            type="date"
+            name="returnDate"
+            value={formData.returnDate}
             onChange={handleChange}
-            className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
-            required
+            onFocus={() => setFocused(true)}
+            onBlur={() => setFocused(false)}
+            className="date-input mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
+            data-placeholder={!focused && !formData.returnDate ? " " : ""}
           />
         </div>
         <div>
-          <label className="block text-lg font-medium text-gray-900">
+          <label
+            htmlFor="numberOfAdults"
+            className="block text-lg  text-gray-900"
+          >
             {dic.currLang === "ar"
               ? "عدد البالغين"
               : dic.currLang === "ru"
@@ -163,6 +145,7 @@ export default function FlightBookingForm({
               : "Number of Adults"}
           </label>
           <input
+            id="numberOfAdults"
             type="number"
             name="numberOfAdults"
             value={formData.numberOfAdults}
@@ -172,7 +155,10 @@ export default function FlightBookingForm({
           />
         </div>
         <div>
-          <label className="block text-lg font-medium text-gray-900">
+          <label
+            htmlFor="numberOfChildren"
+            className="block text-lg  text-gray-900"
+          >
             {dic.currLang === "ar"
               ? "عدد الأطفال"
               : dic.currLang === "ru"
@@ -180,6 +166,7 @@ export default function FlightBookingForm({
               : "Number of Children"}
           </label>
           <input
+            id="numberOfChildren"
             type="number"
             name="numberOfChildren"
             value={formData.numberOfChildren}
@@ -188,7 +175,10 @@ export default function FlightBookingForm({
           />
         </div>
         <div>
-          <label className="block text-lg font-medium text-gray-900">
+          <label
+            htmlFor="numberOfInfants"
+            className="block text-lg  text-gray-900"
+          >
             {dic.currLang === "ar"
               ? "عدد الأطفال الرضع"
               : dic.currLang === "ru"
@@ -196,6 +186,7 @@ export default function FlightBookingForm({
               : "Number of Infants"}
           </label>
           <input
+            id="numberOfInfants"
             type="number"
             name="numberOfInfants"
             value={formData.numberOfInfants}
@@ -204,7 +195,7 @@ export default function FlightBookingForm({
           />
         </div>
         <div>
-          <label className="block text-lg font-medium text-gray-900">
+          <label htmlFor="travelClass" className="block text-lg  text-gray-900">
             {dic.currLang === "ar"
               ? "فئة السفر"
               : dic.currLang === "ru"
@@ -212,17 +203,18 @@ export default function FlightBookingForm({
               : "Travel Class"}
           </label>
           <select
+            id="travelClass"
             name="travelClass"
             value={formData.travelClass}
             onChange={handleChange}
             className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
           >
-            <option value="tourist">
+            <option value="economy">
               {dic.currLang === "ar"
                 ? "سياحية"
                 : dic.currLang === "ru"
                 ? "Туристический"
-                : "Tourist"}
+                : "Economy"}
             </option>
             <option value="business">
               {dic.currLang === "ar"
@@ -233,9 +225,11 @@ export default function FlightBookingForm({
             </option>
           </select>
         </div>
+      </div>
+      <div className="flex justify-center mt-6">
         <button
           type="submit"
-          className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg  rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
         >
           {dic.currLang === "ar"
             ? "إرسال المعلومات"
@@ -243,7 +237,9 @@ export default function FlightBookingForm({
             ? "Отправить информацию"
             : "Send Info"}
         </button>
-      </form>
-    </div>
+      </div>
+    </form>
   );
-}
+};
+
+export default FlightBookingForm;

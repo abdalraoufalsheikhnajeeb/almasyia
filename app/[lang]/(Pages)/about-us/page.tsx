@@ -15,7 +15,7 @@ export default async function page({
         <Image
           loading="lazy"
           quality={60}
-          src="/images/logo.webp"
+          src="/images/logo.png"
           className="w-40 lg:w-60"
           alt="arrow"
           width={250}

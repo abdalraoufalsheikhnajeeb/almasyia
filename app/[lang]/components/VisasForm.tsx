@@ -34,15 +34,17 @@ export default function VisaForm({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     const message = `*Apply for a visa: 🛂*\n\n- *Name*: ${
       formData.name
     } 👤\n\n- *Required Visa*: ${
       formData.requiredVisa
-    } 📝\n\n- *Number of People*: ${formData.numberOfPeople} 👥\n\n- *Has Children*: ${
-      formData.hasChildren ? "Yes 🚸" : "No 🚸"
-    }\n\n${
-      formData.hasChildren ? `- *Number of Children*: ${formData.numberOfChildren} 👶` : ""
+    } 📝\n\n- *Number of People*: ${
+      formData.numberOfPeople
+    } 👥\n\n- *Has Children*: ${formData.hasChildren ? "Yes 🚸" : "No 🚸"}\n\n${
+      formData.hasChildren
+        ? `- *Number of Children*: ${formData.numberOfChildren} 👶`
+        : ""
     }`;
     const whatsappUrl = `https://wa.me/971545866066?text=${encodeURIComponent(
       message
@@ -57,7 +59,7 @@ export default function VisaForm({
         className="space-y-6 w-96 p-6 flex flex-col backdrop-blur-sm border-2 border-white rounded-xl bg-white bg-opacity-50"
       >
         <div>
-          <label className="block text-lg font-medium text-gray-900">
+          <label className="block text-lg  text-gray-900">
             {dic.currLang === "ar"
               ? "الاسم"
               : dic.currLang === "ru"
@@ -74,7 +76,7 @@ export default function VisaForm({
           />
         </div>
         <div>
-          <label className="block text-lg font-medium text-gray-900">
+          <label className="block text-lg  text-gray-900">
             {dic.currLang === "ar"
               ? "الفيزا المطلوبة"
               : dic.currLang === "ru"
@@ -91,7 +93,7 @@ export default function VisaForm({
           />
         </div>
         <div>
-          <label className="block text-lg font-medium text-gray-900">
+          <label className="block text-lg  text-gray-900">
             {dic.currLang === "ar"
               ? "عدد الأشخاص"
               : dic.currLang === "ru"
@@ -115,7 +117,7 @@ export default function VisaForm({
             onChange={handleChange}
             className="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
           />
-          <label className="ml-2 block text-lg font-medium text-gray-900">
+          <label className="ml-2 block text-lg  text-gray-900">
             {dic.currLang === "ar"
               ? "هل لديك أطفال؟"
               : dic.currLang === "ru"
@@ -125,7 +127,7 @@ export default function VisaForm({
         </div>
         {formData.hasChildren && (
           <div>
-            <label className="block text-lg font-medium text-gray-900">
+            <label className="block text-lg  text-gray-900">
               {dic.currLang === "ar"
                 ? "عدد الأطفال"
                 : dic.currLang === "ru"
@@ -144,7 +146,7 @@ export default function VisaForm({
         )}
         <button
           type="submit"
-          className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg  rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
         >
           {dic.currLang === "ar"
             ? "إرسال المعلومات"

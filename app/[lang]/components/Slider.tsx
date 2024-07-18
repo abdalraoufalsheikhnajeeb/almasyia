@@ -41,7 +41,7 @@ const Slider = ({ dic, data, title }: SliderProps) => {
   }, [emblaApi]);
 
   return (
-    <section dir="ltr" className="our-partners-section px-[5vw] py-8">
+    <section dir="ltr" className="max-w-7xl px-2 ">
       <AnTitle title={title} />
       <br />
       <br />
