@@ -18,7 +18,7 @@ export default function FlightBookingForm({
     numberOfInfants: "",
     travelClass: "tourist",
   });
-
+  const [focused, setFocused] = useState(false);
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
@@ -38,9 +38,21 @@ export default function FlightBookingForm({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    const message = `*Book a Flight: ✈️*\n\n- *Place of Departure*: ${formData.departure}\n\n- *Arrival Area*: ${formData.arrival}\n\n- *Outbound Date*: ${formData.outboundDate}\n\n- *Return Date*: ${formData.returnDate}\n\n- *Number of Passengers*: ${formData.numberOfPassengers}\n\n- *Number of Adults*: ${formData.numberOfAdults}\n\n- *Number of Children*: ${formData.numberOfChildren || "None"}\n\n- *Number of Infants*: ${formData.numberOfInfants || "None"}\n\n- *Travel Class*: ${formData.travelClass}`;
-    
+
+    const message = `*Book a Flight: ✈️*\n\n- *Place of Departure*: ${
+      formData.departure
+    }\n\n- *Arrival Area*: ${formData.arrival}\n\n- *Outbound Date*: ${
+      formData.outboundDate
+    }\n\n- *Return Date*: ${formData.returnDate}\n\n- *Number of Passengers*: ${
+      formData.numberOfPassengers
+    }\n\n- *Number of Adults*: ${
+      formData.numberOfAdults
+    }\n\n- *Number of Children*: ${
+      formData.numberOfChildren || "None"
+    }\n\n- *Number of Infants*: ${
+      formData.numberOfInfants || "None"
+    }\n\n- *Travel Class*: ${formData.travelClass}`;
+
     const whatsappUrl = `https://wa.me/971545866066?text=${encodeURIComponent(
       message
     )}`;
@@ -100,7 +112,7 @@ export default function FlightBookingForm({
             name="outboundDate"
             value={formData.outboundDate}
             onChange={handleChange}
-            className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
+            className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2 bg-white text-gray-700 hover:bg-gray-50"
             required
           />
         </div>
@@ -112,13 +124,18 @@ export default function FlightBookingForm({
               ? "Дата возвращения"
               : "Return Date"}
           </label>
-          <input
-            type="date"
-            name="returnDate"
-            value={formData.returnDate}
-            onChange={handleChange}
-            className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
-          />
+          <div className="relative">
+      <input
+        type="date"
+        name="returnDate"
+        value={formData.returnDate}
+        onChange={handleChange}
+        onFocus={() => setFocused(true)}
+        onBlur={() => setFocused(false)}
+        className="date-input mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
+        data-placeholder={!focused && !formData.returnDate ? ' ' : ''}
+      />
+    </div>
         </div>
         <div>
           <label className="block text-lg font-medium text-gray-900">

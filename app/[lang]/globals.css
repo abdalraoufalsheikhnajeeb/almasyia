@@ -22,3 +22,30 @@
 
   }
 
+/* Add this CSS to your stylesheet */
+.date-input::-webkit-datetime-edit-fields-wrapper {
+  opacity: 0;
+}
+.date-input::-webkit-inner-spin-button,
+.date-input::-webkit-clear-button {
+  display: none;
+}
+.date-input:focus::-webkit-datetime-edit-fields-wrapper {
+  opacity: 1;
+}
+.date-input::before {
+  content: attr(data-placeholder);
+  color: #a0aec0; /* Customize the placeholder text color */
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  pointer-events: none;
+  padding-left: 10px; /* Match the padding of the input field */
+}
+.date-input:focus::before,
+.date-input:not(:placeholder-shown)::before {
+  content: '';
+}
