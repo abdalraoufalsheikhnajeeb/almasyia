@@ -68,34 +68,34 @@ export default async function Page({
                   alt={country}
                   className="lg:h-96 w-full lg:w-1/2 object-contain"
                 />
-                <ul className="p-4 flex flex-col gap-3 lg:w-1/2">
+                <div className="p-4 flex flex-col gap-3 lg:w-1/2">
                   {duration && (
-                    <li className="text-primary text-3xl font-bold list-disc mb-4">
+                    <div className="text-primary text-3xl font-bold list-disc mb-4">
                       {dic.duration}:
                       <p className="text-gray-500 font-normal text-xl mt-2">
                         {duration}
                       </p>
-                    </li>
+                    </div>
                   )}
                   {requirements && (
-                    <li className="text-primary text-3xl font-bold list-disc mb-4">
+                    <div className="text-primary text-3xl font-bold list-disc mb-4">
                       {dic.requirements}:
-                      <ul className="text-gray-500 font-normal text-xl mt-2 ml-6 list-disc">
+                      <div className="text-gray-500 font-normal text-xl mt-2 ml-6 list-disc">
                         {requirements.map((req, i) => (
-                          <li key={i}>{req}</li>
+                          <div key={i}>{req}</div>
                         ))}
-                      </ul>
-                    </li>
+                      </div>
+                    </div>
                   )}
                   {description && (
-                    <li className="text-primary text-3xl font-bold list-disc mb-4">
+                    <div className="text-primary text-3xl font-bold list-disc mb-4">
                       {dic.description}:
                       <p className="text-gray-500 font-normal text-xl mt-2">
                         {description}
                       </p>
-                    </li>
+                    </div>
                   )}
-                </ul>
+                </div>
               </div>
             </div>
           );
