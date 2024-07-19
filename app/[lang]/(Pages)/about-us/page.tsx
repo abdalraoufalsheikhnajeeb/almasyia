@@ -18,8 +18,8 @@ export default async function page({
           src="/images/logo.png"
           className="w-40 lg:w-60"
           alt="arrow"
-          width={250}
-          height={200}
+          width={226}
+          height={122}
         />
         <p>
           <span className="text-3xl font-bold">{dic?.ayatAnimation} </span>

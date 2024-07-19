@@ -65,10 +65,12 @@ const Navbar = ({
         
           <Image
             loading="lazy"
-            quality={10}
-            className="flex-shrink-0 h-16 w-28"
-            width={100}
-            height={80}
+            quality={20}
+            className="flex-shrink-0 h-16 w-28 object-cover"
+            // width={180}
+            // height={98}
+            width={226}
+            height={122}
             src="/images/logo.png"
             alt="Logo"
           />
