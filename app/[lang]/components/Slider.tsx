@@ -41,10 +41,8 @@ const Slider = ({ dic, data, title }: SliderProps) => {
   }, [emblaApi]);
 
   return (
-    <section dir="ltr" className="lg:max-w-7xl max-w-[95vw] px-2 ">
+    <section dir="ltr" className="lg:max-w-7xl max-w-[95vw] mt-16 px-2 ">
       <AnTitle title={title} />
-      <br />
-      <br />
       <div className="embla" ref={emblaRef}>
         <div className="embla__container flex">
           {data.map((card, index) => {
