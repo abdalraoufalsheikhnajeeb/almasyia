@@ -225,14 +225,7 @@ export const ourServecis = [
     src: "/images/airLines.webp",
     route: "airLines",
   },
-  {
-    id: 6,
-    titleen: "Our tourist destinations",
-    titlear: "وجهاتنا السياحية",
-    titleru: "Наши туристические направления",
-    src: "/images/countries.webp",
-    route: "tours",
-  },
+
   {
     id: 7,
     titleen: "Hotel reservations",
@@ -257,23 +250,7 @@ export const ourServecis = [
     src: "/images/travelling.webp",
     route: "travelinsurance",
   },
-  {
-    id: 10,
-    titleen: "Tourism programs",
-    titlear: "البرامج السياحية",
-    titleru: "Туристические программы",
-    src: "/images/traveltourism.webp",
-    route: "traveltourism",
-  }
-  ,
-  {
-    id: 11,
-    titleen: "Honeymoon trips",
-    titlear: "رحلات شهر العسل",
-    titleru: "Свадебные путешествия",
-    src: "/images/honeymoon.webp",
-    route: "honeymoon",
-  },
+
   {
     id: 12,
     titleen: "Airport taxi services",
@@ -290,6 +267,31 @@ export const ourServecis = [
     src: "/images/papers.webp",
     route: "papers-Delivery",
   },
+
+  // {
+  //   id: 10,
+  //   titleen: "Tourism programs",
+  //   titlear: "البرامج السياحية",
+  //   titleru: "Туристические программы",
+  //   src: "/images/traveltourism.webp",
+  //   route: "traveltourism",
+  // }
+  // {
+  //   id: 11,
+  //   titleen: "Honeymoon trips",
+  //   titlear: "رحلات شهر العسل",
+  //   titleru: "Свадебные путешествия",
+  //   src: "/images/honeymoon.webp",
+  //   route: "honeymoon",
+  // },
+  // {
+  //   id: 6,
+  //   titleen: "Our tourist destinations",
+  //   titlear: "وجهاتنا السياحية",
+  //   titleru: "Наши туристические направления",
+  //   src: "/images/countries.webp",
+  //   route: "tours",
+  // },
 ];
 
 export const visas = [
@@ -518,7 +520,6 @@ export const visas = [
   },
 ];
 
-
 export const timeZones = [
   {
     nameAR: "دمشق",
@@ -678,17 +679,7 @@ export const timeZones = [
   },
 ];
 
-
-
-
-
-
-
-
-
-
-
-export type Language = 'en' | 'ar' | 'ru';
+export type Language = "en" | "ar" | "ru";
 
 export interface Cities {
   en: string[];
@@ -747,18 +738,6 @@ export const citiesByCountry: CitiesByCountry = {
     ru: ["Анкара", "Стамбул", "Трабзон", "Анталья"],
   },
 };
-
-
-
-
-
-
-
-
-
-
-
-
 
 // export const Egypt = [
 //   {
@@ -1769,44 +1748,6 @@ export const citiesByCountry: CitiesByCountry = {
 //   },
 // ];
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // export const Indonesia = [
 //   {
 //     nameEN: "Indonesia",
@@ -1817,12 +1758,12 @@ export const citiesByCountry: CitiesByCountry = {
 // اندونيسيا هي دولة آسيوية، تسمى جمهورية إندونيسيا، تقع في الجنوب الشرقي من قارة آسيا، ذات مساحة ضخمة، حيث تبلغ مساحتها حوالى 1.919.440 كيلومتر مربع، وتضم نحو 17508 جزيرة.
 //  تحتل إندونيسيا المركز الرابع عالميا في قياس عدد السكان، يوجد في جمهورية إندونيسيا مئات اللغات واللهجات، فيقدر عدد اللغات بحوالى 642 لغة ولهجة، ولكن اللغة الإندونيسية هي اللغة الرسمية هناك، وفى دولة إندونيسيا ستة أديان معترف بهم جميعا، وبالرغم من إقرارهم بحرية الأديان إلا أن أكبر عدد السكان مسلمين, وعدد المسلمين في إندونيسيا حوالى 230 مليون مسلم من عدد السكان الإجمالي 238 مليون نسمة، وهناك أيضا الكاثوليكية والبوذية والبروتستانتية وهناك الكونفوشيوسية والهندوسية .
 // تحتل إندونيسيا موقعا متميزا، فهي تقع بين خطى عرض 11 درجة جنوبا و6 درجة شمالا وبين خطى طول 95 درجة و141 درجة شرقا.
-// تتمتع الدولة بنظام اقتصادي مختلط، أن الملكية حق للقطاع الخاص والقطاع العام، وتحتل المركز الأول اقتصاديا في المنطقة الجنوبية الشرقية من قارة آسيا , ومعدل إنتاجها المحلى حوالى 706.7 مليار دولار, ويتصدر القطاع الصناعي فيشغل حوالى 46.4% من الإنتاج المحلى ثم يليه قطاع الخدمات ثم 
+// تتمتع الدولة بنظام اقتصادي مختلط، أن الملكية حق للقطاع الخاص والقطاع العام، وتحتل المركز الأول اقتصاديا في المنطقة الجنوبية الشرقية من قارة آسيا , ومعدل إنتاجها المحلى حوالى 706.7 مليار دولار, ويتصدر القطاع الصناعي فيشغل حوالى 46.4% من الإنتاج المحلى ثم يليه قطاع الخدمات ثم
 
 // اندونيسيا هي دولة آسيوية، تسمى جمهورية إندونيسيا، تقع في الجنوب الشرقي من قارة آسيا، ذات مساحة ضخمة، حيث تبلغ مساحتها حوالى 1.919.440 كيلومتر مربع، وتضم نحو 17508 جزيرة.
 //  تحتل إندونيسيا المركز الرابع عالميا في قياس عدد السكان، يوجد في جمهورية إندونيسيا مئات اللغات واللهجات، فيقدر عدد اللغات بحوالى 642 لغة ولهجة، ولكن اللغة الإندونيسية هي اللغة الرسمية هناك، وفى دولة إندونيسيا ستة أديان معترف بهم جميعا، وبالرغم من إقرارهم بحرية الأديان إلا أن أكبر عدد السكان مسلمين, وعدد المسلمين في إندونيسيا حوالى 230 مليون مسلم من عدد السكان الإجمالي 238 مليون نسمة، وهناك أيضا الكاثوليكية والبوذية والبروتستانتية وهناك الكونفوشيوسية والهندوسية .
 // تحتل إندونيسيا موقعا متميزا، فهي تقع بين خطى عرض 11 درجة جنوبا و6 درجة شمالا وبين خطى طول 95 درجة و141 درجة شرقا.
-// تتمتع الدولة بنظام اقتصادي مختلط، أن الملكية حق للقطاع الخاص والقطاع العام، وتحتل المركز الأول اقتصاديا في المنطقة الجنوبية الشرقية من قارة آسيا , ومعدل إنتاجها المحلى حوالى 706.7 مليار دولار, ويتصدر القطاع الصناعي فيشغل حوالى 46.4% من الإنتاج المحلى ثم يليه قطاع الخدمات ثم 
+// تتمتع الدولة بنظام اقتصادي مختلط، أن الملكية حق للقطاع الخاص والقطاع العام، وتحتل المركز الأول اقتصاديا في المنطقة الجنوبية الشرقية من قارة آسيا , ومعدل إنتاجها المحلى حوالى 706.7 مليار دولار, ويتصدر القطاع الصناعي فيشغل حوالى 46.4% من الإنتاج المحلى ثم يليه قطاع الخدمات ثم
 // ",
 //     descriptionEN: "Indonesia is an Asian country, called the Republic of Indonesia, located in the southeast of the continent of Asia, with a huge area, with an area of ​​about 1,919,440 square kilometers, and includes about 17,508 islands.
 //  Indonesia occupies fourth place in the world in terms of population. There are hundreds of languages ​​and dialects in the Republic of Indonesia. The number of languages ​​is estimated at about 642 languages ​​and dialects, but the Indonesian language is the official language there, and in the State of Indonesia there are six religions, all of which are recognized. Despite their recognition of freedom of religion, The largest population is Muslims, and the number of Muslims in Indonesia is about 230 million Muslims out of a total population of 238 million people. There is also Catholicism, Buddhism, Protestantism, and there is Confucianism and Hinduism.
@@ -1841,7 +1782,7 @@ export const citiesByCountry: CitiesByCountry = {
 //     nameAR: "جاكرتا",
 //     nameRU: "Джакарта",
 //     src: "/images/chapters/.webp",
-  
+
 //   },
 //   {
 //     nameEN: "Ancol Beach",
@@ -2313,31 +2254,6 @@ export const citiesByCountry: CitiesByCountry = {
 //   },
 // ];
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // export const Turkey = [
 //   {
 //     nameEN: "Turkey",
@@ -2658,24 +2574,6 @@ export const citiesByCountry: CitiesByCountry = {
 //   },
 // ];
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // export const UAE = [
 //   {
 //     nameAR: "الإمارات العربية المتحدة",
@@ -2813,18 +2711,6 @@ export const citiesByCountry: CitiesByCountry = {
 //   },
 // ];
 
-
-
-
-
-
-
-
-
-
-
-
-
 // export const Russia = [
 //   {
 //     nameEN: "Russia",
@@ -2905,7 +2791,6 @@ export const citiesByCountry: CitiesByCountry = {
 
 //   },
 
-
 //   {
 //     nameEN: "Savoy Hotel",
 //     nameAR: "Savoy Hotel",
@@ -2915,7 +2800,6 @@ export const citiesByCountry: CitiesByCountry = {
 //     descriptionEN: "The elegant five-star Savoy Hotel Moscow has been an integral part of the capital's culture and history for more than a century. Located in the heart of Moscow, surrounded by architectural monuments, museums, theaters and fine restaurants, this historic hotel combines ancient traditions embodied in a refined atmosphere, luxurious interiors and high standards. Modern for high-quality service, all rooms have the ambiance of a luxurious early 20th-century mansion, with Italian-style wooden furniture, a marble bathroom and natural fabric bedspreads.",
 //     descriptionRU: "Элегантный пятизвездочный отель «Савой Москва» уже более века является неотъемлемой частью культуры и истории столицы. Этот исторический отель, расположенный в самом сердце Москвы, в окружении памятников архитектуры, музеев, театров и изысканных ресторанов, сочетает в себе древние традиции. Воплощенные в изысканной атмосфере, роскошных интерьерах и высоких стандартах, все номера оформлены в стиле роскошного особняка начала 20-го века, с деревянной мебелью в итальянском стиле, мраморной ванной комнатой и покрывалами из натуральных тканей.",
 //   },
-
 
 //   {
 //     nameEN: "Radisson Collection Hotel",
@@ -2985,8 +2869,8 @@ export const citiesByCountry: CitiesByCountry = {
 //     src: "/images/Russia/13.webp",
 //     descriptionAR: "فضلًا عما سبق، تعتبر القنوات المائية التي تزين أرجاء سانت بطرسبرغ واحدة من أهم الوجهات التي تستقبل العديد من الزوار بشكل دائم، وهي من أهم الطرق التي من خلالها تم الحد من الفيضانات.
 // بينما تعتبر الوجهات المثالية من أجل التنقل والاستمتاع بالرحلات البحرية أسفل نهر نيفا،
-// نهر فونتانكا 
-// هو الفرع الأيسر من نهر نيفا، الذي يتدفق عبر وسط سانت بطرسبرغ، حتى منتصف القرن الثامن عشر كان نهر فونتانكا يعتبر الحدود الجنوبية لسانت بطرسبرغ. 
+// نهر فونتانكا
+// هو الفرع الأيسر من نهر نيفا، الذي يتدفق عبر وسط سانت بطرسبرغ، حتى منتصف القرن الثامن عشر كان نهر فونتانكا يعتبر الحدود الجنوبية لسانت بطرسبرغ.
 // ",
 //     descriptionEN: "In addition to the above, the water canals that adorn all parts of St. Petersburg are considered one of the most important destinations that constantly receive many visitors, and they are one of the most important ways through which floods have been reduced.
 // While they are considered ideal destinations for moving around and enjoying cruises down the Neva River,
@@ -3020,9 +2904,9 @@ export const citiesByCountry: CitiesByCountry = {
 //     nameAR: "Four Seasons Hotel",
 //     nameRU: "Four Seasons Hotel",
 //     src: "/images/Russia/16.webp",
-//     descriptionAR: "هو فندق 5 نجوم يقع على مسافة 2.8 كم من حديقة حيوان لينينغراد، ويضمّ المسبح وقاعة الرياضة. تشمل المنطقة المحيطة ساحة، دها هو فندق فور سيزونز ليون بالاس سانت بطرسبرغ، الذي يقع في قصر تاريخي يعود إلى القرن التاسع عشر ويحرسه أسدان من الرخام. يوفر فندق، في الفندق ستكون في غضون حوالي 10 دقائق بالسيارة من حديقة حيوان لينينغراد وعلى مسافة قريبة من بالاس إمبانكمنت. يمكنك الوصول إلى قلب سانت بطرسبرغ في غضون 10 دقائق سيرًا على الأقدام من مكان الإقامة. يقع الفندق ذو 5 نجوم على بعد خطوات قليلة من الحدائق وعلى مسافة 300 متر فقط من حديقة ألكسندر. يمكنك بسهولة العثور على متحف كونستكاميرا على مسافة متوسطة من Four Seasons Hotel Lion Palace St. Petersburg. أقرب محطة مترو إلى مكان الإقامة في سانت بطرسبرغ هي أدميرالتيسكايا، على بعد حوالي 10 دقائق سيرًا على الأقدام. 
+//     descriptionAR: "هو فندق 5 نجوم يقع على مسافة 2.8 كم من حديقة حيوان لينينغراد، ويضمّ المسبح وقاعة الرياضة. تشمل المنطقة المحيطة ساحة، دها هو فندق فور سيزونز ليون بالاس سانت بطرسبرغ، الذي يقع في قصر تاريخي يعود إلى القرن التاسع عشر ويحرسه أسدان من الرخام. يوفر فندق، في الفندق ستكون في غضون حوالي 10 دقائق بالسيارة من حديقة حيوان لينينغراد وعلى مسافة قريبة من بالاس إمبانكمنت. يمكنك الوصول إلى قلب سانت بطرسبرغ في غضون 10 دقائق سيرًا على الأقدام من مكان الإقامة. يقع الفندق ذو 5 نجوم على بعد خطوات قليلة من الحدائق وعلى مسافة 300 متر فقط من حديقة ألكسندر. يمكنك بسهولة العثور على متحف كونستكاميرا على مسافة متوسطة من Four Seasons Hotel Lion Palace St. Petersburg. أقرب محطة مترو إلى مكان الإقامة في سانت بطرسبرغ هي أدميرالتيسكايا، على بعد حوالي 10 دقائق سيرًا على الأقدام.
 // موقع الفندق على الانترنت
-// https://lionpalacehotel.com/ 
+// https://lionpalacehotel.com/
 // ",
 //     descriptionEN: "It is a 5-star hotel located 2.8 km from the Leningrad Zoo. It includes a swimming pool and a sports hall. The surrounding area includes a square, the Four Seasons Hotel Lion Palace St. Petersburg, housed in a historic 19th-century mansion guarded by two marble lions. Offering a hotel, you will be within about a 10-minute drive from the Leningrad Zoo and within walking distance of the Palace Embankment. You can reach the heart of Saint Petersburg within a 10-minute walk from the property. The 5-star hotel is located a few steps from the gardens and only 300 meters from the Alexander Garden. You can easily find the Kunstkamera Museum at a medium distance from the Four Seasons Hotel Lion Palace St. Petersburg. The closest metro station to the property in Saint Petersburg is Admiraltyskaya, about a 10-minute walk away.
 // Hotel website
@@ -3132,8 +3016,8 @@ export const citiesByCountry: CitiesByCountry = {
 //     nameRU: "Radisson Hotel, Rosa Khutor",
 //     src: "/images/Russia/26.webp",
 //     descriptionAR: "روزا خوتور هو منتجع سياحي يزوره سنويًا ما يقرب من مليوني سائح، يقع في وادي نهر “مزيمتا” على أراضي قرية كراسنايا بوليانا، على بعد 60 كم من وسط مدينة سوتشي، و40 كم من مدينة أدلر، يحتوي هذا المنتجع على أنشطة ممتعة للجميع ، ويوفر للزوار فرصة لتحسين الصحة بشكل عام ، حيث الاستمتاع بالطبيعة والثلوج والغابات المحيطة والهواء النقي، كما ان المنتجع يعد فرصة رائعة لالتقاط صور تذكارية لا تنسي، يسمح مناخ قرية كراسنايا بوليانا بممارسة جميع أنواع الرياضات والاستجمام، اكتسب شهرة عالمية  بعد انتهاء دورة الألعاب الأولمبية الشتوية في سوتشي 2014 ، حيث أقيمت مسابقات في التزلج الألبي والتزلج على الجليد و السباحة الحرة كجزء من دورة الألعاب انتهت دورة الألعاب الأولمبية الشتوية بنجاح، وواصل المنتجع تطويره، فهو مكان رائع لقضاء عطلة مثالية صيفاً و شتاءً في الجبال وعلى شاطئ البحر الأسود.
-// موقع الفندق على الانترنت 
-// https://www.radissonhotels.com/ru-ru/hotels/radisson-rosa-khuto 
+// موقع الفندق على الانترنت
+// https://www.radissonhotels.com/ru-ru/hotels/radisson-rosa-khuto
 // ",
 //     descriptionEN: "Rosa Khutor is a tourist resort visited annually by nearly two million tourists. It is located in the valley of the “Mzymta” River on the territory of the village of Krasnaya Polyana, 60 km from the center of Sochi, and 40 km from the city of Adler. This resort has enjoyable activities for everyone, and provides... Visitors have an opportunity to improve health in general, as they enjoy nature, snow, surrounding forests and fresh air. The resort is also a wonderful opportunity to take unforgettable photos. The climate of Krasnaya Polyana village allows practicing all types of sports and recreation. It gained international fame after the end of the Winter Olympics in Sochi. 2014, when competitions in alpine skiing, snowboarding and freestyle swimming were held as part of the Games. The Winter Olympics ended successfully, and the resort continued its development, as it is a wonderful place to spend an ideal holiday in summer and winter in the mountains and on the shore of the Black Sea.
 // Hotel website
@@ -3149,17 +3033,14 @@ export const citiesByCountry: CitiesByCountry = {
 //     src: "/images/Russia/27.webp",
 //     descriptionAR: "يختال منتجع سويس أوتيل ريزورت سوتشي كاميليا ذي الخمس نجوم بإطلالته الجميلة على الشاطئ، ويضم حمامات سباحة بتصاميم طبيعية مثالية، وشاطئ رملي خاص يحِدّه بحر البلطيق. يستمد الفندق إلهامه من التصميم السويسري العصري، ويُكرم بموقعه المشهد الاستثنائي المدهش، وشاطئ رملي خاص يحِدّه بحر البلطيق، يستمد الفندق إلهامه من التصميم السويسري العصري، ويُكرم بموقعه المشهد الاستثنائي المدهش، تُطل جميع غرف النزلاء الـ 203 على بحر البلطيق المهيب، ويقع بين متنزه طبيعي ضخم، ويمزج بأناقة بين البساطة والتصميم العصري الأنيق. تتميز جميع الغرف بشرفاتٍ خاصة ذات إطلالة رائعة على بحر البلطيق أو المتنزه، وتُكملها مفروشاتٍ فاخرة، وأرضياتٍ خشبية، وحماماتٍ من الحجارة. تشمل الأجنحة أنيقة التصميم 12 أجنحة و8 أجنحة دوبلكس. تتميز الأجنحة بنوافذ ممتدة من الأرض إلى السقف، وحمامات رخامية، وشرفات وتِراسات فسيحة، يوفر منتجع بيروفيل الصحي مجموعة واسعة من العلاجات المُصمّمة لتساعد على استرخاء كل عضلة في الجسم، ويجد حلاً لأسلوب الحياة الصحية لكل من يرغب في الوصول إلى أو الحفاظ على نمط حياة حيوي طبيعي. تستمد هذه الفلسفة مبادئها من أصل العافية وتستخدام الموارد الطبيعية، مثل الأحجار، والخشب، والماء، والنبات.
 
-
 // موقع الفندق على الانترنت
 // https://www.swissotel.com/hotels/sochi-kamelia
 // ",
 //     descriptionEN: "The five-star Swissotel Resort Sochi Camellia boasts a beautiful view of the beach, and includes swimming pools with perfect natural designs, and a private sandy beach bordered by the Baltic Sea. The hotel takes its inspiration from modern Swiss design, and pays homage to its location, with its amazing, exceptional landscape and a private sandy beach bordered by the Baltic Sea. The hotel takes its inspiration from modern Swiss design, and with its location, honors its amazing, exceptional landscape. All 203 guest rooms overlook the majestic Baltic Sea, and is located among a natural park. Huge, it elegantly blends simplicity with sleek, modern design. All rooms feature private balconies with wonderful views of the Baltic Sea or the park, and are complemented by luxurious furnishings, parquet floors and stone bathrooms. The elegantly designed suites include 12 suites and 8 duplex suites. Featuring floor-to-ceiling windows, marble bathrooms, and spacious balconies and terraces, the suites offer a wide range of treatments designed to help relax every muscle in the body, creating a healthy lifestyle solution for everyone who wants to achieve or maintain an energetic lifestyle. natural. This philosophy derives its principles from the origin of wellness and the use of natural resources, such as stone, wood, water, and plants.
 
-
 // Hotel website
 // https://www.swissotel.com/hotels/sochi-kamelia",
 //     descriptionRU: "Пятизвездочный отель Swissotel Resort Sochi Camellia может похвастаться прекрасным видом на пляж и включает в себя бассейны идеального природного дизайна и частный песчаный пляж на берегу Балтийского моря. Отель черпает вдохновение в современном швейцарском дизайне и отдает дань уважения своему расположению, удивительному, исключительному ландшафту и частному песчаному пляжу на берегу Балтийского моря. Отель черпает вдохновение в современном швейцарском дизайне и заслуживает уважения. его удивительный, исключительный пейзаж. Все 203 номера выходят на величественное Балтийское море. Отель расположен среди огромного природного парка. Он элегантно сочетает в себе простоту и элегантный современный дизайн. Во всех номерах есть балконы с прекрасным видом на Балтийское море или парк, они дополнены роскошной мебелью, паркетными полами и каменными ванными комнатами. Элегантно оформленные люксы включают 12 люксов и 8 двухуровневых люксов. Люксы с окнами от пола до потолка, мраморными ванными комнатами, просторными балконами и террасами предлагают широкий спектр процедур, призванных помочь расслабить каждую мышцу тела, создавая решение для здорового образа жизни для всех, кто хочет достичь или поддерживать энергичный образ жизни. образ жизни естественный. Эта философия черпает свои принципы из происхождения здоровья и использования природных ресурсов, таких как камень, дерево, вода и растения.
-
 
 // Сайт отеля
 // https://www.swissotel.com/hotels/sochi-kamelia",
@@ -3181,7 +3062,7 @@ export const citiesByCountry: CitiesByCountry = {
 //     descriptionAR: "مسجد جامع، يقع في كازان، كان يعتقد أثناء بنائه أنه أكبر مسجد في تترستان وروسيا وأوروبا بني هذا المسجد في القرن السادس عشر سمي نسبة لقول شريف الذي توفى هو وطلابه أثناء الدفاع عن كازان ضد القوات الروسية في حصار كازان 1552. دمر المسجد خلال اقتحام كازان من قبل إيفان الرهيب عام 1552 وأعيد بناؤه عام 1996 وتم افتتاحه في 24 يوليو 2005. وقد ساهمت عدة بلدان في الصندوق الذي أنشئ لبناء مسجد قول شريف، ومنها المملكة العربية السعودية والإمارات العربية المتحدة. في جمهورية تترستان في روسيا",
 //     descriptionEN: "Jami Mosque, located in Kazan. During its construction, it was believed that it was the largest mosque in Tatarstan, Russia, and Europe. This mosque was built in the sixteenth century and was named after Sharif, who died with his students while defending Kazan against Russian forces in the siege of Kazan in 1552. The mosque was destroyed during the storming of Kazan. By Ivan the Terrible in 1552, it was rebuilt in 1996 and was inaugurated on July 24, 2005. Several countries contributed to the fund established to build the Qul Sharif Mosque, including the Kingdom of Saudi Arabia and the United Arab Emirates. In the Republic of Tatarstan, Russia",
 //     descriptionRU: "Мечеть Джами, расположенная в Казани. Во время ее строительства считалось, что это самая большая мечеть в Татарстане, России и Европе. Эта мечеть была построена в шестнадцатом веке и названа в честь Шарифа, погибшего вместе со своими учениками при защите Казани. против русских войск при осаде Казани в 1552 году. Мечеть была разрушена во время штурма Казани Иваном Грозным в 1552 году, восстановлена ​​в 1996 году и открыта 24 июля 2005 года. Несколько стран внесли свой вклад в созданный фонд. построить мечеть Кул Шариф, включая Королевство Саудовская Аравия и Объединенные Арабские Эмираты. В Республике Татарстан, Россия",
-//   },  
+//   },
 //   {  {
 //     nameEN: "",
 //     nameAR: "",
@@ -3232,8 +3113,8 @@ export const citiesByCountry: CitiesByCountry = {
 //     nameRU: "Hotels in Kazan",
 //     src: "/images/Russia/34.webp",
 //     descriptionAR: "يقع هذا الفندق الراقي ذو الأجواء المعاصرة في مبنى كبير على طراز الفن الحديث، ويبعد 3 كيلومتر عن مجمّع كازان كرملين الواقع على قمة تل وبرج سويومبايك الشهير. وتقع أقرب محطة مترو على بعد 10 دقائق سيرًا على الأقدام، يضم Kazan Palace by Tasigo مطعمًا ومركزًا للياقة البدنية وبارًا وحديقة في كازان. ويوفر هذا الفندق ذو الـ 5 نجوم أجهزة الصراف الآلي.
-// موفع الفندق على الانترنت 
-// https://kazanpalace.com/ 
+// موفع الفندق على الانترنت
+// https://kazanpalace.com/
 // ",
 //     descriptionEN: "This upscale hotel with a contemporary atmosphere is housed in a large Art Nouveau building, 3 km from the hilltop Kazan Kremlin complex and the famous Suyumbaek Tower. The nearest metro station is a 10-minute walk away. Kazan Palace by Tasigo features a restaurant, fitness centre, a bar and garden in Kazan. This 5-star hotel offers an ATM.
 // Hotel website online
@@ -3248,7 +3129,7 @@ export const citiesByCountry: CitiesByCountry = {
 //     src: "/images/Russia/35.webp",
 //     descriptionAR: "يقع هذا الفندق ذو التصميم البسيط على بُعد 7 دقائق سيرًا على الأقدام من محطة مترو و3 كيلومتر من متنزه "أكوابارك ريفييرا المائي" و4 كيلومتر من مجمّع "كازان كرملين" الواقع على قمة تل، الفندق لطيف والطعام لذيذ جدا الموقع مناسب، على بعد 8 دقائق سيرا على الأقدام من محطة المترو، عبر الطريق يوجد مركز للتسوق.
 // موقع الفندق على الانترنت
-// https://relita-kazan.ru/ 
+// https://relita-kazan.ru/
 // ",
 //     descriptionEN: "This simple design hotel is located a 7-minute walk from a metro station, 3 km from the Aquapark Riviera Water Park and 4 km from the hilltop Kazan Kremlin complex. The hotel is nice and the food is very delicious. The location is convenient, 8 minutes away. Walking distance from the metro station, across the road there is a shopping mall.
 // Hotel website

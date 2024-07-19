@@ -93,10 +93,10 @@ export default async function Home({
                   <div className="max-w-[90vw] relative w-80 bg-white border flex flex-col justify-center items-center rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                     <Image
                       loading="lazy"
-                      quality={10}
-                      width={400}
-                      height={200}
-                      className="rounded-t-lg aspect-square object-cover"
+                      quality={20}
+                      width={318}
+                      height={256}
+                      className="rounded-t-lg object-cover scale-[100.5%]  h-64"
                       src={card.src}
                       alt="service image"
                     />
