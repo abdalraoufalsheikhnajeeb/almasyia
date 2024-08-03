@@ -47,34 +47,31 @@ const Navbar = ({
   };
 
   const NavItem = ({ href, label }: { href: string; label: string }) => (
-    <Link href={href}
-     
-        className={`text-primary text-xl z-20 relative hover:bg-primary-500/40 px-3 py-2 rounded-md ${
-          pathname === href ? "underline underline-offset-[12px] font-bold" : ""
-        }`}
-        onClick={closeBurgerMenu}
-      >
-        {label}
-    
+    <Link
+      href={href}
+      className={`text-primary text-xl z-20 relative hover:bg-primary-500/40 px-3 py-2 rounded-md ${
+        pathname === href ? "underline underline-offset-[12px] font-bold" : ""
+      }`}
+      onClick={closeBurgerMenu}
+    >
+      {label}
     </Link>
   );
 
   return (
     <nav className="bg-gray-100 backdrop-brightness-125 h-20 w-full px-[5vw] py-2 flex items-center top-0 justify-between z-[100] fixed">
       <Link href={`/${lang}`}>
-        
-          <Image
-            loading="lazy"
-            quality={20}
-            className="flex-shrink-0 h-16 w-28 object-cover"
-            // width={180}
-            // height={98}
-            width={226}
-            height={122}
-            src="/images/logo.png"
-            alt="Logo"
-          />
-  
+        <Image
+          loading="lazy"
+          quality={100}
+          className="flex-shrink-0 h-16 w-28 object-cover"
+          // width={180}
+          // height={98}
+          width={226}
+          height={122}
+          src="/images/logo.png"
+          alt="Logo"
+        />
       </Link>
 
       <div className="hidden lg:flex ms-10 items-baseline space-x-4">

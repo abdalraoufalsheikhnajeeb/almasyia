@@ -101,24 +101,19 @@ const LocationCard: React.FC<LocationCardProps> = ({
           <Image
             width={400}
             height={200}
-            quality={20}
+            quality={100}
             src={flagSrc}
             alt={`${locationName} flag`}
             className="w-20 mr-4"
           />
           <h2 className="text-5xl font-bold">{locationName}</h2>
         </div>
-        <Link
-          target="_blank"
-          href={googleMapsUrl}
-          
-          rel="noopener noreferrer"
-        >
+        <Link target="_blank" href={googleMapsUrl} rel="noopener noreferrer">
           <div className="flex items-center pt-12">
             <Image
               width={400}
               height={200}
-              quality={20}
+              quality={100}
               src="/images/location.webp"
               alt={`${locationName} flag`}
               className="w-16 mr-4"
@@ -131,7 +126,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
             <Image
               width={400}
               height={200}
-              quality={20}
+              quality={100}
               src="/images/phone.webp"
               alt={`${locationName} flag`}
               className="w-16 mr-4"
@@ -150,7 +145,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
                   <Image
                     width={400}
                     height={200}
-                    quality={20}
+                    quality={100}
                     src={image}
                     alt={`Office ${index + 1}`}
                     className="w-full h-64 object-cover"
@@ -166,7 +161,6 @@ const LocationCard: React.FC<LocationCardProps> = ({
           <Link
             target="_blank"
             href={googleMapsUrl}
-            
             rel="noopener noreferrer"
             className=" w-auto   text-center mt-4 bg-litePrimary text-white font-bold py-4 px-6 rounded-full hover:bg-blue-700 transition duration-300"
           >

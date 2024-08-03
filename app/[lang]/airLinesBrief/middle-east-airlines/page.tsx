@@ -17,7 +17,7 @@ const MiddleEastAirlines = async ({
           <Image
             width={420}
             height={300}
-            quality={10}
+            quality={100}
             src="/images/middleeastairlines.webp"
             alt="Middle East Airlines"
             className="w-96 mb-5"
@@ -155,7 +155,7 @@ const MiddleEastAirlines = async ({
           <Image
             width={420}
             height={300}
-            quality={10}
+            quality={100}
             src="/images/middleeastairlines.webp"
             alt="الخطوط الجوية الشرق أوسطية"
             className="w-96 mb-5"
@@ -282,7 +282,7 @@ const MiddleEastAirlines = async ({
           <Image
             width={420}
             height={300}
-            quality={10}
+            quality={100}
             src="/images/middleeastairlines.webp"
             alt="Middle East Airlines"
             className="w-96 mb-5"

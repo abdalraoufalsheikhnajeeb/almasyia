@@ -40,7 +40,7 @@ export default async function Footer({
         >
           <Image
             loading="lazy"
-            quality={20}
+            quality={100}
             className="h-36 duration-300 transform  transition-transform ease-in-out hover:scale-110"
             src={"/images/insta.svg"}
             width={100}
@@ -55,7 +55,7 @@ export default async function Footer({
         >
           <Image
             loading="lazy"
-            quality={20}
+            quality={100}
             className="h-20 duration-300 transform  transition-transform ease-in-out hover:scale-110"
             src={"/images/map-uae.svg"}
             width={100}
@@ -70,7 +70,7 @@ export default async function Footer({
         >
           <Image
             loading="lazy"
-            quality={20}
+            quality={100}
             className="h-20 duration-300 transform  transition-transform ease-in-out hover:scale-110"
             src={"/images/map-sar.svg"}
             width={100}
@@ -80,7 +80,12 @@ export default async function Footer({
         </a>
       </div>
       <p className="mt-4 text-lg text-primary">
-        <a className="text-2xl underline underline-offset-4" href="mailto:farouk@alnujoomalmasiya.com">farouk@alnujoomalmasiya.com</a>
+        <a
+          className="text-2xl underline underline-offset-4"
+          href="mailto:farouk@alnujoomalmasiya.com"
+        >
+          farouk@alnujoomalmasiya.com
+        </a>
       </p>
     </footer>
   );

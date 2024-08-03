@@ -11,7 +11,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <Image
             width={420}
             height={300}
-            quality={10}
+            quality={100}
             src="/images/syrianair.webp"
             alt="Syrian Air"
             className="w-96 mb-5"
@@ -167,7 +167,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <Image
             width={420}
             height={300}
-            quality={10}
+            quality={100}
             src="/images/syrianair.webp"
             alt="الخطوط الجوية السورية"
             className="w-96 mb-5"
@@ -311,7 +311,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <Image
             width={420}
             height={300}
-            quality={10}
+            quality={100}
             src="/images/syrianair.webp"
             alt="Syrian Air"
             className="w-96 mb-5"

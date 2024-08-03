@@ -11,7 +11,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <Image
             width={420}
             height={300}
-            quality={10}
+            quality={100}
             src="/images/flyDubai.webp"
             alt="Flydubai"
             className="w-96 mb-5"
@@ -174,7 +174,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <Image
             width={420}
             height={300}
-            quality={10}
+            quality={100}
             src="/images/flyDubai.webp"
             alt="فلاي دبي"
             className="w-96 mb-5"
@@ -322,7 +322,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <Image
             width={420}
             height={300}
-            quality={10}
+            quality={100}
             src="/images/flyDubai.webp"
             alt="Flydubai"
             className="w-96 mb-5"

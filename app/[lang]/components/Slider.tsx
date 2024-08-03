@@ -41,7 +41,7 @@ const Slider = ({ dic, data, title }: SliderProps) => {
   }, [emblaApi]);
 
   return (
-    <section dir="ltr" className="lg:max-w-7xl max-w-[95vw] mt-16 px-2 ">
+    <section dir="ltr" className="lg:max-w-7xl max-w-[95vw] mt-14 px-2 ">
       <AnTitle title={title} />
       <div className="embla" ref={emblaRef}>
         <div className="embla__container flex">
@@ -63,7 +63,7 @@ const Slider = ({ dic, data, title }: SliderProps) => {
                     <div className="bg-white flex justify-center items-center w-full">
                       <Image
                         loading="lazy"
-                        quality={10}
+                        quality={100}
                         width={400}
                         height={200}
                         className="rounded-t-lg aspect-video w-full object-cover"

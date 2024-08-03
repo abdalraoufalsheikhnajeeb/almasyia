@@ -2,10 +2,10 @@
 import { useState } from "react";
 import { type getDictionary } from "../../../get-dictionary";
 
+
 interface FlightBookingFormProps {
   dic: Awaited<ReturnType<typeof getDictionary>>;
 }
-
 const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
   const [formData, setFormData] = useState({
     departure: "",

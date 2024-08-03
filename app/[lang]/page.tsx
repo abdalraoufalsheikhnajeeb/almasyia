@@ -12,12 +12,11 @@ export default async function Home({
   params: { lang: Locale };
 }) {
   const dic = await getDictionary(lang);
-
   return (
     <>
       <Image
         loading="lazy"
-        quality={20}
+        quality={100}
         src="/images/hero.webp"
         className="bg-gradient absolute -z-10 object-cover h-[100dvh] w-screen opacity-70"
         alt="arrow"
@@ -29,7 +28,7 @@ export default async function Home({
         <header className="h-[100dvh] gap-8 pb-8 flex flex-col items-center justify-end ">
           <Image
             loading="lazy"
-            quality={10} // Adjust the quality to balance performance and visual fidelity
+            quality={100}
             src="/images/logo.png"
             alt="arrow"
             width={226}
@@ -93,7 +92,7 @@ export default async function Home({
                   <div className="max-w-[90vw] relative w-80 bg-white border flex flex-col justify-center items-center rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                     <Image
                       loading="lazy"
-                      quality={20}
+                      quality={100}
                       width={318}
                       height={256}
                       className="rounded-t-lg object-cover scale-[100.5%]  h-64"

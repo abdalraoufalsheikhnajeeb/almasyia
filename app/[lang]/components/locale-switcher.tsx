@@ -30,7 +30,7 @@ export default function LocaleSwitcher() {
       <Link href={redirectedPathName("ar")}>
         <Image
           loading="lazy"
-          quality={40}
+          quality={100}
           width={50}
           height={50}
           alt="flag"

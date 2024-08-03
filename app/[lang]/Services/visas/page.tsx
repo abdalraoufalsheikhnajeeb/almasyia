@@ -36,7 +36,11 @@ export default async function Page({
           const country =
             lang === "ar" ? countryAR : lang === "en" ? countryEN : countryRU;
           const duration =
-            lang === "ar" ? durationAR : lang === "en" ? durationEN : durationRU;
+            lang === "ar"
+              ? durationAR
+              : lang === "en"
+              ? durationEN
+              : durationRU;
           const requirements =
             lang === "ar"
               ? requirementsAR
@@ -63,7 +67,7 @@ export default async function Page({
                 <Image
                   width={445}
                   height={260}
-                  quality={10}
+                  quality={100}
                   src={image}
                   alt={country}
                   className="lg:h-96 w-full lg:w-1/2 object-contain"
