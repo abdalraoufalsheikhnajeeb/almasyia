@@ -57,7 +57,7 @@ export default async function Page({
           return (
             <div
               key={index}
-              className="flex flex-col lg:flex-row-reverse gap-4 bg-white bg-opacity-80 p-4 rounded-lg"
+              className="flex flex-col lg:flex-col gap-4 bg-white bg-opacity-80 p-4 rounded-3xl shadow-xl"
             >
               <hr className="w-full" />
               <h2 className="text-primary text-5xl font-bold text-center">
@@ -70,7 +70,7 @@ export default async function Page({
                   quality={100}
                   src={image}
                   alt={country}
-                  className="lg:h-96 w-full lg:w-1/2 object-contain"
+                  className="lg:h-96 w-full lg:w-1/2 object-cover rounded-3xl "
                 />
                 <div className="p-4 flex flex-col gap-3 lg:w-1/2">
                   {duration && (

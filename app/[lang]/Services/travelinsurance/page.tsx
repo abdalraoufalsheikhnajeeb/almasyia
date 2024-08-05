@@ -20,16 +20,17 @@ export default function Page({
           src="/images/travelInsuranceHero.webp"
           alt="Travel Insurance"
         />
-        <div className="bg-white lg:absolute w-full opacity-80 py-16 px-8 bottom-0 h-auto">
-          <p className="text-center text-2xl">
-            {lang === "en" ? "Travel safely" : lang === "ar" ? "سافر بأمان" : "Путешествуй безопасно"}
-          </p>
-        </div>
+
       </div>
 
       <div className="flex lg:w-1/3 w-full justify-center items-center">
         <TravelInsuranceForm lang={lang} />
       </div>
+      <div className="bg-white  w-full opacity-80 py-16 px-8 h-auto">
+          <p className="text-center text-2xl">
+            {lang === "en" ? "Travel safely" : lang === "ar" ? "سافر بأمان" : "Путешествуй безопасно"}
+          </p>
+        </div>
     </div>
   );
 }

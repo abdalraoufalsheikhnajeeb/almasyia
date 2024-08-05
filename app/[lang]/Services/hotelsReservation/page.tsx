@@ -21,7 +21,13 @@ export default async function Page({
           src="/images/hotelHero.webp"
           alt="Hotel Reservation"
         />
-        <div className="bg-white lg:absolute w-full opacity-80 py-16 px-8 bottom-0 h-auto">
+        
+      </div>
+      <div className="flex lg:w-1/3 w-full justify-center items-center">
+        <HotelReservationForm lang={lang} />
+      </div>
+    </div>
+    <div className="bg-white  w-full opacity-80 py-16 px-8 bottom-0 h-auto">
           <p className="text-center text-2xl">
             {lang === "en" && (
               <>I feel special... Through the high-end hotel services provided to you, with the high attention and diligent follow-up by our team, you will feel the true distinction that enriches your tourism experience with us. Because quality accommodation is one of the most important components of an enjoyable vacation, Diamond Stars Company provides the best accommodation options within its network of hotels and resorts contracted with it with high-end classifications of 3, 4, and 5 stars. They all have distinguished services and wonderful views, to provide the best place for recreation for our customers, and multiple room options are available.</>
@@ -34,11 +40,6 @@ export default async function Page({
             )}
           </p>
         </div>
-      </div>
-      <div className="flex lg:w-1/3 w-full justify-center items-center">
-        <HotelReservationForm lang={lang} />
-      </div>
-    </div>
     </>
   );
 }

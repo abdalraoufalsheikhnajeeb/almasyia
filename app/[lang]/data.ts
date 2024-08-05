@@ -340,7 +340,7 @@ export const visas = [
       "Fast/slow processing - Don't hesitate to inquire about our prices",
     descriptionRU:
       "Быстрое/медленное оформление - Не стесняйтесь узнать наши цены",
-    image: "/images/egypt/.webp",
+    image: "/images/egypt.webp",
   },
   {
     countryAR: "الأردن",

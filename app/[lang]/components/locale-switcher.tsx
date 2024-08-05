@@ -34,7 +34,7 @@ export default function LocaleSwitcher() {
         />
       </button>
       {isOpen && (
-        <div className="absolute -start-3 -top-2 w-14 pt-12  border rounded-3xl  shadow-lg z-10">
+        <div className="absolute -start-2 -top-2 w-14 pt-12 bg-[#34689447]  cursor-pointer border rounded-3xl  shadow-lg z-10">
           <div className="flex flex-col items-center gap-2 p-2">
             <Link href={redirectedPathName("en")} onClick={() => setIsOpen(false)}>
               <Image
@@ -42,7 +42,7 @@ export default function LocaleSwitcher() {
                 quality={1}
                 width={40}
                 height={25}
-                className="object-cover"
+                className="object-cover hover:-scale-110 transition-all"
                 alt="English flag"
                 src={`/images/en.svg`}
               />
@@ -54,7 +54,7 @@ export default function LocaleSwitcher() {
                 quality={100}
                 width={40}
                 height={25}
-                className="object-cover"
+                className="object-cover hover:-scale-110 transition-all"
                 alt="Arabic flag"
                 src={`/images/ar.webp`}
               />
@@ -66,7 +66,7 @@ export default function LocaleSwitcher() {
                 quality={1}
                 width={40}
                 height={25}
-                className="object-cover"
+                className="object-cover hover:-scale-110 transition-all"
                 alt="Russian flag"
                 src={`/images/ru.svg`}
               />
