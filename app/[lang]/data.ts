@@ -201,7 +201,7 @@ export const countries = [
   {
     route: "Egypt",
     id: 7,
-    src: "/images/Egypt/.webp",
+    src: "/images/Egypt.webp",
     titleen: "Uncover the Ancient Mysteries of Egypt",
     titlear: "اكشف عن الألغاز القديمة في مصر",
     titleru: "Раскройте древние тайны Египта",
