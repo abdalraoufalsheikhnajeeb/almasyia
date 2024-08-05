@@ -1,23 +1,31 @@
 "use client";
-import { useState } from "react";
-import { useEffect } from "react";
-import "flowbite";
+import { useState, useEffect } from "react";
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+
+
 interface DeliveryFormProps {
   lang: string;
 }
 
 const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
-  useEffect(() => {
-    import("flowbite");
-  }, []);
+
+
   const [formData, setFormData] = useState({
     placeOfDelivery: "",
     recipientNumber: "",
     urgency: "normal",
     senderName: "",
-    submissionDate: "",
-    dispatchDate: "",
+    submissionDate: new Date(),
+    dispatchDate: new Date(),
   });
+
+  const handleDateChange = (name: string, date: Date | null) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: date || new Date(),
+    }));
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -33,8 +41,8 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
     e.preventDefault();
     const message = `*Documents Delivery: 📄*\n\n- *Sender Name*: ${
       formData.senderName
-    }\n- *Submission Date*: ${formData.submissionDate}\n- *Dispatch Date*: ${
-      formData.dispatchDate
+    }\n- *Submission Date*: ${formData.submissionDate.toLocaleDateString()}\n- *Dispatch Date*: ${
+      formData.dispatchDate.toLocaleDateString()
     }\n\n- *Place of Delivery*: ${
       formData.placeOfDelivery
     } 📍\n\n- *Recipient Number*: ${
@@ -52,7 +60,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
   const renderFormContent = () => (
     <>
       <div>
-        <label htmlFor="senderName" className="block text-lg  text-gray-900">
+        <label htmlFor="senderName" className="block text-lg text-gray-900">
           {lang === "ar"
             ? "اسم المرسل"
             : lang === "ru"
@@ -78,26 +86,23 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
             : "Submission Date"}
         </label>
         <div className="relative mt-2">
-          <input
+          <DatePicker
             id="submissionDate"
-            type="text"
-            name="submissionDate"
-            value={formData.submissionDate}
-            onChange={handleChange}
-            className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
-            placeholder={
+            selected={formData.submissionDate}
+            onChange={(date) => handleDateChange("submissionDate", date)}
+            className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2 bg-white text-gray-700"
+            placeholderText={
               lang === "ar"
                 ? "اختر التاريخ"
                 : lang === "ru"
                 ? "Выберите дату"
                 : "Select date"
             }
-            data-datepicker
+            dateFormat="dd/MM/yyyy"
             required
           />
         </div>
       </div>
-
       <div>
         <label htmlFor="dispatchDate" className="block text-lg text-gray-900">
           {lang === "ar"
@@ -107,21 +112,19 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
             : "Dispatch Date"}
         </label>
         <div className="relative mt-2">
-          <input
+          <DatePicker
             id="dispatchDate"
-            type="text"
-            name="dispatchDate"
-            value={formData.dispatchDate}
-            onChange={handleChange}
-            className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
-            placeholder={
+            selected={formData.dispatchDate}
+            onChange={(date) => handleDateChange("dispatchDate", date)}
+            className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2 bg-white text-gray-700"
+            placeholderText={
               lang === "ar"
                 ? "اختر التاريخ"
                 : lang === "ru"
                 ? "Выберите дату"
                 : "Select date"
             }
-            data-datepicker
+            dateFormat="dd/MM/yyyy"
             required
           />
         </div>
@@ -129,7 +132,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
       <div>
         <label
           htmlFor="placeOfDelivery"
-          className="block text-lg  text-gray-900"
+          className="block text-lg text-gray-900"
         >
           {lang === "ar"
             ? "اختر مكان الإرسال"
@@ -150,7 +153,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
       <div>
         <label
           htmlFor="recipientNumber"
-          className="block text-lg  text-gray-900"
+          className="block text-lg text-gray-900"
         >
           {lang === "ar"
             ? "رقم المستلم"
@@ -169,7 +172,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
         />
       </div>
       <div>
-        <label className="block text-lg  text-gray-900">
+        <label className="block text-lg text-gray-900">
           {lang === "ar"
             ? "نوع الخدمة"
             : lang === "ru"
@@ -185,7 +188,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
             onChange={handleChange}
             className="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
           />
-          <label className="ml-2 text-lg  text-gray-900">
+          <label className="ml-2 text-lg text-gray-900">
             {lang === "ar" ? "عادي" : lang === "ru" ? "Обычная" : "Normal"}
           </label>
         </div>
@@ -198,7 +201,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
             onChange={handleChange}
             className="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
           />
-          <label className="ml-2 text-lg  text-gray-900">
+          <label className="ml-2 text-lg text-gray-900">
             {lang === "ar" ? "عاجل" : lang === "ru" ? "Срочная" : "Urgent"}
           </label>
         </div>
@@ -214,7 +217,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
       {renderFormContent()}
       <button
         type="submit"
-        className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg  rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
       >
         {lang === "ar"
           ? "إرسال المعلومات"

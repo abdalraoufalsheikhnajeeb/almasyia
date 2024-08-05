@@ -1,8 +1,10 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import { CitiesByCountry, citiesByCountry } from "../data";
-import { useEffect } from 'react';
-import 'flowbite';
+
+
 interface HotelReservationFormProps {
   lang: string;
 }
@@ -13,19 +15,28 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
   const [formData, setFormData] = useState({
     country: "",
     city: "",
-    arrivalDate: "",
-    departureDate: "",
+    arrivalDate: new Date(),
+    departureDate: new Date(),
     numberOfPeople: "",
     numberOfChildren: "",
   });
   const [hasChildren, setHasChildren] = useState(false);
   const [cities, setCities] = useState<string[]>([]);
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.5.0/datepicker.min.js';
-    script.async = true;
-    document.body.appendChild(script);
-  }, []);
+
+  const handleArrivalDateChange = (date: Date | null) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      arrivalDate: date || new Date(),
+    }));
+  };
+
+  const handleDepartureDateChange = (date: Date | null) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      departureDate: date || new Date(),
+    }));
+  };
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
@@ -60,9 +71,9 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
     const message = `*Hotel Reservation: 🏨*\n\n- *Country*: ${
       formData.country
     } 🌍\n\n- *City*: ${formData.city} 🏙️\n\n- *Arrival Date*: ${
-      formData.arrivalDate
+      formData.arrivalDate.toLocaleDateString()
     } 📅\n\n- *Departure Date*: ${
-      formData.departureDate
+      formData.departureDate.toLocaleDateString()
     } 📅\n\n- *Number of People*: ${
       formData.numberOfPeople
     } 👥\n\n- *Number of Children*: ${
@@ -81,7 +92,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
       className="space-y-6 w-full max-w-md p-6 flex flex-col backdrop-blur-sm border-2 border-white rounded-xl bg-white bg-opacity-50"
     >
       <div>
-        <label htmlFor="country" className="block text-lg  text-gray-900">
+        <label htmlFor="country" className="block text-lg text-gray-900">
           {lang === "ar"
             ? "اختر الدولة"
             : lang === "ru"
@@ -113,7 +124,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
         </select>
       </div>
       <div>
-        <label htmlFor="city" className="block text-lg  text-gray-900">
+        <label htmlFor="city" className="block text-lg text-gray-900">
           {lang === "ar" ? "المدينة" : lang === "ru" ? "Город" : "City"}
         </label>
         <select
@@ -140,6 +151,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
           ))}
         </select>
       </div>
+
       <div>
         <label htmlFor="arrivalDate" className="block text-lg text-gray-900">
           {lang === "ar"
@@ -149,21 +161,19 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
             : "Date of Arrival"}
         </label>
         <div className="relative mt-2">
-          <input
+          <DatePicker
             id="arrivalDate"
-            type="text"
-            name="arrivalDate"
-            value={formData.arrivalDate}
-            onChange={handleChange}
-            className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2 bg-white text-gray-700 hover:bg-gray-50"
-            placeholder={
+            selected={formData.arrivalDate}
+            onChange={handleArrivalDateChange}
+            className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2 bg-white text-gray-700"
+            placeholderText={
               lang === "ar"
                 ? "اختر التاريخ"
                 : lang === "ru"
                 ? "Выберите дату"
                 : "Select date"
             }
-            data-datepicker
+            dateFormat="dd/MM/yyyy"
             required
           />
         </div>
@@ -177,29 +187,28 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
             : "Departure Date"}
         </label>
         <div className="relative mt-2">
-          <input
+          <DatePicker
             id="departureDate"
-            type="text"
-            name="departureDate"
-            value={formData.departureDate}
-            onChange={handleChange}
-            className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2 bg-white text-gray-700 hover:bg-gray-50"
-            placeholder={
+            selected={formData.departureDate}
+            onChange={handleDepartureDateChange}
+            className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2 bg-white text-gray-700"
+            placeholderText={
               lang === "ar"
                 ? "اختر التاريخ"
                 : lang === "ru"
                 ? "Выберите дату"
                 : "Select date"
             }
-            data-datepicker
+            dateFormat="dd/MM/yyyy"
             required
           />
         </div>
       </div>
+
       <div>
         <label
           htmlFor="numberOfPeople"
-          className="block text-lg  text-gray-900"
+          className="block text-lg text-gray-900"
         >
           {lang === "ar"
             ? "عدد الأشخاص"
@@ -226,7 +235,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
           onChange={handleChange}
           className="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
         />
-        <label htmlFor="hasChildren" className="ml-2 text-lg  text-gray-900">
+        <label htmlFor="hasChildren" className="ml-2 text-lg text-gray-900">
           {lang === "ar"
             ? "هل لديك أطفال؟"
             : lang === "ru"
@@ -238,7 +247,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
         <div>
           <label
             htmlFor="numberOfChildren"
-            className="block text-lg  text-gray-900"
+            className="block text-lg text-gray-900"
           >
             {lang === "ar"
               ? "عدد الأطفال"
@@ -258,7 +267,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
       )}
       <button
         type="submit"
-        className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg  rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
       >
         {lang === "ar"
           ? "إرسال المعلومات"

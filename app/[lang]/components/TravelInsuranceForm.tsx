@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 interface TravelInsuranceFormProps {
   lang: string;
@@ -8,12 +10,19 @@ interface TravelInsuranceFormProps {
 const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
   const [formData, setFormData] = useState({
     destination: "",
-    insuranceStartDate: "",
-    insuranceEndDate: "",
+    insuranceStartDate: new Date(),
+    insuranceEndDate: new Date(),
     numberOfPeople: "",
     tripType: "oneTrip",
     otherCountry: "",
   });
+
+  const handleDateChange = (name: string, date: Date | null) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: date || new Date(),
+    }));
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -32,9 +41,9 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
         ? formData.otherCountry
         : formData.destination
     } 🌍\n\n- *Insurance Starting Date*: ${
-      formData.insuranceStartDate
+      formData.insuranceStartDate.toLocaleDateString()
     } 📅\n\n- *Insurance Ending Date*: ${
-      formData.insuranceEndDate
+      formData.insuranceEndDate.toLocaleDateString()
     } 📅\n\n- *Number of People*: ${
       formData.numberOfPeople
     } 👥\n\n- *Trip Type*: ${
@@ -55,7 +64,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
       className="space-y-6 w-96 p-6 flex flex-col backdrop-blur-sm border-2 border-white rounded-xl bg-white bg-opacity-50"
     >
       <div>
-        <label htmlFor="destination" className="block text-lg  text-gray-900">
+        <label htmlFor="destination" className="block text-lg text-gray-900">
           {lang === "ar"
             ? "اختر الوجهة"
             : lang === "ru"
@@ -139,52 +148,59 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
         )}
       </div>
       <div>
-        <label
-          htmlFor="insuranceStartDate"
-          className="block text-lg  text-gray-900"
-        >
+        <label htmlFor="insuranceStartDate" className="block text-lg text-gray-900">
           {lang === "ar"
             ? "تاريخ بدء التأمين"
             : lang === "ru"
             ? "Дата начала страхования"
             : "Insurance Starting Date"}
         </label>
-        <input
-          id="insuranceStartDate"
-          type="text"
-          name="insuranceStartDate"
-          value={formData.insuranceStartDate}
-          onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
-          required
-        />
+        <div className="relative mt-2">
+          <DatePicker
+            id="insuranceStartDate"
+            selected={formData.insuranceStartDate}
+            onChange={(date) => handleDateChange("insuranceStartDate", date)}
+            className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2 bg-white text-gray-700"
+            placeholderText={
+              lang === "ar"
+                ? "اختر التاريخ"
+                : lang === "ru"
+                ? "Выберите дату"
+                : "Select date"
+            }
+            dateFormat="dd/MM/yyyy"
+            required
+          />
+        </div>
       </div>
       <div>
-        <label
-          htmlFor="insuranceEndDate"
-          className="block text-lg  text-gray-900"
-        >
+        <label htmlFor="insuranceEndDate" className="block text-lg text-gray-900">
           {lang === "ar"
             ? "تاريخ انتهاء التأمين"
             : lang === "ru"
             ? "Дата окончания страхования"
             : "Insurance Ending Date"}
         </label>
-        <input
-          id="insuranceEndDate"
-          type="text"
-          name="insuranceEndDate"
-          value={formData.insuranceEndDate}
-          onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
-          required
-        />
+        <div className="relative mt-2">
+          <DatePicker
+            id="insuranceEndDate"
+            selected={formData.insuranceEndDate}
+            onChange={(date) => handleDateChange("insuranceEndDate", date)}
+            className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2 bg-white text-gray-700"
+            placeholderText={
+              lang === "ar"
+                ? "اختر التاريخ"
+                : lang === "ru"
+                ? "Выберите дату"
+                : "Select date"
+            }
+            dateFormat="dd/MM/yyyy"
+            required
+          />
+        </div>
       </div>
       <div>
-        <label
-          htmlFor="numberOfPeople"
-          className="block text-lg  text-gray-900"
-        >
+        <label htmlFor="numberOfPeople" className="block text-lg text-gray-900">
           {lang === "ar"
             ? "عدد الأشخاص"
             : lang === "ru"
@@ -202,7 +218,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
         />
       </div>
       <div>
-        <label className="block text-lg  text-gray-900">
+        <label className="block text-lg text-gray-900">
           {lang === "ar"
             ? "نوع الرحلة"
             : lang === "ru"
@@ -218,7 +234,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
             onChange={handleChange}
             className="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
           />
-          <label className="ml-2 text-lg  text-gray-900">
+          <label className="ml-2 text-lg text-gray-900">
             {lang === "ar"
               ? "رحلة واحدة"
               : lang === "ru"
@@ -235,7 +251,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
             onChange={handleChange}
             className="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
           />
-          <label className="ml-2 text-lg  text-gray-900">
+          <label className="ml-2 text-lg text-gray-900">
             {lang === "ar"
               ? "رحلات متعددة سنويًا"
               : lang === "ru"
@@ -246,7 +262,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
       </div>
       <button
         type="submit"
-        className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg  rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
       >
         {lang === "ar"
           ? "إرسال المعلومات"
