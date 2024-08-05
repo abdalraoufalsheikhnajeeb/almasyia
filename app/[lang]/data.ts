@@ -284,14 +284,14 @@ export const ourServecis = [
   //   src: "/images/honeymoon.svg",
   //   route: "honeymoon",
   // },
-  // {
-  //   id: 6,
-  //   titleen: "Our tourist destinations",
-  //   titlear: "وجهاتنا السياحية",
-  //   titleru: "Наши туристические направления",
-  //   src: "/images/countries.svg",
-  //   route: "tours",
-  // },
+  {
+    id: 6,
+    titleen: "Our tourist destinations",
+    titlear: "وجهاتنا السياحية",
+    titleru: "Наши туристические направления",
+    src: "/images/countries.svg",
+    route: "tours",
+  },
 ];
 
 export const visas = [

@@ -19,7 +19,6 @@ const Locations: NextPage<LocationsProps> = async ({ params: { lang } }) => {
     images: [
       "/images/uae1.webp",
       "/images/uae2.webp",
-      "/images/uae3.webp",
       "/images/uae4.webp",
       "/images/uae6.webp",
     ],
