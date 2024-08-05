@@ -89,25 +89,21 @@ export default async function Home({
 
               return (
                 <Link href={`/${lang}/Services/${card.route}`} key={card.id}>
-                  <div className="max-w-[90vw] relative w-80 bg-white border flex flex-col justify-center items-center rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                  <div className="max-w-[90vw] relative w-80 bg-white border flex flex-col justify-center items-center rounded-3xl shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                     <Image
                       loading="lazy"
                       quality={100}
                       width={318}
                       height={256}
-                      className="rounded-t-lg object-cover scale-[100.5%]  h-64"
+                      className="rounded-t-lg object-contain scale-[100.5%] p-2  h-64"
                       src={card.src}
                       alt="service image"
                     />
-                    <div className="p-4 pb-7 flex-grow flex flex-col justify-between h-28">
+                    <div className="p-3 pt-0 flex-grow flex flex-col justify-between h-28">
                       <h2 className="mb-2 text-2xl font-bold tracking-tight text-primary text-center">
                         {title}
                       </h2>
-                      <span
-                        className={`flex delay-1000 items-end justify-center font-bold mt-4 absolute ${
-                          dic.currLang == "ar" ? `left-2` : `right-2`
-                        } bottom-2`}
-                      >
+                      <span className="flex delay-1000 items-end justify-center font-bold underline underline-offset-4">
                         {dic.learnMore}
                         <Image
                           width={50}
@@ -115,7 +111,7 @@ export default async function Home({
                           quality={1}
                           src="/images/arrow.svg"
                           alt="arrow"
-                          className={`ms-2 h-8 w-8 aspect-square transition-transform duration-300 hover:translate-x-1 ${
+                          className={`ms-2 h-8 w-8 aspect-square transition-transform duration-300  hover:translate-x-1 ${
                             dic.currLang == "ar" ? `rotate-180` : ``
                           }  `}
                         />

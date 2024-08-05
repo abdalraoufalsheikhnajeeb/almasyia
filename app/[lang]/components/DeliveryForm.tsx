@@ -1,11 +1,15 @@
 "use client";
 import { useState } from "react";
-
+import { useEffect } from "react";
+import "flowbite";
 interface DeliveryFormProps {
   lang: string;
 }
 
 const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
+  useEffect(() => {
+    import("flowbite");
+  }, []);
   const [formData, setFormData] = useState({
     placeOfDelivery: "",
     recipientNumber: "",
@@ -66,43 +70,61 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
         />
       </div>
       <div>
-        <label
-          htmlFor="submissionDate"
-          className="block text-lg  text-gray-900"
-        >
+        <label htmlFor="submissionDate" className="block text-lg text-gray-900">
           {lang === "ar"
             ? "تاريخ الإرسال"
             : lang === "ru"
             ? "Дата подачи"
             : "Submission Date"}
         </label>
-        <input
-          id="submissionDate"
-          type="date"
-          name="submissionDate"
-          value={formData.submissionDate}
-          onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
-          required
-        />
+        <div className="relative mt-2">
+          <input
+            id="submissionDate"
+            type="text"
+            name="submissionDate"
+            value={formData.submissionDate}
+            onChange={handleChange}
+            className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
+            placeholder={
+              lang === "ar"
+                ? "اختر التاريخ"
+                : lang === "ru"
+                ? "Выберите дату"
+                : "Select date"
+            }
+            data-datepicker
+            required
+          />
+        </div>
       </div>
+
       <div>
-        <label htmlFor="dispatchDate" className="block text-lg  text-gray-900">
+        <label htmlFor="dispatchDate" className="block text-lg text-gray-900">
           {lang === "ar"
             ? "تاريخ الإرسال"
             : lang === "ru"
             ? "Дата отправки"
             : "Dispatch Date"}
         </label>
-        <input
-          id="dispatchDate"
-          type="date"
-          name="dispatchDate"
-          value={formData.dispatchDate}
-          onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
-          required
-        />
+        <div className="relative mt-2">
+          <input
+            id="dispatchDate"
+            type="text"
+            name="dispatchDate"
+            value={formData.dispatchDate}
+            onChange={handleChange}
+            className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
+            placeholder={
+              lang === "ar"
+                ? "اختر التاريخ"
+                : lang === "ru"
+                ? "Выберите дату"
+                : "Select date"
+            }
+            data-datepicker
+            required
+          />
+        </div>
       </div>
       <div>
         <label

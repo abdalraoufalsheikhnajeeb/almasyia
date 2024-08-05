@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
 import { CitiesByCountry, citiesByCountry } from "../data";
-
+import { useEffect } from 'react';
+import 'flowbite';
 interface HotelReservationFormProps {
   lang: string;
 }
@@ -19,7 +20,12 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
   });
   const [hasChildren, setHasChildren] = useState(false);
   const [cities, setCities] = useState<string[]>([]);
-
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.5.0/datepicker.min.js';
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
@@ -135,40 +141,60 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
         </select>
       </div>
       <div>
-        <label htmlFor="arrivalDate" className="block text-lg  text-gray-900">
+        <label htmlFor="arrivalDate" className="block text-lg text-gray-900">
           {lang === "ar"
             ? "تاريخ الوصول"
             : lang === "ru"
             ? "Дата прибытия"
             : "Date of Arrival"}
         </label>
-        <input
-          id="arrivalDate"
-          type="date"
-          name="arrivalDate"
-          value={formData.arrivalDate}
-          onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
-          required
-        />
+        <div className="relative mt-2">
+          <input
+            id="arrivalDate"
+            type="text"
+            name="arrivalDate"
+            value={formData.arrivalDate}
+            onChange={handleChange}
+            className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2 bg-white text-gray-700 hover:bg-gray-50"
+            placeholder={
+              lang === "ar"
+                ? "اختر التاريخ"
+                : lang === "ru"
+                ? "Выберите дату"
+                : "Select date"
+            }
+            data-datepicker
+            required
+          />
+        </div>
       </div>
       <div>
-        <label htmlFor="departureDate" className="block text-lg  text-gray-900">
+        <label htmlFor="departureDate" className="block text-lg text-gray-900">
           {lang === "ar"
             ? "تاريخ المغادرة"
             : lang === "ru"
             ? "Дата отъезда"
             : "Departure Date"}
         </label>
-        <input
-          id="departureDate"
-          type="date"
-          name="departureDate"
-          value={formData.departureDate}
-          onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
-          required
-        />
+        <div className="relative mt-2">
+          <input
+            id="departureDate"
+            type="text"
+            name="departureDate"
+            value={formData.departureDate}
+            onChange={handleChange}
+            className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2 bg-white text-gray-700 hover:bg-gray-50"
+            placeholder={
+              lang === "ar"
+                ? "اختر التاريخ"
+                : lang === "ru"
+                ? "Выберите дату"
+                : "Select date"
+            }
+            data-datepicker
+            required
+          />
+        </div>
       </div>
       <div>
         <label

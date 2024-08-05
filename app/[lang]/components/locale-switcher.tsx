@@ -1,11 +1,14 @@
 "use client";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { useState } from "react";
 import { type Locale } from "../../../i18n-config";
 import Image from "next/image";
 
 export default function LocaleSwitcher() {
+  const [isOpen, setIsOpen] = useState(false);
   const pathName = usePathname();
+
   const redirectedPathName = (locale: Locale) => {
     if (!pathName) return "/";
     const segments = pathName.split("/");
@@ -13,43 +16,64 @@ export default function LocaleSwitcher() {
     return segments.join("/");
   };
 
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className="flex gap-3">
-      <Link href={redirectedPathName("en")}>
+    <div className="relative w-14 " onClick={toggleDropdown}>
+      <button  className="focus:outline-none">
         <Image
           loading="lazy"
           quality={1}
-          width={50}
-          className="w-14 h-9 object-cover"
-          height={50}
-          alt="flag"
-          src={`/images/en.svg`}
+          width={37}
+          className="object-cover"
+          height={37}
+          alt="Globe icon"
+          src={`/images/globFlaf.svg`}
         />
-      </Link>
+      </button>
+      {isOpen && (
+        <div className="absolute -start-3 -top-2 w-14 pt-12  border rounded-3xl  shadow-lg z-10">
+          <div className="flex flex-col items-center gap-2 p-2">
+            <Link href={redirectedPathName("en")} onClick={() => setIsOpen(false)}>
+              <Image
+                loading="lazy"
+                quality={1}
+                width={40}
+                height={25}
+                className="object-cover"
+                alt="English flag"
+                src={`/images/en.svg`}
+              />
+            </Link>
 
-      <Link href={redirectedPathName("ar")}>
-        <Image
-          loading="lazy"
-          quality={100}
-          width={50}
-          height={50}
-          alt="flag"
-          className="w-14 h-9 object-cover"
-          src={`/images/ar.webp`}
-        />
-      </Link>
+            <Link href={redirectedPathName("ar")} onClick={() => setIsOpen(false)}>
+              <Image
+                loading="lazy"
+                quality={100}
+                width={40}
+                height={25}
+                className="object-cover"
+                alt="Arabic flag"
+                src={`/images/ar.webp`}
+              />
+            </Link>
 
-      <Link href={redirectedPathName("ru")}>
-        <Image
-          loading="lazy"
-          quality={1}
-          width={50}
-          height={50}
-          className="w-14 h-9 object-cover"
-          alt="flag"
-          src={`/images/ru.svg`}
-        />
-      </Link>
+            <Link href={redirectedPathName("ru")} onClick={() => setIsOpen(false)}>
+              <Image
+                loading="lazy"
+                quality={1}
+                width={40}
+                height={25}
+                className="object-cover"
+                alt="Russian flag"
+                src={`/images/ru.svg`}
+              />
+            </Link>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
