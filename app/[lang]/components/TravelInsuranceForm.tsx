@@ -151,7 +151,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
         </label>
         <input
           id="insuranceStartDate"
-          type="date"
+          type="text"
           name="insuranceStartDate"
           value={formData.insuranceStartDate}
           onChange={handleChange}
@@ -172,7 +172,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
         </label>
         <input
           id="insuranceEndDate"
-          type="date"
+          type="text"
           name="insuranceEndDate"
           value={formData.insuranceEndDate}
           onChange={handleChange}

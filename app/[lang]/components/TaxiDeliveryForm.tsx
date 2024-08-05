@@ -60,7 +60,7 @@ const TaxiDeliveryForm: React.FC<TaxiDeliveryFormProps> = ({ lang }) => {
         </label>
         <input
           id="arrivalDate"
-          type="date"
+          type="text"
           name="arrivalDate"
           value={formData.arrivalDate}
           onChange={handleChange}
