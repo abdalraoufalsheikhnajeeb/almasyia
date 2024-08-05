@@ -67,7 +67,7 @@ export default async function Page({
                 <Image
                   width={445}
                   height={260}
-                  quality={100}
+                  quality={50}
                   src={image}
                   alt={country}
                   className="lg:h-96 w-full lg:w-1/2 object-cover rounded-3xl "

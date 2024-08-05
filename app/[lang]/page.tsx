@@ -16,7 +16,7 @@ export default async function Home({
     <>
       <Image
         loading="lazy"
-        quality={100}
+        quality={50}
         src="/images/hero.webp"
         className="bg-gradient absolute -z-10 object-cover h-[100dvh] w-screen opacity-70"
         alt="arrow"
@@ -28,19 +28,19 @@ export default async function Home({
         <header className="h-[100dvh] gap-8 pb-8 flex flex-col items-center justify-end ">
           <Image
             loading="lazy"
-            quality={100}
+            quality={50}
             src="/images/logo.png"
             alt="arrow"
             width={226}
             height={122}
             sizes="(max-width: 640px) 100vw, (max-width: 1080px) 50vw, 33vw"
-            className="w-72 lg:w-96"
+            className="w-52 lg:w-80"
           />
-          <h2 className="text-5xl lg:text-5xl max-w-3xl font-bold  text-primary  text-center">
+          <h2 className="text-3xl  max-w-3xl font-bold  text-primary  text-center">
             {dic?.homeText}
           </h2>
 
-          <button className="text-2xl lg:text-3xl max-w-3xl font-bold text-primary  text-center">
+          <button className="text-xl lg:text-2xl max-w-3xl font-bold text-primary  text-center">
             {dic.contactUsTitle}
           </button>
           <div className="flex gap-4">
@@ -92,7 +92,7 @@ export default async function Home({
                   <div className="max-w-[90vw] relative w-80 bg-white border flex flex-col justify-center items-center rounded-3xl shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                     <Image
                       loading="lazy"
-                      quality={100}
+                      quality={50}
                       width={318}
                       height={256}
                       className="rounded-t-lg object-contain scale-[100.5%] p-2  h-64"

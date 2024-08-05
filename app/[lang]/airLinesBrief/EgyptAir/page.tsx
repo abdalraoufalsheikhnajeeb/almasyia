@@ -11,7 +11,7 @@ const EgyptAir = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <Image
             width={420}
             height={300}
-            quality={100}
+            quality={50}
             src="/images/egyptair.webp"
             alt="EgyptAir"
             className="w-96 mb-5"
@@ -152,7 +152,7 @@ const EgyptAir = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <Image
             width={420}
             height={300}
-            quality={100}
+            quality={50}
             src="/images/egyptair.webp"
             alt="مصر للطيران"
             className="w-96 mb-5"
@@ -286,7 +286,7 @@ const EgyptAir = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <Image
             width={420}
             height={300}
-            quality={100}
+            quality={50}
             src="/images/egyptair.webp"
             alt="EgyptAir"
             className="w-96 mb-5"

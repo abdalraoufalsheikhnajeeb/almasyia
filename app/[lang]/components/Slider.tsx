@@ -41,7 +41,10 @@ const Slider = ({ dic, data, title }: SliderProps) => {
   }, [emblaApi]);
 
   return (
-    <section dir="ltr" className="lg:max-w-7xl max-w-[95vw] mt-14 px-2  mx-auto">
+    <section
+      dir="ltr"
+      className="lg:max-w-7xl max-w-[95vw] mt-14 px-2  mx-auto"
+    >
       <AnTitle title={title} />
       <div className="embla" ref={emblaRef}>
         <div className="embla__container flex">
@@ -60,13 +63,13 @@ const Slider = ({ dic, data, title }: SliderProps) => {
               <div key={index} className="embla__slide p-4 flex-shrink-0 w-1/3">
                 <Link href={`/${dic.currLang}/airLinesBrief/${card.route}`}>
                   <div className="bg-gray-200 relative border rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg h-full flex flex-col justify-center items-center overflow-hidden">
-                    <div className="bg-white flex justify-center items-center w-full">
+                    <div className="bg-white flex justify-center items-center w-full p-3">
                       <Image
                         loading="lazy"
-                        quality={100}
+                        quality={50}
                         width={400}
                         height={200}
-                        className="rounded-t-lg aspect-video w-full object-cover"
+                        className="rounded-t-lg aspect-video w-full object-contain"
                         src={card.src}
                         alt={cardTitle}
                       />

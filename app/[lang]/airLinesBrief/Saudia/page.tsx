@@ -17,7 +17,7 @@ const SaudiaAir = async ({
           <Image
             width={420}
             height={300}
-            quality={100}
+            quality={50}
             src="/images/saudia.webp"
             alt="Saudia"
             className="w-96 mb-5"
@@ -179,7 +179,7 @@ const SaudiaAir = async ({
           <Image
             width={420}
             height={300}
-            quality={100}
+            quality={50}
             src="/images/saudia.webp"
             alt="الخطوط الجوية السعودية"
             className="w-96 mb-5"
@@ -331,7 +331,7 @@ const SaudiaAir = async ({
           <Image
             width={420}
             height={300}
-            quality={100}
+            quality={50}
             src="/images/saudia.webp"
             alt="Saudia"
             className="w-96 mb-5"

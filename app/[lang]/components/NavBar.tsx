@@ -63,10 +63,9 @@ const Navbar = ({
       <Link href={`/${lang}`}>
         <Image
           loading="lazy"
-          quality={100}
-          className="flex-shrink-0 h-16 w-28 object-cover"
-          // width={180}
-          // height={98}
+          quality={50}
+          className="flex-shrink-0 h-14 w-24 object-cover"
+         
           width={226}
           height={122}
           src="/images/logo.png"

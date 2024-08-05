@@ -66,10 +66,10 @@ const CountrySlider = ({ dic, data, title }: CountrySliderProps) => {
                     <div className="bg-white flex justify-center items-center w-full">
                       <Image
                         loading="lazy"
-                        quality={100}
+                        quality={50}
                         width={400}
                         height={200}
-                        className="rounded-t-lg aspect-video w-full object-cover"
+                        className="rounded-t-lg aspect-video w-full object-contain"
                         src={card.src}
                         alt={cardTitle}
                       />

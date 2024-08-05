@@ -11,7 +11,7 @@ const AirIndia = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <Image
             width={420}
             height={300}
-            quality={100}
+            quality={50}
             src="/images/indianair.webp"
             alt="Air India"
             className="w-96 mb-5"
@@ -149,7 +149,7 @@ const AirIndia = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <Image
             width={420}
             height={300}
-            quality={100}
+            quality={50}
             src="/images/indianair.webp"
             alt="الخطوط الجوية الهندية"
             className="w-96 mb-5"
@@ -279,7 +279,7 @@ const AirIndia = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <Image
             width={420}
             height={300}
-            quality={100}
+            quality={50}
             src="/images/indianair.webp"
             alt="Air India"
             className="w-96 mb-5"

@@ -11,7 +11,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <Image
             width={420}
             height={300}
-            quality={100}
+            quality={50}
             src="/images/britishAirways.png"
             alt="British Airways"
             className="w-96 mb-5"
@@ -150,7 +150,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <Image
             width={420}
             height={300}
-            quality={100}
+            quality={50}
             src="/images/britishAirways.png"
             alt="الخطوط الجوية البريطانية"
             className="w-96 mb-5"
@@ -279,7 +279,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <Image
             width={420}
             height={300}
-            quality={100}
+            quality={50}
             src="/images/britishAirways.png"
             alt="Британские Авиалинии"
             className="w-96 mb-5"

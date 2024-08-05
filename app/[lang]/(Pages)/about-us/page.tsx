@@ -14,7 +14,7 @@ export default async function page({
       <div className="flex w-full flex-col my-12 items-center gap-6 lg:items-start overflow-visible text-primary">
         <Image
           loading="lazy"
-          quality={100}
+          quality={50}
           src="/images/logo.png"
           className="w-40 lg:w-60"
           alt="arrow"
@@ -36,7 +36,7 @@ export default async function page({
       </div>
       <Image
         loading="lazy"
-        quality={100}
+        quality={50}
         src="/images/farouk.webp"
         width={500}
         height={400}

@@ -17,7 +17,7 @@ const RoyalJordanian = async ({
           <Image
             width={420}
             height={300}
-            quality={100}
+            quality={50}
             src="/images/jordanair.png"
             alt="Royal Jordanian Airlines"
             className="w-96 mb-5"
@@ -165,7 +165,7 @@ const RoyalJordanian = async ({
           <Image
             width={420}
             height={300}
-            quality={100}
+            quality={50}
             src="/images/jordanair.png"
             alt="الخطوط الملكية الأردنية"
             className="w-96 mb-5"
@@ -297,7 +297,7 @@ const RoyalJordanian = async ({
           <Image
             width={420}
             height={300}
-            quality={100}
+            quality={50}
             src="/images/jordanair.png"
             alt="Royal Jordanian Airlines"
             className="w-96 mb-5"

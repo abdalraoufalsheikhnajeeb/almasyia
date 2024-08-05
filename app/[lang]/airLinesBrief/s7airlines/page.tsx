@@ -15,7 +15,7 @@ const S7Airlines = async ({
           <Image
             width={420}
             height={300}
-            quality={100}
+            quality={50}
             src="/images/s7airlines.webp"
             alt="S7 Airlines"
             className="w-96 mb-5"
@@ -171,7 +171,7 @@ const S7Airlines = async ({
           <Image
             width={420}
             height={300}
-            quality={100}
+            quality={50}
             src="/images/s7airlines.webp"
             alt="خطوط إس 7 الجوية"
             className="w-96 mb-5"
@@ -315,7 +315,7 @@ const S7Airlines = async ({
           <Image
             width={420}
             height={300}
-            quality={100}
+            quality={50}
             src="/images/s7airlines.webp"
             alt="Авиакомпания S7"
             className="w-96 mb-5"

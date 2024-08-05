@@ -15,7 +15,7 @@ const TurkishAirlines = async ({
           <Image
             width={420}
             height={300}
-            quality={100}
+            quality={50}
             src="/images/turkishairlines.webp"
             alt="Turkish Airlines"
             className="w-96 mb-5"
@@ -152,7 +152,7 @@ const TurkishAirlines = async ({
           <Image
             width={420}
             height={300}
-            quality={100}
+            quality={50}
             src="/images/turkishairlines.webp"
             alt="الخطوط الجوية التركية"
             className="w-96 mb-5"
@@ -276,7 +276,7 @@ const TurkishAirlines = async ({
           <Image
             width={420}
             height={300}
-            quality={100}
+            quality={50}
             src="/images/turkishairlines.webp"
             alt="Turkish Airlines"
             className="w-96 mb-5"

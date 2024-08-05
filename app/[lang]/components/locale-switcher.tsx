@@ -1,13 +1,14 @@
 "use client";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { type Locale } from "../../../i18n-config";
 import Image from "next/image";
 
 export default function LocaleSwitcher() {
   const [isOpen, setIsOpen] = useState(false);
   const pathName = usePathname();
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const redirectedPathName = (locale: Locale) => {
     if (!pathName) return "/";
@@ -20,9 +21,30 @@ export default function LocaleSwitcher() {
     setIsOpen(!isOpen);
   };
 
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target as Node)
+    ) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
+
   return (
-    <div className="relative w-14 " onClick={toggleDropdown}>
-      <button  className="focus:outline-none">
+    <div className="relative w-14" ref={dropdownRef}>
+      <button onClick={toggleDropdown} className="focus:outline-none">
         <Image
           loading="lazy"
           quality={1}
@@ -34,39 +56,48 @@ export default function LocaleSwitcher() {
         />
       </button>
       {isOpen && (
-        <div className="absolute -start-2 -top-2 w-14 pt-12 bg-[#34689447]  cursor-pointer border rounded-3xl  shadow-lg z-10">
+        <div className="absolute -start-2 -top-2 w-14 pt-12 bg-[#34689447] cursor-pointer border rounded-3xl shadow-lg z-10">
           <div className="flex flex-col items-center gap-2 p-2">
-            <Link href={redirectedPathName("en")} onClick={() => setIsOpen(false)}>
+            <Link
+              href={redirectedPathName("en")}
+              onClick={() => setIsOpen(false)}
+            >
               <Image
                 loading="lazy"
                 quality={1}
                 width={40}
                 height={25}
-                className="object-cover hover:-scale-110 transition-all"
+                className="object-cover hover:scale-110 transition-all"
                 alt="English flag"
                 src={`/images/en.svg`}
               />
             </Link>
 
-            <Link href={redirectedPathName("ar")} onClick={() => setIsOpen(false)}>
+            <Link
+              href={redirectedPathName("ar")}
+              onClick={() => setIsOpen(false)}
+            >
               <Image
                 loading="lazy"
-                quality={100}
+                quality={50}
                 width={40}
                 height={25}
-                className="object-cover hover:-scale-110 transition-all"
+                className="object-cover hover:scale-110 transition-all"
                 alt="Arabic flag"
-                src={`/images/ar.webp`}
+                src={`/images/ar.svg`}
               />
             </Link>
 
-            <Link href={redirectedPathName("ru")} onClick={() => setIsOpen(false)}>
+            <Link
+              href={redirectedPathName("ru")}
+              onClick={() => setIsOpen(false)}
+            >
               <Image
                 loading="lazy"
                 quality={1}
                 width={40}
                 height={25}
-                className="object-cover hover:-scale-110 transition-all"
+                className="object-cover hover:scale-110 transition-all"
                 alt="Russian flag"
                 src={`/images/ru.svg`}
               />

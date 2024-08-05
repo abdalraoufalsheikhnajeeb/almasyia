@@ -63,7 +63,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-7xl space-y-6 w-full p-6 flex flex-col backdrop-blur-sm border-2 border-white rounded-xl bg-white bg-opacity-50"
+      className="max-w-7xl space-y-6 w-full  p-6 flex flex-col backdrop-blur-sm border-2 border-white  bg-white bg-opacity-50 shadow-lg rounded-3xl"
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
