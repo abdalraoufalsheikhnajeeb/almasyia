@@ -25,7 +25,7 @@ export default async function Footer({
             width={100}
             height={100}
             alt="facebook icon"
-            style={{ width: "auto", height: "auto" }}
+            
           />
         </a>
         <a
@@ -41,7 +41,7 @@ export default async function Footer({
             width={100}
             height={100}
             alt="instagram link"
-            style={{ width: "auto", height: "auto" }}
+            
           />
         </a>
         <a
@@ -57,7 +57,7 @@ export default async function Footer({
             width={100}
             height={100}
             alt="UAE location"
-            style={{ width: "auto", height: "auto" }}
+            
           />
         </a>
         <a
@@ -73,7 +73,7 @@ export default async function Footer({
             width={100}
             height={100}
             alt="syria location"
-            style={{ width: "auto", height: "auto" }}
+            
           />
         </a>
       </div>

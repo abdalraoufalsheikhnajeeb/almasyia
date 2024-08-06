@@ -49,7 +49,7 @@ export default function LocaleSwitcher() {
           loading="lazy"
           quality={1}
           width={37}
-          className="object-cover"
+          className="object-cover mt-2"
           height={37}
           alt="Globe icon"
           src={`/images/globFlaf.svg`}
