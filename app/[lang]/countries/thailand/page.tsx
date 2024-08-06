@@ -48,7 +48,7 @@ const Page = ({ params: { lang } }: { params: { lang: Locale } }) => {
               </p>
 
               {src && (
-                <div className="lg:w-1/3 mt-4 lg:mt-0">
+                <div className="lg:w-1/3 w-full mt-4 lg:mt-0">
                   <Image
                     src={src}
                     quality={40}
