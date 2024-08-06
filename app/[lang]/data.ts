@@ -161,7 +161,7 @@ export const countries = [
   {
     route: "UAE",
     id: 2,
-    src: "/images/UAE.webp",
+    src: "/images/uae.webp",
     titleen: "Experience the Luxurious Wonders of the UAE",
     titlear: "استمتع بروعة الرفاهية في الإمارات",
     titleru: "Испытайте роскошные чудеса ОАЭ",
@@ -177,7 +177,7 @@ export const countries = [
   {
     route: "Indonesia",
     id: 4,
-    src: "/images/Indonesia.webp",
+    src: "/images/indonesia.webp",
     titleen: "Unveil the Exotic Treasures of Indonesia",
     titlear: "اكشف عن الكنوز الغريبة في إندونيسيا",
     titleru: "Раскройте экзотические сокровища Индонезии",
@@ -201,7 +201,7 @@ export const countries = [
   {
     route: "Egypt",
     id: 7,
-    src: "/images/Egypt.webp",
+    src: "/images/egypt.webp",
     titleen: "Uncover the Ancient Mysteries of Egypt",
     titlear: "اكشف عن الألغاز القديمة في مصر",
     titleru: "Раскройте древние тайны Египта",
@@ -3225,9 +3225,9 @@ export const Russia = [
       "Or the Universal Temple is an architectural complex in the city of Kazan in Russia. The spiritual leader and designer of the temple is Eldar Khanov. The reason for establishing the temple was the incident of Eldar returning to life, according to his parents’ belief, in a strange accident in 1943. Eldar wanted to thank “God” by building a temple for all religions, according to his claim. The structure consists of several types of religious architecture, including Orthodox church, mosque, and synagogue. In 1940, in Staroye Arakchno, a town near the city of Kazan, Eldar was born, and in 1943 he died, or rather so his parents thought. Because before that, two of their sons died of hunger, and the Great Patriotic War was going on for the third year. Many people were dying from scarcity of food and exhausting work. Ildar's mother, Manasi Khanov, used to sew shrouds for the dead from the bags in which gunpowder was transported. She also began sewing a shroud for the Eldar. But they did not rush to bury the little one, and on the third day he returned to life according to what his parents had prepared for him. His father, Manasi Khanov, had exchanged Ildar’s shoes for milk, and with this milk he “resurrected” his son and took care of him, according to his father’s belief. He discovered the boy Eldar's talent in drawing. Because of the difficulty of life during that war, he used charcoal and beet red dyes instead, and instead of paper he used old newspapers. In 1960, he graduated from the Kazan Art Institute in the branch of large arts, and in 1968 he graduated from the Surikov Art Institute in Moscow, and became a member of the Union of Soviet Photographers. The Eldar traveled widely in the eastern countries. For his studies, he studied the arts of the peoples of the East, Buddhism, yoga and medical sciences in Tibet and China, and practiced medicine and energy healing. The idea of ​​the temple was on the mind of the Eldar. When he returned to his homeland, Russia, he wanted to implement his ideas, and so in 1994 he began construction of the Temple of All Religions, consisting of 16 domes and 16 of the world's major religions, including previous religions that are no longer practiced. The temple serves as a cultural, residence and worship centre",
   },
   {
-    nameAR: "",
-    nameEN: "",
-    nameRU: "",
+    nameAR: "xxx",
+    nameEN: "xxx",
+    nameRU: "xxx",
     src: "/images/Russia/.webp",
     descriptionAR:
       "مسجد جامع، يقع في كازان، كان يعتقد أثناء بنائه أنه أكبر مسجد في تترستان وروسيا وأوروبا بني هذا المسجد في القرن السادس عشر سمي نسبة لقول شريف الذي توفى هو وطلابه أثناء الدفاع عن كازان ضد القوات الروسية في حصار كازان 1552. دمر المسجد خلال اقتحام كازان من قبل إيفان الرهيب عام 1552 وأعيد بناؤه عام 1996 وتم افتتاحه في 24 يوليو 2005. وقد ساهمت عدة بلدان في الصندوق الذي أنشئ لبناء مسجد قول شريف، ومنها المملكة العربية السعودية والإمارات العربية المتحدة. في جمهورية تترستان في روسيا",
@@ -3237,9 +3237,9 @@ export const Russia = [
       "Мечеть Джами, расположенная в Казани. Во время ее строительства считалось, что это самая большая мечеть в Татарстане, России и Европе. Эта мечеть была построена в шестнадцатом веке и названа в честь Шарифа, погибшего вместе со своими учениками при защите Казани. против русских войск при осаде Казани в 1552 году. Мечеть была разрушена во время штурма Казани Иваном Грозным в 1552 году, восстановлена ​​в 1996 году и открыта 24 июля 2005 года. Несколько стран внесли свой вклад в созданный фонд. построить мечеть Кул Шариф, включая Королевство Саудовская Аравия и Объединенные Арабские Эмираты. В Республике Татарстан, Россия",
   },
   {
-    nameAR: "",
-    nameEN: "",
-    nameRU: "",
+    nameAR: "xxx",
+    nameEN: "xxx",
+    nameRU: "xxx",
     src: "/images/Russia/29.webp",
     descriptionAR:
       "مسجد جامع، يقع في كازان، كان يعتقد أثناء بنائه أنه أكبر مسجد في تترستان وروسيا وأوروبا بني هذا المسجد في القرن السادس عشر سمي نسبة لقول شريف الذي توفى هو وطلابه أثناء الدفاع عن كازان ضد القوات الروسية في حصار كازان 1552. دمر المسجد خلال اقتحام كازان من قبل إيفان الرهيب عام 1552 وأعيد بناؤه عام 1996 وتم افتتاحه في 24 يوليو 2005. وقد ساهمت عدة بلدان في الصندوق الذي أنشئ لبناء مسجد قول شريف، ومنها المملكة العربية السعودية والإمارات العربية المتحدة. في جمهورية تترستان في روسيا",
