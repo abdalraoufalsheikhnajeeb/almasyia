@@ -156,6 +156,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
         </label>
         <div className="relative mt-2">
           <DatePicker
+            minDate={new Date()}
             id="insuranceStartDate"
             selected={formData.insuranceStartDate}
             onChange={(date) => handleDateChange("insuranceStartDate", date)}
@@ -185,6 +186,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
         </label>
         <div className="relative mt-2">
           <DatePicker
+            minDate={new Date()}
             id="insuranceEndDate"
             selected={formData.insuranceEndDate}
             onChange={(date) => handleDateChange("insuranceEndDate", date)}

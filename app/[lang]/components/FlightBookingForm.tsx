@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import { type getDictionary } from "../../../get-dictionary";
 
 interface FlightBookingFormProps {
@@ -42,11 +42,9 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
 
     const message = `*Book a Flight: ✈️*\n\n- *Place of Departure*: ${
       formData.departure
-    }\n\n- *Arrival Area*: ${formData.arrival}\n\n- *Outbound Date*: ${
-      formData.outboundDate.toLocaleDateString()
-    }\n\n- *Return Date*: ${
-      formData.returnDate.toLocaleDateString()
-    }\n\n- *Number of Adults*: ${
+    }\n\n- *Arrival Area*: ${
+      formData.arrival
+    }\n\n- *Outbound Date*: ${formData.outboundDate.toLocaleDateString()}\n\n- *Return Date*: ${formData.returnDate.toLocaleDateString()}\n\n- *Number of Adults*: ${
       formData.numberOfAdults
     }\n\n- *Number of Children*: ${
       formData.numberOfChildren || "None"
@@ -112,9 +110,10 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
           </label>
           <div className="relative mt-2">
             <DatePicker
+              minDate={new Date()}
               id="outboundDate"
               selected={formData.outboundDate}
-              onChange={(date) => handleDateChange('outboundDate', date)}
+              onChange={(date) => handleDateChange("outboundDate", date)}
               className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2 bg-white text-gray-700"
               placeholderText={
                 dic.currLang === "ar"
@@ -138,9 +137,10 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
           </label>
           <div className="relative mt-2">
             <DatePicker
+              minDate={new Date()}
               id="returnDate"
               selected={formData.returnDate}
-              onChange={(date) => handleDateChange('returnDate', date)}
+              onChange={(date) => handleDateChange("returnDate", date)}
               className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2 bg-white text-gray-700"
               placeholderText={
                 dic.currLang === "ar"

@@ -159,6 +159,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
         </label>
         <div className="relative mt-2">
           <DatePicker
+            minDate={new Date()}
             id="arrivalDate"
             selected={formData.arrivalDate}
             onChange={handleArrivalDateChange}
@@ -185,6 +186,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
         </label>
         <div className="relative mt-2">
           <DatePicker
+            minDate={new Date()}
             id="departureDate"
             selected={formData.departureDate}
             onChange={handleDepartureDateChange}

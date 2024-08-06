@@ -82,6 +82,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
         </label>
         <div className="relative mt-2">
           <DatePicker
+            minDate={new Date()}
             id="submissionDate"
             selected={formData.submissionDate}
             onChange={(date) => handleDateChange("submissionDate", date)}
@@ -108,6 +109,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
         </label>
         <div className="relative mt-2">
           <DatePicker
+            minDate={new Date()}
             id="dispatchDate"
             selected={formData.dispatchDate}
             onChange={(date) => handleDateChange("dispatchDate", date)}
