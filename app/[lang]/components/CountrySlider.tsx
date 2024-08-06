@@ -61,7 +61,7 @@ const CountrySlider = ({ dic, data, title }: CountrySliderProps) => {
 
             return (
               <div key={index} className="embla__slide p-4 flex-shrink-0 w-1/3">
-                <Link href={`/countries/${card.route.toLowerCase()}`}>
+                <Link href={`/${dic.currLang}/countries/${card.route.toLowerCase()}`}>
                   <div className="bg-gray-200 relative border rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg h-full flex flex-col justify-center items-center overflow-hidden">
                     <div className="bg-white flex justify-center items-center w-full">
                       <Image

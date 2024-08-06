@@ -104,7 +104,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
             quality={50}
             src={flagSrc}
             alt={`${locationName} flag`}
-            className="w-20 mr-4"
+            className="w-20 me-4"
           />
           <h2 className="text-5xl font-bold">{locationName}</h2>
         </div>
@@ -116,7 +116,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
               quality={50}
               src="/images/location.webp"
               alt={`${locationName} flag`}
-              className="w-16 mr-4"
+              className="w-16 me-4"
             />
             <p className="text-2xl text-primary font-bold">{locationDetails}</p>
           </div>
@@ -129,7 +129,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
               quality={50}
               src="/images/phone.webp"
               alt={`${locationName} flag`}
-              className="w-16 mr-4"
+              className="w-16 me-4"
             />
             <p className="text-2xl text-primary font-bold">{phoneNumber}</p>
           </div>

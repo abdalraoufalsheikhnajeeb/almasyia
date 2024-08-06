@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 interface TravelInsuranceFormProps {
   lang: string;
@@ -40,11 +40,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
       formData.destination === "Other countries"
         ? formData.otherCountry
         : formData.destination
-    } 🌍\n\n- *Insurance Starting Date*: ${
-      formData.insuranceStartDate.toLocaleDateString()
-    } 📅\n\n- *Insurance Ending Date*: ${
-      formData.insuranceEndDate.toLocaleDateString()
-    } 📅\n\n- *Number of People*: ${
+    } 🌍\n\n- *Insurance Starting Date*: ${formData.insuranceStartDate.toLocaleDateString()} 📅\n\n- *Insurance Ending Date*: ${formData.insuranceEndDate.toLocaleDateString()} 📅\n\n- *Number of People*: ${
       formData.numberOfPeople
     } 👥\n\n- *Trip Type*: ${
       formData.tripType === "oneTrip"
@@ -148,7 +144,10 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
         )}
       </div>
       <div>
-        <label htmlFor="insuranceStartDate" className="block text-lg text-gray-900">
+        <label
+          htmlFor="insuranceStartDate"
+          className="block text-lg text-gray-900"
+        >
           {lang === "ar"
             ? "تاريخ بدء التأمين"
             : lang === "ru"
@@ -174,7 +173,10 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
         </div>
       </div>
       <div>
-        <label htmlFor="insuranceEndDate" className="block text-lg text-gray-900">
+        <label
+          htmlFor="insuranceEndDate"
+          className="block text-lg text-gray-900"
+        >
           {lang === "ar"
             ? "تاريخ انتهاء التأمين"
             : lang === "ru"
@@ -234,7 +236,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
             onChange={handleChange}
             className="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
           />
-          <label className="ml-2 text-lg text-gray-900">
+          <label className="ms-2 text-lg text-gray-900">
             {lang === "ar"
               ? "رحلة واحدة"
               : lang === "ru"
@@ -251,7 +253,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
             onChange={handleChange}
             className="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
           />
-          <label className="ml-2 text-lg text-gray-900">
+          <label className="ms-2 text-lg text-gray-900">
             {lang === "ar"
               ? "رحلات متعددة سنويًا"
               : lang === "ru"

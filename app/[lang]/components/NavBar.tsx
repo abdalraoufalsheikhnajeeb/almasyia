@@ -62,13 +62,12 @@ const Navbar = ({
     <nav className="bg-gray-100 backdrop-brightness-125 h-20 w-full px-[5vw] py-2 flex items-center top-0 justify-between z-[100] fixed">
       <Link href={`/${lang}`}>
         <Image
-          loading="lazy"
           quality={50}
           className="flex-shrink-0 h-14 w-24 object-cover"
-         
+          priority
           width={226}
           height={122}
-          src="/images/logo.png"
+          src="/images/logo.webp"
           alt="Logo"
         />
       </Link>

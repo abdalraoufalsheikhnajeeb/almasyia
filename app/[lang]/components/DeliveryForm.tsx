@@ -1,16 +1,13 @@
 "use client";
 import { useState, useEffect } from "react";
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
-
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 interface DeliveryFormProps {
   lang: string;
 }
 
 const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
-
-
   const [formData, setFormData] = useState({
     placeOfDelivery: "",
     recipientNumber: "",
@@ -41,9 +38,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
     e.preventDefault();
     const message = `*Documents Delivery: 📄*\n\n- *Sender Name*: ${
       formData.senderName
-    }\n- *Submission Date*: ${formData.submissionDate.toLocaleDateString()}\n- *Dispatch Date*: ${
-      formData.dispatchDate.toLocaleDateString()
-    }\n\n- *Place of Delivery*: ${
+    }\n- *Submission Date*: ${formData.submissionDate.toLocaleDateString()}\n- *Dispatch Date*: ${formData.dispatchDate.toLocaleDateString()}\n\n- *Place of Delivery*: ${
       formData.placeOfDelivery
     } 📍\n\n- *Recipient Number*: ${
       formData.recipientNumber
@@ -188,7 +183,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
             onChange={handleChange}
             className="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
           />
-          <label className="ml-2 text-lg text-gray-900">
+          <label className="ms-2 text-lg text-gray-900">
             {lang === "ar" ? "عادي" : lang === "ru" ? "Обычная" : "Normal"}
           </label>
         </div>
@@ -201,7 +196,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
             onChange={handleChange}
             className="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
           />
-          <label className="ml-2 text-lg text-gray-900">
+          <label className="ms-2 text-lg text-gray-900">
             {lang === "ar" ? "عاجل" : lang === "ru" ? "Срочная" : "Urgent"}
           </label>
         </div>

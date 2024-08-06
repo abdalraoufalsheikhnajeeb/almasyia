@@ -15,12 +15,13 @@ export default async function page({
         <Image
           loading="lazy"
           quality={50}
-          src="/images/logo.png"
+          src="/images/logo.webp"
           className="w-40 lg:w-60"
-          alt="arrow"
+          alt="logo"
           width={226}
           height={122}
         />
+
         <p>
           <span className="text-3xl font-bold">{dic?.ayatAnimation} </span>
           <span className="text-2xl ">{dic?.prev1}</span>

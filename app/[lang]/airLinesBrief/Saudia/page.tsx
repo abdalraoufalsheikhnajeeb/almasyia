@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+
 import { Locale } from "../../../../i18n-config";
 
 const SaudiaAir = async ({

@@ -27,11 +27,11 @@ export default async function Home({
       <main className=" max-w-[90vw]  mx-auto flex items-center flex-col gap-8">
         <header className="h-[100dvh] gap-8 pb-8 flex flex-col items-center justify-end ">
           <Image
-            loading="lazy"
             quality={50}
-            src="/images/logo.png"
+            src="/images/logo.webp"
             alt="arrow"
             width={226}
+            priority
             height={122}
             sizes="(max-width: 640px) 100vw, (max-width: 1080px) 50vw, 33vw"
             className="w-52 lg:w-80"

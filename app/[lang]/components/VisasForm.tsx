@@ -117,7 +117,7 @@ export default function VisaForm({
             onChange={handleChange}
             className="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
           />
-          <label className="ml-2 block text-lg  text-gray-900">
+          <label className="ms-2 block text-lg  text-gray-900">
             {dic.currLang === "ar"
               ? "هل لديك أطفال؟"
               : dic.currLang === "ru"

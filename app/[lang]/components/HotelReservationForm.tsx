@@ -1,9 +1,8 @@
 "use client";
-import React, { useState } from 'react';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+import React, { useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import { CitiesByCountry, citiesByCountry } from "../data";
-
 
 interface HotelReservationFormProps {
   lang: string;
@@ -70,11 +69,9 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
     e.preventDefault();
     const message = `*Hotel Reservation: 🏨*\n\n- *Country*: ${
       formData.country
-    } 🌍\n\n- *City*: ${formData.city} 🏙️\n\n- *Arrival Date*: ${
-      formData.arrivalDate.toLocaleDateString()
-    } 📅\n\n- *Departure Date*: ${
-      formData.departureDate.toLocaleDateString()
-    } 📅\n\n- *Number of People*: ${
+    } 🌍\n\n- *City*: ${
+      formData.city
+    } 🏙️\n\n- *Arrival Date*: ${formData.arrivalDate.toLocaleDateString()} 📅\n\n- *Departure Date*: ${formData.departureDate.toLocaleDateString()} 📅\n\n- *Number of People*: ${
       formData.numberOfPeople
     } 👥\n\n- *Number of Children*: ${
       hasChildren ? formData.numberOfChildren || "None" : "None"
@@ -206,10 +203,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
       </div>
 
       <div>
-        <label
-          htmlFor="numberOfPeople"
-          className="block text-lg text-gray-900"
-        >
+        <label htmlFor="numberOfPeople" className="block text-lg text-gray-900">
           {lang === "ar"
             ? "عدد الأشخاص"
             : lang === "ru"
@@ -235,7 +229,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
           onChange={handleChange}
           className="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
         />
-        <label htmlFor="hasChildren" className="ml-2 text-lg text-gray-900">
+        <label htmlFor="hasChildren" className="ms-2 text-lg text-gray-900">
           {lang === "ar"
             ? "هل لديك أطفال؟"
             : lang === "ru"

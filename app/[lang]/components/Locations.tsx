@@ -1,6 +1,6 @@
 import { getDictionary } from "../../../get-dictionary";
 import { Locale } from "../../../i18n-config";
-import React from "react";
+
 import type { NextPage } from "next";
 import LocationCard from "./LocationCard";
 import AnTitle from "./AnTitle";
@@ -53,13 +53,11 @@ const Locations: NextPage<LocationsProps> = async ({ params: { lang } }) => {
 
   return (
     <main className="flex  flex-col items-center justify-center min-h-[100dvh] py-2 ">
- 
-
       <AnTitle title={dic.OurLocations} />
 
       <LocationCard {...uaeLocation} />
-     <br />
-     <br />
+      <br />
+      <br />
       <LocationCard {...syriaLocation} />
     </main>
   );

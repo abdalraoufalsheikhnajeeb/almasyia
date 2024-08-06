@@ -4,15 +4,11 @@ import "./globals.css";
 import { getDictionary } from "../../get-dictionary";
 import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
-import { Tajawal, Poppins } from "next/font/google";
+import { Tajawal } from "next/font/google";
 
+// Import the Tajawal font with appropriate configurations
 const tajawal = Tajawal({
-  subsets: ["arabic"],
-  weight: ["400", "700"],
-});
-
-const poppins = Poppins({
-  subsets: ["latin"],
+  subsets: ["latin", "arabic"],
   weight: ["400", "700"],
 });
 
@@ -27,7 +23,7 @@ export const metadata: Metadata = {
     "Discover exceptional travel services with Alnujoom Almasiya. We offer flight and hotel reservations, visas, insurance, and more, ensuring a convenient and comfortable travel experience from Dubai and Damascus. Visit us to plan your next adventure.",
   twitter: {
     card: "summary_large_image",
-    images: "https://www.alnujoomalmasiya.com/images/logo.png",
+    images: "https://www.alnujoomalmasiya.com/images/logo.webp",
   },
   openGraph: {
     title:
@@ -36,7 +32,7 @@ export const metadata: Metadata = {
       "Discover exceptional travel services with Alnujoom Almasiya. We offer flight and hotel reservations, visas, insurance, and more, ensuring a convenient and comfortable travel experience from Dubai and Damascus. Visit us to plan your next adventure.",
     url: "https://www.alnujoomalmasiya.com",
     type: "website",
-    images: "https://www.alnujoomalmasiya.com/images/logo.png",
+    images: "https://www.alnujoomalmasiya.com/images/logo.webp",
   },
   other: {
     title:
@@ -44,7 +40,7 @@ export const metadata: Metadata = {
     description:
       "Discover exceptional travel services with Alnujoom Almasiya. We offer flight and hotel reservations, visas, insurance, and more, ensuring a convenient and comfortable travel experience from Dubai and Damascus. Visit us to plan your next adventure.",
     url: "https://www.alnujoomalmasiya.com",
-    image: "https://www.alnujoomalmasiya.com/images/logo.png",
+    image: "https://www.alnujoomalmasiya.com/images/logo.webp",
   },
 };
 
@@ -60,16 +56,9 @@ export default async function RootLayout({
 
   return (
     <html lang={params.lang}>
-      <head>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.5.0/datepicker.css" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.5.0/datepicker.min.js"></script>
-      </head>
       <body
         dir={isArabic ? "rtl" : "ltr"}
-        className={`overflow-x-hidden text-primary bg3 ${
-          isArabic ? tajawal.className : poppins.className
-        }`}
+        className={`overflow-x-hidden text-primary bg3 ${tajawal.className}`}
       >
         <Navbar dic={dic} />
         {children}

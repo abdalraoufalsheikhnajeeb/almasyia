@@ -84,7 +84,7 @@ export default async function Page({
                   {requirements && (
                     <div className="text-primary text-3xl font-bold list-disc mb-4">
                       {dic.requirements}:
-                      <div className="text-gray-500 font-normal text-xl mt-2 ml-6 list-disc">
+                      <div className="text-gray-500 font-normal text-xl mt-2 ms-6 list-disc">
                         {requirements.map((req, i) => (
                           <div key={i}>{req}</div>
                         ))}
