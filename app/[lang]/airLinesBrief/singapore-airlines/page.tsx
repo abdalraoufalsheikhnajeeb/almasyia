@@ -94,7 +94,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <h2 className="text-2xl font-bold mb-4">
             General Information about Singapore Airlines
           </h2>
-          <table className="w-fit text-left text-gray-700">
+          <table className="w-fit text-start text-gray-700">
             <tbody>
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">"IATA" Code</td>
@@ -224,7 +224,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <h2 className="text-2xl font-bold mb-4">
             معلومات عامة عن الخطوط الجوية السنغافورية
           </h2>
-          <table className="w-fit text-left text-gray-700">
+          <table className="w-fit text-start text-gray-700">
             <tbody>
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">رمز "IATA"</td>
@@ -361,7 +361,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <h2 className="text-2xl font-bold mb-4">
             Общая информация о Singapore Airlines
           </h2>
-          <table className="w-fit text-left text-gray-700">
+          <table className="w-fit text-start text-gray-700">
             <tbody>
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">Код IATA</td>

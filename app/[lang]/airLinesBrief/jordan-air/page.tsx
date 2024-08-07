@@ -101,7 +101,7 @@ const RoyalJordanian = async ({
             <h2 className="text-2xl font-bold mb-4">
               General Information about Royal Jordanian Airlines
             </h2>
-            <table className="w-fit text-left text-gray-700">
+            <table className="w-fit text-start text-gray-700">
               <tbody>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">IATA Code</td>
@@ -239,7 +239,7 @@ const RoyalJordanian = async ({
             <h2 className="text-2xl font-bold mb-4">
               معلومات عامة عن الخطوط الملكية الأردنية
             </h2>
-            <table className="w-fit text-left text-gray-700">
+            <table className="w-fit text-start text-gray-700">
               <tbody>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">رمز إياتا</td>
@@ -383,7 +383,7 @@ const RoyalJordanian = async ({
             <h2 className="text-2xl font-bold mb-4">
               Общая информация о авиакомпании Royal Jordanian Airlines
             </h2>
-            <table className="w-fit text-left text-gray-700">
+            <table className="w-fit text-start text-gray-700">
               <tbody>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Код IATA</td>

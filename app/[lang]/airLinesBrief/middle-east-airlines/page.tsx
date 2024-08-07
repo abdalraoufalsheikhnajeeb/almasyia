@@ -100,7 +100,7 @@ const MiddleEastAirlines = async ({
           <h2 className="text-2xl font-bold mb-4">
             General Information about Middle East Airlines
           </h2>
-          <table className="w-fit text-left text-gray-700">
+          <table className="w-fit text-start text-gray-700">
             <tbody>
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">"IATA" Code</td>
@@ -229,7 +229,7 @@ const MiddleEastAirlines = async ({
           <h2 className="text-2xl font-bold mb-4">
             معلومات عامة عن الخطوط الجوية الشرق أوسطية
           </h2>
-          <table className="w-fit text-left text-gray-700">
+          <table className="w-fit text-start text-gray-700">
             <tbody>
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">رمز "IATA"</td>
@@ -367,7 +367,7 @@ const MiddleEastAirlines = async ({
           <h2 className="text-2xl font-bold mb-4">
             Общая информация о Middle East Airlines
           </h2>
-          <table className="w-fit text-left text-gray-700">
+          <table className="w-fit text-start text-gray-700">
             <tbody>
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">Код "IATA"</td>

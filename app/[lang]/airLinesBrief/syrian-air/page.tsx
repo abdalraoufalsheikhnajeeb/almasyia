@@ -89,7 +89,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
 
           <div>
             <h2 className="text-2xl font-bold mb-4">Airline Information</h2>
-            <table className="w-fit text-left text-gray-700">
+            <table className="w-fit text-start text-gray-700">
               <tbody>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">IATA Code</td>
@@ -239,7 +239,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
 
           <div>
             <h2 className="text-2xl font-bold mb-4">معلومات عن شركة الطيران</h2>
-            <table className="w-fit text-left text-gray-700">
+            <table className="w-fit text-start text-gray-700">
               <tbody>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">رمز إياتا</td>
@@ -394,7 +394,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
             <h2 className="text-2xl font-bold mb-4">
               Информация об авиакомпании
             </h2>
-            <table className="w-fit text-left text-gray-700">
+            <table className="w-fit text-start text-gray-700">
               <tbody>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Код IATA</td>

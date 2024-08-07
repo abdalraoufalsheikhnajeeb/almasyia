@@ -92,7 +92,7 @@ const EgyptAir = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           </p>
           <div>
             <h2 className="text-2xl font-bold mb-4">General Information</h2>
-            <table className="w-fit text-left text-gray-700">
+            <table className="w-fit text-start text-gray-700">
               <tbody>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Code IATA</td>
@@ -228,7 +228,7 @@ const EgyptAir = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           </p>
           <div>
             <h2 className="text-2xl font-bold mb-4">معلومات عامة</h2>
-            <table className="w-fit text-left text-gray-700">
+            <table className="w-fit text-start text-gray-700">
               <tbody>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">رمز IATA</td>
@@ -372,7 +372,7 @@ const EgyptAir = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           </p>
           <div>
             <h2 className="text-2xl font-bold mb-4">Общая информация</h2>
-            <table className="w-fit text-left text-gray-700">
+            <table className="w-fit text-start text-gray-700">
               <tbody>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Код IATA</td>

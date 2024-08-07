@@ -99,7 +99,7 @@ const PegasusAirlines = async ({
             <h2 className="text-2xl font-bold mb-4">
               General Information about Pegasus Airlines
             </h2>
-            <table className="w-fit text-left text-gray-700">
+            <table className="w-fit text-start text-gray-700">
               <tbody>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">IATA Code</td>
@@ -234,7 +234,7 @@ const PegasusAirlines = async ({
             <h2 className="text-2xl font-bold mb-4">
               معلومات عامة عن خطوط بيجاسوس الجوية
             </h2>
-            <table className="w-fit text-left text-gray-700">
+            <table className="w-fit text-start text-gray-700">
               <tbody>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">رمز إياتا</td>
@@ -379,7 +379,7 @@ const PegasusAirlines = async ({
             <h2 className="text-2xl font-bold mb-4">
               Общая информация о авиакомпании Pegasus Airlines
             </h2>
-            <table className="w-fit text-left text-gray-700">
+            <table className="w-fit text-start text-gray-700">
               <tbody>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Код IATA</td>

@@ -97,7 +97,7 @@ const QatarAirways = async ({
           </p>
 
           <h2 className="text-2xl font-bold mb-4">Airline Information</h2>
-          <table className="w-fit text-left text-gray-700">
+          <table className="w-fit text-start text-gray-700">
             <tbody>
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">Code "IATA"</td>
@@ -239,7 +239,7 @@ const QatarAirways = async ({
           <h2 className="text-2xl font-bold mb-4">
             معلومات عن الخطوط الجوية القطرية
           </h2>
-          <table className="w-fit text-left text-gray-700">
+          <table className="w-fit text-start text-gray-700">
             <tbody>
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">رمز "IATA"</td>
@@ -389,7 +389,7 @@ const QatarAirways = async ({
           <h2 className="text-2xl font-bold mb-4">
             Информация об авиакомпании
           </h2>
-          <table className="w-fit text-left text-gray-700">
+          <table className="w-fit text-start text-gray-700">
             <tbody>
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">Код "IATA"</td>

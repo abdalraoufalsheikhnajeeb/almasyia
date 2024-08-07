@@ -96,7 +96,7 @@ const AirFrance = async ({
             promotions.
           </p>
           <h2 className="text-2xl font-bold mb-4">General Information</h2>
-          <table className="w-fit text-left text-gray-700">
+          <table className="w-fit text-start text-gray-700">
             <tbody>
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">IATA Code</td>
@@ -229,7 +229,7 @@ const AirFrance = async ({
             والعروض.
           </p>
           <h2 className="text-2xl font-bold mb-4">معلومات عامة</h2>
-          <table className="w-fit text-left text-gray-700">
+          <table className="w-fit text-start text-gray-700">
             <tbody>
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">رمز IATA</td>
@@ -369,7 +369,7 @@ const AirFrance = async ({
             социальных сетях, чтобы получать последние обновления и акции.
           </p>
           <h2 className="text-2xl font-bold mb-4">Общая информация</h2>
-          <table className="w-fit text-left text-gray-700">
+          <table className="w-fit text-start text-gray-700">
             <tbody>
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">Код IATA</td>

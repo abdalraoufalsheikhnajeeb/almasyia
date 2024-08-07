@@ -94,7 +94,7 @@ const Navbar = ({
       </div>
 
       {isBurgerOpen && (
-        <div className="flex bg-white w-screen h-screen flex-col fixed top-[60vh] left-1/2 transform -translate-x-1/2 -translate-y-1/2 gap-4 justify-center items-center z-50">
+        <div className="flex bg-white w-screen h-screen flex-col fixed top-20 left-0 transform  gap-4 justify-center items-center z-50">
           <NavItem href={`/${lang}`} label={dic?.Home} />
           <NavItem href={`/${lang}/about-us`} label={dic?.aboutUs} />
           <NavItem href={`/${lang}/WorldClock`} label={dic.worldClock} />
