@@ -57,7 +57,7 @@ export default async function Page({
           return (
             <div
               key={index}
-              className="flex flex-col lg:flex-col gap-4 bg-white bg-opacity-80 p-4 rounded-3xl shadow-xl"
+              className="flex flex-col lg:flex-col gap-4 box"
             >
               <div className="flex flex-col lg:flex-row-reverse w-full justify-between items-center">
                 <Image

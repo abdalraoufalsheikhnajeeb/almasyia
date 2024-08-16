@@ -56,7 +56,7 @@ export default function LocaleSwitcher() {
         />
       </button>
       {isOpen && (
-        <div className="absolute -start-2 -top-2 w-14 pt-12 bg-[#34689447] cursor-pointer border rounded-3xl shadow-lg z-10">
+        <div className="absolute -start-2 -top-2 w-14 pt-14 h-52 bg-[#34689447] cursor-pointer border rounded-3xl shadow-lg z-10">
           <div className="flex flex-col items-center gap-2 p-2">
             <Link
               href={redirectedPathName("en")}
