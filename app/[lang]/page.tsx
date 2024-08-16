@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ourServecis } from "./data";
 import AnTitle from "./components/AnTitle";
 import Locations from "./components/Locations";
+import Whatsapp from "./components/Whatsapp";
 
 export default async function Home({
   params: { lang },
@@ -30,10 +31,10 @@ export default async function Home({
             quality={50}
             src="/images/logo.webp"
             alt="arrow"
-            width={50}
+            width={400}
             priority
-            height={38}
-            sizes="(max-width: 640px) 100vw, (max-width: 1080px) 50vw, 33vw"
+            height={274}
+            
             className="w-52 lg:w-80"
           />
           <h2 className="text-3xl  max-w-3xl font-bold  text-primary  text-center">
@@ -43,34 +44,11 @@ export default async function Home({
           <button className="text-xl lg:text-2xl max-w-3xl font-bold text-primary  text-center">
             {dic.contactUsTitle}
           </button>
-          <div className="flex gap-4">
-            <div className="flex  hover:bg-gray-100 text-primary font-bold py-2 px-4 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 transition ease-in-out duration-200 ">
-              <Link target="_blank" href="https://wa.me/971545866066">
-                <Image
-                  loading="lazy"
-                  quality={1}
-                  src="/images/whats-uae.svg"
-                  className="w-20 lg:w-24"
-                  alt="arrow"
-                  width={250}
-                  height={200}
-                />
-              </Link>
-            </div>
-            <div className="flex  hover:bg-gray-100 text-primary font-bold py-2 px-4 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 transition ease-in-out duration-200 ">
-              <Link target="_blank" href="https://wa.me/963950026610">
-                <Image
-                  loading="lazy"
-                  quality={1}
-                  src="/images/whats-sar.svg"
-                  className="w-20 lg:w-24"
-                  alt="arrow"
-                  width={250}
-                  height={200}
-                />
-              </Link>
-            </div>
-          </div>
+
+
+          <Whatsapp/>
+
+
         </header>
         <section className="w-screen flex flex-col items-center">
           <AnTitle title={dic?.someProjects} />

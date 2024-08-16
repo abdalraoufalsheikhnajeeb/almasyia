@@ -24,8 +24,8 @@ const Navbar = async ({   lang  }: {   lang: Locale  }) => {
           quality={50}
           className="hidden md:flex  md:flex-shrink-0 h-16 w-24 object-cover"
           priority
-          width={96}
-          height={64}
+          width={200}
+          height={136}
           src="/images/logo.webp"
           alt="Logo"
         />

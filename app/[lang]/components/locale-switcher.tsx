@@ -44,7 +44,7 @@ export default function LocaleSwitcher() {
 
   return (
     <div className="relative" onClick={toggleDropdown} ref={dropdownRef}>
-      <button  className="focus:outline-none">
+      <button className="focus:outline-none">
         <Image
           priority
           quality={1}

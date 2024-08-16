@@ -59,10 +59,6 @@ export default async function Page({
               key={index}
               className="flex flex-col lg:flex-col gap-4 bg-white bg-opacity-80 p-4 rounded-3xl shadow-xl"
             >
-              <hr className="w-full" />
-              <h2 className="text-primary text-5xl font-bold text-center">
-                {country}
-              </h2>
               <div className="flex flex-col lg:flex-row-reverse w-full justify-between items-center">
                 <Image
                   width={445}
@@ -73,6 +69,9 @@ export default async function Page({
                   className="lg:h-96 w-full lg:w-1/2 object-cover rounded-3xl "
                 />
                 <div className="p-4 flex flex-col gap-3 lg:w-1/2">
+                  <h2 className="text-primary text-5xl font-bold text-center">
+                    {country}
+                  </h2>
                   {duration && (
                     <div className="text-primary text-3xl font-bold list-disc mb-4">
                       {dic.duration}:
