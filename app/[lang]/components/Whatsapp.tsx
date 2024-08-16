@@ -30,8 +30,8 @@ export default function Whatsapp() {
               <Image
                 priority
                 quality={1}
-                width={40}
-                height={25}
+                width={78}
+                height={78}
                 className="object-cover w-full hover:scale-110 transition-all"
                 alt="uae flag"
                 src={`/images/uae.svg`}
@@ -41,12 +41,12 @@ export default function Whatsapp() {
             <Link target="_blank" href="https://wa.me/963950026610">
               <Image
                 priority
-                quality={50}
-                width={40}
-                height={25}
+                quality={1}
+                width={78}
+                height={78}
                 className="object-cover w-full hover:scale-110 transition-all"
                 alt="syria flag"
-                src={`/images/sar.svg`}
+                src="/images/sar.svg"
               />
             </Link>
 

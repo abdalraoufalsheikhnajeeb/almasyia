@@ -15,7 +15,7 @@ const Locations: NextPage<LocationsProps> = async ({ params: { lang } }) => {
   const dic = await getDictionary(lang);
 
   const uaeLocation = {
-    flagSrc: "/images/UAE.svg",
+    flagSrc: "/images/uae.svg",
     images: [
       "/images/uae1.webp",
       "/images/uae2.webp",
@@ -32,7 +32,7 @@ const Locations: NextPage<LocationsProps> = async ({ params: { lang } }) => {
   };
 
   const syriaLocation = {
-    flagSrc: "/images/SAR.svg",
+    flagSrc: "/images/sar.svg",
     images: [
       "/images/sar1.webp",
       "/images/sar2.webp",
