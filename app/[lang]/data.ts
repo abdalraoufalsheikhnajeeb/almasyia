@@ -1143,7 +1143,7 @@ export const Thailand = [
     nameEN: "Bangkok",
     nameAR: "بانكوك",
     nameRU: "Бангкок",
-    src: "/images/Thailand/2.webp",
+    
     descriptionAR:
       "تقع في جنوب شرق آسيا، ولا شك بأنها الوجهة الرئيسية في السفر الى تايلاند باعتبارها العاصمة ومن اهم المدن السياحية فيها حيث تضم الكثير من المعالم السياحية ومناطق الجذب، سواء كانت معالم تاريخية قديمة او معالم حديثة و في بانكوك نجد العديد من الاماكن الترفيهية المشهورة والتي زادت من حظوظ السياحة في تايلاند بشكل كبير",
     descriptionEN:
@@ -1155,7 +1155,7 @@ export const Thailand = [
     nameEN: "Jim Thompson House Museum",
     nameAR: "متحف جيم تومسون",
     nameRU: "Дом-музей Джима Томпсона",
-    src: "/images/Thailand/3.webp",
+    src: "/images/Thailand/2.webp",
     descriptionAR:
       "يقع هذا المتحف في منزل عتيق كان ملكا للمهندس المعماري الأمريكي جيم تومسون (الذي بدأ صناعة الحرير التايلاندي بعد الحرب العالمية الثانية)، ويحتوي على مجموعة رائعة من الفن الآسيوي كالتماثيل البوذية التاريخية واللوحات التايلاندية التقليدية المصنوعة من الخشب والقماش والورق، والخزف الأبيض والأزرق، وغيرها من المقتنيات التي تصور حياة بوذا والتي يعود تاريخها إلى القرنين السادس عشر والسابع عشر الميلاديين. فضلا عن العديد من العروض والجولات المميّزة، فلا تفوّت هذه الفرصة وقم بزيارته عند القدوم إلى المدينة",
     descriptionEN:
@@ -1167,7 +1167,7 @@ export const Thailand = [
     nameEN: "Bangkok National Museum",
     nameAR: "متحف بانكوك الوطني",
     nameRU: "Национальный музей Бангкока",
-    src: "/images/Thailand/4.webp",
+    src: "/images/Thailand/3.webp",
     descriptionAR:
       'يقع المتحف الوطني في بانكوك في منطقة قصر بوورن ساتان مونغكول أو "القصر الأمامي" (وانغ نا) الذي تم بناؤه عام 1887، وأصبح من اهم اماكن السياحة في تايلند، كان القصر بمثابة سكن ملكي لخمسة من نواب الملك، إلى أن ألغى الملك راما الخامس هذا المنصب، كان القصر متاحًا في ذلك الوقت، منح الملك راما السابع الإذن بإنشاء مجموعة قصر فرا ماها موثتيان التابعة لقصر بوورن ساتان مونغكول ليكون المتحف الوطني للمدينة وأعلن باسم "متحف فراناكورن الوطني" في عام 1934.',
     descriptionEN:
@@ -1179,7 +1179,7 @@ export const Thailand = [
     nameEN: "Safari World Bangkok",
     nameAR: "حديقة عالم سفاري بانكوك",
     nameRU: "Сафари-парк Бангкок",
-    src: "/images/Thailand/5.webp",
+    src: "/images/Thailand/4.webp",
     descriptionAR:
       "يعتبر عالم سفاري بانكوك (Safari World  Bangkok)من أهم معالم السياحة في  بانكوك ، والتي تعد من اهم الوجهات السياحية في تايلند التي يتوافد إليها السياح من جميع أنحاء العالم. تقع سفاري وورلد على بعد 40 كم من وسط مدينة بانكوك على مساحة 190 هكتار، حيث تم افتتاح سفاري بانكوك عام 1988 وهي من أكبر الحدائق الترفيهية في بانكوك عاصمة تايلاند",
     descriptionEN:
@@ -1191,7 +1191,7 @@ export const Thailand = [
     nameEN: "Skytrain",
     nameAR: "القطار المعلق",
     nameRU: "Небесный поезд",
-    src: "/images/Thailand/6.webp",
+    src: "/images/Thailand/5.webp",
     descriptionAR:
       "يستطيع الزوار أن يروا المدينة بأكملها والتجول فيها من خلال ركوب هذا القطار يتميز بارتفاعه الذي يعلو عن السيارات والأتوبيسات العامة، وذلك يُسهل على السائح رؤية المدينة من جهة أخرى، يُقبل الكثيرون على ركوبه لأنه رخيص الثمن ويحتوي على مكيف، ويجعل السائح يشعر بالراحة عند التنزه.",
     descriptionEN:
@@ -1203,7 +1203,7 @@ export const Thailand = [
     nameEN: "Wat Pho (Reclining Buddha)",
     nameAR: "معبد بوذا المتكئ",
     nameRU: "Ват Пхо (Лежащий Будда)",
-    src: "/images/Thailand/7.webp",
+    src: "/images/Thailand/6.webp",
     descriptionAR:
       "إنه من أشهر المعالم التاريخية في تايلاند، فهو من المعابد البوذية العريقة. يضم العديد من التماثيل أبرزهم تمثال بوذا المتكئ، فهو من أكثر التماثيل التي تجذب السياح. حيث أُعد من الذهب الخالص وطوله حوالي 44 متر. من الممكن التجول في المعبد والتعرف على الديانة البوذية من خلال تلك التماثيل.",
     descriptionEN:
@@ -1212,10 +1212,39 @@ export const Thailand = [
       "Это один из самых известных исторических памятников Таиланда, так как это один из древних буддийских храмов. Он включает в себя множество статуй, самой известной из которых является Лежащий Будда, поскольку это одна из статуй, которая больше всего привлекает туристов. Он был сделан из чистого золота и имел длину около 44 метров. Через эти статуи можно совершить экскурсию по храму и узнать о буддийской религии.",
   },
   {
+    nameEN: "Bangkok Hotels",
+    nameAR: "فنادق بانكوك",
+    nameRU: "Отели Бангкока",
+  },
+  {
+    nameEN: "Sofitel Bangkok Sukhumvit",
+    nameAR: "Sofitel Bangkok Sukhumvit",
+    nameRU: "Sofitel Bangkok Sukhumvit",
+    src: "/images/Thailand/.webp",
+    descriptionAR:
+      "",
+    descriptionEN:
+      "",
+    descriptionRU:
+      "",
+  },
+  {
+    nameEN: "",
+    nameAR: "",
+    nameRU: "",
+    src: "/images/Thailand/.webp",
+    descriptionAR:
+      "",
+    descriptionEN:
+      "",
+    descriptionRU:
+      "",
+  },
+  {
     nameEN: "Chao Phraya River",
     nameAR: "نهر تشاو فرايا",
     nameRU: "Река Чао Прайя",
-    src: "/images/Thailand/8.webp",
+    src: "/images/Thailand/7.webp",
     descriptionAR:
       "يعد ذلك النهر هو العمود الفقري في المدينة وأساس الحضارة التايلاندية، فهذا النهر ساعد على حصول مدينة بانكوك على اسم “فينيسيا الشرق”. يتوفر في النهر العديد من المراكب والبواخر التي يمكن استئجارها من أجل القيام بنزهة بحرية حول المباني والمعالم السياحية.",
     descriptionEN:
@@ -1227,7 +1256,7 @@ export const Thailand = [
     nameEN: "Dream World Park",
     nameAR: "ملاهي دريم وورلد بارك",
     nameRU: "Парк мечты",
-    src: "/images/Thailand/9.webp",
+    src: "/images/Thailand/8.webp",
     descriptionAR:
       "تعتبر من المعالم الممتعة في مدينة بانكوك، حيث أنها تشبه ديزني لاند، تجعل الزائر يشعر بمجرد دخوله إليها أنه في عالم الأحلام والخيال. تحتوي على عدد كبير من الألعاب الترفيهية التي تحتاج إلى المغامرة والتحدي على سبيل المثال ألعاب القفز، التزلج، والسباقات وغيرها، من الممكن أيضا ركوب القطار الصغير في المنتزه وعمل جولة استكشافية فيه، بالإضافة إلى وجود المطاعم التي يمكن تناول الطعام فيها، توافر أيضا أماكن الجلوس والراحة حول المساحات الخضراء",
     descriptionEN:
@@ -1239,7 +1268,7 @@ export const Thailand = [
     nameEN: "Madame Tussauds Bangkok",
     nameAR: "متحف مدام توسو بانكوك",
     nameRU: "Мадам Тюссо Бангкок",
-    src: "/images/Thailand/10.webp",
+    src: "/images/Thailand/9.webp",
     descriptionAR:
       "من أشهر الأنشطة التي يمكن ممارستها في بانكوك هي زيارة متحف مدام توسو فهو يقع في الطابق السادس من مركز سيام ديسكفري، يتيح لك المتحف الاقتراب من أشهر مشاهير العالم واسترجع اللحظات والأوقات والأحداث التي جلبت لهم الشهرة",
     descriptionEN:
@@ -1252,7 +1281,7 @@ export const Thailand = [
     nameEN: "Phang Nga Bay",
     nameAR: "خليج بان ناه",
     nameRU: "Залив Пханг Нга",
-    src: "/images/Thailand/11.webp",
+    src: "/images/Thailand/10.webp",
     descriptionAR:
       "يعتبر خليج بان ناه من أجمل الاماكن السياحية في بوكيت حيث يمتد على مساحة واسعة تقدر بـ 400 كم في بحر أندامان الواقع بين مدينة بوكيت وشبه جزيرة مالاي بين سولا جنوبي تايلاند، يتميز هذا الخليج باحتوائه على الكثير من الكهوف الرائعة التي يعود تاريخ تكونها الى آلاف السنين.",
     descriptionEN:
@@ -1264,7 +1293,7 @@ export const Thailand = [
     nameEN: "Bang Pae Waterfall",
     nameAR: "شلال بانغ باي",
     nameRU: "Водопад Банг Пэ",
-    src: "/images/Thailand/12.webp",
+    src: "/images/Thailand/11.webp",
     descriptionAR:
       "يعد شلال بانغ باي في جزيرة بوكيت من أكثر معالم السياحة في بوكيت تايلند شهرة، يتميز الشلال بهدوئه وسهولة السباحة في مصبه حيث يتكون نهر وعدد من الجداول الرائعة، يبلغ ارتفاع الشلال حوالي 15متر من أعلى جرف من صخور الجرانيت الصلب. ",
     descriptionEN:
@@ -1277,7 +1306,7 @@ export const Thailand = [
     nameEN: "Phuket FantaSea",
     nameAR: "فنتازيا بوكيت",
     nameRU: "Пхукет ФантаСи",
-    src: "/images/Thailand/13.webp",
+    src: "/images/Thailand/12.webp",
     descriptionAR:
       "فنتازيا بوكيت Phuket FantaSea  من أشهر معالم السياحة في بوكيت تايلند وهو عرض متكامل يجمع بين حاضر تايلاند بتطوره التكنولوجي المُذهل، وتراثها وحضارتها القديمة الساحرة مصممة على نفس هيئة مدينة الألعاب الشهيرة الموجودة في مدينة لاس فيغاس الأميركية",
     descriptionEN:
@@ -1289,7 +1318,7 @@ export const Thailand = [
     nameEN: "Jungle Splash Water Park",
     nameAR: "الحديقة المائية جنغل سبلاش بوكيت",
     nameRU: "Аквапарк Джангл Сплэш",
-    src: "/images/Thailand/14.webp",
+    src: "/images/Thailand/13.webp",
     descriptionAR:
       "فهي عبارة عن حديقة مائية تنفرد بمجموعة كبيرة من نقاط الجذب التي ساهمت في نجاحها الواسع. من بين أنشطة الترفيه التي تُتيحها الحديقة المائية جنغل سبلاش في بوكيت، يوجد مجموعة من الأنشطة ملائمة للأطفال، حيث يوجد ألعاب مائية ملائمة للصغار، كما يوجد مسبح مخصص للأطفال ورشاشات مائية.",
     descriptionEN:
@@ -1301,7 +1330,7 @@ export const Thailand = [
     nameEN: "Big Buddha",
     nameAR: "تمثال بوذا العملاق",
     nameRU: "Большой Будда",
-    src: "/images/Thailand/15.webp",
+    src: "/images/Thailand/14.webp",
     descriptionAR:
       "يعد تمثال بوذا الكبير من أبرز معالم السياحة في جزيرة بوكيت يصل ارتفاعه إلى 45 متر ويقع في تلال ناكيرد بين تشالونج وكاتا، يبرز التمثال من مختلف أنحاء الجزيرة فأينما توجهت يمكنك رؤية هذا التمثال الذي يعتبر رمزاً ديناً في الجزيرة.",
     descriptionEN:
@@ -1313,7 +1342,7 @@ export const Thailand = [
     nameEN: "Wat Chalong",
     nameAR: "معبد وات تشالونج",
     nameRU: "Ват Чалонг",
-    src: "/images/Thailand/16.webp",
+    src: "/images/Thailand/15.webp",
     descriptionAR:
       "يعتبر وات تشالونج من أهم الأماكن السياحية في بوكيت تايلاند حيث يعكس صورة واضحة عن ثقافة تايلاند بشكل عام، يعد هذا المعبد من أكبر المعابد في العالم و أحد أكبر المعابد البوذية في جزيرة بوكيت، يستقطب المكان الكثير من الزوار سواء السكان المحليين أو السياح ممن يرغبون في التعرف على ثقافة تايلاند",
     descriptionEN:
@@ -1331,7 +1360,7 @@ export const Thailand = [
     nameEN: "Doi Inthanon National Park",
     nameAR: "حديقة دوى أنتانون الوطنية شنغماي",
     nameRU: "Национальный парк Дой Интанон",
-    src: "/images/Thailand/17.webp",
+    src: "/images/Thailand/16.webp",
     descriptionAR:
       "حديقة دوي أنتانون الوطنية تقع في أعلى جبل في تايلاند، وتتمتع بالمناظر الخلابة الطبيعية، وهي من أفضل الأماكن السياحية في شنغماي التي تمتد على مساحة 482 كيلو متر مربع.",
     descriptionEN:
@@ -1343,7 +1372,7 @@ export const Thailand = [
     nameEN: "Chiang Mai Night Safari",
     nameAR: "حديقة سفاري شنغماي الليلية",
     nameRU: "Ночной сафари-парк Чиангмай",
-    src: "/images/Thailand/18.webp",
+    src: "/images/Thailand/17.webp",
     descriptionAR:
       "يمكنك الاشتراك في الحياة في شنغماي من خلال السفاري ليوم، حيث تبلغ مساحة الحديقة الممتدة 328 فدانًا، كما يمكنك مشاهدة مجموعة واسعة من الحيوانات بما في ذلك زر ذلكاف، المطور، الأسود من أفضل الأماكن السياحية في شنغماي تستحق الزيارة.",
     descriptionEN:
@@ -1355,7 +1384,7 @@ export const Thailand = [
     nameEN: "Huay Kaew Waterfall",
     nameAR: "شلال هواي كايو شنغماي",
     nameRU: "Водопад Хуай Каев",
-    src: "/images/Thailand/19.webp",
+    src: "/images/Thailand/18.webp",
     descriptionAR:
       "تعتبر شيلال هواي كايو شنغماي من أفضل أماكن السياحة في شنغماي، يمكنك رحلة استكشافية لاستكشاف هذا المكان الرائع والخبرة الرائعة.",
     descriptionEN:
@@ -1367,7 +1396,7 @@ export const Thailand = [
     nameEN: "Wat Phra Singh",
     nameAR: "معبد وات فرا سينغ شنغماي",
     nameRU: "Ват Пхра Сингх",
-    src: "/images/Thailand/20.webp",
+    src: "/images/Thailand/19.webp",
     descriptionAR:
       "معبد الجبل الذهبي في شنغماي، أفضل الأماكن السياحية في شنغماي، حيث تعلق على سفح الجبل وسط إطلالات بانورامية على مدينة شنغماي.",
     descriptionEN:
@@ -1380,7 +1409,7 @@ export const Thailand = [
     nameEN: "Pattaya",
     nameAR: "بتايا",
     nameRU: "Паттайя",
-    src: "/images/Thailand/21.webp",
+    src: "/images/Thailand/20.webp",
     descriptionAR: "",
     descriptionEN: "",
     descriptionRU: "",
@@ -1514,7 +1543,7 @@ export const Maldives = [
     nameEN: "Maldives",
     nameAR: "جزر المالديف",
     nameRU: "Мальдивы",
-    src: "/images/Maldives/.webp",
+    src: "/images/Maldives/1.webp",
     descriptionAR:
       "تقع جزر المالديف في جنوب قارة آسيا في المحيط الهندي، ويمر عليها خط الاستواء جنوبًا، وتقع جنوب غرب سريلانكا والهند./nوتعتبر مالي العاصمة الرسمية لجزر المالديف، ويبلغ عدد سكانها حوالي 103,693 نسمة وتعتبر المدينة الأكبر من حيث عدد السكان  تسمى جزر المالديف بجمهورية جزر المالديف التي اشتق اسمها من الكلمة ماهال التي تعني باللغة العربية (جزر القصر) والإسلام السني يعتبر الديانة الرسمية في الدولة تحتوي جزرالمالديف حوالي 1,200 جزيرة، 200 جزيرة منها تعتبرمأهولة بالسكان، وتقع جميع هذه الجزر شمال خط الاستواء في المحيط الهندي، وتتوزع إلى عدد من الجزز المرجانية الجميلة.والرائعة./nقصد جزر المالديف العديد من محبي السياحة في العالم ويمكن لأصحاب الميزانية المحدودة التخطيط بشكل مدروس لزيارتها كما يمكن ممارسة نشاطات الغطس والغوص الفريدة في آسيا،كما يميزها الشواطئ الرملية البيضاء الناعمة لتي تجذب السياح من جميع أنحاء العالم وأيضا تتميز جزر المالديف بمياهها الفيروزية الصافية التي تسمح للزوار بمشاهدة الأسماك والشعاب المرجانية عن قرب./nتعتبر جزر المالديف من الجهات المحببة للأزواج الرومانسيين التي تمكنهم من التمتع بظاهرة النجوم المتوهجة والمشرقة ومشاهدة عدد كبير من النجوم والمخطط الخافت لدرب الثوبان وايضا الاسترخاء ومشاهدة غروب الشمس والتي تعتبر من أفضل المناظر الرائعة في العالم، كما يمكن الاسترخاء والاستمتاع بالأنشطة المختلفة مثل السباحة والغوص وركوب الأمواج./n/n",
     descriptionEN:
@@ -1526,7 +1555,7 @@ export const Maldives = [
     nameEN: "Malé",
     nameAR: "جزيرة مالي",
     nameRU: "Мале",
-    src: "/images/Maldives/.webp",
+    src: "/images/Maldives/2.webp",
     descriptionAR:
       "تتميز جزيرة مالي بصغر حجمها، وتنفرد عن باقي الجزر الأخرى بكونها الجزيرة الأكثر تطوّرا، يبلغ طولها بحدود 2كم وبعرض أكثر من 1كم بقليل، وتقع جزيرة مالي في المحيط الهندي حيث تحيط بها مياه البحر من كافّة الجوانب، وتقع في الجزء الشمالي لجزر المالديف، وتعتبر عاصمة جزر المالديف، ويميزها عن غيرها الأسواق التجارية المختلفة وأبنيتها الملونة، وتضم الجزيرة مجموعة من المطاعم وكذلك الفنادق الفاخرة وشواطئ ساحرة، والعديد من المعالم التاريخية والسياحية والثقافية",
     descriptionEN:
@@ -1543,7 +1572,7 @@ export const Maldives = [
     nameAR: "Grand Park Kodhipparu Maldives",
     nameEN: "Grand Park Kodhipparu Maldives",
     nameRU: "Grand Park Kodhipparu Maldives",
-    src: "/images/Maldives/.webp",
+    src: "/images/Maldives/3.webp",
     descriptionAR: "موقع الفندق على الانترنت//nhttps://g.co/kgs/fcgibfj",
     descriptionEN: "Hotel website//nhttps://g.co/kgs/fcgibfj",
     descriptionRU: "Сайт отеля//nhttps://g.co/kgs/fcgibfj  ",
@@ -1552,7 +1581,7 @@ export const Maldives = [
     nameAR: "Kandima Maldives",
     nameEN: "Kandima Maldives",
     nameRU: "Kandima Maldives",
-    src: "/images/Maldives/.webp",
+    src: "/images/Maldives/4.webp",
     descriptionAR: "موقع الفندق على الانترنت//nhttps://g.co/kgs/R9EYDYv",
     descriptionEN: "Hotel website//nhttps://g.co/kgs/R9EYDYv",
     descriptionRU: "Сайт отеля//nhttps://g.co/kgs/R9EYDYv",
@@ -1561,7 +1590,7 @@ export const Maldives = [
     nameAR: "Marukab Plaza",
     nameEN: "Marukab Plaza",
     nameRU: "Marukab Plaza",
-    src: "/images/Maldives/.webp",
+    src: "/images/Maldives/5.webp",
     descriptionAR: "موقع الفندق على الانترنت/nhttps://g.co/kgs/UZdZqat",
     descriptionEN: "Hotel website/nhttps://g.co/kgs/UZdZqat",
     descriptionRU: "Сайт отеля/nhttps://g.co/kgs/UZdZqat",
@@ -1570,7 +1599,7 @@ export const Maldives = [
     nameAR: "جزيرة الكاكاو",
     nameEN: "Cocoa Island",
     nameRU: "Какао Айленд",
-    src: "/images/Maldives/.webp",
+    src: "/images/Maldives/6.webp",
     descriptionAR:
       "جزيرة الكاكاو تعتبر من أهم المعالم السياحة في المالديف وتتميز بمائها الكريستال الصافي، مع الرمال البيضاء ويقصدها الكثيرون كوجهة مميزة لقضاء شهر عسل ممتع وتضم العديد من الفلل والأجنحة الراقية، وتوفر ايضا علاجات السامبا للنزلاء للراحة والاسترخاء، وتتمتع ايضا بشمس ساطعة في أغلب أوقات العام.",
     descriptionEN:
@@ -1578,23 +1607,12 @@ export const Maldives = [
     descriptionRU:
       "Остров Какао считается одной из самых важных туристических достопримечательностей на Мальдивах. Он отличается кристально чистой водой и белым песком. Многие люди посещают его как уникальное место для проведения приятного медового месяца. Он включает в себя множество роскошных вилл и люксов. Здесь также проводятся процедуры самбы для отдыха и расслабления. Большую часть года здесь светит яркое солнце.Остров Какао считается одной из самых важных туристических достопримечательностей на Мальдивах. Он отличается кристально чистой водой и белым песком. Многие люди посещают его как уникальное место для проведения приятного медового месяца. Он включает в себя множество роскошных вилл и люксов. Здесь также проводятся процедуры самбы для отдыха и расслабления. Большую часть года здесь светит яркое солнце.Остров Какао считается одной из самых важных туристических достопримечательностей на Мальдивах. Он отличается кристально чистой водой и белым песком. Многие люди посещают его как уникальное место для проведения приятного медового месяца. Он включает в себя множество роскошных вилл и люксов. Здесь также проводятся процедуры самбы для отдыха и расслабления. Большую часть года здесь светит яркое солнце.",
   },
-  {
-    nameAR: "جزيرة الكاكاو",
-    nameEN: "Cocoa Island",
-    nameRU: "Остров Какао",
-    src: "/images/Maldives/.webp",
-    descriptionAR:
-      "جزيرة الكاكاو تعتبر من أهم المعالم السياحة في المالديف وتتميز بمائها الكريستال الصافي، مع الرمال البيضاء ويقصدها الكثيرون كوجهة مميزة لقضاء شهر عسل ممتع وتضم العديد من الفلل والأجنحة الراقية، وتوفر ايضا علاجات السامبا للنزلاء للراحة والاسترخاء، وتتمتع ايضا بشمس ساطعة في أغلب أوقات العام.",
-    descriptionEN:
-      "Cocoa Island is considered one of the most important tourist attractions in the Maldives. It is distinguished by its crystal clear waters and white sand. Many people visit it as a distinctive destination for spending an enjoyable honeymoon. It includes many high-end villas and suites. It also provides samba treatments for guests to rest and relax. It also enjoys bright sunshine most times of the year.",
-    descriptionRU:
-      "Остров Какао считается одной из самых важных туристических достопримечательностей на Мальдивах. Он отличается кристально чистой водой и белым песком. Многие люди посещают его как уникальное место для приятного медового месяца. Он включает в себя множество роскошных вилл и люксов. Здесь также проводятся процедуры самбы для отдыха и расслабления. Большую часть года здесь светит яркое солнце.",
-  },
+
   {
     nameAR: "COMO Cocoa Island",
     nameEN: "COMO Cocoa Island",
     nameRU: "COMO Cocoa Island",
-    src: "/images/Maldives/.webp",
+    src: "/images/Maldives/7.webp",
     descriptionAR:
       "موقع الفندق على الانترنت/nhttps://www.comohotels.com/maldives/como-cocoa-island?utm_source",
     descriptionEN:
@@ -1606,7 +1624,7 @@ export const Maldives = [
     nameAR: "Adroit Beach inn",
     nameEN: "Adroit Beach inn",
     nameRU: "Adroit Beach inn",
-    src: "/images/Maldives/.webp",
+    src: "/images/Maldives/8.webp",
     descriptionAR:
       "موقع الفندق على الانترنت/nhttps://sites.google.com/view/adroitbeachinn",
     descriptionEN:
@@ -1617,7 +1635,7 @@ export const Maldives = [
     nameAR: "مدينة أدو المرجانية",
     nameEN: "Addu City",
     nameRU: "Адду-Сити",
-    src: "/images/Maldives/.webp",
+    src: "/images/Maldives/9.webp",
     descriptionAR:
       "تقع مدينة أدو جنوب المالديف، وتعتبر من أهم المعالم البارزة، وتعتبر المدينة الثانية بعد العاصمة مالي كمركز اقتصادي وإداري مهم للبلاد، وتحتوي على عدد من الشعب المرجانية الجميلة ذات الشواطئ الساحرة/nتعتبر السياحة في جزر المالديف من اهم الأنشطة لما تشمله من تنوع من الأنشطة الترفيهية والمناظر الطبيعية الرائعة والممتعة وكذلك المياه الصافية والأنشطة البحرية المختلفة والمميزة التي تلبي معظم احتياجات الزائرين/nتقع مدينة أدو جنوب المالديف، وتعتبر من أهم المعالم البارزة، وتعتبر المدينة الثانية بعد العاصمة مالي كمركز اقتصادي وإداري مهم للبلاد، وتحتوي على عدد من الشعب المرجانية الجميلة ذات الشواطئ الساحرة/nتعتبر السياحة في جزر المالديف من اهم الأنشطة لما تشمله من تنوع من الأنشطة الترفيهية والمناظر الطبيعية الرائعة والممتعة وكذلك المياه الصافية والأنشطة البحرية المختلفة والمميزة التي تلبي معظم احتياجات الزائرين/n",
     descriptionEN:
@@ -1629,7 +1647,7 @@ export const Maldives = [
     nameAR: "Ayada Maldives",
     nameEN: "Ayada Maldives",
     nameRU: "Ayada Maldives",
-    src: "/images/Maldives/.webp",
+    src: "/images/Maldives/10.webp",
     descriptionAR: "موقع الفندق على الأنترنت/nhttps://www.ayadamaldives.com/",
     descriptionEN: "Hotel website /nhttps://www.ayadamaldives.com/",
     descriptionRU: "Сайт отеля/nhttps://www.ayadamaldives.com/",
@@ -1638,7 +1656,7 @@ export const Maldives = [
     nameAR: "Centara Grand Island Resort & Spa Maldives",
     nameEN: "Centara Grand Island Resort & Spa Maldives",
     nameRU: "Centara Grand Island Resort & Spa Maldives",
-    src: "/images/Maldives/.webp",
+    src: "/images/Maldives/11.webp",
     descriptionAR:
       "موقع الفندق على الانترنت/nhttps://www.centarahotelsresorts.com/centaragrand/cirm",
     descriptionEN:
@@ -1682,7 +1700,7 @@ export const Indonesia = [
     nameAR: "اندونيسيا",
     nameEN: "Indonesia",
     nameRU: "Индонезия",
-    src: "/images/indonesia/.webp",
+    src: "/images/indonesia/1.webp",
     descriptionAR:
       "إندونيسيا هي دولة آسيوية، تسمى جمهورية إندونيسيا، تقع في جنوب شرق القارة الآسيوية، ذات مساحة ضخمة، حيث تبلغ مساحتها حوالي 1,919,440 كيلومتر مربع، وتضم حوالي 17,508 جزيرة./nتحتل إندونيسيا المرتبة الرابعة على مستوى العالم من حيث عدد السكان، يوجد في جمهورية إندونيسيا مئات اللغات واللهجات، ويقدر عدد اللغات بحوالي 642 لغة ولهجة، ولكن اللغة الإندونيسية هي اللغة الرسمية هناك، وفي دولة إندونيسيا يوجد ست ديانات، جميعها معترف بها، وعلى الرغم من اعترافها بحرية الدين، إلا أن العدد الأكبر من السكان هم المسلمون، ويبلغ عدد المسلمين في إندونيسيا حوالي 230 مليون مسلم من إجمالي عدد السكان البالغ 238 مليون نسمة، كما يوجد أيضًا الكاثوليكية والبوذية والبروتستانتية والكونفوشيوسية والهندوسية./nتحتل إندونيسيا موقعاً متميزاً، حيث تقع بين خطي عرض 11 درجة جنوباً و6 درجات شمالاً وبين خطي طول 95 درجة و141 درجة شرقاً./nوتتمتع البلاد بنظام اقتصادي مختلط، حيث الملكية حق للقطاع الخاص والقطاع العام، وتحتل المركز الاقتصادي الأول في منطقة جنوب شرق القارة الآسيوية، ويبلغ متوسط ​​إنتاجها المحلي نحو 706.7 مليار دولار، ويتصدر القطاع الصناعي، حيث يشغل نحو 46.4% من الإنتاج المحلي، يليه قطاع الخدمات ثم القطاع الزراعي.",
     descriptionEN:
@@ -1694,13 +1712,12 @@ export const Indonesia = [
     nameAR: "جاكرتا",
     nameEN: "Jakarta",
     nameRU: "Джакарта",
-    src: "/images/indonesia/.webp",
   },
   {
     nameAR: "شاطئ انشول جاكرتا",
     nameEN: "Ancol Beach",
     nameRU: "Пляж Анчол",
-    src: "/images/indonesia/.webp",
+    src: "/images/indonesia/2.webp",
     descriptionAR:
       "يقع شاطئ انشول في منطقة انشول التابعة لـ مدينة جاكرتا الاندونيسية، وهي منطقة هادئة جداً ومناسبة جداً للسياحة حيث يوجد بالقرب منها العديد من الأماكن الترفيهية التي تستحق المشاهدة، منها ملاهي فنتازيا، وعالم بحار سي وورلد، وغيرها الكثير من الأماكن الترفيهية./n وبالنسبة لأماكن الإقامة فالمنطقة هناك تتضمن المئات من فنادق جاكرتا الفاخرة منها بوتري هوتيل، وفندق ميركوري./n يقع شاطئ انشول في منطقة انشول التابعة لـ مدينة جاكرتا الاندونيسية، وهي منطقة هادئة جداً ومناسبة جداً للسياحة حيث يوجد بالقرب منها العديد من الأماكن الترفيهية التي تستحق المشاهدة، منها ملاهي فنتازيا، وعالم بحار سي وورلد، وغيرها الكثير من الأماكن الترفيهية./n وبالنسبة لأماكن الإقامة فالمنطقة هناك تتضمن المئات من فنادق جاكرتا الفاخرة منها بوتري هوتيل، وفندق ميركوري.",
     descriptionEN:
@@ -1712,16 +1729,16 @@ export const Indonesia = [
     nameAR: "ملاهي فنتازيا جاكرتا",
     nameEN: "Fantasy World",
     nameRU: "Фэнтези Ворлд",
-    src: "/images/indonesia/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
+    src: "/images/indonesia/3.webp",
+    descriptionAR: "تقع منتزه فانتازيا الترفيهي في الجزء الشمالي من جاكرتا في منطقة تسمى أنكول، وتبعد حوالي 30 دقيقة فقط بالسيارة عن قلب جاكرتا. المكان هادئ ويقدم العديد من أنواع المتعة والترفيه، كما يوجد شاطئ جميل داخل أنكول حيث يمكنك الاستمتاع بقضاء بعض الوقت. ننصحك باستئجار سيارة للتنقل في المنطقة، حتى تتمكن من الاستمتاع بكل وسائل الترفيه التي تتضمنها المنطقة دون تعب أو إرهاق.",
+    descriptionEN: "Fantasia Amusement Park is located in the northern part of Jakarta in an area called Ancol, and it takes only about 30 minutes by car from the heart of Jakarta. The place is quiet and offers many types of fun and entertainment, and there is also a beautiful beach inside Ancol where you can enjoy spending some time. We advise you to rent a car to move around the area, so that you can enjoy all the entertainment that the area includes without getting tired or exhausted.",
+    descriptionRU: "Парк развлечений Fantasia расположен в северной части Джакарты в районе под названием Анкол, и это займет всего около 30 минут езды на машине от центра Джакарты. Место тихое и предлагает множество видов веселья и развлечений, а также есть прекрасный пляж внутри Анкола, где вы можете приятно провести время. Мы советуем вам арендовать автомобиль, чтобы перемещаться по району, чтобы вы могли наслаждаться всеми развлечениями, которые предлагает этот район, не уставая и не изнуряя себя.",
   },
   {
     nameAR: "المتحف الوطنى جاكرتا",
     nameEN: "National Museum of Indonesia",
     nameRU: "Национальный музей Индонезии",
-    src: "/images/indonesia/.webp",
+    src: "/images/indonesia/4.webp",
     descriptionAR:
       "تقع منتزه فانتازيا الترفيهي في الجزء الشمالي من جاكرتا في منطقة تسمى أنكول، وتبعد حوالي 30 دقيقة فقط بالسيارة عن قلب جاكرتا. المكان هادئ ويقدم العديد من أنواع المتعة والترفيه، كما يوجد شاطئ جميل داخل أنكول حيث يمكنك الاستمتاع بقضاء بعض الوقت. ننصحك باستئجار سيارة للتنقل في المنطقة، حتى تتمكن من الاستمتاع بكل وسائل الترفيه التي تتضمنها المنطقة دون تعب أو إرهاق.",
     descriptionEN:
@@ -1733,7 +1750,7 @@ export const Indonesia = [
     nameAR: "حديقة راجوانا جاكرتا",
     nameEN: "Ragunan Zoo",
     nameRU: "Зоопарк Рагунан",
-    src: "/images/indonesia/.webp",
+    src: "/images/indonesia/5.webp",
     descriptionAR:
       "تقع هذه الحديقة التي تبلغ مساحتها 147 هكتارا في جالان هارسونو آرإم، باسار مينغجو، جنوب جاكرتا.",
     descriptionEN:
@@ -1745,7 +1762,7 @@ export const Indonesia = [
     nameAR: "متحف الدمى",
     nameEN: "Puppet Museum",
     nameRU: "Музей кукол",
-    src: "/images/indonesia/.webp",
+    src: "/images/indonesia/6.webp",
     descriptionAR:
       "إنه متحف أثري وتاريخي وإثنولوجي وجغرافي يقع في جالان ميدان ميرديكا بارات، وسط مدينة جاكرتا، على الجانب الغربي من ميدان ميرديكا. يُعرف شعبيًا باسم مبنى الفيل (بالإندونيسية: Gedung Gajah) بسبب تمثال الفيل في طاحونة. تغطي مجموعاته الواسعة كل إندونيسيا وكل تاريخها تقريبًا. سعى المتحف إلى الحفاظ على التراث الإندونيسي لمدة قرنين من الزمان.",
     descriptionEN:
@@ -1762,7 +1779,7 @@ export const Indonesia = [
     nameAR: "Doubletree by Hilton Hotel",
     nameEN: "Doubletree by Hilton Hotel",
     nameRU: "Отели в Джакарте",
-    src: "/images/indonesia/.webp",
+    src: "/images/indonesia/7.webp",
     descriptionAR:
       'يقع فندق دبلترى باي هيلتون جاكرتا إندونيسيا في موقع متميز للغاية، حيث إنه يبعد عن "ا إندونيسيا" بمسافة كيلومترين ونصف الكيلو تقريبًا، ويبعد الفندق أيضًا عن محطة  للقطار بمسافة كيلومترين ونصف الكيلو تقريبًا، كذلك يبعد عن مطار "سوكارنو هاتا الدولي" بمسافة اثنين وعشرين كيلو مترًا ويُعد الأقرب لأهم الأماكن السياحية في جاكرتا',
     descriptionEN:
@@ -1774,7 +1791,7 @@ export const Indonesia = [
     nameAR: "جراند حياة جاكرتا",
     nameEN: "Grand Hyatt Jakarta",
     nameRU: "Гранд Хаят Джакарта",
-    src: "/images/indonesia/.webp",
+    src: "/images/indonesia/8.webp",
     descriptionAR:
       "يتميز فندق جراند حياة جاكرتا إندونيسيا بموقعه المميز في قلب مدينة جاكرتا، لذلك فهو قريب من مراكز ومناطق التجول والتسوق، كما أنه يبعد عن النصب التذكاري الوطني الشهير في إندونيسيا بحوالي 15 دقيقة بواسطة السيارة.كما أنه على بعد أمتار قليلة من أكثر المعالم السياحية شهرة في إندونيسيا موقع الفندق على الانترنت/nhttps://www.hyatt.com/grand-hyatt/en-US/jakgh-grand-hyatt-jakarta",
     descriptionEN:
@@ -1786,7 +1803,7 @@ export const Indonesia = [
     nameAR: "فندق بوروبودور جاكارتا",
     nameEN: "Hotel Borobudur Jakarta",
     nameRU: "Отель Бородобудур Джакарта",
-    src: "/images/indonesia/.webp",
+    src: "/images/indonesia/9.webp",
     descriptionAR:
       "يقع فندق بوروبودور جاكارتا في قلب مدينة جاكرتا ويوجد بالقرب من العديد من المرافق الأساسية الخاصة بالمدينة  حيث يبعد مسافة 3 كيلو متر فقط من متحف إندونيسيا العالمي ومركز المعارض  PRJ Exhibition  والعديد من المعالم السياحية الشهيرة في إندونيسيا،كما يقع الفندق بالقرب من مطارين الأول مطار Halim Perdanakusuma حيث يبعد عنة 12 كيلو متر فقط ومطار Soekarno Hatta الذي تمتد الرحلة منة إلى الفندق مسافة 30 دقيقة فقط بالسيارة. موقع الفندق على الانترنت/nhttps://www.hotelborobudur.com/ ",
     descriptionEN:
@@ -1798,12 +1815,13 @@ export const Indonesia = [
     nameAR: "بالي",
     nameEN: "Bali",
     nameRU: "Бали",
+    src: "/images/indonesia/10.webp",
   },
   {
     nameAR: "بحيرة بورا أولان دانو براتان",
     nameEN: "Lake Bratan",
     nameRU: "Озеро Братан",
-    src: "/images/indonesia/.webp",
+    src: "/images/indonesia/11.webp",
     descriptionAR:
       "تقع البحيرة في جزيرة بالي، أفضل جزيرة إندونيسية على الإطلاق، بالقرب من جبال بيدوجول، المنطقة هناك طبيعية ونقية، وتتميز بالنظافة الشديدة، لذا فإن المكان يوفر للزائر فرصة استنشاق هواء نقي خالي من الملوثات التي تسببها عوادم السيارات الحديثة التي أصبحت تحيط بنا من كل اتجاه، كما يتميز المكان بالهدوء، لذا فهي فرصة جيدة للاستمتاع ببعض الصفاء الذهني",
     descriptionEN:
@@ -1815,7 +1833,7 @@ export const Indonesia = [
     nameAR: "بالي بيرد بارك",
     nameEN: "Bali Bird Park",
     nameRU: "Парк птиц Бали",
-    src: "/images/indonesia/.webp",
+    src: "/images/indonesia/12.webp",
     descriptionAR:
       "تقع الحديقة في أفضل جزيرة إندونيسية وهي بالي، وتوفر فرص متعة لا مثيل لها للزوار للاستمتاع بها، كما تضم ​​الجزيرة مئات الأماكن الترفيهية والعديد من خيارات التسوق الممتازة، وتحتوي الجزيرة على الكثير من الفنادق التي توفر لك إقامة مريحة ومميزة، وتعتبر الحديقة مكانًا مثاليًا إذا كنت مهتمًا برؤية الطيور الملونة، وتستغرق الجولة داخلها حوالي 3 ساعات للتعرف على جميع أجزائها.",
     descriptionEN:
@@ -1827,7 +1845,7 @@ export const Indonesia = [
     nameAR: "حديقة الحيوان بالي",
     nameEN: "Bali Zoo",
     nameRU: "Зоопарк Бали",
-    src: "/images/indonesia/.webp",
+    src: "/images/indonesia/13.webp",
     descriptionAR:
       "هي حديقة جميلة تقع في إندونيسيا وتحديداً في قرية سنجبادو، سوكاواتي، جيانيار، يمكنك الوصول إلى الحديقة في رحلة تستغرق حوالي 45 دقيقة إذا كنت في كوتا أو نوسادوا، أما إذا كنت في سانور أو أوبود فلن تستغرق الرحلة منك سوى 30 دقيقة بالسيارة، والطريق إليها سهل في جميع الأحوال وغير متعب.",
     descriptionEN:
@@ -1839,7 +1857,7 @@ export const Indonesia = [
     nameAR: "سانور بالي",
     nameEN: "Sanur",
     nameRU: "Санур Бали",
-    src: "/images/indonesia/.webp",
+    src: "/images/indonesia/14.webp",
     descriptionAR:
       "تقع القرية في جزيرة بالي، وتتشابه القرية في طابعها كثيرًا مع باقي الجزيرة، فهي جميلة جدًا، وتوفر العديد من الأنشطة الترفيهية لزوارها، كما يوجد بها مئات الفنادق الإندونيسية، التي تسهل الإقامة عند زيارتها، وهي أماكن إقامة مريحة حقًا، كما تأخذ القرية نصيبها من مراكز التسوق والمطاعم والمقاهي المميزة.",
     descriptionEN:
@@ -1857,7 +1875,7 @@ export const Indonesia = [
     nameAR: "Meliá Bali",
     nameEN: "Meliá Bali",
     nameRU: "Meliá Bali",
-    src: "/images/indonesia/.webp",
+    src: "/images/indonesia/15.webp",
     descriptionAR:
       "الفندق مصنف كفندق خمس نجوم، ويحتوي الفندق على 3 مسابح خارجية وشاطئ خاص./n موقع الفندق/n https://www.melia.com/en/hotels/indonesia/bali/melia",
     descriptionEN:
@@ -1869,7 +1887,7 @@ export const Indonesia = [
     nameAR: "منتجع أيانا بالي",
     nameEN: "AYANA Resort Bali",
     nameRU: "Курорт AYANA Бали",
-    src: "/images/indonesia/.webp",
+    src: "/images/indonesia/16.webp",
     descriptionAR:
       "ما يميز المنتجع هو موقعه القريب من مركز المدينة حيث يبعد عنها مسافة 13 كيلو متر فقط من مركز المدينة يقع الفندق تحديداً في جيمباران بالي وهي منطقة نابضة بالحياة ويمكن للنزلاء من هناك الوصول إلى العديد من الأماكن الرئيسية في المدينة مثل المعالم السياحية المشهورة في جزيرة بالي. موقع الفندق على الانترنت/nhttps://www.ayana.com ",
     descriptionEN:
@@ -1881,7 +1899,7 @@ export const Indonesia = [
     nameAR: "منتجع أنانتارا أولواتو بالي",
     nameEN: "Anantara Uluwatu Bali Resort",
     nameRU: "Курорт Anantara Uluwatu Bali",
-    src: "/images/indonesia/.webp",
+    src: "/images/indonesia/17.webp",
     descriptionAR:
       "يقع المنتجع على بعد 15 دقيقة من المعبد الهندوسي ومعبد آخر يُعرف باسم Pura Luhur Uluwatu. يقع المنتجع أيضًا على بعد 15 دقيقة بالسيارة من شاطئ Nusa Dua. ستجد أيضًا بالقرب منه منتزه Garuda Wisnu Kencana، الذي يبعد 20 دقيقة بالسيارة فقط، وهو أحد المنتزهات التي ستسمح لك بقضاء يوم ممتع في وسط الطبيعة. بالنسبة للزوار من الخارج، يقع المنتجع على بعد 40 دقيقة من مطار Ngurah Rai الدولي. /n موقع الفندق https://www.anantara.com/en/uluwatu-bali",
     descriptionEN:
@@ -1893,49 +1911,47 @@ export const Indonesia = [
     nameAR: "بونشاك",
     nameEN: "Puncak",
     nameRU: "Пунчак",
-    src: "/images/indonesia/.webp",
+   
+  },
+  {
+    nameAR: "حديقة تامان ماتا هاري بونشاك",
+    nameEN: "Taman Matahari",
+    nameRU: "Парк Таман Мата Хари Пунчак",
+
+    src: "/images/indonesia/18.webp",
     descriptionAR:
       "تقع الحديقة في مدينه بونشاك الإندونيسية تحديداً في المنطقة الغربية من جاوه على بعد مسافه تمتد حوالى 100  كيلو متر من جاكرتا، تم تأسيسها في عام 2007 م. وهي كانت من المشاريع التجارية الخاصة، تمتاز الحديقة بحجمها الشاسع حيث تمتد على مساحة 16.5 هكتار، وبسبب هذه المساحة الضخمة تضم الحديقة بداخلها العديد من العوالم الترفيهية الممتعة ",
     descriptionEN:
       "The park is located in the Indonesian city of Puncak, specifically in the western region of Java, about 100 kilometers from Jakarta. It was established in 2007 AD. It was a private commercial project. The park is distinguished by its vast size, as it extends over an area of ​​16.5 hectares. Because of this huge area, the park includes many enjoyable entertainment worlds within it.",
     descriptionRU:
       "Парк расположен в индонезийском городе Пунчак, в западном регионе Явы, примерно в 100 километрах от Джакарты. Он был основан в 2007 году нашей эры. Это был частный коммерческий проект. Парк отличается огромными размерами, поскольку занимает площадь 16,5 га. Благодаря такой огромной территории парк включает в себя множество развлекательных миров.",
+
+    
   },
   {
-    nameAR: "حديقة تامان ماتا هاري بونشاك",
-    nameEN: "Taman Matahari",
-    nameRU: "Парк Таман Мата Хари Пунчак",
-    src: "/images/indonesia/.webp",
+    nameAR: "حديقة سفاري بونشاك",
+    nameEN: "Safari Park",
+    nameRU: "Сафари-парк Пунчак",
+    src: "/images/indonesia/19.webp",
     descriptionAR:
       "تقع حديقة سفاري بونشاك في الجبل الاخضر بالمنطقة الغربية من إقليم جوة على بعد خطوات قليلة من الطريق السريع الذى يصل فيما بين باندونق و جاكرتا.وهناك العديد من فنادق بونشاك التي تقع على بعد خطوات قليلة منها من اهمها منتجع وسبا بسيونا ألام الحاصل على أربع نجوم والذي يقدم إقامة فاخرة للنزلاء، ويبعد فقط عن الحديقة مسافة تستغرق مدتها خمس دقائق بواسطة السيارة و فندق سيروني  .هناك أيضاً فندق رويال سفاري وهو منتجع فاخر حاصل على 4 نجوم ويبعد خطوات من الحديقة تم إعداد الحديقة بشكل أشبه بالمحميات الطبيعية لذا فستجدون الحيوانات تتصرف فيها بحرية تامة كيفما يحلو لها، ويمكنكم أنتم بالتالي التمتع بالتقرب منها والتعامل معها بشكل مباشر",
     descriptionEN:
       ",Puncak Safari Park is located in the Green Mountain in the western region of Goa Province, a few steps from the highway that connects Bandung and Jakarta.There are many Puncak hotels located a few steps away, the most important of which is the four-star Pesona Alam Resort and Spa, which offers luxurious accommodation for guests. It is only a five-minute car ride from the park and the Sironi Hotel.There is also the Royal Safari Hotel, which is a 4-star luxury resort just steps away from the park. The park has been prepared in a way similar to a natural reserve, so you will find the animals behaving completely freely as they please, and you can therefore enjoy getting close to them and interacting with them directly.",
     descriptionRU:
       "Сафари-парк Пунчак расположен на Зеленой горе в западном регионе провинции Гоа, в нескольких шагах от шоссе, соединяющего Бандунг и Джакарту.В нескольких шагах от отеля расположено множество отелей Пунчака, самым важным из которых является четырехзвездочный курортный спа-отель Pesona Alam, предлагающий гостям роскошные номера. Он находится всего в пяти минутах езды на машине от парка и отеля Sironi. .В нескольких шагах от парка также находится отель Royal Safari, роскошный 4-звездочный курорт. Парк подготовлен так же, как природный заповедник, поэтому животные ведут себя совершенно свободно, как им заблагорассудится. и поэтому вы можете получать удовольствие от близости к ним и непосредственного взаимодействия с ними.",
+   
   },
   {
-    nameAR: "حديقة سفاري بونشاك",
-    nameEN: "Safari Park",
-    nameRU: "Сафари-парк Пунчак",
-    src: "/images/indonesia/.webp",
+    nameAR: "الشلالات السبعة بونشاك",
+    nameEN: "Seven Waterfalls",
+    nameRU: "Семь водопадов Пунчак",
+    src: "/images/indonesia/20.webp",
     descriptionAR:
       "المعالم الطبيعية السياحية داخل اندونيسيا لا تعد ولا تحصي حيث هناك العديد منها، واليوم معنا أحدها ألا وهي الشلالات السبعة بونشاك ، يأتي إلى هذه المياه العديد من السكان المحليين، كون أن هناك اعتقاد سائد بإن هذه المياه لديها قدرات شفائية عجيبة يمكن من خلالها التخلص من الأمراض التي تصيب الجسم كالأمراض الجلدية، وأمراض القلب، والروماتيزم، وأمراض الكلى وغيرها من الأمراض المتنوعة .",
     descriptionEN:
       "The natural tourist attractions within Indonesia are countless, as there are many of them, and today with us is one of them, which is the seven waterfalls of Puncak. Many local residents come to these waters, because there is a widespread belief that these waters have amazing healing powers through which diseases can be eliminated. That affect the body, such as skin diseases, heart diseases, rheumatism, kidney diseases and other various diseases.",
     descriptionRU:
       "Природные туристические достопримечательности Индонезии бесчисленны, так как их много, и сегодня с нами одна из них – семь водопадов Пунчак. Многие местные жители приезжают к этим водам, поскольку существует широко распространенное мнение, что именно эти воды. обладают удивительной целебной силой, с помощью которой можно устранить болезни, поражающие организм, такие как кожные заболевания, болезни сердца, ревматизм, заболевания почек и другие различные заболевания.",
-  },
-  {
-    nameAR: "الشلالات السبعة بونشاك",
-    nameEN: "Seven Waterfalls",
-    nameRU: "Семь водопадов Пунчак",
-    src: "/images/indonesia/.webp",
-    descriptionAR:
-      "المعالم الطبيعية السياحية داخل اندونيسيا لا تعد ولا تحصي حيث هناك العديد منها، واليوم معنا أحدها ألا وهي الشلالات السبعة بونشاك ، يأتي إلى هذه المياه العديد من السكان المحليين، كون أن هناك اعتقاد سائد بإن هذه المياه لديها قدرات شفائية عجيبة يمكن من خلالها التخلص من الأمراض التي تصيب الجسم كالأمراض الجلدية، وأمراض القلب، والروماتيزم، وأمراض الكلى وغيرها من الأمراض المتv",
-    descriptionEN:
-      "The natural tourist attractions within Indonesia are countless, as there are many of them, and today with us is one of them, which is the seven waterfalls of Puncak. Many local residents come to these waters, because there is a widespread belief that these waters have amazing healing powers through which diseases can be eliminated. Which affect the body, such as skin diseases, heart diseases, rheumatism, kidney diseases and other diseases",
-    descriptionRU:
-      "Природные туристические достопримечательности Индонезии бесчисленны, так как их много, и сегодня с нами одна из них – семь водопадов Пунчак. Многие местные жители приезжают к этим водам, поскольку существует широко распространенное мнение, что именно эти воды. обладают удивительной целительной силой, с помощью которой можно устранить болезни, поражающие организм, такие как кожные заболевания, болезни сердца, ревматизм, болезни почек и другие заболевания.",
   },
   {
     nameAR: "فنادق بونشاك",
@@ -1946,7 +1962,7 @@ export const Indonesia = [
     nameAR: "منتجع وسبا بسيونا ألام",
     nameEN: "Pesona Alam Resort & Spa",
     nameRU: "Курорт и спа Песона Алам",
-    src: "/images/indonesia/.webp",
+    src: "/images/indonesia/21.webp",
     descriptionAR:
       "يقع الفندق في رقعة مميزة، حيث إنه قريب جدًا من المعالم السياحية الأشهر في بونشاك الاندونيسية مثل حديقة الحيوان، حيث إنه يقع على بعد خمس دقائق منها كما أنه يبعد عن مطار حليم بيرداناكوسوما بحوالي 49 كيلومترًا، لذلك فهو يعتبر أقرب المطارات إلى الفندق بينما يبعد الفندق عن مطار حسين ساسترانيغارا ب 72 كيلومتر، ويقع الفندق على بعد 72.1 كيلومتر من مطار سوكارنو هاتا الدولي. موقع الفندق على الانترنت/nhttps://www.discoverasr.com/en/others/indonesia ",
     descriptionEN:
@@ -1958,7 +1974,7 @@ export const Indonesia = [
     nameAR: "فندق لي إميننس بونشاك",
     nameEN: "Le Eminence Puncak Hotel",
     nameRU: "Отель Le Eminence Пунчак",
-    src: "/images/indonesia/.webp",
+    src: "/images/indonesia/22.webp",
     descriptionAR:
       "يقع الفندق بالاس في قلب الجبل الأخضر في أعلى المرتفع في منطقة سيباناس ذات المناظر الخلابة والجذابة والمتوفرة فيه أفضل معالم إندونيسيا على بعد 15. كيلو متر فقط، ويوجد استانا شيباناس على بعد مسافة 10 دقائق سيرا على الأقدام، وتقع حديقة سيبوداس النباتية على بعد 15 دقيقة منه، وحوالي نصف ساعة من سفاري، ويوجد مطار سوكارنو هاتا الدولي على بعد 90 دقيقة بالسيارة منه. موقع الفندق على الانترنت/nhttps://www.le-eminencepuncak.com/",
     descriptionEN:
@@ -1998,20 +2014,19 @@ export const Turkey = [
     nameRU: "Турция",
     descriptionEN:
       "هي دولة عابرة للقارات يقع أغلبها ف ش به جزيرة ا لناضول ف غرب أ س يا، والجزء ا لصغر ف ش به جزيرة البلقان ف جنوب شرق أوروبا،وهي الجزء ا لوروبي من تركيا، مفصولة عن ا لناضول ببحر مرمرة، ومضيقي البوسفور والدردنيل، فيها مدينة اسطنبول التي تمتد بين أوروباوأ س يا، هي أكبر مدينة ف البلاد، بي نم أنقرة هي العاصمة ويحد تركيا من الشمال الغربي اليونان وبلغاريا ومن الشمال البحر ا لسود، ومن الشمالالشرقي جورجيا، وشرقا أرمينيا، والمس تحاطة ا لذربيجانية نخجوان و ايران، ومن الجنوب الشرقي العراق، ومن الجنوب سوريا والبحر ا لبيضالمتوسط، ويطل الغرب على بحر ايجه.هي دولة عابرة للقارات يقع أغلبها ف ش به جزيرة ا لناضول ف غرب أ س يا، والجزء ا لصغر ف ش به جزيرة البلقان ف جنوب شرق أوروبا،وهي الجزء ا لوروبي من تركيا، مفصولة عن ا لناضول ببحر مرمرة، ومضيقي البوسفور والدردنيل، فيها مدينة اسطنبول التي تمتد بين أوروباوأ س يا، هي أكبر مدينة ف البلاد، بي نم أنقرة هي العاصمة ويحد تركيا من الشمال الغربي اليونان وبلغاريا ومن الشمال البحر ا لسود، ومن الشمالالشرقي جورجيا، وشرقا أرمينيا، والمس تحاطة ا لذربيجانية نخجوان و ايران، ومن الجنوب الشرقي العراق، ومن الجنوب سوريا والبحر ا لبيضالمتوسط، ويطل الغرب على بحر ايجه.",
-    src: "/images/.webp",
+    src: "/images/Turkey/1.webp",
     descriptionAR:
       "It is a transcontinental country, most of which is located on the island of Anatolia in western Asia, and a small part is located on the island of the Balkans in southeastern Europe. It is the European part of Turkey, separated from Anatolia by the Sea of ​​Marmara, and the Bosphorus and Dardanelles straits, and includes the city of Istanbul, which extends between Europe. In Asia, it is the largest city in the country, while Ankara is the capital. Turkey is bordered to the northwest by Greece and Bulgaria, to the north by the Black Sea, and to the north by To the east is Georgia, to the east is Armenia, it is surrounded by Azerbaijan, Nakhchivan and Iran, to the southeast is Iraq, and to the south is Syria and the White Sea. The Mediterranean, overlooking the west on the Aegean Sea.",
     descriptionRU:
       "Это трансконтинентальная страна, большая часть которой расположена на острове Анатолия в Западной Азии, а небольшая часть — на острове Балканы в юго-восточной Европе./nЭто европейская часть Турции, отделенная от Анатолии Мраморным морем и проливами Босфор и Дарданеллы и включающая город Стамбул, простирающийся между Европой./nВ Азии это крупнейший город страны, а Анкара — столица Турции. На северо-западе она граничит с Грецией и Болгарией, на севере — с Черным морем, а на севере — с Черным морем./nНа востоке находится Грузия, на востоке — Армения, она окружена Азербайджаном, Нахчываном и Ираном, на юго-востоке — Ирак, а на юге — Сирия и Белое море./nСредиземное море с видом на запад, на Эгейское море.Это трансконтинентальная страна, большая часть которой расположена на острове Анатолия в Западной Азии, а небольшая часть — на острове Балканы в юго-восточной Европе./nЭто европейская часть Турции, отделенная от Анатолии Мраморным морем и проливами Босфор и Дарданеллы и включающая город Стамбул, простирающийся между Европой./nВ Азии это крупнейший город страны, а Анкара — столица Турции. На северо-западе она граничит с Грецией и Болгарией, на севере — с Черным морем, а на севере — с Черным морем./nНа востоке находится Грузия, на востоке — Армения, она окружена Азербайджаном, Нахчываном и Ираном, на юго-востоке — Ирак, а на юге — Сирия и Белое море./nСредиземное море с видом на запад, на Эгейское море.",
   },
-
   {
     nameAR: "أنقرة",
     nameEN: "Ankara",
     nameRU: "Анкара",
     descriptionEN:
       "ترتفع مدينة أنقرة فوق منحدر شديد على ضفاف نهر انغوري سو، وهي عاصمة تركيا وثاني أكبر مدنها من حيث عدد السكان، كما أنها تتميز بطابعها ا لوروبي الحديث الذي لا يخلو من معالم تُ ذ كر زائريها بتاريخها المتنوع. ويضم المشهد الثقاف للمدينة قلاعًا عتيقة وبقايا أثرية من حضارات متعددة، منها الحضارة الحيثية والفريجية والهيلينستية والرومانية والب ن يزطية والعثمانية .",
-    src: "/images/.webp",
+    src: "/images/Turkey/2.webp",
     descriptionAR:
       "The city of Ankara rises above a steep cliff on the banks of the Anguri River Su, the capital of Türkiye and its second largest city in terms of number population, and is characterized by its modern European character It is a landmark that reminds visitors of its diverse history. It includes the cultural scene The city has ancient castles and archaeological remains from multiple civilizations, including Hittite, Phrygian, Hellenistic, Roman and Byzantine civilizations And the Ottoman.",
     descriptionRU:
@@ -2022,7 +2037,7 @@ export const Turkey = [
     nameAR: "ضريح أتاتورك",
     nameEN: "Ataturk's Mausoleum",
     nameRU: "Мавзолей Ататюрка",
-    src: "/images/.webp",
+    src: "/images/Turkey/3.webp",
     descriptionAR:
       "هو ضريح مصطفى كمال أتاتورك، يقع الضريح ف العاصمة أنقرة وصمم من قبل المعماريين أمين أونات و أحمد أورهان أردا، الذين تغل ب تصميمهم على 48 اشتراك أ خر من عدة دول، ف مسابقة قادتها الحكومة التركية ف 1941. الموقع هو أيضً اًًًًً المس تق ر للرليك الثاني لتركيا عص مًًًًً اينونو الذي دفن هن اًك بع دً وف اًت هً ع اًم 1973 . يواجهً قبر ضريح أتاتورك، ف الجهة المقابلة من الموقع .",
     descriptionEN:
@@ -2034,7 +2049,7 @@ export const Turkey = [
     nameAR: "جامع كوكاتيب",
     nameEN: "Kocatepe Mosque",
     nameRU: "Мечеть Кочатепе",
-    src: "/images/.webp",
+    src: "/images/Turkey/4.webp",
     descriptionAR:
       "هو أكبر مسجد ف العاصمة التركية أنقرة ومن أكبر مساجد العالم حيث يحتوي الحرم على مصلى واسع يمكنه احتواء 24 ألف مصلي بالرغم من أنه مسجد حديث لكنه ف الواقع مصمم على الطراز العثماني الكلاس يكي ليعتبر بناء انتقائي مس توحى من جامع السليمية ف أد ن رة، ومساجد Sehzade والسلطان أحمد ف اسطنبول و يحتوي على أربع مآ ذن",
     descriptionEN:
@@ -2046,7 +2061,7 @@ export const Turkey = [
     nameAR: "قلعة أنقرة/ فاتح ترك يلماز/ ا لناضو ل",
     nameEN: "Ankara Castle / Fatih Turk Yilmaz / Anatolia",
     nameRU: "Замок Анкары / Фатих Тюрк Йылмаз / Аль-Надул",
-    src: "/images/.webp",
+    src: "/images/Turkey/5.webp",
     descriptionAR:
       "ف الماضي، كان قلعة أنقرة تش كّ حصنا منيعا أنشئ لغايات دفاعية، لكنها اليوم، بات تحفة معمارية و أثرية بالعاصمة التركية، تحمل زوارها ف رحلة حالمة عبر الزمن . خبراء يرجحون أن تاريخ بناء القلعة يعود الى 3 أ لاف عام، ما يجعلها رمزا تاريخيا ضاربا ف عمق الوجود ا لانساني . الرحالة أوليا تشلبي، يقول ف وصفه لقلعة أنقرة التي زارها ف القرن ال 17 :'تضم أنقرة قلعة شُ ي دت على جبل مرتفع، من أربع طوابق من الحجر ا لبيض، و أحيط بثلاثة أسوار متداخلة، فيما تحيط منطقة صخرية بالقسم الداخلي للقلعة",
     descriptionEN:
@@ -2063,7 +2078,7 @@ export const Turkey = [
     nameAR: "Sheraton Ankara Hotel",
     nameEN: "Sheraton Ankara Hotel",
     nameRU: "Sheraton Ankara Hotel",
-    src: "/images/.webp",
+    src: "/images/Turkey/6.webp",
     descriptionAR:
       "يعد فندق شيراتون أنقرة مثالاً رالعًا للهندسة المعمارية حيث يقع ف يطة. با لاضافة 􀟾 قلب المدينة، ويتمتع باطلالات خلابة على المناطق ا ساعة، 24 الى محطة العمل ف الموقع، وخدمة الغرف على مدار والنادي الصحي مع منطقة للياقة البدنية يمكن الوصول اليها على نجوم مجموعة من وسالل الراحة، 5 مدار الساعة، يقدم الفندق ذو ال بما ف ذلك حمام س باحة داخلي، وخدمات التدليك، محآكاة الجولف، وملاعب الاسكواش والتنك، با لاضافة الى مطعم رالع وبار جاز اس تثنائي، يعتبر من بين أكثر ا لماكن شهرة ف المدينة موفع الفندق على الان ن تر/nhttps://www.marriott.com/en-us/hotels/esbsi-sheraton-ankara-hotel",
     descriptionEN:
@@ -2075,7 +2090,7 @@ export const Turkey = [
     nameAR: "Ankara Hiltonsa",
     nameEN: "Ankara Hiltonsa",
     nameRU: "Ankara Hiltonsa",
-    src: "/images/.webp",
+    src: "/images/Turkey/7.webp",
     descriptionAR:
       "يقع فندق Ankara hiltonsa ف منطقة حيوية على بعد 5 دقالق سيراً على ا لقدام من شارع Tunali Hilmi للتسوق. ويضم مس بحًا داخليًا ومركزًا صحيًا. يحتوي الفندق على صالة تنفيذية ومركز لرجال انية ف المناطق العامة 􀟽 ا لعمال. وتتوفر خدمة الواي فاي ا يقع الفندق بجوار قلعة أنقرة التاريخية والبلدة القديمة. ويبعد مسافة 15 دقيقة فقط سيراً على ا لقدام عن منطقة Kizilay للتسوق. يقع Ankara hiltonsa على بعد 45 دقيقة بالس يارة من مطار أنقرة اسنبوغا. موقع الفندق على الان ن تر hiltonsa-ankara/nhttps://www.hilton.com/en/hotels/ankhitw",
     descriptionEN:
@@ -2085,9 +2100,9 @@ export const Turkey = [
   },
   {
     nameAR: "اسطنبول",
-    nameEN: "Hiltonsa",
+    nameEN: "Istanbul",
     nameRU: "Стамбул",
-    src: "/images/.webp",
+    src: "/images/Turkey/8.webp",
     descriptionAR:
       "أكثر ما يميز اس طًًًًنبول، وقوعها ف قارو أوروبا واس يا ف أ ن واحد فه ي مكونة من جزلين شرقي أ س يوي وغربي أوربي يفصل بينهما مضيق البسفور، الذي هو ال خر يعتبر من أهم ا لماكن شهرة و اقبالا من طرف سكان وزوار هذ المدينة المميزة",
     descriptionEN:
@@ -2099,7 +2114,7 @@ export const Turkey = [
     nameAR: "مضيق وجسر البوسفور",
     nameEN: "Bosphorus Strait and Bridge",
     nameRU: "Босфорский пролив и мост",
-    src: "/images/.webp",
+    src: "/images/Turkey/9.webp",
     descriptionAR:
       "يعتبر جسر البوسفور من أجمل الاماكن ف اسطنبول، حيث يقع فوق مضيق البوسفور الذي يصل البحر ا لسود من الشمال ببحر مرمرة من الجنوب، ويبد أ الطرف الشرقي للجسر ف منطقة بايلربيه ف الجانب ال س يوي من مدينة اسطنبول، بينم يصل طرفه الغربي الى منطقة أورتاكوي ف أمتار، 1510 الشطر ا لوروبي من المدينة. ويبلغ طول الجسر متراً، وهو 65 متراً، ويرتفع عن سطح البحر 39 وعرضه 165 محمول بواسطة أعمدة من المعادن والخرسانة يبلغ ارتفاعها متراً، ويبعد كل عمود منها عن ال خر مسافة عشرة أمتار.",
     descriptionEN:
@@ -2111,7 +2126,7 @@ export const Turkey = [
     nameAR: "جزر الأميرات في اسطنبول",
     nameEN: "Princes' Islands in Istanbul",
     nameRU: "Принцевы острова в Стамбуле",
-    src: "/images/.webp",
+    src: "/images/Turkey/10.webp",
     descriptionAR:
       "وهي عبارة عن مجموعة من الجزر الواقعة على بحر مرمرة منها ٤ جزر أصغر مساحة، يمتد تاريخها للعهد الب ن يزطي ومن بعد 5كبرى و الى الحكم العثماني. تقع جزيرة ا لميرات على بحر مرمرة، وهي عبارة عن مجموعة من الجزر الصغيرة التي تحتوي على مناظر طبيعية جميلة، كم تقريباً، ومن أكبر هذ الجزر جزيرة بيوك أ دا 15 وتبلغ من المساحة كلم مربع، وتضم وجهتين واحدة تطل 5.4 حيث تبلغ مساحتها نحو على الجهة الشمالية، وا لخرى تطل على الجهة الجنوبية من الجزيرة",
     descriptionEN:
@@ -2123,7 +2138,7 @@ export const Turkey = [
     nameAR: "اكواريوم اسطنبول",
     nameEN: "Istanbul Aquarium",
     nameRU: "Стамбульский аквариум",
-    src: "/images/.webp",
+    src: "/images/Turkey/11.webp",
     descriptionAR:
       "يتصدر أكواريوم اسطنبول قائمة أجمل ا ل ماكن ف اسطنبول، حيث يقع ف منطقة فلوريا بالقرب من الساحل البحري، نظراً للمساحة الكبيرة التي يضمها أكواريوم اسطنبول، ف انه يعد من أضخم الحدالق المالية ف تركيا والشرق ا لوسط، والتي تحتوي على أنواع كثيرة من ا لسماك والمجلوقات البحرية، من أمثال القروش وا لخطبوط والدلافين وغيرها، ويس تطيع الزائر لل كوا ريوم التمتع بمشاهدة عروض ا لسما ك والدلافين من خلال الممرات المالية للحوض البحري",
     descriptionEN:
@@ -2131,14 +2146,25 @@ export const Turkey = [
     descriptionRU:
       "Стамбульский аквариум возглавляет список самых красивых мест Стамбула, так как... Расположен в районе Флория недалеко от морского побережья, благодаря площади Стамбульский аквариум занимает большую территорию и считается одним из крупнейших аквариумов. Финансы в Турции и на Ближнем Востоке, которые содержат множество типов Рыбы и морские существа, такие как акулы, осьминоги и дельфины. А другие, посетитель Аквариума может насладиться просмотром рыбных шоу. И дельфины по финансовым коридорам морского аквариума",
   },
-
+  {
+    nameAR: "برج غلاطة ",
+    nameEN: " Galata Tower",
+    nameRU: "Галатская башня",
+    descriptionEN:
+      "Also called the Turris Christea, the building dates back to the Middle Ages. It is a high cylinder-shaped building with a truncated roof that overlooks the horizon and provides a panoramic view of the historic peninsula of Istanbul and its suburbs. It is often confused with the ancient Galata Tower, which was a nine-storey tower called the Great Tower, and is 66.90 metres high, 62.59 metres without decoration at the top, and 51.65 metres high. From the observation deck, it was the tallest in the city when it was built. It was built in an area located at a height of 61 meters above sea level. The outer diameter of the tower is 16.45 meters at the base and 8.95 meters in diameter, and the height of the walls is 3.75 meters. There is a restaurant and a café on the upper floors overlooking Istanbul and the Bosphorus. There is also a nightclub on the upper floors that hosts entertainment shows. There are two working elevators that take visitors from the lower floor to the upper floors.",
+    src: "/images/Turkey/12.webp",
+    descriptionAR:
+      "يُعرف أيضًا باسم برج المسيح، ويعود تاريخ المبنى إلى العصور الوسطى. وهو مبنى أسطواني مرتفع ذو سقف مقطوع يطل على الأفق ويوفر إطلالة بانورامية على شبه جزيرة إسطنبول التاريخية وضواحيها. وغالبًا ما يتم الخلط بينه وبين برج جالاتا القديم، الذي كان عبارة عن برج من تسعة طوابق يسمى البرج الكبير، ويبلغ ارتفاعه 66.90 مترًا، 62.59 مترًا بدون زخارف في الأعلى، وارتفاعه 51.65 مترًا. من منصة المراقبة، كان أطول برج في المدينة عند بنائه. تم بناؤه في منطقة تقع على ارتفاع 61 مترًا فوق مستوى سطح البحر. يبلغ القطر الخارجي للبرج 16.45 مترًا عند القاعدة و8.95 مترًا في القطر، ويبلغ ارتفاع الجدران 3.75 مترًا. يوجد مطعم ومقهى في الطوابق العليا يطلان على إسطنبول ومضيق البوسفور. كما يوجد ملهى ليلي في الطوابق العليا يستضيف عروضًا ترفيهية. هناك مصعدين يعملان لنقل الزوار من الطابق السفلي إلى الطوابق العليا.",
+    descriptionRU:
+      "Также называемое Turris Christea, здание датируется Средними веками. Это высокое здание цилиндрической формы с усеченной крышей, которая выходит на горизонт и обеспечивает панорамный вид на исторический полуостров Стамбула и его пригороды. Его часто путают с древней Галатской башней, которая была девятиэтажной башней, называемой Большой башней, и имеет высоту 66,90 метра, 62,59 метра без украшений наверху и 51,65 метра. Со смотровой площадки она была самой высокой в ​​городе, когда была построена. Она была построена в районе, расположенном на высоте 61 метра над уровнем моря. Внешний диаметр башни составляет 16,45 метра у основания и 8,95 метра в диаметре, а высота стен — 3,75 метра. На верхних этажах есть ресторан и кафе с видом на Стамбул и Босфор. На верхних этажах также есть ночной клуб, где проводятся развлекательные шоу. Есть два работающих лифта, которые доставляют посетителей с нижнего этажа на верхние этажи.",
+  },
   {
     nameAR: "قصر توبكابي",
     nameEN: "Topkapi Palace",
     nameRU: "Топкапы",
     descriptionEN:
       "بالعثمانية : طوپقپو سرايا وبالتركية الحديثة Topkapı Sarayı) ) أكبر قصور مدينة اسطنبول التركية، ومركز اقامة سلاطين الدولة العثمانية لربعة قرون من عام 1465 م الى 1856 م، يتآ لف القصر من أربعة أفنية رليس ية وعدد من المباني من مساكن ومطابخ ومساجد ومستشفى وغيرها، وكان يقم فيه بذروة الدولة ما يقرب من 4,000 شخص، بد أ بناء قصر طوب قابي ف 1459 م بآ مر من السلطان العثماني محمد خان الثاني فاتح القسطنطينية، و أطلق عليه ف بداية ا لمر لكي يميز عن مقر ا لاقامة السابق، » القصر الجديد « أي » يني سراي « بمعا الباب العال ف القرن » طوب قابي « و أخذ القصر اسمه الجديد التاسع عشر، وقد جرى توس يعه على مر العصور",
-    src: "/images/.webp",
+    src: "/images/Turkey/13.webp",
     descriptionAR:
       "In the Ottoman language: Topkapı Sarayı, and in modern Turkish: Topkapı Sarayı)) Greater Palaces of the Turkish city of Istanbul, the residence center of the sultans of the state Ottoman Empire for four centuries from 1465 AD to 1856 AD. The palace consists of Four courtyards and a number of buildings, including residences, kitchens, and mosques A hospital and others, and at the peak of the state there were approximately 4,000 people staying there Someone, the construction of Topkapi Palace began in 1459 AD on the orders of the Sultan The Ottoman Mehmed Khan II, the conqueror of Constantinople, was named at the beginning of the era In order to distinguish it from the previous residence, the “New Palace”, i.e. “Yeni Saray” With the High Gate of the century “Tobkapi” and the palace took its new name The nineteenth century, and it has been expanded over the centuries",
     descriptionRU:
@@ -2148,7 +2174,7 @@ export const Turkey = [
     nameAR: "جامع الفاتح",
     nameEN: "Al-Fateh Mosque",
     nameRU: "Мечеть Аль-Фатих",
-    src: "/images/.webp",
+    src: "/images/Turkey/14.webp",
     descriptionAR:
       "بالتركية : Fatih Camii هو مسجد بني ف عهد الدولة العثمانية، يوجد ف منطقة الفاتح ف مدينة اسطنبول التركية، ويعد مثالاً عظيما على فن العمارة ا لاسلامية التركية ف اسطنبول، ويمثل مرحلة مهمة من تطور فن العمارة التركية القديمة. وقد سمي هذا المسجد على اسم السلطان محمد الفاتح، السلطان العثماني الذي فتح القسطنطينية عام 1453. يعد مسجد الفاتح بناءً دينياً واجتماعياً ف أ ن واحد، حجمه وتركيبه لا مثيل لهما، وقد بني فيما بين عامي 1463 و 1470 بآ مر من السلطان محمد الفاتح، ف موقع كنيسة ب ن يزطية قديمة كان قد دُمرت وخُرب منذ الحملة الصليبية الرابعة، فليك المسلمون هم من دمروها. وقد با هذا المسجدَ المهندسُ المعماريُ )عتيق س نان",
     descriptionEN:
@@ -2158,11 +2184,11 @@ export const Turkey = [
   },
   {
     nameAR: "جامع السلطان أحمد",
-    nameEN: "Blue Mosque",
-    nameRU: "Голубая мечеть",
+    nameEN: "Sultan Ahmed Mosque",
+    nameRU: "Мечеть Султана Ахмеда",
     descriptionEN:
-      "أحم د Sultan Ahmet Camii ويُعرف أيضا خارج تركيا باسم الجامع ا لزرق The Blue Mosque بنا السلطان أحمد ا لول وهو أحد أشهر و أهم المساجد ف مدينة اسطنبول التركية . يقع المسجد ف ميدان السلطان أحمد ويقابله مسجد أ يا صوفيا، الذي حوله أتاتورك الى متحف ثم أُعيد مسجد اً . ويش تهر جامع السلطان أحمد بعمارته المميزة حيث يُعد من أهم و أضخم المساجد ف العالم ا لاسلامي . بُني المسجد بين عامي 1018 ه - 1026 ه / 1609 م - 1616 م، بحسب أحد النقوش الموجودة على أحد أبوابه. وكان مهندسه المعماري محمد أ غا أشهر المعماريين ا لتراك بعد س نان باشا وداود أغا . يقع المسجد جنوب جامع أ يا صوفيا وشرق ميدان الس باق الب ن يزطي القدم. ولهُ سور مرتفع يحيط به من ثلاث جهات، وف السور خمسة أبواب، ثلاثة منها تؤدي الى صحن المسجد واثنان الى قاعة الصلاة .",
-    src: "/images/.webp",
+      "أحمد Sultan Ahmet Camii ويُعرف أيضا خارج تركيا باسم الجامع ا لزرق The Blue Mosque بنا السلطان أحمد ا لول وهو أحد أشهر و أهم المساجد ف مدينة اسطنبول التركية . يقع المسجد ف ميدان السلطان أحمد ويقابله مسجد أ يا صوفيا، الذي حوله أتاتورك الى متحف ثم أُعيد مسجد اً . ويش تهر جامع السلطان أحمد بعمارته المميزة حيث يُعد من أهم و أضخم المساجد ف العالم ا لاسلامي . بُني المسجد بين عامي 1018 ه - 1026 ه / 1609 م - 1616 م، بحسب أحد النقوش الموجودة على أحد أبوابه. وكان مهندسه المعماري محمد أ غا أشهر المعماريين ا لتراك بعد س نان باشا وداود أغا . يقع المسجد جنوب جامع أ يا صوفيا وشرق ميدان الس باق الب ن يزطي القدم. ولهُ سور مرتفع يحيط به من ثلاث جهات، وف السور خمسة أبواب، ثلاثة منها تؤدي الى صحن المسجد واثنان الى قاعة الصلاة .",
+    src: "/images/Turkey/15.webp",
     descriptionAR:
       "Ahmed Sultan Ahmet Camii is also known outside Türkiye as the Mosque The Blue Mosque was built by Sultan Ahmed Al-Lul, one of the... The most famous and important mosques in the Turkish city of Istanbul. The mosque is located in a square Sultan Ahmed and opposite it is the Aya Sofia Mosque, which Ataturk turned into A museum and then converted into a mosque. What is the admiration of the Sultan Ahmed Mosque with its distinctive architecture? It is considered one of the most important and largest mosques in the Islamic world. The mosque was built between the years 1018 AH - 1026 AH / 1609 AD - 1616 AD. According to one of the inscriptions on one of its doors. He was his engineer Architect Muhammad Agha is the most famous Turkish architect after Sinan Pasha and Davut Agha. The mosque is located south of the Hagia Sophia Mosque and east of the Grand Prix Square. It has a high wall surrounding it on three sides, and within the wall are five doors, three of which lead to the courtyard of the mosque and two to the prayer hall.",
     descriptionRU:
@@ -2173,7 +2199,7 @@ export const Turkey = [
     nameAR: "جامع آيا صوفيا",
     nameEN: "Hagia Sophia Mosque",
     nameRU: "Мечеть Айя-София",
-    src: "/images/.webp",
+    src: "/images/Turkey/16.webp",
     descriptionAR:
       "Ayasofya Camii عُرف ف العصر العُثماني باسم الجامع الكبير الشريف ل يا صوفيا وكان ف العصر الب ن يزطي يُسمى كنيسة أ يا صوفيا، التي تع ني كنيسة الحكمة ا لالهي ة، هو مبا تاريخي للعبادة، يقع على الضفة ا لوروبيَّة ف مدينة اسطنبول، أُنشئ ف العصر الب ن يزطي ليكون كاتدراليةً للبطريركية المس يحية ا لرثوذكس ية، ثم تحول الى كاتدرالية رومانية كاثوليكية، وبعد فتح القسطنطينية تحول الى مسجد عثماني، وبعد قيام الجمهورية التركية تحول الى متحف، و أخيرًا أُعلن عن اعادته مسجدًا اعتبارًا من 24 يوليو عام 2020 م بعد اصدار كمة ا لادارية العليا بتركيا بذلك، ويُشير المؤرخون الى أنَّ أ يا صوفيا اعتُبرت رمزًا ثقافيًا ومعماريًا و أيقونة للحضارة الب ن يزطية 􀟾 حُكم ا والحضارة المس يحيَّة ا لرثوذكس يَّة",
     descriptionEN:
@@ -2185,7 +2211,7 @@ export const Turkey = [
     nameAR: "السوق المسقوف المصري",
     nameEN: "Egyptian covered market",
     nameRU: "Египетский крытый рынок",
-    src: "/images/.webp",
+    src: "/images/Turkey/17.webp",
     descriptionAR:
       "يقع السوق المصري ف منطقة أمينونو المعروفة لدى الس ياح، حيث أن منطقة أمينونو تقع بالقرب من الجامع الجديد ف اسطنبول، كما يصنف السوق المصري بآ نه أحد أكبر الاسواق الشعبية التي تجمع بين الطابع الشرقي والطابع التراثي لتركيا، ويشكّ مصدر جذب ل لفواج الس ياحية الذين يآ تون خصيصا للشراء من محلات البازارات الشعبية، يرجع سبب تسمية السوق المصري ف اسطنبول أو ما يعرف باسم البازار المصري (mısır bazaar) الى أنه خلال فترة الحضارة العثمانية كان التجار العثمانيين يقومون باس تيراد البهارات والتوابل من مصر حيث انها كان تابعة للولاية العثمانية حينئذ، ثم اتسع سوق Mısır Çarşısı و أصبح يضم ا لعشاب والتوابل والملابك والسجاجيد والطعام والذهب والهدايا، وكافة ا لغراض واس تمرت التطورات ف البازار حتى أصبح من أكبر أسواق تركيا",
     descriptionEN:
@@ -2197,7 +2223,7 @@ export const Turkey = [
     nameAR: "شارع تقسيم",
     nameEN: "Taksim Street",
     nameRU: "Таксим-стрит",
-    src: "/images/.webp",
+    src: "/images/Turkey/18.webp",
     descriptionAR:
       "تشتهر منطقة تقسيم بمتاحفها وأسواقها العالمية وفنادقها المتنوعة المستويات والأسعار، وميدان تقسيم الذي يعد من أهم ميادين إسطنبول، ومن السهل الوصول إلى منطقة تقسيم، وذلك من خلال محطة تقسيم الشهيرة أو من خلال ركوب الباص المنتشر للوصول إلى أي وجهة في إسطنبول، ولهذا السبب تم تسمية المنطقة (تقسيم) نسبة إلى توزيع المياه وتقسيمها إلى مناطق المدينة، وتحتوي منطقة تقسيم التي تقع في قلب إسطنبول على أماكن تاريخية في إسطنبول، مع لمسات حديثة تضيف جوًا من الجمال على المعالم بالإضافة إلى السوق التجاري، مما جعل الحركة في ميدان تقسيم وشارع الاستقلال المتفرع منه أشبه بجريان النهر دون توقف، بين ميدان تقسيم ومنطقة كاراكوي، ويمتد شارع الاستقلال من ميدان تقسيم إلى منطقة كاراكوي، ويعد من أشهر شوارع إسطنبول. يمر من خلاله أحد أقدم الترامواي في المدينة، ويعود تاريخه إلى نحو مائة عام، مثل أغلب المنازل والمباني في الشارع، وتتوزع على أطرافه الأزقة الضيقة القديمة، ويحتوي الشارع على أماكن دينية، مثل الكنيسة المقببة ومسجد حسين آغا، وأماكن سياحية حديثة مثل متحف الشمع الشهير 'مدام توسو'، الذي افتتح قبل نحو أربع سنوات، ويضم تماثيل شمعية لمشاهير أتراك وعالميين مختلفين.",
     descriptionEN:
@@ -2214,7 +2240,7 @@ export const Turkey = [
     nameAR: "Four Seasons Hotel",
     nameEN: "Four Seasons Hotel",
     nameRU: "Four Seasons Hotel",
-    src: "/images/.webp",
+    src: "/images/Turkey/19.webp",
     descriptionAR:
       "يقع هذا القصر العثماني الجميل الذي يعود تاريخه إلى القرن التاسع عشر على شواطئ مضيق البوسفور، المضيق الذي يربط بين أوروبا وآسيا، ويجمع بين الهندسة المعمارية القديمة في إسطنبول والضيافة التركية والإقامة المعاصرة.",
     descriptionEN:
@@ -2226,7 +2252,7 @@ export const Turkey = [
     nameAR: "JW MARRIOTT HOTEL ISTANBUL MARMARA SEA",
     nameEN: "JW MARRIOTT HOTEL ISTANBUL MARMARA SEA",
     nameRU: "JW MARRIOTT HOTEL ISTANBUL MARMARA SEA",
-    src: "/images/.webp",
+    src: "/images/Turkey/20.webp",
     descriptionAR:
       "يقع ف اسطنبول، وعلى بُعد 13 كم من جامع السلطان أحمد، وهو مكان اقامة يوفر مس بحاً خارجياً موسمياً ومواقف خاصة للس يارات مجاناً، با لاضافة الى مركز للياقة البدنية وحديقة، كما يضم مكان ا لاقامة أيضاً مطعماً، با لاضافة الى صالة مشتركة ومس بح داخلي وحوض اس تحمام ساخن، وي توفر مكتب اس تقبال يعمل على مدار الساعة وخدمة النقل وخدمة الغرف، با لاضافة الى خدمة الواي فاي مجاناً ف جميع أنحاء مكان ا لاقامة .",
     descriptionEN:
@@ -2235,10 +2261,10 @@ export const Turkey = [
       "Он расположен в Стамбуле, в 13 км от мечети Султана Ахмеда. К услугам гостей сезонный открытый бассейн и частная парковка. Бесплатная парковка, а также фитнес-центр и сад. В отеле также есть ресторан и общий лаундж. В отеле есть крытый бассейн, гидромассажная ванна и письменный стол. К услугам гостей круглосуточная стойка регистрации, трансфер и обслуживание номеров. В дополнение к бесплатному Wi-Fi на всей территории.",
   },
   {
-    nameAR: "طرابزو ن",
+    nameAR: "طرابزون",
     nameEN: "Trabzon",
     nameRU: "Трабзон",
-    src: "/images/.webp",
+    src: "/images/Turkey/21.webp",
     descriptionAR:
       "مدينة تركية تقع في شمال شرق تركيا على ساحل البحر الأسود، وتقع على طريق الحرير التاريخي، وتعتبر بوابة تجارية لإيران في جنوب شرق البلاد والقوقاز في الشمال الشرقي. تم بناء المدينة من قبل التجار من ملاطية في القرن الثامن قبل الميلاد. ظلت هذه المدينة يونانية حتى احتلها الرومان في عام 65 قبل الميلاد، وفي عام 1461 أو بعد ذلك بقليل استولى السلطان العثماني بايزيد الثاني على طرابزون وعين ابنه السلطان سليم الأول لاحقًا حاكمًا لطرابزون. هناك، بارك سليم في عام 1495 بابنه سليمان، الذي أصبح السلطان سليمان القانوني.",
     descriptionEN:
@@ -2250,7 +2276,7 @@ export const Turkey = [
     nameAR: "بحيرة أوزنغول",
     nameEN: "Uzungol Lake",
     nameRU: "Озеро Узунгёль",
-    src: "/images/.webp",
+    src: "/images/Turkey/22.webp",
     descriptionAR:
       "تعني البحيرة الطويلة، وهي قرية تركية تقع جنوب شرق مدينة طرابزون شمال تركيا، وفي السنوات الماضية أصبحت البحيرة الخلابة والوادي المحيط بها من أهم المعالم السياحية، وتقع البحيرة على بعد 100 كم من مركز مدينة طرابزون و19 كم من مركز مدينة جيجيكارا، وقد تشكلت البحيرة نتيجة انهيار أرضي حول مجرى النهر إلى سد طبيعي في وادي نهر هالديزن، وتقع البحيرة المغطاة بالأشجار الخضراءسوغانليط على سفوح الجبال الكثيفة، وترتفع عن سطح البحر حوالي ألف ومليون متر، ويبلغ محيطها 7 كم، وتشتهر بجمالها الطبيعي الأخاذ، وهي مكان رائع للتجوال في الطبيعة الساحرة، والتخييم، خاصة بين شهري مايو ويوليو، حيث يكون الطقس معتدلاً ومشمساً.",
     descriptionEN:
@@ -2262,7 +2288,7 @@ export const Turkey = [
     nameAR: "الطيران الشراعي في طرابزون",
     nameEN: "Paragliding in Trabzon",
     nameRU: "Полеты на параплане в Трабзоне",
-    src: "/images/.webp",
+    src: "/images/Turkey/23.webp",
     descriptionAR:
       "إنها توفر لك فرصة فريدة لاستكشاف هذه المدينة الرائعة من منظور جديد تمامًا. ستتاح لك الفرصة لرؤية المعالم والمناظر الطبيعية الخلابة من الجو، مما يجعل رحلتك إلى طرابزون لا تُنسى.",
     descriptionEN:
@@ -2274,7 +2300,7 @@ export const Turkey = [
     nameAR: "مغارة تشا ل طرابزون",
     nameEN: "Chal Cave Trabzon",
     nameRU: "Пещера Шале Трабзон",
-    src: "/images/.webp",
+    src: "/images/Turkey/24.webp",
     descriptionAR:
       "تعتبر من أجمل المعالم السياحية في تركيا حيث تعد ثاني أطول مغارة في العالم وتقع في قرية دوزكوي على ارتفاع 1050 متر عن سطح البحر وتتمتع بمناظر طبيعية خلابة وبرك مائيّة ساحرة وتزيد الصواعد والهوابط الموجودة فيها من روعتها وجمالها مما جعلها مقصداً للسياح ومقصداً رئيسياً لزوار منطقة البحر الأسود شمال تركيا. تتمتع مغارة تشالكوي الساحرة في طرابزون بخصائص علاجية وشفائية حيث تتمتع بنظام تهوية طبيعي ويعتقد أن مياه المجرى الذي ينبع من داخلها تساهم في علاج التهاب الجيوب الأنفية والربو ويصل منسوب مياهها إلى 1.5 متر و25 سم في الأيام الممطرة في الصيف. كما يحتوي الكهف على برك مالية وشلالات صغيرة جميلة يطل عليها مقهى صغير هادئ ومطعم مميز حيث يمكن للزوار الجلوس والاستمتاع بفنجان من الشاي التركي اللذيذ أو وجبة شهية من المطبخ التركي القديم، والتقاط أجمل الصور التذكارية في واحدة من أجمل اللوحات الطبيعية",
     descriptionEN:
@@ -2286,7 +2312,7 @@ export const Turkey = [
     nameAR: "شلال ريزا اغاران",
     nameEN: "Rize Agaran Waterfall",
     nameRU: "Водопад Риза Агаран",
-    src: "/images/.webp",
+    src: "/images/Turkey/25.webp",
     descriptionAR:
       "بمظهره الخلاب والفريد من نوعه، يعد شلال أغاران في ريزا من أجمل المعالم الطبيعية في تركيا، يقع على بعد 12 كيلومترًا من مركز ريزا، ضمن حدود قرية باك، تضم منطقة الشلال العديد من المسارات المليئة بأجمل المناظر الطبيعية، تمتد آخر ثلاثة كيلومترات من هذه المسارات على طريق ترابي بين مزارع الشاي، يمكن رؤية هذا الشلال الساحر حتى من بعيد، تتساقط المياه فيه من صخرة عالية وحادة، لتشكل بركة صغيرة يمكنك السباحة والتجديف فيها.",
     descriptionEN:
@@ -2298,7 +2324,7 @@ export const Turkey = [
     nameAR: "دير سوميلا",
     nameEN: "Sumela Monastery",
     nameRU: "Монастырь Сумела",
-    src: "/images/.webp",
+    src: "/images/Turkey/26.webp",
     descriptionAR:
       "دير سوميلا هو دير أرثوذكسي شرقي يقع في جبال البنطس في شمال شرق تركيا على ساحل البحر الأسود. تم بناء دير سوميلا، المعروف أيضًا باسم دير العذراء مريم، على المنحدرات الشديدة لماشكا بالقرب من طرابزون في القرن الرابع، وتم تحسين هيكله في القرنين الثامن عشر والتاسع عشر، وهو مزين بالعديد من صور المشاهد التوراتية. يتكون مجمع الدير من كنيسة الصخرة والمصليات وغرف الطلاب، بالإضافة إلى مكتبة ونبع مقدس ومطبخ وبيت ضيافة.",
     descriptionEN:
@@ -2310,7 +2336,7 @@ export const Turkey = [
     nameAR: "مسجد القبلة",
     nameEN: "Qibla Mosque",
     nameRU: "Мечеть Кибла",
-    src: "/images/.webp",
+    src: "/images/Turkey/27.webp",
     descriptionAR:
       "أو مسجد حاجي يوسف يلماز: هو مسجد صغير يقع على قمة جبل القبلة، على ارتفاع يزيد عن 1130 متراً، في قضاء غونيسو بولاية ريزا شمال شرق تركيا، ويطل على جبال مغطاة بالنباتات والأشجار، ويعود تاريخ بنائه إلى القرن التاسع عشر، حيث بُني من الخشب، ثم أُعيد بناؤه من الحجر، وجُدد عام 2010، كما أُعيد تأهيل الطريق المؤدي إلى المسجد على قمة الجبل، ضمن المشروع، وأُنشئت مسارات للمشي، وأماكن للاستراحة، وحدائق يمكن للزوار تناول الشاي فيها، ويُعرف الجبل بـ (القبلة)، لوقوعه في اتجاه القبلة، بالإضافة إلى إمكانية رؤيته من العديد من الأماكن في الولاية. المسجد الذي يعود تاريخه إلى القرن التاسع عشر، أعيد بناؤه ضمن مشروع استغرق عاماً ونصف العام، بعد أن كان مصنوعاً من الخشب، لكنه تعرض للحريق عام 1960، فأعيد بناؤه من الحجر.",
     descriptionEN:
@@ -2327,7 +2353,7 @@ export const Turkey = [
     nameAR: "PAZARCIK MOUNTAIN HOTEL",
     nameEN: "PAZARCIK MOUNTAIN HOTEL",
     nameRU: "PAZARCIK MOUNTAIN HOTEL",
-    src: "/images/.webp",
+    src: "/images/Turkey/28.webp",
     descriptionAR:
       "عند إقامتك في فندق بازارسيك ماونتن في أراكلي، ستكون على بُعد 32.4 كم من هضبة السلطان مراد و39.4 كم من أيدينتيبي. يقع هذا الفندق على بُعد 40.9 كم من منتزه وادي ألتينديري الوطني. يقع الفندق في طرابزون، ويضم حديقة وصالة مشتركة وتراس ومطعم. يوفر مكان الإقامة مكتب استقبال يعمل على مدار 24 ساعة وخيارات بوفيه إفطار حلال متوفرة يوميًا في الفندق. تشتهر المنطقة بصيد الأسماك، موقع الفندق على الإنترنت http://www.pazarcikmountainhotel.com/en/",
     descriptionEN:
@@ -2339,7 +2365,7 @@ export const Turkey = [
     nameAR: "Panagia Premier Trabzon",
     nameEN: "Panagia Premier Trabzon",
     nameRU: "Panagia Premier Trabzon",
-    src: "/images/.webp",
+    src: "/images/Turkey/OIP.jpeg",
     descriptionAR:
       "يقع فندق باناجيا بريميير ترابزون في مدينة ترابزون، على بُعد 3.7 كم من قصر أتاتورك، ويوفر أماكن إقامة مع مركز للياقة البدنية ومواقف خاصة مجانية للسيارات وحديقة وصالة مشتركة. ويضم مكان الإقامة مطعمًا وتراسًا، فضلاً عن ساونا. يوفر مكان الإقامة مكتب استقبال يعمل على مدار الساعة، في حين يقع متحف آيا صوفيا ترابزون على بُعد 5 دقائق سيرًا على الأقدام من مكان الإقامة. ويعتبر مطار ترابزون المطار الأقرب لمكان الإقامة، حيث يقع على بعد 8 كم منه. موقع الفندق على الإنترنت/nhttps://www.panagiapremier.com/",
     descriptionEN:
@@ -2351,7 +2377,7 @@ export const Turkey = [
     nameAR: "أنطاليا",
     nameEN: "Antalya",
     nameRU: "Анталия",
-    src: "/images/.webp",
+    src: "/images/Turkey/29.webp",
     descriptionAR:
       "مدينة تقع على ساحل البحر الأبيض المتوسط ​​في جنوب غرب تركيا، وهي عاصمة مقاطعة أنطاليا. تقع أنطاليا على منحدرات ساحلية، وتحيط بها الجبال، وكانت واحدة من المدن الرئيسية للإمبراطورية البيزنطية. كانت عاصمة مقاطعة كاربيس البيزنطية، التي احتلت السواحل الجنوبية لآسيا الصغرى وجزر بحر إيجه. في عهد الإمبراطور يوحنا الثاني كومنينوس (1118)، كانت أنطاليا موقعًا معزولًا ضد الأتراك، ولا يمكن الوصول إليها إلا عن طريق البحر.",
     descriptionEN:
@@ -2363,7 +2389,7 @@ export const Turkey = [
     nameAR: "شلالات دوان ",
     nameEN: "Dudan Waterfalls",
     nameRU: "Dudan Waterfalls",
-    src: "/images/.webp",
+    src: "/images/Turkey/30.webp",
     descriptionAR:
       "يقع على بعد حوالي 10 كم من مركز المدينة في منطقة كيبيز شمال شرق المدينة، يتغذى الشلال من مصدرين ينبع منهما الماء بشكل كبير يشبه إلى حد كبير الأنهار الجارية، يقع هذان المصدران في جبال طوروس وينتهي الشلال عندما يسقط مباشرة في البحر الأبيض المتوسط ​​من ارتفاع 40 مترًا عند مصب نهر دودان في منطقة لارا، تعد هذه الشلالات أول ما يجب أن يخطر على البال عندما يتعلق الأمر بالتقاط صور طبيعية جميلة في أنطاليا، يوجد خلف الشلال كهف يمكنك الدخول إليه ومشاهدة الشلال والتقاط الصور من زوايا متعددة.",
     descriptionEN:
@@ -2375,7 +2401,7 @@ export const Turkey = [
     nameAR: "أرض الأساطير انطاليا",
     nameEN: "Land of Legends Antalya",
     nameRU: "Земля легенд Анталья",
-    src: "/images/.webp",
+    src: "/images/Turkey/31.webp",
     descriptionAR:
       "تعتبر أرض الأساطير في أنطاليا من أبرز المعالم السياحية في أنطاليا، تمتد على مساحة 639 ألف متر مربع في مدينة أنطاليا، تم افتتاحها عام 2016، تضم أرض الأساطير أنطاليا مرافق ترفيهية وخدمات ضيافة فاخرة وفندق 5 نجوم مصمم خصيصًا للأطفال ومرافق ترفيهية لا مثيل لها في العالم، تعد أرض الأساطير في أنطاليا بالإضافة إلى حديقتها الخيالية ومدينتها المالية مركزًا ترفيهيًا متكاملًا، وقد استطاعت أن تكون الوجهة الأولى في أنطاليا لاستقبال السياح، تعتبر أرض الأساطير مغامرة في الغابات الساحرة، حيث تضم أفضل مدينة مائية 'أكوا وورلد' التي تضم 70 لعبة مائية، بالإضافة إلى عروض الدلافين الرائعة والمثيرة، بالإضافة إلى إمكانية خوض مغامرة تحت الماء بجانب الأسماك الأسترالية الملونة.",
     descriptionEN:
@@ -2387,7 +2413,7 @@ export const Turkey = [
     nameAR: "تلفريك اوليمبوس",
     nameEN: "Olympus cable car",
     nameRU: "Канатная дорога Олимп",
-    src: "/images/.webp",
+    src: "/images/Turkey/32.webp",
     descriptionAR:
       "من البحر إلى قمم الجبال يأخذك تلفريك أوليمبوس أنطاليا إلى قمة جبل تهتالي الذي يرتفع حوالي 2365 متراً عن سطح البحر، ويعتبر جبل أوليمبوس أقرب جبل إلى الشاطئ في جبال طوروس، وتقع نقطة الانطلاق في منطقة كيمير-تيكيروفا التي تبعد حوالي 60 كم عن أنطاليا و15 كم عن كيمير و7 كم عن الطريق الرئيسي المؤدي إلى سفح الجبل، ويبلغ طول رحلة التلفريك من نقطة الانطلاق إلى قمة الجبل 4359 متراً، وهو ما يعتبر من أطول الرحلات في العالم، وتستغرق الرحلة حوالي 13 دقيقة في عربة مريحة تتسع لـ 80 شخصاً، تم تصميمها وتصنيعها في سويسرا خصيصاً، وقد تم افتتاح التلفريك في عام 2007 ويعتبر من أهم معالم منطقة كيمير أنطاليا.",
     descriptionEN:
@@ -2399,7 +2425,7 @@ export const Turkey = [
     nameAR: "جزيرة كيكوفا انطاليا",
     nameEN: "Kekova Island, Antalya",
     nameRU: "Kekova Island, Antalya",
-    src: "/images/.webp",
+    src: "/images/Turkey/34.webp",
     descriptionAR:
       "تقع على شواطئ ساحل أنطاليا في تركيا، وهي جزيرة ساحرة وجذابة تجذب السياح من جميع أنحاء العالم، كما تتميز بجمالها الطبيعي البكر وتاريخها الغني، يمكنك الاستمتاع بجولة بحرية حول جزيرة كيكوفا لاستكشاف المناظر الطبيعية الساحرة والمواقع الأثرية تحت الماء، يمكن للزوار رؤية الآثار القديمة عن قرب من القوارب الزجاجية الشفافة، تعد جزيرة كيكوفا ومناطق الغوص والسباحة فيها، حيث يمكنك استكشاف المواقع الأثرية تحت الماء والاستمتاع بجمال الشعاب المرجانية والحياة البحرية المتنوعة، مكانًا رائعًا، تقع الجزيرة بالقرب من عدة قرى تقدم تجربة ثقافية رائعة للزوار، يمكنك زيارة قرية عكاظ، حيث يمكنك ممارسة رياضة المشي لمسافات طويلة والتسلق، توفر الجزيرة فرصًا رائعة لممارسة رياضة المشي لمسافات طويلة والتسلق، يمكنك الاستمتاع بالمناظر الخلابة والتعرف على طريقة حياة السكان المحليين، استكشف مسارات الطبيعة والمشي على طول الشواطئ الساحرة واستمتع بالمناظر الخلابة للبحر الأبيض المتوسط، يمكنك أيضًا الاسترخاء ببساطة على الشواطئ الجميلة في جزيرة كيكوفا والاستمتاع بالسلام والهدوء الذي يوفره المكان.",
     descriptionEN:
@@ -2416,7 +2442,7 @@ export const Turkey = [
     nameAR: "Grand Miramor Hotel",
     nameEN: "Grand Miramor Hotel",
     nameRU: "Grand Miramor Hotel",
-    src: "/images/.webp",
+    src: "/images/Turkey/35.jpg",
     descriptionAR:
       "يقع الفندق في أنطاليا على بعد 600 متر من شاطئ كاميوفا، ويوفر أماكن إقامة مع حديقة ومواقف خاصة مجانية للسيارات وصالة مشتركة ومطعم. تشمل المرافق المتوفرة في مكان الإقامة هذا نادي للأطفال وخدمة الغرف، بالإضافة إلى خدمة الواي فاي المجانية في جميع أنحاء مكان الإقامة. يتوفر مسبح خارجي ومرافق اجتماعات وحفلات ومركز للياقة البدنية وتراس ومسبح داخلي وساونا وحديقة تحت تصرف ضيوفنا، في حين يقع أكواريوم أنطاليا على بعد 46 كم. ويعتبر مطار أنطاليا المطار الأقرب للفندق حيث يقع على بعد 63 كم منه. موقع الفندق الإلكتروني/nhttps://miramorhotel.com/",
     descriptionEN:
@@ -2428,7 +2454,7 @@ export const Turkey = [
     nameAR: "SEAPHORIA BEACH HOTEL",
     nameEN: "SEAPHORIA BEACH HOTEL",
     nameRU: "SEAPHORIA BEACH HOTEL",
-    src: "/images/.webp",
+    src: "/images/Turkey/36.jpeg",
     descriptionAR:
       "يقع هذا الفندق المصنف 5 نجوم في أنطاليا ويطل على شاطئ البحر، ويضم مركز للياقة البدنية وحديقة وصالة مشتركة. كما يوفر مكان الإقامة خدمة الغرف، ويرحب بالضيوف مع مطعم وحديقة وتراس. ويضم الفندق مسبح خارجي ومسبح داخلي وكاريوكي ونادي للأطفال. يقع شاطئ أوكوركالار على بعد خطوات قليلة من الفندق، في حين يقع ألاراهان التاريخي على بعد 13 كم من مكان الإقامة. ويعتبر مطار غازي باشا-ألانيا المطار الأقرب للفندق، حيث يقع على بعد 76 كم منه، ويوفر مكان الإقامة خدمة نقل المطار مقابل تكلفة إضافية. موقع الفندق على الإنترنت:/nhttps://www.seaphoriabeach.com/",
     descriptionEN:
@@ -3358,7 +3384,7 @@ export const Malaysia = [
     nameAR: "اكواريوم كوالالمبور",
     nameEN: "Kuala Lumpur Aquarium",
     nameRU: "Куала-Лумпурский аквариум",
-    src: "/images/malaysia/3.webp",
+    src: "/images/malaysia/4.webp",
     descriptionAR:
       "يعد عالم تحت الماء اكواريوم كوالالمبور بماليزيا أحد أهم المعالم السياحية في كوالالمبور البارزة التي تلفت الأنظار.في عالم تحت الماء يوجد ما يزيد على 250 نوع من الأحياء البحرية  المختلفة بما يتضمن 5000 كائن بحرى تسبح جميعها في ما يفوق على 5500 متر مكعب من الماءواهم ما يتضمنه الاكواريا هو نفق مائي يبلغ طوله 90 متر",
     descriptionEN:
@@ -3370,7 +3396,7 @@ export const Malaysia = [
     nameAR: "مبنى السلطان عبد الصمد",
     nameEN: "Sultan Abdul Samad Building",
     nameRU: "Здание Султана Абдул Самада",
-    src: "/images/malaysia/4.webp",
+    src: "/images/malaysia/4.jpeg",
     descriptionAR:
       "ومن المباني الشهيرة مبنى السلطان عبد الصمد كوالالمبور ماليزيا، وهو أحد المعالم السياحية الجميلة التي تضمها كوالالمبور، م تصميم هذا المبنى على طراز عصر النهضة الكلاسيكية، ثم تمَّ تطويره فيما بعد، ولكن بطريقة مختلفة تسمى (الهندو ساراسينيك نيو موجال) وهو تصميم على الطراز المغربي. يضم مبنى السلطان عبد الصمد كوالالمبور طابقين، وواجهة المبنى تواجه ميدان بادانج، وتمتد مساحته إلى أربعمائة وخمسين قدمًا، ويضم المبنى عدة شرفات تُعدُّ من الشرفات الواسعة، وذلك بطول إحدى عشر قدمًا، وذلك في كل من الطابقين. ",
     descriptionEN:
@@ -3477,34 +3503,34 @@ export const Malaysia = [
     nameEN: "Langkawi cable car",
     nameRU: "Канатная дорога Лангкави",
     src: "/images/malaysia/12.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
+    descriptionAR: "تم افتتاح التلفريك في عام 2003 ومنذ ذلك الحين يقدم الكثير من الترفيه للجمهور. استمتع برحلة على متن التلفريك على ارتفاع 42 درجة لمسافة 2.2 كيلومتر بين الجبال، مما يجعله تجربة مثيرة ستبقيك مستمتعًا.",
+    descriptionEN: "The cable car was opened in 2003 and since then it has been providing a lot of entertainment to the public. Take a ride on the cable car at an altitude of 42 degrees over a distance of 2.2 kilometers between the mountains, making it an exciting experience that will keep you entertained.",
+    descriptionRU: "Канатная дорога была открыта в 2003 году и с тех пор она предоставляет массу развлечений публике. Прокатитесь на канатной дороге на высоте 42 градуса на расстояние 2,2 километра между горами, что сделает это захватывающим опытом, который не даст вам скучать.",
   },
-  {
-    nameEN: "Batu Caves",
-    nameAR: "كهوف باتو",
-    nameRU: "Пещеры Бату",
-    src: "/images/malaysia/batu_caves13.webp",
-    descriptionAR:
-      "رجع تاريخ افتتاح تلفريك لنكاوي إلى عام 2003 م وهو من هذا اليوم، وهو يقدم الكثير من المتعة، والحماس للجمهور، حيث تأخذك الرحلة داخل التلفريك إلى أعلى بدرجة ميل 42 درجة، على مسافة 2.2 كيلو متر، فيما بين قمم الجبال، مما يجعلها تجربة مثيرة تحبس الأنفاس.",
-    descriptionEN:
-      "The opening of the Langkawi cable car dates back to the year 2003 AD, and it continues to this day, and it provides a lot of fun and enthusiasm to the public, as the trip inside the cable car takes you to the top of an incline of 42 degrees, at a distance of 2.2 kilometers, between the mountain peaks, which makes it an exciting experience. Breathtaking.",
-    descriptionRU:
-      "Открытие канатной дороги Лангкави датируется 2003 годом нашей эры и продолжается по сей день, доставляя массу удовольствия и энтузиазма публике, поскольку поездка по канатной дороге доставит вас на вершину склона. 42 градуса на расстоянии 2,2 километра между горными вершинами, что делает его захватывающим зрелищем.",
-  },
-  {
-    nameEN: "Langkawi Sky Bridge",
-    nameAR: "جسر لانكاوي سكاي",
-    nameRU: "Небесный мост Лангкави",
-    src: "/images/malaysia/langkawi_sky_bridge14.webp",
-    descriptionAR:
-      "أما الجسر المعلق فهو يرجع تاريخه إلى عام 2005 م، وهو أحد أروع المغامرات التي يمكن أن تستمتع بها على الإطلاق، خلال حياتك، فيه ستجد نفسك على ارتفاع 700 متر في السماء فوق جسر معلق في الهواء مدعوم بالكوابل، يمتد على مسافة 125 متر، مما يجعلها تجربة حماسية بامتياز.",
-    descriptionEN:
-      "As for the suspension bridge, it dates back to the year 2005 AD, and it is one of the most wonderful adventures that you can ever enjoy, during your life, in which you will find yourself at a height of 700 meters in the sky above a bridge suspended in the air supported by cables, extending over a distance of 125 meters, which... It makes it an extremely exciting experience.",
-    descriptionRU:
-      "Что касается подвесного моста, то он датируется 2005 годом нашей эры, и это одно из самых чудесных приключений, которыми вы когда-либо могли наслаждаться в своей жизни, в котором вы окажетесь на высоте 700 метров в небе над головой. мост, подвешенный в воздухе и поддерживаемый тросами, протянувшийся на расстояние 125 метров, что... Это делает это чрезвычайно захватывающим опытом.",
-  },
+  // {
+  //   nameEN: "Batu Caves",
+  //   nameAR: "كهوف باتو",
+  //   nameRU: "Пещеры Бату",
+  //   src: "/images/malaysia/batu_caves13.webp",
+  //   descriptionAR:
+  //     "رجع تاريخ افتتاح تلفريك لنكاوي إلى عام 2003 م وهو من هذا اليوم، وهو يقدم الكثير من المتعة، والحماس للجمهور، حيث تأخذك الرحلة داخل التلفريك إلى أعلى بدرجة ميل 42 درجة، على مسافة 2.2 كيلو متر، فيما بين قمم الجبال، مما يجعلها تجربة مثيرة تحبس الأنفاس.",
+  //   descriptionEN:
+  //     "The opening of the Langkawi cable car dates back to the year 2003 AD, and it continues to this day, and it provides a lot of fun and enthusiasm to the public, as the trip inside the cable car takes you to the top of an incline of 42 degrees, at a distance of 2.2 kilometers, between the mountain peaks, which makes it an exciting experience. Breathtaking.",
+  //   descriptionRU:
+  //     "Открытие канатной дороги Лангкави датируется 2003 годом нашей эры и продолжается по сей день, доставляя массу удовольствия и энтузиазма публике, поскольку поездка по канатной дороге доставит вас на вершину склона. 42 градуса на расстоянии 2,2 километра между горными вершинами, что делает его захватывающим зрелищем.",
+  // },
+  // {
+  //   nameEN: "Langkawi Sky Bridge",
+  //   nameAR: "جسر لانكاوي سكاي",
+  //   nameRU: "Небесный мост Лангкави",
+  //   src: "/images/malaysia/langkawi_sky_bridge14.webp",
+  //   descriptionAR:
+  //     "أما الجسر المعلق فهو يرجع تاريخه إلى عام 2005 م، وهو أحد أروع المغامرات التي يمكن أن تستمتع بها على الإطلاق، خلال حياتك، فيه ستجد نفسك على ارتفاع 700 متر في السماء فوق جسر معلق في الهواء مدعوم بالكوابل، يمتد على مسافة 125 متر، مما يجعلها تجربة حماسية بامتياز.",
+  //   descriptionEN:
+  //     "As for the suspension bridge, it dates back to the year 2005 AD, and it is one of the most wonderful adventures that you can ever enjoy, during your life, in which you will find yourself at a height of 700 meters in the sky above a bridge suspended in the air supported by cables, extending over a distance of 125 meters, which... It makes it an extremely exciting experience.",
+  //   descriptionRU:
+  //     "Что касается подвесного моста, то он датируется 2005 годом нашей эры, и это одно из самых чудесных приключений, которыми вы когда-либо могли наслаждаться в своей жизни, в котором вы окажетесь на высоте 700 метров в небе над головой. мост, подвешенный в воздухе и поддерживаемый тросами, протянувшийся на расстояние 125 метров, что... Это делает это чрезвычайно захватывающим опытом.",
+  // },
 
   {
     nameAR: "فنادق لانكاوي",
@@ -3512,9 +3538,9 @@ export const Malaysia = [
     nameRU: "Отели Лангкави",
   },
   {
-    nameAR: "•	The Westin Langkawi Resort & Spa",
-    nameEN: "•	The Westin Langkawi Resort & Spa",
-    nameRU: "•	The Westin Langkawi Resort & Spa",
+    nameAR: "The Westin Langkawi Resort & Spa",
+    nameEN: "The Westin Langkawi Resort & Spa",
+    nameRU: "The Westin Langkawi Resort & Spa",
     src: "/images/malaysia/15.webp",
     descriptionAR:
       "يقع منتجع ذا ويستن لنكاوي ماليزيا  المميز على شاطئ بحر اندمان والشاطئ الخاص به يمتد على مسافة 500 متر، ويبعد عن مطار لنكاوي الدولي مدة 20 دقيقة، ويحاط الفندق بحدائق خضراء، ويتميز ببعده عن صخب المدينة مما يجعله مكان مميز للاسترخاء ، كما انه يعد اقرب لأفضل الاماكن السياحية في جزيرة لنكاويموقع الفندق على الانترنت /nhttps://www.marriott.com/en-us/hotels/lgkwi-the-westin-langkawi-resort-and-spa",
@@ -3524,9 +3550,9 @@ export const Malaysia = [
       "Выдающийся курорт Westin Langkawi Malaysia Resort расположен на берегу Андаманского моря, его частный пляж простирается на расстояние 500 метров, а также в 20 минутах езды от международного аэропорта Лангкави. Отель окружен зелеными садами и выделяется. удаленностью от городского шума и суеты, что делает его особенным местом для отдыха, а также считается самым близким к лучшим туристическим местам островом Лангкави.Сайт отеля/nhttps://www.marriott.com/en-us/hotels/lgkwi-the-westin-langkawi-resort-and-spa",
   },
   {
-    nameAR: "•	The St. Regis Langkawi",
-    nameEN: "•	The St. Regis Langkawi",
-    nameRU: "•	The St. Regis Langkawi",
+    nameAR: "The St. Regis Langkawi",
+    nameEN: "The St. Regis Langkawi",
+    nameRU: "The St. Regis Langkawi",
     src: "/images/malaysia/16.webp",
     descriptionAR:
       "يبعد المنتجع عن مطار لنكاوي مسافة 15كم، ويفصله عن مطار السلطان عبد الحميد حوالي 63كم تقريبًا، ويقع بين مجموعة من الأماكن والمزارات السياحية تبدأ من مسافة 1.5 كم، وحتى 15.5كم من مكان المنتجع.فمنتجع ذا سانت ريجيس لنكاوي كواه ماليزيا بموقعه الممتاز على شاطئ بحر مدينة كواه حاز على إعجاب جميع النزلاء وتم تقييمه بدرجة ممتاز بتقييم يزيد عن 9.5، ويصل بذلك لمقدمة الفنادق والمنتجعات بماليزيا.موقع الفندق على الانترنت /nhttps://www.marriott.com/en-us/hotels/lgkxr-the-st-regis-langkawi",
@@ -3551,7 +3577,7 @@ export const Malaysia = [
     nameEN: "Cameron Highlands",
     nameAR: "مرتفعات الكاميرون",
     nameRU: "Кэмерон Хайлендс",
-    src: "/images/malaysia/cameron_highlands18.webp",
+    src: "/images/malaysia/18.webp",
     descriptionAR:
       "تقع مزارع الشاي الساحرة هذه في مرتفعات الكاميرون هايلاند الواقعة في ولاية بهانج الماليزية، تحديداً عند خط الوسط من شبه جزيرة ماليزيا ، بالرغم من أن منطقة الكاميرون تتكون من سلسلة من المرتفعات إلا أن هناك العديد من السكان الذين يقيمون في المنطقة.تتكون المنطقة هناك من مجموعة من القرى الصغيرة المتراصة بجانب بعضها، بكثافة سكانية تصل إلى 25 ألف نسمة، الفئة العظمى من هذه السكان يشتغلون في الزراعة ومجموعة أخرى تقوم بتقديم الخدمات الترفيهية المتنوعة للسياحة ومن أشهر القرى الموجودة هناك والتي تلفت أنظار السياح لزيارتها والإقامة فيها هما قرية تاناه راتا، وقرية برينجانج، اللتان تعدان من أكثر القرى تطوراً في المنطقة. في البداية لم تكن في المنطقة أي مزارع شاي على الإطلاق ولكن كانت عبارة عن هضبة طبيعية جميلة، يتخللها بعض من الجبال العالية الارتفاع، حسب ما جاء في تقرير أحد المساحين البريطانيين كان يدعي وليم كاميرون في عام 1885 م.",
     descriptionEN:

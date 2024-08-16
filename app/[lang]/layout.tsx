@@ -60,7 +60,8 @@ export default async function RootLayout({
         dir={isArabic ? "rtl" : "ltr"}
         className={`overflow-x-hidden text-primary bg3 ${tajawal.className}`}
       >
-        <Navbar dic={dic} />
+        <Navbar lang={params.lang} />
+
         {children}
         <Footer params={{ lang: params.lang }} />
       </body>

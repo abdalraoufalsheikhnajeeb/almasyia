@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import { Locale } from "../../../../i18n-config";
 import { timeZones } from "../../data";
@@ -46,7 +45,7 @@ const WorldClock = ({ params: { lang } }: { params: { lang: Locale } }) => {
             key={zone.nameEN}
             className="bg-white relative shadow-lg rounded-lg p-3 text-center w-64 transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
           >
-            <div className="flex items-center justify-center ">
+            <div className="flex items-center justify-center ps-6">
               <Image
                 loading="lazy"
                 quality={1}

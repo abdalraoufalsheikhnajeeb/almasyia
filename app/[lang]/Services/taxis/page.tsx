@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import { Locale } from "../../../../i18n-config";
 import TaxiDeliveryForm from "../../components/TaxiDeliveryForm";
@@ -16,7 +15,7 @@ export default async function Page({
         className="lg:w-2/3 w-full -z-10 object-cover"
         width={1280}
         height={720}
-        src="/images/taxiHero.webp"
+        src="/images/taxihero.jpg"
         alt="Logo"
       />
 

@@ -5,6 +5,7 @@ import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import Link from "next/link";
 import "./Slider.css";
+import AnTitle from "./AnTitle";
 
 interface LocationCardProps {
   flagSrc: string;
@@ -96,7 +97,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
 
   return (
     <div className={`w-screen ${addClass}`}>
-      <div className="max-w-7xl mx-auto g overflow-hidden my-4 rounded-3xl  bg-white shadow-lg ">
+      <div className="max-w-7xl mx-auto my-4 overflow-hidden  box">
         <div className="flex justify-center items-center gap-4">
           <Image
             width={400}
@@ -106,7 +107,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
             alt={`${locationName} flag`}
             className="w-20 me-4"
           />
-          <h2 className="text-5xl font-bold">{locationName}</h2>
+            <AnTitle title={locationName} />
         </div>
         <Link target="_blank" href={googleMapsUrl} rel="noopener noreferrer">
           <div className="flex items-center pt-12">

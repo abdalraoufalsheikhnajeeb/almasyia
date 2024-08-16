@@ -10,8 +10,8 @@ export default async function page({
   const dic = await getDictionary(lang);
 
   return (
-    <section className="flex-col w-screen lg:flex-row lg:min-h-[50vh] flex  px-8 lg:px-28  pt-20 gap-4 ">
-      <div className="flex w-full flex-col my-12 items-center gap-6 lg:items-start overflow-visible text-primary">
+    <section className="flex-col lg:flex-row lg:min-h-[50vh] lg:justify-between mt-24 gap-4 flex  box mx-12 ">
+      <div className="flex w-full lg:w-1/2 flex-col my-12 items-center gap-6 lg:items-start overflow-visible text-primary">
         <Image
           loading="lazy"
           quality={50}
@@ -22,7 +22,7 @@ export default async function page({
           height={122}
         />
 
-        <p>
+       
           <span className="text-3xl font-bold">{dic?.ayatAnimation} </span>
           <span className="text-2xl ">{dic?.prev1}</span>
           <p className="mt-4 text-lg text-primary">
@@ -33,16 +33,16 @@ export default async function page({
               farouk@alnujoomalmasiya.com
             </a>
           </p>
-        </p>
+       
       </div>
       <Image
         loading="lazy"
-        quality={50}
+        quality={100}
         src="/images/farouk.webp"
-        width={500}
-        height={400}
+        width={640}
+        height={427}
         alt="founder image"
-        className="object-cover object-center lg:w-1/2 w-screen lg:custom-clip"
+        className=" object-center w-full lg:w-1/2 rounded-xl lg:custom-clip"
       />
     </section>
   );

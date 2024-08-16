@@ -17,20 +17,23 @@ export default function Page({
           className="w-full h-full object-cover"
           width={1280}
           height={720}
-          src="/images/travelInsuranceHero.webp"
+          src="/images/travelInsurancehero.jpg"
           alt="Travel Insurance"
         />
-
       </div>
 
       <div className="flex lg:w-1/3 w-full justify-center items-center">
         <TravelInsuranceForm lang={lang} />
       </div>
       <div className="bg-white  w-full opacity-80 py-16 px-8 h-auto">
-          <p className="text-center text-2xl">
-            {lang === "en" ? "Travel safely" : lang === "ar" ? "سافر بأمان" : "Путешествуй безопасно"}
-          </p>
-        </div>
+        <p className="text-center text-2xl">
+          {lang === "en"
+            ? "Travel safely"
+            : lang === "ar"
+            ? "سافر بأمان"
+            : "Путешествуй безопасно"}
+        </p>
+      </div>
     </div>
   );
 }

@@ -46,7 +46,7 @@ export default function LocaleSwitcher() {
     <div className="relative" onClick={toggleDropdown} ref={dropdownRef}>
       <button  className="focus:outline-none">
         <Image
-          loading="lazy"
+          priority
           quality={1}
           width={37}
           className="object-cover mt-2"
@@ -63,7 +63,7 @@ export default function LocaleSwitcher() {
               onClick={() => setIsOpen(false)}
             >
               <Image
-                loading="lazy"
+                priority
                 quality={1}
                 width={40}
                 height={25}
@@ -78,7 +78,7 @@ export default function LocaleSwitcher() {
               onClick={() => setIsOpen(false)}
             >
               <Image
-                loading="lazy"
+                priority
                 quality={50}
                 width={40}
                 height={25}
@@ -93,7 +93,7 @@ export default function LocaleSwitcher() {
               onClick={() => setIsOpen(false)}
             >
               <Image
-                loading="lazy"
+                priority
                 quality={1}
                 width={40}
                 height={25}

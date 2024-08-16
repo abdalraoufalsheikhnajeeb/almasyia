@@ -17,8 +17,8 @@ export default async function Home({
       <Image
         loading="lazy"
         quality={50}
-        src="/images/hero.webp"
-        className="bg-gradient absolute -z-10 object-cover h-[100dvh] w-screen opacity-70"
+        src="/images/hero.jpg"
+        className="bg-gradient absolute -z-10 object-cover h-[100dvh] w-screen"
         alt="arrow"
         width={1280}
         height={720}
@@ -30,9 +30,9 @@ export default async function Home({
             quality={50}
             src="/images/logo.webp"
             alt="arrow"
-            width={226}
+            width={50}
             priority
-            height={122}
+            height={38}
             sizes="(max-width: 640px) 100vw, (max-width: 1080px) 50vw, 33vw"
             className="w-52 lg:w-80"
           />
