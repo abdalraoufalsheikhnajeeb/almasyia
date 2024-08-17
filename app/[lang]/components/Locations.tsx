@@ -15,7 +15,7 @@ const Locations: NextPage<LocationsProps> = async ({ params: { lang } }) => {
   const dic = await getDictionary(lang);
 
   const uaeLocation = {
-    flagSrc: "/images/uae.svg",
+    flagSrc: "/images/emirate-flag.svg",
     images: [
       "/images/uae1.webp",
       "/images/uae2.webp",
@@ -32,7 +32,7 @@ const Locations: NextPage<LocationsProps> = async ({ params: { lang } }) => {
   };
 
   const syriaLocation = {
-    flagSrc: "/images/sar.svg",
+    flagSrc: "/images/syria-flag.svg",
     images: [
       "/images/sar1.webp",
       "/images/sar2.webp",
@@ -53,8 +53,6 @@ const Locations: NextPage<LocationsProps> = async ({ params: { lang } }) => {
 
   return (
     <main className="flex  flex-col items-center justify-center min-h-[100dvh] py-2 ">
-   
-
       <LocationCard {...uaeLocation} />
       <br />
       <br />

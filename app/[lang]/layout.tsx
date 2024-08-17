@@ -5,6 +5,7 @@ import { getDictionary } from "../../get-dictionary";
 import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
 import { Tajawal } from "next/font/google";
+import Whatsapp from "./components/Whatsapp";
 
 // Import the Tajawal font with appropriate configurations
 const tajawal = Tajawal({
@@ -61,7 +62,7 @@ export default async function RootLayout({
         className={`overflow-x-hidden text-primary bg3 ${tajawal.className}`}
       >
         <Navbar lang={params.lang} />
-
+        <Whatsapp/>
         {children}
         <Footer params={{ lang: params.lang }} />
       </body>

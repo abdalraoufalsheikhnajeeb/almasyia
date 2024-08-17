@@ -9,10 +9,17 @@ export default function Whatsapp() {
     setIsOpen(!isOpen);
   };
 
-
   return (
-    <div className="fixed bottom-4 end-4 cursor-pointer " onClick={toggleDropdown} ref={dropdownRef}>
-      <div className={`rounded-full z-50 ${!isOpen && "animate-bounce"} p-4 flex-shrink-0 flex justify-center items-center bg-[#25d366]`}>
+    <div
+      className="fixed bottom-4 end-4 cursor-pointer z-50"
+      onClick={toggleDropdown}
+      ref={dropdownRef}
+    >
+      <div
+        className={`rounded-full  ${
+          !isOpen && "animate-bounce"
+        } p-4 flex-shrink-0 flex justify-center items-center bg-[#25d366]`}
+      >
         <Image
           priority
           quality={1}
@@ -26,7 +33,7 @@ export default function Whatsapp() {
       {isOpen && (
         <div className="absolute -start-2 -bottom-2 w-24 pb-24 bg-white cursor-pointer border rounded-full shadow-lg -z-10">
           <div className="flex  flex-col items-center gap-2 p-2">
-          <Link target="_blank" href="https://wa.me/971545866066">
+            <Link target="_blank" href="https://wa.me/971545866066">
               <Image
                 priority
                 quality={1}
@@ -34,7 +41,7 @@ export default function Whatsapp() {
                 height={78}
                 className="object-cover w-full hover:scale-110 transition-all"
                 alt="uae flag"
-                src={`/images/uae.svg`}
+                src="/images/emirate-flag.svg"
               />
             </Link>
 
@@ -46,10 +53,9 @@ export default function Whatsapp() {
                 height={78}
                 className="object-cover w-full hover:scale-110 transition-all"
                 alt="syria flag"
-                src="/images/sar.svg"
+                src="/images/syria-flag.svg"
               />
             </Link>
-
           </div>
         </div>
       )}

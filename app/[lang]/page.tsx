@@ -46,7 +46,7 @@ export default async function Home({
           </button>
 
 
-          <Whatsapp/>
+          
 
 
         </header>

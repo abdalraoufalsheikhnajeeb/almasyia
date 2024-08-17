@@ -25,7 +25,6 @@ export default async function Footer({
             width={100}
             height={100}
             alt="facebook icon"
-            
           />
         </a>
         <a
@@ -41,7 +40,6 @@ export default async function Footer({
             width={100}
             height={100}
             alt="instagram link"
-            
           />
         </a>
         <a
@@ -53,11 +51,10 @@ export default async function Footer({
             loading="lazy"
             quality={50}
             className="transform transition-transform duration-300 ease-in-out hover:scale-110"
-            src="/images/map-uae.svg"
+            src="/images/map-emirate-flag.svg"
             width={100}
             height={100}
             alt="UAE location"
-            
           />
         </a>
         <a
@@ -69,11 +66,10 @@ export default async function Footer({
             loading="lazy"
             quality={50}
             className="transform transition-transform duration-300 ease-in-out hover:scale-110"
-            src="/images/map-sar.svg"
+            src="/images/map-syria-flag.svg"
             width={100}
             height={100}
             alt="syria location"
-            
           />
         </a>
       </div>
