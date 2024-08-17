@@ -56,7 +56,7 @@ export default async function Page({
               : descriptionRU;
 
           return (
-            <div key={index} className="flex flex-col lg:flex-col gap-4 box">
+            <div key={index} className="flex flex-col lg:flex-col gap-4 box w-full">
               <div className="flex flex-col lg:flex-row-reverse w-full justify-between items-center">
                 <Image
                   width={445}

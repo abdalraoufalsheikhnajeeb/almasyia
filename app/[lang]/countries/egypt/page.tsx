@@ -37,25 +37,27 @@ const Page = ({ params: { lang } }: { params: { lang: Locale } }) => {
         return (
           <div
             key={index}
-            className="mb-8 pt-6  lg:ps-4 bg-[#34689447] rounded-2xl border-white border shadow-xl overflow-hidden"
+            className="mb-8 box"
           >
-            <h2 className="text-center text-accent text-2xl font-bold mb-4">
-              {title}
-            </h2>
-            <div className="flex flex-col lg:flex-row items-center ">
-              <p className=" lg:w-2/3 lg:pe-4 text-start max-w-[90%] mx-auto">
-                {description}
-              </p>
+            <div className="flex flex-col  gap-4 lg:flex-row items-center ">
+            <div className="flex flex-col lg:w-2/3">
+              <h2 className="text-center text-accent text-2xl font-bold mb-6">
+                {title}
+              </h2>
+                <p className=" text-start text-lg">
+                  {description}
+                </p>
+            </div>
 
               {src && (
-                <div className="lg:w-1/3 w-full mt-4 lg:mt-0">
+                <div className="lg:w-1/3 w-full mt-4 lg:mt-0 self-end">
                   <Image
                     src={src}
-                    quality={100}
+                    quality={50}
                     alt={title}
                     width={500}
                     height={300}
-                    className=" w-full  rounded-ee-2xl rounded-es-2xl lg:rounded-ee-none lg:rounded-es-none lg:rounded-ss-2xl"
+                    className=" w-full  rounded-ee-2xl rounded-es-2xl rounded-lg"
                   />
                 </div>
               )}

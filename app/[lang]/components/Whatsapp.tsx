@@ -18,20 +18,20 @@ export default function Whatsapp() {
       <div
         className={`rounded-full  ${
           !isOpen && "animate-bounce"
-        } p-4 flex-shrink-0 flex justify-center items-center bg-[#25d366]`}
+        } p-1 lg:p-4  w-10 h-10 lg:w-20 lg:h-20 flex-shrink-0 flex justify-center items-center bg-[#25d366]`}
       >
         <Image
           priority
           quality={1}
           width={50}
-          className="object-cover"
+          className="object-cover w-full h-full"
           height={50}
           alt="Globe icon"
           src={`/images/whats.svg`}
         />
       </div>
       {isOpen && (
-        <div className="absolute -start-2 -bottom-2 w-24 pb-24 bg-white cursor-pointer border rounded-full shadow-lg -z-10">
+        <div className="absolute -start-2 -bottom-2 w-14 lg:w-24 lg:pb-24 pb-12  bg-white cursor-pointer border rounded-full shadow-lg -z-10">
           <div className="flex  flex-col items-center gap-2 p-2">
             <Link target="_blank" href="https://wa.me/971545866066">
               <Image
@@ -39,7 +39,7 @@ export default function Whatsapp() {
                 quality={1}
                 width={78}
                 height={78}
-                className="object-cover w-full hover:scale-110 transition-all"
+                className="object-cover  hover:scale-110 transition-all w-10 h-10 lg:w-20 lg:h-20"
                 alt="uae flag"
                 src="/images/emirate-flag.svg"
               />
@@ -51,7 +51,7 @@ export default function Whatsapp() {
                 quality={1}
                 width={78}
                 height={78}
-                className="object-cover w-full hover:scale-110 transition-all"
+                className="object-cover  hover:scale-110 transition-all w-10 h-10 lg:w-20 lg:h-20"
                 alt="syria flag"
                 src="/images/syria-flag.svg"
               />

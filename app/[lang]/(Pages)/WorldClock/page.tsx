@@ -43,25 +43,17 @@ const WorldClock = ({ params: { lang } }: { params: { lang: Locale } }) => {
         {timeZones.map((zone) => (
           <div
             key={zone.nameEN}
-            className="bg-white relative shadow-lg rounded-lg p-3 text-center w-64 transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+            className="box flex flex-col justify-center items-center mx-1"
           >
-            <div className="flex items-center justify-center ps-6">
-              <Image
-                loading="lazy"
-                quality={1}
-                className="absolute h-8 left-0 bottom-1/4 -translate-y-1/2 "
-                width={50}
-                height={50}
-                src="/images/clock.svg"
-                alt="clock"
-              />
+            <div className="flex items-center justify-center ps-8">
+            
               <h2 className="text-2xl font-bold text-primary ">
                 {lang === "en"
                   ? zone.nameEN
                   : lang === "ar"
                   ? zone.nameAR
                   : zone.nameRU }
-                  <span className="text-white text-xl ms-2"> {zone.flag}</span>
+                  <span className="text-[#b9d2e7] text-xl ms-2"> {zone.flag}</span>
                   
               </h2>
                   

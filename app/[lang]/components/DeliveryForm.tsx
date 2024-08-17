@@ -68,7 +68,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
           name="senderName"
           value={formData.senderName}
           onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
+          className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
           required
         />
       </div>
@@ -86,7 +86,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
             id="submissionDate"
             selected={formData.submissionDate}
             onChange={(date) => handleDateChange("submissionDate", date)}
-            className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2 bg-white text-gray-700"
+            className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
             placeholderText={
               lang === "ar"
                 ? "اختر التاريخ"
@@ -113,7 +113,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
             id="dispatchDate"
             selected={formData.dispatchDate}
             onChange={(date) => handleDateChange("dispatchDate", date)}
-            className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2 bg-white text-gray-700"
+            className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
             placeholderText={
               lang === "ar"
                 ? "اختر التاريخ"
@@ -143,7 +143,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
           name="placeOfDelivery"
           value={formData.placeOfDelivery}
           onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
+          className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
           required
         />
       </div>
@@ -164,7 +164,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
           name="recipientNumber"
           value={formData.recipientNumber}
           onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
+          className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
           required
         />
       </div>
@@ -183,7 +183,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
             value="normal"
             checked={formData.urgency === "normal"}
             onChange={handleChange}
-            className="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
+            className="h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
           />
           <label className="ms-2 text-lg text-gray-900">
             {lang === "ar" ? "عادي" : lang === "ru" ? "Обычная" : "Normal"}
@@ -196,7 +196,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
             value="urgent"
             checked={formData.urgency === "urgent"}
             onChange={handleChange}
-            className="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
+            className="h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
           />
           <label className="ms-2 text-lg text-gray-900">
             {lang === "ar" ? "عاجل" : lang === "ru" ? "Срочная" : "Urgent"}
@@ -214,7 +214,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
       {renderFormContent()}
       <button
         type="submit"
-        className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
       >
         {lang === "ar"
           ? "إرسال المعلومات"

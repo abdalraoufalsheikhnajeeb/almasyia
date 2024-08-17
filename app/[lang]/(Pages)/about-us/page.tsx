@@ -16,52 +16,51 @@ export default async function Page({
           loading="lazy"
           quality={50}
           src="/images/logo.webp"
-          className="w-40 lg:w-60"
+          className="w-40 lg:w-60 object-cover"
           alt="Al-Nujoom Al-Masiyya logo"
-          width={226}
-          height={122}
+          width={240}
+          height={164}
         />
 
-
         {lang === "ar" && (
-          <p>
+          <p className="text-lg">
             النجوم الماسية هي شركة متخصصة في خدمات السياحة والسفر، يديرها
             م.فاروق دكاك، وتقدم حجوزات الطيران والفنادق إلى مختلف أنحاء العالم.
             بصفتها وكيلًا معتمدًا لشركات الطيران مثل فلاي دبي، أجنحة الشام،
-            العربية للطيران، والخطوط الجوية السورية، بالإضافة إلى تقديمها
-            حجوزات طيران عبر الخطوط الجوية القطرية، التركية، الأردنية،
-            بيجاسوس، المصرية، السعودية، والإماراتية وغيرها. كما تقدم النجوم
-            الماسية خدمات حجوزات الفنادق العالمية مع ضمان جودة عالية وأسعار
-            مناسبة. إلى جانب ذلك، توفر الشركة تأشيرات السفر بسرعة وكفاءة،
-            وبرامج سياحية متنوعة، وخدمات نقل من وإلى المطار، وتأمين السفر.
-            برامجنا السياحية تجمع بين المتعة والتنوع، لتقديم تجارب تستحق
-            الاستكشاف. تلتزم النجوم الماسية بتقديم خدمات سياحية شاملة ورحلات
-            استثنائية بأفضل الأسعار، مع التركيز على رضا العملاء وجودة الخدمة.
-            اكتشف العالم معنا بأمان وراحة.
+            العربية للطيران، والخطوط الجوية السورية، بالإضافة إلى تقديمها حجوزات
+            طيران عبر الخطوط الجوية القطرية، التركية، الأردنية، بيجاسوس،
+            المصرية، السعودية، والإماراتية وغيرها. كما تقدم النجوم الماسية خدمات
+            حجوزات الفنادق العالمية مع ضمان جودة عالية وأسعار مناسبة. إلى جانب
+            ذلك، توفر الشركة تأشيرات السفر بسرعة وكفاءة، وبرامج سياحية متنوعة،
+            وخدمات نقل من وإلى المطار، وتأمين السفر. برامجنا السياحية تجمع بين
+            المتعة والتنوع، لتقديم تجارب تستحق الاستكشاف. تلتزم النجوم الماسية
+            بتقديم خدمات سياحية شاملة ورحلات استثنائية بأفضل الأسعار، مع التركيز
+            على رضا العملاء وجودة الخدمة. اكتشف العالم معنا بأمان وراحة.
           </p>
         )}
 
         {lang === "en" && (
-          <p>
-            Al-Nujoom Al-Masiyya is a leading tourism and travel services company,
+          <p className="text-lg">
+            AlNujoom AlMasiya is a leading tourism and travel services company,
             managed by Farouk Dakkak, offering global flight and hotel bookings.
-            As an authorized agent for airlines like FlyDubai, Wings of Sham, Air
-            Arabia, and Syrian Airlines, we also provide bookings through Qatar
-            Airways, Turkish Airlines, Royal Jordanian, Pegasus, EgyptAir, Saudi
-            Arabian Airlines, Emirates Airlines, and more. We guarantee high
-            quality and affordable hotel bookings worldwide, fast visa processing,
-            and a wide range of diverse tourist programs, airport transfer services,
-            and travel insurance. Our tours combine enjoyment and variety,
-            delivering unforgettable experiences. Al-Nujoom Al-Masiyya is dedicated
-            to providing comprehensive tourism services and exceptional trips at
-            the best prices, focusing on customer satisfaction and service quality.
-            Discover the world with us in safety and comfort.
+            As an authorized agent for airlines like FlyDubai, Wings of Sham,
+            Air Arabia, and Syrian Airlines, we also provide bookings through
+            Qatar Airways, Turkish Airlines, Royal Jordanian, Pegasus, EgyptAir,
+            Saudi Arabian Airlines, Emirates Airlines, and more. We guarantee
+            high quality and affordable hotel bookings worldwide, fast visa
+            processing, and a wide range of diverse tourist programs, airport
+            transfer services, and travel insurance. Our tours combine enjoyment
+            and variety, delivering unforgettable experiences. Al-Nujoom
+            Al-Masiyya is dedicated to providing comprehensive tourism services
+            and exceptional trips at the best prices, focusing on customer
+            satisfaction and service quality. Discover the world with us in
+            safety and comfort.
           </p>
         )}
 
         {lang === "ru" && (
-          <p>
-            Al-Nujoom Al-Masiyya — ведущая компания, специализирующаяся на
+          <p className="text-lg">
+            AlNujoom AlMasiya — ведущая компания, специализирующаяся на
             туристических услугах, управляемая Фаруком Даккаком, предлагающая
             бронирование авиабилетов и отелей по всему миру. Будучи
             авторизованным агентом авиакомпаний, таких как FlyDubai, Wings of
@@ -73,10 +72,10 @@ export default async function Page({
             ассортимент туристических программ, трансферов из аэропорта и
             туристических страховок. Наши туры сочетают в себе удовольствие и
             разнообразие, предлагая незабываемые впечатления. Al-Nujoom
-            Al-Masiyya стремится предоставлять комплексные туристические услуги и
-            исключительные поездки по лучшим ценам, уделяя особое внимание
-            удовлетворенности клиентов и качеству обслуживания. Откройте для себя
-            мир с нами в безопасности и комфорте.
+            Al-Masiyya стремится предоставлять комплексные туристические услуги
+            и исключительные поездки по лучшим ценам, уделяя особое внимание
+            удовлетворенности клиентов и качеству обслуживания. Откройте для
+            себя мир с нами в безопасности и комфорте.
           </p>
         )}
 
@@ -92,12 +91,12 @@ export default async function Page({
 
       <Image
         loading="lazy"
-        quality={100}
+        quality={50}
         src="/images/farouk.webp"
         width={640}
         height={427}
         alt="Farouk Dakkak, Founder of Al-Nujoom Al-Masiyya"
-        className="object-center w-full lg:w-1/2 rounded-xl lg:custom-clip"
+        className="object-cover object-right w-full lg:w-1/2 rounded-xl"
       />
     </section>
   );

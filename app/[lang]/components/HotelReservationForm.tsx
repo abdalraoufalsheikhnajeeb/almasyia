@@ -101,7 +101,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
           name="country"
           value={formData.country}
           onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
+          className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
           required
         >
           <option value="">
@@ -129,7 +129,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
           name="city"
           value={formData.city}
           onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
+          className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
           required
         >
           <option value="">
@@ -163,7 +163,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
             id="arrivalDate"
             selected={formData.arrivalDate}
             onChange={handleArrivalDateChange}
-            className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2 bg-white text-gray-700"
+            className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
             placeholderText={
               lang === "ar"
                 ? "اختر التاريخ"
@@ -190,7 +190,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
             id="departureDate"
             selected={formData.departureDate}
             onChange={handleDepartureDateChange}
-            className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2 bg-white text-gray-700"
+            className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
             placeholderText={
               lang === "ar"
                 ? "اختر التاريخ"
@@ -218,7 +218,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
           name="numberOfPeople"
           value={formData.numberOfPeople}
           onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
+          className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
           required
         />
       </div>
@@ -229,7 +229,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
           name="hasChildren"
           checked={hasChildren}
           onChange={handleChange}
-          className="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
+          className="h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
         />
         <label htmlFor="hasChildren" className="ms-2 text-lg text-gray-900">
           {lang === "ar"
@@ -257,13 +257,13 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
             name="numberOfChildren"
             value={formData.numberOfChildren}
             onChange={handleChange}
-            className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg p-2"
+            className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
           />
         </div>
       )}
       <button
         type="submit"
-        className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
       >
         {lang === "ar"
           ? "إرسال المعلومات"

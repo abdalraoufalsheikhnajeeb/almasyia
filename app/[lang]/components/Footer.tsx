@@ -21,7 +21,7 @@ export default async function Footer({
             loading="lazy"
             quality={1}
             className="transform transition-transform duration-300 ease-in-out hover:scale-110"
-            src="/images/face.svg"
+            src="/images/facebook.svg"
             width={100}
             height={100}
             alt="facebook icon"
@@ -88,14 +88,6 @@ export default async function Footer({
           />
         </a>
       </div>
-      <p className="mt-4 text-lg text-primary">
-        <a
-          className="text-2xl underline underline-offset-4"
-         
-        >
-          farouk@alnujoomalmasiya.com
-        </a>
-      </p>
     </footer>
   );
 }

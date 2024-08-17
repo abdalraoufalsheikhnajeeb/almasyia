@@ -19,23 +19,23 @@ export default async function Home({
         loading="lazy"
         quality={50}
         src="/images/hero.jpg"
-        className="bg-gradient absolute -z-10 object-cover h-[100dvh] w-screen"
+        className=" absolute -z-10 object-cover h-[90dvh] w-screen"
         alt="arrow"
         width={1280}
         height={720}
       />
-      <div className=" bg-gradient absolute -z-[1]  h-[100dvh] w-screen" />
+      <div className="absolute -z-[1]  h-[100dvh] w-screen" />
       <main className=" max-w-[90vw]  mx-auto flex items-center flex-col gap-8">
         <header className="h-[100dvh] gap-8 pb-8 flex flex-col items-center justify-end ">
           <Image
             quality={50}
             src="/images/logo.webp"
             alt="arrow"
-            width={400}
+            width={320}
             priority
-            height={274}
+            height={219}
             
-            className="w-52 lg:w-80"
+            className="w-52 lg:w-80 object-cover"
           />
           <h2 className="text-3xl  max-w-3xl font-bold  text-primary  text-center">
             {dic?.homeText}

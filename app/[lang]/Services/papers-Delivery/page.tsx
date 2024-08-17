@@ -10,10 +10,10 @@ export default async function Page({
   params: { lang: Locale };
 }) {
   return (
-    <div className="lg:pt-20 pt-24 flex flex-col-reverse lg:flex-row gap-4">
+    <div className="box flex flex-col-reverse lg:flex-row gap-4">
       <Image
         loading="lazy"
-        quality={1}
+        quality={50}
         className="lg:w-2/3 w-full -z-10 object-cover"
         width={1280}
         height={720}
