@@ -51,7 +51,7 @@ export default async function Footer({
             loading="lazy"
             quality={50}
             className="transform transition-transform duration-300 ease-in-out hover:scale-110"
-            src="/images/map-emirate-flag.svg"
+            src="/images/location_uae.svg"
             width={100}
             height={100}
             alt="UAE location"
@@ -66,7 +66,22 @@ export default async function Footer({
             loading="lazy"
             quality={50}
             className="transform transition-transform duration-300 ease-in-out hover:scale-110"
-            src="/images/map-syria-flag.svg"
+            src="/images/location_sy.svg"
+            width={100}
+            height={100}
+            alt="syria location"
+          />
+        </a>
+        <a
+          title="email Farouk Dakkak"
+          target="_blank"
+          href="mailto:farouk@alnujoomalmasiya.com"
+        >
+          <Image
+            loading="lazy"
+            quality={50}
+            className="transform transition-transform duration-300 ease-in-out hover:scale-110"
+            src="/images/email.svg"
             width={100}
             height={100}
             alt="syria location"
@@ -76,7 +91,7 @@ export default async function Footer({
       <p className="mt-4 text-lg text-primary">
         <a
           className="text-2xl underline underline-offset-4"
-          href="mailto:farouk@alnujoomalmasiya.com"
+         
         >
           farouk@alnujoomalmasiya.com
         </a>

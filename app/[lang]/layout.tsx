@@ -62,8 +62,8 @@ export default async function RootLayout({
         className={`overflow-x-hidden text-primary bg3 ${tajawal.className}`}
       >
         <Navbar lang={params.lang} />
-        <Whatsapp/>
-        {children}
+        <Whatsapp />
+        <div className="mt-20">{children}</div>
         <Footer params={{ lang: params.lang }} />
       </body>
     </html>

@@ -10,7 +10,7 @@ export default async function Page({
   return (
     <>
       <AnTitle title="" />
-      <div className="lg:pt-20 pt-24 flex flex-col-reverse lg:flex-row gap-4 py-12">
+      <div className="lg:pt-20  flex flex-col-reverse lg:flex-row gap-4 box">
         <div className="relative lg:w-2/3">
           <Image
             loading="lazy"
@@ -30,44 +30,17 @@ export default async function Page({
         <p className="text-center text-2xl">
           {lang === "en" && (
             <>
-              I feel special... Through the high-end hotel services provided to
-              you, with the high attention and diligent follow-up by our team,
-              you will feel the true distinction that enriches your tourism
-              experience with us. Because quality accommodation is one of the
-              most important components of an enjoyable vacation, Diamond Stars
-              Company provides the best accommodation options within its network
-              of hotels and resorts contracted with it with high-end
-              classifications of 3, 4, and 5 stars. They all have distinguished
-              services and wonderful views, to provide the best place for
-              recreation for our customers, and multiple room options are
-              available.
+            Enjoy a luxurious hotel experience with Al-Nujoom Al-Masiya, offering the best accommodation options in 3, 4, and 5-star hotels with exceptional services and stunning views.
             </>
           )}
           {lang === "ar" && (
             <>
-              اشعر بالتميّز... من خلال الخدمات الفندقية الراقية المقدمة لكم، مع
-              الاهتمام العالي والمتابعة الحثيثة من قبل فريقنا ستشعرون بالتميز
-              الحقيقي الذي يغني تجربتكم السياحية معنا. ولأن الإقامة الهنيَّة من
-              أهم مقومات الإجازة الممتعة، توفِّر شركة النجوم الماسية أفضل خيارات
-              الإقامة ضمن شبكة الفنادق والمنتجعات المتعاقدة معها ذات التصنيفات
-              الراقية من فئات 3,4,5 نجوم. وتحظى جميعها بخدمات متميزة، وإطلالات
-              رائعة، لتأمين أفضل مكان استجمام لزبائننا، كما تتوافر خيارات متعددة
-              للغرف
+      استمتعوا بتجربة فندقية راقية مع شركة النجوم الماسية، التي تقدم أفضل خيارات الإقامة من فنادق 3,4,5 نجوم، مع خدمات متميزة وإطلالات رائعة.
             </>
           )}
           {lang === "ru" && (
             <>
-              Я чувствую себя особенным... Благодаря предоставленным вам
-              высококлассным гостиничным услугам, а также высокому вниманию и
-              усердному контролю со стороны нашей команды, вы почувствуете
-              истинное отличие, которое обогащает ваш туристический опыт с нами.
-              Поскольку качественное размещение является одной из важнейших
-              составляющих приятного отдыха, компания Diamond Stars
-              предоставляет лучшие варианты размещения в сети заключённых с ней
-              отелей и курортов высшей категории 3, 4 и 5 звёзд. Все они
-              предлагают выдающиеся услуги и прекрасные виды, что делает их
-              лучшим местом для отдыха для наших клиентов, а также предлагают
-              несколько вариантов номеров.
+           Наслаждайтесь роскошным гостиничным опытом с Al-Nujoom Al-Masiya, предлагающим лучшие варианты размещения в 3, 4 и 5-звездочных отелях с исключительным обслуживанием и потрясающими видами.
             </>
           )}
         </p>
