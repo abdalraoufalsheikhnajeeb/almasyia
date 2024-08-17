@@ -31,6 +31,7 @@ export default async function Page({
             descriptionEN,
             descriptionRU,
             image,
+            icon,
           } = visa;
 
           const country =
@@ -55,10 +56,7 @@ export default async function Page({
               : descriptionRU;
 
           return (
-            <div
-              key={index}
-              className="flex flex-col lg:flex-col gap-4 box"
-            >
+            <div key={index} className="flex flex-col lg:flex-col gap-4 box">
               <div className="flex flex-col lg:flex-row-reverse w-full justify-between items-center">
                 <Image
                   width={445}
@@ -69,9 +67,23 @@ export default async function Page({
                   className="lg:h-96 w-full lg:w-1/2 object-cover rounded-3xl "
                 />
                 <div className="p-4 flex flex-col gap-3 lg:w-1/2">
-                  <h2 className="text-primary text-5xl font-bold text-center">
-                    {country}
-                  </h2>
+                 
+
+                  <div className="p-4 flex flex-col h-full flex-grow justify-between gap-3 ">
+                    <div className="flex gap-3 justify-center items-center">
+                      <h2 className="text-accent text-5xl font-bold text-center">
+                        {country}
+                      </h2>
+                      <Image
+                        width={60}
+                        height={60}
+                        quality={10}
+                        src={icon}
+                        alt={country}
+                        className="w-16 h-16 object-cover rounded-3xl "
+                      />
+                    </div>
+                  </div>
                   {duration && (
                     <div className="text-primary text-3xl font-bold list-disc mb-4">
                       {dic.duration}:

@@ -311,12 +311,14 @@ export const visas = [
       "Требуется цветная фотография паспорта высокого разрешения",
       "Личное фото",
     ],
-    src: "/images/.webp",
+    
     descriptionAR: "سرعة وانجاز في العمل - أسعار رائعة - خدمات احترافية",
     descriptionEN: "Fast processing - Great prices - Professional services",
     descriptionRU:
       "Быстрое оформление - Отличные цены - Профессиональные услуги",
     image: "/images/uae.webp",
+    icon: "/images/uae.svg",
+
   },
   {
     countryAR: "مصر",
@@ -334,21 +336,22 @@ export const visas = [
       "Требуется цветная фотография паспорта высокого разрешения",
       "Личное фото",
     ],
-    src: "/images/.webp",
+    
     descriptionAR: "سريعة / بطيئة - لا تتردد في الاستفسار عن أسعارنا",
     descriptionEN:
       "Fast/slow processing - Don't hesitate to inquire about our prices",
     descriptionRU:
       "Быстрое/медленное оформление - Не стесняйтесь узнать наши цены",
     image: "/images/egypt.webp",
+    icon: "/images/egypt.svg",
   },
   {
     countryAR: "الأردن",
     countryEN: "Jordan",
     countryRU: "Иордания",
-    durationAR: "تتوفر التأشيرات التالية",
-    durationEN: "The following visas are available",
-    durationRU: "Доступны следующие визы",
+    durationAR: " سياحية / موعد سفارة / امتحان لغة او دورات تعليمية :تتوفر التأشيرات التالية",
+    durationEN: "The following visas are available: Tourism / Embassy appointment / Language exam or educational courses",
+    durationRU: "Доступны следующие визы : Туризм / запись в посольство / языковой экзамен или образовательные курсы",
     requirementsAR: ["صورة جواز سفر ملونة دقة عالية", "صورة شخصية"],
     requirementsEN: [
       "High-resolution colored passport photo",
@@ -358,11 +361,12 @@ export const visas = [
       "Требуется цветная фотография паспорта высокого разрешения",
       "Личное фото",
     ],
-    src: "/images/.webp",
+    
     descriptionAR: "أسعار مناسبة وإصدار سريع",
     descriptionEN: "Affordable prices",
     descriptionRU: "Affordable prices",
     image: "/images/jordan.webp",
+    icon: "/images/Jordan.svg",
   },
   {
     countryAR: "إندونيسيا",
@@ -381,19 +385,17 @@ export const visas = [
       "Требуется цветная фотография паспорта высокого разрешения",
       "Личное фото",
     ],
-    src: "/images/.webp",
+    
     descriptionAR: "مدة إنجاز سريعة - أسعار مميزة",
     descriptionEN: "Fast processing time - Great prices",
     descriptionRU: "Быстрое оформление - Отличные цены",
     image: "/images/indonesia.webp",
+    icon: "/images/Indonesia.svg",
   },
   {
     countryAR: "شنغن",
     countryEN: "Schengen",
     countryRU: "Шенген",
-    durationAR: "",
-    durationEN: "",
-    durationRU: "",
     requirementsAR: [
       "صورة جواز سفر ملونة دقة عالية",
       "صورة شخصية",
@@ -412,20 +414,18 @@ export const visas = [
       "Вид на жительство",
       "Выписка из банка",
     ],
-    src: "/images/.webp",
+    
     descriptionAR: "لا تتردد بالتواصل معنا للاستفسار عن المزيد",
     descriptionEN: "Feel free to contact us for more information",
     descriptionRU:
       "Не стесняйтесь связаться с нами для получения дополнительной информации",
     image: "/images/schengen.webp",
+    icon: "/images/Schengen.svg",
   },
   {
     countryAR: "تركيا",
     countryEN: "Turkey",
     countryRU: "Турция",
-    durationAR: "",
-    durationEN: "",
-    durationRU: "",
     requirementsAR: [
       "صورة جواز سفر ملونة دقة عالية",
       "صورة شخصية",
@@ -444,11 +444,8 @@ export const visas = [
       "Вид на жительство",
       "Выписка из банка",
     ],
-    src: "/images/.webp",
-    descriptionAR: "",
-    descriptionEN: "",
-    descriptionRU: "",
     image: "/images/turkey.webp",
+    icon: "/images/Turkey.svg",
   },
   {
     countryAR: "قطر",
@@ -466,13 +463,14 @@ export const visas = [
       "Требуется цветная фотография паспорта высокого разрешения",
       "Личное фото",
     ],
-    src: "/images/.webp",
+    
     descriptionAR: "أسعار مناسبة - خدمات احترافية - لتفاصيل اكثر تواصل معنا",
     descriptionEN:
       "Affordable prices - Professional services - For more details contact us",
     descriptionRU:
       "Доступные цены - Профессиональные услуги - Свяжитесь с нами для получения дополнительной информации",
     image: "/images/qatar.webp",
+    icon: "/images/Qatar.svg",
   },
   {
     countryAR: "السعودية",
@@ -495,12 +493,12 @@ export const visas = [
       "Требуется цветная фотография паспорта высокого разрешения",
       "Личное фото",
       "Вид на жительство",
-    ],
-    src: "/images/.webp",
+    ],  
     descriptionAR: "",
     descriptionEN: "",
     descriptionRU: "",
     image: "/images/saudi.webp",
+    icon: "/images/ar.svg",
   },
   {
     countryAR: "فيز طلابية",
@@ -512,11 +510,12 @@ export const visas = [
     requirementsAR: ["صورة جواز السفر", "آخر شهادة تعليمية"],
     requirementsEN: ["Passport copy", "Latest educational certificate"],
     requirementsRU: ["Копия паспорта", "Последний образовательный сертификат"],
-    src: "/images/.webp",
+    
     descriptionAR: "روسيا 🇷🇺   ألمانيا 🇩🇪   ماليزيا 🇲🇾",
     descriptionEN: "Russia 🇷🇺   Germany 🇩🇪   Malaysia 🇲🇾",
     descriptionRU: "Россия 🇷🇺   Германия 🇩🇪   Малайзия 🇲🇾",
     image: "/images/student.webp",
+    icon: "/images/Student.svg",
   },
 ];
 
