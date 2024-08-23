@@ -11,7 +11,7 @@ export default async function Footer({
   return (
     <footer className="footer pt-10 flex pb-4 justify-center items-center flex-col w-full">
       <span className="text-3xl text-primary">{dic?.followUs}</span>
-      <div className="flex gap-4 items-center justify-center">
+      <div className="flex gap-4 items-center justify-center mb-14">
         <a
           title="facebook"
           target="_blank"

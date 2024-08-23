@@ -215,7 +215,7 @@ export const countries = [
     titleru: "Ощутите разнообразные чудеса Малайзии",
   },
   {
-    route: "",
+    route: "georgia",
     id: 9,
     src: "/images/Georgia.webp",
     titleen: "Relax in the Serene Paradise of the Georgia",
@@ -2013,10 +2013,10 @@ export const Turkey = [
     nameAR: "تركيا",
     nameEN: "Turkey",
     nameRU: "Турция",
-    descriptionEN:
+    descriptionAR:
       "هي دولة عابرة للقارات يقع أغلبها ف ش به جزيرة ا لناضول ف غرب أ س يا، والجزء ا لصغر ف ش به جزيرة البلقان ف جنوب شرق أوروبا،وهي الجزء ا لوروبي من تركيا، مفصولة عن ا لناضول ببحر مرمرة، ومضيقي البوسفور والدردنيل، فيها مدينة اسطنبول التي تمتد بين أوروباوأ س يا، هي أكبر مدينة ف البلاد، بي نم أنقرة هي العاصمة ويحد تركيا من الشمال الغربي اليونان وبلغاريا ومن الشمال البحر ا لسود، ومن الشمالالشرقي جورجيا، وشرقا أرمينيا، والمس تحاطة ا لذربيجانية نخجوان و ايران، ومن الجنوب الشرقي العراق، ومن الجنوب سوريا والبحر ا لبيضالمتوسط، ويطل الغرب على بحر ايجه.هي دولة عابرة للقارات يقع أغلبها ف ش به جزيرة ا لناضول ف غرب أ س يا، والجزء ا لصغر ف ش به جزيرة البلقان ف جنوب شرق أوروبا،وهي الجزء ا لوروبي من تركيا، مفصولة عن ا لناضول ببحر مرمرة، ومضيقي البوسفور والدردنيل، فيها مدينة اسطنبول التي تمتد بين أوروباوأ س يا، هي أكبر مدينة ف البلاد، بي نم أنقرة هي العاصمة ويحد تركيا من الشمال الغربي اليونان وبلغاريا ومن الشمال البحر ا لسود، ومن الشمالالشرقي جورجيا، وشرقا أرمينيا، والمس تحاطة ا لذربيجانية نخجوان و ايران، ومن الجنوب الشرقي العراق، ومن الجنوب سوريا والبحر ا لبيضالمتوسط، ويطل الغرب على بحر ايجه.",
     src: "/images/Turkey/1.webp",
-    descriptionAR:
+    descriptionEN:
       "It is a transcontinental country, most of which is located on the island of Anatolia in western Asia, and a small part is located on the island of the Balkans in southeastern Europe. It is the European part of Turkey, separated from Anatolia by the Sea of ​​Marmara, and the Bosphorus and Dardanelles straits, and includes the city of Istanbul, which extends between Europe. In Asia, it is the largest city in the country, while Ankara is the capital. Turkey is bordered to the northwest by Greece and Bulgaria, to the north by the Black Sea, and to the north by To the east is Georgia, to the east is Armenia, it is surrounded by Azerbaijan, Nakhchivan and Iran, to the southeast is Iraq, and to the south is Syria and the White Sea. The Mediterranean, overlooking the west on the Aegean Sea.",
     descriptionRU:
       "Это трансконтинентальная страна, большая часть которой расположена на острове Анатолия в Западной Азии, а небольшая часть — на острове Балканы в юго-восточной Европе./nЭто европейская часть Турции, отделенная от Анатолии Мраморным морем и проливами Босфор и Дарданеллы и включающая город Стамбул, простирающийся между Европой./nВ Азии это крупнейший город страны, а Анкара — столица Турции. На северо-западе она граничит с Грецией и Болгарией, на севере — с Черным морем, а на севере — с Черным морем./nНа востоке находится Грузия, на востоке — Армения, она окружена Азербайджаном, Нахчываном и Ираном, на юго-востоке — Ирак, а на юге — Сирия и Белое море./nСредиземное море с видом на запад, на Эгейское море.Это трансконтинентальная страна, большая часть которой расположена на острове Анатолия в Западной Азии, а небольшая часть — на острове Балканы в юго-восточной Европе./nЭто европейская часть Турции, отделенная от Анатолии Мраморным морем и проливами Босфор и Дарданеллы и включающая город Стамбул, простирающийся между Европой./nВ Азии это крупнейший город страны, а Анкара — столица Турции. На северо-западе она граничит с Грецией и Болгарией, на севере — с Черным морем, а на севере — с Черным морем./nНа востоке находится Грузия, на востоке — Армения, она окружена Азербайджаном, Нахчываном и Ираном, на юго-востоке — Ирак, а на юге — Сирия и Белое море./nСредиземное море с видом на запад, на Эгейское море.",
@@ -2025,10 +2025,10 @@ export const Turkey = [
     nameAR: "أنقرة",
     nameEN: "Ankara",
     nameRU: "Анкара",
-    descriptionEN:
+    descriptionAR:
       "ترتفع مدينة أنقرة فوق منحدر شديد على ضفاف نهر انغوري سو، وهي عاصمة تركيا وثاني أكبر مدنها من حيث عدد السكان، كما أنها تتميز بطابعها ا لوروبي الحديث الذي لا يخلو من معالم تُ ذ كر زائريها بتاريخها المتنوع. ويضم المشهد الثقاف للمدينة قلاعًا عتيقة وبقايا أثرية من حضارات متعددة، منها الحضارة الحيثية والفريجية والهيلينستية والرومانية والب ن يزطية والعثمانية .",
     src: "/images/Turkey/2.webp",
-    descriptionAR:
+    descriptionEN:
       "The city of Ankara rises above a steep cliff on the banks of the Anguri River Su, the capital of Türkiye and its second largest city in terms of number population, and is characterized by its modern European character It is a landmark that reminds visitors of its diverse history. It includes the cultural scene The city has ancient castles and archaeological remains from multiple civilizations, including Hittite, Phrygian, Hellenistic, Roman and Byzantine civilizations And the Ottoman.",
     descriptionRU:
       "Город Анкара возвышается над крутым утесом на берегу реки Ангури. Су, столица Турции и второй по величине город по численности. населения и характеризуется своим современным европейским характером Это достопримечательность, которая напоминает посетителям о своей разнообразной истории. Он включает в себя культурную сцену В городе есть древние замки и археологические находки разных цивилизаций, в том числе Хеттская, фригийская, эллинистическая, римская и византийская цивилизации. И Османская.",
@@ -2163,10 +2163,10 @@ export const Turkey = [
     nameAR: "قصر توبكابي",
     nameEN: "Topkapi Palace",
     nameRU: "Топкапы",
-    descriptionEN:
+    descriptionAR:
       "بالعثمانية : طوپقپو سرايا وبالتركية الحديثة Topkapı Sarayı) ) أكبر قصور مدينة اسطنبول التركية، ومركز اقامة سلاطين الدولة العثمانية لربعة قرون من عام 1465 م الى 1856 م، يتآ لف القصر من أربعة أفنية رليس ية وعدد من المباني من مساكن ومطابخ ومساجد ومستشفى وغيرها، وكان يقم فيه بذروة الدولة ما يقرب من 4,000 شخص، بد أ بناء قصر طوب قابي ف 1459 م بآ مر من السلطان العثماني محمد خان الثاني فاتح القسطنطينية، و أطلق عليه ف بداية ا لمر لكي يميز عن مقر ا لاقامة السابق، » القصر الجديد « أي » يني سراي « بمعا الباب العال ف القرن » طوب قابي « و أخذ القصر اسمه الجديد التاسع عشر، وقد جرى توس يعه على مر العصور",
     src: "/images/Turkey/13.webp",
-    descriptionAR:
+    descriptionEN:
       "In the Ottoman language: Topkapı Sarayı, and in modern Turkish: Topkapı Sarayı)) Greater Palaces of the Turkish city of Istanbul, the residence center of the sultans of the state Ottoman Empire for four centuries from 1465 AD to 1856 AD. The palace consists of Four courtyards and a number of buildings, including residences, kitchens, and mosques A hospital and others, and at the peak of the state there were approximately 4,000 people staying there Someone, the construction of Topkapi Palace began in 1459 AD on the orders of the Sultan The Ottoman Mehmed Khan II, the conqueror of Constantinople, was named at the beginning of the era In order to distinguish it from the previous residence, the “New Palace”, i.e. “Yeni Saray” With the High Gate of the century “Tobkapi” and the palace took its new name The nineteenth century, and it has been expanded over the centuries",
     descriptionRU:
       "На османском языке: Топкапы Сарайы, а на современном турецком языке: Топкапы Сарайы)) Большой Дворцы турецкого города Стамбула, центра резиденции султанов государства Османская империя на протяжении четырех столетий с 1465 по 1856 год нашей эры. Дворец состоит из. Четыре двора и ряд построек, включая жилые дома, кухни и мечети. Больница и другие, а на пике состояния там проживало около 4000 человек. Кто-то, строительство дворца Топкапы началось в 1459 году нашей эры по приказу султана. Османский Мехмед-хан II, завоеватель Константинополя, был назван в начале эпохи Чтобы отличить его от предыдущей резиденции, «Новый дворец», то есть «Ени Сарай», С появлением Высоких ворот века «Тобкапы» дворец получил новое название. Девятнадцатый век, и он расширялся на протяжении веков",
@@ -2187,10 +2187,10 @@ export const Turkey = [
     nameAR: "جامع السلطان أحمد",
     nameEN: "Sultan Ahmed Mosque",
     nameRU: "Мечеть Султана Ахмеда",
-    descriptionEN:
+    descriptionAR:
       "أحمد Sultan Ahmet Camii ويُعرف أيضا خارج تركيا باسم الجامع ا لزرق The Blue Mosque بنا السلطان أحمد ا لول وهو أحد أشهر و أهم المساجد ف مدينة اسطنبول التركية . يقع المسجد ف ميدان السلطان أحمد ويقابله مسجد أ يا صوفيا، الذي حوله أتاتورك الى متحف ثم أُعيد مسجد اً . ويش تهر جامع السلطان أحمد بعمارته المميزة حيث يُعد من أهم و أضخم المساجد ف العالم ا لاسلامي . بُني المسجد بين عامي 1018 ه - 1026 ه / 1609 م - 1616 م، بحسب أحد النقوش الموجودة على أحد أبوابه. وكان مهندسه المعماري محمد أ غا أشهر المعماريين ا لتراك بعد س نان باشا وداود أغا . يقع المسجد جنوب جامع أ يا صوفيا وشرق ميدان الس باق الب ن يزطي القدم. ولهُ سور مرتفع يحيط به من ثلاث جهات، وف السور خمسة أبواب، ثلاثة منها تؤدي الى صحن المسجد واثنان الى قاعة الصلاة .",
     src: "/images/Turkey/15.webp",
-    descriptionAR:
+    descriptionEN:
       "Ahmed Sultan Ahmet Camii is also known outside Türkiye as the Mosque The Blue Mosque was built by Sultan Ahmed Al-Lul, one of the... The most famous and important mosques in the Turkish city of Istanbul. The mosque is located in a square Sultan Ahmed and opposite it is the Aya Sofia Mosque, which Ataturk turned into A museum and then converted into a mosque. What is the admiration of the Sultan Ahmed Mosque with its distinctive architecture? It is considered one of the most important and largest mosques in the Islamic world. The mosque was built between the years 1018 AH - 1026 AH / 1609 AD - 1616 AD. According to one of the inscriptions on one of its doors. He was his engineer Architect Muhammad Agha is the most famous Turkish architect after Sinan Pasha and Davut Agha. The mosque is located south of the Hagia Sophia Mosque and east of the Grand Prix Square. It has a high wall surrounding it on three sides, and within the wall are five doors, three of which lead to the courtyard of the mosque and two to the prayer hall.",
     descriptionRU:
       "Ахмед Султан Ахмет Джами также известен за пределами Турции как мечеть. Голубая мечеть была построена султаном Ахмедом аль-Лулем, одним из... Самые известные и важные мечети турецкого города Стамбула. Мечеть расположена на площади Султана Ахмеда, а напротив нее – мечеть Айя София, которую превратил Ататюрк. Музей, а затем переоборудованный в мечеть. В чем восхищение мечети Султана Ахмеда с ее самобытной архитектурой? Она считается одной из самых важных и крупнейших мечетей в исламском мире. Мечеть была построена в период с 1018 по 1026 год хиджры / 1609 по 1616 год нашей эры. Согласно одной из надписей на одной из его дверей. Он был его инженером Архитектор Мухаммад-ага — самый известный турецкий архитектор после Синан-паши и Давута-аги. Мечеть расположена к югу от мечети Святой Софии и к востоку от площади Гран-при. Его окружает высокая стена с трех сторон, внутри стены пять дверей, три из которых ведут во двор мечети, а две - в молитвенный зал.",

@@ -19,7 +19,7 @@ export default async function Home({
         loading="lazy"
         quality={80}
         src="/images/hero.webp"
-        className=" absolute -top-0 -z-10 object-cover h-[90dvh] w-screen"
+        className={`absolute -top-0 -z-10 object-cover h-[90dvh] ${lang == "ar" && "-scale-x-[1]"} w-screen`}
         alt="arrow"
         width={1280}
         height={720}
