@@ -109,7 +109,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
             className="w-16 mb-5"
           />
         </div>
-        <div className="flex flex-col mb-8 ms-4">
+        <div className="flex flex-col mb-8 lg:ms-4">
           <Link target="_blank" href={googleMapsUrl} rel="noopener noreferrer">
             <div className="flex items-center py-4">
               <Image

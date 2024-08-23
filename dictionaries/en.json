@@ -1,7 +1,7 @@
 {
   "currLang": "en",
   "Home": "Home",
-  "homeText": "Al-Nujoom Al-Masiyya provides global flight and hotel bookings, fast visa processing, diverse tour programs, and airport transfers. Enjoy top-quality service and unforgettable travel experiences with us.",
+  "homeText": "AlNujoom AlMasiya provides global flight and hotel bookings, fast visa processing, diverse tour programs, and airport transfers. Enjoy top-quality service and unforgettable travel experiences with us.",
   "someProjects": "Our Services",
   "followUs": "Follow us on",
   "contactUsTitle": "Do not hesitate to contact us",
@@ -10,7 +10,7 @@
   "ourServices": "Our Services",
   "OurLocations": "Our Locations",
   "FindUs": "FindUs on Google Maps",
- "ourTours": "Our Tourist Destinations",
+  "ourTours": "Our Tourist Destinations",
   "aboutUs": "About Us",
   "OurPartners": "Our Partners",
   "worldClock": "World Clock ",
@@ -31,6 +31,6 @@
   "airportTaxi": "Airport Transfer Services",
   "airportTaxiText": "Contact us for free to book a taxi transfer to and from the airport in the country you want",
   "ourToursText": "Discover the countries you want to visit, take a comprehensive look at the main tourist attractions in each country",
-    "uaeB": "Our Branch in the UAE",
+  "uaeB": "Our Branch in the UAE",
   "sarB": "Our Branch in Syria"
 }

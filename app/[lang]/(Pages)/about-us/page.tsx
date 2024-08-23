@@ -17,7 +17,7 @@ export default async function Page({
           quality={80}
           src="/images/logo.webp"
           className="w-40 lg:w-60 object-cover"
-          alt="Al-Nujoom Al-Masiyya logo"
+          alt="AlNujoom AlMasiya logo"
           width={240}
           height={164}
         />
@@ -51,7 +51,7 @@ export default async function Page({
             processing, and a wide range of diverse tourist programs, airport
             transfer services, and travel insurance. Our tours combine enjoyment
             and variety, delivering unforgettable experiences. Al-Nujoom
-            Al-Masiyya is dedicated to providing comprehensive tourism services
+            Al-Masiya is dedicated to providing comprehensive tourism services
             and exceptional trips at the best prices, focusing on customer
             satisfaction and service quality. Discover the world with us in
             safety and comfort.
@@ -72,8 +72,8 @@ export default async function Page({
             ассортимент туристических программ, трансферов из аэропорта и
             туристических страховок. Наши туры сочетают в себе удовольствие и
             разнообразие, предлагая незабываемые впечатления. Al-Nujoom
-            Al-Masiyya стремится предоставлять комплексные туристические услуги
-            и исключительные поездки по лучшим ценам, уделяя особое внимание
+            Al-Masiya стремится предоставлять комплексные туристические услуги и
+            исключительные поездки по лучшим ценам, уделяя особое внимание
             удовлетворенности клиентов и качеству обслуживания. Откройте для
             себя мир с нами в безопасности и комфорте.
           </p>
@@ -95,7 +95,7 @@ export default async function Page({
         src="/images/farouk.webp"
         width={640}
         height={427}
-        alt="Farouk Dakkak, Founder of Al-Nujoom Al-Masiyya"
+        alt="Farouk Dakkak, Founder of AlNujoom AlMasiya"
         className="object-cover object-right w-full lg:w-1/2 rounded-xl"
       />
     </section>
