@@ -98,43 +98,47 @@ const LocationCard: React.FC<LocationCardProps> = ({
   return (
     <div className={`w-screen ${addClass}`}>
       <div className="max-w-7xl mx-auto my-4 overflow-hidden  box">
-        <div className="flex justify-center items-center gap-4">
+        <div className="flex justify-center items-center gap-6">
+          <AnTitle title={locationName} />
           <Image
-            width={400}
-            height={200}
-            quality={50}
+            width={64}
+            height={64}
+            quality={1}
             src={flagSrc}
             alt={`${locationName} flag`}
-            className="w-20 me-4"
+            className="w-16 mb-5"
           />
-            <AnTitle title={locationName} />
         </div>
-        <Link target="_blank" href={googleMapsUrl} rel="noopener noreferrer">
-          <div className="flex items-center pt-12">
-            <Image
-              width={400}
-              height={200}
-              quality={50}
-              src="/images/location.webp"
-              alt={`${locationName} flag`}
-              className="w-16 me-4"
-            />
-            <p className="text-2xl text-primary font-bold">{locationDetails}</p>
-          </div>
-        </Link>
-        <Link target="_blank" href={whatsLink}>
-          <div className="flex items-center">
-            <Image
-              width={400}
-              height={200}
-              quality={50}
-              src="/images/phone.webp"
-              alt={`${locationName} flag`}
-              className="w-16 me-4"
-            />
-            <p className="text-2xl text-primary font-bold">{phoneNumber}</p>
-          </div>
-        </Link>
+        <div className="flex flex-col mb-8 ms-4">
+          <Link target="_blank" href={googleMapsUrl} rel="noopener noreferrer">
+            <div className="flex items-center py-4">
+              <Image
+                width={64}
+                height={64}
+                quality={1}
+                src={`/images/${addClass}.svg`}
+                alt={`${addClass} flag`}
+                className="w-16 me-4"
+              />
+              <p className="text-2xl text-primary font-bold">
+                {locationDetails}
+              </p>
+            </div>
+          </Link>
+          <Link target="_blank" href={whatsLink}>
+            <div className="flex items-center">
+              <Image
+                width={400}
+                height={200}
+                quality={1}
+                src="/images/phone.svg"
+                alt={`${locationName} flag`}
+                className="w-16 me-4"
+              />
+              <p className="text-2xl text-primary font-bold">{phoneNumber}</p>
+            </div>
+          </Link>
+        </div>
         <div dir="ltr" className="relative">
           <div className="embla" ref={emblaRef}>
             <div className="embla__container flex">
@@ -146,7 +150,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
                   <Image
                     width={400}
                     height={200}
-                    quality={50}
+                    quality={80}
                     src={image}
                     alt={`Office ${index + 1}`}
                     className="w-full h-64 object-cover shadow-lg rounded-2xl"

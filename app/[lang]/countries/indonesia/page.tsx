@@ -35,25 +35,20 @@ const Page = ({ params: { lang } }: { params: { lang: Locale } }) => {
         }
 
         return (
-          <div
-            key={index}
-            className="mb-8 box"
-          >
+          <div key={index} className="mb-8 box">
             <div className="flex flex-col  gap-4 lg:flex-row items-center ">
-            <div className="flex flex-col lg:w-2/3">
-              <h2 className="text-center text-accent text-2xl font-bold mb-6">
-                {title}
-              </h2>
-                <p className=" text-start text-lg">
-                  {description}
-                </p>
-            </div>
+              <div className="flex flex-col lg:w-2/3">
+                <h2 className="text-center text-accent text-2xl font-bold mb-6">
+                  {title}
+                </h2>
+                <p className=" text-start text-lg">{description}</p>
+              </div>
 
               {src && (
                 <div className="lg:w-1/3 w-full mt-4 lg:mt-0 self-end">
                   <Image
                     src={src}
-                    quality={50}
+                    quality={80}
                     alt={title}
                     width={500}
                     height={300}
@@ -65,112 +60,224 @@ const Page = ({ params: { lang } }: { params: { lang: Locale } }) => {
           </div>
         );
       })}
-        <div className="container mx-auto p-4 mb-8 pt-6 lg:ps-4 bg-[#34689447] rounded-2xl border-white border shadow-xl overflow-hidden">
-      <div className="mb-8">
+      <div className="container mx-auto p-4 mb-8 pt-6 lg:ps-4 bg-[#34689447] rounded-2xl border-white border shadow-xl overflow-hidden">
+        <div className="mb-8">
+          <h2 className="text-center text-accent text-2xl font-bold mb-4">
+            {lang === "en"
+              ? "Notes:"
+              : lang === "ar"
+              ? "ملاحظات:"
+              : "Примечания:"}
+          </h2>
+          <p>
+            {lang === "en"
+              ? "Currency: Indonesian Rupiah"
+              : lang === "ar"
+              ? "العملة المتداولة: الروبية"
+              : "Валюта: индонезийская рупия"}
+          </p>
+          <p>
+            {lang === "en"
+              ? "Official Language: Indonesian"
+              : lang === "ar"
+              ? "اللغة الرسمية: لغة إندونيسيا"
+              : "Официальный язык: индонезийский"}
+          </p>
+          <p>
+            {lang === "en"
+              ? "Best time to visit: January, February, June, July, August"
+              : lang === "ar"
+              ? "أفضل وقت للزيارة: يناير، فبراير، يونيو، يوليو، أغسطس"
+              : "Лучшее время для посещения: январь, февраль, июнь, июль, август"}
+          </p>
+        </div>
+
         <h2 className="text-center text-accent text-2xl font-bold mb-4">
-          {lang === "en" ? "Notes:" : lang === "ar" ? "ملاحظات:" : "Примечания:"}
+          {lang === "en"
+            ? "Recommended Markets:"
+            : lang === "ar"
+            ? "أسواق مقترحة للزيارة:"
+            : "Рекомендуемые рынки:"}
         </h2>
-        <p>
-          {lang === "en"
-            ? "Currency: Indonesian Rupiah"
-            : lang === "ar"
-            ? "العملة المتداولة: الروبية"
-            : "Валюта: индонезийская рупия"}
-        </p>
-        <p>
-          {lang === "en"
-            ? "Official Language: Indonesian"
-            : lang === "ar"
-            ? "اللغة الرسمية: لغة إندونيسيا"
-            : "Официальный язык: индонезийский"}
-        </p>
-        <p>
-          {lang === "en"
-            ? "Best time to visit: January, February, June, July, August"
-            : lang === "ar"
-            ? "أفضل وقت للزيارة: يناير، فبراير، يونيو، يوليو، أغسطس"
-            : "Лучшее время для посещения: январь, февраль, июнь, июль, август"}
-        </p>
-      </div>
 
-      <h2 className="text-center text-accent text-2xl font-bold mb-4">
-        {lang === "en" ? "Recommended Markets:" : lang === "ar" ? "أسواق مقترحة للزيارة:" : "Рекомендуемые рынки:"}
-      </h2>
-
-      <div className="overflow-x-auto">
-        <table className="min-w-full bg-white shadow-md rounded-2xl">
-          <thead>
-            <tr>
-              <th className="px-4 py-2 text-center bg-blue-600 text-white">
-                {lang === "en" ? "Jakarta" : lang === "ar" ? "جاكرتا" : "Джакарта"}
-              </th>
-              <th className="px-4 py-2 text-center bg-blue-600 text-white">
-                {lang === "en" ? "Bali" : lang === "ar" ? "جزيرة بالي" : "Бали"}
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {Array.from({ length: 6 }).map((_, index) => (
-              <tr key={index} className="border-t">
-                <td className="px-4 text-center py-2">
+        <div className="overflow-x-auto">
+          <table className="min-w-full bg-white shadow-md rounded-2xl">
+            <thead>
+              <tr>
+                <th className="px-4 py-2 text-center bg-blue-600 text-white">
                   {lang === "en"
-                    ? ["Tanah Abang Market", "Pasar Baru", "Mangga Dua Square", "Thamrin City", "Plaza Indonesia", "Grand Indonesia Shopping Town"][index]
+                    ? "Jakarta"
                     : lang === "ar"
-                    ? ["سوق تانه أبانغ", "بازار بارو", "مانغا دوا سكوير", "تامرين سيتي", "بلازا إندونيسيا", "جراند إندونيسيا شوبينغ تاون"][index]
-                    : ["Рынок Тана Абанг", "Пасар Бару", "Мангга Дуа Сквер", "Тамрин Сити", "Плаза Индонезия", "Гранд Индонезия Шоппинг Таун"][index]}
-                </td>
-                <td className="px-4 text-center py-2">
+                    ? "جاكرتا"
+                    : "Джакарта"}
+                </th>
+                <th className="px-4 py-2 text-center bg-blue-600 text-white">
                   {lang === "en"
-                    ? ["Ubud Market", "Kuta Art Market", "Beachwalk Shopping Center", "Discovery Shopping Mall", "Bali Collection", "Mal Bali Galeria"][index]
+                    ? "Bali"
                     : lang === "ar"
-                    ? ["سوق أوبود", "سوق فن كوتا", "مركز بيشوالك للتسوق", "ديسكفري شوبينغ مول", "مجمع بالي", "مال بالي غاليريا"][index]
-                    : ["Рынок Убуд", "Кута Арт Маркет", "Торговый центр Бичволк", "Торговый центр Дискавери", "Бали Коллекшн", "Мал Бали Галерея"][index]}
-                </td>
+                    ? "جزيرة بالي"
+                    : "Бали"}
+                </th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+            </thead>
+            <tbody>
+              {Array.from({ length: 6 }).map((_, index) => (
+                <tr key={index} className="border-t">
+                  <td className="px-4 text-center py-2">
+                    {lang === "en"
+                      ? [
+                          "Tanah Abang Market",
+                          "Pasar Baru",
+                          "Mangga Dua Square",
+                          "Thamrin City",
+                          "Plaza Indonesia",
+                          "Grand Indonesia Shopping Town",
+                        ][index]
+                      : lang === "ar"
+                      ? [
+                          "سوق تانه أبانغ",
+                          "بازار بارو",
+                          "مانغا دوا سكوير",
+                          "تامرين سيتي",
+                          "بلازا إندونيسيا",
+                          "جراند إندونيسيا شوبينغ تاون",
+                        ][index]
+                      : [
+                          "Рынок Тана Абанг",
+                          "Пасар Бару",
+                          "Мангга Дуа Сквер",
+                          "Тамрин Сити",
+                          "Плаза Индонезия",
+                          "Гранд Индонезия Шоппинг Таун",
+                        ][index]}
+                  </td>
+                  <td className="px-4 text-center py-2">
+                    {lang === "en"
+                      ? [
+                          "Ubud Market",
+                          "Kuta Art Market",
+                          "Beachwalk Shopping Center",
+                          "Discovery Shopping Mall",
+                          "Bali Collection",
+                          "Mal Bali Galeria",
+                        ][index]
+                      : lang === "ar"
+                      ? [
+                          "سوق أوبود",
+                          "سوق فن كوتا",
+                          "مركز بيشوالك للتسوق",
+                          "ديسكفري شوبينغ مول",
+                          "مجمع بالي",
+                          "مال بالي غاليريا",
+                        ][index]
+                      : [
+                          "Рынок Убуд",
+                          "Кута Арт Маркет",
+                          "Торговый центр Бичволк",
+                          "Торговый центр Дискавери",
+                          "Бали Коллекшн",
+                          "Мал Бали Галерея",
+                        ][index]}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
-      <h2 className="text-center text-accent text-2xl font-bold mb-4 mt-8">
-        {lang === "en" ? "Recommended Restaurants:" : lang === "ar" ? "مطاعم مقترحة للزيارة:" : "Рекомендуемые рестораны:"}
-      </h2>
+        <h2 className="text-center text-accent text-2xl font-bold mb-4 mt-8">
+          {lang === "en"
+            ? "Recommended Restaurants:"
+            : lang === "ar"
+            ? "مطاعم مقترحة للزيارة:"
+            : "Рекомендуемые рестораны:"}
+        </h2>
 
-      <div className="overflow-x-auto">
-        <table className="min-w-full bg-white shadow-md rounded-2xl">
-          <thead>
-            <tr>
-              <th className="px-4 py-2 text-center bg-blue-600 text-white">
-                {lang === "en" ? "Jakarta" : lang === "ar" ? "جاكرتا" : "Джакарта"}
-              </th>
-              <th className="px-4 py-2 text-center bg-blue-600 text-white">
-                {lang === "en" ? "Bali" : lang === "ar" ? "جزيرة بالي" : "Бали"}
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {Array.from({ length: 6 }).map((_, index) => (
-              <tr key={index} className="border-t">
-                <td className="px-4 text-center py-2">
+        <div className="overflow-x-auto">
+          <table className="min-w-full bg-white shadow-md rounded-2xl">
+            <thead>
+              <tr>
+                <th className="px-4 py-2 text-center bg-blue-600 text-white">
                   {lang === "en"
-                    ? ["Lara Djonggrang", "Bunga Rampai", "Seribu Rasa", "Plataran Menteng", "Kembang Goela", "Bunga Pepaya"][index]
+                    ? "Jakarta"
                     : lang === "ar"
-                    ? ["لارا جونغراغ", "بونغا رامباي", "سيريبو راسا", "بلاتاران منتينغ", "كمبانغ غويلا", "بونغا بيبايا"][index]
-                    : ["Лара Джонггранг", "Бунга Рампаи", "Серибу Раса", "Платаран Менгтенг", "Кембанг Гоела", "Бунга Папайя"][index]}
-                </td>
-                <td className="px-4 text-center py-2">
+                    ? "جاكرتا"
+                    : "Джакарта"}
+                </th>
+                <th className="px-4 py-2 text-center bg-blue-600 text-white">
                   {lang === "en"
-                    ? ["Locavore", "Mozaic", "Mama San", "Merah Putih", "Barbacoa", "Sarong"][index]
+                    ? "Bali"
                     : lang === "ar"
-                    ? ["لوكافور", "موزاييك", "ماما سان", "ميره بوتيه", "بارباكوا", "سارونغ"][index]
-                    : ["Локавор", "Мозаик", "Мама Сан", "Мерах Путих", "Барбакоа", "Саронг"][index]}
-                </td>
+                    ? "جزيرة بالي"
+                    : "Бали"}
+                </th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {Array.from({ length: 6 }).map((_, index) => (
+                <tr key={index} className="border-t">
+                  <td className="px-4 text-center py-2">
+                    {lang === "en"
+                      ? [
+                          "Lara Djonggrang",
+                          "Bunga Rampai",
+                          "Seribu Rasa",
+                          "Plataran Menteng",
+                          "Kembang Goela",
+                          "Bunga Pepaya",
+                        ][index]
+                      : lang === "ar"
+                      ? [
+                          "لارا جونغراغ",
+                          "بونغا رامباي",
+                          "سيريبو راسا",
+                          "بلاتاران منتينغ",
+                          "كمبانغ غويلا",
+                          "بونغا بيبايا",
+                        ][index]
+                      : [
+                          "Лара Джонггранг",
+                          "Бунга Рампаи",
+                          "Серибу Раса",
+                          "Платаран Менгтенг",
+                          "Кембанг Гоела",
+                          "Бунга Папайя",
+                        ][index]}
+                  </td>
+                  <td className="px-4 text-center py-2">
+                    {lang === "en"
+                      ? [
+                          "Locavore",
+                          "Mozaic",
+                          "Mama San",
+                          "Merah Putih",
+                          "Barbacoa",
+                          "Sarong",
+                        ][index]
+                      : lang === "ar"
+                      ? [
+                          "لوكافور",
+                          "موزاييك",
+                          "ماما سان",
+                          "ميره بوتيه",
+                          "بارباكوا",
+                          "سارونغ",
+                        ][index]
+                      : [
+                          "Локавор",
+                          "Мозаик",
+                          "Мама Сан",
+                          "Мерах Путих",
+                          "Барбакоа",
+                          "Саронг",
+                        ][index]}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
     </div>
   );
 };

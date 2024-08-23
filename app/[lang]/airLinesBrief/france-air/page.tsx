@@ -15,7 +15,7 @@ const AirFrance = async ({
           <Image
             width={420}
             height={300}
-            quality={50}
+            quality={80}
             src="/images/fanceair.png"
             alt="Air France"
             className="w-96 mb-5"
@@ -158,7 +158,7 @@ const AirFrance = async ({
           <Image
             width={420}
             height={300}
-            quality={50}
+            quality={80}
             src="/images/fanceair.png"
             alt="الخطوط الجوية الفرنسية"
             className="w-96 mb-5"
@@ -285,7 +285,7 @@ const AirFrance = async ({
           <Image
             width={420}
             height={300}
-            quality={50}
+            quality={80}
             src="/images/fanceair.png"
             alt="Air France"
             className="w-96 mb-5"

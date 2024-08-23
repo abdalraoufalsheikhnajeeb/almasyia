@@ -4,14 +4,15 @@ import LocaleSwitcher from "./locale-switcher";
 import { Locale } from "../../../i18n-config";
 import { getDictionary } from "../../../get-dictionary";
 
-const Navbar = async ({   lang  }: {   lang: Locale  }) => {
+const Navbar = async ({ lang }: { lang: Locale }) => {
   const dic = await getDictionary(lang);
 
   const NavItem = ({ href, label }: { href: string; label: string }) => (
     <Link
       href={href}
-      className={'text-primary text-xl relative hover:bg-primary-500/40  rounded-md '}
-    
+      className={
+        "text-primary text-xl relative hover:bg-primary-500/40  rounded-md "
+      }
     >
       {label}
     </Link>
@@ -19,9 +20,9 @@ const Navbar = async ({   lang  }: {   lang: Locale  }) => {
 
   return (
     <nav className="bg-gray-100 backdrop-brightness-125 h-20 w-full px-[5vw] py-2 flex items-center  top-0 justify-between z-[100] fixed">
-      <Link  href={`/${lang}`}>
+      <Link href={`/${lang}`}>
         <Image
-          quality={50}
+          quality={80}
           className="hidden md:flex  md:flex-shrink-0 h-16 w-24 object-cover"
           priority
           width={200}
@@ -39,9 +40,7 @@ const Navbar = async ({   lang  }: {   lang: Locale  }) => {
 
       <div className="flex items-center h-14 gap-4">
         <LocaleSwitcher />
-
       </div>
-
     </nav>
   );
 };

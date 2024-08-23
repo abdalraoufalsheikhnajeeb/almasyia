@@ -17,38 +17,32 @@ export default async function Home({
     <>
       <Image
         loading="lazy"
-        quality={50}
-        src="/images/hero.jpg"
-        className=" absolute -z-10 object-cover h-[90dvh] w-screen"
+        quality={80}
+        src="/images/hero.webp"
+        className=" absolute -top-0 -z-10 object-cover h-[90dvh] w-screen"
         alt="arrow"
         width={1280}
         height={720}
       />
-      <div className="absolute -z-[1]  h-[100dvh] w-screen" />
+      <div className="absolute -top-0 -z-[1]  h-[95dvh] w-screen bgGR" />
       <main className=" max-w-[90vw]  mx-auto flex items-center flex-col gap-8">
-        <header className="h-[100dvh] gap-8 pb-8 flex flex-col items-center justify-end ">
+        <header className="h-[90dvh] gap-4 flex flex-col items-center justify-center lg:items-start lg:justify-start  w-full">
           <Image
-            quality={50}
+            quality={80}
             src="/images/logo.webp"
             alt="arrow"
             width={320}
             priority
             height={219}
-            
             className="w-52 lg:w-80 object-cover"
           />
-          <h2 className="text-3xl  max-w-3xl font-bold  text-primary  text-center">
+          <h2 className="text-3xl  max-w-3xl font-bold  text-primary text-center  lg:text-start">
             {dic?.homeText}
           </h2>
 
-          <button className="text-xl lg:text-2xl max-w-3xl font-bold text-primary  text-center">
+          {/* <button className="text-xl lg:text-2xl max-w-3xl font-bold text-primary  text-center">
             {dic.contactUsTitle}
-          </button>
-
-
-          
-
-
+          </button> */}
         </header>
         <section className="w-screen flex flex-col items-center">
           <AnTitle title={dic?.someProjects} />
@@ -70,7 +64,7 @@ export default async function Home({
                   <div className="max-w-[90vw] relative w-80 bg-white border flex flex-col justify-center items-center rounded-3xl shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                     <Image
                       loading="lazy"
-                      quality={50}
+                      quality={80}
                       width={318}
                       height={256}
                       className="rounded-t-lg object-contain scale-[100.5%] p-2  h-64"

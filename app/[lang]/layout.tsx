@@ -6,6 +6,7 @@ import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
 import { Tajawal } from "next/font/google";
 import Whatsapp from "./components/Whatsapp";
+import PhoneCall from "./components/phonecall";
 
 // Import the Tajawal font with appropriate configurations
 const tajawal = Tajawal({
@@ -63,7 +64,8 @@ export default async function RootLayout({
       >
         <Navbar lang={params.lang} />
         <Whatsapp />
-        <div className="mt-20">{children}</div>
+        <PhoneCall />
+        <div className="mt-24">{children}</div>
         <Footer params={{ lang: params.lang }} />
       </body>
     </html>

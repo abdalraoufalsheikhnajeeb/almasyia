@@ -15,7 +15,7 @@ const PegasusAirlines = async ({
           <Image
             width={420}
             height={300}
-            quality={50}
+            quality={80}
             src="/images/pegasusairlines.webp"
             alt="Pegasus Airlines"
             className="w-96 mb-5"
@@ -160,7 +160,7 @@ const PegasusAirlines = async ({
           <Image
             width={420}
             height={300}
-            quality={50}
+            quality={80}
             src="/images/pegasusairlines.webp"
             alt="طيران بيجاسوس"
             className="w-96 mb-5"
@@ -291,7 +291,7 @@ const PegasusAirlines = async ({
           <Image
             width={420}
             height={300}
-            quality={50}
+            quality={80}
             src="/images/pegasusairlines.webp"
             alt="Pegasus Airlines"
             className="w-96 mb-5"

@@ -11,7 +11,7 @@ const Emirates = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <Image
             width={420}
             height={300}
-            quality={50}
+            quality={80}
             src="/images/emirates.webp"
             alt="Emirates"
             className="w-96 mb-5"
@@ -168,7 +168,7 @@ const Emirates = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <Image
             width={420}
             height={300}
-            quality={50}
+            quality={80}
             src="/images/emirates.webp"
             alt="طيران الإمارات"
             className="w-96 mb-5"
@@ -320,7 +320,7 @@ const Emirates = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <Image
             width={420}
             height={300}
-            quality={50}
+            quality={80}
             src="/images/emirates.webp"
             alt="Emirates"
             className="w-96 mb-5"

@@ -13,7 +13,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <Image
             width={420}
             height={300}
-            quality={50}
+            quality={80}
             src="/images/chamwings.webp"
             alt="Cham Wings Airlines"
             className="w-96 mb-5"
@@ -178,7 +178,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <Image
             width={420}
             height={300}
-            quality={50}
+            quality={80}
             src="/images/chamwings.webp"
             alt="Авиакомпания Cham Wings"
             className="w-96 mb-5"
@@ -350,7 +350,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <Image
             width={420}
             height={300}
-            quality={50}
+            quality={80}
             src="/images/chamwings.webp"
             alt="طيران أجنحة الشام"
             className="w-96 mb-5"

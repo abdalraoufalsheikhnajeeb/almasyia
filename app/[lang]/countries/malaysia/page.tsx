@@ -35,25 +35,20 @@ const Page = ({ params: { lang } }: { params: { lang: Locale } }) => {
         }
 
         return (
-          <div
-            key={index}
-            className="mb-8 box"
-          >
+          <div key={index} className="mb-8 box">
             <div className="flex flex-col  gap-4 lg:flex-row items-center ">
-            <div className="flex flex-col lg:w-2/3">
-              <h2 className="text-center text-accent text-2xl font-bold mb-6">
-                {title}
-              </h2>
-                <p className=" text-start text-lg">
-                  {description}
-                </p>
-            </div>
+              <div className="flex flex-col lg:w-2/3">
+                <h2 className="text-center text-accent text-2xl font-bold mb-6">
+                  {title}
+                </h2>
+                <p className=" text-start text-lg">{description}</p>
+              </div>
 
               {src && (
                 <div className="lg:w-1/3 w-full mt-4 lg:mt-0 self-end">
                   <Image
                     src={src}
-                    quality={50}
+                    quality={80}
                     alt={title}
                     width={500}
                     height={300}

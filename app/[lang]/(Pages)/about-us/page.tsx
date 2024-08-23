@@ -14,7 +14,7 @@ export default async function Page({
       <div className="flex w-full lg:w-1/2 flex-col my-12 items-center gap-6 lg:items-start overflow-visible text-primary">
         <Image
           loading="lazy"
-          quality={50}
+          quality={80}
           src="/images/logo.webp"
           className="w-40 lg:w-60 object-cover"
           alt="Al-Nujoom Al-Masiyya logo"
@@ -91,7 +91,7 @@ export default async function Page({
 
       <Image
         loading="lazy"
-        quality={50}
+        quality={80}
         src="/images/farouk.webp"
         width={640}
         height={427}

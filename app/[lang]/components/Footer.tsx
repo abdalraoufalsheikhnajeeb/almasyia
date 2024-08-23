@@ -34,7 +34,7 @@ export default async function Footer({
         >
           <Image
             loading="lazy"
-            quality={50}
+            quality={80}
             className="transform transition-transform duration-300 ease-in-out hover:scale-110"
             src="/images/insta.svg"
             width={100}
@@ -49,9 +49,9 @@ export default async function Footer({
         >
           <Image
             loading="lazy"
-            quality={50}
+            quality={80}
             className="transform transition-transform duration-300 ease-in-out hover:scale-110"
-            src="/images/location_uae.svg"
+            src="/images/uaeLocation.svg"
             width={100}
             height={100}
             alt="UAE location"
@@ -64,9 +64,9 @@ export default async function Footer({
         >
           <Image
             loading="lazy"
-            quality={50}
+            quality={80}
             className="transform transition-transform duration-300 ease-in-out hover:scale-110"
-            src="/images/location_sy.svg"
+            src="/images/sarLocation.svg"
             width={100}
             height={100}
             alt="syria location"
@@ -79,7 +79,7 @@ export default async function Footer({
         >
           <Image
             loading="lazy"
-            quality={50}
+            quality={80}
             className="transform transition-transform duration-300 ease-in-out hover:scale-110"
             src="/images/email.svg"
             width={100}

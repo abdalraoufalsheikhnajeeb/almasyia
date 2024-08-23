@@ -41,11 +41,11 @@ const CountrySlider = ({ dic, data, title }: CountrySliderProps) => {
   }, [emblaApi]);
 
   return (
-    <section
-      dir="ltr"
-      className="lg:max-w-7xl max-w-[95vw] mt-14 px-2  mx-auto"
-    >
-      <AnTitle title={title} />
+    <section dir="ltr" className="lg:max-w-7xl max-w-[95vw] px-2  mx-auto">
+      <AnTitle title={dic.ourTours} />
+      <h3 className="text-3xl font-bold text-center mb-4">
+        {dic.ourToursText}
+      </h3>
       <div className="embla" ref={emblaRef}>
         <div className="embla__container flex">
           {data.map((card, index) => {
@@ -61,12 +61,16 @@ const CountrySlider = ({ dic, data, title }: CountrySliderProps) => {
 
             return (
               <div key={index} className="embla__slide p-4 flex-shrink-0 w-1/3">
-                <Link href={`/${dic.currLang}/countries/${card.route.toLowerCase()}`}>
+                <Link
+                  href={`/${
+                    dic.currLang
+                  }/countries/${card.route.toLowerCase()}`}
+                >
                   <div className="bg-gray-200 relative border rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg h-full flex flex-col justify-center items-center overflow-hidden">
                     <div className="bg-white flex justify-center items-center w-full">
                       <Image
                         loading="lazy"
-                        quality={50}
+                        quality={80}
                         width={400}
                         height={200}
                         className="rounded-t-lg aspect-video w-full object-contain"

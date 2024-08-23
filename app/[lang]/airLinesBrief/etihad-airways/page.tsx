@@ -15,7 +15,7 @@ const EtihadAirways = async ({
           <Image
             width={420}
             height={300}
-            quality={50}
+            quality={80}
             src="/images/etihadairways.webp"
             alt="Etihad Airways"
             className="w-96 mb-5 self-center "
@@ -154,7 +154,7 @@ const EtihadAirways = async ({
           <Image
             width={420}
             height={300}
-            quality={50}
+            quality={80}
             src="/images/etihadairways.webp"
             alt="طيران الاتحاد"
             className="w-96 mb-5"
@@ -282,7 +282,7 @@ const EtihadAirways = async ({
           <Image
             width={420}
             height={300}
-            quality={50}
+            quality={80}
             src="/images/etihadairways.webp"
             alt="Etihad Airways"
             className="w-96 mb-5"

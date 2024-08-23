@@ -13,7 +13,7 @@ export default async function Page({
   const dic = await getDictionary(lang);
 
   return (
-    <div className="container mx-auto pt-28 px-4 lg:px-28 flex flex-col">
+    <div className="mx-auto px-4 lg:px-28 flex flex-col">
       <AnTitle title={dic.viasa} />
       <div className="flex flex-col gap-8">
         {visas.map((visa, index) => {
@@ -56,19 +56,20 @@ export default async function Page({
               : descriptionRU;
 
           return (
-            <div key={index} className="flex flex-col lg:flex-col gap-4 box w-full">
+            <div
+              key={index}
+              className="flex flex-col lg:flex-col gap-4 box w-full"
+            >
               <div className="flex flex-col lg:flex-row-reverse w-full justify-between items-center">
                 <Image
                   width={445}
                   height={260}
-                  quality={50}
+                  quality={80}
                   src={image}
                   alt={country}
                   className="lg:h-96 w-full lg:w-1/2 object-cover rounded-3xl "
                 />
                 <div className="p-4 flex flex-col gap-3 lg:w-1/2">
-                 
-
                   <div className="p-4 flex flex-col h-full flex-grow justify-between gap-3 ">
                     <div className="flex gap-3 justify-center items-center">
                       <h2 className="text-accent text-5xl font-bold text-center">
