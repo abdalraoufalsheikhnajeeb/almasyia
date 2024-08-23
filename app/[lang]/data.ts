@@ -305,7 +305,7 @@ export const ourServecis = [
 export const visas = [
   {
     countryAR: "الإمارات",
-    countryEN: "UAE",
+    countryEN: "UAE/",
     countryRU: "ОАЭ",
     durationAR: "يتوفر 🔹شهر 🔹 شهرين",
     durationEN: "Available for 🔹1 month 🔹 2 months",
@@ -320,10 +320,10 @@ export const visas = [
       "Личное фото",
     ],
 
-    descriptionAR: "سرعة وانجاز في العمل - أسعار رائعة - خدمات احترافية",
-    descriptionEN: "Fast processing - Great prices - Professional services",
+    descriptionAR: "سرعة وانجاز في العمل 🔹 أسعار رائعة 🔹 خدمات احترافية",
+    descriptionEN: "Fast processing 🔹 Great prices 🔹 Professional services",
     descriptionRU:
-      "Быстрое оформление - Отличные цены - Профессиональные услуги",
+      "Быстрое оформление 🔹 Отличные цены 🔹 Профессиональные услуги",
     image: "/images/uae.webp",
     icon: "/images/emirate-flag.svg",
   },
@@ -331,9 +331,11 @@ export const visas = [
     countryAR: "مصر",
     countryEN: "Egypt",
     countryRU: "Египет",
-    durationAR: "الحصول على الموافقة لدخول الأراضي المصرية",
-    durationEN: "Get approval to enter Egypt",
-    durationRU: "Получите одобрение на въезд в Египет",
+    durationAR: "🔹سريعة 🔹بطيئة 🔹 لا تتردد في الاستفسار عن أسعارنا",
+    durationEN:
+      "🔹Fast🔹slow processing 🔹 Don't hesitate to inquire about our prices",
+    durationRU:
+      "🔹Быстрое \n🔹 медленное оформление 🔹 Не стесняйтесь узнать наши цены",
     requirementsAR: ["صورة جواز سفر ملونة دقة عالية", "صورة شخصية"],
     requirementsEN: [
       "High-resolution colored passport photo",
@@ -344,11 +346,11 @@ export const visas = [
       "Личное фото",
     ],
 
-    descriptionAR: "سريعة / بطيئة - لا تتردد في الاستفسار عن أسعارنا",
-    descriptionEN:
-      "Fast/slow processing - Don't hesitate to inquire about our prices",
-    descriptionRU:
-      "Быстрое/медленное оформление - Не стесняйтесь узнать наши цены",
+    descriptionAR: "الحصول على الموافقة لدخول الأراضي المصرية",
+    descriptionEN: "Get approval to enter Egypt",
+
+    descriptionRU: "Получите одобрение на въезд в Египет",
+
     image: "/images/egypt.webp",
     icon: "/images/egypt.svg",
   },
@@ -357,11 +359,11 @@ export const visas = [
     countryEN: "Jordan",
     countryRU: "Иордания",
     durationAR:
-      " سياحية / موعد سفارة / امتحان لغة او دورات تعليمية :تتوفر التأشيرات التالية",
+      " سياحية 🔹موعد سفارة 🔹امتحان لغة او دورات تعليمية :تتوفر التأشيرات التالية",
     durationEN:
-      "The following visas are available: Tourism / Embassy appointment / Language exam or educational courses",
+      "The following visas are available: Tourism 🔹Embassy appointment 🔹Language exam or educational courses",
     durationRU:
-      "Доступны следующие визы : Туризм / запись в посольство / языковой экзамен или образовательные курсы",
+      "Доступны следующие визы : Туризм 🔹запись в посольство 🔹языковой экзамен или образовательные курсы",
     requirementsAR: ["صورة جواز سفر ملونة دقة عالية", "صورة شخصية"],
     requirementsEN: [
       "High-resolution colored passport photo",
@@ -396,9 +398,9 @@ export const visas = [
       "Личное фото",
     ],
 
-    descriptionAR: "مدة إنجاز سريعة - أسعار مميزة",
-    descriptionEN: "Fast processing time - Great prices",
-    descriptionRU: "Быстрое оформление - Отличные цены",
+    descriptionAR: "مدة إنجاز سريعة 🔹 أسعار مميزة",
+    descriptionEN: "Fast processing time 🔹 Great prices",
+    descriptionRU: "Быстрое оформление 🔹 Отличные цены",
     image: "/images/indonesia.webp",
     icon: "/images/Indonesia.svg",
   },
@@ -474,11 +476,11 @@ export const visas = [
       "Личное фото",
     ],
 
-    descriptionAR: "أسعار مناسبة - خدمات احترافية - لتفاصيل اكثر تواصل معنا",
+    descriptionAR: "أسعار مناسبة 🔹 خدمات احترافية 🔹 لتفاصيل اكثر تواصل معنا",
     descriptionEN:
-      "Affordable prices - Professional services - For more details contact us",
+      "Affordable prices 🔹 Professional services 🔹 For more details contact us",
     descriptionRU:
-      "Доступные цены - Профессиональные услуги - Свяжитесь с нами для получения дополнительной информации",
+      "Доступные цены 🔹 Профессиональные услуги 🔹 Свяжитесь с нами для получения дополнительной информации",
     image: "/images/qatar.webp",
     icon: "/images/Qatar.svg",
   },
@@ -804,7 +806,7 @@ export const Egypt = [
     descriptionAR:
       "القاهرة هي عاصمة جمهورية مصر العربية وأكبر وأهم مدنها على الإطلاق، وتعد أكبر مدينة عربية من حيث تعداد السكان والمساحة، وتحتل المركز الثاني أفريقيًا والسابع عشر عالميًا من حيث التعداد السكاني تعد مدينة القاهرة من أكثر المدن تنوعاً ثقافياً وحضارياً، حيث شهدت العديد من الحقب التاريخية المختلفة على مر العصور، وتوجد فيها العديد من المعالم القديمة والحديثة، فأصبحت متحفاً مفتوحاً يضم آثاراً فرعونية ويونانية ورومانية وقبطية وإسلامية. يعود تاريخ المدينة إلى نشأة مدينة أون الفرعونية أو هليوبوليس عين شمس حالياً والتي تعد واحدة من أقدم مدن العالم القديم، أما القاهرة بطرازها الحالي فيعود تاريخ إنشائها إلى الفتح الإسلامي لمصر على يد عمرو بن العاص عام 641 م وإنشائه مدينة الفسطاط، ثم إنشاء العباسيين لمدينة العسكر، فبناء أحمد بن طولون لمدينة القطائع، ومع دخول الفاطميين مصر قادمين من إفريقية تونس حالياً بدأ القائد جوهر الصقلي في بناء العاصمة الجديدة للدولة الفاطمية بأمر من الخليفة الفاطمي المعز لدين الله وذلك في عام 969م، وأطلق عليها الخليفة اسم «القاهرة». وأطلق على القاهرة- على مر العصور- العديد من الأسماء، فهي مدينة الألف مئذنة ومصر المحروسة وقاهرة المعز، شهدت القاهرة خلال العصر الإسلامي أرقى فنون العمارة التي تمثلت في بناء القلاع والحصون والأسوار والمدارس والمساجد، مما منحها لمحةً جماليةً لا زالت موجودة بأحيائها القديمة حتى الآن.",
     descriptionEN:
-      "Cairo is the capital of the Arab Republic of Egypt and its largest and most important city ever. It is the largest Arab city in terms of population and area, and occupies second place in Africa and seventeenth in the world in terms of population. Cairo is one of the most culturally and civilizationally diverse cities, as it has witnessed many different historical eras. Throughout the ages, there are many ancient and modern monuments, so it has become an open museum that includes Pharaonic, Greek, Roman, Coptic, and Islamic antiquities. The history of the city goes back to the establishment of the Pharaonic city of On, or Heliopolis Ain Shams today, which is one of the oldest cities in the ancient world. As for Cairo in its current style, its establishment dates back to the Islamic conquest of Egypt at the hands of Amr ibn al-Aas in the year 641 AD and the establishment of the city of Fustat, then the Abbasids’ establishment of the military city. Ahmed Ibn Tulun built the city of Al-Qata’i, and with the Fatimid entry into Egypt, coming from what is now Tunisia, Africa, Commander Jawhar Al-Siqilli began building the new capital of the Fatimid state by order of the Fatimid Caliph Al-Muizz Li Din Allah in the year 969 AD, and the Caliph called it “Cairo.” Cairo has been given - throughout the ages - many names: the City of a Thousand Minarets, the Guarded Egypt, and the Cairo of the Moez. During the Islamic era, Cairo witnessed the finest architecture, which was represented in the construction of castles, fortresses, walls, schools, and mosques, which gave it an aesthetic glimpse that is still present in its ancient neighborhoods until now. .",
+      "Cairo is the capital of the Arab Republic of Egypt and its largest and most important city ever. It is the largest Arab city in terms of population and area, and occupies second place in Africa and seventeenth in the world in terms of population. Cairo is one of the most culturally and civilizationally diverse cities, as it has witnessed many different historical eras. Throughout the ages, there are many ancient and modern monuments, so it has become an open museum that includes Pharaonic, Greek, Roman, Coptic, and Islamic antiquities. The history of the city goes back to the establishment of the Pharaonic city of On, or Heliopolis Ain Shams today, which is one of the oldest cities in the ancient world. As for Cairo in its current style, its establishment dates back to the Islamic conquest of Egypt at the hands of Amr ibn al-Aas in the year 641 AD and the establishment of the city of Fustat, then the Abbasids’ establishment of the military city. Ahmed Ibn Tulun built the city of Al-Qata’i, and with the Fatimid entry into Egypt, coming from what is now Tunisia, Africa, Commander Jawhar Al-Siqilli began building the new capital of the Fatimid state by order of the Fatimid Caliph Al-Muizz Li Din Allah in the year 969 AD, and the Caliph called it “Cairo.” Cairo has been given 🔹 throughout the ages 🔹 many names: the City of a Thousand Minarets, the Guarded Egypt, and the Cairo of the Moez. During the Islamic era, Cairo witnessed the finest architecture, which was represented in the construction of castles, fortresses, walls, schools, and mosques, which gave it an aesthetic glimpse that is still present in its ancient neighborhoods until now. .",
     descriptionRU:
       "Каир — столица Арабской Республики Египет и ее крупнейший и самый важный город за всю историю. Это крупнейший арабский город по численности населения и площади, занимающий второе место в Африке и семнадцатое в мире по численности населения. один из самых разнообразных в культурном и цивилизационном отношении городов, поскольку он был свидетелем множества различных исторических эпох. На протяжении веков здесь сохранилось множество древних и современных памятников, поэтому он стал открытым музеем, включающим фараонов, греков, римлян, коптов и исламистов. древности. История города восходит к основанию фараонского города Он, или сегодня Гелиополис Айн-Шамс, который является одним из старейших городов древнего мира. Что касается Каира в его нынешнем стиле, то его основание восходит к исламским временам. завоевание Египта руками Амра ибн аль-Ааса в 641 году нашей эры и основание города Фустат, затем создание Аббасидами военного города Ахмедом ибн Тулуном, построенным городом Аль-Катаи. С приходом Фатимидов в Египет, пришедшим из нынешнего Туниса (Африка), командующий Джавхар Ас-Сикилли начал строительство новой столицы государства Фатимидов по приказу фатимидского халифа Аль-Муизза Ли Дин Аллаха в 969 году нашей эры, и Халиф назвал его «Каир». На протяжении веков Каиру давали множество названий: Город тысячи минаретов, Охраняемый Египет и Каир Моэза. В эпоху ислама Каир стал свидетелем прекраснейшей архитектуры, которая была представлена ​​в строительстве замков. крепости, стены, школы и мечети, которые придали ему эстетический вид, который до сих пор присутствует в его древних кварталах.",
   },
@@ -828,7 +830,7 @@ export const Egypt = [
     descriptionAR:
       "أبو الهول هو تمثال لمخلوق أسطوري بجسم أسد ورأس إنسان وقد نحت من الحجر الكلسيّ، ومن المرجح أنه كان في الأصل مغطى بطبقة من الجص وملون، ولا زالت آثار الألوان الأصلية ظاهرة بجانب إحدى أذنيه، يقع على هضبة الجيزة على الضفة الغربية من النيل في الجيزة،  ويعد أبو الهول أيضاً حارساً للهضبة، وهو أقدم المنحوتات الضخمة المعروفة، يبلغ طوله نحو 73.5 متر، من ضمنها 15 متر طول قدميه الأماميتين، وعرضه 19.3 م، وأعلى ارتفاع له عن سطح الأرض حوالي 20 متراً إلى قمة الرأس. يعتقد أن قدماء المصريين بنوه في عهد الملك خفرع 2558 ق.م -2532 ق.م، باني الهرم الأوسط في الجيزة، ومن المعتقد أن تمثال أبي الهول كان محجراً قبل أن يفكر الملك خفرع في نحته على شكل تمثال، وينظر هذا التمثال ناحية الشرق لذا قد تم تغيير الجهات الأصلية في القرن الماضي لتوافق نظر أبي الهول.",
     descriptionEN:
-      "The Sphinx is a statue of a mythical creature with the body of a lion and the head of a human. It was carved from limestone. It was likely that it was originally covered with a layer of plaster and colored, and traces of the original colors are still visible next to one of its ears. It is located on the Giza Plateau on the western bank of the Nile in Giza. The Sphinx is also a guardian of the plateau, and it is the oldest known huge sculpture. It is about 73.5 meters long, including 15 meters the length of its front feet, and 19.3 meters wide, and its highest height above the ground is about 20 meters to the top of the head. It is believed that the ancient Egyptians built it during the reign of King Khafre 2558 BC - 2532 BC, the builder of the middle pyramid in Giza. It is believed that the Sphinx was quarried before King Khafre thought of sculpting it into the form of a statue. This statue looks towards the east, so The original sides have been changed in the last century to match the view of the Sphinx.",
+      "The Sphinx is a statue of a mythical creature with the body of a lion and the head of a human. It was carved from limestone. It was likely that it was originally covered with a layer of plaster and colored, and traces of the original colors are still visible next to one of its ears. It is located on the Giza Plateau on the western bank of the Nile in Giza. The Sphinx is also a guardian of the plateau, and it is the oldest known huge sculpture. It is about 73.5 meters long, including 15 meters the length of its front feet, and 19.3 meters wide, and its highest height above the ground is about 20 meters to the top of the head. It is believed that the ancient Egyptians built it during the reign of King Khafre 2558 BC 🔹 2532 BC, the builder of the middle pyramid in Giza. It is believed that the Sphinx was quarried before King Khafre thought of sculpting it into the form of a statue. This statue looks towards the east, so The original sides have been changed in the last century to match the view of the Sphinx.",
     descriptionRU:
       "Сфинкс — статуя мифического существа с телом льва и головой человека. Она была высечена из известняка. Вероятно, изначально она была покрыта слоем штукатурки и окрашена, со следами первоначальных цветов. все еще видны рядом с одним из его ушей. Он расположен на плато Гиза на западном берегу Нила в Гизе. Сфинкс также является хранителем плато и является старейшей известной огромной скульптурой. метров в длину, в том числе 15 метров в длину передних ног и 19,3 метра в ширину, а наибольшая высота над землей составляет около 20 метров до макушки головы. Считается, что древние египтяне построили его во времена правления царя Хефрена 2558 г. до н.э. – 2532 г. до н.э., строителя средней пирамиды в Гизе. Считается, что Сфинкса добыли в карьере до того, как царь Хефрена задумал вылепить его в форме. Статуя смотрит на восток, поэтому в прошлом веке ее первоначальные стороны были изменены, чтобы соответствовать виду Сфинкса.",
   },
@@ -3251,30 +3253,30 @@ export const Russia = [
     descriptionRU:
       "Or the Universal Temple is an architectural complex in the city of Kazan in Russia. The spiritual leader and designer of the temple is Eldar Khanov. The reason for establishing the temple was the incident of Eldar returning to life, according to his parents’ belief, in a strange accident in 1943. Eldar wanted to thank “God” by building a temple for all religions, according to his claim. The structure consists of several types of religious architecture, including Orthodox church, mosque, and synagogue. In 1940, in Staroye Arakchno, a town near the city of Kazan, Eldar was born, and in 1943 he died, or rather so his parents thought. Because before that, two of their sons died of hunger, and the Great Patriotic War was going on for the third year. Many people were dying from scarcity of food and exhausting work. Ildar's mother, Manasi Khanov, used to sew shrouds for the dead from the bags in which gunpowder was transported. She also began sewing a shroud for the Eldar. But they did not rush to bury the little one, and on the third day he returned to life according to what his parents had prepared for him. His father, Manasi Khanov, had exchanged Ildar’s shoes for milk, and with this milk he “resurrected” his son and took care of him, according to his father’s belief. He discovered the boy Eldar's talent in drawing. Because of the difficulty of life during that war, he used charcoal and beet red dyes instead, and instead of paper he used old newspapers. In 1960, he graduated from the Kazan Art Institute in the branch of large arts, and in 1968 he graduated from the Surikov Art Institute in Moscow, and became a member of the Union of Soviet Photographers. The Eldar traveled widely in the eastern countries. For his studies, he studied the arts of the peoples of the East, Buddhism, yoga and medical sciences in Tibet and China, and practiced medicine and energy healing. The idea of ​​the temple was on the mind of the Eldar. When he returned to his homeland, Russia, he wanted to implement his ideas, and so in 1994 he began construction of the Temple of All Religions, consisting of 16 domes and 16 of the world's major religions, including previous religions that are no longer practiced. The temple serves as a cultural, residence and worship centre",
   },
-  {
-    nameAR: "xxx",
-    nameEN: "xxx",
-    nameRU: "xxx",
-    src: "/images/Russia/.webp",
-    descriptionAR:
-      "مسجد جامع، يقع في كازان، كان يعتقد أثناء بنائه أنه أكبر مسجد في تترستان وروسيا وأوروبا بني هذا المسجد في القرن السادس عشر سمي نسبة لقول شريف الذي توفى هو وطلابه أثناء الدفاع عن كازان ضد القوات الروسية في حصار كازان 1552. دمر المسجد خلال اقتحام كازان من قبل إيفان الرهيب عام 1552 وأعيد بناؤه عام 1996 وتم افتتاحه في 24 يوليو 2005. وقد ساهمت عدة بلدان في الصندوق الذي أنشئ لبناء مسجد قول شريف، ومنها المملكة العربية السعودية والإمارات العربية المتحدة. في جمهورية تترستان في روسيا",
-    descriptionEN:
-      "Jami Mosque, located in Kazan. During its construction, it was believed that it was the largest mosque in Tatarstan, Russia, and Europe. This mosque was built in the sixteenth century and was named after Sharif, who died with his students while defending Kazan against Russian forces in the siege of Kazan in 1552. The mosque was destroyed during the storming of Kazan. By Ivan the Terrible in 1552, it was rebuilt in 1996 and was inaugurated on July 24, 2005. Several countries contributed to the fund established to build the Qul Sharif Mosque, including the Kingdom of Saudi Arabia and the United Arab Emirates. In the Republic of Tatarstan, Russia",
-    descriptionRU:
-      "Мечеть Джами, расположенная в Казани. Во время ее строительства считалось, что это самая большая мечеть в Татарстане, России и Европе. Эта мечеть была построена в шестнадцатом веке и названа в честь Шарифа, погибшего вместе со своими учениками при защите Казани. против русских войск при осаде Казани в 1552 году. Мечеть была разрушена во время штурма Казани Иваном Грозным в 1552 году, восстановлена ​​в 1996 году и открыта 24 июля 2005 года. Несколько стран внесли свой вклад в созданный фонд. построить мечеть Кул Шариф, включая Королевство Саудовская Аравия и Объединенные Арабские Эмираты. В Республике Татарстан, Россия",
-  },
-  {
-    nameAR: "xxx",
-    nameEN: "xxx",
-    nameRU: "xxx",
-    src: "/images/Russia/29.webp",
-    descriptionAR:
-      "مسجد جامع، يقع في كازان، كان يعتقد أثناء بنائه أنه أكبر مسجد في تترستان وروسيا وأوروبا بني هذا المسجد في القرن السادس عشر سمي نسبة لقول شريف الذي توفى هو وطلابه أثناء الدفاع عن كازان ضد القوات الروسية في حصار كازان 1552. دمر المسجد خلال اقتحام كازان من قبل إيفان الرهيب عام 1552 وأعيد بناؤه عام 1996 وتم افتتاحه في 24 يوليو 2005. وقد ساهمت عدة بلدان في الصندوق الذي أنشئ لبناء مسجد قول شريف، ومنها المملكة العربية السعودية والإمارات العربية المتحدة. في جمهورية تترستان في روسيا",
-    descriptionEN:
-      "Jami Mosque, located in Kazan. During its construction, it was believed that it was the largest mosque in Tatarstan, Russia, and Europe. This mosque was built in the sixteenth century and was named after Sharif, who died with his students while defending Kazan against Russian forces in the siege of Kazan in 1552. The mosque was destroyed during the storming of Kazan. By Ivan the Terrible in 1552, it was rebuilt in 1996 and was inaugurated on July 24, 2005. Several countries contributed to the fund established to build the Qul Sharif Mosque, including the Kingdom of Saudi Arabia and the United Arab Emirates. In the Republic of Tatarstan, Russia",
-    descriptionRU:
-      "Мечеть Джами, расположенная в Казани. Во время ее строительства считалось, что это самая большая мечеть в Татарстане, России и Европе. Эта мечеть была построена в шестнадцатом веке и названа в честь Шарифа, погибшего вместе со своими учениками при защите Казани. против русских войск при осаде Казани в 1552 году. Мечеть была разрушена во время штурма Казани Иваном Грозным в 1552 году, восстановлена ​​в 1996 году и открыта 24 июля 2005 года. Несколько стран внесли свой вклад в созданный фонд. построить мечеть Кул Шариф, включая Королевство Саудовская Аравия и Объединенные Арабские Эмираты. В Республике Татарстан, Россия",
-  },
+  // {
+  //   nameAR: "xxx",
+  //   nameEN: "xxx",
+  //   nameRU: "xxx",
+  //   src: "/images/Russia/.webp",
+  //   descriptionAR:
+  //     "مسجد جامع، يقع في كازان، كان يعتقد أثناء بنائه أنه أكبر مسجد في تترستان وروسيا وأوروبا بني هذا المسجد في القرن السادس عشر سمي نسبة لقول شريف الذي توفى هو وطلابه أثناء الدفاع عن كازان ضد القوات الروسية في حصار كازان 1552. دمر المسجد خلال اقتحام كازان من قبل إيفان الرهيب عام 1552 وأعيد بناؤه عام 1996 وتم افتتاحه في 24 يوليو 2005. وقد ساهمت عدة بلدان في الصندوق الذي أنشئ لبناء مسجد قول شريف، ومنها المملكة العربية السعودية والإمارات العربية المتحدة. في جمهورية تترستان في روسيا",
+  //   descriptionEN:
+  //     "Jami Mosque, located in Kazan. During its construction, it was believed that it was the largest mosque in Tatarstan, Russia, and Europe. This mosque was built in the sixteenth century and was named after Sharif, who died with his students while defending Kazan against Russian forces in the siege of Kazan in 1552. The mosque was destroyed during the storming of Kazan. By Ivan the Terrible in 1552, it was rebuilt in 1996 and was inaugurated on July 24, 2005. Several countries contributed to the fund established to build the Qul Sharif Mosque, including the Kingdom of Saudi Arabia and the United Arab Emirates. In the Republic of Tatarstan, Russia",
+  //   descriptionRU:
+  //     "Мечеть Джами, расположенная в Казани. Во время ее строительства считалось, что это самая большая мечеть в Татарстане, России и Европе. Эта мечеть была построена в шестнадцатом веке и названа в честь Шарифа, погибшего вместе со своими учениками при защите Казани. против русских войск при осаде Казани в 1552 году. Мечеть была разрушена во время штурма Казани Иваном Грозным в 1552 году, восстановлена ​​в 1996 году и открыта 24 июля 2005 года. Несколько стран внесли свой вклад в созданный фонд. построить мечеть Кул Шариф, включая Королевство Саудовская Аравия и Объединенные Арабские Эмираты. В Республике Татарстан, Россия",
+  // },
+  // {
+  //   nameAR: "xxx",
+  //   nameEN: "xxx",
+  //   nameRU: "xxx",
+  //   src: "/images/Russia/29.webp",
+  //   descriptionAR:
+  //     "مسجد جامع، يقع في كازان، كان يعتقد أثناء بنائه أنه أكبر مسجد في تترستان وروسيا وأوروبا بني هذا المسجد في القرن السادس عشر سمي نسبة لقول شريف الذي توفى هو وطلابه أثناء الدفاع عن كازان ضد القوات الروسية في حصار كازان 1552. دمر المسجد خلال اقتحام كازان من قبل إيفان الرهيب عام 1552 وأعيد بناؤه عام 1996 وتم افتتاحه في 24 يوليو 2005. وقد ساهمت عدة بلدان في الصندوق الذي أنشئ لبناء مسجد قول شريف، ومنها المملكة العربية السعودية والإمارات العربية المتحدة. في جمهورية تترستان في روسيا",
+  //   descriptionEN:
+  //     "Jami Mosque, located in Kazan. During its construction, it was believed that it was the largest mosque in Tatarstan, Russia, and Europe. This mosque was built in the sixteenth century and was named after Sharif, who died with his students while defending Kazan against Russian forces in the siege of Kazan in 1552. The mosque was destroyed during the storming of Kazan. By Ivan the Terrible in 1552, it was rebuilt in 1996 and was inaugurated on July 24, 2005. Several countries contributed to the fund established to build the Qul Sharif Mosque, including the Kingdom of Saudi Arabia and the United Arab Emirates. In the Republic of Tatarstan, Russia",
+  //   descriptionRU:
+  //     "Мечеть Джами, расположенная в Казани. Во время ее строительства считалось, что это самая большая мечеть в Татарстане, России и Европе. Эта мечеть была построена в шестнадцатом веке и названа в честь Шарифа, погибшего вместе со своими учениками при защите Казани. против русских войск при осаде Казани в 1552 году. Мечеть была разрушена во время штурма Казани Иваном Грозным в 1552 году, восстановлена ​​в 1996 году и открыта 24 июля 2005 года. Несколько стран внесли свой вклад в созданный фонд. построить мечеть Кул Шариф, включая Королевство Саудовская Аравия и Объединенные Арабские Эмираты. В Республике Татарстан, Россия",
+  // },
   {
     nameAR: "برج سويمبيكا",
     nameEN: "Soyembika Tower",
