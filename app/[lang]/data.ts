@@ -215,7 +215,7 @@ export const countries = [
     titleru: "Ощутите разнообразные чудеса Малайзии",
   },
   {
-    route: "Maldives",
+    route: "/",
     id: 9,
     src: "/images/Georgia.webp",
     titleen: "Relax in the Serene Paradise of the Georgia",
