@@ -282,7 +282,7 @@ export const ourServecis = [
     titlear: "البرامج السياحية",
     titleru: "Туристические программы",
     src: "/images/traveltourism.svg",
-    route: "traveltourism",
+    route: "tours",
   },
   // {
   //   id: 11,
