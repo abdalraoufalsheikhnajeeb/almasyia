@@ -151,7 +151,7 @@ export const agents = [
 
 export const countries = [
   {
-    route: "Russia",
+    route: "/countries/Russia",
     id: 1,
     src: "/images/Russia.webp",
     titleen: "Discover the Unique Charms of Russia",
@@ -159,7 +159,7 @@ export const countries = [
     titleru: "Откройте для себя уникальные очарования России",
   },
   {
-    route: "UAE",
+    route: "/countries/uae",
     id: 2,
     src: "/images/uae.webp",
     titleen: "Experience the Luxurious Wonders of the UAE",
@@ -167,7 +167,7 @@ export const countries = [
     titleru: "Испытайте роскошные чудеса ОАЭ",
   },
   {
-    route: "Turkey",
+    route: "/countries/turkey",
     id: 3,
     src: "/images/turkey.webp",
     titleen: "Explore the Historic Beauty of Turkey",
@@ -175,7 +175,7 @@ export const countries = [
     titleru: "Исследуйте историческую красоту Турции",
   },
   {
-    route: "Indonesia",
+    route: "/countries/indonesia",
     id: 4,
     src: "/images/indonesia.webp",
     titleen: "Unveil the Exotic Treasures of Indonesia",
@@ -183,7 +183,7 @@ export const countries = [
     titleru: "Раскройте экзотические сокровища Индонезии",
   },
   {
-    route: "Maldives",
+    route: "/countries/maldives",
     id: 5,
     src: "/images/Maldives.webp",
     titleen: "Relax in the Serene Paradise of the Maldives",
@@ -191,7 +191,7 @@ export const countries = [
     titleru: "Отдыхайте в спокойном раю на Мальдивах",
   },
   {
-    route: "Thailand",
+    route: "/countries/thailand",
     id: 6,
     src: "/images/Thailand.webp",
     titleen: "Discover the Vibrant Culture of Thailand",
@@ -199,7 +199,7 @@ export const countries = [
     titleru: "Откройте для себя яркую культуру Таиланда",
   },
   {
-    route: "Egypt",
+    route: "/countries/egypt",
     id: 7,
     src: "/images/egypt.webp",
     titleen: "Uncover the Ancient Mysteries of Egypt",
@@ -207,7 +207,7 @@ export const countries = [
     titleru: "Раскройте древние тайны Египта",
   },
   {
-    route: "Malaysia",
+    route: "/countries/malaysia",
     id: 8,
     src: "/images/malaysia.webp",
     titleen: "Experience the Diverse Wonders of Malaysia",
@@ -215,7 +215,81 @@ export const countries = [
     titleru: "Ощутите разнообразные чудеса Малайзии",
   },
   {
-    route: "georgia",
+    route: "/countries/georgia",
+    id: 9,
+    src: "/images/Georgia.webp",
+    titleen: "Relax in the Serene Paradise of the Georgia",
+    titlear: "استرخِ في جنة جورجيا الهادئة",
+    titleru: "Отдыхайте в спокойном раю на Грузия",
+  },
+];
+export const tourismProgarams = [
+  {
+    route: "/tourismProgarams/Russia",
+    id: 1,
+    src: "/images/Russia.webp",
+    titleen: "Discover the Unique Charms of Russia",
+    titlear: "اكتشف معالم جذابة ومميزة في روسيا",
+    titleru: "Откройте для себя уникальные очарования России",
+  },
+  {
+    route: "/tourismProgarams/uae",
+    id: 2,
+    src: "/images/uae.webp",
+    titleen: "Experience the Luxurious Wonders of the UAE",
+    titlear: "استمتع بروعة الرفاهية في الإمارات",
+    titleru: "Испытайте роскошные чудеса ОАЭ",
+  },
+  {
+    route: "/tourismProgarams/turkey",
+    id: 3,
+    src: "/images/turkey.webp",
+    titleen: "Explore the Historic Beauty of Turkey",
+    titlear: "استكشف الجمال التاريخي في تركيا",
+    titleru: "Исследуйте историческую красоту Турции",
+  },
+  {
+    route: "/tourismProgarams/indonesia",
+    id: 4,
+    src: "/images/indonesia.webp",
+    titleen: "Unveil the Exotic Treasures of Indonesia",
+    titlear: "اكشف عن الكنوز الغريبة في إندونيسيا",
+    titleru: "Раскройте экзотические сокровища Индонезии",
+  },
+  {
+    route: "/tourismProgarams/maldives",
+    id: 5,
+    src: "/images/Maldives.webp",
+    titleen: "Relax in the Serene Paradise of the Maldives",
+    titlear: "استرخِ في جنة المالديف الهادئة",
+    titleru: "Отдыхайте в спокойном раю на Мальдивах",
+  },
+  {
+    route: "/tourismProgarams/thailand",
+    id: 6,
+    src: "/images/Thailand.webp",
+    titleen: "Discover the Vibrant Culture of Thailand",
+    titlear: "اكتشف الثقافة الحيوية في تايلاند",
+    titleru: "Откройте для себя яркую культуру Таиланда",
+  },
+  {
+    route: "/tourismProgarams/egypt",
+    id: 7,
+    src: "/images/egypt.webp",
+    titleen: "Uncover the Ancient Mysteries of Egypt",
+    titlear: "اكشف عن الألغاز القديمة في مصر",
+    titleru: "Раскройте древние тайны Египта",
+  },
+  {
+    route: "/tourismProgarams/malaysia",
+    id: 8,
+    src: "/images/malaysia.webp",
+    titleen: "Experience the Diverse Wonders of Malaysia",
+    titlear: "استمتع بعجائب ماليزيا المتنوعة",
+    titleru: "Ощутите разнообразные чудеса Малайзии",
+  },
+  {
+    route: "/tourismProgarams/georgia",
     id: 9,
     src: "/images/Georgia.webp",
     titleen: "Relax in the Serene Paradise of the Georgia",
@@ -282,7 +356,7 @@ export const ourServecis = [
     titlear: "البرامج السياحية",
     titleru: "Туристические программы",
     src: "/images/traveltourism.svg",
-    route: "tours",
+    route: "tourismProgarams",
   },
   // {
   //   id: 11,

@@ -64,7 +64,7 @@ const CountrySlider = ({ dic, data, title }: CountrySliderProps) => {
                 <Link
                   href={`/${
                     dic.currLang
-                  }/countries/${card.route.toLowerCase()}`}
+                  }${card.route.toLowerCase()}`}
                 >
                   <div className="bg-gray-200 relative border rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg h-full flex flex-col justify-center items-center overflow-hidden">
                     <div className="bg-white flex justify-center items-center w-full">
