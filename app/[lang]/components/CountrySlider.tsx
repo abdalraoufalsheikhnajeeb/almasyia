@@ -21,9 +21,10 @@ type CountrySliderProps = {
   dic: Awaited<ReturnType<typeof getDictionary>>;
   data: CountrySlider[];
   title: string;
+  subtitle?: string;
 };
 
-const CountrySlider = ({ dic, data, title }: CountrySliderProps) => {
+const CountrySlider = ({ dic, data, title , subtitle }: CountrySliderProps) => {
   const autoplayOptions = { delay: 2000 }; // Delay in milliseconds
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     Autoplay(autoplayOptions),
@@ -42,9 +43,9 @@ const CountrySlider = ({ dic, data, title }: CountrySliderProps) => {
 
   return (
     <section dir="ltr" className="lg:max-w-7xl max-w-[95vw] px-2  mx-auto">
-      <AnTitle title={dic.ourTours} />
+      <AnTitle title={title} />
       <h3 className="text-3xl font-bold text-center mb-4">
-        {dic.ourToursText}
+        {subtitle}
       </h3>
       <div className="embla" ref={emblaRef}>
         <div className="embla__container flex">

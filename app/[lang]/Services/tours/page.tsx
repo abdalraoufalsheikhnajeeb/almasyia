@@ -10,7 +10,7 @@ export default async function page({
   const dic = await getDictionary(lang);
   return (
     <>
-      <CountrySlider dic={dic} title={dic.ourTours} data={countries} />
+      <CountrySlider dic={dic} title={dic.ourTours}  subtitle={dic.ourToursText} data={countries} />
     </>
   );
 }
