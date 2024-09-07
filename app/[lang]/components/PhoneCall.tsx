@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState, useRef } from "react";
 import Image from "next/image";
+
 export default function PhoneCall() {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -12,30 +13,31 @@ export default function PhoneCall() {
   return (
     <>
       <style jsx>{`
-        @keyframes pulse {
-          0%,
-          100% {
-            transform: scale(1);
+        @keyframes rippling {
+          0% {
+            box-shadow: 0 0 0 0 #3b86ff, 0 0 0 5px rgba(59, 134, 255, 0);
           }
-          50% {
-            transform: scale(1.1);
+          100% {
+            box-shadow: 0 0 0 20px rgba(59, 134, 255, 0),
+              0 0 0 25px rgba(59, 134, 255, 0);
           }
         }
 
-        .animate-pulsing {
-          animation: pulse 1.5s infinite;
+        .animate-ripple {
+          position: relative;
+          animation: rippling 1.5s infinite;
         }
       `}</style>
 
       <div
-        className=" fixed bottom-4 start-4 cursor-pointer z-50"
+        className="animate-bounce fixed bottom-4 start-4 cursor-pointer z-50"
         onClick={toggleDropdown}
         ref={dropdownRef}
       >
         <div
-          className={`rounded-full  ${
-      !isOpen && "animate-bounce animate-pulsing"
-    } p-1 lg:p-4 w-10 h-10 lg:w-20 lg:h-20 flex-shrink-0 flex justify-center items-center bg-[#3b86ff]`}
+          className={`rounded-full ${
+            !isOpen && " animate-ripple"
+          } p-1 lg:p-4 w-10 h-10 lg:w-20 lg:h-20 flex-shrink-0 flex justify-center items-center bg-[#3b86ff]`}
         >
           <Image
             priority
