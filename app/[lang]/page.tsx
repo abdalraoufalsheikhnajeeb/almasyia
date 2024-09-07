@@ -6,6 +6,7 @@ import { ourServecis } from "./data";
 import AnTitle from "./components/AnTitle";
 import Locations from "./components/Locations";
 import Whatsapp from "./components/Whatsapp";
+import Typewriter from "./components/Typewriter";
 
 export default async function Home({
   params: { lang },
@@ -19,7 +20,9 @@ export default async function Home({
         loading="lazy"
         quality={80}
         src="/images/hero.webp"
-        className={`absolute -top-0 -z-10 object-cover h-[90dvh] ${lang == "ar" && "-scale-x-[1]"} w-screen`}
+        className={`absolute -top-0 -z-10 object-cover h-[90dvh] ${
+          lang == "ar" && "-scale-x-[1]"
+        } w-screen`}
         alt="arrow"
         width={1280}
         height={720}
@@ -36,9 +39,11 @@ export default async function Home({
             height={219}
             className="w-52 lg:w-80 object-cover"
           />
-          <h2 className="text-3xl  max-w-3xl font-bold  text-primary text-center  lg:text-start">
+
+          <Typewriter text={dic?.homeText || ""} speed={50} />
+          {/* <h2 className="text-3xl max-w-3xl font-bold text-primary text-center lg:text-start typewriter">
             {dic?.homeText}
-          </h2>
+          </h2> */}
 
           {/* <button className="text-xl lg:text-2xl max-w-3xl font-bold text-primary  text-center">
             {dic.contactUsTitle}
