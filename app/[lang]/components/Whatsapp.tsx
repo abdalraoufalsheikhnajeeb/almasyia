@@ -38,7 +38,7 @@ export default function Whatsapp() {
         <div
           className={`rounded-full ${
             !isOpen && "animate-bounce animate-ripple"
-          } p-1 lg:p-4 w-10 h-10 lg:w-20 lg:h-20 flex-shrink-0 flex justify-center items-center bg-[#25d366]`}
+          } p-2 lg:p-4 w-12 h-12 lg:w-20 lg:h-20 flex-shrink-0 flex justify-center items-center bg-[#25d366]`}
         >
           <Image
             priority

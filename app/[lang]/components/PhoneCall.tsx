@@ -37,7 +37,7 @@ export default function PhoneCall() {
         <div
           className={`rounded-full ${
             !isOpen && " animate-ripple"
-          } p-1 lg:p-4 w-10 h-10 lg:w-20 lg:h-20 flex-shrink-0 flex justify-center items-center bg-[#3b86ff]`}
+          } p-2 lg:p-4 w-10 h-10 lg:w-20 lg:h-20 flex-shrink-0 flex justify-center items-center bg-[#3b86ff]`}
         >
           <Image
             priority
