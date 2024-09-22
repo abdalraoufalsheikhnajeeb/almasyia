@@ -18,9 +18,9 @@ export default async function Home({
     <>
       <Image
         loading="lazy"
-        quality={80}
+        quality={60}
         src="/images/hero.webp"
-        className={`absolute -top-0 -z-10 object-cover h-[90dvh] ${
+        className={`absolute top-0 -z-10 lg:object-fill h-[90dvh] ${
           lang == "ar" && "-scale-x-[1]"
         } w-screen`}
         alt="arrow"
@@ -31,7 +31,7 @@ export default async function Home({
       <main className=" max-w-[90vw]  mx-auto flex items-center flex-col gap-8">
         <header className="h-[90dvh] gap-4 flex flex-col items-center justify-center lg:items-start lg:justify-start  w-full">
           <Image
-            quality={80}
+            quality={60}
             src="/images/logo.webp"
             alt="arrow"
             width={320}
@@ -100,12 +100,15 @@ export default async function Home({
             })}
           </div>
         </section>
-
         <Locations
           params={{
             lang: lang,
           }}
         />
+        <video controls className="w-full max-w-[90vw] mt-4">
+          <source src="/images/outro.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </main>
     </>
   );
