@@ -79,7 +79,7 @@ export default function LocaleSwitcher() {
             >
               <Image
                 priority
-                quality={80}
+                quality={60}
                 width={40}
                 height={25}
                 className="object-cover hover:scale-110 transition-all"

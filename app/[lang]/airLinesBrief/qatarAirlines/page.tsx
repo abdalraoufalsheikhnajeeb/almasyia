@@ -15,7 +15,7 @@ const QatarAirways = async ({
           <Image
             width={420}
             height={300}
-            quality={80}
+            quality={60}
             src="/images/qatarairways.webp"
             alt="Qatar Airways"
             className="w-96 mb-5"
@@ -162,7 +162,7 @@ const QatarAirways = async ({
           <Image
             width={420}
             height={300}
-            quality={80}
+            quality={60}
             src="/images/qatarairways.webp"
             alt="الخطوط الجوية القطرية"
             className="w-96 mb-5"
@@ -302,7 +302,7 @@ const QatarAirways = async ({
           <Image
             width={420}
             height={300}
-            quality={80}
+            quality={60}
             src="/images/qatarairways.webp"
             alt="Qatar Airways"
             className="w-96 mb-5"

@@ -63,7 +63,7 @@ const Slider = ({ dic, data, title }: SliderProps) => {
                     <div className="bg-white flex justify-center items-center w-full p-3">
                       <Image
                         loading="lazy"
-                        quality={80}
+                        quality={60}
                         width={400}
                         height={200}
                         className="rounded-t-lg aspect-video w-full object-contain"

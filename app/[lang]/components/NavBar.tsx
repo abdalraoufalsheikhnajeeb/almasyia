@@ -22,7 +22,7 @@ const Navbar = async ({ lang }: { lang: Locale }) => {
     <nav className="bg-gray-100 backdrop-brightness-125 h-20 w-full px-[5vw] py-2 flex items-center  top-0 justify-between z-[100] fixed">
       <Link href={`/${lang}`}>
         <Image
-          quality={80}
+          quality={60}
           className="hidden md:flex  md:flex-shrink-0 h-16 w-24 object-cover"
           priority
           width={200}

@@ -24,7 +24,7 @@ type CountrySliderProps = {
   subtitle?: string;
 };
 
-const CountrySlider = ({ dic, data, title , subtitle }: CountrySliderProps) => {
+const CountrySlider = ({ dic, data, title, subtitle }: CountrySliderProps) => {
   const autoplayOptions = { delay: 2000 }; // Delay in milliseconds
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     Autoplay(autoplayOptions),
@@ -44,9 +44,7 @@ const CountrySlider = ({ dic, data, title , subtitle }: CountrySliderProps) => {
   return (
     <section dir="ltr" className="lg:max-w-7xl max-w-[95vw] px-2  mx-auto">
       <AnTitle title={title} />
-      <h3 className="text-3xl font-bold text-center mb-4">
-        {subtitle}
-      </h3>
+      <h3 className="text-3xl font-bold text-center mb-4">{subtitle}</h3>
       <div className="embla" ref={emblaRef}>
         <div className="embla__container flex">
           {data.map((card, index) => {
@@ -62,16 +60,12 @@ const CountrySlider = ({ dic, data, title , subtitle }: CountrySliderProps) => {
 
             return (
               <div key={index} className="embla__slide p-4 flex-shrink-0 w-1/3">
-                <Link
-                  href={`/${
-                    dic.currLang
-                  }${card.route.toLowerCase()}`}
-                >
+                <Link href={`/${dic.currLang}${card.route.toLowerCase()}`}>
                   <div className="bg-gray-200 relative border rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg h-full flex flex-col justify-center items-center overflow-hidden">
                     <div className="bg-white flex justify-center items-center w-full">
                       <Image
                         loading="lazy"
-                        quality={80}
+                        quality={60}
                         width={400}
                         height={200}
                         className="rounded-t-lg aspect-video w-full object-contain"

@@ -48,7 +48,7 @@ const Page = ({ params: { lang } }: { params: { lang: Locale } }) => {
                 <div className="lg:w-1/3 w-full mt-4 lg:mt-0 self-end">
                   <Image
                     src={src}
-                    quality={80}
+                    quality={60}
                     alt={title}
                     width={500}
                     height={300}

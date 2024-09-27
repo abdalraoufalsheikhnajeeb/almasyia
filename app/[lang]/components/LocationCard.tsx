@@ -150,7 +150,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
                   <Image
                     width={400}
                     height={200}
-                    quality={80}
+                    quality={60}
                     src={image}
                     alt={`Office ${index + 1}`}
                     className="w-full h-64 object-cover shadow-lg rounded-2xl"

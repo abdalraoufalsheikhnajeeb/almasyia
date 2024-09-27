@@ -11,7 +11,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <Image
             width={420}
             height={300}
-            quality={80}
+            quality={60}
             src="/images/singapore-airlines.png"
             alt="Singapore Airlines"
             className="w-96 mb-5"
@@ -149,7 +149,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <Image
             width={420}
             height={300}
-            quality={80}
+            quality={60}
             src="/images/singapore-airlines.png"
             alt="الخطوط الجوية السنغافورية"
             className="w-96 mb-5"
@@ -277,7 +277,7 @@ const page = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <Image
             width={420}
             height={300}
-            quality={80}
+            quality={60}
             src="/images/singapore-airlines.png"
             alt="Сингапурские Авиалинии"
             className="w-96 mb-5"

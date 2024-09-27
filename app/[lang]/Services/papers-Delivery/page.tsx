@@ -19,7 +19,7 @@ export default async function Page({
       <div className="box flex flex-col-reverse lg:flex-row gap-4">
         <Image
           loading="lazy"
-          quality={80}
+          quality={60}
           className="lg:w-2/3 w-full rounded-lg"
           width={840}
           height={480}

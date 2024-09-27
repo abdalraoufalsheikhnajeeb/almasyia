@@ -58,6 +58,12 @@ export default async function Footer({
       alt: "SAR location",
     },
     {
+      title: "Alnujoom Almasiya youtube",
+      href: "https://youtube.com/@alnujoomalmasiya?si=NJz3MMf4d65aRUhV",
+      src: "/images/youtube.svg",
+      alt: "youtube icon",
+    },
+    {
       title: "email Farouk Dakkak",
       href: "mailto:farouk@alnujoomalmasiya.com",
       src: "/images/email.svg",

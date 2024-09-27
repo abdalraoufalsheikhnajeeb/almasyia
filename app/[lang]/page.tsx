@@ -41,13 +41,6 @@ export default async function Home({
           />
 
           <Typewriter text={dic?.homeText || ""} speed={50} />
-          {/* <h2 className="text-3xl max-w-3xl font-bold text-primary text-center lg:text-start typewriter">
-            {dic?.homeText}
-          </h2> */}
-
-          {/* <button className="text-xl lg:text-2xl max-w-3xl font-bold text-primary  text-center">
-            {dic.contactUsTitle}
-          </button> */}
         </header>
         <section className="w-screen flex flex-col items-center">
           <AnTitle title={dic?.someProjects} />
@@ -69,7 +62,7 @@ export default async function Home({
                   <div className="max-w-[90vw] relative w-80 bg-white border flex flex-col justify-center items-center rounded-3xl shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                     <Image
                       loading="lazy"
-                      quality={80}
+                      quality={60}
                       width={318}
                       height={256}
                       className="rounded-t-lg object-contain scale-[100.5%] p-2  h-64"
