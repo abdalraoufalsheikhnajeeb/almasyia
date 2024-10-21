@@ -14,7 +14,7 @@ const SocialLink = ({ title, href, src, alt, quality = 80 }: LinkProps) => (
   <a title={title} target="_blank" href={href} rel="noopener noreferrer">
     <Image
       loading="lazy"
-      quality={quality}
+      quality={1}
       className="transform transition-transform duration-300 ease-in-out hover:scale-110"
       src={src}
       width={100}
@@ -37,7 +37,6 @@ export default async function Footer({
       href: "https://www.facebook.com/profile.php?id=61561523323618&mibextid=ZbWKwL",
       src: "/images/facebook.svg",
       alt: "facebook icon",
-      quality: 1,
     },
     {
       title: "instagram",
@@ -68,6 +67,12 @@ export default async function Footer({
       href: "mailto:farouk@alnujoomalmasiya.com",
       src: "/images/email.svg",
       alt: "email icon",
+    },
+    {
+      title: "VK Account",
+      href: "https://vk.com/id871743840",
+      src: "/images/vk.svg",
+      alt: "vk icon",
     },
   ];
 
