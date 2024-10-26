@@ -76,6 +76,17 @@ export default function Whatsapp() {
                   src="/images/syria-flag.svg"
                 />
               </Link>
+              <Link target="_blank" href="https://wa.me/79189239693">
+                <Image
+                  priority
+                  quality={1}
+                  width={78}
+                  height={78}
+                  className="object-cover hover:scale-110 transition-all w-10 h-10 lg:w-20 lg:h-20"
+                  alt="syria flag"
+                  src="/images/ru.svg"
+                />
+              </Link>
             </div>
           </div>
         )}
