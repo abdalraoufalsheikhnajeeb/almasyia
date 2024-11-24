@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { Locale } from "../../../../i18n-config";
 
-const page = async ({ params }: { params: { lang: Locale } }) => {
+const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
   const { lang } = await params;
   if (lang === "en") {
     return (
@@ -220,9 +220,9 @@ const page = async ({ params }: { params: { lang: Locale } }) => {
           </p>
           <h2 className="text-2xl font-bold mb-2">برنامج الولاء</h2>
           <p className="text-gray-700 mb-4">
-            برنامج الولاء من فلاي دبي، OPEN، يكافئ العملاء المخلصين بالنقاط
-            التي يمكن استبدالها برحلات، ترقيات، ومزايا أخرى. يتمتع الأعضاء
-            بمزايا مثل أولوية تسجيل الدخول، وزن أمتعة إضافي، وعروض حصرية.
+            برنامج الولاء من فلاي دبي، OPEN، يكافئ العملاء المخلصين بالنقاط التي
+            يمكن استبدالها برحلات، ترقيات، ومزايا أخرى. يتمتع الأعضاء بمزايا مثل
+            أولوية تسجيل الدخول، وزن أمتعة إضافي، وعروض حصرية.
           </p>
           <h2 className="text-2xl font-bold mb-2">الحجز وخدمة العملاء</h2>
           <p className="text-gray-700 mb-4">

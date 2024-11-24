@@ -5,12 +5,17 @@ import { tourismProgarams } from "../../data";
 export default async function page({
   params: { lang },
 }: {
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }) {
   const dic = await getDictionary(lang);
   return (
     <>
-      <CountrySlider dic={dic} title={dic.tourismProgarams} subtitle={dic.tourismProgaramsText} data={tourismProgarams} />
+      <CountrySlider
+        dic={dic}
+        title={dic.tourismProgarams}
+        subtitle={dic.tourismProgaramsText}
+        data={tourismProgarams}
+      />
     </>
   );
 }

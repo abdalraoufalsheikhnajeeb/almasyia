@@ -5,7 +5,7 @@ import { Locale } from "../../../../i18n-config";
 const MiddleEastAirlines = async ({
   params: { lang },
 }: {
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }) => {
   if (lang === "en") {
     return (

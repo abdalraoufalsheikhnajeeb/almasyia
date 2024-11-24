@@ -5,7 +5,7 @@ import { Locale } from "../../../../i18n-config";
 const SaudiaAir = async ({
   params: { lang },
 }: {
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }) => {
   if (lang === "en") {
     return (
@@ -287,9 +287,7 @@ const SaudiaAir = async ({
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">التحالفات</td>
-                  <td className="py-2">
-                    تحالف سكاي تيم - تحالف الرمز المشترك
-                  </td>
+                  <td className="py-2">تحالف سكاي تيم - تحالف الرمز المشترك</td>
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">رقم خدمة العملاء</td>

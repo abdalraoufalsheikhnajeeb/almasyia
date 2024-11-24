@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Locale } from "../../../../i18n-config";
 import { UAE } from "../../data";
 
-const page = ({ params: { lang } }: { params: { lang: Locale } }) => {
+const page = ({ params: { lang } }: { params: Promise<{ lang: Locale }> }) => {
   return (
     <div className="container mx-auto pt-28 p-4">
       {UAE.map((item, index) => {

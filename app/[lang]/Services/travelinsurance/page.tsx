@@ -7,7 +7,7 @@ import { Locale } from "../../../../i18n-config";
 export default async function page({
   params: { lang },
 }: {
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }) {
   const resolvedLang = await lang;
   const dic = await getDictionary(resolvedLang);

@@ -5,7 +5,7 @@ import { Locale } from "../../../../i18n-config";
 const RoyalJordanian = async ({
   params: { lang },
 }: {
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }) => {
   if (lang === "en") {
     return (
@@ -209,10 +209,10 @@ const RoyalJordanian = async ({
           </p>
           <h2 className="text-2xl font-bold mb-2">برنامج الولاء</h2>
           <p className="text-gray-700 mb-4">
-            برنامج الولاء من الخطوط الملكية الأردنية، Royal Club، يكافئ
-            العملاء المخلصين بالأميال التي يمكن استبدالها برحلات جوية، ترقيات،
-            ومزايا أخرى. يتمتع الأعضاء بمزايا مثل أولوية تسجيل الدخول، وزن أمتعة
-            إضافي، والوصول إلى الصالات الحصرية.
+            برنامج الولاء من الخطوط الملكية الأردنية، Royal Club، يكافئ العملاء
+            المخلصين بالأميال التي يمكن استبدالها برحلات جوية، ترقيات، ومزايا
+            أخرى. يتمتع الأعضاء بمزايا مثل أولوية تسجيل الدخول، وزن أمتعة إضافي،
+            والوصول إلى الصالات الحصرية.
           </p>
           <h2 className="text-2xl font-bold mb-2">الحجز وخدمة العملاء</h2>
           <p className="text-gray-700 mb-4">

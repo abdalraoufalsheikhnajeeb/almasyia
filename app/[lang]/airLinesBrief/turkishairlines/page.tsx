@@ -5,7 +5,7 @@ import { Locale } from "../../../../i18n-config";
 const TurkishAirlines = async ({
   params: { lang },
 }: {
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }) => {
   if (lang === "en") {
     return (
@@ -64,10 +64,10 @@ const TurkishAirlines = async ({
           </p>
           <h2 className="text-2xl font-bold mb-2">Frequent Flyer Program</h2>
           <p className="text-gray-700 mb-4">
-            Turkish Airlines frequent flyer program, Miles&Smiles, rewards
-            loyal customers with miles that can be redeemed for flights,
-            upgrades, and other benefits. Members enjoy perks such as priority
-            check-in, extra baggage allowance, and access to exclusive lounges.
+            Turkish Airlines frequent flyer program, Miles&Smiles, rewards loyal
+            customers with miles that can be redeemed for flights, upgrades, and
+            other benefits. Members enjoy perks such as priority check-in, extra
+            baggage allowance, and access to exclusive lounges.
           </p>
           <h2 className="text-2xl font-bold mb-2">
             Booking and Customer Service

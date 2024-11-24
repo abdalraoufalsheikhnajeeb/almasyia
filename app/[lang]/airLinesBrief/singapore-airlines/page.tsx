@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { Locale } from "../../../../i18n-config";
 
-const page = async ({ params }: { params: { lang: Locale } }) => {
+const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
   const { lang } = await params;
   if (lang === "en") {
     return (
@@ -60,10 +60,10 @@ const page = async ({ params }: { params: { lang: Locale } }) => {
           </p>
           <h2 className="text-2xl font-bold mb-2">Frequent Flyer Program</h2>
           <p className="text-gray-700 mb-4">
-            Singapore Airlines frequent flyer program, KrisFlyer, allows
-            members to earn miles with every flight and redeem them for a
-            variety of rewards, including free flights, seat upgrades, and
-            additional services.
+            Singapore Airlines frequent flyer program, KrisFlyer, allows members
+            to earn miles with every flight and redeem them for a variety of
+            rewards, including free flights, seat upgrades, and additional
+            services.
           </p>
           <h2 className="text-2xl font-bold mb-2">
             Booking and Customer Service
