@@ -5,12 +5,12 @@ import { getDictionary } from "../../../../get-dictionary";
 import { Locale } from "../../../../i18n-config";
 
 export default async function page({
-  params: { lang },
+  params,
 }: {
   params: Promise<{ lang: Locale }>;
 }) {
-  const resolvedLang = await lang;
-  const dic = await getDictionary(resolvedLang);
+  const { lang } = await params;
+  const dic = await getDictionary(lang);
   return (
     <div className="max-w-[95vw] mx-auto">
       <AnTitle title={dic.travelInsurance} />
@@ -30,7 +30,7 @@ export default async function page({
           />
         </div>
         <div className="flex lg:w-1/3 w-full justify-center items-center">
-          <TravelInsuranceForm lang={resolvedLang} />
+          <TravelInsuranceForm lang={lang} />
         </div>
       </div>
     </div>

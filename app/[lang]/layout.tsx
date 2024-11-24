@@ -51,11 +51,11 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: Promise<{ lang: Locale }>;
 }) {
-  const langPromise = Promise.resolve(params?.lang);
-  const isArabic = params?.lang === "ar";
+  const langPromise = Promise.resolve((await params)?.lang);
+  const isArabic = (await params)?.lang === "ar";
 
   return (
-    <html lang={params?.lang}>
+    <html lang={(await params)?.lang}>
       <body
         dir={isArabic ? "rtl" : "ltr"}
         className={`overflow-x-hidden text-primary bg-[#f4f8ff] ${tajawal.className}`}
@@ -64,7 +64,7 @@ export default async function RootLayout({
         <Whatsapp />
         <PhoneCall />
         <div className="mt-24">{children}</div>
-        <Footer lang={params?.lang} />
+        <Footer lang={(await params)?.lang} />
       </body>
     </html>
   );

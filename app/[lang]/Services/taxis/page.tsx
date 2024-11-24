@@ -4,11 +4,8 @@ import TaxiDeliveryForm from "../../components/TaxiDeliveryForm";
 import { getDictionary } from "../../../../get-dictionary";
 import AnTitle from "../../components/AnTitle";
 
-export default async function page({
-  params: { lang },
-}: {
-  params: Promise<{ lang: Locale }>;
-}) {
+const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
+  const { lang } = await params;
   const dic = await getDictionary(lang);
   return (
     <>
@@ -32,4 +29,5 @@ export default async function page({
       </div>
     </>
   );
-}
+};
+export default page;

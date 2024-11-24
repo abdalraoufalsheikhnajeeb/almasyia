@@ -2,11 +2,8 @@ import Image from "next/image";
 
 import { Locale } from "../../../../i18n-config";
 
-const AirFrance = async ({
-  params: { lang },
-}: {
-  params: Promise<{ lang: Locale }>;
-}) => {
+const AirFrance = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
+  const { lang } = await params;
   if (lang == "en") {
     return (
       <div className="container mx-auto p-4">

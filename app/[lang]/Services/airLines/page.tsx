@@ -4,7 +4,7 @@ import FlightBookingForm from "../../components/FlightBookingForm";
 import Slider from "../../components/Slider";
 import { partners, agents } from "../../data";
 
-export default async function Page({
+export default async function page({
   params,
 }: {
   params: Promise<{ lang: Locale }>;

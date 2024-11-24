@@ -6,12 +6,12 @@ import VisaForm from "../../components/VisasForm";
 import { visas } from "../../data";
 
 export default async function page({
-  params: { lang },
+  params,
 }: {
   params: Promise<{ lang: Locale }>;
 }) {
-  const resolvedLang = await lang;
-  const dic = await getDictionary(resolvedLang);
+  const { lang } = await params;
+  const dic = await getDictionary(lang);
 
   return (
     <div className="mx-auto px-4 lg:px-28 flex flex-col">
@@ -36,27 +36,27 @@ export default async function page({
           } = visa;
 
           const country =
-            resolvedLang === "ar"
+            lang === "ar"
               ? countryAR
-              : resolvedLang === "en"
+              : lang === "en"
               ? countryEN
               : countryRU;
           const duration =
-            resolvedLang === "ar"
+            lang === "ar"
               ? durationAR
-              : resolvedLang === "en"
+              : lang === "en"
               ? durationEN
               : durationRU;
           const requirements =
-            resolvedLang === "ar"
+            lang === "ar"
               ? requirementsAR
-              : resolvedLang === "en"
+              : lang === "en"
               ? requirementsEN
               : requirementsRU;
           const description =
-            resolvedLang === "ar"
+            lang === "ar"
               ? descriptionAR
-              : resolvedLang === "en"
+              : lang === "en"
               ? descriptionEN
               : descriptionRU;
 

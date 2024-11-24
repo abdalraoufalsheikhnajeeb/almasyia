@@ -2,7 +2,7 @@ import { getDictionary } from "../../../get-dictionary";
 import { Locale } from "../../../i18n-config";
 import type { NextPage } from "next";
 import LocationCard from "./LocationCard";
-import AnTitle from "./AnTitle";
+
 
 interface LocationsProps {
   params: {
@@ -11,9 +11,7 @@ interface LocationsProps {
 }
 
 const Locations: NextPage<LocationsProps> = async ({ params: { lang } }) => {
-  
-  const resolvedLang = await lang;
-  const dic = await getDictionary(resolvedLang);
+  const dic = await getDictionary(lang);
 
   const uaeLocation = {
     flagSrc: "/images/emirate-flag.svg",
