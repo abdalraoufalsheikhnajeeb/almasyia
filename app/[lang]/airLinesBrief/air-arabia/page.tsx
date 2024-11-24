@@ -26,13 +26,13 @@ const page = async ({ params }: { params: { lang: Locale } }) => {
           <h2 className="text-2xl font-bold mb-2">History</h2>
           <p className="text-gray-700 mb-4">
             Established as the first low-cost carrier in the Middle East, Air
-            Arabia has grown to become a major player in the region's aviation
+            Arabia has grown to become a major player in the regions aviation
             industry. The airline focuses on providing affordable travel options
             while maintaining high safety and service standards.
           </p>
           <h2 className="text-2xl font-bold mb-2">Fleet</h2>
           <p className="text-gray-700 mb-4">
-            Air Arabia's fleet consists primarily of Airbus A320 aircraft, known
+            Air Arabias fleet consists primarily of Airbus A320 aircraft, known
             for their efficiency and reliability. The airline continually
             updates and maintains its fleet to ensure passenger safety and
             comfort.
@@ -61,7 +61,7 @@ const page = async ({ params }: { params: { lang: Locale } }) => {
           </p>
           <h2 className="text-2xl font-bold mb-2">Frequent Flyer Program</h2>
           <p className="text-gray-700 mb-4">
-            Air Arabia's frequent flyer program, Airewards, allows members to
+            Air Arabias frequent flyer program, Airewards, allows members to
             earn points with every flight and redeem them for a variety of
             rewards, including free flights, seat upgrades, and additional
             services.

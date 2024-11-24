@@ -25,14 +25,14 @@ const page = async ({ params }: { params: { lang: Locale } }) => {
           </p>
           <h2 className="text-2xl font-bold mb-2">History</h2>
           <p className="text-gray-700 mb-4">
-            Flydubai was founded to support Dubai's commercial and tourism
-            sectors by providing accessible and affordable air travel options.
-            Since its inception, the airline has rapidly expanded its route
-            network and fleet.
+            Flydubai was founded to support Dubai commercial and tourism sectors
+            by providing accessible and affordable air travel options. Since its
+            inception, the airline has rapidly expanded its route network and
+            fleet.
           </p>
           <h2 className="text-2xl font-bold mb-2">Fleet</h2>
           <p className="text-gray-700 mb-4">
-            The airline's fleet primarily consists of Boeing 737-800 and Boeing
+            The airline fleet primarily consists of Boeing 737-800 and Boeing
             737 MAX aircraft. These modern planes are equipped with advanced
             safety features and provide a comfortable travel experience.
           </p>
@@ -60,8 +60,8 @@ const page = async ({ params }: { params: { lang: Locale } }) => {
           </p>
           <h2 className="text-2xl font-bold mb-2">Frequent Flyer Program</h2>
           <p className="text-gray-700 mb-4">
-            Flydubai's frequent flyer program, OPEN, rewards loyal customers
-            with points that can be redeemed for flights, upgrades, and other
+            Flydubai frequent flyer program, OPEN, rewards loyal customers with
+            points that can be redeemed for flights, upgrades, and other
             benefits. Members enjoy perks such as priority check-in, additional
             baggage allowance, and exclusive offers.
           </p>
@@ -220,7 +220,7 @@ const page = async ({ params }: { params: { lang: Locale } }) => {
           </p>
           <h2 className="text-2xl font-bold mb-2">برنامج الولاء</h2>
           <p className="text-gray-700 mb-4">
-            برنامج الولاء من فلاي دبي، "OPEN"، يكافئ العملاء المخلصين بالنقاط
+            برنامج الولاء من فلاي دبي، OPEN، يكافئ العملاء المخلصين بالنقاط
             التي يمكن استبدالها برحلات، ترقيات، ومزايا أخرى. يتمتع الأعضاء
             بمزايا مثل أولوية تسجيل الدخول، وزن أمتعة إضافي، وعروض حصرية.
           </p>

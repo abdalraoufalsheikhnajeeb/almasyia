@@ -141,7 +141,7 @@ const page = ({ params: { lang } }: { params: { lang: Locale } }) => {
                           "Mısır Çarşısı",
                           "Istinye Park",
                           "Kanyon",
-                          "City's Nisantasi",
+                          "City Nisantasi",
                           "Zorlu Center",
                           "Aqua Florya",
                         ][index]

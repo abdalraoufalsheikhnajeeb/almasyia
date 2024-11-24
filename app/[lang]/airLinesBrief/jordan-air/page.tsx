@@ -37,7 +37,7 @@ const RoyalJordanian = async ({
           </p>
           <h2 className="text-2xl font-bold mb-2">Fleet</h2>
           <p className="text-gray-700 mb-4">
-            The airline's fleet includes a mix of modern Airbus and Boeing
+            The airline fleet includes a mix of modern Airbus and Boeing
             aircraft, such as the Airbus A320, Airbus A321, Boeing 787
             Dreamliner, and Embraer 175. Royal Jordanian maintains its fleet to
             the highest safety and comfort standards.
@@ -65,7 +65,7 @@ const RoyalJordanian = async ({
           </p>
           <h2 className="text-2xl font-bold mb-2">Frequent Flyer Program</h2>
           <p className="text-gray-700 mb-4">
-            Royal Jordanian's frequent flyer program, Royal Club, rewards loyal
+            Royal Jordanian frequent flyer program, Royal Club, rewards loyal
             customers with miles that can be redeemed for flights, upgrades, and
             other benefits. Members enjoy perks such as priority check-in, extra
             baggage allowance, and access to exclusive lounges.
@@ -197,7 +197,7 @@ const RoyalJordanian = async ({
           <p className="text-gray-700 mb-4">
             تقدم الشركة مجموعة متنوعة من الخدمات لتحسين تجربة السفر، بما في ذلك
             الترفيه على متن الطائرة، الوجبات الفاخرة، والمقاعد المريحة. يتمتع
-            ركاب الدرجة الأولى "Crown Class" بمزايا إضافية مثل المقاعد المسطحة،
+            ركاب الدرجة الأولى Crown Class بمزايا إضافية مثل المقاعد المسطحة،
             الطعام الفاخر، والوصول إلى الصالات الحصرية.
           </p>
           <h2 className="text-2xl font-bold mb-2">تجربة السفر</h2>
@@ -209,7 +209,7 @@ const RoyalJordanian = async ({
           </p>
           <h2 className="text-2xl font-bold mb-2">برنامج الولاء</h2>
           <p className="text-gray-700 mb-4">
-            برنامج الولاء من الخطوط الملكية الأردنية، "Royal Club"، يكافئ
+            برنامج الولاء من الخطوط الملكية الأردنية، Royal Club، يكافئ
             العملاء المخلصين بالأميال التي يمكن استبدالها برحلات جوية، ترقيات،
             ومزايا أخرى. يتمتع الأعضاء بمزايا مثل أولوية تسجيل الدخول، وزن أمتعة
             إضافي، والوصول إلى الصالات الحصرية.
@@ -332,7 +332,7 @@ const RoyalJordanian = async ({
           <p className="text-gray-700 mb-4">
             Авиакомпания предлагает различные услуги для улучшения качества
             путешествий, включая развлекательные программы на борту, изысканные
-            блюда и удобные сиденья. Пассажиры класса "Crown Class" пользуются
+            блюда и удобные сиденья. Пассажиры класса Crown Class пользуются
             дополнительными привилегиями, такими как раскладывающиеся сиденья,
             премиальное питание и доступ в эксклюзивные залы ожидания.
           </p>

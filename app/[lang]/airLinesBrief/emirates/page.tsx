@@ -23,14 +23,14 @@ const Emirates = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           </p>
           <h2 className="text-2xl font-bold mb-2">History</h2>
           <p className="text-gray-700 mb-4">
-            Established in 1985, Emirates has grown to become one of the world's
+            Established in 1985, Emirates has grown to become one of the world
             largest and most prestigious airlines, renowned for its commitment
             to luxury and service excellence. The airline is a subsidiary of The
             Emirates Group, owned by the government of Dubai.
           </p>
           <h2 className="text-2xl font-bold mb-2">Fleet</h2>
           <p className="text-gray-700 mb-4">
-            The airline's fleet includes a mix of modern Airbus and Boeing
+            The airline fleet includes a mix of modern Airbus and Boeing
             aircraft, such as the Airbus A380 and Boeing 777. Emirates is known
             for maintaining one of the youngest and most technologically
             advanced fleets in the industry.
@@ -59,7 +59,7 @@ const Emirates = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           </p>
           <h2 className="text-2xl font-bold mb-2">Frequent Flyer Program</h2>
           <p className="text-gray-700 mb-4">
-            Emirates' frequent flyer program, Skywards, rewards loyal customers
+            Emirates frequent flyer program, Skywards, rewards loyal customers
             with miles that can be redeemed for flights, upgrades, and other
             benefits. Members enjoy perks such as priority check-in, extra
             baggage allowance, and access to exclusive lounges.
@@ -122,7 +122,7 @@ const Emirates = async ({ params: { lang } }: { params: { lang: Locale } }) => {
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Slogan</td>
-                  <td className="py-2">"Fly Better"</td>
+                  <td className="py-2">Fly Better</td>
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Alliances</td>
@@ -276,7 +276,7 @@ const Emirates = async ({ params: { lang } }: { params: { lang: Locale } }) => {
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">الشعار</td>
-                  <td className="py-2">"سافر أفضل"</td>
+                  <td className="py-2">سافر أفضل</td>
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">التحالفات</td>
@@ -442,7 +442,7 @@ const Emirates = async ({ params: { lang } }: { params: { lang: Locale } }) => {
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Слоган</td>
-                  <td className="py-2">"Летайте лучше"</td>
+                  <td className="py-2">Летайте лучше</td>
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Альянсы</td>

@@ -32,7 +32,7 @@ const page = async ({ params }: { params: { lang: Locale } }) => {
           </p>
           <h2 className="text-2xl font-bold mb-2">Fleet</h2>
           <p className="text-gray-700 mb-4">
-            British Airways' fleet includes a mix of Boeing and Airbus aircraft,
+            British Airways fleet includes a mix of Boeing and Airbus aircraft,
             with models such as the Boeing 777, Boeing 787 Dreamliner, and
             Airbus A380. The airline continually updates its fleet to maintain
             high standards of safety and comfort.
@@ -61,7 +61,7 @@ const page = async ({ params }: { params: { lang: Locale } }) => {
           </p>
           <h2 className="text-2xl font-bold mb-2">Frequent Flyer Program</h2>
           <p className="text-gray-700 mb-4">
-            British Airways' frequent flyer program, Executive Club, allows
+            British Airways frequent flyer program, Executive Club, allows
             members to earn Avios points with every flight and redeem them for a
             variety of rewards, including free flights, seat upgrades, and
             additional services.

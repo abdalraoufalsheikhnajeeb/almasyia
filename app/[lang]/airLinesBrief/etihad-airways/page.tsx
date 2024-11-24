@@ -29,13 +29,13 @@ const EtihadAirways = async ({
           <h2 className="text-2xl font-bold mb-2">History</h2>
           <p className="text-gray-700 mb-4">
             Established in 2003 by Royal (Emiri) Decree, Etihad Airways has
-            rapidly grown to become one of the world's leading airlines, known
-            for its commitment to luxury and service quality. The airline has
+            rapidly grown to become one of the world leading airlines, known for
+            its commitment to luxury and service quality. The airline has
             received numerous awards for its exceptional service.
           </p>
           <h2 className="text-2xl font-bold mb-2">Fleet</h2>
           <p className="text-gray-700 mb-4">
-            The airline's fleet includes a mix of modern Airbus and Boeing
+            The airline fleet includes a mix of modern Airbus and Boeing
             aircraft, such as the Airbus A320, Airbus A380, Boeing 787
             Dreamliner, and Boeing 777. Etihad maintains a young and efficient
             fleet to ensure passenger safety and comfort.
@@ -64,7 +64,7 @@ const EtihadAirways = async ({
           </p>
           <h2 className="text-2xl font-bold mb-2">Frequent Flyer Program</h2>
           <p className="text-gray-700 mb-4">
-            Etihad Airways' frequent flyer program, Etihad Guest, rewards loyal
+            Etihad Airways frequent flyer program, Etihad Guest, rewards loyal
             customers with miles that can be redeemed for flights, upgrades, and
             other benefits. Members enjoy perks such as priority check-in, extra
             baggage allowance, and access to exclusive lounges.
@@ -201,7 +201,7 @@ const EtihadAirways = async ({
           </p>
           <h2 className="text-2xl font-bold mb-2">برنامج الولاء</h2>
           <p className="text-gray-700 mb-4">
-            برنامج الولاء من الاتحاد للطيران، "ضيف الاتحاد"، يكافئ العملاء
+            برنامج الولاء من الاتحاد للطيران، ضيف الاتحاد، يكافئ العملاء
             المخلصين بالأميال التي يمكن استبدالها برحلات جوية، ترقيات، ومزايا
             أخرى. يتمتع الأعضاء بمزايا مثل أولوية تسجيل الدخول، وزن أمتعة إضافي،
             والوصول إلى الصالات الحصرية.

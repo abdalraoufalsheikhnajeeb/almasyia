@@ -30,12 +30,12 @@ const PegasusAirlines = async ({
           <p className="text-gray-700 mb-4">
             Pegasus Airlines was founded in 1990 as a joint venture between Aer
             Lingus, Silkar Yatırım, and Net Holding. Since then, it has grown to
-            become one of Turkey's leading low-cost carriers, known for its
+            become one of Turkey leading low-cost carriers, known for its
             affordable fares and extensive route network.
           </p>
           <h2 className="text-2xl font-bold mb-2">Fleet</h2>
           <p className="text-gray-700 mb-4">
-            The airline's fleet primarily consists of modern Airbus A320 and
+            The airline fleet primarily consists of modern Airbus A320 and
             Boeing 737 aircraft. Pegasus Airlines focuses on maintaining a young
             and efficient fleet to ensure passenger safety and comfort.
           </p>
@@ -63,10 +63,10 @@ const PegasusAirlines = async ({
           </p>
           <h2 className="text-2xl font-bold mb-2">Frequent Flyer Program</h2>
           <p className="text-gray-700 mb-4">
-            Pegasus Airlines' frequent flyer program, Pegasus Plus, rewards
-            loyal customers with points that can be redeemed for flights,
-            upgrades, and other benefits. Members enjoy perks such as priority
-            check-in, extra baggage allowance, and exclusive offers.
+            Pegasus Airlines frequent flyer program, Pegasus Plus, rewards loyal
+            customers with points that can be redeemed for flights, upgrades,
+            and other benefits. Members enjoy perks such as priority check-in,
+            extra baggage allowance, and exclusive offers.
           </p>
           <h2 className="text-2xl font-bold mb-2">
             Booking and Customer Service

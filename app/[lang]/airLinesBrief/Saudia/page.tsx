@@ -33,11 +33,11 @@ const SaudiaAir = async ({
             Saudia was founded in 1945 with a single DC-3 aircraft gifted by
             U.S. President Franklin D. Roosevelt. Over the decades, it has grown
             into one of the largest airlines in the Middle East, playing a
-            pivotal role in the region's aviation industry.
+            pivotal role in the region aviation industry.
           </p>
           <h2 className="text-2xl font-bold mb-2">Fleet</h2>
           <p className="text-gray-700 mb-4">
-            The airline's fleet includes a mix of modern aircraft such as the
+            The airline fleet includes a mix of modern aircraft such as the
             Boeing 777, Boeing 787 Dreamliner, and Airbus A320 family. Saudia
             ensures its fleet is maintained to the highest safety and comfort
             standards.
@@ -66,7 +66,7 @@ const SaudiaAir = async ({
           </p>
           <h2 className="text-2xl font-bold mb-2">Frequent Flyer Program</h2>
           <p className="text-gray-700 mb-4">
-            Saudia's frequent flyer program, Alfursan, rewards loyal customers
+            Saudia frequent flyer program, Alfursan, rewards loyal customers
             with points that can be redeemed for flights, upgrades, and other
             benefits. Members enjoy perks such as priority check-in, additional
             baggage allowance, and access to exclusive lounges.
@@ -129,12 +129,12 @@ const SaudiaAir = async ({
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Logo</td>
-                  <td className="py-2">"Welcome to your world"</td>
+                  <td className="py-2">Welcome to your world</td>
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Alliances</td>
                   <td className="py-2">
-                    Sky Team Alliance - "Shared Code" Alliance
+                    Sky Team Alliance - Shared Code Alliance
                   </td>
                 </tr>
                 <tr className="border-b">
@@ -283,12 +283,12 @@ const SaudiaAir = async ({
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">الشعار</td>
-                  <td className="py-2">"مرحبا بكم في عالمكم"</td>
+                  <td className="py-2">مرحبا بكم في عالمكم</td>
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">التحالفات</td>
                   <td className="py-2">
-                    تحالف سكاي تيم - تحالف "الرمز المشترك"
+                    تحالف سكاي تيم - تحالف الرمز المشترك
                   </td>
                 </tr>
                 <tr className="border-b">
@@ -451,12 +451,12 @@ const SaudiaAir = async ({
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Слоган</td>
-                  <td className="py-2">"Добро пожаловать в ваш мир"</td>
+                  <td className="py-2">Добро пожаловать в ваш мир</td>
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Альянсы</td>
                   <td className="py-2">
-                    Sky Team Alliance - "Shared Code" Alliance
+                    Sky Team Alliance - Shared Code Alliance
                   </td>
                 </tr>
                 <tr className="border-b">

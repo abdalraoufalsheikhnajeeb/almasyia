@@ -24,14 +24,14 @@ const EgyptAir = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           </p>
           <h2 className="text-2xl font-bold mb-2">History</h2>
           <p className="text-gray-700 mb-4">
-            Established in 1932, EgyptAir is one of the world's oldest airlines.
+            Established in 1932, EgyptAir is one of the world oldest airlines.
             It has grown significantly over the decades, modernizing its fleet
             and expanding its network. EgyptAir is a member of the Star
             Alliance, enhancing its global reach.
           </p>
           <h2 className="text-2xl font-bold mb-2">Fleet</h2>
           <p className="text-gray-700 mb-4">
-            The airline's fleet includes a mix of modern Airbus and Boeing
+            The airline fleet includes a mix of modern Airbus and Boeing
             aircraft, such as the Airbus A320, Airbus A330, Boeing 737, and
             Boeing 787 Dreamliner. EgyptAir focuses on maintaining a young and
             efficient fleet to ensure passenger safety and comfort.
@@ -59,7 +59,7 @@ const EgyptAir = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           </p>
           <h2 className="text-2xl font-bold mb-2">Frequent Flyer Program</h2>
           <p className="text-gray-700 mb-4">
-            EgyptAir's frequent flyer program, EgyptAir Plus, rewards loyal
+            EgyptAir frequent flyer program, EgyptAir Plus, rewards loyal
             customers with miles that can be redeemed for flights, upgrades, and
             other benefits. Members enjoy perks such as priority check-in, extra
             baggage allowance, and access to exclusive lounges.

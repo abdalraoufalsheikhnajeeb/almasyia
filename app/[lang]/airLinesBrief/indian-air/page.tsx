@@ -31,7 +31,7 @@ const AirIndia = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           </p>
           <h2 className="text-2xl font-bold mb-2">Fleet</h2>
           <p className="text-gray-700 mb-4">
-            The airline's fleet includes a mix of modern Airbus and Boeing
+            The airline fleet includes a mix of modern Airbus and Boeing
             aircraft, such as the Airbus A320, Airbus A321, Boeing 777, and
             Boeing 787 Dreamliner. Air India focuses on maintaining a reliable
             and efficient fleet to ensure passenger safety and comfort.
@@ -59,7 +59,7 @@ const AirIndia = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           </p>
           <h2 className="text-2xl font-bold mb-2">Frequent Flyer Program</h2>
           <p className="text-gray-700 mb-4">
-            Air India's frequent flyer program, Flying Returns, rewards loyal
+            Air India frequent flyer program, Flying Returns, rewards loyal
             customers with miles that can be redeemed for flights, upgrades, and
             other benefits. Members enjoy perks such as priority check-in, extra
             baggage allowance, and access to exclusive lounges.
@@ -196,7 +196,7 @@ const AirIndia = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           </p>
           <h2 className="text-2xl font-bold mb-2">برنامج الولاء</h2>
           <p className="text-gray-700 mb-4">
-            برنامج الولاء من الخطوط الجوية الهندية، "Flying Returns"، يكافئ
+            برنامج الولاء من الخطوط الجوية الهندية، Flying Returns، يكافئ
             العملاء المخلصين بالأميال التي يمكن استبدالها برحلات جوية، ترقيات،
             ومزايا أخرى. يتمتع الأعضاء بمزايا مثل أولوية تسجيل الدخول، وزن أمتعة
             إضافي، والوصول إلى الصالات الحصرية.

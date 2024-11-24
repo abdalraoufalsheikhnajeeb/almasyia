@@ -29,14 +29,14 @@ const AirFrance = async ({
           <h2 className="text-2xl font-bold mb-2">History</h2>
           <p className="text-gray-700 mb-4">
             Air France was founded in 1933 from a merger of several smaller
-            airlines. Over the decades, it has grown to become one of the
-            world's leading airlines, known for its commitment to safety,
-            comfort, and service quality. Air France is a founding member of the
-            SkyTeam global airline alliance.
+            airlines. Over the decades, it has grown to become one of the world
+            leading airlines, known for its commitment to safety, comfort, and
+            service quality. Air France is a founding member of the SkyTeam
+            global airline alliance.
           </p>
           <h2 className="text-2xl font-bold mb-2">Fleet</h2>
           <p className="text-gray-700 mb-4">
-            The airline's fleet includes a mix of modern Airbus and Boeing
+            The airline fleet includes a mix of modern Airbus and Boeing
             aircraft, such as the Airbus A320, Airbus A350, Boeing 777, and
             Boeing 787 Dreamliner. Air France maintains a young and efficient
             fleet to ensure passenger safety and comfort.
@@ -64,7 +64,7 @@ const AirFrance = async ({
           </p>
           <h2 className="text-2xl font-bold mb-2">Frequent Flyer Program</h2>
           <p className="text-gray-700 mb-4">
-            Air France's frequent flyer program, Flying Blue, rewards loyal
+            Air France frequent flyer program, Flying Blue, rewards loyal
             customers with miles that can be redeemed for flights, upgrades, and
             other benefits. Members enjoy perks such as priority check-in, extra
             baggage allowance, and access to exclusive lounges.
@@ -203,7 +203,7 @@ const AirFrance = async ({
           </p>
           <h2 className="text-2xl font-bold mb-2">برنامج الولاء</h2>
           <p className="text-gray-700 mb-4">
-            برنامج الولاء من الخطوط الجوية الفرنسية، "Flying Blue"، يكافئ
+            برنامج الولاء من الخطوط الجوية الفرنسية، Flying Blue، يكافئ
             العملاء المخلصين بالأميال التي يمكن استبدالها برحلات جوية، ترقيات،
             ومزايا أخرى. يتمتع الأعضاء بمزايا مثل أولوية تسجيل الدخول، وزن أمتعة
             إضافي، والوصول إلى الصالات الحصرية.

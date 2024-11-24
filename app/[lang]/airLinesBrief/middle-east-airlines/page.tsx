@@ -38,8 +38,8 @@ const MiddleEastAirlines = async ({
           </p>
           <h2 className="text-2xl font-bold mb-2">Fleet</h2>
           <p className="text-gray-700 mb-4">
-            The airline's fleet consists of modern Airbus aircraft, including
-            the A320, A321, and A330. MEA focuses on maintaining a young and
+            The airline fleet consists of modern Airbus aircraft, including the
+            A320, A321, and A330. MEA focuses on maintaining a young and
             efficient fleet to ensure passenger safety and comfort.
           </p>
           <h2 className="text-2xl font-bold mb-2">Destinations</h2>
@@ -65,7 +65,7 @@ const MiddleEastAirlines = async ({
           </p>
           <h2 className="text-2xl font-bold mb-2">Frequent Flyer Program</h2>
           <p className="text-gray-700 mb-4">
-            Middle East Airlines' frequent flyer program, Cedar Miles, rewards
+            Middle East Airlines frequent flyer program, Cedar Miles, rewards
             loyal customers with miles that can be redeemed for flights,
             upgrades, and other benefits. Members enjoy perks such as priority
             check-in, extra baggage allowance, and access to exclusive lounges.
@@ -201,7 +201,7 @@ const MiddleEastAirlines = async ({
           </p>
           <h2 className="text-2xl font-bold mb-2">برنامج الولاء</h2>
           <p className="text-gray-700 mb-4">
-            برنامج الولاء من الخطوط الجوية الشرق أوسطية، "Cedar Miles"، يكافئ
+            برنامج الولاء من الخطوط الجوية الشرق أوسطية، Cedar Miles، يكافئ
             العملاء المخلصين بالأميال التي يمكن استبدالها برحلات جوية، ترقيات،
             ومزايا أخرى. يتمتع الأعضاء بمزايا مثل أولوية تسجيل الدخول، وزن أمتعة
             إضافي، والوصول إلى الصالات الحصرية.
