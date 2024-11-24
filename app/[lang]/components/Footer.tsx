@@ -10,7 +10,7 @@ interface LinkProps {
   quality?: number;
 }
 
-const SocialLink = ({ title, href, src, alt, quality = 80 }: LinkProps) => (
+const SocialLink = ({ title, href, src, alt}: LinkProps) => (
   <a title={title} target="_blank" href={href} rel="noopener noreferrer">
     <Image
       loading="lazy"
@@ -24,12 +24,10 @@ const SocialLink = ({ title, href, src, alt, quality = 80 }: LinkProps) => (
   </a>
 );
 
-export default async function Footer({
-  params: { lang },
-}: {
-  params: { lang: Locale };
-}) {
-  const dic = await getDictionary(lang);
+export default async function Footer({ lang }: { lang: Locale }) {
+    const resolvedLang = await lang;
+    const dic = await getDictionary(resolvedLang);
+
 
   const links = [
     {
@@ -43,18 +41,6 @@ export default async function Footer({
       href: "https://www.instagram.com/alnujoom_almasiya?igsh=Z3duaThqemhtZXpr&utm_source=qr",
       src: "/images/insta.svg",
       alt: "instagram link",
-    },
-    {
-      title: "UAE location",
-      href: "https://maps.app.goo.gl/7qC5aEFBgittwxY68",
-      src: "/images/uaeLocation.svg",
-      alt: "UAE location",
-    },
-    {
-      title: "SAR location",
-      href: "https://maps.app.goo.gl/AURZZ5qdu8yfD9NH9",
-      src: "/images/sarLocation.svg",
-      alt: "SAR location",
     },
     {
       title: "Alnujoom Almasiya youtube",

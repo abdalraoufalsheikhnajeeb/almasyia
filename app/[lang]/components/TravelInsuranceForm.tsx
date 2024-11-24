@@ -57,7 +57,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-6 w-96 p-6 flex flex-col backdrop-blur-sm border-2 border-white rounded-xl bg-white bg-opacity-50"
+      className="space-y-6 w-96 p-6 flex flex-col backdrop-blur-sm border-2 border-white rounded-lg bg-white bg-opacity-50"
     >
       <div>
         <label htmlFor="destination" className="block text-lg text-gray-900">
@@ -72,7 +72,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
           name="destination"
           value={formData.destination}
           onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+          className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
           required
         >
           <option value="">
@@ -138,7 +138,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
                 ? "Введите страну"
                 : "Enter country"
             }
-            className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+            className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
             required
           />
         )}
@@ -160,7 +160,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
             id="insuranceStartDate"
             selected={formData.insuranceStartDate}
             onChange={(date) => handleDateChange("insuranceStartDate", date)}
-            className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
+            className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
             placeholderText={
               lang === "ar"
                 ? "اختر التاريخ"
@@ -190,7 +190,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
             id="insuranceEndDate"
             selected={formData.insuranceEndDate}
             onChange={(date) => handleDateChange("insuranceEndDate", date)}
-            className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
+            className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
             placeholderText={
               lang === "ar"
                 ? "اختر التاريخ"
@@ -217,7 +217,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
           name="numberOfPeople"
           value={formData.numberOfPeople}
           onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+          className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
           required
         />
       </div>
@@ -266,7 +266,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
       </div>
       <button
         type="submit"
-        className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+        className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
       >
         {lang === "ar"
           ? "إرسال المعلومات"

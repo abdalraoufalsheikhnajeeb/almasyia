@@ -30,7 +30,7 @@ export default function PhoneCall() {
       `}</style>
 
       <div
-        className="animate-bounce fixed bottom-4 start-4 cursor-pointer z-50"
+        className=" fixed bottom-4 start-4 cursor-pointer z-50"
         onClick={toggleDropdown}
         ref={dropdownRef}
       >
@@ -93,3 +93,5 @@ export default function PhoneCall() {
     </>
   );
 }
+
+

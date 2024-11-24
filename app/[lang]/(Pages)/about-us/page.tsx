@@ -1,13 +1,12 @@
 import Image from "next/image";
 import { Locale } from "../../../../i18n-config";
-import { getDictionary } from "../../../../get-dictionary";
 
-export default async function Page({
-  params: { lang },
+export default async function page({
+  params,
 }: {
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }) {
-  const dic = await getDictionary(lang);
+  const { lang } = await params;
 
   return (
     <section className="  flex-col lg:flex-row lg:min-h-[50vh] lg:justify-between mt-24 gap-4 flex  box">
@@ -96,7 +95,7 @@ export default async function Page({
         width={640}
         height={427}
         alt="Farouk Dakkak, Founder of AlNujoom AlMasiya"
-        className="object-cover object-right w-full lg:w-1/2 rounded-xl"
+        className="object-cover object-right w-full lg:w-1/2 rounded-lg"
       />
     </section>
   );

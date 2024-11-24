@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Locale } from "../../../../i18n-config";
 import { Indonesia } from "../../data";
 
-const Page = ({ params: { lang } }: { params: { lang: Locale } }) => {
+const page = ({ params: { lang } }: { params: { lang: Locale } }) => {
   return (
     <div className="container mx-auto pt-28 p-4">
       {Indonesia.map((item, index) => {
@@ -60,7 +60,7 @@ const Page = ({ params: { lang } }: { params: { lang: Locale } }) => {
           </div>
         );
       })}
-      <div className="container mx-auto p-4 mb-8 pt-6 lg:ps-4 bg-[#34689447] rounded-2xl border-white border shadow-xl overflow-hidden">
+      <div className="container mx-auto p-4 mb-8 pt-6 lg:ps-4 bg-[#34689447] rounded-lg border-white border shadow-xl overflow-hidden">
         <div className="mb-8">
           <h2 className="text-center text-accent text-2xl font-bold mb-4">
             {lang === "en"
@@ -101,7 +101,7 @@ const Page = ({ params: { lang } }: { params: { lang: Locale } }) => {
         </h2>
 
         <div className="overflow-x-auto">
-          <table className="min-w-full bg-white shadow-md rounded-2xl">
+          <table className="min-w-full bg-white shadow-md rounded-lg">
             <thead>
               <tr>
                 <th className="px-4 py-2 text-center bg-blue-600 text-white">
@@ -194,7 +194,7 @@ const Page = ({ params: { lang } }: { params: { lang: Locale } }) => {
         </h2>
 
         <div className="overflow-x-auto">
-          <table className="min-w-full bg-white shadow-md rounded-2xl">
+          <table className="min-w-full bg-white shadow-md rounded-lg">
             <thead>
               <tr>
                 <th className="px-4 py-2 text-center bg-blue-600 text-white">
@@ -282,4 +282,4 @@ const Page = ({ params: { lang } }: { params: { lang: Locale } }) => {
   );
 };
 
-export default Page;
+export default page;

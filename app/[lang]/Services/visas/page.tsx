@@ -5,12 +5,13 @@ import AnTitle from "../../components/AnTitle";
 import VisaForm from "../../components/VisasForm";
 import { visas } from "../../data";
 
-export default async function Page({
+export default async function page({
   params: { lang },
 }: {
   params: { lang: Locale };
 }) {
-  const dic = await getDictionary(lang);
+  const resolvedLang = await lang;
+  const dic = await getDictionary(resolvedLang);
 
   return (
     <div className="mx-auto px-4 lg:px-28 flex flex-col">
@@ -35,23 +36,27 @@ export default async function Page({
           } = visa;
 
           const country =
-            lang === "ar" ? countryAR : lang === "en" ? countryEN : countryRU;
+            resolvedLang === "ar"
+              ? countryAR
+              : resolvedLang === "en"
+              ? countryEN
+              : countryRU;
           const duration =
-            lang === "ar"
+            resolvedLang === "ar"
               ? durationAR
-              : lang === "en"
+              : resolvedLang === "en"
               ? durationEN
               : durationRU;
           const requirements =
-            lang === "ar"
+            resolvedLang === "ar"
               ? requirementsAR
-              : lang === "en"
+              : resolvedLang === "en"
               ? requirementsEN
               : requirementsRU;
           const description =
-            lang === "ar"
+            resolvedLang === "ar"
               ? descriptionAR
-              : lang === "en"
+              : resolvedLang === "en"
               ? descriptionEN
               : descriptionRU;
 
@@ -67,7 +72,7 @@ export default async function Page({
                   quality={60}
                   src={image}
                   alt={country}
-                  className="lg:h-96 w-full lg:w-1/2 object-cover rounded-3xl "
+                  className="lg:h-96 w-full lg:w-1/2 object-cover rounded-lg "
                 />
                 <div className="p-4 flex flex-col gap-3 lg:w-1/2">
                   <div className="p-4 flex flex-col h-full flex-grow justify-between gap-3 ">
@@ -81,7 +86,7 @@ export default async function Page({
                         quality={10}
                         src={icon}
                         alt={country}
-                        className="w-16 h-16 object-cover rounded-3xl "
+                        className="w-16 h-16 object-cover rounded-lg "
                       />
                     </div>
                   </div>

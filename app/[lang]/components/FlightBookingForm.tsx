@@ -75,7 +75,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             name="departure"
             value={formData.departure}
             onChange={handleChange}
-            className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+            className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
             required
           />
         </div>
@@ -93,7 +93,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             name="arrival"
             value={formData.arrival}
             onChange={handleChange}
-            className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+            className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
             required
           />
         </div>
@@ -111,7 +111,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
               id="outboundDate"
               selected={formData.outboundDate}
               onChange={(date) => handleDateChange("outboundDate", date)}
-              className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
+              className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
               placeholderText={
                 dic.currLang === "ar"
                   ? "اختر التاريخ"
@@ -138,7 +138,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
               id="returnDate"
               selected={formData.returnDate}
               onChange={(date) => handleDateChange("returnDate", date)}
-              className="block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
+              className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
               placeholderText={
                 dic.currLang === "ar"
                   ? "اختر التاريخ"
@@ -168,7 +168,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             name="numberOfAdults"
             value={formData.numberOfAdults}
             onChange={handleChange}
-            className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+            className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
             required
           />
         </div>
@@ -189,7 +189,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             name="numberOfChildren"
             value={formData.numberOfChildren}
             onChange={handleChange}
-            className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+            className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
           />
         </div>
         <div>
@@ -209,7 +209,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             name="numberOfInfants"
             value={formData.numberOfInfants}
             onChange={handleChange}
-            className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+            className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
           />
         </div>
         <div>
@@ -225,7 +225,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             name="travelClass"
             value={formData.travelClass}
             onChange={handleChange}
-            className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+            className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
           >
             <option value="economy">
               {dic.currLang === "ar"
@@ -247,7 +247,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
       <div className="flex justify-center mt-6">
         <button
           type="submit"
-          className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
         >
           {dic.currLang === "ar"
             ? "إرسال المعلومات"

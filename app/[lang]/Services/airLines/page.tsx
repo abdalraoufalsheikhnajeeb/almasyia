@@ -9,7 +9,8 @@ export default async function page({
 }: {
   params: { lang: Locale };
 }) {
-  const dic = await getDictionary(lang);
+    const resolvedLang = await lang;
+    const dic = await getDictionary(resolvedLang);
   return (
     <div className="pt-28 flex flex-col justify-center items-center py-4">
       <Slider dic={dic} title={dic.agents} data={agents} />

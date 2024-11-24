@@ -1,12 +1,11 @@
 import { Metadata } from "next";
-import { i18n, type Locale } from "../../i18n-config";
-import "./globals.css";
-import { getDictionary } from "../../get-dictionary";
-import Navbar from "./components/NavBar";
-import Footer from "./components/Footer";
 import { Tajawal } from "next/font/google";
-import Whatsapp from "./components/Whatsapp";
+import { i18n, Locale } from "../../i18n-config";
+import Footer from "./components/Footer";
+import Navbar from "./components/NavBar";
 import PhoneCall from "./components/PhoneCall";
+import Whatsapp from "./components/Whatsapp";
+import "./globals.css";
 
 // Import the Tajawal font with appropriate configurations
 const tajawal = Tajawal({
@@ -45,7 +44,6 @@ export const metadata: Metadata = {
     image: "https://www.alnujoomalmasiya.com/images/logo.webp",
   },
 };
-
 export default async function RootLayout({
   children,
   params,
@@ -53,20 +51,20 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { lang: Locale };
 }) {
-  const dic = await getDictionary(params.lang);
+  const langPromise = Promise.resolve(params.lang);
   const isArabic = params.lang === "ar";
 
   return (
     <html lang={params.lang}>
       <body
         dir={isArabic ? "rtl" : "ltr"}
-        className={`overflow-x-hidden text-primary bg3 ${tajawal.className}`}
+        className={`overflow-x-hidden text-primary bg-[#f4f8ff] ${tajawal.className}`}
       >
-        <Navbar lang={params.lang} />
+        <Navbar lang={langPromise} />
         <Whatsapp />
         <PhoneCall />
         <div className="mt-24">{children}</div>
-        <Footer params={{ lang: params.lang }} />
+        <Footer lang={params.lang} />
       </body>
     </html>
   );

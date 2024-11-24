@@ -4,12 +4,13 @@ import AnTitle from "../../components/AnTitle";
 import { getDictionary } from "../../../../get-dictionary";
 import { Locale } from "../../../../i18n-config";
 
-export default async function Page({
+export default async function page({
   params: { lang },
 }: {
   params: { lang: Locale };
 }) {
-  const dic = await getDictionary(lang);
+  const resolvedLang = await lang;
+  const dic = await getDictionary(resolvedLang);
   return (
     <div className="max-w-[95vw] mx-auto">
       <AnTitle title={dic.travelInsurance} />
@@ -29,7 +30,7 @@ export default async function Page({
           />
         </div>
         <div className="flex lg:w-1/3 w-full justify-center items-center">
-          <TravelInsuranceForm lang={lang} />
+          <TravelInsuranceForm lang={resolvedLang} />
         </div>
       </div>
     </div>

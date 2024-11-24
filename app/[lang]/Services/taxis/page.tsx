@@ -4,7 +4,7 @@ import TaxiDeliveryForm from "../../components/TaxiDeliveryForm";
 import { getDictionary } from "../../../../get-dictionary";
 import AnTitle from "../../components/AnTitle";
 
-export default async function Page({
+export default async function page({
   params: { lang },
 }: {
   params: { lang: Locale };

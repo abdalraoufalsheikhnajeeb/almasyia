@@ -97,7 +97,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
 
   return (
     <div className={`w-screen ${addClass}`}>
-      <div className="max-w-7xl mx-auto my-4 overflow-hidden  box">
+      <div className="max-w-7xl mx-auto my-4 overflow-hidden ">
         <div className="flex justify-center items-center gap-6">
           <AnTitle title={locationName} />
           <Image
@@ -153,7 +153,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
                     quality={60}
                     src={image}
                     alt={`Office ${index + 1}`}
-                    className="w-full h-64 object-cover shadow-lg rounded-2xl"
+                    className="w-full h-64 object-cover shadow-lg rounded-lg"
                   />
                 </div>
               ))}

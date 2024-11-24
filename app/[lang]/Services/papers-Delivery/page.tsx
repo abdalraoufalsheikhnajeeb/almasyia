@@ -4,7 +4,7 @@ import DeliveryForm from "../../components/DeliveryForm";
 import AnTitle from "../../components/AnTitle";
 import { getDictionary } from "../../../../get-dictionary";
 
-export default async function Page({
+export default async function page({
   params: { lang },
 }: {
   params: { lang: Locale };

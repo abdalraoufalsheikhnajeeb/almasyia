@@ -3,11 +3,12 @@ import { Locale } from "../../../../i18n-config";
 import HotelReservationForm from "../../components/HotelReservationForm";
 import AnTitle from "../../components/AnTitle";
 import { getDictionary } from "../../../../get-dictionary";
-export default async function Page({
-  params: { lang },
+export default async function page({
+  params,
 }: {
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }) {
+  const { lang } = await params;
   const dic = await getDictionary(lang);
   return (
     <div className="max-w-[95vw] mx-auto">

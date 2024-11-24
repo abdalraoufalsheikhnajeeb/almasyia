@@ -7,7 +7,8 @@ export default async function page({
 }: {
   params: { lang: Locale };
 }) {
-  const dic = await getDictionary(lang);
+    const resolvedLang = await lang;
+    const dic = await getDictionary(resolvedLang);
   return (
     <>
       <CountrySlider dic={dic} title={dic.ourTours}  subtitle={dic.ourToursText} data={countries} />

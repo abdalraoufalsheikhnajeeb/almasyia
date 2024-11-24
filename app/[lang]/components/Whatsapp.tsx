@@ -31,13 +31,13 @@ export default function Whatsapp() {
       `}</style>
 
       <div
-        className="animate-bounce fixed bottom-4 end-4 cursor-pointer z-50"
+        className=" fixed bottom-4 end-4 cursor-pointer z-50"
         onClick={toggleDropdown}
         ref={dropdownRef}
       >
         <div
           className={`rounded-full ${
-            !isOpen && "animate-bounce animate-ripple"
+            !isOpen && " animate-ripple"
           } p-2 lg:p-4 w-12 h-12 lg:w-20 lg:h-20 flex-shrink-0 flex justify-center items-center bg-[#25d366]`}
         >
           <Image

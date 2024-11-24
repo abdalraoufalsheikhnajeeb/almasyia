@@ -56,7 +56,7 @@ export default function VisaForm({
     <div className="flex flex-col items-center mt-12">
       <form
         onSubmit={handleSubmit}
-        className="space-y-6 w-96 p-6 flex flex-col backdrop-blur-sm border-2 border-white rounded-xl bg-white bg-opacity-50 box"
+        className="space-y-6 w-96 p-6 flex flex-col backdrop-blur-sm border-2 border-white rounded-lg bg-white bg-opacity-50 box"
       >
         <div>
           <label className="block text-lg  text-gray-900">
@@ -71,7 +71,7 @@ export default function VisaForm({
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+            className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
             required
           />
         </div>
@@ -88,7 +88,7 @@ export default function VisaForm({
             name="requiredVisa"
             value={formData.requiredVisa}
             onChange={handleChange}
-            className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+            className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
             required
           />
         </div>
@@ -105,7 +105,7 @@ export default function VisaForm({
             name="numberOfPeople"
             value={formData.numberOfPeople}
             onChange={handleChange}
-            className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+            className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
             required
           />
         </div>
@@ -139,14 +139,14 @@ export default function VisaForm({
               name="numberOfChildren"
               value={formData.numberOfChildren}
               onChange={handleChange}
-              className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+              className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
               required
             />
           </div>
         )}
         <button
           type="submit"
-          className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg  rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg  rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
         >
           {dic.currLang === "ar"
             ? "إرسال المعلومات"
