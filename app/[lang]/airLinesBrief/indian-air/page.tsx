@@ -95,7 +95,7 @@ const AirIndia = async ({ params: { lang } }: { params: { lang: Locale } }) => {
           <table className="w-fit text-start text-gray-700">
             <tbody>
               <tr className="border-b">
-                <td className="font-bold py-2 pe-8">Code "IATA"</td>
+                <td className="font-bold py-2 pe-8">Code IATA</td>
                 <td className="py-2">AI</td>
               </tr>
               <tr className="border-b">

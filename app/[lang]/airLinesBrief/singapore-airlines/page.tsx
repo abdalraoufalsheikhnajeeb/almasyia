@@ -26,12 +26,12 @@ const page = async ({ params }: { params: { lang: Locale } }) => {
           <h2 className="text-2xl font-bold mb-2">History</h2>
           <p className="text-gray-700 mb-4">
             Established as Malayan Airways in 1947, Singapore Airlines has grown
-            to become one of the world's leading airlines. The airline is
+            to become one of the worlds leading airlines. The airline is
             renowned for its commitment to service excellence and innovation.
           </p>
           <h2 className="text-2xl font-bold mb-2">Fleet</h2>
           <p className="text-gray-700 mb-4">
-            Singapore Airlines' fleet includes a mix of Boeing and Airbus
+            Singapore Airlines fleet includes a mix of Boeing and Airbus
             aircraft, with models such as the Airbus A350, Boeing 787
             Dreamliner, and Airbus A380. The airline continually updates its
             fleet to maintain high standards of safety and comfort.
@@ -60,7 +60,7 @@ const page = async ({ params }: { params: { lang: Locale } }) => {
           </p>
           <h2 className="text-2xl font-bold mb-2">Frequent Flyer Program</h2>
           <p className="text-gray-700 mb-4">
-            Singapore Airlines' frequent flyer program, KrisFlyer, allows
+            Singapore Airlines frequent flyer program, KrisFlyer, allows
             members to earn miles with every flight and redeem them for a
             variety of rewards, including free flights, seat upgrades, and
             additional services.
@@ -98,7 +98,7 @@ const page = async ({ params }: { params: { lang: Locale } }) => {
           <table className="w-fit text-start text-gray-700">
             <tbody>
               <tr className="border-b">
-                <td className="font-bold py-2 pe-8">"IATA" Code</td>
+                <td className="font-bold py-2 pe-8">IATA Code</td>
                 <td className="py-2">SQ</td>
               </tr>
               <tr className="border-b">
@@ -228,7 +228,7 @@ const page = async ({ params }: { params: { lang: Locale } }) => {
           <table className="w-fit text-start text-gray-700">
             <tbody>
               <tr className="border-b">
-                <td className="font-bold py-2 pe-8">رمز "IATA"</td>
+                <td className="font-bold py-2 pe-8">رمز IATA</td>
                 <td className="py-2">SQ</td>
               </tr>
               <tr className="border-b">

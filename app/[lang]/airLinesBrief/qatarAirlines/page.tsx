@@ -36,7 +36,7 @@ const QatarAirways = async ({
           </p>
           <h2 className="text-2xl font-bold mb-2">Fleet</h2>
           <p className="text-gray-700 mb-4">
-            The airline's fleet includes a mix of modern Airbus and Boeing
+            The airlines fleet includes a mix of modern Airbus and Boeing
             aircraft, such as the Airbus A350, Airbus A380, Boeing 777, and
             Boeing 787 Dreamliner. Qatar Airways is renowned for maintaining a
             young and technologically advanced fleet.
@@ -65,7 +65,7 @@ const QatarAirways = async ({
           </p>
           <h2 className="text-2xl font-bold mb-2">Frequent Flyer Program</h2>
           <p className="text-gray-700 mb-4">
-            Qatar Airways' frequent flyer program, Privilege Club, rewards loyal
+            Qatar Airways frequent flyer program, Privilege Club, rewards loyal
             customers with Qmiles that can be redeemed for flights, upgrades,
             and other benefits. Members enjoy perks such as priority check-in,
             extra baggage allowance, and access to exclusive lounges.
@@ -100,7 +100,7 @@ const QatarAirways = async ({
           <table className="w-fit text-start text-gray-700">
             <tbody>
               <tr className="border-b">
-                <td className="font-bold py-2 pe-8">Code "IATA"</td>
+                <td className="font-bold py-2 pe-8">Code IATA</td>
                 <td className="py-2">QR</td>
               </tr>
               <tr className="border-b">
@@ -242,7 +242,7 @@ const QatarAirways = async ({
           <table className="w-fit text-start text-gray-700">
             <tbody>
               <tr className="border-b">
-                <td className="font-bold py-2 pe-8">رمز "IATA"</td>
+                <td className="font-bold py-2 pe-8">رمز IATA</td>
                 <td className="py-2">QR</td>
               </tr>
               <tr className="border-b">
@@ -392,7 +392,7 @@ const QatarAirways = async ({
           <table className="w-fit text-start text-gray-700">
             <tbody>
               <tr className="border-b">
-                <td className="font-bold py-2 pe-8">Код "IATA"</td>
+                <td className="font-bold py-2 pe-8">Код IATA</td>
                 <td className="py-2">QR</td>
               </tr>
               <tr className="border-b">

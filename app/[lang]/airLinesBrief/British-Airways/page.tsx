@@ -99,7 +99,7 @@ const page = async ({ params }: { params: { lang: Locale } }) => {
           <table className="w-fit text-start text-gray-700">
             <tbody>
               <tr className="border-b">
-                <td className="font-bold py-2 pe-8">"IATA" Code</td>
+                <td className="font-bold py-2 pe-8">IATA Code</td>
                 <td className="py-2">BA</td>
               </tr>
               <tr className="border-b">
@@ -230,7 +230,7 @@ const page = async ({ params }: { params: { lang: Locale } }) => {
           <table className="w-fit text-start text-gray-700">
             <tbody>
               <tr className="border-b">
-                <td className="font-bold py-2 pe-8">رمز "IATA"</td>
+                <td className="font-bold py-2 pe-8">رمز IATA</td>
                 <td className="py-2">BA</td>
               </tr>
               <tr className="border-b">

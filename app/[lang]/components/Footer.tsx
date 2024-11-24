@@ -25,8 +25,8 @@ const SocialLink = ({ title, href, src, alt}: LinkProps) => (
 );
 
 export default async function Footer({ lang }: { lang: Locale }) {
-    const resolvedLang = await lang;
-    const dic = await getDictionary(resolvedLang);
+
+    const dic = await getDictionary(lang);
 
 
   const links = [

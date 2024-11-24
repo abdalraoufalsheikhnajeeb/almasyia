@@ -29,12 +29,12 @@ const S7Airlines = async ({
           <h2 className="text-2xl font-bold mb-2">History</h2>
           <p className="text-gray-700 mb-4">
             S7 Airlines was founded in 1957 and has grown to become one of
-            Russia's leading airlines. The airline joined the oneworld alliance
+            Russias leading airlines. The airline joined the oneworld alliance
             in 2010, enhancing its global reach and connectivity.
           </p>
           <h2 className="text-2xl font-bold mb-2">Fleet</h2>
           <p className="text-gray-700 mb-4">
-            The airline's fleet includes a mix of modern Airbus and Boeing
+            The airlines fleet includes a mix of modern Airbus and Boeing
             aircraft, such as the Airbus A320, Airbus A321, and Boeing 737. S7
             Airlines is known for maintaining a young and efficient fleet.
           </p>
@@ -61,7 +61,7 @@ const S7Airlines = async ({
           </p>
           <h2 className="text-2xl font-bold mb-2">Frequent Flyer Program</h2>
           <p className="text-gray-700 mb-4">
-            S7 Airlines' frequent flyer program, S7 Priority, rewards loyal
+            S7 Airlines frequent flyer program, S7 Priority, rewards loyal
             customers with miles that can be redeemed for flights, upgrades, and
             other benefits. Members enjoy perks such as priority check-in, extra
             baggage allowance, and access to exclusive lounges.
@@ -125,7 +125,7 @@ const S7Airlines = async ({
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Slogan</td>
-                  <td className="py-2">"Flying in the Name of Love"</td>
+                  <td className="py-2">Flying in the Name of Love</td>
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Alliances</td>
@@ -271,7 +271,7 @@ const S7Airlines = async ({
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">الشعار</td>
-                  <td className="py-2">"الطيران باسم الحب"</td>
+                  <td className="py-2">الطيران باسم الحب</td>
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">التحالفات</td>
@@ -434,7 +434,7 @@ const S7Airlines = async ({
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Слоган</td>
-                  <td className="py-2">"Летаем во имя любви"</td>
+                  <td className="py-2">Летаем во имя любви</td>
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Альянсы</td>

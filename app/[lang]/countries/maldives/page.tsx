@@ -104,7 +104,7 @@ const page = ({ params: { lang } }: { params: { lang: Locale } }) => {
               <>
                 <li>Scuba Diving</li>
                 <li>Sunset Watching</li>
-                <li>Couple's Spa</li>
+                <li>Couples Spa</li>
                 <li>Swimming in the Clear Lagoon Waters</li>
                 <li>Fishing with Locals</li>
                 <li>Excursions to Local Islands</li>

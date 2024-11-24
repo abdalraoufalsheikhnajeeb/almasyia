@@ -103,7 +103,7 @@ const MiddleEastAirlines = async ({
           <table className="w-fit text-start text-gray-700">
             <tbody>
               <tr className="border-b">
-                <td className="font-bold py-2 pe-8">"IATA" Code</td>
+                <td className="font-bold py-2 pe-8">IATA Code</td>
                 <td className="py-2">ME</td>
               </tr>
               <tr className="border-b">
@@ -232,7 +232,7 @@ const MiddleEastAirlines = async ({
           <table className="w-fit text-start text-gray-700">
             <tbody>
               <tr className="border-b">
-                <td className="font-bold py-2 pe-8">رمز "IATA"</td>
+                <td className="font-bold py-2 pe-8">رمز IATA</td>
                 <td className="py-2">ME</td>
               </tr>
               <tr className="border-b">
@@ -370,7 +370,7 @@ const MiddleEastAirlines = async ({
           <table className="w-fit text-start text-gray-700">
             <tbody>
               <tr className="border-b">
-                <td className="font-bold py-2 pe-8">Код "IATA"</td>
+                <td className="font-bold py-2 pe-8">Код IATA</td>
                 <td className="py-2">ME</td>
               </tr>
               <tr className="border-b">

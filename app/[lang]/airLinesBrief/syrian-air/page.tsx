@@ -32,7 +32,7 @@ const page = async ({ params }: { params: { lang: Locale } }) => {
           </p>
           <h2 className="text-2xl font-bold mb-2">Fleet</h2>
           <p className="text-gray-700 mb-4">
-            The airline's fleet includes a mix of Airbus and Boeing aircraft.
+            The airlines fleet includes a mix of Airbus and Boeing aircraft.
             Syrian Air maintains its fleet to ensure safety and comfort for its
             passengers, with regular maintenance and upgrades.
           </p>
@@ -120,7 +120,7 @@ const page = async ({ params }: { params: { lang: Locale } }) => {
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Slogan</td>
-                  <td className="py-2">"Syrian Wings"</td>
+                  <td className="py-2">Syrian Wings</td>
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Alliances</td>
@@ -268,7 +268,7 @@ const page = async ({ params }: { params: { lang: Locale } }) => {
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">الشعار</td>
-                  <td className="py-2">"أجنحة سورية"</td>
+                  <td className="py-2">أجنحة سورية </td>
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">التحالفات</td>
@@ -427,7 +427,7 @@ const page = async ({ params }: { params: { lang: Locale } }) => {
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Слоган</td>
-                  <td className="py-2">"Сирийские крылья"</td>
+                  <td className="py-2">Сирийские крылья</td>
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Альянсы</td>

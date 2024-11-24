@@ -35,7 +35,7 @@ const TurkishAirlines = async ({
           </p>
           <h2 className="text-2xl font-bold mb-2">Fleet</h2>
           <p className="text-gray-700 mb-4">
-            The airline's fleet includes a mix of modern Airbus and Boeing
+            The airlines fleet includes a mix of modern Airbus and Boeing
             aircraft, such as the Airbus A330, Airbus A350, Boeing 777, and
             Boeing 787 Dreamliner. Turkish Airlines is known for maintaining a
             young and efficient fleet.
@@ -64,7 +64,7 @@ const TurkishAirlines = async ({
           </p>
           <h2 className="text-2xl font-bold mb-2">Frequent Flyer Program</h2>
           <p className="text-gray-700 mb-4">
-            Turkish Airlines' frequent flyer program, Miles&Smiles, rewards
+            Turkish Airlines frequent flyer program, Miles&Smiles, rewards
             loyal customers with miles that can be redeemed for flights,
             upgrades, and other benefits. Members enjoy perks such as priority
             check-in, extra baggage allowance, and access to exclusive lounges.
