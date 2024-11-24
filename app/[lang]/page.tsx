@@ -1,14 +1,18 @@
-import Image from "next/image";
-import Link from "next/link";
-import { getDictionary } from "../../get-dictionary";
-import { Locale } from "../../i18n-config";
-import AnTitle from "./components/AnTitle";
-import Locations from "./components/Locations";
-import { ourServecis } from "./data";
+import Image from 'next/image';
+import Link from 'next/link';
+import { getDictionary } from '../../get-dictionary';
+import { Locale } from '../../i18n-config';
+import AnTitle from './components/AnTitle';
+import Locations from './components/Locations';
+import { ourServecis } from './data';
 
-const page = async ({ lang }: { lang: Promise<Locale> }) => {
-  const resolvedLang = await lang;
-  const dic = await getDictionary(resolvedLang);
+const Page = async ({
+  params,
+}: {
+  params: Promise<{ lang: Locale }>;
+}) => {
+  const { lang } = await params;
+  const dic = await getDictionary(lang);
 
   return (
     <>
@@ -17,7 +21,7 @@ const page = async ({ lang }: { lang: Promise<Locale> }) => {
         quality={60}
         src="/images/hero.webp"
         className={`absolute top-0 -z-10 lg:object-fill h-[90dvh] ${
-          resolvedLang === "ar" && "-scale-x-[1]"
+          lang === 'ar' && '-scale-x-[1]'
         } w-screen`}
         alt="arrow"
         width={1280}
@@ -44,16 +48,16 @@ const page = async ({ lang }: { lang: Promise<Locale> }) => {
           <div className="max-w-7xl flex flex-wrap justify-center items-center gap-8 px-4 lg:px-12 pt-4">
             {ourServecis.map((card) => {
               let title;
-              if (dic.currLang === "ar") {
+              if (dic.currLang === 'ar') {
                 title = card.titlear;
-              } else if (dic.currLang === "ru") {
+              } else if (dic.currLang === 'ru') {
                 title = card.titleru;
               } else {
                 title = card.titleen;
               }
               return (
                 <Link href={`/${lang}/Services/${card.route}`} key={card.id}>
-                  <div className="max-w-[90vw] relative w-80   flex flex-col justify-center items-center   transition-transform duration-300 box hover:scale-105 hover:shadow-sm">
+                  <div className="max-w-[90vw] relative w-80 flex flex-col justify-center items-center transition-transform duration-300 box hover:scale-105 hover:shadow-sm">
                     <Image
                       loading="lazy"
                       quality={60}
@@ -76,7 +80,7 @@ const page = async ({ lang }: { lang: Promise<Locale> }) => {
                           src="/images/arrow.svg"
                           alt="arrow"
                           className={`ms-2 h-8 w-8 aspect-square transition-transform duration-300 hover:translate-x-1 ${
-                            dic.currLang === "ar" ? "rotate-180" : ""
+                            dic.currLang === 'ar' ? 'rotate-180' : ''
                           }`}
                         />
                       </span>
@@ -89,7 +93,7 @@ const page = async ({ lang }: { lang: Promise<Locale> }) => {
         </section>
         <Locations
           params={{
-            lang: resolvedLang,
+            lang: lang,
           }}
         />
         <video controls className="w-full max-w-[90vw] mt-4">
@@ -100,4 +104,5 @@ const page = async ({ lang }: { lang: Promise<Locale> }) => {
     </>
   );
 };
-export default page
+
+export default Page;
