@@ -1,5 +1,5 @@
 "use client";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Locale } from "../../../../i18n-config";
 import AnTitle from "../../components/AnTitle";
 import { timeZones } from "../../data";
@@ -19,11 +19,13 @@ const getTime = (tz: string) => {
 };
 
 const WorldClock = ({ params }: { params: Promise<{ lang: Locale }> }) => {
-  const { lang } = use(params); // Unwrap the params promise
-
+  const [lang, setLang] = useState<Locale | null>(null);
   const [times, setTimes] = useState<Time>({});
 
   useEffect(() => {
+    // Resolve the params promise to get the language
+    params.then(({ lang }) => setLang(lang));
+
     const updateTime = () => {
       const newTimes: Time = {};
       timeZones.forEach(({ nameEN, tz }) => {
@@ -35,7 +37,12 @@ const WorldClock = ({ params }: { params: Promise<{ lang: Locale }> }) => {
     updateTime();
     const interval = setInterval(updateTime, 1000); // Update every second
     return () => clearInterval(interval);
-  }, []);
+  }, [params]);
+
+  if (!lang) {
+    // Optionally render a loading state while lang is being resolved
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="container mx-auto px-4 lg:px-16 pt-28">
