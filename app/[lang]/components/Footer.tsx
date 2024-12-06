@@ -1,3 +1,7 @@
+// app/[lang]/components/Footer.tsx
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Locale } from "../../../i18n-config";
 import { getDictionary } from "../../../get-dictionary";
@@ -24,8 +28,18 @@ const SocialLink = ({ title, href, src, alt }: LinkProps) => (
   </a>
 );
 
-export default async function Footer({ lang }: { lang: Locale }) {
-  const dic = await getDictionary(lang);
+const Footer = ({ lang }: { lang: Locale }) => {
+  const [dic, setDic] = useState<any>(null);
+
+  useEffect(() => {
+    const fetchDictionary = async () => {
+      const dictionary = await getDictionary(lang);
+      setDic(dictionary);
+    };
+    fetchDictionary();
+  }, [lang]);
+
+  if (!dic) return null; // or a loading indicator
 
   const links = [
     {
@@ -70,4 +84,6 @@ export default async function Footer({ lang }: { lang: Locale }) {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
