@@ -23,9 +23,8 @@ const Locations: React.FC<LocationsProps> = ({ params: { lang } }) => {
   }, [lang]);
 
   if (!dictionary) {
-    return <div>Loading...</div>; // Optionally render a loading state
+    return <div>Loading...</div>;
   }
-
   const uaeLocation = {
     flagSrc: "/images/emirate-flag.svg",
     images: [
