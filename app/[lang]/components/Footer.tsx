@@ -10,7 +10,7 @@ interface LinkProps {
   quality?: number;
 }
 
-const SocialLink = ({ title, href, src, alt}: LinkProps) => (
+const SocialLink = ({ title, href, src, alt }: LinkProps) => (
   <a title={title} target="_blank" href={href} rel="noopener noreferrer">
     <Image
       loading="lazy"
@@ -25,9 +25,7 @@ const SocialLink = ({ title, href, src, alt}: LinkProps) => (
 );
 
 export default async function Footer({ lang }: { lang: Locale }) {
-
-    const dic = await getDictionary(lang);
-
+  const dic = await getDictionary(lang);
 
   const links = [
     {
