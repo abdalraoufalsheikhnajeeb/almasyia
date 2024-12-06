@@ -1,17 +1,13 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { getDictionary } from '../../get-dictionary';
-import { Locale } from '../../i18n-config';
-import AnTitle from './components/AnTitle';
-import Locations from './components/Locations';
-import { ourServecis } from './data';
+import Image from "next/image";
+import Link from "next/link";
+import { getDictionary } from "../../get-dictionary";
+import { Locale } from "../../i18n-config";
+import AnTitle from "./components/AnTitle";
+import Locations from "./components/Locations";
+import { ourServecis } from "./data";
 
-const Page = async ({
-  params,
-}: {
-  params: Promise<{ lang: Locale }>;
-}) => {
-  const { lang } = await params;
+const Page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
+  const { lang } = await params; // Await the params promise to extract lang
   const dic = await getDictionary(lang);
 
   return (
@@ -21,7 +17,7 @@ const Page = async ({
         quality={60}
         src="/images/hero.webp"
         className={`absolute top-0 -z-10 lg:object-fill h-[90dvh] ${
-          lang === 'ar' && '-scale-x-[1]'
+          lang === "ar" && "-scale-x-[1]"
         } w-screen`}
         alt="arrow"
         width={1280}
@@ -48,9 +44,9 @@ const Page = async ({
           <div className="max-w-7xl flex flex-wrap justify-center items-center gap-8 px-4 lg:px-12 pt-4">
             {ourServecis.map((card) => {
               let title;
-              if (dic.currLang === 'ar') {
+              if (dic.currLang === "ar") {
                 title = card.titlear;
-              } else if (dic.currLang === 'ru') {
+              } else if (dic.currLang === "ru") {
                 title = card.titleru;
               } else {
                 title = card.titleen;
@@ -80,7 +76,7 @@ const Page = async ({
                           src="/images/arrow.svg"
                           alt="arrow"
                           className={`ms-2 h-8 w-8 aspect-square transition-transform duration-300 hover:translate-x-1 ${
-                            dic.currLang === 'ar' ? 'rotate-180' : ''
+                            dic.currLang === "ar" ? "rotate-180" : ""
                           }`}
                         />
                       </span>

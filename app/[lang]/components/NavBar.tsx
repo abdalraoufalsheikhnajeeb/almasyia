@@ -5,7 +5,8 @@ import { Locale } from "../../../i18n-config";
 import { getDictionary } from "../../../get-dictionary";
 
 const Navbar = async ({ lang }: { lang: Promise<Locale> }) => {
-  const dic = await getDictionary(await lang);
+  const resolvedLang = await lang; 
+  const dic = await getDictionary(resolvedLang);
 
   const NavItem = ({ href, label }: { href: string; label: string }) => (
     <Link
@@ -18,7 +19,7 @@ const Navbar = async ({ lang }: { lang: Promise<Locale> }) => {
 
   return (
     <nav className="bg-white h-20 w-full px-[5vw] py-2 flex items-center top-0 justify-between z-[100] fixed">
-      <Link href={`/${lang}`}>
+      <Link href={`/${resolvedLang}`}>
         <Image
           quality={60}
           className="hidden md:flex md:flex-shrink-0 h-16 w-24 object-cover"
@@ -31,9 +32,9 @@ const Navbar = async ({ lang }: { lang: Promise<Locale> }) => {
       </Link>
 
       <div className="flex gap-6">
-        <NavItem href={`/${lang}`} label={dic?.Home} />
-        <NavItem href={`/${lang}/about-us`} label={dic?.aboutUs} />
-        <NavItem href={`/${lang}/WorldClock`} label={dic.worldClock} />
+        <NavItem href={`/${resolvedLang}`} label={dic?.Home} />
+        <NavItem href={`/${resolvedLang}/about-us`} label={dic?.aboutUs} />
+        <NavItem href={`/${resolvedLang}/WorldClock`} label={dic.worldClock} />
       </div>
 
       <div className="flex items-center h-14 gap-4">

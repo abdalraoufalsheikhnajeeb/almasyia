@@ -58,7 +58,7 @@ export default async function RootLayout({
     <html lang={(await params)?.lang}>
       <body
         dir={isArabic ? "rtl" : "ltr"}
-        className={`overflow-x-hidden text-primary bg-[#f4f8ff] ${tajawal.className}`}
+        className={`overflow-x-hidden text-primary bg-white ${tajawal.className}`}
       >
         <Navbar lang={langPromise} />
         <Whatsapp />
