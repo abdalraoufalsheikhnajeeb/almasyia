@@ -18,7 +18,7 @@
 .box {
   border-radius: 1rem;
   padding: 1rem 2rem;
-  background-color:white;
+  background-color:rgba(59, 134, 255,0.2);
   max-width: 85rem;
   margin-inline: auto;
   margin-bottom: 1.5rem;
