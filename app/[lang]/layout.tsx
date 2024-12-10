@@ -46,11 +46,12 @@ export const metadata: Metadata = {
 };
 export default async function RootLayout({
   children,
-  params,
+  params: paramsPromise,
 }: {
   children: React.ReactNode;
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }) {
+  const params = await paramsPromise;
   const lang = params.lang;
   const isArabic = lang === "ar";
 

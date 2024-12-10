@@ -6,8 +6,11 @@ import AnTitle from "./components/AnTitle";
 import Locations from "./components/Locations";
 import { ourServecis } from "./data";
 
+// No need to import Whatsapp or PhoneCall components here
+// since we are only using their styling/idea, not embedding them.
+
 const Page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
-  const { lang } = await params; // Await the params promise to extract lang
+  const { lang } = await params;
   const dic = await getDictionary(lang);
 
   return (
@@ -23,7 +26,6 @@ const Page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
         width={1280}
         height={720}
       />
-      <div className="absolute -top-0 -z-[1] h-[95dvh] w-screen bgGR" />
       <main className="max-w-[90vw] mx-auto flex items-center flex-col gap-8">
         <header className="h-[90dvh] gap-4 flex flex-col items-center justify-center lg:items-start lg:justify-start w-full">
           <Image
@@ -36,8 +38,44 @@ const Page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
             className="w-52 lg:w-80 object-cover"
           />
           <h1 className="text-3xl max-w-3xl font-bold text-primary text-center lg:text-start">
-            {dic?.homeText}
+            {dic?.contactUsTitle}
           </h1>
+          {/* Add two inline buttons here inspired by Whatsapp and PhoneCall styles */}
+          <div className="flex gap-4 mt-4">
+            {/* WhatsApp Button */}
+            <Link href="https://wa.me/971545866066" target="_blank">
+              <div
+                className="rounded-full p-3 bg-[#25d366] hover:scale-105 transition-transform cursor-pointer flex items-center justify-center"
+                title="Contact us via WhatsApp"
+              >
+                <Image
+                  priority
+                  quality={1}
+                  width={24}
+                  height={24}
+                  alt="WhatsApp Icon"
+                  src="/images/whats.svg"
+                />
+              </div>
+            </Link>
+
+            {/* Phone Call Button */}
+            <Link href="tel:+971545866066" target="_blank">
+              <div
+                className="rounded-full p-3 bg-[#3b86ff] hover:scale-105 transition-transform cursor-pointer flex items-center justify-center"
+                title="Call us"
+              >
+                <Image
+                  priority
+                  quality={1}
+                  width={24}
+                  height={24}
+                  alt="Phone Icon"
+                  src="/images/phone_ic.svg"
+                />
+              </div>
+            </Link>
+          </div>
         </header>
         <section className="w-screen flex flex-col items-center">
           <AnTitle title={dic?.someProjects} />

@@ -379,7 +379,7 @@ export const ourServecis = [
 export const visas = [
   {
     countryAR: "الإمارات",
-    countryEN: "UAE/",
+    countryEN: "UAE",
     countryRU: "ОАЭ",
     durationAR: "يتوفر 🔹شهر 🔹 شهرين",
     durationEN: "Available for 🔹1 month 🔹 2 months",
