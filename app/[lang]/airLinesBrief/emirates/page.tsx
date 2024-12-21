@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Locale } from "../../../../i18n-config";
 
 const Emirates = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
-
   const { lang } = await params;
   if (lang === "en") {
     return (
@@ -88,9 +87,8 @@ const Emirates = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           <h2 className="text-2xl font-bold mb-2">Contact Information</h2>
           <p className="text-gray-700">
             For more information or to book a flight, visit the official
-            Emirates website or contact their customer service at +971 600
-            555555. Follow them on social media for the latest updates and
-            promotions.
+            Emirates website or contact their customer service at +971545866066.
+            Follow them on social media for the latest updates and promotions.
           </p>
           <div>
             <h2 className="text-2xl font-bold mb-4">Airline Information</h2>
@@ -137,10 +135,10 @@ const Emirates = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
                   <td className="py-2">
                     <a
                       target="_blank"
-                      href="tel:+971600555555"
+                      href="tel:+971545866066"
                       className="text-blue-500"
                     >
-                      +971 600 555 555
+                      +971545866066
                     </a>
                   </td>
                 </tr>
@@ -244,7 +242,7 @@ const Emirates = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           <h2 className="text-2xl font-bold mb-2">معلومات الاتصال</h2>
           <p className="text-gray-700">
             لمزيد من المعلومات أو لحجز رحلة، قم بزيارة الموقع الرسمي لطيران
-            الإمارات أو اتصل بخدمة العملاء على الرقم +971 600 555555. تابعهم على
+            الإمارات أو اتصل بخدمة العملاء على الرقم +971545866066 تابعهم على
             وسائل التواصل الاجتماعي للحصول على آخر التحديثات والعروض الترويجية.
           </p>
 
@@ -289,10 +287,10 @@ const Emirates = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
                   <td className="py-2">
                     <a
                       target="_blank"
-                      href="tel:+971600555555"
+                      href="tel:+971545866066"
                       className="text-blue-500"
                     >
-                      +971 600 555 555
+                      +971545866066
                     </a>
                   </td>
                 </tr>
@@ -404,7 +402,7 @@ const Emirates = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           <p className="text-gray-700">
             Для получения дополнительной информации или бронирования рейса
             посетите официальный веб-сайт Emirates или свяжитесь с их службой
-            поддержки клиентов по телефону +971 600 555555. Следите за ними в
+            поддержки клиентов по телефону +971545866066 Следите за ними в
             социальных сетях для получения последних новостей и акций.
           </p>
 
@@ -457,10 +455,10 @@ const Emirates = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
                   <td className="py-2">
                     <a
                       target="_blank"
-                      href="tel:+971600555555"
+                      href="tel:+971545866066"
                       className="text-blue-500"
                     >
-                      +971 600 555 555
+                      +971545866066
                     </a>
                   </td>
                 </tr>

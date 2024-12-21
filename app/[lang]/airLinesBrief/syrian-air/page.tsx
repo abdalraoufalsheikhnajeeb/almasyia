@@ -133,10 +133,10 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
                   <td className="py-2">
                     <a
                       target="_blank"
-                      href="tel:+963112240774"
+                      href="tel:+971545866066"
                       className="text-blue-500"
                     >
-                      +963 11 224 0774
+                    +971545866066
                     </a>
                   </td>
                 </tr>
@@ -279,10 +279,10 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
                   <td className="py-2">
                     <a
                       target="_blank"
-                      href="tel:+963112240774"
+                      href="tel:+971545866066"
                       className="text-blue-500"
                     >
-                      +963 11 224 0774
+                    +971545866066
                     </a>
                   </td>
                 </tr>
@@ -440,10 +440,10 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
                   <td className="py-2">
                     <a
                       target="_blank"
-                      href="tel:+963112240774"
+                      href="tel:+971545866066"
                       className="text-blue-500"
                     >
-                      +963 11 224 0774
+                      +971545866066
                     </a>
                   </td>
                 </tr>

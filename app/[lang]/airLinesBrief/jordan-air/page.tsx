@@ -93,9 +93,9 @@ const RoyalJordanian = async ({
           <h2 className="text-2xl font-bold mb-2">Contact Information</h2>
           <p className="text-gray-700">
             For more information or to book a flight, visit the official Royal
-            Jordanian website or contact their customer service at +962 6 510
-            0000. Follow them on social media for the latest updates and
-            promotions.
+            Jordanian website or contact their customer service at
+            +971545866066. Follow them on social media for the latest updates
+            and promotions.
           </p>
 
           <div>
@@ -231,7 +231,7 @@ const RoyalJordanian = async ({
           <h2 className="text-2xl font-bold mb-2">معلومات الاتصال</h2>
           <p className="text-gray-700">
             لمزيد من المعلومات أو لحجز رحلة، قم بزيارة الموقع الرسمي للخطوط
-            الملكية الأردنية أو اتصل بخدمة العملاء على الرقم +962 6 510 0000.
+            الملكية الأردنية أو اتصل بخدمة العملاء على الرقم +971545866066.
             تابعهم على وسائل التواصل الاجتماعي للحصول على أحدث التحديثات
             والعروض.
           </p>
@@ -376,7 +376,7 @@ const RoyalJordanian = async ({
           <p className="text-gray-700">
             Для получения дополнительной информации или бронирования рейса
             посетите официальный сайт Royal Jordanian или свяжитесь с их службой
-            поддержки клиентов по телефону +962 6 510 0000. Следите за ними в
+            поддержки клиентов 971545866066. Следите за ними в
             социальных сетях, чтобы получать последние обновления и акции.
           </p>
 

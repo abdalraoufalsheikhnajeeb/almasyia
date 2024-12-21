@@ -88,7 +88,7 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           <h2 className="text-2xl font-bold mb-2">Contact Information</h2>
           <p className="text-gray-700">
             For more information or to book a flight, visit the official Air
-            Arabia website or contact their customer service at +971 6 558 0000.
+            Arabia website or contact their customer service at +971545866066.
             Follow them on social media for the latest updates and promotions.
           </p>
 
@@ -218,7 +218,7 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           <h2 className="text-2xl font-bold mb-2">معلومات الاتصال</h2>
           <p className="text-gray-700">
             لمزيد من المعلومات أو لحجز رحلة، قم بزيارة الموقع الرسمي للعربية
-            للطيران أو اتصل بخدمة العملاء على +971 6 558 0000. تابعهم على وسائل
+            للطيران أو اتصل بخدمة العملاء على +971545866066. تابعهم على وسائل
             التواصل الاجتماعي للحصول على أحدث التحديثات والعروض.
           </p>
 
@@ -357,7 +357,7 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           <p className="text-gray-700">
             Для получения дополнительной информации или бронирования рейса
             посетите официальный веб-сайт Эйр Арабии или свяжитесь с их службой
-            поддержки клиентов по телефону +971 6 558 0000. Следите за ними в
+            поддержки клиентов по телефону +971545866066. Следите за ними в
             социальных сетях для получения последних новостей и акций.
           </p>
           <h2 className="text-2xl font-bold mb-4">

@@ -92,9 +92,8 @@ const PegasusAirlines = async ({
           <h2 className="text-2xl font-bold mb-2">Contact Information</h2>
           <p className="text-gray-700">
             For more information or to book a flight, visit the official Pegasus
-            Airlines website or contact their customer service at +90 850 250 67
-            02. Follow them on social media for the latest updates and
-            promotions.
+            Airlines website or contact their customer service at +971545866066.
+            Follow them on social media for the latest updates and promotions.
           </p>
 
           <div>
@@ -228,7 +227,7 @@ const PegasusAirlines = async ({
           <h2 className="text-2xl font-bold mb-2">معلومات الاتصال</h2>
           <p className="text-gray-700">
             لمزيد من المعلومات أو لحجز رحلة، قم بزيارة الموقع الرسمي لطيران
-            بيجاسوس أو اتصل بخدمة العملاء على الرقم +90 850 250 67 02. تابعهم
+            بيجاسوس أو اتصل بخدمة العملاء على الرقم +971545866066. تابعهم
             على وسائل التواصل الاجتماعي للحصول على أحدث التحديثات والعروض.
           </p>
 
@@ -373,7 +372,7 @@ const PegasusAirlines = async ({
           <p className="text-gray-700">
             Для получения дополнительной информации или бронирования рейса
             посетите официальный сайт Pegasus Airlines или свяжитесь с их
-            службой поддержки клиентов по телефону +90 850 250 67 02. Следите за
+            службой поддержки клиентов по телефону +971545866066. Следите за
             ними в социальных сетях, чтобы получать последние обновления и
             акции.
           </p>

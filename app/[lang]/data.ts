@@ -300,80 +300,72 @@ export const tourismProgarams = [
 
 export const ourServecis = [
   {
-    id: 5,
+    id: 1,
     titleen: "Flight reservations to all parts of the world",
     titlear: "حجوزات الطيران إلى جميع أنحاء العالم",
     titleru: "Бронирование авиабилетов во все уголки мира",
-    src: "/images/airLines.svg",
+    src: "/images/1.jpg",
     route: "airLines",
   },
 
   {
-    id: 7,
+    id: 2,
     titleen: "Hotel reservations",
     titlear: "حجوزات الفنادق",
     titleru: "Бронирование отелей",
-    src: "/images/hotelsReservation.svg",
+    src: "/images/2.jpg",
     route: "hotelsReservation",
   },
   {
-    id: 8,
+    id: 3,
     titleen: "Travel visas",
     titlear: "تأشيرات السفر",
     titleru: "Туристические визы",
-    src: "/images/visas.svg",
+    src: "/images/3.jpg",
     route: "visas",
   },
   {
-    id: 9,
+    id: 4,
     titleen: "Travel insurance",
     titlear: "تأمين السفر",
     titleru: "Страхование путешествий",
-    src: "/images/travelling.svg",
+    src: "/images/4.jpg",
     route: "travelinsurance",
   },
 
   {
-    id: 12,
+    id: 5,
     titleen: "Airport taxi services",
     titlear: "خدمات سيارات الأجرة في المطار",
     titleru: "Услуги такси в аэропорту",
-    src: "/images/Taxis.svg",
+    src: "/images/5.jpg",
     route: "taxis",
   },
   {
-    id: 13,
+    id: 6,
     titlear: "خدمة توصيل المستندات والأوراق ",
     titleen: "Documents and papers delivery service",
     titleru: "Служба доставки документов и бумаг",
-    src: "/images/papers.svg",
+    src: "/images/6.jpg",
     route: "papers-Delivery",
   },
 
   {
-    id: 10,
+    id: 7,
     titleen: "Tourism programs",
     titlear: "البرامج السياحية",
     titleru: "Туристические программы",
-    src: "/images/traveltourism.svg",
+    src: "/images/7.jpg",
     route: "tourismProgarams",
   },
-  // {
-  //   id: 11,
-  //   titleen: "Honeymoon trips",
-  //   titlear: "رحلات شهر العسل",
-  //   titleru: "Свадебные путешествия",
-  //   src: "/images/honeymoon.svg",
-  //   route: "honeymoon",
-  // },
   {
-    id: 6,
+    id: 8,
     titleen: "Our tourist destinations",
     titlear: "وجهاتنا السياحية",
     titleru: "Наши туристические направления",
-    src: "/images/countries.svg",
+    src: "/images/8.jpg",
     route: "tours",
-  },
+  }
 ];
 
 export const visas = [

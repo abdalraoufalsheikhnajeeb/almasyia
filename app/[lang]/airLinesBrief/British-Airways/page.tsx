@@ -88,9 +88,8 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           <h2 className="text-2xl font-bold mb-2">Contact Information</h2>
           <p className="text-gray-700">
             For more information or to book a flight, visit the official British
-            Airways website or contact their customer service at +44 20 8738
-            5050. Follow them on social media for the latest updates and
-            promotions.
+            Airways website or contact their customer service at +971545866066.
+            Follow them on social media for the latest updates and promotions.
           </p>
 
           <h2 className="text-2xl font-bold mb-4">
@@ -221,7 +220,7 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           <h2 className="text-2xl font-bold mb-2">معلومات الاتصال</h2>
           <p className="text-gray-700">
             لمزيد من المعلومات أو لحجز رحلة، قم بزيارة الموقع الرسمي للخطوط
-            الجوية البريطانية أو اتصل بخدمة العملاء على +44 20 8738 5050. تابعهم
+            الجوية البريطانية أو اتصل بخدمة العملاء على +971545866066. تابعهم
             على وسائل التواصل الاجتماعي للحصول على أحدث التحديثات والعروض.
           </p>
           <h2 className="text-2xl font-bold mb-4">
@@ -359,7 +358,7 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           <p className="text-gray-700">
             Для получения дополнительной информации или бронирования рейса
             посетите официальный веб-сайт British Airways или свяжитесь с их
-            службой поддержки клиентов по телефону +44 20 8738 5050. Следите за
+            службой поддержки клиентов по телефону +971545866066. Следите за
             ними в социальных сетях для получения последних новостей и акций.
           </p>
           <h2 className="text-2xl font-bold mb-4">

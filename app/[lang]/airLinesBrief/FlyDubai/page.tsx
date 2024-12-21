@@ -87,9 +87,8 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           <h2 className="text-2xl font-bold mb-2">Contact Information</h2>
           <p className="text-gray-700">
             For more information or to book a flight, visit the official
-            Flydubai website or contact their customer service at +971 600 544
-            445. Follow them on social media for the latest updates and
-            promotions.
+            Flydubai website or contact their customer service at +971545866066.
+            Follow them on social media for the latest updates and promotions.
           </p>
           <h2 className="text-2xl font-bold mb-4">
             General Information on Flydubai
@@ -143,10 +142,10 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
                 <td className="py-2">
                   <a
                     target="_blank"
-                    href="tel:+971600544445"
+                    href="tel:+971545866066"
                     className="text-blue-500"
                   >
-                    +971600544445
+                    +971545866066
                   </a>
                 </td>
               </tr>
@@ -291,10 +290,10 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
                 <td className="py-2">
                   <a
                     target="_blank"
-                    href="tel:+971600544445"
+                    href="tel:+971545866066"
                     className="text-blue-500"
                   >
-                    +971600544445
+                    +971545866066
                   </a>
                 </td>
               </tr>
@@ -456,10 +455,10 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
                 <td className="py-2">
                   <a
                     target="_blank"
-                    href="tel:+971600544445"
+                    href="tel:+971545866066"
                     className="text-blue-500"
                   >
-                    +971600544445
+                    +971545866066
                   </a>
                 </td>
               </tr>

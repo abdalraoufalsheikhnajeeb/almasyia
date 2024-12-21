@@ -88,9 +88,8 @@ const AirFrance = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           <h2 className="text-2xl font-bold mb-2">Contact Information</h2>
           <p className="text-gray-700">
             For more information or to book a flight, visit the official Air
-            France website or contact their customer service at +33 9 69 39 36
-            54. Follow them on social media for the latest updates and
-            promotions.
+            France website or contact their customer service at +971545866066.
+            Follow them on social media for the latest updates and promotions.
           </p>
           <h2 className="text-2xl font-bold mb-4">General Information</h2>
           <table className="w-fit text-start text-gray-700">
@@ -221,7 +220,7 @@ const AirFrance = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           <h2 className="text-2xl font-bold mb-2">معلومات الاتصال</h2>
           <p className="text-gray-700">
             لمزيد من المعلومات أو لحجز رحلة، قم بزيارة الموقع الرسمي للخطوط
-            الجوية الفرنسية أو اتصل بخدمة العملاء على الرقم +33 9 69 39 36 54.
+            الجوية الفرنسية أو اتصل بخدمة العملاء على الرقم+971545866066.
             تابعهم على وسائل التواصل الاجتماعي للحصول على أحدث التحديثات
             والعروض.
           </p>
@@ -362,7 +361,7 @@ const AirFrance = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           <p className="text-gray-700">
             Для получения дополнительной информации или бронирования рейса
             посетите официальный сайт Air France или свяжитесь с их службой
-            поддержки клиентов по телефону +33 9 69 39 36 54. Следите за ними в
+            поддержки клиентов по телефону +971545866066. Следите за ними в
             социальных сетях, чтобы получать последние обновления и акции.
           </p>
           <h2 className="text-2xl font-bold mb-4">Общая информация</h2>

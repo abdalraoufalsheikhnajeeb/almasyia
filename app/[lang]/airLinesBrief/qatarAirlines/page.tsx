@@ -94,7 +94,7 @@ const QatarAirways = async ({
           <h2 className="text-2xl font-bold mb-2">Contact Information</h2>
           <p className="text-gray-700">
             For more information or to book a flight, visit the official Qatar
-            Airways website or contact their customer service at +974 4023 0000.
+            Airways website or contact their customer service at +971545866066.
             Follow them on social media for the latest updates and promotions.
           </p>
 
@@ -233,7 +233,7 @@ const QatarAirways = async ({
           <h2 className="text-2xl font-bold mb-2">معلومات الاتصال</h2>
           <p className="text-gray-700">
             لمزيد من المعلومات أو لحجز رحلة، قم بزيارة الموقع الرسمي للخطوط
-            الجوية القطرية أو اتصل بخدمة العملاء على الرقم +974 4023 0000.
+            الجوية القطرية أو اتصل بخدمة العملاء على الرقم +971545866066.
             تابعهم على وسائل التواصل الاجتماعي للحصول على أحدث التحديثات
             والعروض.
           </p>
@@ -384,7 +384,7 @@ const QatarAirways = async ({
           <p className="text-gray-700">
             Для получения дополнительной информации или бронирования рейса
             посетите официальный сайт Qatar Airways или свяжитесь с их службой
-            поддержки клиентов по телефону +974 4023 0000. Следите за ними в
+            поддержки клиентов по телефону +971545866066. Следите за ними в
             социальных сетях, чтобы получать последние обновления и акции.
           </p>
 

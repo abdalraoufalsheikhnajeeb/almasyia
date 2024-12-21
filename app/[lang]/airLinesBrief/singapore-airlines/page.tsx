@@ -87,8 +87,8 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           <h2 className="text-2xl font-bold mb-2">Contact Information</h2>
           <p className="text-gray-700">
             For more information or to book a flight, visit the official
-            Singapore Airlines website or contact their customer service at +65
-            6223 8888. Follow them on social media for the latest updates and
+            Singapore Airlines website or contact their customer service at
+            +971545866066. Follow them on social media for the latest updates and
             promotions.
           </p>
 
@@ -219,7 +219,7 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           <h2 className="text-2xl font-bold mb-2">معلومات الاتصال</h2>
           <p className="text-gray-700">
             لمزيد من المعلومات أو لحجز رحلة، قم بزيارة الموقع الرسمي للخطوط
-            الجوية السنغافورية أو اتصل بخدمة العملاء على +65 6223 8888. تابعهم
+            الجوية السنغافورية أو اتصل بخدمة العملاء على 971545866066+ . تابعهم
             على وسائل التواصل الاجتماعي للحصول على أحدث التحديثات والعروض.
           </p>
           <h2 className="text-2xl font-bold mb-4">

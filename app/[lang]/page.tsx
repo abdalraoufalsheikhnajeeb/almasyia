@@ -19,7 +19,7 @@ const Page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
         loading="lazy"
         quality={60}
         src="/images/hero.webp"
-        className={`absolute top-0 -z-10 lg:object-fill h-[90dvh] ${
+        className={`absolute top-0 -z-10 lg:object-fill object-cover h-[90dvh] ${
           lang === "ar" && "-scale-x-[1]"
         } w-screen`}
         alt="arrow"
@@ -37,9 +37,9 @@ const Page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
             height={219}
             className="w-52 lg:w-80 object-cover"
           />
-          <h1 className="text-3xl max-w-3xl font-bold text-primary text-center lg:text-start">
+          {/* <h1 className="text-3xl max-w-3xl font-bold text-primary text-center lg:text-start">
             {dic?.contactUsTitle}
-          </h1>
+          </h1> */}
           {/* Add two inline buttons here inspired by Whatsapp and PhoneCall styles */}
           <div className="flex gap-4 mt-4">
             {/* WhatsApp Button */}
@@ -91,17 +91,17 @@ const Page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
               }
               return (
                 <Link href={`/${lang}/Services/${card.route}`} key={card.id}>
-                  <div className="max-w-[90vw] relative w-80 flex flex-col justify-center items-center transition-transform duration-300 box hover:scale-105 hover:shadow-sm">
+                  <div className="max-w-[90vw] !p-0 relative w-80 flex flex-col justify-center overflow-hidden items-center transition-transform duration-300 box hover:scale-105 hover:shadow-sm">
                     <Image
                       loading="lazy"
                       quality={60}
                       width={318}
                       height={256}
-                      className="rounded-t-lg object-contain scale-[100.5%] p-2 h-64"
+                      className="w-full object-cover aspect-video"
                       src={card.src}
                       alt="service image"
                     />
-                    <div className="p-3 pt-0 flex-grow flex flex-col justify-between h-28">
+                    <div className="p-3 flex-grow flex flex-col justify-between h-32">
                       <h2 className="mb-2 text-2xl font-bold tracking-tight text-primary text-center">
                         {title}
                       </h2>
