@@ -7,11 +7,11 @@ const RoyalJordanian = async ({
 }: {
   params: Promise<{ lang: Locale }>;
 }) => {
-    const { lang } = await params;
+  const { lang } = await params;
   if (lang === "en") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24 mx-auto">
+        <div className="bg-white shadow-md rounded-lg p-4 opacity-85 flex flex-col max-w-7xl mx-auto pt-24 mx-auto">
           <h1 className="text-4xl text-center font-bold">
             Royal Jordanian Airlines
           </h1>
@@ -159,7 +159,7 @@ const RoyalJordanian = async ({
   } else if (lang === "ar") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+        <div className="bg-white shadow-md rounded-lg p-4 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
           <h1 className="text-4xl text-center font-bold">
             الخطوط الملكية الأردنية
           </h1>
@@ -291,7 +291,7 @@ const RoyalJordanian = async ({
   } else if (lang === "ru") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+        <div className="bg-white shadow-md rounded-lg p-4 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
           <h1 className="text-4xl text-center font-bold">
             Royal Jordanian Airlines
           </h1>
@@ -376,8 +376,8 @@ const RoyalJordanian = async ({
           <p className="text-gray-700">
             Для получения дополнительной информации или бронирования рейса
             посетите официальный сайт Royal Jordanian или свяжитесь с их службой
-            поддержки клиентов 971545866066. Следите за ними в
-            социальных сетях, чтобы получать последние обновления и акции.
+            поддержки клиентов 971545866066. Следите за ними в социальных сетях,
+            чтобы получать последние обновления и акции.
           </p>
 
           <div>

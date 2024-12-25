@@ -56,7 +56,7 @@ export default function VisaForm({
     <div className="flex flex-col items-center mt-12">
       <form
         onSubmit={handleSubmit}
-        className="space-y-6 w-96 p-6 flex flex-col backdrop-blur-sm border-2 border-white rounded-lg bg-white bg-opacity-50 box"
+        className="space-y-6 w-96 p-4 flex flex-col backdrop-blur-sm border-2 border-white rounded-lg bg-white bg-opacity-50 box"
       >
         <div>
           <label className="block text-lg  text-gray-900">

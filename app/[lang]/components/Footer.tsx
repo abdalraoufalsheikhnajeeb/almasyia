@@ -21,8 +21,8 @@ const SocialLink = ({ title, href, src, alt }: LinkProps) => (
       quality={1}
       className="transform transition-transform duration-300 ease-in-out hover:scale-110"
       src={src}
-      width={100}
-      height={100}
+      width={70}
+      height={70}
       alt={alt}
     />
   </a>
@@ -77,7 +77,7 @@ const Footer = ({ lang }: { lang: Locale }) => {
   return (
     <footer className="footer pt-10 flex pb-4 justify-center items-center flex-col w-full mt-auto">
       <span className="text-3xl text-primary">{dic?.followUs}</span>
-      <div className="flex gap-4 items-center justify-center lg:mb-8 mb-14">
+      <div className="flex gap-4 items-center justify-center lg:mb-8 mb-14 ">
         {links.map((link) => (
           <SocialLink key={link.href} {...link} />
         ))}

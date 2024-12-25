@@ -19,7 +19,7 @@ const Navbar = ({ lang }: { lang: Locale }) => {
     fetchDictionary();
   }, [lang]);
 
-  if (!dic) return null; 
+  if (!dic) return null;
 
   const NavItem = ({ href, label }: { href: string; label: string }) => (
     <Link
@@ -44,7 +44,7 @@ const Navbar = ({ lang }: { lang: Locale }) => {
         />
       </Link>
 
-      <div className="flex gap-6">
+      <div className="flex gap-4">
         <NavItem href={`/${lang}`} label={dic?.Home} />
         <NavItem href={`/${lang}/about-us`} label={dic?.aboutUs} />
         <NavItem href={`/${lang}/WorldClock`} label={dic.worldClock} />

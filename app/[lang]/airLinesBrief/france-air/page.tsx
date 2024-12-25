@@ -7,7 +7,7 @@ const AirFrance = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
   if (lang == "en") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+        <div className="bg-white shadow-md rounded-lg p-4 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
           <h1 className="text-4xl text-center font-bold">Air France</h1>
           <Image
             width={420}
@@ -147,7 +147,7 @@ const AirFrance = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
   } else if (lang == "ar") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+        <div className="bg-white shadow-md rounded-lg p-4 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
           <h1 className="text-4xl text-center font-bold">
             الخطوط الجوية الفرنسية
           </h1>
@@ -220,9 +220,8 @@ const AirFrance = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           <h2 className="text-2xl font-bold mb-2">معلومات الاتصال</h2>
           <p className="text-gray-700">
             لمزيد من المعلومات أو لحجز رحلة، قم بزيارة الموقع الرسمي للخطوط
-            الجوية الفرنسية أو اتصل بخدمة العملاء على الرقم+971545866066.
-            تابعهم على وسائل التواصل الاجتماعي للحصول على أحدث التحديثات
-            والعروض.
+            الجوية الفرنسية أو اتصل بخدمة العملاء على الرقم+971545866066. تابعهم
+            على وسائل التواصل الاجتماعي للحصول على أحدث التحديثات والعروض.
           </p>
           <h2 className="text-2xl font-bold mb-4">معلومات عامة</h2>
           <table className="w-fit text-start text-gray-700">
@@ -276,7 +275,7 @@ const AirFrance = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
   } else if (lang == "ru") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+        <div className="bg-white shadow-md rounded-lg p-4 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
           <h1 className="text-4xl text-center font-bold">Air France</h1>
           <Image
             width={420}

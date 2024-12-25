@@ -11,7 +11,7 @@ const TurkishAirlines = async ({
   if (lang === "en") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+        <div className="bg-white shadow-md rounded-lg p-4 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
           <h1 className="text-4xl text-center font-bold">Turkish Airlines</h1>
           <Image
             width={420}
@@ -146,7 +146,7 @@ const TurkishAirlines = async ({
   } else if (lang === "ar") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+        <div className="bg-white shadow-md rounded-lg p-4 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
           <h1 className="text-4xl text-center font-bold">
             الخطوط الجوية التركية
           </h1>
@@ -272,7 +272,7 @@ const TurkishAirlines = async ({
   } else if (lang === "ru") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+        <div className="bg-white shadow-md rounded-lg p-4 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
           <h1 className="text-4xl text-center font-bold">Turkish Airlines</h1>
           <Image
             width={420}

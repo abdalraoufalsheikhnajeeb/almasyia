@@ -102,7 +102,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-6 w-full max-w-md p-6 flex flex-col backdrop-blur-sm border-2 border-white rounded-lg bg-white bg-opacity-50"
+      className="space-y-6 w-full max-w-md p-4 flex flex-col backdrop-blur-sm border-2 border-white rounded-lg bg-white bg-opacity-50"
     >
       {/* Country */}
       <div>

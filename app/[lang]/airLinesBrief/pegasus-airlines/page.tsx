@@ -5,14 +5,13 @@ import { Locale } from "../../../../i18n-config";
 const PegasusAirlines = async ({
   params,
 }: {
-
   params: Promise<{ lang: Locale }>;
 }) => {
-    const { lang } = await params;
+  const { lang } = await params;
   if (lang === "en") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+        <div className="bg-white shadow-md rounded-lg p-4 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
           <h1 className="text-4xl text-center font-bold">Pegasus Airlines</h1>
           <Image
             width={420}
@@ -156,7 +155,7 @@ const PegasusAirlines = async ({
   } else if (lang === "ar") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+        <div className="bg-white shadow-md rounded-lg p-4 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
           <h1 className="text-4xl text-center font-bold">طيران بيجاسوس</h1>
           <Image
             width={420}
@@ -227,8 +226,8 @@ const PegasusAirlines = async ({
           <h2 className="text-2xl font-bold mb-2">معلومات الاتصال</h2>
           <p className="text-gray-700">
             لمزيد من المعلومات أو لحجز رحلة، قم بزيارة الموقع الرسمي لطيران
-            بيجاسوس أو اتصل بخدمة العملاء على الرقم +971545866066. تابعهم
-            على وسائل التواصل الاجتماعي للحصول على أحدث التحديثات والعروض.
+            بيجاسوس أو اتصل بخدمة العملاء على الرقم +971545866066. تابعهم على
+            وسائل التواصل الاجتماعي للحصول على أحدث التحديثات والعروض.
           </p>
 
           <div>
@@ -287,7 +286,7 @@ const PegasusAirlines = async ({
   } else if (lang === "ru") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+        <div className="bg-white shadow-md rounded-lg p-4 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
           <h1 className="text-4xl text-center font-bold">Pegasus Airlines</h1>
           <Image
             width={420}

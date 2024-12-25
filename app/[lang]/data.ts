@@ -209,7 +209,7 @@ export const countries = [
   {
     route: "/countries/malaysia",
     id: 8,
-    src: "/images/malay.webp",
+    src: "/images/malaysia.webp",
     titleen: "Experience the Diverse Wonders of Malaysia",
     titlear: "استمتع بعجائب ماليزيا المتنوعة",
     titleru: "Ощутите разнообразные чудеса Малайзии",
@@ -224,14 +224,14 @@ export const countries = [
   },
 ];
 export const tourismProgarams = [
-  {
-    route: "/tourismProgarams/Russia",
-    id: 1,
-    src: "/images/Russia.webp",
-    titleen: "Discover the Unique Charms of Russia",
-    titlear: "اكتشف معالم جذابة ومميزة في روسيا",
-    titleru: "Откройте для себя уникальные очарования России",
-  },
+  // {
+  //   route: "/tourismProgarams/Russia",
+  //   id: 1,
+  //   src: "/images/Russia.webp",
+  //   titleen: "Discover the Unique Charms of Russia",
+  //   titlear: "اكتشف معالم جذابة ومميزة في روسيا",
+  //   titleru: "Откройте для себя уникальные очарования России",
+  // },
   {
     route: "/tourismProgarams/uae",
     id: 2,
@@ -283,7 +283,7 @@ export const tourismProgarams = [
   {
     route: "/tourismProgarams/malaysia",
     id: 8,
-    src: "/images/malay.webp",
+    src: "/images/malaysia.webp",
     titleen: "Experience the Diverse Wonders of Malaysia",
     titlear: "استمتع بعجائب ماليزيا المتنوعة",
     titleru: "Ощутите разнообразные чудеса Малайзии",

@@ -97,8 +97,8 @@ const LocationCard: React.FC<LocationCardProps> = ({
 
   return (
     <div className={`w-screen ${addClass}`}>
-      <div className="max-w-7xl mx-auto my-4 overflow-hidden ">
-        <div className="flex justify-center items-center gap-6">
+      <div className="lg:max-w-7xl mx-auto my-4 overflow-hidden max-w-[90vw]">
+        <div className="flex justify-center items-center gap-4">
           <AnTitle title={locationName} />
           <Image
             width={64}

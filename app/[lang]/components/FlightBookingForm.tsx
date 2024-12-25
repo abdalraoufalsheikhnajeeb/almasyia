@@ -66,7 +66,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
 
   return (
     <form onSubmit={handleSubmit} className="box">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {/* Departure */}
         <div>
           <label htmlFor="departure" className="block text-lg text-gray-900">

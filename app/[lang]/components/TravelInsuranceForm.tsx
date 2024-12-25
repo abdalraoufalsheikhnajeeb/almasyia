@@ -71,7 +71,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-6 w-96 p-6 flex flex-col backdrop-blur-sm border-2 border-white rounded-lg bg-white bg-opacity-50"
+      className="space-y-6 w-96 p-4 flex flex-col backdrop-blur-sm border-2 border-white rounded-lg bg-white bg-opacity-50"
     >
       {/* Destination */}
       <div>

@@ -2,17 +2,19 @@ import Image from "next/image";
 
 import { Locale } from "../../../../i18n-config";
 import { Maldives } from "../../data";
+import Link from "next/link";
 
 const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
   const { lang } = await params;
   return (
-    <div className="container mx-auto pt-28 p-4">
+    <div className="container mx-auto pt-4 p-4">
       {Maldives.map((item, index) => {
         const {
           nameEN,
           nameAR,
           nameRU,
           src,
+
           descriptionAR,
           descriptionEN,
           descriptionRU,

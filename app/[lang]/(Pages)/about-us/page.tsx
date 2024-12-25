@@ -10,7 +10,7 @@ export default async function page({
 
   return (
     <section className="  flex-col lg:flex-row lg:min-h-[50vh] lg:justify-between mt-24 gap-4 flex  box">
-      <div className="flex w-full lg:w-1/2 flex-col my-12 items-center gap-6 lg:items-start overflow-visible text-primary">
+      <div className="flex w-full lg:w-1/2 flex-col my-12 items-center gap-4 lg:items-start overflow-visible text-primary">
         <Image
           loading="lazy"
           quality={60}

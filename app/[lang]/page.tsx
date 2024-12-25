@@ -27,7 +27,7 @@ const Page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
         height={720}
       />
       <main className="max-w-[90vw] mx-auto flex items-center flex-col gap-8">
-        <header className="h-[90dvh] gap-4 flex flex-col items-center justify-center lg:items-start lg:justify-start w-full">
+        <header className="h-[80dvh] gap-4 flex flex-col items-center justify-center lg:items-start lg:justify-start w-full">
           <Image
             quality={60}
             src="/images/logo.webp"

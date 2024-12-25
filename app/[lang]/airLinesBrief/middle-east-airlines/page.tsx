@@ -7,11 +7,11 @@ const MiddleEastAirlines = async ({
 }: {
   params: Promise<{ lang: Locale }>;
 }) => {
-    const { lang } = await params;
+  const { lang } = await params;
   if (lang === "en") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+        <div className="bg-white shadow-md rounded-lg p-4 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
           <h1 className="text-4xl text-center font-bold">
             Middle East Airlines (MEA)
           </h1>
@@ -93,8 +93,8 @@ const MiddleEastAirlines = async ({
           <h2 className="text-2xl font-bold mb-2">Contact Information</h2>
           <p className="text-gray-700">
             For more information or to book a flight, visit the official Middle
-            East Airlines website or contact their customer service
-            at +971545866066. Follow them on social media for the latest updates
+            East Airlines website or contact their customer service at
+            +971545866066. Follow them on social media for the latest updates
             and promotions.
           </p>
 
@@ -149,7 +149,7 @@ const MiddleEastAirlines = async ({
   } else if (lang === "ar") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+        <div className="bg-white shadow-md rounded-lg p-4 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
           <h1 className="text-4xl text-center font-bold">
             الخطوط الجوية الشرق أوسطية (MEA)
           </h1>
@@ -276,7 +276,7 @@ const MiddleEastAirlines = async ({
   } else if (lang === "ru") {
     return (
       <div className="container mx-auto p-4">
-        <div className="bg-white shadow-md rounded-lg p-6 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
+        <div className="bg-white shadow-md rounded-lg p-4 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
           <h1 className="text-4xl text-center font-bold">
             Middle East Airlines (MEA)
           </h1>

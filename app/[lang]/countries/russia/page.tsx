@@ -1,18 +1,20 @@
 import Image from "next/image";
 
 import { Locale } from "../../../../i18n-config";
-import { Russia } from "../../data";
+import { Russia } from "../../destinations/Russia";
+import Link from "next/link";
 
 const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
   const { lang } = await params;
   return (
-    <div className="container mx-auto pt-28 p-4">
+    <div className="container mx-auto pt-4 p-4">
       {Russia.map((item, index) => {
         const {
           nameEN,
           nameAR,
           nameRU,
           src,
+          url,
           descriptionAR,
           descriptionEN,
           descriptionRU,
@@ -43,6 +45,13 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
                   {title}
                 </h2>
                 <p className=" text-start text-lg">{description}</p>
+                <Link
+                  href={url}
+                  target="_blank"
+                  className="text-blue-600 text-start text-sm"
+                >
+                  {url}
+                </Link>
               </div>
 
               {src && (
