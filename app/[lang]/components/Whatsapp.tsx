@@ -71,7 +71,7 @@ export default function Whatsapp() {
                   quality={1}
                   width={78}
                   height={78}
-                  className="object-fill opacity-80 rounded-[100%] hover:scale-110 transition-all w-10 h-10 lg:w-20 lg:h-20"
+                  className="object-cover hover:scale-110 transition-all w-10 h-10 lg:w-20 lg:h-20"
                   alt="syria flag"
                   src="/images/syria-flag.svg"
                 />
