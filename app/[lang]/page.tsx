@@ -41,9 +41,9 @@ const Page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
             {dic?.contactUsTitle}
           </h1> */}
           {/* Add two inline buttons here inspired by Whatsapp and PhoneCall styles */}
-          <div className="flex gap-4 mt-4">
-            {/* WhatsApp Button */}
-            <Link href="https://wa.me/971545866066" target="_blank">
+          {/* <div className="flex gap-4 mt-4"> */}
+          {/* WhatsApp Button */}
+          {/* <Link href="https://wa.me/971545866066" target="_blank">
               <div
                 className="rounded-full p-3 bg-[#25d366] hover:scale-105 transition-transform cursor-pointer flex items-center justify-center"
                 title="Contact us via WhatsApp"
@@ -57,10 +57,10 @@ const Page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
                   src="/images/whats.svg"
                 />
               </div>
-            </Link>
+            </Link> */}
 
-            {/* Phone Call Button */}
-            <Link href="tel:+971545866066" target="_blank">
+          {/* Phone Call Button */}
+          {/* <Link href="tel:+971545866066" target="_blank">
               <div
                 className="rounded-full p-3 bg-[#3b86ff] hover:scale-105 transition-transform cursor-pointer flex items-center justify-center"
                 title="Call us"
@@ -74,8 +74,8 @@ const Page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
                   src="/images/phone_ic.svg"
                 />
               </div>
-            </Link>
-          </div>
+            </Link> */}
+          {/* </div> */}
         </header>
         <section className="w-screen flex flex-col items-center">
           <AnTitle title={dic?.someProjects} />

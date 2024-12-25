@@ -19,7 +19,7 @@ const Navbar = ({ lang }: { lang: Locale }) => {
     fetchDictionary();
   }, [lang]);
 
-  if (!dic) return null; // or a loading indicator
+  if (!dic) return null; 
 
   const NavItem = ({ href, label }: { href: string; label: string }) => (
     <Link
