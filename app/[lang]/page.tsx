@@ -78,6 +78,8 @@ const Page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           {/* </div> */}
         </header>
         <section className="w-screen flex flex-col items-center">
+          <h1 className="text-primary text-3xl mb-8 text-center font-bold lg:max-w-7xl max-w-[90vw]">{dic.discover_services}</h1>
+
           <AnTitle title={dic?.someProjects} />
           <div className="max-w-7xl flex flex-wrap justify-center items-center gap-8 px-4 lg:px-12 pt-4">
             {ourServecis.map((card) => {
