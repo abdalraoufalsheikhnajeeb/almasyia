@@ -1,7 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 
 interface DeliveryFormProps {
   lang: string;
@@ -17,10 +15,11 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
     dispatchDate: new Date(),
   });
 
-  const handleDateChange = (name: string, date: Date | null) => {
+  // A helper to handle date changes from <input type="date" />
+  const handleDateChange = (name: string, dateValue: Date | null) => {
     setFormData((prevData) => ({
       ...prevData,
-      [name]: date || new Date(),
+      [name]: dateValue || new Date(),
     }));
   };
 
@@ -54,6 +53,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
 
   const renderFormContent = () => (
     <>
+      {/* Sender Name */}
       <div>
         <label htmlFor="senderName" className="block text-lg text-gray-900">
           {lang === "ar"
@@ -72,6 +72,8 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
           required
         />
       </div>
+
+      {/* Submission Date */}
       <div>
         <label htmlFor="submissionDate" className="block text-lg text-gray-900">
           {lang === "ar"
@@ -81,24 +83,24 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
             : "Submission Date"}
         </label>
         <div className="relative mt-2">
-          <DatePicker
-            minDate={new Date()}
+          <input
+            type="date"
             id="submissionDate"
-            selected={formData.submissionDate}
-            onChange={(date) => handleDateChange("submissionDate", date)}
-            className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
-            placeholderText={
-              lang === "ar"
-                ? "اختر التاريخ"
-                : lang === "ru"
-                ? "Выберите дату"
-                : "Select date"
+            name="submissionDate"
+            // Convert today's date to YYYY-MM-DD as the min
+            min={new Date().toISOString().split("T")[0]}
+            // Convert formData.submissionDate to YYYY-MM-DD string
+            value={formData.submissionDate.toISOString().split("T")[0]}
+            onChange={(e) =>
+              handleDateChange("submissionDate", e.target.valueAsDate)
             }
-            dateFormat="dd/MM/yyyy"
+            className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
             required
           />
         </div>
       </div>
+
+      {/* Dispatch Date */}
       <div>
         <label htmlFor="dispatchDate" className="block text-lg text-gray-900">
           {lang === "ar"
@@ -108,24 +110,22 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
             : "Dispatch Date"}
         </label>
         <div className="relative mt-2">
-          <DatePicker
-            minDate={new Date()}
+          <input
+            type="date"
             id="dispatchDate"
-            selected={formData.dispatchDate}
-            onChange={(date) => handleDateChange("dispatchDate", date)}
-            className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
-            placeholderText={
-              lang === "ar"
-                ? "اختر التاريخ"
-                : lang === "ru"
-                ? "Выберите дату"
-                : "Select date"
+            name="dispatchDate"
+            min={new Date().toISOString().split("T")[0]}
+            value={formData.dispatchDate.toISOString().split("T")[0]}
+            onChange={(e) =>
+              handleDateChange("dispatchDate", e.target.valueAsDate)
             }
-            dateFormat="dd/MM/yyyy"
+            className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
             required
           />
         </div>
       </div>
+
+      {/* Place Of Delivery */}
       <div>
         <label
           htmlFor="placeOfDelivery"
@@ -147,6 +147,8 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
           required
         />
       </div>
+
+      {/* Recipient Number */}
       <div>
         <label
           htmlFor="recipientNumber"
@@ -168,6 +170,8 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
           required
         />
       </div>
+
+      {/* Urgency */}
       <div>
         <label className="block text-lg text-gray-900">
           {lang === "ar"

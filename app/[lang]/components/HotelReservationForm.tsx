@@ -1,7 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 import { CitiesByCountry, citiesByCountry } from "../data";
 
 interface HotelReservationFormProps {
@@ -22,49 +20,67 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
   const [hasChildren, setHasChildren] = useState(false);
   const [cities, setCities] = useState<string[]>([]);
 
-  const handleArrivalDateChange = (date: Date | null) => {
-    setFormData((prevData) => ({
-      ...prevData,
-      arrivalDate: date || new Date(),
-    }));
-  };
-
-  const handleDepartureDateChange = (date: Date | null) => {
-    setFormData((prevData) => ({
-      ...prevData,
-      departureDate: date || new Date(),
-    }));
-  };
-
+  /**
+   * Handles all onChange events for both <input> and <select> elements,
+   * using type narrowing to avoid TS2367 errors.
+   */
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    const { name, value, type } = e.target;
+    // 1. Narrow to <input> elements
+    if (e.target instanceof HTMLInputElement) {
+      const { name, type, value, valueAsDate, checked } = e.target;
 
-    if (type === "checkbox") {
-      const { checked } = e.target as HTMLInputElement;
-      setHasChildren(checked);
-    } else {
+      // If it's a checkbox
+      if (type === "checkbox") {
+        setHasChildren(checked);
+        return;
+      }
+
+      // If it's a date input
+      if (name === "arrivalDate" || name === "departureDate") {
+        setFormData((prevData) => ({
+          ...prevData,
+          [name]: valueAsDate || new Date(),
+        }));
+        return;
+      }
+
+      // Otherwise, it's a text/number input
       setFormData((prevData) => ({
         ...prevData,
         [name]: value,
       }));
+    }
+    // 2. Narrow to <select> elements
+    else {
+      const { name, value } = e.target;
 
+      // If selecting a country, update the city list
       if (name === "country") {
         const selectedCountry = citiesByCountry[value as keyof CitiesByCountry];
-        setCities(
-          selectedCountry
-            ? selectedCountry[lang as keyof typeof selectedCountry] || []
-            : []
-        );
+        const newCities =
+          selectedCountry?.[lang as keyof typeof selectedCountry] || [];
+
+        setCities(newCities);
         setFormData((prevData) => ({
           ...prevData,
+          country: value,
           city: "",
+        }));
+      } else {
+        // Otherwise, just update the relevant field
+        setFormData((prevData) => ({
+          ...prevData,
+          [name]: value,
         }));
       }
     }
   };
 
+  /**
+   * Submits the form data via WhatsApp link.
+   */
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const message = `*Hotel Reservation: 🏨*\n\n- *Country*: ${
@@ -88,6 +104,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
       onSubmit={handleSubmit}
       className="space-y-6 w-full max-w-md p-6 flex flex-col backdrop-blur-sm border-2 border-white rounded-lg bg-white bg-opacity-50"
     >
+      {/* Country */}
       <div>
         <label htmlFor="country" className="block text-lg text-gray-900">
           {lang === "ar"
@@ -120,6 +137,8 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
           ))}
         </select>
       </div>
+
+      {/* City */}
       <div>
         <label htmlFor="city" className="block text-lg text-gray-900">
           {lang === "ar" ? "المدينة" : lang === "ru" ? "Город" : "City"}
@@ -149,6 +168,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
         </select>
       </div>
 
+      {/* Arrival Date */}
       <div>
         <label htmlFor="arrivalDate" className="block text-lg text-gray-900">
           {lang === "ar"
@@ -158,24 +178,20 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
             : "Date of Arrival"}
         </label>
         <div className="relative mt-2">
-          <DatePicker
-            minDate={new Date()}
+          <input
+            type="date"
             id="arrivalDate"
-            selected={formData.arrivalDate}
-            onChange={handleArrivalDateChange}
+            name="arrivalDate"
+            min={new Date().toISOString().split("T")[0]}
+            value={formData.arrivalDate.toISOString().split("T")[0]}
+            onChange={handleChange}
             className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
-            placeholderText={
-              lang === "ar"
-                ? "اختر التاريخ"
-                : lang === "ru"
-                ? "Выберите дату"
-                : "Select date"
-            }
-            dateFormat="dd/MM/yyyy"
             required
           />
         </div>
       </div>
+
+      {/* Departure Date */}
       <div>
         <label htmlFor="departureDate" className="block text-lg text-gray-900">
           {lang === "ar"
@@ -185,25 +201,20 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
             : "Departure Date"}
         </label>
         <div className="relative mt-2">
-          <DatePicker
-            minDate={new Date()}
+          <input
+            type="date"
             id="departureDate"
-            selected={formData.departureDate}
-            onChange={handleDepartureDateChange}
+            name="departureDate"
+            min={new Date().toISOString().split("T")[0]}
+            value={formData.departureDate.toISOString().split("T")[0]}
+            onChange={handleChange}
             className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
-            placeholderText={
-              lang === "ar"
-                ? "اختر التاريخ"
-                : lang === "ru"
-                ? "Выберите дату"
-                : "Select date"
-            }
-            dateFormat="dd/MM/yyyy"
             required
           />
         </div>
       </div>
 
+      {/* Number of People */}
       <div>
         <label htmlFor="numberOfPeople" className="block text-lg text-gray-900">
           {lang === "ar"
@@ -222,6 +233,8 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
           required
         />
       </div>
+
+      {/* Checkbox: Do you have children? */}
       <div className="flex items-center mt-2">
         <input
           id="hasChildren"
@@ -239,6 +252,8 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
             : "Do you have children?"}
         </label>
       </div>
+
+      {/* Number of Children */}
       {hasChildren && (
         <div>
           <label
@@ -261,6 +276,8 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
           />
         </div>
       )}
+
+      {/* Submit Button */}
       <button
         type="submit"
         className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"

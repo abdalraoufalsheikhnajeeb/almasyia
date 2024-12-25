@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+
 import { type getDictionary } from "../../../get-dictionary";
 
 interface FlightBookingFormProps {
@@ -20,21 +19,28 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
     travelClass: "economy",
   });
 
-  const handleDateChange = (name: string, date: Date | null) => {
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: date || new Date(),
-    }));
-  };
-
+  // We'll handle all input changes with a single function
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+    const { name, value, valueAsDate } = e.target as HTMLInputElement &
+      HTMLSelectElement & {
+        valueAsDate: Date | null;
+      };
+
+    // If it's one of the date fields, store it as a Date object
+    if (name === "outboundDate" || name === "returnDate") {
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: valueAsDate || new Date(),
+      }));
+    } else {
+      // Otherwise, just store as a string
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -61,6 +67,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
   return (
     <form onSubmit={handleSubmit} className="box">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {/* Departure */}
         <div>
           <label htmlFor="departure" className="block text-lg text-gray-900">
             {dic.currLang === "ar"
@@ -79,6 +86,8 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             required
           />
         </div>
+
+        {/* Arrival */}
         <div>
           <label htmlFor="arrival" className="block text-lg text-gray-900">
             {dic.currLang === "ar"
@@ -97,6 +106,8 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             required
           />
         </div>
+
+        {/* Outbound Date */}
         <div>
           <label htmlFor="outboundDate" className="block text-lg text-gray-900">
             {dic.currLang === "ar"
@@ -106,24 +117,31 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
               : "Outbound Date"}
           </label>
           <div className="relative mt-2">
-            <DatePicker
-              minDate={new Date()}
+            <input
+              type="date"
               id="outboundDate"
-              selected={formData.outboundDate}
-              onChange={(date) => handleDateChange("outboundDate", date)}
+              name="outboundDate"
+              // This replicates minDate={new Date()}
+              min={new Date().toISOString().split("T")[0]}
+              // Convert the Date object to a "YYYY-MM-DD" string
+              value={formData.outboundDate.toISOString().split("T")[0]}
+              onChange={handleChange}
               className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
-              placeholderText={
+              // Browsers often don't show placeholders for type="date",
+              // but you can still set it
+              placeholder={
                 dic.currLang === "ar"
                   ? "اختر التاريخ"
                   : dic.currLang === "ru"
                   ? "Выберите дату"
                   : "Select date"
               }
-              dateFormat="dd/MM/yyyy"
               required
             />
           </div>
         </div>
+
+        {/* Return Date */}
         <div>
           <label htmlFor="returnDate" className="block text-lg text-gray-900">
             {dic.currLang === "ar"
@@ -133,24 +151,27 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
               : "Return Date"}
           </label>
           <div className="relative mt-2">
-            <DatePicker
-              minDate={new Date()}
+            <input
+              type="date"
               id="returnDate"
-              selected={formData.returnDate}
-              onChange={(date) => handleDateChange("returnDate", date)}
+              name="returnDate"
+              min={new Date().toISOString().split("T")[0]}
+              value={formData.returnDate.toISOString().split("T")[0]}
+              onChange={handleChange}
               className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
-              placeholderText={
+              placeholder={
                 dic.currLang === "ar"
                   ? "اختر التاريخ"
                   : dic.currLang === "ru"
                   ? "Выберите дату"
                   : "Select date"
               }
-              dateFormat="dd/MM/yyyy"
               required
             />
           </div>
         </div>
+
+        {/* Number of Adults */}
         <div>
           <label
             htmlFor="numberOfAdults"
@@ -172,6 +193,8 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             required
           />
         </div>
+
+        {/* Number of Children */}
         <div>
           <label
             htmlFor="numberOfChildren"
@@ -192,6 +215,8 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
           />
         </div>
+
+        {/* Number of Infants */}
         <div>
           <label
             htmlFor="numberOfInfants"
@@ -212,6 +237,8 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
           />
         </div>
+
+        {/* Travel Class */}
         <div>
           <label htmlFor="travelClass" className="block text-lg text-gray-900">
             {dic.currLang === "ar"
@@ -244,6 +271,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
           </select>
         </div>
       </div>
+
       <div className="flex justify-center mt-6">
         <button
           type="submit"

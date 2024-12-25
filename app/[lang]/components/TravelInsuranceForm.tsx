@@ -1,7 +1,5 @@
 "use client";
 import { useState } from "react";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 
 interface TravelInsuranceFormProps {
   lang: string;
@@ -17,30 +15,46 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
     otherCountry: "",
   });
 
-  const handleDateChange = (name: string, date: Date | null) => {
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: date || new Date(),
-    }));
-  };
-
+  // A unified onChange handler for <input> and <select>
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+    // Narrow to <input> first
+    if (e.target instanceof HTMLInputElement) {
+      const { name, type, value, valueAsDate } = e.target;
+
+      // If it's a date field
+      if (name === "insuranceStartDate" || name === "insuranceEndDate") {
+        setFormData((prevData) => ({
+          ...prevData,
+          [name]: valueAsDate ?? new Date(),
+        }));
+      } else {
+        // For text, number, or radio inputs
+        setFormData((prevData) => ({
+          ...prevData,
+          [name]: value,
+        }));
+      }
+    } else {
+      // Otherwise it's a <select>
+      const { name, value } = e.target;
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const message = `*Travel Insurance: 🏖️*\n\n- *Destination*: ${
+
+    const finalDestination =
       formData.destination === "Other countries"
         ? formData.otherCountry
-        : formData.destination
-    } 🌍\n\n- *Insurance Starting Date*: ${formData.insuranceStartDate.toLocaleDateString()} 📅\n\n- *Insurance Ending Date*: ${formData.insuranceEndDate.toLocaleDateString()} 📅\n\n- *Number of People*: ${
+        : formData.destination;
+
+    const message = `*Travel Insurance: 🏖️*\n\n- *Destination*: ${finalDestination} 🌍\n\n- *Insurance Starting Date*: ${formData.insuranceStartDate.toLocaleDateString()} 📅\n\n- *Insurance Ending Date*: ${formData.insuranceEndDate.toLocaleDateString()} 📅\n\n- *Number of People*: ${
       formData.numberOfPeople
     } 👥\n\n- *Trip Type*: ${
       formData.tripType === "oneTrip"
@@ -59,6 +73,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
       onSubmit={handleSubmit}
       className="space-y-6 w-96 p-6 flex flex-col backdrop-blur-sm border-2 border-white rounded-lg bg-white bg-opacity-50"
     >
+      {/* Destination */}
       <div>
         <label htmlFor="destination" className="block text-lg text-gray-900">
           {lang === "ar"
@@ -143,6 +158,8 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
           />
         )}
       </div>
+
+      {/* Insurance Start Date */}
       <div>
         <label
           htmlFor="insuranceStartDate"
@@ -155,24 +172,22 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
             : "Insurance Starting Date"}
         </label>
         <div className="relative mt-2">
-          <DatePicker
-            minDate={new Date()}
+          <input
+            type="date"
             id="insuranceStartDate"
-            selected={formData.insuranceStartDate}
-            onChange={(date) => handleDateChange("insuranceStartDate", date)}
+            name="insuranceStartDate"
+            // Restrict past dates
+            min={new Date().toISOString().split("T")[0]}
+            // Convert current date to YYYY-MM-DD
+            value={formData.insuranceStartDate.toISOString().split("T")[0]}
+            onChange={handleChange}
             className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
-            placeholderText={
-              lang === "ar"
-                ? "اختر التاريخ"
-                : lang === "ru"
-                ? "Выберите дату"
-                : "Select date"
-            }
-            dateFormat="dd/MM/yyyy"
             required
           />
         </div>
       </div>
+
+      {/* Insurance End Date */}
       <div>
         <label
           htmlFor="insuranceEndDate"
@@ -185,24 +200,20 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
             : "Insurance Ending Date"}
         </label>
         <div className="relative mt-2">
-          <DatePicker
-            minDate={new Date()}
+          <input
+            type="date"
             id="insuranceEndDate"
-            selected={formData.insuranceEndDate}
-            onChange={(date) => handleDateChange("insuranceEndDate", date)}
+            name="insuranceEndDate"
+            min={new Date().toISOString().split("T")[0]}
+            value={formData.insuranceEndDate.toISOString().split("T")[0]}
+            onChange={handleChange}
             className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
-            placeholderText={
-              lang === "ar"
-                ? "اختر التاريخ"
-                : lang === "ru"
-                ? "Выберите дату"
-                : "Select date"
-            }
-            dateFormat="dd/MM/yyyy"
             required
           />
         </div>
       </div>
+
+      {/* Number of People */}
       <div>
         <label htmlFor="numberOfPeople" className="block text-lg text-gray-900">
           {lang === "ar"
@@ -221,6 +232,8 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
           required
         />
       </div>
+
+      {/* Trip Type */}
       <div>
         <label className="block text-lg text-gray-900">
           {lang === "ar"
@@ -264,6 +277,8 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
           </label>
         </div>
       </div>
+
+      {/* Submit Button */}
       <button
         type="submit"
         className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
