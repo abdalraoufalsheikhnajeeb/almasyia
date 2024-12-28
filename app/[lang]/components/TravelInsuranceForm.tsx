@@ -181,7 +181,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
             // Convert current date to YYYY-MM-DD
             value={formData.insuranceStartDate.toISOString().split("T")[0]}
             onChange={handleChange}
-            className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
+            className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-primary"
             required
           />
         </div>
@@ -207,7 +207,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
             min={new Date().toISOString().split("T")[0]}
             value={formData.insuranceEndDate.toISOString().split("T")[0]}
             onChange={handleChange}
-            className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
+            className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-primary"
             required
           />
         </div>

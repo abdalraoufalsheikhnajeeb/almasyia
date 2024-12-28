@@ -59,20 +59,20 @@ const Slider = ({ dic, data, title }: SliderProps) => {
             return (
               <div key={index} className="embla__slide p-4 flex-shrink-0 w-1/3">
                 <Link href={`/${dic.currLang}/airLinesBrief/${card.route}`}>
-                  <div className="bg-gray-200 relative border rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg h-full flex flex-col justify-center items-center overflow-hidden">
-                    <div className="bg-white flex justify-center items-center w-full p-3">
+                  <div className="bg-[#3b86ff] relative border rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg h-full flex flex-col justify-center items-center overflow-hidden">
+                    <div className=" flex justify-center items-center w-full">
                       <Image
                         loading="lazy"
                         quality={60}
                         width={400}
                         height={200}
-                        className="rounded-t-lg aspect-video w-full object-contain"
+                        className="rounded-t-lg aspect-video w-full scale-[103%] object-contain"
                         src={card.src}
                         alt={cardTitle}
                       />
                     </div>
                     <div className="p-4 pb-7 flex-grow flex flex-col justify-between h-28">
-                      <h2 className="mb-2 text-2xl font-bold tracking-tight text-primary text-center">
+                      <h2 className="mb-2 text-2xl font-bold tracking-tight text-white text-center">
                         {cardTitle}
                       </h2>
                       <span

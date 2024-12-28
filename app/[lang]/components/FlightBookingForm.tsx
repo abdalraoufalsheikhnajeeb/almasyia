@@ -126,7 +126,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
               // Convert the Date object to a "YYYY-MM-DD" string
               value={formData.outboundDate.toISOString().split("T")[0]}
               onChange={handleChange}
-              className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
+              className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-primary"
               // Browsers often don't show placeholders for type="date",
               // but you can still set it
               placeholder={
@@ -158,7 +158,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
               min={new Date().toISOString().split("T")[0]}
               value={formData.returnDate.toISOString().split("T")[0]}
               onChange={handleChange}
-              className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
+              className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-primary"
               placeholder={
                 dic.currLang === "ar"
                   ? "اختر التاريخ"

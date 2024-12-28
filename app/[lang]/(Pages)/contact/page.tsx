@@ -1,5 +1,13 @@
+// components/ContactPage.tsx
+"use client";
+
+import { use, useState } from "react";
 import Image from "next/image";
-import { Locale } from "../../../../i18n-config";
+import { type Locale } from "../../../../i18n-config";
+
+interface Params {
+  lang: Locale;
+}
 
 const phoneNumbers = [
   {
@@ -35,12 +43,8 @@ const syriaLocation = (dictionary: any) => ({
   whatsLink: "https://wa.me/971545866066",
 });
 
-export default async function ContactPage({
-  params,
-}: {
-  params: Promise<{ lang: Locale }>;
-}) {
-  const { lang } = await params;
+export default function ContactPage({ params }: { params: Promise<Params> }) {
+  const { lang } = use(params);
 
   const dictionary = {
     contactUs: { ar: "تواصل معنا", en: "Contact Us", ru: "Свяжитесь с нами" },
@@ -96,11 +100,78 @@ export default async function ContactPage({
     return key?.[lang] || key?.en || "";
   }
 
+  // Form state
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState({
+    loading: false,
+    success: null as string | null,
+    error: null as string | null,
+  });
+
+  // Handle input changes
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value,
+    });
+  };
+
+  // Handle form submission to Formspree
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus({ loading: true, success: null, error: null });
+
+    // Replace this URL with your actual Formspree form endpoint
+    const formspreeEndpoint = "https://formspree.io/f/{your-form-id}";
+
+    try {
+      const res = await fetch(formspreeEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await res.json();
+
+      if (res.ok) {
+        setStatus({
+          loading: false,
+          success: "Thank you for your message!",
+          error: null,
+        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        setStatus({
+          loading: false,
+          success: null,
+          error: result.error || "Something went wrong!",
+        });
+      }
+    } catch (error) {
+      setStatus({
+        loading: false,
+        success: null,
+        error: "Something went wrong!",
+      });
+    }
+  };
+
   return (
-    <section className="flex flex-col md:flex-row justify-between p-8 bg-gray-100 min-h-screen mt-12">
+    <section className="flex flex-col md:flex-row justify-between p-6 bg-gray-100 min-h-screen">
       {/* Left Section */}
       <div className="bg-white shadow-md rounded-md p-6 w-full md:w-1/3">
-        <h2 className="text-primary font-bold text-2xl mb-4">
+        <h2 className="text-white font-bold text-2xl mb-4">
           {t(dictionary.contactUs)}
         </h2>
 
@@ -111,8 +182,14 @@ export default async function ContactPage({
           </h3>
           <div className="space-y-2">
             {phoneNumbers.map((phone, idx) => (
-              <div className="flex items-center space-x-3" key={idx}>
-                <Image alt={phone.alt} src={phone.src} width={24} height={24} />
+              <div className="flex items-center gap-3" key={idx}>
+                <Image
+                  className="rounded-[100%] object-fill aspect-square"
+                  alt={phone.alt}
+                  src={phone.src}
+                  width={24}
+                  height={24}
+                />
                 <a
                   href={phone.href}
                   className="text-gray-600 hover:text-blue-600 transition-colors"
@@ -170,67 +247,90 @@ export default async function ContactPage({
         <h2 className="text-primary font-bold text-2xl mb-4">
           {t(dictionary.sendUsMessage)}
         </h2>
-        <form className="space-y-4">
+        <form className="space-y-4" onSubmit={handleSubmit}>
           <div className="flex flex-col md:flex-row md:space-x-4">
             <div className="flex-1">
-              <label htmlFor="name" className="block text-gray-700 font-medium">
+              <label htmlFor="name" className="block text-primary font-medium">
                 {t(dictionary.yourName)}
               </label>
               <input
                 type="text"
                 id="name"
+                name="name" // Added name attribute
+                value={formData.name}
+                onChange={handleChange}
                 className="mt-1 w-full border border-gray-300 rounded-md p-2"
                 placeholder={t(dictionary.yourName)}
+                required
               />
             </div>
             <div className="flex-1">
               <label
                 htmlFor="email"
-                className="block text-gray-700 font-medium"
+                className="block text-primary font-medium"
               >
                 {t(dictionary.yourEmail)}
               </label>
               <input
                 type="email"
                 id="email"
+                name="email" // Added name attribute
+                value={formData.email}
+                onChange={handleChange}
                 className="mt-1 w-full border border-gray-300 rounded-md p-2"
                 placeholder={t(dictionary.yourEmail)}
+                required
               />
             </div>
           </div>
           <div>
             <label
               htmlFor="subject"
-              className="block text-gray-700 font-medium"
+              className="block text-primary font-medium"
             >
               {t(dictionary.subject)}
             </label>
             <input
               type="text"
               id="subject"
+              name="subject" // Added name attribute
+              value={formData.subject}
+              onChange={handleChange}
               className="mt-1 w-full border border-gray-300 rounded-md p-2"
               placeholder={t(dictionary.subject)}
+              required
             />
           </div>
           <div>
             <label
               htmlFor="message"
-              className="block text-gray-700 font-medium"
+              className="block text-primary font-medium"
             >
               {t(dictionary.sendUsMessage)}
             </label>
             <textarea
               id="message"
+              name="message" // Added name attribute
+              value={formData.message}
+              onChange={handleChange}
               className="mt-1 w-full border border-gray-300 rounded-md p-2 h-28"
               placeholder={t(dictionary.sendUsMessage)}
+              required
             />
           </div>
           <button
             type="submit"
-            className="bg-accent text-white font-medium py-2 px-4 rounded-md hover:bg-yellow-600 transition-colors"
+            disabled={status.loading}
+            className={`bg-accent text-white font-medium py-2 px-4 rounded-md hover:bg-yellow-600 transition-colors ${
+              status.loading ? "opacity-50 cursor-not-allowed" : ""
+            }`}
           >
-            {t(dictionary.sendMessage)}
+            {status.loading ? "Sending..." : t(dictionary.sendMessage)}
           </button>
+          {status.success && (
+            <p className="text-green-500 mt-2">{status.success}</p>
+          )}
+          {status.error && <p className="text-red-500 mt-2">{status.error}</p>}
         </form>
       </div>
     </section>

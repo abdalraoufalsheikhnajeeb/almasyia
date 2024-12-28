@@ -54,7 +54,7 @@ const WorldClock = ({ params }: { params: Promise<{ lang: Locale }> }) => {
             className="box flex flex-col justify-center items-center mx-1"
           >
             <div className="flex items-center justify-center ps-8">
-              <h2 className="text-2xl font-bold text-primary">
+              <h2 className="text-2xl font-bold text-white">
                 {lang === "en"
                   ? zone.nameEN
                   : lang === "ar"
@@ -63,7 +63,7 @@ const WorldClock = ({ params }: { params: Promise<{ lang: Locale }> }) => {
                 <span className="text-[#b9d2e7] text-xl ms-2">{zone.flag}</span>
               </h2>
             </div>
-            <p className="text-xl text-litePrimary">{times[zone.nameEN]}</p>
+            <p className="text-xl text-white ">{times[zone.nameEN]}</p>
           </div>
         ))}
       </div>

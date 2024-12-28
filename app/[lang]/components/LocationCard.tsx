@@ -106,7 +106,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
             quality={1}
             src={flagSrc}
             alt={`${locationName} flag`}
-            className="w-16 mb-5"
+            className="w-16 mb-2 rounded-[100%] object-fill aspect-square"
           />
         </div>
         <div className="flex flex-col mb-8 lg:ms-4">

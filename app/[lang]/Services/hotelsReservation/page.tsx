@@ -13,13 +13,15 @@ export default async function page({
   return (
     <div className="max-w-[95vw] mx-auto">
       <AnTitle title={dic.hotelReservation} />
-      <h3 className="text-3xl font-bold text-center mb-4">{dic.hoteltext}</h3>
+      <h3 className="text-3xl font-bold text-center mb-4 text-primary">
+        {dic.hoteltext}
+      </h3>
       <div className=" flex flex-col-reverse lg:flex-row gap-4 box">
         <div className="flex flex-col lg:w-2/3">
-          <p className="text-center text-2xl">
+          <p className="text-center text-2xl mb-6 flex box flex-col lg:flex-row items-center gap-4">
             {lang === "en" && (
               <>
-                Enjoy a luxurious hotel experience with Al-Nujoom Al-Masiya,
+                Enjoy a luxurious hotel experience with AlNujoom AlMasiya,
                 offering the best accommodation options in 3, 4, and 5-star
                 hotels with exceptional services and stunning views.
               </>
@@ -33,8 +35,8 @@ export default async function page({
             )}
             {lang === "ru" && (
               <>
-                Наслаждайтесь роскошным гостиничным опытом с Al-Nujoom
-                Al-Masiya, предлагающим лучшие варианты размещения в 3, 4 и
+                Наслаждайтесь роскошным гостиничным опытом с AlNujoom
+                AlMasiya, предлагающим лучшие варианты размещения в 3, 4 и
                 5-звездочных отелях с исключительным обслуживанием и
                 потрясающими видами.
               </>

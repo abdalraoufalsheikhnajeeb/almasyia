@@ -21,7 +21,7 @@ const QatarAirways = async ({
             alt="Qatar Airways"
             className="w-96 mb-5"
           />
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             Qatar Airways is the state-owned flag carrier of Qatar. Established
             in 1993, it operates a hub-and-spoke network, flying to over 160
             international destinations across Africa, Asia, Europe, the
@@ -29,28 +29,28 @@ const QatarAirways = async ({
             in Doha.
           </p>
           <h2 className="text-2xl font-bold mb-2">History</h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             Qatar Airways was founded in 1993 and has since grown to become one
             of the world’s leading airlines, known for its commitment to
             providing a high level of service and luxury. It is a member of the
             Oneworld alliance, enhancing its connectivity globally.
           </p>
           <h2 className="text-2xl font-bold mb-2">Fleet</h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             The airlines fleet includes a mix of modern Airbus and Boeing
             aircraft, such as the Airbus A350, Airbus A380, Boeing 777, and
             Boeing 787 Dreamliner. Qatar Airways is renowned for maintaining a
             young and technologically advanced fleet.
           </p>
           <h2 className="text-2xl font-bold mb-2">Destinations</h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             Qatar Airways serves an extensive network of destinations, covering
             major cities and popular tourist spots across Africa, Asia, Europe,
             the Americas, and Oceania. Key destinations include Doha, London,
             New York, Sydney, Tokyo, and Paris.
           </p>
           <h2 className="text-2xl font-bold mb-2">Services</h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             The airline offers a variety of services to ensure a high-quality
             travel experience, including award-winning in-flight entertainment,
             gourmet meals, and comfortable seating. Business and First Class
@@ -58,14 +58,14 @@ const QatarAirways = async ({
             dining, and access to exclusive lounges.
           </p>
           <h2 className="text-2xl font-bold mb-2">In-Flight Experience</h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             Passengers can enjoy a state-of-the-art in-flight entertainment
             system with a wide selection of movies, TV shows, music, and games.
             The airline also offers Wi-Fi on many of its flights, enabling
             passengers to stay connected.
           </p>
           <h2 className="text-2xl font-bold mb-2">Frequent Flyer Program</h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             Qatar Airways frequent flyer program, Privilege Club, rewards loyal
             customers with Qmiles that can be redeemed for flights, upgrades,
             and other benefits. Members enjoy perks such as priority check-in,
@@ -74,7 +74,7 @@ const QatarAirways = async ({
           <h2 className="text-2xl font-bold mb-2">
             Booking and Customer Service
           </h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             Booking flights with Qatar Airways is easy through their official
             website, mobile app, and authorized travel agents. The customer
             service team is available to assist with reservations, inquiries,
@@ -84,21 +84,21 @@ const QatarAirways = async ({
           <h2 className="text-2xl font-bold mb-2">
             Corporate Social Responsibility
           </h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             Qatar Airways is committed to sustainable practices and supporting
             local communities. The airline engages in various CSR initiatives,
             including environmental conservation efforts, education programs,
             and charitable partnerships.
           </p>
           <h2 className="text-2xl font-bold mb-2">Contact Information</h2>
-          <p className="text-gray-700">
+          <p className="text-primary">
             For more information or to book a flight, visit the official Qatar
             Airways website or contact their customer service at +971545866066.
             Follow them on social media for the latest updates and promotions.
           </p>
 
           <h2 className="text-2xl font-bold mb-4">Airline Information</h2>
-          <table className="w-fit text-start text-gray-700">
+          <table className="w-fit text-start text-primary">
             <tbody>
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">Code IATA</td>
@@ -168,34 +168,34 @@ const QatarAirways = async ({
             alt="الخطوط الجوية القطرية"
             className="w-96 mb-5"
           />
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             الخطوط الجوية القطرية هي الناقل الوطني لدولة قطر. تأسست في عام 1993،
             وتدير شبكة مركزية تطير إلى أكثر من 160 وجهة دولية عبر إفريقيا وآسيا
             وأوروبا والأمريكيتين وأوقيانوسيا من مقرها في مطار حمد الدولي في
             الدوحة.
           </p>
           <h2 className="text-2xl font-bold mb-2">التاريخ</h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             تأسست الخطوط الجوية القطرية في عام 1993 ومنذ ذلك الحين نمت لتصبح
             واحدة من الشركات الرائدة في العالم، معروفة بالتزامها بتقديم خدمة
             عالية المستوى والفخامة. وهي عضو في تحالف ون وورلد، مما يعزز من
             اتصالاتها العالمية.
           </p>
           <h2 className="text-2xl font-bold mb-2">الأسطول</h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             يشمل أسطول الشركة مزيجًا من طائرات إيرباص وبوينغ الحديثة، مثل إيرباص
             A350، إيرباص A380، بوينغ 777، وبوينغ 787 دريملاينر. تشتهر الخطوط
             الجوية القطرية بالحفاظ على أسطول شاب ومتقدم تكنولوجيًا.
           </p>
           <h2 className="text-2xl font-bold mb-2">الوجهات</h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             تخدم الخطوط الجوية القطرية شبكة واسعة من الوجهات، تغطي المدن
             الرئيسية والأماكن السياحية الشهيرة عبر إفريقيا وآسيا وأوروبا
             والأمريكيتين وأوقيانوسيا. تشمل الوجهات الرئيسية الدوحة، لندن،
             نيويورك، سيدني، طوكيو وباريس.
           </p>
           <h2 className="text-2xl font-bold mb-2">الخدمات</h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             تقدم الشركة مجموعة متنوعة من الخدمات لضمان تجربة سفر عالية الجودة،
             بما في ذلك الترفيه الفائز بالجوائز على متن الطائرة، الوجبات الفاخرة،
             والمقاعد المريحة. يتمتع ركاب درجة رجال الأعمال والدرجة الأولى بمزايا
@@ -203,34 +203,34 @@ const QatarAirways = async ({
             الحصرية.
           </p>
           <h2 className="text-2xl font-bold mb-2">تجربة السفر</h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             يمكن للركاب الاستمتاع بنظام ترفيه حديث على متن الطائرة مع مجموعة
             واسعة من الأفلام والبرامج التلفزيونية والموسيقى والألعاب. توفر
             الشركة أيضًا خدمة الواي فاي على العديد من رحلاتها، مما يتيح للركاب
             البقاء متصلين.
           </p>
           <h2 className="text-2xl font-bold mb-2">برنامج الولاء</h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             برنامج الولاء من الخطوط الجوية القطرية،نادي الامتياز، يكافئ العملاء
             المخلصين بنقاط يمكن استبدالها برحلات وترقيات ومزايا أخرى. يتمتع
             الأعضاء بمزايا مثل أولوية تسجيل الدخول، وزن أمتعة إضافي، والوصول إلى
             الصالات الحصرية.
           </p>
           <h2 className="text-2xl font-bold mb-2">الحجز وخدمة العملاء</h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             يمكن حجز الرحلات مع الخطوط الجوية القطرية بسهولة عبر موقعها الرسمي،
             التطبيق المحمول، والوكلاء المعتمدين. فريق خدمة العملاء متاح للمساعدة
             في الحجوزات والاستفسارات والطلبات الخاصة. توفر الشركة أيضًا خدمة
             تسجيل الدخول عبر الإنترنت وخيارات بطاقة الصعود المحمولة.
           </p>
           <h2 className="text-2xl font-bold mb-2">المسؤولية الاجتماعية</h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             تلتزم الخطوط الجوية القطرية بالممارسات المستدامة ودعم المجتمعات
             المحلية. تشارك الشركة في مبادرات المسؤولية الاجتماعية المختلفة، بما
             في ذلك جهود الحفاظ على البيئة، برامج التعليم، والشراكات الخيرية.
           </p>
           <h2 className="text-2xl font-bold mb-2">معلومات الاتصال</h2>
-          <p className="text-gray-700">
+          <p className="text-primary">
             لمزيد من المعلومات أو لحجز رحلة، قم بزيارة الموقع الرسمي للخطوط
             الجوية القطرية أو اتصل بخدمة العملاء على الرقم +971545866066. تابعهم
             على وسائل التواصل الاجتماعي للحصول على أحدث التحديثات والعروض.
@@ -239,7 +239,7 @@ const QatarAirways = async ({
           <h2 className="text-2xl font-bold mb-4">
             معلومات عن الخطوط الجوية القطرية
           </h2>
-          <table className="w-fit text-start text-gray-700">
+          <table className="w-fit text-start text-primary">
             <tbody>
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">رمز IATA</td>
@@ -307,35 +307,35 @@ const QatarAirways = async ({
             alt="Qatar Airways"
             className="w-96 mb-5"
           />
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             Qatar Airways - государственная авиакомпания Катара. Основанная в
             1993 году, она управляет сетью рейсов, соединяющей более 160
             международных направлений в Африке, Азии, Европе, Америке и Океании
             из своего хаба в Международном аэропорту Хамад в Дохе.
           </p>
           <h2 className="text-2xl font-bold mb-2">История</h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             Qatar Airways была основана в 1993 году и с тех пор выросла, став
             одной из ведущих авиакомпаний мира, известной своим высоким уровнем
             обслуживания и роскошью. Она является членом альянса Oneworld, что
             улучшает ее глобальную связанность.
           </p>
           <h2 className="text-2xl font-bold mb-2">Флот</h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             Флот авиакомпании включает в себя современные самолеты Airbus и
             Boeing, такие как Airbus A350, Airbus A380, Boeing 777 и Boeing 787
             Dreamliner. Qatar Airways известна поддержанием молодого и
             технологически продвинутого флота.
           </p>
           <h2 className="text-2xl font-bold mb-2">Пункты назначения</h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             Qatar Airways обслуживает обширную сеть направлений, охватывающих
             крупные города и популярные туристические места по всей Африке,
             Азии, Европе, Америке и Океании. Основные направления включают Доху,
             Лондон, Нью-Йорк, Сидней, Токио и Париж.
           </p>
           <h2 className="text-2xl font-bold mb-2">Услуги</h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             Авиакомпания предлагает различные услуги для обеспечения высокого
             качества путешествий, включая отмеченные наградами развлекательные
             программы на борту, изысканные блюда и удобные сиденья. Пассажиры
@@ -344,14 +344,14 @@ const QatarAirways = async ({
             и доступ в эксклюзивные залы ожидания.
           </p>
           <h2 className="text-2xl font-bold mb-2">Опыт полета</h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             Пассажиры могут наслаждаться современными развлекательными системами
             на борту с широким выбором фильмов, телешоу, музыки и игр.
             Авиакомпания также предоставляет Wi-Fi на многих своих рейсах,
             позволяя пассажирам оставаться на связи.
           </p>
           <h2 className="text-2xl font-bold mb-2">Программа лояльности</h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             Программа лояльности Qatar Airways, Privilege Club, вознаграждает
             лояльных клиентов милями, которые можно обменять на билеты, апгрейды
             и другие преимущества. Участники пользуются такими привилегиями, как
@@ -361,7 +361,7 @@ const QatarAirways = async ({
           <h2 className="text-2xl font-bold mb-2">
             Бронирование и обслуживание клиентов
           </h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             Бронирование рейсов с Qatar Airways легко осуществляется через их
             официальный сайт, мобильное приложение и авторизованных
             туристических агентов. Команда обслуживания клиентов доступна для
@@ -372,14 +372,14 @@ const QatarAirways = async ({
           <h2 className="text-2xl font-bold mb-2">
             Корпоративная социальная ответственность
           </h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-primary mb-4">
             Qatar Airways стремится к устойчивым практикам и поддержке местных
             сообществ. Авиакомпания участвует в различных инициативах КСО,
             включая усилия по сохранению окружающей среды, образовательные
             программы и благотворительные партнерства.
           </p>
           <h2 className="text-2xl font-bold mb-2">Контактная информация</h2>
-          <p className="text-gray-700">
+          <p className="text-primary">
             Для получения дополнительной информации или бронирования рейса
             посетите официальный сайт Qatar Airways или свяжитесь с их службой
             поддержки клиентов по телефону +971545866066. Следите за ними в
@@ -389,7 +389,7 @@ const QatarAirways = async ({
           <h2 className="text-2xl font-bold mb-4">
             Информация об авиакомпании
           </h2>
-          <table className="w-fit text-start text-gray-700">
+          <table className="w-fit text-start text-primary">
             <tbody>
               <tr className="border-b">
                 <td className="font-bold py-2 pe-8">Код IATA</td>

@@ -185,7 +185,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
             min={new Date().toISOString().split("T")[0]}
             value={formData.arrivalDate.toISOString().split("T")[0]}
             onChange={handleChange}
-            className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
+            className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-primary"
             required
           />
         </div>
@@ -208,7 +208,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
             min={new Date().toISOString().split("T")[0]}
             value={formData.departureDate.toISOString().split("T")[0]}
             onChange={handleChange}
-            className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-gray-700"
+            className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-primary"
             required
           />
         </div>

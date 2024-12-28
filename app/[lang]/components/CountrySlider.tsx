@@ -44,7 +44,7 @@ const CountrySlider = ({ dic, data, title, subtitle }: CountrySliderProps) => {
   return (
     <section dir="ltr" className="lg:max-w-7xl max-w-[95vw] px-2  mx-auto">
       <AnTitle title={title} />
-      <h3 className="text-3xl font-bold text-center mb-4">{subtitle}</h3>
+      <h3 className="text-3xl font-bold text-center mb-4 text-primary">{subtitle}</h3>
       <div className="embla" ref={emblaRef}>
         <div className="embla__container flex">
           {data.map((card, index) => {
@@ -61,20 +61,20 @@ const CountrySlider = ({ dic, data, title, subtitle }: CountrySliderProps) => {
             return (
               <div key={index} className="embla__slide p-4 flex-shrink-0 w-1/3">
                 <Link href={`/${dic.currLang}${card.route.toLowerCase()}`}>
-                  <div className="bg-gray-200 relative border rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg h-full flex flex-col justify-center items-center overflow-hidden">
-                    <div className="bg-white flex justify-center items-center w-full">
+                  <div className="bg-[#3b86ff] relative border rounded-lg shadow transition-transform duration-300 hover:scale-105 hover:shadow-lg h-full flex flex-col justify-center items-center overflow-hidden">
+                    <div className=" flex justify-center items-center w-full">
                       <Image
                         loading="lazy"
                         quality={60}
                         width={400}
                         height={200}
-                        className="rounded-t-lg aspect-video w-full object-contain"
+                        className="rounded-t-lg aspect-video w-full scale-[103%]  object-contain"
                         src={card.src}
                         alt={cardTitle}
                       />
                     </div>
                     <div className="p-4 pb-7 flex-grow flex flex-col justify-between h-28">
-                      <h2 className="mb-2 text-2xl font-bold tracking-tight text-primary text-center">
+                      <h2 className="mb-2 text-2xl font-bold tracking-tight text-white text-center">
                         {cardTitle}
                       </h2>
                       <span

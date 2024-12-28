@@ -9,8 +9,8 @@ export default async function page({
   const { lang } = await params;
 
   return (
-    <section className="  flex-col lg:flex-row lg:min-h-[50vh] lg:justify-between mt-24 gap-4 flex  box">
-      <div className="flex w-full lg:w-1/2 flex-col my-12 items-center gap-6 lg:items-start overflow-visible text-primary">
+    <section className="  flex-col lg:flex-row lg:min-h-[50vh] lg:justify-between mt-24 gap-4 flex  box-lite">
+      <div className="flex w-full lg:w-1/2 flex-col my-12 items-center gap-6 lg:items-start overflow-visible text--primary">
         <Image
           loading="lazy"
           quality={60}
@@ -49,9 +49,9 @@ export default async function page({
             high quality and affordable hotel bookings worldwide, fast visa
             processing, and a wide range of diverse tourist programs, airport
             transfer services, and travel insurance. Our tours combine enjoyment
-            and variety, delivering unforgettable experiences. Al-Nujoom
-            Al-Masiya is dedicated to providing comprehensive tourism services
-            and exceptional trips at the best prices, focusing on customer
+            and variety, delivering unforgettable experiences. AlNujoom AlMasiya
+            is dedicated to providing comprehensive tourism services and
+            exceptional trips at the best prices, focusing on customer
             satisfaction and service quality. Discover the world with us in
             safety and comfort.
           </p>
@@ -70,8 +70,8 @@ export default async function page({
             бронирование отелей по всему миру, быстрое оформление виз и широкий
             ассортимент туристических программ, трансферов из аэропорта и
             туристических страховок. Наши туры сочетают в себе удовольствие и
-            разнообразие, предлагая незабываемые впечатления. Al-Nujoom
-            Al-Masiya стремится предоставлять комплексные туристические услуги и
+            разнообразие, предлагая незабываемые впечатления. AlNujoom AlMasiya
+            стремится предоставлять комплексные туристические услуги и
             исключительные поездки по лучшим ценам, уделяя особое внимание
             удовлетворенности клиентов и качеству обслуживания. Откройте для
             себя мир с нами в безопасности и комфорте.

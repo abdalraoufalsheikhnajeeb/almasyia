@@ -10,7 +10,7 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
   return (
     <div className="max-w-[95vw] mx-auto mx-auto">
       <AnTitle title={dic.delivery} />
-      <h3 className="text-3xl font-bold text-center mb-4">
+      <h3 className="text-3xl font-bold text-center mb-4 text-primary">
         {dic.deliveryText}
       </h3>
       <div className="box flex flex-col-reverse lg:flex-row gap-4">
