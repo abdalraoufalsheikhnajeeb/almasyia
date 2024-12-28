@@ -1,7 +1,8 @@
 // components/ContactPage.tsx
 "use client";
 
-import { use, useState } from "react";
+import { use } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { type Locale } from "../../../../i18n-config";
 
@@ -17,7 +18,7 @@ const phoneNumbers = [
   },
   {
     alt: "Syria Flag",
-    href: "tel:+963950026610",
+    href: "tel:+96350026610",
     src: "/images/syria-flag.svg",
   },
   {
@@ -27,21 +28,32 @@ const phoneNumbers = [
   },
 ];
 
-const uaeLocation = (dictionary: any) => ({
-  flagSrc: "/images/emirate-flag.svg",
-  googleMapsUrl: "https://www.google.com/maps/place/alnujoom+almasiya...",
-  locationName: dictionary.uaeB,
-  locationDetails: dictionary.locationUAE,
-  whatsLink: "https://wa.me/971545866066",
-});
-
-const syriaLocation = (dictionary: any) => ({
-  flagSrc: "/images/syria-flag.svg",
-  googleMapsUrl: "https://www.google.com/maps/place/Alnujoom+almassiya/...",
-  locationName: dictionary.sarB,
-  locationDetails: dictionary.locationSAR,
-  whatsLink: "https://wa.me/971545866066",
-});
+const locations = (dictionary: any) => [
+  {
+    countryName: dictionary.uaeB,
+    flagSrc: "/images/emirate-flag.svg",
+    cityAddress: dictionary.locationUAE,
+    phone: "+971545866066",
+    googleMapsUrl: "https://www.google.com/maps/place/alnujoom+almasiya...",
+    whatsLink: "https://wa.me/971545866066",
+  },
+  {
+    countryName: dictionary.sarB,
+    flagSrc: "/images/syria-flag.svg",
+    cityAddress: dictionary.locationSAR,
+    phone: "+96350026610",
+    googleMapsUrl: "https://www.google.com/maps/place/Alnujoom+almassiya/...",
+    whatsLink: "https://wa.me/96350026610",
+  },
+  {
+    countryName: dictionary.ruB,
+    flagSrc: "/images/ru.svg",
+    cityAddress: dictionary.locationRU,
+    phone: "+79189239693",
+    googleMapsUrl: "https://www.google.com/maps/place/Your+Location+in+Oufa...", // أضف رابط Google Maps هنا إذا كان متاحًا
+    whatsLink: "https://wa.me/79189239693",
+  },
+];
 
 export default function ContactPage({ params }: { params: Promise<Params> }) {
   const { lang } = use(params);
@@ -74,26 +86,31 @@ export default function ContactPage({ params }: { params: Promise<Params> }) {
     subject: { ar: "الموضوع", en: "Subject", ru: "Тема" },
     // location keys
     uaeB: {
-      ar: "الإمارات العربية المتحدة",
-      en: "United Arab Emirates",
-      ru: "ОАЭ",
+      ar: "الإمارات العربية المتحدة 🇦🇪",
+      en: "United Arab Emirates 🇦🇪",
+      ru: "Объединённые Арабские Эмираты 🇦🇪",
     },
     locationUAE: {
-      ar: "دبي ، الإمارات العربية المتحدة",
-      en: "Dubai, UAE",
-      ru: "Дубай, ОАЭ",
+      ar: "دبي، ديرة بور سعيد",
+      en: "Dubai, Dira Bawrsai",
+      ru: "Дубай, Дира Бурсай",
     },
-    sarB: { ar: "سوريا", en: "Syria", ru: "Сирия" },
+    sarB: { ar: "سوريا 🇸🇾", en: "Syria 🇸🇾", ru: "Сирия 🇸🇾" },
     locationSAR: {
-      ar: "دمشق ، سوريا",
-      en: "Damascus, Syria",
-      ru: "Дамаск, Сирия",
+      ar: "دمشق- البرامكة خلف الهجرة والجوازات",
+      en: "Damascus - Al-Baramka behind Immigration and Passports",
+      ru: "Дамаск - Аль-Барамка за иммиграцией и паспортным столом",
+    },
+    ruB: { ar: "روسيا 🇷🇺", en: "Russia 🇷🇺", ru: "Россия 🇷🇺" },
+    locationRU: {
+      ar: "بشكيريا- أوفا",
+      en: "Bashkiria - Oufa",
+      ru: "Башкирия - Уфа",
     },
   };
 
   // Build location objects
-  const uaeLoc = uaeLocation(dictionary);
-  const syriaLoc = syriaLocation(dictionary);
+  const locs = locations(dictionary);
 
   // Translate helper
   function t(key: any) {
@@ -147,7 +164,12 @@ export default function ContactPage({ params }: { params: Promise<Params> }) {
       if (res.ok) {
         setStatus({
           loading: false,
-          success: "Thank you for your message!",
+          success:
+            lang === "ar"
+              ? "شكرًا على رسالتك!"
+              : lang === "ru"
+              ? "Спасибо за ваше сообщение!"
+              : "Thank you for your message!",
           error: null,
         });
         setFormData({ name: "", email: "", subject: "", message: "" });
@@ -155,36 +177,47 @@ export default function ContactPage({ params }: { params: Promise<Params> }) {
         setStatus({
           loading: false,
           success: null,
-          error: result.error || "Something went wrong!",
+          error:
+            result.error ||
+            (lang === "ar"
+              ? "حدث خطأ ما!"
+              : lang === "ru"
+              ? "Что-то пошло не так!"
+              : "Something went wrong!"),
         });
       }
     } catch (error) {
       setStatus({
         loading: false,
         success: null,
-        error: "Something went wrong!",
+        error:
+          lang === "ar"
+            ? "حدث خطأ ما!"
+            : lang === "ru"
+            ? "Что-то пошло не так!"
+            : "Something went wrong!",
       });
     }
   };
 
   return (
-    <section className="flex flex-col md:flex-row justify-between p-6 bg-gray-100 min-h-screen">
-      {/* Left Section */}
+    <section className="flex flex-col md:flex-row justify-between p-8 bg-gray-100 min-h-screen mt-12">
+      {/* اليسار: تفاصيل الاتصال */}
       <div className="bg-white shadow-md rounded-md p-6 w-full md:w-1/3">
-        <h2 className="text-white font-bold text-2xl mb-4">
+        <h2 className="text-primary font-bold text-2xl mb-4">
           {t(dictionary.contactUs)}
         </h2>
 
-        {/* Phone numbers */}
+        {/* أرقام الهواتف */}
         <div className="mb-6">
           <h3 className="text-litePrimary font-semibold mb-2">
             {t(dictionary.officePhone)}
           </h3>
           <div className="space-y-2">
             {phoneNumbers.map((phone, idx) => (
-              <div className="flex items-center gap-3" key={idx}>
+              <div className="flex items-center space-x-3" key={idx}>
                 <Image
-                  className="rounded-[100%] object-fill aspect-square"
+                  className="rounded-full object-contain"
                   alt={phone.alt}
                   src={phone.src}
                   width={24}
@@ -201,7 +234,7 @@ export default function ContactPage({ params }: { params: Promise<Params> }) {
           </div>
         </div>
 
-        {/* Email */}
+        {/* البريد الإلكتروني */}
         <div className="mb-6">
           <h3 className="text-litePrimary font-semibold">
             {t(dictionary.mailUs)}
@@ -209,40 +242,49 @@ export default function ContactPage({ params }: { params: Promise<Params> }) {
           <p className="text-gray-600">info@alnujoomalmasiya.com</p>
         </div>
 
-        {/* UAE Location */}
-        <div className="mb-6">
-          <h4 className="font-semibold text-litePrimary">
-            {t(uaeLoc.locationName)}
-          </h4>
-          <p className="text-gray-600">{t(uaeLoc.locationDetails)}</p>
-          <a
-            href={uaeLoc.googleMapsUrl}
-            className="underline text-blue-600"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View on Google Maps
-          </a>
-        </div>
-
-        {/* Syria Location */}
-        <div>
-          <h4 className="font-semibold text-litePrimary">
-            {t(syriaLoc.locationName)}
-          </h4>
-          <p className="text-gray-600">{t(syriaLoc.locationDetails)}</p>
-          <a
-            href={syriaLoc.googleMapsUrl}
-            className="underline text-blue-600"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View on Google Maps
-          </a>
-        </div>
+        {/* تفاصيل المواقع */}
+        {locs.map((loc, idx) => (
+          <div className="mb-6" key={idx}>
+            <div className="flex items-center gap-3 mb-2">
+              <Image
+                className="rounded-full object-contain"
+                alt={loc.countryName}
+                src={loc.flagSrc}
+                width={24}
+                height={24}
+              />
+              <h3 className="text-litePrimary font-semibold text-lg">
+                {t(loc.countryName)}
+              </h3>
+            </div>
+            <p className="text-gray-600 mb-2">{t(loc.cityAddress)}</p>
+            <div className="flex items-center gap-3 mb-2">
+              <a
+                href={`tel:${loc.phone}`}
+                className="text-gray-600 hover:text-blue-600 transition-colors"
+              >
+                {loc.phone}
+              </a>
+            </div>
+            {loc.googleMapsUrl && (
+              <a
+                href={loc.googleMapsUrl}
+                className="underline text-blue-600"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {lang === "ar"
+                  ? "جوجل ماب"
+                  : lang === "ru"
+                  ? "Посмотреть на Google Картах"
+                  : "View on Google Maps"}
+              </a>
+            )}
+          </div>
+        ))}
       </div>
 
-      {/* Right Section: Contact Form */}
+      {/* اليمين: نموذج الاتصال */}
       <div className="bg-white shadow-md rounded-md p-6 w-full md:w-2/3 mt-6 md:mt-0 md:ml-6">
         <h2 className="text-primary font-bold text-2xl mb-4">
           {t(dictionary.sendUsMessage)}
@@ -256,7 +298,7 @@ export default function ContactPage({ params }: { params: Promise<Params> }) {
               <input
                 type="text"
                 id="name"
-                name="name" // Added name attribute
+                name="name"
                 value={formData.name}
                 onChange={handleChange}
                 className="mt-1 w-full border border-gray-300 rounded-md p-2"
@@ -265,16 +307,13 @@ export default function ContactPage({ params }: { params: Promise<Params> }) {
               />
             </div>
             <div className="flex-1">
-              <label
-                htmlFor="email"
-                className="block text-primary font-medium"
-              >
+              <label htmlFor="email" className="block text-primary font-medium">
                 {t(dictionary.yourEmail)}
               </label>
               <input
                 type="email"
                 id="email"
-                name="email" // Added name attribute
+                name="email"
                 value={formData.email}
                 onChange={handleChange}
                 className="mt-1 w-full border border-gray-300 rounded-md p-2"
@@ -284,16 +323,13 @@ export default function ContactPage({ params }: { params: Promise<Params> }) {
             </div>
           </div>
           <div>
-            <label
-              htmlFor="subject"
-              className="block text-primary font-medium"
-            >
+            <label htmlFor="subject" className="block text-primary font-medium">
               {t(dictionary.subject)}
             </label>
             <input
               type="text"
               id="subject"
-              name="subject" // Added name attribute
+              name="subject"
               value={formData.subject}
               onChange={handleChange}
               className="mt-1 w-full border border-gray-300 rounded-md p-2"
@@ -302,19 +338,26 @@ export default function ContactPage({ params }: { params: Promise<Params> }) {
             />
           </div>
           <div>
-            <label
-              htmlFor="message"
-              className="block text-primary font-medium"
-            >
-              {t(dictionary.sendUsMessage)}
+            <label htmlFor="message" className="block text-primary font-medium">
+              {lang === "ar"
+                ? "رسالتك"
+                : lang === "ru"
+                ? "Ваше сообщение"
+                : "Your Message"}
             </label>
             <textarea
               id="message"
-              name="message" // Added name attribute
+              name="message"
               value={formData.message}
               onChange={handleChange}
               className="mt-1 w-full border border-gray-300 rounded-md p-2 h-28"
-              placeholder={t(dictionary.sendUsMessage)}
+              placeholder={
+                lang === "ar"
+                  ? "اكتب رسالتك هنا..."
+                  : lang === "ru"
+                  ? "Напишите ваше сообщение здесь..."
+                  : "Write your message here..."
+              }
               required
             />
           </div>
@@ -325,7 +368,13 @@ export default function ContactPage({ params }: { params: Promise<Params> }) {
               status.loading ? "opacity-50 cursor-not-allowed" : ""
             }`}
           >
-            {status.loading ? "Sending..." : t(dictionary.sendMessage)}
+            {status.loading
+              ? lang === "ar"
+                ? "جارٍ الإرسال..."
+                : lang === "ru"
+                ? "Отправка..."
+                : "Sending..."
+              : t(dictionary.sendMessage)}
           </button>
           {status.success && (
             <p className="text-green-500 mt-2">{status.success}</p>
