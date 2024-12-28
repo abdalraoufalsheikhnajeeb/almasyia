@@ -217,7 +217,7 @@ export default function ContactPage({ params }: { params: Promise<Params> }) {
             {phoneNumbers.map((phone, idx) => (
               <div className="flex items-center space-x-3" key={idx}>
                 <Image
-                  className="rounded-full object-contain"
+                  className="rounded-full object-fill aspect-square"
                   alt={phone.alt}
                   src={phone.src}
                   width={24}
@@ -247,7 +247,7 @@ export default function ContactPage({ params }: { params: Promise<Params> }) {
           <div className="mb-6" key={idx}>
             <div className="flex items-center gap-3 mb-2">
               <Image
-                className="rounded-full object-contain"
+                className="rounded-full object-fill aspect-square"
                 alt={loc.countryName}
                 src={loc.flagSrc}
                 width={24}
