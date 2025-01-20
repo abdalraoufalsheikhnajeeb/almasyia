@@ -63,7 +63,7 @@ const Locations: React.FC<LocationsProps> = ({ params: { lang } }) => {
   };
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-[100dvh] py-2 bg_Lite">
+    <main className="flex flex-col items-center justify-center min-h-[100dvh] py-2 bg-[#3b86ff]">
       <LocationCard {...uaeLocation} />
       <br />
       <br />

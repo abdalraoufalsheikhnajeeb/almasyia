@@ -120,7 +120,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
                 alt={`${addClass} flag`}
                 className="w-16 me-4"
               />
-              <p className="text-2xl text-primary font-bold">
+              <p className="text-2xl text-white font-bold">
                 {locationDetails}
               </p>
             </div>
@@ -135,7 +135,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
                 alt={`${locationName} flag`}
                 className="w-16 me-4"
               />
-              <p className="text-2xl text-primary font-bold">{phoneNumber}</p>
+              <p className="text-2xl text-white font-bold">{phoneNumber}</p>
             </div>
           </Link>
         </div>
