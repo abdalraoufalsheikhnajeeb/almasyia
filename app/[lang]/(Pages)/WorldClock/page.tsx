@@ -40,7 +40,6 @@ const WorldClock = ({ params }: { params: Promise<{ lang: Locale }> }) => {
   }, [params]);
 
   if (!lang) {
-    // Optionally render a loading state while lang is being resolved
     return <div>Loading...</div>;
   }
 
