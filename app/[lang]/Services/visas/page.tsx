@@ -87,17 +87,17 @@ export default async function page({
                     </div>
                   </div>
                   {duration && (
-                    <div className="text-white text-3xl font-bold list-disc mb-4">
+                    <div className="text-primary text-3xl font-bold list-disc mb-4">
                       {dic.duration}:
-                      <p className="text-white font-normal text-xl mt-2">
+                      <p className="text-litePrimary font-normal text-xl mt-2">
                         {duration}
                       </p>
                     </div>
                   )}
                   {requirements && (
-                    <div className="text-white text-3xl font-bold list-disc mb-4">
+                    <div className="text-primary text-3xl font-bold list-disc mb-4">
                       {dic.requirements}:
-                      <div className="text-white font-normal text-xl mt-2 ms-6 list-disc">
+                      <div className="text-litePrimary font-normal text-xl mt-2 ms-6 list-disc">
                         {requirements.map((req, i) => (
                           <div key={i}>{req}</div>
                         ))}
@@ -105,9 +105,9 @@ export default async function page({
                     </div>
                   )}
                   {description && (
-                    <div className="text-white text-3xl font-bold list-disc mb-4">
+                    <div className="text-primary text-3xl font-bold list-disc mb-4">
                       {dic.description}:
-                      <p className="text-white font-normal text-xl mt-2">
+                      <p className="text-litePrimary font-normal text-xl mt-2">
                         {description}
                       </p>
                     </div>

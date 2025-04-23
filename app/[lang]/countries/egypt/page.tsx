@@ -108,17 +108,17 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           <table className="min-w-full bg-white shadow-md rounded-lg">
             <thead>
               <tr>
-                <th className="px-4 py-2 text-center bg-blue-600 text-white">
+                <th className="px-4 py-2 text-center bg-blue-600 text-litePrimary">
                   {lang === "en" ? "Cairo" : lang === "ar" ? "القاهرة" : "Каир"}
                 </th>
-                <th className="px-4 py-2 text-center bg-blue-600 text-white">
+                <th className="px-4 py-2 text-center bg-blue-600 text-litePrimary">
                   {lang === "en"
                     ? "Alexandria"
                     : lang === "ar"
                     ? "الإسكندرية"
                     : "Александрия"}
                 </th>
-                <th className="px-4 py-2 text-center bg-blue-600 text-white">
+                <th className="px-4 py-2 text-center bg-blue-600 text-litePrimary">
                   {lang === "en"
                     ? "Hurghada"
                     : lang === "ar"
@@ -232,17 +232,17 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           <table className="min-w-full bg-white shadow-md rounded-lg">
             <thead>
               <tr>
-                <th className="px-4 py-2 text-center bg-blue-600 text-white">
+                <th className="px-4 py-2 text-center bg-blue-600 text-litePrimary">
                   {lang === "en" ? "Cairo" : lang === "ar" ? "القاهرة" : "Каир"}
                 </th>
-                <th className="px-4 py-2 text-center bg-blue-600 text-white">
+                <th className="px-4 py-2 text-center bg-blue-600 text-litePrimary">
                   {lang === "en"
                     ? "Alexandria"
                     : lang === "ar"
                     ? "الإسكندرية"
                     : "Александрия"}
                 </th>
-                <th className="px-4 py-2 text-center bg-blue-600 text-white">
+                <th className="px-4 py-2 text-center bg-blue-600 text-litePrimary">
                   {lang === "en"
                     ? "Hurghada"
                     : lang === "ar"

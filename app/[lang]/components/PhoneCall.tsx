@@ -15,7 +15,7 @@ export default function PhoneCall() {
       <style jsx>{`
         @keyframes rippling {
           0% {
-            box-shadow: 0 0 0 0 #3b86ff, 0 0 0 5px rgba(59, 134, 255, 0);
+            box-shadow: 0 0 0 0 #316792, 0 0 0 5px rgba(59, 134, 255, 0);
           }
           100% {
             box-shadow: 0 0 0 20px rgba(59, 134, 255, 0),
@@ -37,7 +37,7 @@ export default function PhoneCall() {
         <div
           className={`rounded-full ${
             !isOpen && " animate-ripple"
-          } p-2 lg:p-4 w-10 h-10 lg:w-20 lg:h-20 flex-shrink-0 flex justify-center items-center bg-[#3b86ff]`}
+          } p-2 lg:p-4 w-10 h-10 lg:w-20 lg:h-20 flex-shrink-0 flex justify-center items-center bg-[#316792]`}
         >
           <Image
             priority
@@ -93,5 +93,3 @@ export default function PhoneCall() {
     </>
   );
 }
-
-

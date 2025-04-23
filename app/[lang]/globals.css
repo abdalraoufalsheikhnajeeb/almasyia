@@ -10,7 +10,7 @@
 .box-lite {
   border-radius: 0.5rem;
   padding: 1rem 2rem;
-  background-color: #3b86ff6a;
+  background-color: #67a7da6a;
   max-width: 85rem;
   color: #244b6b;
   margin-inline: auto;
@@ -19,12 +19,14 @@
 .box {
   border-radius: 0.5rem;
   padding: 1rem 2rem;
-  background-color: #3b86ff;
+  background-color: white;
   max-width: 85rem;
-  color: white;
+  color: #316792;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 6px 24px rgba(0, 0, 0, 0.1);
   margin-inline: auto;
   margin-bottom: 1.5rem;
 }
+
 @keyframes typewriter {
   from {
     width: 0;

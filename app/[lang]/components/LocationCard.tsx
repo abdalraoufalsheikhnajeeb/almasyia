@@ -24,7 +24,7 @@ const SampleNextArrow = ({ onClick }: { onClick: () => void }) => (
     onClick={onClick}
   >
     <svg
-      className="w-6 h-6 text-white"
+      className="w-6 h-6 text-primary"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
@@ -46,7 +46,7 @@ const SamplePrevArrow = ({ onClick }: { onClick: () => void }) => (
     onClick={onClick}
   >
     <svg
-      className="w-6 h-6 text-white"
+      className="w-6 h-6 text-primary"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
@@ -120,7 +120,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
                 alt={`${addClass} flag`}
                 className="w-16 me-4"
               />
-              <p className="text-2xl text-white font-bold">
+              <p className="text-2xl text-primary font-bold">
                 {locationDetails}
               </p>
             </div>
@@ -135,7 +135,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
                 alt={`${locationName} flag`}
                 className="w-16 me-4"
               />
-              <p className="text-2xl text-white font-bold">{phoneNumber}</p>
+              <p className="text-2xl text-primary font-bold">{phoneNumber}</p>
             </div>
           </Link>
         </div>
@@ -167,7 +167,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
             target="_blank"
             href={googleMapsUrl}
             rel="noopener noreferrer"
-            className=" w-auto   text-center mt-4 bg-litePrimary text-white font-bold py-4 px-6 rounded-full hover:bg-blue-700 transition duration-300"
+            className="w-auto text-center mt-4 bg-white border-2 border-litePrimary  text-primary font-bold py-4 px-6 rounded-full hover:bg-blue-200 transition duration-300"
           >
             Find Us on Google Maps
           </Link>

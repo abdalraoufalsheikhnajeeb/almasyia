@@ -114,21 +114,21 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           <table className="min-w-full bg-white shadow-md rounded-lg">
             <thead>
               <tr>
-                <th className="px-4 py-2 text-center bg-blue-600 text-white">
+                <th className="px-4 py-2 text-center bg-blue-600 text-litePrimary">
                   {lang === "en"
                     ? "Sharjah"
                     : lang === "ar"
                     ? "الشارقة"
                     : "Шарджа"}
                 </th>
-                <th className="px-4 py-2 text-center bg-blue-600 text-white">
+                <th className="px-4 py-2 text-center bg-blue-600 text-litePrimary">
                   {lang === "en"
                     ? "Abu Dhabi"
                     : lang === "ar"
                     ? "أبوظبي"
                     : "Абу-Даби"}
                 </th>
-                <th className="px-4 py-2 text-center bg-blue-600 text-white">
+                <th className="px-4 py-2 text-center bg-blue-600 text-litePrimary">
                   {lang === "en" ? "Dubai" : lang === "ar" ? "دبي" : "Дубай"}
                 </th>
               </tr>

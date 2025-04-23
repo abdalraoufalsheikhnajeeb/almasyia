@@ -35,7 +35,7 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
                 <h2 className="text-center whitespace-nowrap text-accent text-2xl lg:text-3xl font-extrabold mb-4 tracking-tight group-hover:underline">
                   {title}
                 </h2>
-                <p className="text-start text-base lg:text-lg text-white leading-relaxed">
+                <p className="text-start text-base lg:text-lg text-litePrimary leading-relaxed">
                   {description}
                 </p>
               </div>

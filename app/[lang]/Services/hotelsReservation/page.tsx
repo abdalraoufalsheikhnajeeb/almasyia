@@ -18,7 +18,7 @@ export default async function page({
       </h3>
       <div className=" flex flex-col-reverse lg:flex-row gap-4 box">
         <div className="flex flex-col lg:w-2/3">
-          <p className="text-center text-2xl mb-6 flex box flex-col lg:flex-row items-center gap-4">
+          <p className="text-center text-2xl mb-6 flex flex-col lg:flex-row items-center gap-4">
             {lang === "en" && (
               <>
                 Enjoy a luxurious hotel experience with AlNujoom AlMasiya,

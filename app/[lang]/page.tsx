@@ -37,7 +37,7 @@ const Page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
             height={219}
             className="w-52 lg:w-80 object-cover"
           />
-          {/* <h1 className="text-3xl max-w-3xl font-bold text-white text-center lg:text-start">
+          {/* <h1 className="text-3xl max-w-3xl font-bold text-litePrimary text-center lg:text-start">
             {dic?.contactUsTitle}
           </h1> */}
           {/* Add two inline buttons here inspired by Whatsapp and PhoneCall styles */}
@@ -62,7 +62,7 @@ const Page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           {/* Phone Call Button */}
           {/* <Link href="tel:+971545866066" target="_blank">
               <div
-                className="rounded-full p-3 bg-[#3b86ff] hover:scale-105 transition-transform cursor-pointer flex items-center justify-center"
+                className="rounded-full p-3 bg-[#316792] hover:scale-105 transition-transform cursor-pointer flex items-center justify-center"
                 title="Call us"
               >
                 <Image
@@ -106,7 +106,7 @@ const Page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
                       alt="service image"
                     />
                     <div className="p-3 flex-grow flex flex-col justify-between h-32">
-                      <h2 className="mb-2 text-2xl font-bold tracking-tight text-white text-center">
+                      <h2 className="mb-2 text-2xl font-bold tracking-tight text-litePrimary text-center">
                         {title}
                       </h2>
                       <span className="flex delay-1000 items-end justify-center font-bold underline underline-offset-4">

@@ -364,7 +364,7 @@ export default function ContactPage({ params }: { params: Promise<Params> }) {
           <button
             type="submit"
             disabled={status.loading}
-            className={`bg-accent text-white font-medium py-2 px-4 rounded-md hover:bg-yellow-600 transition-colors ${
+            className={`bg-accent text-litePrimary font-medium py-2 px-4 rounded-md hover:bg-yellow-600 transition-colors ${
               status.loading ? "opacity-50 cursor-not-allowed" : ""
             }`}
           >

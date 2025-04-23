@@ -23,7 +23,7 @@ const Typewriter: React.FC<TypewriterProps> = ({ text, speed = 100 }) => {
   }, [text, speed]);
 
   return (
-    <h2 className="text-3xl max-w-3xl font-bold text-white text-center lg:text-start">
+    <h2 className="text-3xl max-w-3xl font-bold text-litePrimary text-center lg:text-start">
       {displayedText}
     </h2>
   );

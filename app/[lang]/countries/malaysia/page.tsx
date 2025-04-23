@@ -107,21 +107,21 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           <table className="min-w-full bg-white shadow-md rounded-lg">
             <thead>
               <tr>
-                <th className="px-4 py-2 text-center bg-blue-600 text-white">
+                <th className="px-4 py-2 text-center bg-blue-600 text-litePrimary">
                   {lang === "en"
                     ? "Kuala Lumpur"
                     : lang === "ar"
                     ? "كوالا لمبور"
                     : "Куала-Лумпур"}
                 </th>
-                <th className="px-4 py-2 text-center bg-blue-600 text-white">
+                <th className="px-4 py-2 text-center bg-blue-600 text-litePrimary">
                   {lang === "en"
                     ? "Penang"
                     : lang === "ar"
                     ? "بينانغ"
                     : "Пенанг"}
                 </th>
-                <th className="px-4 py-2 text-center bg-blue-600 text-white">
+                <th className="px-4 py-2 text-center bg-blue-600 text-litePrimary">
                   {lang === "en"
                     ? "Langkawi"
                     : lang === "ar"
@@ -226,21 +226,21 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           <table className="min-w-full bg-white shadow-md rounded-lg">
             <thead>
               <tr>
-                <th className="px-4 py-2 text-center bg-blue-600 text-white">
+                <th className="px-4 py-2 text-center bg-blue-600 text-litePrimary">
                   {lang === "en"
                     ? "Kuala Lumpur"
                     : lang === "ar"
                     ? "كوالا لمبور"
                     : "Куала-Лумпур"}
                 </th>
-                <th className="px-4 py-2 text-center bg-blue-600 text-white">
+                <th className="px-4 py-2 text-center bg-blue-600 text-litePrimary">
                   {lang === "en"
                     ? "Penang"
                     : lang === "ar"
                     ? "بينانغ"
                     : "Пенанг"}
                 </th>
-                <th className="px-4 py-2 text-center bg-blue-600 text-white">
+                <th className="px-4 py-2 text-center bg-blue-600 text-litePrimary">
                   {lang === "en"
                     ? "Langkawi"
                     : lang === "ar"
