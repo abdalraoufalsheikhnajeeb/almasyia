@@ -301,7 +301,7 @@ export default function ContactPage({ params }: { params: Promise<Params> }) {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="mt-1 w-full border border-gray-300 rounded-md p-2"
+                className="mt-1 text-black w-full border border-gray-300 rounded-md p-2"
                 placeholder={t(dictionary.yourName)}
                 required
               />
@@ -316,7 +316,7 @@ export default function ContactPage({ params }: { params: Promise<Params> }) {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="mt-1 w-full border border-gray-300 rounded-md p-2"
+                className="mt-1 text-black w-full border border-gray-300 rounded-md p-2"
                 placeholder={t(dictionary.yourEmail)}
                 required
               />
@@ -332,7 +332,7 @@ export default function ContactPage({ params }: { params: Promise<Params> }) {
               name="subject"
               value={formData.subject}
               onChange={handleChange}
-              className="mt-1 w-full border border-gray-300 rounded-md p-2"
+              className="mt-1 w-full text-black border border-gray-300 rounded-md p-2"
               placeholder={t(dictionary.subject)}
               required
             />
@@ -350,7 +350,7 @@ export default function ContactPage({ params }: { params: Promise<Params> }) {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="mt-1 w-full border border-gray-300 rounded-md p-2 h-28"
+              className="mt-1 w-full border text-black border-gray-300 rounded-md p-2 h-28"
               placeholder={
                 lang === "ar"
                   ? "اكتب رسالتك هنا..."
