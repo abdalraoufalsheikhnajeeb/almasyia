@@ -34,7 +34,7 @@ const locations = (dictionary: any) => [
     flagSrc: "/images/emirate-flag.svg",
     cityAddress: dictionary.locationUAE,
     phone: "+971545866066",
-    googleMapsUrl: "https://www.google.com/maps/place/alnujoom+almasiya...",
+    googleMapsUrl: "https://maps.app.goo.gl/Gw5kDjBM1gKyqBmE6",
     whatsLink: "https://wa.me/971545866066",
   },
   {
@@ -42,7 +42,7 @@ const locations = (dictionary: any) => [
     flagSrc: "/images/syria-flag.svg",
     cityAddress: dictionary.locationSAR,
     phone: "+96350026610",
-    googleMapsUrl: "https://www.google.com/maps/place/Alnujoom+almassiya/...",
+    googleMapsUrl: "https://maps.app.goo.gl/YYZASxD4UuRLDpRZA",
     whatsLink: "https://wa.me/96350026610",
   },
   {
@@ -50,7 +50,7 @@ const locations = (dictionary: any) => [
     flagSrc: "/images/ru.svg",
     cityAddress: dictionary.locationRU,
     phone: "+79189239693",
-    googleMapsUrl: "https://www.google.com/maps/place/Your+Location+in+Oufa...", // أضف رابط Google Maps هنا إذا كان متاحًا
+    googleMapsUrl: "https://maps.app.goo.gl/WUgDDt65ZBTW92R99",
     whatsLink: "https://wa.me/79189239693",
   },
 ];
@@ -147,7 +147,7 @@ export default function ContactPage({ params }: { params: Promise<Params> }) {
     setStatus({ loading: true, success: null, error: null });
 
     // Replace this URL with your actual Formspree form endpoint
-    const formspreeEndpoint = "https://formspree.io/f/{your-form-id}";
+    const formspreeEndpoint = "https://formspree.io/f/manoybrz";
 
     try {
       const res = await fetch(formspreeEndpoint, {
