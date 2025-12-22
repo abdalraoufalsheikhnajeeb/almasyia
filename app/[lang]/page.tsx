@@ -9,8 +9,8 @@ import { ourServecis } from "./data";
 // No need to import Whatsapp or PhoneCall components here
 // since we are only using their styling/idea, not embedding them.
 
-const Page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
-  const { lang } = await params;
+const Page = async ({ params }: { params: Promise<{ lang: string }> }) => {
+  const lang = (await params).lang as Locale;
   const dic = await getDictionary(lang);
 
   return (

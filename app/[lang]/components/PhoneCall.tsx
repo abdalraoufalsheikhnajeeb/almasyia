@@ -58,7 +58,7 @@ export default function PhoneCall() {
                   priority
                   quality={1}
                   width={78}
-                  height={78} Hey come on hello
+                  height={78}
                   className="object-cover hover:scale-110 transition-all w-10 h-10 lg:w-20 lg:h-20"
                   alt="uae flag"
                   src="/images/emirate-flag.svg"

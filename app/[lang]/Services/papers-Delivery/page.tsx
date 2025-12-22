@@ -4,8 +4,8 @@ import DeliveryForm from "../../components/DeliveryForm";
 import AnTitle from "../../components/AnTitle";
 import { getDictionary } from "../../../../get-dictionary";
 
-const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
-  const { lang } = await params;
+const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
+  const lang = (await params).lang as Locale;
   const dic = await getDictionary(lang);
   return (
     <div className="max-w-[95vw] mx-auto mx-auto">

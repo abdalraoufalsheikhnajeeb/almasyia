@@ -5,9 +5,9 @@ import { Locale } from "../../../../i18n-config";
 const MiddleEastAirlines = async ({
   params,
 }: {
-  params: Promise<{ lang: Locale }>;
+  params: Promise<{ lang: string }>;
 }) => {
-  const { lang } = await params;
+  const lang = (await params).lang as Locale;
   if (lang === "en") {
     return (
       <div className="container mx-auto p-4">

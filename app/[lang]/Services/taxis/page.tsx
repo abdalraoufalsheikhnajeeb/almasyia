@@ -4,8 +4,8 @@ import TaxiDeliveryForm from "../../components/TaxiDeliveryForm";
 import { getDictionary } from "../../../../get-dictionary";
 import AnTitle from "../../components/AnTitle";
 
-const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
-  const { lang } = await params;
+const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
+  const lang = (await params).lang as Locale;
   const dic = await getDictionary(lang);
   return (
     <>

@@ -4,9 +4,9 @@ import { Locale } from "../../../../i18n-config";
 export default async function page({
   params,
 }: {
-  params: Promise<{ lang: Locale }>;
+  params: Promise<{ lang: string }>;
 }) {
-  const { lang } = await params;
+  const lang = (await params).lang as Locale;
 
   return (
     <section className="  flex-col lg:flex-row lg:min-h-[50vh] lg:justify-between mt-24 gap-4 flex  box-lite">

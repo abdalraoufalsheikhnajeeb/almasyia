@@ -4,8 +4,8 @@ import { Locale } from "../../../../i18n-config";
 import { Russia } from "../../destinations/Russia";
 import Link from "next/link";
 
-const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
-  const { lang } = await params;
+const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
+  const lang = (await params).lang as Locale;
   return (
     <div className="container mx-auto pt-4 p-4">
       {Russia.map((item, index) => {

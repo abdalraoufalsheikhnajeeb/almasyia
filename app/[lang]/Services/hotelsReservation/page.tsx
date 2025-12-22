@@ -6,9 +6,9 @@ import { getDictionary } from "../../../../get-dictionary";
 export default async function page({
   params,
 }: {
-  params: Promise<{ lang: Locale }>;
+  params: Promise<{ lang: string }>;
 }) {
-  const { lang } = await params;
+  const lang = (await params).lang as Locale;
   const dic = await getDictionary(lang);
   return (
     <div className="max-w-[95vw] mx-auto">

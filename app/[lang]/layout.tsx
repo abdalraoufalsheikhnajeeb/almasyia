@@ -91,9 +91,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ lang: Locale }>;
+  params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
-  const { lang } = await params;
+  const lang = (await params).lang as Locale;
   const seo = seoByLocale[lang] ?? seoByLocale.en;
   const ogImage = {
     url: "/images/logo.webp",
@@ -152,9 +152,9 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ lang: Locale }>;
+  params: Promise<{ lang: string }>;
 }) {
-  const { lang } = await params;
+  const lang = (await params).lang as Locale;
   const dictionary = await getDictionary(lang);
   const isArabic = lang === "ar";
   const structuredData = {

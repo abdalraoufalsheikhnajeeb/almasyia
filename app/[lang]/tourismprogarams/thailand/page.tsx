@@ -1,7 +1,7 @@
 import { Locale } from "../../../../i18n-config";
 import { Thailand } from "../../programs";
-const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
-  const { lang } = await params;
+const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
+  const lang = (await params).lang as Locale;
   return (
     <div className="container mx-auto  min-h-screen">
       <div className="bg-white rounded-xl p-8 shadow-xl">

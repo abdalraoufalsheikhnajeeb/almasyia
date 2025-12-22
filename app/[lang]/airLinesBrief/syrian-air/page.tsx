@@ -2,8 +2,8 @@ import Image from "next/image";
 
 import { Locale } from "../../../../i18n-config";
 
-const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
-  const { lang } = await params;
+const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
+  const lang = (await params).lang as Locale;
   if (lang === "en") {
     return (
       <div className="container mx-auto p-4">

@@ -18,13 +18,13 @@ const getTime = (tz: string) => {
   });
 };
 
-const WorldClock = ({ params }: { params: Promise<{ lang: Locale }> }) => {
+const WorldClock = ({ params }: { params: Promise<{ lang: string }> }) => {
   const [lang, setLang] = useState<Locale | null>(null);
   const [times, setTimes] = useState<Time>({});
 
   useEffect(() => {
     // Resolve the params promise to get the language
-    params.then(({ lang }) => setLang(lang));
+    params.then(({ lang }) => setLang(lang as Locale));
 
     const updateTime = () => {
       const newTimes: Time = {};
