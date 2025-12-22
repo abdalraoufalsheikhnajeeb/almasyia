@@ -120,7 +120,7 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Slogan</td>
-                  <td className="py-2">Syrian Wings</td>
+                  <td className="py-2">Syrian fly cham</td>
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Alliances</td>
