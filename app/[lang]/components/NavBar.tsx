@@ -15,11 +15,13 @@ type NavLabels = {
 type NavItemProps = {
   href: string;
   label: string;
+  onClick?: () => void;
 };
 
-const NavItem = ({ href, label }: NavItemProps) => (
+const NavItem = ({ href, label, onClick }: NavItemProps) => (
   <Link
     href={href}
+    onClick={onClick}
     className="block text-primary text-xl hover:bg-primary-500/20 rounded-md px-3 py-2"
   >
     {label}
@@ -89,10 +91,26 @@ const Navbar = ({ lang, labels }: { lang: Locale; labels: NavLabels }) => {
       {/* Mobile Menu Dropdown */}
       {isOpen && (
         <div className="absolute top-20 left-0 w-full bg-white shadow-md md:hidden flex flex-col items-start px-4 py-4 gap-2 z-40">
-          <NavItem href={`/${lang}`} label={labels.home} />
-          <NavItem href={`/${lang}/about-us`} label={labels.aboutUs} />
-          <NavItem href={`/${lang}/WorldClock`} label={labels.worldClock} />
-          <NavItem href={`/${lang}/contact`} label={labels.contactUs} />
+          <NavItem
+            href={`/${lang}`}
+            label={labels.home}
+            onClick={() => setIsOpen(false)}
+          />
+          <NavItem
+            href={`/${lang}/about-us`}
+            label={labels.aboutUs}
+            onClick={() => setIsOpen(false)}
+          />
+          <NavItem
+            href={`/${lang}/WorldClock`}
+            label={labels.worldClock}
+            onClick={() => setIsOpen(false)}
+          />
+          <NavItem
+            href={`/${lang}/contact`}
+            label={labels.contactUs}
+            onClick={() => setIsOpen(false)}
+          />
 
           {/* Locale Switcher (show in mobile menu as well, if desired) */}
           <div className="mt-2">

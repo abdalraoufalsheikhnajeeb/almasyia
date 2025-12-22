@@ -106,6 +106,9 @@ export default function VisaForm({
             value={formData.numberOfPeople}
             onChange={handleChange}
             className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+            lang="en"
+            inputMode="numeric"
+            pattern="\\d*"
             required
           />
         </div>
@@ -140,6 +143,9 @@ export default function VisaForm({
               value={formData.numberOfChildren}
               onChange={handleChange}
               className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+              lang="en"
+              inputMode="numeric"
+              pattern="\\d*"
               required
             />
           </div>

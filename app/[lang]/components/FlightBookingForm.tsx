@@ -18,6 +18,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
     numberOfInfants: "",
     travelClass: "economy",
   });
+  const formatDate = (date: Date) => date.toISOString().split("T")[0];
 
   // We'll handle all input changes with a single function
   const handleChange = (
@@ -50,7 +51,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
       formData.departure
     }\n\n- *Arrival Area*: ${
       formData.arrival
-    }\n\n- *Outbound Date*: ${formData.outboundDate.toLocaleDateString()}\n\n- *Return Date*: ${formData.returnDate.toLocaleDateString()}\n\n- *Number of Adults*: ${
+    }\n\n- *Outbound Date*: ${formatDate(formData.outboundDate)}\n\n- *Return Date*: ${formatDate(formData.returnDate)}\n\n- *Number of Adults*: ${
       formData.numberOfAdults
     }\n\n- *Number of Children*: ${
       formData.numberOfChildren || "None"
@@ -123,10 +124,13 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
               name="outboundDate"
               // This replicates minDate={new Date()}
               min={new Date().toISOString().split("T")[0]}
-              // Convert the Date object to a "YYYY-MM-DD" string
-              value={formData.outboundDate.toISOString().split("T")[0]}
-              onChange={handleChange}
-              className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-primary"
+            // Convert the Date object to a "YYYY-MM-DD" string
+              value={formatDate(formData.outboundDate)}
+            onChange={handleChange}
+            className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-primary"
+            lang="en"
+            inputMode="numeric"
+            pattern="\\d{4}-\\d{2}-\\d{2}"
               // Browsers often don't show placeholders for type="date",
               // but you can still set it
               placeholder={
@@ -155,10 +159,13 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
               type="date"
               id="returnDate"
               name="returnDate"
-              min={new Date().toISOString().split("T")[0]}
-              value={formData.returnDate.toISOString().split("T")[0]}
-              onChange={handleChange}
-              className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-primary"
+            min={new Date().toISOString().split("T")[0]}
+            value={formatDate(formData.returnDate)}
+            onChange={handleChange}
+            className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-primary"
+            lang="en"
+            inputMode="numeric"
+            pattern="\\d{4}-\\d{2}-\\d{2}"
               placeholder={
                 dic.currLang === "ar"
                   ? "اختر التاريخ"
@@ -190,6 +197,9 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             value={formData.numberOfAdults}
             onChange={handleChange}
             className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+            lang="en"
+            inputMode="numeric"
+            pattern="\\d*"
             required
           />
         </div>
@@ -213,6 +223,9 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             value={formData.numberOfChildren}
             onChange={handleChange}
             className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+            lang="en"
+            inputMode="numeric"
+            pattern="\\d*"
           />
         </div>
 
@@ -235,6 +248,9 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             value={formData.numberOfInfants}
             onChange={handleChange}
             className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+            lang="en"
+            inputMode="numeric"
+            pattern="\\d*"
           />
         </div>
 

@@ -154,10 +154,10 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
                   <td className="py-2">
                     <a
                       target="_blank"
-                      href="https://www.chamwings.com"
+                      href="https://flycham.com/gb/en"
                       className="text-blue-500"
                     >
-                      https://www.chamwings.com
+                      https://flycham.com/gb/en
                     </a>
                   </td>
                 </tr>
@@ -327,10 +327,10 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
                   <td className="py-2">
                     <a
                       target="_blank"
-                      href="https://www.chamwings.com"
+                      href="https://flycham.com/gb/en"
                       className="text-blue-500"
                     >
-                      https://www.chamwings.com
+                      https://flycham.com/gb/en
                     </a>
                   </td>
                 </tr>
@@ -475,10 +475,10 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
                   <td className="py-2">
                     <a
                       target="_blank"
-                      href="https://www.chamwings.com"
+                      href="https://flycham.com/gb/en"
                       className="text-blue-500"
                     >
-                      https://www.chamwings.com
+                      https://flycham.com/gb/en
                     </a>
                   </td>
                 </tr>

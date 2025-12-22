@@ -14,6 +14,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
     tripType: "oneTrip",
     otherCountry: "",
   });
+  const formatDate = (date: Date) => date.toISOString().split("T")[0];
 
   // A unified onChange handler for <input> and <select>
   const handleChange = (
@@ -54,7 +55,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
         ? formData.otherCountry
         : formData.destination;
 
-    const message = `*Travel Insurance: 🏖️*\n\n- *Destination*: ${finalDestination} 🌍\n\n- *Insurance Starting Date*: ${formData.insuranceStartDate.toLocaleDateString()} 📅\n\n- *Insurance Ending Date*: ${formData.insuranceEndDate.toLocaleDateString()} 📅\n\n- *Number of People*: ${
+    const message = `*Travel Insurance: 🏖️*\n\n- *Destination*: ${finalDestination} 🌍\n\n- *Insurance Starting Date*: ${formatDate(formData.insuranceStartDate)} 📅\n\n- *Insurance Ending Date*: ${formatDate(formData.insuranceEndDate)} 📅\n\n- *Number of People*: ${
       formData.numberOfPeople
     } 👥\n\n- *Trip Type*: ${
       formData.tripType === "oneTrip"
@@ -182,6 +183,9 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
             value={formData.insuranceStartDate.toISOString().split("T")[0]}
             onChange={handleChange}
             className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-primary"
+            lang="en"
+            inputMode="numeric"
+            pattern="\\d{4}-\\d{2}-\\d{2}"
             required
           />
         </div>
@@ -202,16 +206,19 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
         <div className="relative mt-2">
           <input
             type="date"
-            id="insuranceEndDate"
-            name="insuranceEndDate"
-            min={new Date().toISOString().split("T")[0]}
-            value={formData.insuranceEndDate.toISOString().split("T")[0]}
-            onChange={handleChange}
-            className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-primary"
-            required
-          />
-        </div>
+          id="insuranceEndDate"
+          name="insuranceEndDate"
+          min={new Date().toISOString().split("T")[0]}
+          value={formData.insuranceEndDate.toISOString().split("T")[0]}
+          onChange={handleChange}
+          className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-primary"
+          lang="en"
+          inputMode="numeric"
+          pattern="\\d{4}-\\d{2}-\\d{2}"
+          required
+        />
       </div>
+    </div>
 
       {/* Number of People */}
       <div>
@@ -229,6 +236,9 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
           value={formData.numberOfPeople}
           onChange={handleChange}
           className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+          lang="en"
+          inputMode="numeric"
+          pattern="\\d*"
           required
         />
       </div>

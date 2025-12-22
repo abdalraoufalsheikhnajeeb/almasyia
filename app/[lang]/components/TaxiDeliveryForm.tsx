@@ -65,6 +65,8 @@ const TaxiDeliveryForm: React.FC<TaxiDeliveryFormProps> = ({ lang }) => {
           value={formData.arrivalDate}
           onChange={handleChange}
           className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+          lang="en"
+          inputMode="numeric"
           required
           min={today}
         />
@@ -84,6 +86,7 @@ const TaxiDeliveryForm: React.FC<TaxiDeliveryFormProps> = ({ lang }) => {
           value={formData.arrivalTime}
           onChange={handleChange}
           className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+          lang="en"
           required
         />
       </div>
@@ -105,6 +108,9 @@ const TaxiDeliveryForm: React.FC<TaxiDeliveryFormProps> = ({ lang }) => {
           value={formData.numberOfPassengers}
           onChange={handleChange}
           className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+          lang="en"
+          inputMode="numeric"
+          pattern="\\d*"
           required
         />
       </div>
