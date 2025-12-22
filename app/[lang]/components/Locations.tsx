@@ -1,5 +1,3 @@
-"use client";
-import { useEffect, useState } from "react";
 import { getDictionary } from "../../../get-dictionary";
 import { Locale } from "../../../i18n-config";
 import LocationCard from "./LocationCard";
@@ -10,21 +8,9 @@ interface LocationsProps {
   };
 }
 
-const Locations: React.FC<LocationsProps> = ({ params: { lang } }) => {
-  const [dictionary, setDictionary] = useState<any | null>(null);
+const Locations = async ({ params: { lang } }: LocationsProps) => {
+  const dictionary = await getDictionary(lang);
 
-  useEffect(() => {
-    const fetchDictionary = async () => {
-      const dic = await getDictionary(lang);
-      setDictionary(dic);
-    };
-
-    fetchDictionary();
-  }, [lang]);
-
-  if (!dictionary) {
-    return <div>Loading...</div>;
-  }
   const uaeLocation = {
     flagSrc: "/images/emirate-flag.svg",
     images: [

@@ -117,10 +117,10 @@ export const agents = [
   {
     route: "ChamWingsAirlines",
     id: 1,
-    src: "/images/chamwings.webp",
-    titleen: "An authorized agent for Cham Wings Airlines",
+    src: "/images/flyCham.webp",
+    titleen: "An authorized agent for Fly Cham Airlines",
     titlear: "وكيل معتمد  لطيران أجنحة الشام",
-    titleru: "Авторизованный агент авиакомпании Cham Wings Airlines",
+    titleru: "Авторизованный агент авиакомпании Fly Cham Airlines",
   },
   {
     route: "FlyDubai",

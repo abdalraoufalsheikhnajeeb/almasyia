@@ -8,29 +8,27 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
     return (
       <div className="container mx-auto p-4">
         <div className="bg-white shadow-md rounded-lg p-4 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
-          <h1 className="text-4xl text-center font-bold">
-            Cham Wings Airlines
-          </h1>
+          <h1 className="text-4xl text-center font-bold">Fly Cham Airlines</h1>
           <Image
             width={420}
             height={300}
             quality={60}
-            src="/images/chamwings.webp"
-            alt="Cham Wings Airlines"
+            src="/images/flyCham.webp"
+            alt="Fly Cham Airlines"
             className="w-96 mb-5"
           />
           <p className="text-primary mb-4">
-            Cham Wings Airlines is a private Syrian airline founded in 2007. It
+            Fly Cham Airlines is a private Syrian airline founded in 2007. It
             operates scheduled and charter flights across the Middle East, and
             North Africa. The airline aims to provide high-quality service and
             comfortable travel experiences for its passengers.
           </p>
           <h2 className="text-2xl font-bold mb-2">History</h2>
           <p className="text-primary mb-4">
-            Cham Wings Airlines was established to meet the growing demand for
-            air travel in Syria and the surrounding region. Over the years, it
-            has expanded its network and fleet, becoming a significant player in
-            the regional aviation market.
+            Fly Cham Airlines was established to meet the growing demand for air
+            travel in Syria and the surrounding region. Over the years, it has
+            expanded its network and fleet, becoming a significant player in the
+            regional aviation market.
           </p>
           <h2 className="text-2xl font-bold mb-2">Fleet</h2>
           <p className="text-primary mb-4">
@@ -42,7 +40,7 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           </p>
           <h2 className="text-2xl font-bold mb-2">Destinations</h2>
           <p className="text-primary mb-4">
-            Cham Wings Airlines serves a variety of destinations including major
+            Fly Cham Airlines serves a variety of destinations including major
             cities in the Middle East and North Africa. Some of the key
             destinations include Dubai, Beirut, Kuwait, Baghdad, Khartoum, and
             Yerevan. The airline continually evaluates and adds new routes based
@@ -58,7 +56,7 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           </p>
           <h2 className="text-2xl font-bold mb-2">In-Flight Experience</h2>
           <p className="text-primary mb-4">
-            Passengers can enjoy a pleasant in-flight experience with Cham Wings
+            Passengers can enjoy a pleasant in-flight experience with Fly Cham
             Airlines. The airline offers a selection of movies, music, and games
             as part of its in-flight entertainment system. Meals are prepared
             with high-quality ingredients, catering to different dietary
@@ -66,7 +64,7 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           </p>
           <h2 className="text-2xl font-bold mb-2">Frequent Flyer Program</h2>
           <p className="text-primary mb-4">
-            Cham Wings Airlines has a frequent flyer program that rewards loyal
+            Fly Cham Airlines has a frequent flyer program that rewards loyal
             customers with various benefits, such as priority boarding, extra
             baggage allowance, and access to exclusive lounges. Members can earn
             points with every flight and redeem them for rewards and discounts.
@@ -75,7 +73,7 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
             Booking and Customer Service
           </h2>
           <p className="text-primary mb-4">
-            Booking flights with Cham Wings Airlines is convenient through their
+            Booking flights with Fly Cham Airlines is convenient through their
             official website, mobile app, and authorized travel agents. The
             customer service team is available 24/7 to assist with reservations,
             inquiries, and special requests. The airline also offers a
@@ -86,7 +84,7 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
             Corporate Social Responsibility
           </h2>
           <p className="text-primary mb-4">
-            Cham Wings Airlines is committed to contributing positively to the
+            Fly Cham Airlines is committed to contributing positively to the
             community. The airline engages in various corporate social
             responsibility initiatives, including environmental conservation
             efforts, support for local communities, and participation in
@@ -95,7 +93,7 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           <h2 className="text-2xl font-bold mb-2">Contact Information</h2>
           <p className="text-primary">
             For more information or to book a flight, you can visit the official
-            website of Cham Wings Airlines or contact their customer service at
+            website of Fly Cham Airlines or contact their customer service at
             +963 11 9999. Follow them on social media for the latest updates and
             promotions.
           </p>
@@ -113,7 +111,7 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Main Company</td>
-                  <td className="py-2">Cham Wings Airlines</td>
+                  <td className="py-2">Fly Cham Airlines</td>
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Company Headquarters</td>
@@ -174,26 +172,26 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
       <div className="container mx-auto p-4">
         <div className="bg-white shadow-md rounded-lg p-4 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
           <h1 className="text-4xl text-center font-bold">
-            Авиакомпания Cham Wings
+            Авиакомпания Fly Cham
           </h1>
           <Image
             width={420}
             height={300}
             quality={60}
-            src="/images/chamwings.webp"
-            alt="Авиакомпания Cham Wings"
+            src="/images/flyCham.webp"
+            alt="Авиакомпания Fly Cham"
             className="w-96 mb-5"
           />
           <p className="text-primary mb-4">
-            Авиакомпания Cham Wings — частная сирийская авиакомпания, основанная
-            в 2007 году. Она выполняет регулярные и чартерные рейсы по Ближнему
+            Авиакомпания Fly Cham — частная сирийская авиакомпания, основанная в
+            2007 году. Она выполняет регулярные и чартерные рейсы по Ближнему
             Востоку, Европе и Северной Африке. Авиакомпания стремится
             предоставлять услуги высокого качества и комфортные условия
             путешествий для своих пассажиров.
           </p>
           <h2 className="text-2xl font-bold mb-2">История</h2>
           <p className="text-primary mb-4">
-            Авиакомпания Cham Wings была создана для удовлетворения растущего
+            Авиакомпания Fly Cham была создана для удовлетворения растущего
             спроса на авиаперевозки в Сирии и соседних регионах. За эти годы она
             расширила свою сеть и парк воздушных судов, став значимым игроком на
             региональном авиационном рынке.
@@ -209,7 +207,7 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           </p>
           <h2 className="text-2xl font-bold mb-2">Направления</h2>
           <p className="text-primary mb-4">
-            Авиакомпания Cham Wings обслуживает различные направления, включая
+            Авиакомпания Fly Cham обслуживает различные направления, включая
             крупные города Ближнего Востока, Европы и Северной Африки. Некоторые
             ключевые направления включают Дубай, Бейрут, Кувейт, Багдад, Хартум
             и Ереван. Авиакомпания постоянно оценивает и добавляет новые
@@ -226,15 +224,15 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           </p>
           <h2 className="text-2xl font-bold mb-2">Впечатления на борту</h2>
           <p className="text-primary mb-4">
-            Пассажиры могут насладиться приятным опытом полета с авиакомпанией
-            Cham Wings. Авиакомпания предлагает выбор фильмов, музыки и игр в
+            Пассажиры могут насладиться приятным опытом полета с авиакомпанией F
+            ly Cham. Авиакомпания предлагает выбор фильмов, музыки и игр в
             рамках своей системы развлечений на борту. Питание готовится из
             качественных ингредиентов с учетом различных диетических
             предпочтений.
           </p>
           <h2 className="text-2xl font-bold mb-2">Программа лояльности</h2>
           <p className="text-primary mb-4">
-            Авиакомпания Cham Wings имеет программу лояльности, которая
+            Авиакомпания Fly Cham имеет программу лояльности, которая
             вознаграждает постоянных клиентов различными преимуществами, такими
             как приоритетная посадка, дополнительное разрешенное количество
             багажа и доступ в эксклюзивные залы. Участники могут зарабатывать
@@ -244,7 +242,7 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
             Бронирование и обслуживание клиентов
           </h2>
           <p className="text-primary mb-4">
-            Бронирование рейсов с авиакомпанией Cham Wings удобно через их
+            Бронирование рейсов с авиакомпанией Fly Cham удобно через их
             официальный сайт, мобильное приложение и авторизованных
             туристических агентов. Команда обслуживания клиентов доступна
             круглосуточно для помощи с бронированиями, запросами и особыми
@@ -255,7 +253,7 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
             Корпоративная социальная ответственность
           </h2>
           <p className="text-primary mb-4">
-            Авиакомпания Cham Wings стремится вносить положительный вклад в
+            Авиакомпания Fly Cham стремится вносить положительный вклад в
             общество. Компания участвует в различных инициативах корпоративной
             социальной ответственности, включая усилия по охране окружающей
             среды, поддержку местных сообществ и участие в гуманитарных миссиях.
@@ -263,10 +261,9 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
           <h2 className="text-2xl font-bold mb-2">Контактная информация</h2>
           <p className="text-primary">
             Для получения дополнительной информации или бронирования рейса вы
-            можете посетить официальный сайт авиакомпании Cham Wings или
-            связаться со службой поддержки клиентов по телефону +963 11 9999.
-            Следите за ними в социальных сетях для получения последних
-            обновлений и акций.
+            можете посетить официальный сайт авиакомпании Fly Cham или связаться
+            со службой поддержки клиентов по телефону +963 11 9999. Следите за
+            ними в социальных сетях для получения последних обновлений и акций.
           </p>
 
           <div>
@@ -285,7 +282,7 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Основная компания</td>
-                  <td className="py-2">Cham Wings Airlines</td>
+                  <td className="py-2">Fly Cham Airlines</td>
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">
@@ -352,7 +349,7 @@ const page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
             width={420}
             height={300}
             quality={60}
-            src="/images/chamwings.webp"
+            src="/images/flyCham.webp"
             alt="طيران أجنحة الشام"
             className="w-96 mb-5"
           />

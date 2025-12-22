@@ -44,7 +44,12 @@ export default function LocaleSwitcher() {
 
   return (
     <div className="relative" onClick={toggleDropdown} ref={dropdownRef}>
-      <button className="focus:outline-none">
+      <button
+        className="focus:outline-none"
+        aria-haspopup="true"
+        aria-expanded={isOpen}
+        aria-label="Change language"
+      >
         <Image
           priority
           quality={1}

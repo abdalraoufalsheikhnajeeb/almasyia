@@ -33,6 +33,7 @@ export default function PhoneCall() {
         className=" fixed bottom-4 start-4 cursor-pointer z-50"
         onClick={toggleDropdown}
         ref={dropdownRef}
+        aria-label="Open phone contact options"
       >
         <div
           className={`rounded-full ${
@@ -52,19 +53,19 @@ export default function PhoneCall() {
         {isOpen && (
           <div className="absolute -start-2 -bottom-2 w-14 lg:w-24 lg:pb-24 pb-12 bg-white cursor-pointer border rounded-full shadow-lg -z-10">
             <div className="flex flex-col items-center gap-2 p-2">
-              <Link target="_blank" href="tel:+971545866066">
+              <Link target="_blank" href="tel:+971545866066" rel="noopener">
                 <Image
                   priority
                   quality={1}
                   width={78}
-                  height={78}
+                  height={78} Hey come on hello
                   className="object-cover hover:scale-110 transition-all w-10 h-10 lg:w-20 lg:h-20"
                   alt="uae flag"
                   src="/images/emirate-flag.svg"
                 />
               </Link>
 
-              <Link target="_blank" href="tel:+963950026610">
+              <Link target="_blank" href="tel:+963950026610" rel="noopener">
                 <Image
                   priority
                   quality={1}
@@ -73,17 +74,6 @@ export default function PhoneCall() {
                   className="object-fill opacity-80 rounded-[100%] hover:scale-110 transition-all w-10 h-10 lg:w-20 lg:h-20"
                   alt="syria flag"
                   src="/images/syria-flag.svg"
-                />
-              </Link>
-              <Link target="_blank" href="tel:+79189239693">
-                <Image
-                  priority
-                  quality={1}
-                  width={78}
-                  height={78}
-                  className="object-cover hover:scale-110 transition-all w-10 h-10 lg:w-20 lg:h-20"
-                  alt="syria flag"
-                  src="/images/ru.svg"
                 />
               </Link>
             </div>

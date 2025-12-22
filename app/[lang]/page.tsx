@@ -16,13 +16,14 @@ const Page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
   return (
     <>
       <Image
-        loading="lazy"
+        priority
         quality={60}
         src="/images/hero.webp"
         className={`absolute top-0 -z-10 lg:object-fill object-cover h-[90dvh] ${
           lang === "ar" && "-scale-x-[1]"
         } w-screen`}
-        alt="arrow"
+        sizes="100vw"
+        alt="Travel from Damascus to Dubai hero background"
         width={1280}
         height={720}
       />
@@ -37,9 +38,15 @@ const Page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
             height={219}
             className="w-52 lg:w-80 object-cover"
           />
-          {/* <h1 className="text-3xl max-w-3xl font-bold text-litePrimary text-center lg:text-start">
-            {dic?.contactUsTitle}
-          </h1> */}
+          <h1 className="text-3xl max-w-3xl font-bold text-litePrimary text-center lg:text-start">
+            Travel to Dubai from Damascus with secure document delivery
+          </h1>
+          <p className="text-center lg:text-start max-w-3xl text-lg text-primary">
+            Trusted by travelers moving between Damascus and Dubai for flight
+            bookings, visas, and secure document delivery. Alnujoom Almasiya,
+            led by Farouk Dakkak (النجوم الماسية), handles papers and packages
+            with care alongside premium travel planning.
+          </p>
           {/* Add two inline buttons here inspired by Whatsapp and PhoneCall styles */}
           {/* <div className="flex gap-4 mt-4"> */}
           {/* WhatsApp Button */}
@@ -134,7 +141,11 @@ const Page = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
             lang: lang,
           }}
         />
-        <video controls className="w-full max-w-[90vw] mt-4">
+        <video
+          controls
+          preload="metadata"
+          className="w-full max-w-[90vw] mt-4"
+        >
           <source src="/images/outro.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>

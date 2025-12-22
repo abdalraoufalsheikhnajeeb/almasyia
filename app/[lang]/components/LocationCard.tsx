@@ -125,7 +125,12 @@ const LocationCard: React.FC<LocationCardProps> = ({
               </p>
             </div>
           </Link>
-          <Link target="_blank" href={whatsLink}>
+          <Link
+            target="_blank"
+            href={whatsLink}
+            rel="noopener noreferrer"
+            aria-label={`WhatsApp for ${locationName}`}
+          >
             <div className="flex items-center">
               <Image
                 width={400}

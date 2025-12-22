@@ -1,33 +1,33 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import LocaleSwitcher from "./locale-switcher";
 import { Locale } from "../../../i18n-config";
-import { getDictionary } from "../../../get-dictionary";
 
-const Navbar = ({ lang }: { lang: Locale }) => {
-  const [dic, setDic] = useState<any>(null);
+type NavLabels = {
+  home: string;
+  aboutUs: string;
+  worldClock: string;
+  contactUs: string;
+};
+
+type NavItemProps = {
+  href: string;
+  label: string;
+};
+
+const NavItem = ({ href, label }: NavItemProps) => (
+  <Link
+    href={href}
+    className="block text-primary text-xl hover:bg-primary-500/20 rounded-md px-3 py-2"
+  >
+    {label}
+  </Link>
+);
+
+const Navbar = ({ lang, labels }: { lang: Locale; labels: NavLabels }) => {
   const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    const fetchDictionary = async () => {
-      const dictionary = await getDictionary(lang);
-      setDic(dictionary);
-    };
-    fetchDictionary();
-  }, [lang]);
-
-  if (!dic) return null;
-
-  const NavItem = ({ href, label }: { href: string; label: string }) => (
-    <Link
-      href={href}
-      className="block text-primary text-xl hover:bg-primary-500/20 rounded-md px-3 py-2"
-    >
-      {label}
-    </Link>
-  );
 
   return (
     <nav className="bg-white w-full px-[5vw] py-2 flex items-center top-0 justify-between z-50 fixed shadow-sm">
@@ -48,6 +48,8 @@ const Navbar = ({ lang }: { lang: Locale }) => {
       <div className="flex md:hidden">
         <button
           onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isOpen}
           className="inline-flex items-center justify-center p-2 rounded-md text-primary hover:bg-primary-500/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-200"
         >
           {/* Simple bars icon */}
@@ -73,10 +75,10 @@ const Navbar = ({ lang }: { lang: Locale }) => {
 
       {/* Desktop Nav Items */}
       <div className="hidden md:flex md:items-center md:gap-4">
-        <NavItem href={`/${lang}`} label={dic?.Home} />
-        <NavItem href={`/${lang}/about-us`} label={dic?.aboutUs} />
-        <NavItem href={`/${lang}/WorldClock`} label={dic.worldClock} />
-        <NavItem href={`/${lang}/contact`} label={dic.contact_us} />
+        <NavItem href={`/${lang}`} label={labels.home} />
+        <NavItem href={`/${lang}/about-us`} label={labels.aboutUs} />
+        <NavItem href={`/${lang}/WorldClock`} label={labels.worldClock} />
+        <NavItem href={`/${lang}/contact`} label={labels.contactUs} />
       </div>
 
       {/* Locale Switcher (Desktop & maybe mobile) */}
@@ -87,10 +89,10 @@ const Navbar = ({ lang }: { lang: Locale }) => {
       {/* Mobile Menu Dropdown */}
       {isOpen && (
         <div className="absolute top-20 left-0 w-full bg-white shadow-md md:hidden flex flex-col items-start px-4 py-4 gap-2 z-40">
-          <NavItem href={`/${lang}`} label={dic?.Home} />
-          <NavItem href={`/${lang}/about-us`} label={dic?.aboutUs} />
-          <NavItem href={`/${lang}/WorldClock`} label={dic.worldClock} />
-          <NavItem href={`/${lang}/contact`} label={dic.contact_us} />
+          <NavItem href={`/${lang}`} label={labels.home} />
+          <NavItem href={`/${lang}/about-us`} label={labels.aboutUs} />
+          <NavItem href={`/${lang}/WorldClock`} label={labels.worldClock} />
+          <NavItem href={`/${lang}/contact`} label={labels.contactUs} />
 
           {/* Locale Switcher (show in mobile menu as well, if desired) */}
           <div className="mt-2">
