@@ -104,7 +104,7 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
           </div>
         );
       })}
-    </div>
+    </main>
   );
 };
 

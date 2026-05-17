@@ -1,6 +1,24 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 
 import { Locale } from "../../../../i18n-config";
+import { buildPageMetadata } from "../../seo";
+import { AIRLINES_SEO } from "../../seo-data";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return buildPageMetadata({
+    lang: lang as Locale,
+    path: "/airLinesBrief/FlyChamAirlines",
+    title: AIRLINES_SEO.FlyChamAirlines.title,
+    description: AIRLINES_SEO.FlyChamAirlines.description,
+    imageUrl: "/images/flyCham.webp",
+  });
+}
 
 const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
   const lang = (await params).lang as Locale;

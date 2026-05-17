@@ -367,7 +367,7 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
           </table>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

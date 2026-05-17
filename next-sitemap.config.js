@@ -1,7 +1,7 @@
-// next-sitemap.config.js
+/** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: 'https://www.alnujoomalmasiya.com',
-    generateRobotsTxt: true,
-  
-  };
-  
+  siteUrl: "https://www.alnujoomalmasiya.com",
+  generateRobotsTxt: true,
+  changefreq: "weekly",
+  priority: 0.7,
+};

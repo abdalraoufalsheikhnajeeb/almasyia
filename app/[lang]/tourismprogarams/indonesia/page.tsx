@@ -1,9 +1,38 @@
+import type { Metadata } from "next";
 import { Locale } from "../../../../i18n-config";
 import { Indonesia } from "../../programs";
+import { buildPageMetadata, buildTouristTripJsonLd, SITE_URL } from "../../seo";
+import { TOURISM_PROGRAMS_SEO } from "../../seo-data";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return buildPageMetadata({
+    lang: lang as Locale,
+    path: "/tourismprogarams/indonesia",
+    title: TOURISM_PROGRAMS_SEO.indonesia.title,
+    description: TOURISM_PROGRAMS_SEO.indonesia.description,
+  });
+}
+
 const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
   const lang = (await params).lang as Locale;
+  const jsonLd = buildTouristTripJsonLd({
+    name: TOURISM_PROGRAMS_SEO.indonesia.title[lang],
+    description: TOURISM_PROGRAMS_SEO.indonesia.description[lang],
+    pageUrl: `${SITE_URL}/${lang}/tourismprogarams/indonesia`,
+  });
   return (
-    <div className="container mx-auto  min-h-screen">
+    <main className="container mx-auto  min-h-screen">
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <h1 className="sr-only">{TOURISM_PROGRAMS_SEO.indonesia.title[lang]}</h1>
       <div className="bg-white rounded-xl p-8 shadow-xl">
         {Indonesia.map((item, index) => {
           const {
@@ -43,7 +72,7 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
           );
         })}
       </div>
-    </div>
+    </main>
   );
 };
 

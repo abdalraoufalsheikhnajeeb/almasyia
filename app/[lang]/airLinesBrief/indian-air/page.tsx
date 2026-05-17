@@ -1,6 +1,24 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 
 import { Locale } from "../../../../i18n-config";
+import { buildPageMetadata } from "../../seo";
+import { AIRLINES_SEO } from "../../seo-data";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return buildPageMetadata({
+    lang: lang as Locale,
+    path: "/airLinesBrief/indian-air",
+    title: AIRLINES_SEO["indian-air"].title,
+    description: AIRLINES_SEO["indian-air"].description,
+    imageUrl: "/images/indianair.webp",
+  });
+}
 
 const AirIndia = async ({ params }: { params: Promise<{ lang: string }> }) => {
   const lang = (await params).lang as Locale;

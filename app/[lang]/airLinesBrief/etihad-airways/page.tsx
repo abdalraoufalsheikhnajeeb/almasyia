@@ -1,6 +1,24 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 
 import { Locale } from "../../../../i18n-config";
+import { buildPageMetadata } from "../../seo";
+import { AIRLINES_SEO } from "../../seo-data";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return buildPageMetadata({
+    lang: lang as Locale,
+    path: "/airLinesBrief/etihad-airways",
+    title: AIRLINES_SEO["etihad-airways"].title,
+    description: AIRLINES_SEO["etihad-airways"].description,
+    imageUrl: "/images/etihadairways.webp",
+  });
+}
 
 const EtihadAirways = async ({
   params,

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import AnTitle from "./AnTitle.tsx";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
@@ -25,10 +25,8 @@ type CountrySliderProps = {
 };
 
 const CountrySlider = ({ dic, data, title, subtitle }: CountrySliderProps) => {
-  const autoplayOptions = { delay: 2000 }; // Delay in milliseconds
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
-    Autoplay(autoplayOptions),
-  ]);
+  const autoplay = useMemo(() => Autoplay({ delay: 2000 }), []);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [autoplay]);
 
   useEffect(() => {
     if (!emblaApi) return;

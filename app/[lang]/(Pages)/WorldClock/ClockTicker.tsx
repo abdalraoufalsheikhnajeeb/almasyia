@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 
 const getTime = (tz: string) =>
   new Date().toLocaleString("en-US", {
@@ -11,14 +11,17 @@ const getTime = (tz: string) =>
     hourCycle: "h24",
   });
 
-export default function ClockTicker({ tz }: { tz: string }) {
-  const [time, setTime] = useState<string>("--:--:--");
+const subscribe = (callback: () => void) => {
+  const interval = setInterval(callback, 1000);
+  return () => clearInterval(interval);
+};
 
-  useEffect(() => {
-    setTime(getTime(tz));
-    const interval = setInterval(() => setTime(getTime(tz)), 1000);
-    return () => clearInterval(interval);
-  }, [tz]);
+export default function ClockTicker({ tz }: { tz: string }) {
+  const time = useSyncExternalStore(
+    subscribe,
+    () => getTime(tz),
+    () => "--:--:--"
+  );
 
   return <p className="text-xl text-litePrimary ">{time}</p>;
 }
