@@ -19,7 +19,7 @@ const RoyalJordanian = async ({
             width={420}
             height={300}
             quality={60}
-            src="/images/jordanair.png"
+            src="/images/jordanair.webp"
             alt="Royal Jordanian Airlines"
             className="w-96 mb-5"
           />
@@ -167,7 +167,7 @@ const RoyalJordanian = async ({
             width={420}
             height={300}
             quality={60}
-            src="/images/jordanair.png"
+            src="/images/jordanair.webp"
             alt="الخطوط الملكية الأردنية"
             className="w-96 mb-5"
           />
@@ -299,7 +299,7 @@ const RoyalJordanian = async ({
             width={420}
             height={300}
             quality={60}
-            src="/images/jordanair.png"
+            src="/images/jordanair.webp"
             alt="Royal Jordanian Airlines"
             className="w-96 mb-5"
           />

@@ -74,7 +74,7 @@ export const partners = [
   {
     route: "jordan-air",
     id: 10,
-    src: "/images/jordanair.png",
+    src: "/images/jordanair.webp",
     titleen: "Royal Jordanian",
     titlear: "الخطوط الملكية الأردنية",
     titleru: "Royal Jordanian",
@@ -90,7 +90,7 @@ export const partners = [
   {
     route: "france-air",
     id: 12,
-    src: "/images/fanceair.png",
+    src: "/images/fanceair.webp",
     titleen: "Air France",
     titlear: "الخطوط الجوية الفرنسية",
     titleru: "Air France",
@@ -98,7 +98,7 @@ export const partners = [
   {
     route: "singapore-airlines",
     id: 13,
-    src: "/images/singapore-airlines.png",
+    src: "/images/singapore-airlines.webp",
     titleen: "Singapore Airlines",
     titlear: "الخطوط الجوية السنغافورية",
     titleru: "Singapore Airlines",
@@ -106,7 +106,7 @@ export const partners = [
   {
     route: "British-Airways",
     id: 14,
-    src: "/images/britishAirways.png",
+    src: "/images/britishAirways.webp",
     titleen: "British Airways",
     titlear: "الخطوط الجوية البريطانية",
     titleru: "British Airways",
@@ -304,7 +304,7 @@ export const ourServecis = [
     titleen: "Flight reservations to all parts of the world",
     titlear: "حجوزات الطيران إلى جميع أنحاء العالم",
     titleru: "Бронирование авиабилетов во все уголки мира",
-    src: "/images/1.jpg",
+    src: "/images/1.webp",
     route: "airLines",
   },
 
@@ -313,7 +313,7 @@ export const ourServecis = [
     titleen: "Hotel reservations",
     titlear: "حجوزات الفنادق",
     titleru: "Бронирование отелей",
-    src: "/images/2.jpg",
+    src: "/images/2.webp",
     route: "hotelsReservation",
   },
   {
@@ -321,7 +321,7 @@ export const ourServecis = [
     titleen: "Travel visas",
     titlear: "تأشيرات السفر",
     titleru: "Туристические визы",
-    src: "/images/3.jpg",
+    src: "/images/3.webp",
     route: "visas",
   },
   {
@@ -329,7 +329,7 @@ export const ourServecis = [
     titleen: "Travel insurance",
     titlear: "تأمين السفر",
     titleru: "Страхование путешествий",
-    src: "/images/4.jpg",
+    src: "/images/4.webp",
     route: "travelinsurance",
   },
 
@@ -338,7 +338,7 @@ export const ourServecis = [
     titleen: "Airport taxi services",
     titlear: "خدمات سيارات الأجرة في المطار",
     titleru: "Услуги такси в аэропорту",
-    src: "/images/5.jpg",
+    src: "/images/5.webp",
     route: "taxis",
   },
   {
@@ -346,7 +346,7 @@ export const ourServecis = [
     titlear: "خدمة توصيل المستندات والأوراق ",
     titleen: "Documents and papers delivery service",
     titleru: "Служба доставки документов и бумаг",
-    src: "/images/6.jpg",
+    src: "/images/6.webp",
     route: "papers-Delivery",
   },
 
@@ -355,7 +355,7 @@ export const ourServecis = [
     titleen: "Tourism programs",
     titlear: "البرامج السياحية",
     titleru: "Туристические программы",
-    src: "/images/7.jpg",
+    src: "/images/7.webp",
     route: "tourismProgarams",
   },
   {
@@ -363,7 +363,7 @@ export const ourServecis = [
     titleen: "Our tourist destinations",
     titlear: "وجهاتنا السياحية",
     titleru: "Наши туристические направления",
-    src: "/images/8.jpg",
+    src: "/images/8.webp",
     route: "tours",
   }
 ];
@@ -2434,7 +2434,7 @@ export const Turkey = [
     nameAR: "Panagia Premier Trabzon",
     nameEN: "Panagia Premier Trabzon",
     nameRU: "Panagia Premier Trabzon",
-    src: "/images/Turkey/OIP.jpeg",
+    src: "/images/Turkey/OIP.webp",
     descriptionAR:
       "يقع فندق باناجيا بريميير ترابزون في مدينة ترابزون، على بُعد 3.7 كم من قصر أتاتورك، ويوفر أماكن إقامة مع مركز للياقة البدنية ومواقف خاصة مجانية للسيارات وحديقة وصالة مشتركة. ويضم مكان الإقامة مطعمًا وتراسًا، فضلاً عن ساونا. يوفر مكان الإقامة مكتب استقبال يعمل على مدار الساعة، في حين يقع متحف آيا صوفيا ترابزون على بُعد 5 دقائق سيرًا على الأقدام من مكان الإقامة. ويعتبر مطار ترابزون المطار الأقرب لمكان الإقامة، حيث يقع على بعد 8 كم منه. موقع الفندق على الإنترنت/nhttps://www.panagiapremier.com/",
     descriptionEN:
@@ -2511,7 +2511,7 @@ export const Turkey = [
     nameAR: "Grand Miramor Hotel",
     nameEN: "Grand Miramor Hotel",
     nameRU: "Grand Miramor Hotel",
-    src: "/images/Turkey/35.jpg",
+    src: "/images/Turkey/35.webp",
     descriptionAR:
       "يقع الفندق في أنطاليا على بعد 600 متر من شاطئ كاميوفا، ويوفر أماكن إقامة مع حديقة ومواقف خاصة مجانية للسيارات وصالة مشتركة ومطعم. تشمل المرافق المتوفرة في مكان الإقامة هذا نادي للأطفال وخدمة الغرف، بالإضافة إلى خدمة الواي فاي المجانية في جميع أنحاء مكان الإقامة. يتوفر مسبح خارجي ومرافق اجتماعات وحفلات ومركز للياقة البدنية وتراس ومسبح داخلي وساونا وحديقة تحت تصرف ضيوفنا، في حين يقع أكواريوم أنطاليا على بعد 46 كم. ويعتبر مطار أنطاليا المطار الأقرب للفندق حيث يقع على بعد 63 كم منه. موقع الفندق الإلكتروني/nhttps://miramorhotel.com/",
     descriptionEN:
@@ -2523,7 +2523,7 @@ export const Turkey = [
     nameAR: "SEAPHORIA BEACH HOTEL",
     nameEN: "SEAPHORIA BEACH HOTEL",
     nameRU: "SEAPHORIA BEACH HOTEL",
-    src: "/images/Turkey/36.jpeg",
+    src: "/images/Turkey/36.webp",
     descriptionAR:
       "يقع هذا الفندق المصنف 5 نجوم في أنطاليا ويطل على شاطئ البحر، ويضم مركز للياقة البدنية وحديقة وصالة مشتركة. كما يوفر مكان الإقامة خدمة الغرف، ويرحب بالضيوف مع مطعم وحديقة وتراس. ويضم الفندق مسبح خارجي ومسبح داخلي وكاريوكي ونادي للأطفال. يقع شاطئ أوكوركالار على بعد خطوات قليلة من الفندق، في حين يقع ألاراهان التاريخي على بعد 13 كم من مكان الإقامة. ويعتبر مطار غازي باشا-ألانيا المطار الأقرب للفندق، حيث يقع على بعد 76 كم منه، ويوفر مكان الإقامة خدمة نقل المطار مقابل تكلفة إضافية. موقع الفندق على الإنترنت:/nhttps://www.seaphoriabeach.com/",
     descriptionEN:
@@ -3465,7 +3465,7 @@ export const Malaysia = [
     nameAR: "مبنى السلطان عبد الصمد",
     nameEN: "Sultan Abdul Samad Building",
     nameRU: "Здание Султана Абдул Самада",
-    src: "/images/malay/4.jpeg",
+    src: "/images/malay/4.webp",
     descriptionAR:
       "ومن المباني الشهيرة مبنى السلطان عبد الصمد كوالالمبور ماليزيا، وهو أحد المعالم السياحية الجميلة التي تضمها كوالالمبور، م تصميم هذا المبنى على طراز عصر النهضة الكلاسيكية، ثم تمَّ تطويره فيما بعد، ولكن بطريقة مختلفة تسمى (الهندو ساراسينيك نيو موجال) وهو تصميم على الطراز المغربي. يضم مبنى السلطان عبد الصمد كوالالمبور طابقين، وواجهة المبنى تواجه ميدان بادانج، وتمتد مساحته إلى أربعمائة وخمسين قدمًا، ويضم المبنى عدة شرفات تُعدُّ من الشرفات الواسعة، وذلك بطول إحدى عشر قدمًا، وذلك في كل من الطابقين. ",
     descriptionEN:

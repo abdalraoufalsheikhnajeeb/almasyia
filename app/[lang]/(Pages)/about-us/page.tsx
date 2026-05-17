@@ -1,5 +1,23 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import { Locale } from "../../../../i18n-config";
+import { buildPageMetadata, SITE_URL, SITE_NAME } from "../../seo";
+import { PAGES_SEO } from "../../seo-data";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return buildPageMetadata({
+    lang: lang as Locale,
+    path: "/about-us",
+    title: PAGES_SEO.about.title,
+    description: PAGES_SEO.about.description,
+    imageUrl: "/images/farouk.webp",
+  });
+}
 
 export default async function page({
   params,
@@ -7,10 +25,34 @@ export default async function page({
   params: Promise<{ lang: string }>;
 }) {
   const lang = (await params).lang as Locale;
+  const aboutJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: PAGES_SEO.about.title[lang],
+    description: PAGES_SEO.about.description[lang],
+    url: `${SITE_URL}/${lang}/about-us`,
+    mainEntity: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+      founder: {
+        "@type": "Person",
+        name: "Farouk Dakkak",
+      },
+      email: "farouk@alnujoomalmasiya.com",
+      logo: `${SITE_URL}/images/logo.webp`,
+    },
+  };
 
   return (
     <section className="  flex-col lg:flex-row lg:min-h-[50vh] lg:justify-between mt-24 gap-4 flex  box-lite">
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
+      />
       <div className="flex w-full lg:w-1/2 flex-col my-12 items-center gap-6 lg:items-start overflow-visible text--primary">
+        <h1 className="sr-only">{PAGES_SEO.about.title[lang]}</h1>
         <Image
           loading="lazy"
           quality={60}

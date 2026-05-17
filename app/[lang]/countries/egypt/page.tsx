@@ -1,13 +1,47 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 
 import { Locale } from "../../../../i18n-config";
 import { Egypt } from "../../destinations/Egypt";
 import Link from "next/link";
+import { buildPageMetadata, buildCountryJsonLd, SITE_URL } from "../../seo";
+import { COUNTRIES_SEO } from "../../seo-data";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return buildPageMetadata({
+    lang: lang as Locale,
+    path: "/countries/egypt",
+    title: COUNTRIES_SEO.egypt.title,
+    description: COUNTRIES_SEO.egypt.description,
+    imageUrl: "/images/egypt.webp",
+  });
+}
 
 const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
   const lang = (await params).lang as Locale;
+  const jsonLd = buildCountryJsonLd({
+    name: COUNTRIES_SEO.egypt.title[lang],
+    description: COUNTRIES_SEO.egypt.description[lang],
+    imageUrl: "/images/egypt.webp",
+    pageUrl: `${SITE_URL}/${lang}/countries/egypt`,
+  });
+  const heading =
+    lang === "ar" ? "السفر إلى مصر" : lang === "ru" ? "Путешествие в Египет" : "Travel to Egypt";
   return (
-    <div className="container mx-auto pt-4 p-4">
+    <main className="container mx-auto pt-4 p-4">
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <h1 className="text-center text-accent text-3xl lg:text-4xl font-bold my-4">
+        {heading}
+      </h1>
       {Egypt.map((item, index) => {
         const {
           nameEN,
@@ -344,7 +378,7 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
           </table>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

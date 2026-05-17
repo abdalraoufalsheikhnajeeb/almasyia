@@ -344,7 +344,7 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
     return (
       <div className="container mx-auto p-4">
         <div className="bg-white shadow-md rounded-lg p-4 opacity-85 flex flex-col max-w-7xl mx-auto pt-24">
-          <h1 className="text-4xl text-center font-bold">طيران فلاي شام"</h1>
+          <h1 className="text-4xl text-center font-bold">طيران فلاي شام</h1>
           <Image
             width={420}
             height={300}

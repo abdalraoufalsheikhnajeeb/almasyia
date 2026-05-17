@@ -13,7 +13,7 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
             width={420}
             height={300}
             quality={60}
-            src="/images/britishAirways.png"
+            src="/images/britishAirways.webp"
             alt="British Airways"
             className="w-96 mb-5"
           />
@@ -151,7 +151,7 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
             width={420}
             height={300}
             quality={60}
-            src="/images/britishAirways.png"
+            src="/images/britishAirways.webp"
             alt="الخطوط الجوية البريطانية"
             className="w-96 mb-5"
           />
@@ -280,7 +280,7 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
             width={420}
             height={300}
             quality={60}
-            src="/images/britishAirways.png"
+            src="/images/britishAirways.webp"
             alt="Британские Авиалинии"
             className="w-96 mb-5"
           />

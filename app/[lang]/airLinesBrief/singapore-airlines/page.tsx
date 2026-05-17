@@ -13,7 +13,7 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
             width={420}
             height={300}
             quality={60}
-            src="/images/singapore-airlines.png"
+            src="/images/singapore-airlines.webp"
             alt="Singapore Airlines"
             className="w-96 mb-5"
           />
@@ -151,7 +151,7 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
             width={420}
             height={300}
             quality={60}
-            src="/images/singapore-airlines.png"
+            src="/images/singapore-airlines.webp"
             alt="الخطوط الجوية السنغافورية"
             className="w-96 mb-5"
           />
@@ -279,7 +279,7 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
             width={420}
             height={300}
             quality={60}
-            src="/images/singapore-airlines.png"
+            src="/images/singapore-airlines.webp"
             alt="Сингапурские Авиалинии"
             className="w-96 mb-5"
           />

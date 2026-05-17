@@ -11,6 +11,9 @@ import "./globals.css";
 const tajawal = Tajawal({
   subsets: ["latin", "arabic"],
   weight: ["400", "700"],
+  display: "swap",
+  preload: true,
+  variable: "--font-tajawal",
 });
 
 const siteUrl = new URL("https://www.alnujoomalmasiya.com");

@@ -1,62 +1,61 @@
-"use client";
-import { useEffect, useState } from "react";
+import type { Metadata } from "next";
 import { Locale } from "../../../../i18n-config";
 import AnTitle from "../../components/AnTitle";
 import { timeZones } from "../../data";
+import { buildPageMetadata, SITE_URL } from "../../seo";
+import { PAGES_SEO } from "../../seo-data";
+import ClockTicker from "./ClockTicker";
 
-interface Time {
-  [key: string]: string;
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return buildPageMetadata({
+    lang: lang as Locale,
+    path: "/WorldClock",
+    title: PAGES_SEO.worldClock.title,
+    description: PAGES_SEO.worldClock.description,
+  });
 }
 
-const getTime = (tz: string) => {
-  return new Date().toLocaleString("en-US", {
-    timeZone: tz,
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    hourCycle: "h24",
-  });
-};
+export default async function WorldClock({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+  const locale = lang as Locale;
 
-const WorldClock = ({ params }: { params: Promise<{ lang: string }> }) => {
-  const [lang, setLang] = useState<Locale | null>(null);
-  const [times, setTimes] = useState<Time>({});
-
-  useEffect(() => {
-    // Resolve the params promise to get the language
-    params.then(({ lang }) => setLang(lang as Locale));
-
-    const updateTime = () => {
-      const newTimes: Time = {};
-      timeZones.forEach(({ nameEN, tz }) => {
-        newTimes[nameEN] = getTime(tz);
-      });
-      setTimes(newTimes);
-    };
-
-    updateTime();
-    const interval = setInterval(updateTime, 1000); // Update every second
-    return () => clearInterval(interval);
-  }, [params]);
-
-  if (!lang) {
-    return <div>Loading...</div>;
-  }
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: PAGES_SEO.worldClock.title[locale],
+    description: PAGES_SEO.worldClock.description[locale],
+    url: `${SITE_URL}/${lang}/WorldClock`,
+  };
 
   return (
-    <div className="container mx-auto px-4 lg:px-16 pt-4">
+    <main className="container mx-auto px-4 lg:px-16 pt-4">
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <h1 className="sr-only">{PAGES_SEO.worldClock.title[locale]}</h1>
       <AnTitle title="World Clock" />
-      <div className="flex flex-wrap gap-4 items-center justify-center">
+      <section className="flex flex-wrap gap-4 items-center justify-center">
         {timeZones.map((zone) => (
-          <div
+          <article
             key={zone.nameEN}
             className="box flex flex-col justify-center items-center mx-1"
           >
             <div className="flex items-center justify-center ps-8">
               <h2 className="text-2xl font-bold text-litePrimary">
-                {lang === "en"
+                {locale === "en"
                   ? zone.nameEN
-                  : lang === "ar"
+                  : locale === "ar"
                   ? zone.nameAR
                   : zone.nameRU}
                 <span className="text-litePrimary text-xl ms-2">
@@ -64,12 +63,10 @@ const WorldClock = ({ params }: { params: Promise<{ lang: string }> }) => {
                 </span>
               </h2>
             </div>
-            <p className="text-xl text-litePrimary ">{times[zone.nameEN]}</p>
-          </div>
+            <ClockTicker tz={zone.tz} />
+          </article>
         ))}
-      </div>
-    </div>
+      </section>
+    </main>
   );
-};
-
-export default WorldClock;
+}

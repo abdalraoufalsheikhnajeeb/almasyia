@@ -1,13 +1,47 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 
 import { Locale } from "../../../../i18n-config";
 import { Indonesia } from "../../destinations/Indonesia";
 import Link from "next/link";
+import { buildPageMetadata, buildCountryJsonLd, SITE_URL } from "../../seo";
+import { COUNTRIES_SEO } from "../../seo-data";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return buildPageMetadata({
+    lang: lang as Locale,
+    path: "/countries/indonesia",
+    title: COUNTRIES_SEO.indonesia.title,
+    description: COUNTRIES_SEO.indonesia.description,
+    imageUrl: "/images/indonesia.webp",
+  });
+}
 
 const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
   const lang = (await params).lang as Locale;
+  const jsonLd = buildCountryJsonLd({
+    name: COUNTRIES_SEO.indonesia.title[lang],
+    description: COUNTRIES_SEO.indonesia.description[lang],
+    imageUrl: "/images/indonesia.webp",
+    pageUrl: `${SITE_URL}/${lang}/countries/indonesia`,
+  });
+  const heading =
+    lang === "ar" ? "السفر إلى إندونيسيا" : lang === "ru" ? "Путешествие в Индонезию" : "Travel to Indonesia";
   return (
-    <div className="container mx-auto pt-4 p-4">
+    <main className="container mx-auto pt-4 p-4">
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <h1 className="text-center text-accent text-3xl lg:text-4xl font-bold my-4">
+        {heading}
+      </h1>
       {Indonesia.map((item, index) => {
         const {
           nameEN,

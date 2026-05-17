@@ -1,9 +1,26 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import { getDictionary } from "../../../../get-dictionary";
 import { Locale } from "../../../../i18n-config";
 import AnTitle from "../../components/AnTitle";
 import VisaForm from "../../components/VisasForm";
 import { visas } from "../../data";
+import { buildPageMetadata, buildServiceJsonLd, SITE_URL } from "../../seo";
+import { SERVICES_SEO } from "../../seo-data";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return buildPageMetadata({
+    lang: lang as Locale,
+    path: "/Services/visas",
+    title: SERVICES_SEO.visas.title,
+    description: SERVICES_SEO.visas.description,
+  });
+}
 
 export default async function page({
   params,
@@ -12,9 +29,21 @@ export default async function page({
 }) {
   const lang = (await params).lang as Locale;
   const dic = await getDictionary(lang);
+  const jsonLd = buildServiceJsonLd({
+    name: SERVICES_SEO.visas.title[lang],
+    description: SERVICES_SEO.visas.description[lang],
+    serviceType: "Visa Assistance",
+    pageUrl: `${SITE_URL}/${lang}/Services/visas`,
+  });
 
   return (
-    <div className="mx-auto px-4 lg:px-28 flex flex-col">
+    <main className="mx-auto px-4 lg:px-28 flex flex-col">
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <h1 className="sr-only">{SERVICES_SEO.visas.title[lang]}</h1>
       <AnTitle title={dic.viasa} />
       <div className="flex flex-col gap-8">
         {visas.map((visa, index) => {
@@ -119,6 +148,6 @@ export default async function page({
         })}
       </div>
       <VisaForm dic={dic} />
-    </div>
+    </main>
   );
 }
