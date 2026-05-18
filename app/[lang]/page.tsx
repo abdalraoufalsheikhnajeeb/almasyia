@@ -39,13 +39,10 @@ const Page = async ({ params }: { params: Promise<{ lang: string }> }) => {
             className="w-52 lg:w-80 object-cover"
           />
           <h1 className="text-3xl max-w-3xl font-bold text-litePrimary text-center lg:text-start">
-            Travel to Dubai from Damascus with secure document delivery
+            {dic.heroTitle}
           </h1>
           <p className="text-center lg:text-start max-w-3xl text-lg text-primary">
-            Trusted by travelers moving between Damascus and Dubai for flight
-            bookings, visas, and secure document delivery. Alnujoom Almasiya,
-            led by Farouk Dakkak (النجوم الماسية), handles papers and packages
-            with care alongside premium travel planning.
+            {dic.heroSubtitle}
           </p>
           {/* Add two inline buttons here inspired by Whatsapp and PhoneCall styles */}
           {/* <div className="flex gap-4 mt-4"> */}

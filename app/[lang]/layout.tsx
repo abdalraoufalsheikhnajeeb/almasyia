@@ -25,7 +25,7 @@ const seoByLocale: Record<
   en: {
     title: "Alnujoom Almasiya | Travel & Tourism Services",
     description:
-      "Travel agency led by Farouk Dakkak offering flights, hotels, visas, insurance, airport transfers, and document delivery between Damascus and Dubai.",
+      "Travel agency led by Farouk Dakkak offering flights, hotels, visas, insurance, airport transfers, and secure document delivery to destinations worldwide.",
     keywords: [
       "travel agency",
       "dubai flights",
@@ -46,7 +46,7 @@ const seoByLocale: Record<
   ar: {
     title: "Alnujoom Almasiya | Travel & Tourism Services",
     description:
-      "Travel agency led by Farouk Dakkak offering flights, hotels, visas, insurance, airport transfers, and document delivery between Damascus and Dubai.",
+      "Travel agency led by Farouk Dakkak offering flights, hotels, visas, insurance, airport transfers, and secure document delivery to destinations worldwide.",
     keywords: [
       "travel agency",
       "dubai flights",
@@ -67,7 +67,7 @@ const seoByLocale: Record<
   ru: {
     title: "Alnujoom Almasiya | Travel & Tourism Services",
     description:
-      "Travel agency led by Farouk Dakkak offering flights, hotels, visas, insurance, airport transfers, and document delivery between Damascus and Dubai.",
+      "Travel agency led by Farouk Dakkak offering flights, hotels, visas, insurance, airport transfers, and secure document delivery to destinations worldwide.",
     keywords: [
       "travel agency",
       "dubai flights",
