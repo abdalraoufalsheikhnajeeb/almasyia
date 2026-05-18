@@ -5,7 +5,13 @@ interface TravelInsuranceFormProps {
   lang: string;
 }
 
+type Lang = "ar" | "en" | "ru";
+
+const tr = (lang: Lang, ar: string, en: string, ru: string): string =>
+  lang === "ar" ? ar : lang === "ru" ? ru : en;
+
 const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
+  const l = lang as Lang;
   const [formData, setFormData] = useState({
     destination: "",
     insuranceStartDate: new Date(),
@@ -16,40 +22,24 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
   });
   const formatDate = (date: Date) => date.toISOString().split("T")[0];
 
-  // A unified onChange handler for <input> and <select>
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    // Narrow to <input> first
     if (e.target instanceof HTMLInputElement) {
-      const { name, type, value, valueAsDate } = e.target;
-
-      // If it's a date field
+      const { name, value, valueAsDate } = e.target;
       if (name === "insuranceStartDate" || name === "insuranceEndDate") {
-        setFormData((prevData) => ({
-          ...prevData,
-          [name]: valueAsDate ?? new Date(),
-        }));
+        setFormData((prev) => ({ ...prev, [name]: valueAsDate ?? new Date() }));
       } else {
-        // For text, number, or radio inputs
-        setFormData((prevData) => ({
-          ...prevData,
-          [name]: value,
-        }));
+        setFormData((prev) => ({ ...prev, [name]: value }));
       }
     } else {
-      // Otherwise it's a <select>
       const { name, value } = e.target;
-      setFormData((prevData) => ({
-        ...prevData,
-        [name]: value,
-      }));
+      setFormData((prev) => ({ ...prev, [name]: value }));
     }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
     const finalDestination =
       formData.destination === "Other countries"
         ? formData.otherCountry
@@ -72,73 +62,45 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-6 w-96 p-4 flex flex-col backdrop-blur-sm border-2 border-white rounded-lg bg-white bg-opacity-50"
+      className="card-elegant w-full max-w-md p-6 space-y-4"
     >
+      <h3 className="heading-accent text-xl font-bold text-primary">
+        {tr(l, "تأمين السفر", "Travel Insurance", "Туристическое страхование")}
+      </h3>
+
       {/* Destination */}
       <div>
-        <label htmlFor="destination" className="block text-lg text-gray-900">
-          {lang === "ar"
-            ? "اختر الوجهة"
-            : lang === "ru"
-            ? "Выберите пункт назначения"
-            : "Select the Destination"}
+        <label htmlFor="destination" className="mb-1 block text-sm font-medium text-slate-700">
+          {tr(l, "اختر الوجهة", "Select the Destination", "Выберите пункт назначения")}
         </label>
         <select
           id="destination"
           name="destination"
           value={formData.destination}
           onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+          className="input-elegant"
           required
         >
           <option value="">
-            {lang === "ar"
-              ? "-- اختر الوجهة --"
-              : lang === "ru"
-              ? "-- Выберите пункт назначения --"
-              : "-- Select Destination --"}
+            -- {tr(l, "اختر الوجهة", "Select Destination", "Выберите пункт назначения")} --
           </option>
           <option value="Gulf Cooperation Council countries">
-            {lang === "ar"
-              ? "تأمين دول مجلس التعاون الخليجي"
-              : lang === "ru"
-              ? "Страхование стран Совета сотрудничества стран Персидского залива"
-              : "Securing the Gulf Cooperation Council countries"}
+            {tr(l, "تأمين دول مجلس التعاون الخليجي", "Gulf Cooperation Council countries", "Страны Совета сотрудничества")}
           </option>
           <option value="Russia 🇷🇺">
-            {lang === "ar"
-              ? "تأمين روسيا 🇷🇺"
-              : lang === "ru"
-              ? "Страхование России 🇷🇺"
-              : "Securing Russia 🇷🇺"}
+            {tr(l, "تأمين روسيا 🇷🇺", "Russia 🇷🇺", "Россия 🇷🇺")}
           </option>
           <option value="Schengen insurance">
-            {lang === "ar"
-              ? "تأمين شنغن"
-              : lang === "ru"
-              ? "Шенгенская страховка"
-              : "Schengen insurance"}
+            {tr(l, "تأمين شنغن", "Schengen insurance", "Шенгенская страховка")}
           </option>
           <option value="America insurance">
-            {lang === "ar"
-              ? "تأمين أمريكا"
-              : lang === "ru"
-              ? "Страхование Америки"
-              : "America insurance"}
+            {tr(l, "تأمين أمريكا", "America insurance", "Страхование Америки")}
           </option>
           <option value="Canada Insurance 🇨🇦">
-            {lang === "ar"
-              ? "تأمين كندا 🇨🇦"
-              : lang === "ru"
-              ? "Страхование Канады 🇨🇦"
-              : "Canada Insurance 🇨🇦"}
+            {tr(l, "تأمين كندا 🇨🇦", "Canada Insurance 🇨🇦", "Страхование Канады 🇨🇦")}
           </option>
           <option value="Other countries">
-            {lang === "ar"
-              ? "دول أخرى"
-              : lang === "ru"
-              ? "Другие страны"
-              : "Other countries"}
+            {tr(l, "دول أخرى", "Other countries", "Другие страны")}
           </option>
         </select>
         {formData.destination === "Other countries" && (
@@ -147,14 +109,8 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
             name="otherCountry"
             value={formData.otherCountry}
             onChange={handleChange}
-            placeholder={
-              lang === "ar"
-                ? "ادخل الدولة"
-                : lang === "ru"
-                ? "Введите страну"
-                : "Enter country"
-            }
-            className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+            placeholder={tr(l, "ادخل الدولة", "Enter country", "Введите страну")}
+            className="input-elegant mt-2 animate-fade-in"
             required
           />
         )}
@@ -162,72 +118,42 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
 
       {/* Insurance Start Date */}
       <div>
-        <label
-          htmlFor="insuranceStartDate"
-          className="block text-lg text-gray-900"
-        >
-          {lang === "ar"
-            ? "تاريخ بدء التأمين"
-            : lang === "ru"
-            ? "Дата начала страхования"
-            : "Insurance Starting Date"}
+        <label htmlFor="insuranceStartDate" className="mb-1 block text-sm font-medium text-slate-700">
+          {tr(l, "تاريخ بدء التأمين", "Insurance Starting Date", "Дата начала страхования")}
         </label>
-        <div className="relative mt-2">
-          <input
-            type="date"
-            id="insuranceStartDate"
-            name="insuranceStartDate"
-            // Restrict past dates
-            min={new Date().toISOString().split("T")[0]}
-            // Convert current date to YYYY-MM-DD
-            value={formData.insuranceStartDate.toISOString().split("T")[0]}
-            onChange={handleChange}
-            className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-primary"
-            lang="en"
-            inputMode="numeric"
-            pattern="\\d{4}-\\d{2}-\\d{2}"
-            required
-          />
-        </div>
+        <input
+          type="date"
+          id="insuranceStartDate"
+          name="insuranceStartDate"
+          min={new Date().toISOString().split("T")[0]}
+          value={formatDate(formData.insuranceStartDate)}
+          onChange={handleChange}
+          className="input-elegant"
+          required
+        />
       </div>
 
       {/* Insurance End Date */}
       <div>
-        <label
-          htmlFor="insuranceEndDate"
-          className="block text-lg text-gray-900"
-        >
-          {lang === "ar"
-            ? "تاريخ انتهاء التأمين"
-            : lang === "ru"
-            ? "Дата окончания страхования"
-            : "Insurance Ending Date"}
+        <label htmlFor="insuranceEndDate" className="mb-1 block text-sm font-medium text-slate-700">
+          {tr(l, "تاريخ انتهاء التأمين", "Insurance Ending Date", "Дата окончания страхования")}
         </label>
-        <div className="relative mt-2">
-          <input
-            type="date"
+        <input
+          type="date"
           id="insuranceEndDate"
           name="insuranceEndDate"
           min={new Date().toISOString().split("T")[0]}
-          value={formData.insuranceEndDate.toISOString().split("T")[0]}
+          value={formatDate(formData.insuranceEndDate)}
           onChange={handleChange}
-          className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-primary"
-          lang="en"
-          inputMode="numeric"
-          pattern="\\d{4}-\\d{2}-\\d{2}"
+          className="input-elegant"
           required
         />
       </div>
-    </div>
 
       {/* Number of People */}
       <div>
-        <label htmlFor="numberOfPeople" className="block text-lg text-gray-900">
-          {lang === "ar"
-            ? "عدد الأشخاص"
-            : lang === "ru"
-            ? "Количество людей"
-            : "Number of People"}
+        <label htmlFor="numberOfPeople" className="mb-1 block text-sm font-medium text-slate-700">
+          {tr(l, "عدد الأشخاص", "Number of People", "Количество людей")}
         </label>
         <input
           id="numberOfPeople"
@@ -235,7 +161,8 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
           name="numberOfPeople"
           value={formData.numberOfPeople}
           onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+          min={1}
+          className="input-elegant"
           lang="en"
           inputMode="numeric"
           pattern="\\d*"
@@ -245,59 +172,50 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
 
       {/* Trip Type */}
       <div>
-        <label className="block text-lg text-gray-900">
-          {lang === "ar"
-            ? "نوع الرحلة"
-            : lang === "ru"
-            ? "Тип поездки"
-            : "Trip Type"}
-        </label>
-        <div className="flex items-center mt-2">
-          <input
-            type="radio"
-            name="tripType"
-            value="oneTrip"
-            checked={formData.tripType === "oneTrip"}
-            onChange={handleChange}
-            className="h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
-          />
-          <label className="ms-2 text-lg text-gray-900">
-            {lang === "ar"
-              ? "رحلة واحدة"
-              : lang === "ru"
-              ? "Одна поездка"
-              : "One Trip"}
+        <span className="mb-1 block text-sm font-medium text-slate-700">
+          {tr(l, "نوع الرحلة", "Trip Type", "Тип поездки")}
+        </span>
+        <div className="mt-1 space-y-2">
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input
+              type="radio"
+              name="tripType"
+              value="oneTrip"
+              checked={formData.tripType === "oneTrip"}
+              onChange={handleChange}
+              className="h-4 w-4 text-litePrimary focus:ring-litePrimary"
+            />
+            <span className="text-sm text-slate-700">
+              {tr(l, "رحلة واحدة", "One Trip", "Одна поездка")}
+            </span>
           </label>
-        </div>
-        <div className="flex items-center mt-2">
-          <input
-            type="radio"
-            name="tripType"
-            value="multipleTrips"
-            checked={formData.tripType === "multipleTrips"}
-            onChange={handleChange}
-            className="h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
-          />
-          <label className="ms-2 text-lg text-gray-900">
-            {lang === "ar"
-              ? "رحلات متعددة سنويًا"
-              : lang === "ru"
-              ? "Множественные поездки ежегодно"
-              : "Multiple Trips Annually"}
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input
+              type="radio"
+              name="tripType"
+              value="multipleTrips"
+              checked={formData.tripType === "multipleTrips"}
+              onChange={handleChange}
+              className="h-4 w-4 text-litePrimary focus:ring-litePrimary"
+            />
+            <span className="text-sm text-slate-700">
+              {tr(l, "رحلات متعددة سنويًا", "Multiple Trips Annually", "Множественные поездки ежегодно")}
+            </span>
           </label>
         </div>
       </div>
 
-      {/* Submit Button */}
-      <button
-        type="submit"
-        className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-      >
-        {lang === "ar"
-          ? "إرسال المعلومات"
-          : lang === "ru"
-          ? "Отправить информацию"
-          : "Send Info"}
+      <button type="submit" className="btn-accent w-full">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="w-5 h-5"
+          aria-hidden="true"
+        >
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+        </svg>
+        {tr(l, "إرسال المعلومات", "Send Info", "Отправить информацию")}
       </button>
     </form>
   );

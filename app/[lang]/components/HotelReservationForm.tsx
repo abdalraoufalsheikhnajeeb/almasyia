@@ -1,14 +1,18 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import { CitiesByCountry, citiesByCountry } from "../data";
 
 interface HotelReservationFormProps {
   lang: string;
 }
 
-const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
-  lang,
-}) => {
+type Lang = "ar" | "en" | "ru";
+
+const tr = (lang: Lang, ar: string, en: string, ru: string): string =>
+  lang === "ar" ? ar : lang === "ru" ? ru : en;
+
+const HotelReservationForm: React.FC<HotelReservationFormProps> = ({ lang }) => {
+  const l = lang as Lang;
   const [formData, setFormData] = useState({
     country: "",
     city: "",
@@ -20,67 +24,35 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
   const [hasChildren, setHasChildren] = useState(false);
   const [cities, setCities] = useState<string[]>([]);
 
-  /**
-   * Handles all onChange events for both <input> and <select> elements,
-   * using type narrowing to avoid TS2367 errors.
-   */
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    // 1. Narrow to <input> elements
     if (e.target instanceof HTMLInputElement) {
       const { name, type, value, valueAsDate, checked } = e.target;
-
-      // If it's a checkbox
       if (type === "checkbox") {
         setHasChildren(checked);
         return;
       }
-
-      // If it's a date input
       if (name === "arrivalDate" || name === "departureDate") {
-        setFormData((prevData) => ({
-          ...prevData,
-          [name]: valueAsDate || new Date(),
-        }));
+        setFormData((prev) => ({ ...prev, [name]: valueAsDate || new Date() }));
         return;
       }
-
-      // Otherwise, it's a text/number input
-      setFormData((prevData) => ({
-        ...prevData,
-        [name]: value,
-      }));
-    }
-    // 2. Narrow to <select> elements
-    else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    } else {
       const { name, value } = e.target;
-
-      // If selecting a country, update the city list
       if (name === "country") {
-        const selectedCountry = citiesByCountry[value as keyof CitiesByCountry];
+        const selectedCountry =
+          citiesByCountry[value as keyof CitiesByCountry];
         const newCities =
           selectedCountry?.[lang as keyof typeof selectedCountry] || [];
-
         setCities(newCities);
-        setFormData((prevData) => ({
-          ...prevData,
-          country: value,
-          city: "",
-        }));
+        setFormData((prev) => ({ ...prev, country: value, city: "" }));
       } else {
-        // Otherwise, just update the relevant field
-        setFormData((prevData) => ({
-          ...prevData,
-          [name]: value,
-        }));
+        setFormData((prev) => ({ ...prev, [name]: value }));
       }
     }
   };
 
-  /**
-   * Submits the form data via WhatsApp link.
-   */
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const message = `*Hotel Reservation: 🏨*\n\n- *Country*: ${
@@ -102,33 +74,27 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-6 w-full max-w-md p-4 flex flex-col backdrop-blur-sm border-2 border-white rounded-lg bg-white bg-opacity-50"
+      className="card-elegant w-full max-w-md p-6 space-y-4"
     >
+      <h3 className="heading-accent text-xl font-bold text-primary">
+        {tr(l, "حجز فندق", "Book a Hotel", "Бронирование отеля")}
+      </h3>
+
       {/* Country */}
       <div>
-        <label htmlFor="country" className="block text-lg text-gray-900">
-          {lang === "ar"
-            ? "اختر الدولة"
-            : lang === "ru"
-            ? "Выберите страну"
-            : "Choose the country"}
+        <label htmlFor="country" className="mb-1 block text-sm font-medium text-slate-700">
+          {tr(l, "اختر الدولة", "Choose the country", "Выберите страну")}
         </label>
         <select
           id="country"
           name="country"
           value={formData.country}
           onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+          className="input-elegant"
           required
         >
           <option value="">
-            --{" "}
-            {lang === "ar"
-              ? "اختر الدولة"
-              : lang === "ru"
-              ? "Выберите страну"
-              : "Select Country"}{" "}
-            --
+            -- {tr(l, "اختر الدولة", "Select Country", "Выберите страну")} --
           </option>
           {Object.keys(citiesByCountry).map((country) => (
             <option key={country} value={country}>
@@ -140,25 +106,19 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
 
       {/* City */}
       <div>
-        <label htmlFor="city" className="block text-lg text-gray-900">
-          {lang === "ar" ? "المدينة" : lang === "ru" ? "Город" : "City"}
+        <label htmlFor="city" className="mb-1 block text-sm font-medium text-slate-700">
+          {tr(l, "المدينة", "City", "Город")}
         </label>
         <select
           id="city"
           name="city"
           value={formData.city}
           onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+          className="input-elegant"
           required
         >
           <option value="">
-            --{" "}
-            {lang === "ar"
-              ? "اختر المدينة"
-              : lang === "ru"
-              ? "Выберите город"
-              : "Select City"}{" "}
-            --
+            -- {tr(l, "اختر المدينة", "Select City", "Выберите город")} --
           </option>
           {cities.map((city) => (
             <option key={city} value={city}>
@@ -170,58 +130,42 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
 
       {/* Arrival Date */}
       <div>
-        <label htmlFor="arrivalDate" className="block text-lg text-gray-900">
-          {lang === "ar"
-            ? "تاريخ الوصول"
-            : lang === "ru"
-            ? "Дата прибытия"
-            : "Date of Arrival"}
+        <label htmlFor="arrivalDate" className="mb-1 block text-sm font-medium text-slate-700">
+          {tr(l, "تاريخ الوصول", "Date of Arrival", "Дата прибытия")}
         </label>
-        <div className="relative mt-2">
-          <input
-            type="date"
-            id="arrivalDate"
-            name="arrivalDate"
-            min={new Date().toISOString().split("T")[0]}
-            value={formData.arrivalDate.toISOString().split("T")[0]}
-            onChange={handleChange}
-            className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-primary"
-            required
-          />
-        </div>
+        <input
+          type="date"
+          id="arrivalDate"
+          name="arrivalDate"
+          min={new Date().toISOString().split("T")[0]}
+          value={formData.arrivalDate.toISOString().split("T")[0]}
+          onChange={handleChange}
+          className="input-elegant"
+          required
+        />
       </div>
 
       {/* Departure Date */}
       <div>
-        <label htmlFor="departureDate" className="block text-lg text-gray-900">
-          {lang === "ar"
-            ? "تاريخ المغادرة"
-            : lang === "ru"
-            ? "Дата отъезда"
-            : "Departure Date"}
+        <label htmlFor="departureDate" className="mb-1 block text-sm font-medium text-slate-700">
+          {tr(l, "تاريخ المغادرة", "Departure Date", "Дата отъезда")}
         </label>
-        <div className="relative mt-2">
-          <input
-            type="date"
-            id="departureDate"
-            name="departureDate"
-            min={new Date().toISOString().split("T")[0]}
-            value={formData.departureDate.toISOString().split("T")[0]}
-            onChange={handleChange}
-            className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-primary"
-            required
-          />
-        </div>
+        <input
+          type="date"
+          id="departureDate"
+          name="departureDate"
+          min={new Date().toISOString().split("T")[0]}
+          value={formData.departureDate.toISOString().split("T")[0]}
+          onChange={handleChange}
+          className="input-elegant"
+          required
+        />
       </div>
 
       {/* Number of People */}
       <div>
-        <label htmlFor="numberOfPeople" className="block text-lg text-gray-900">
-          {lang === "ar"
-            ? "عدد الأشخاص"
-            : lang === "ru"
-            ? "Количество людей"
-            : "Number of People"}
+        <label htmlFor="numberOfPeople" className="mb-1 block text-sm font-medium text-slate-700">
+          {tr(l, "عدد الأشخاص", "Number of People", "Количество людей")}
         </label>
         <input
           id="numberOfPeople"
@@ -229,7 +173,8 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
           name="numberOfPeople"
           value={formData.numberOfPeople}
           onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+          min={1}
+          className="input-elegant"
           lang="en"
           inputMode="numeric"
           pattern="\\d*"
@@ -237,37 +182,26 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
         />
       </div>
 
-      {/* Checkbox: Do you have children? */}
-      <div className="flex items-center mt-2">
+      {/* Checkbox */}
+      <label className="flex items-center gap-2 cursor-pointer select-none">
         <input
           id="hasChildren"
           type="checkbox"
           name="hasChildren"
           checked={hasChildren}
           onChange={handleChange}
-          className="h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+          className="h-4 w-4 rounded border-slate-300 text-litePrimary focus:ring-litePrimary"
         />
-        <label htmlFor="hasChildren" className="ms-2 text-lg text-gray-900">
-          {lang === "ar"
-            ? "هل لديك أطفال؟"
-            : lang === "ru"
-            ? "У вас есть дети?"
-            : "Do you have children?"}
-        </label>
-      </div>
+        <span className="text-sm text-slate-700">
+          {tr(l, "هل لديك أطفال؟", "Do you have children?", "У вас есть дети?")}
+        </span>
+      </label>
 
       {/* Number of Children */}
       {hasChildren && (
-        <div>
-          <label
-            htmlFor="numberOfChildren"
-            className="block text-lg text-gray-900"
-          >
-            {lang === "ar"
-              ? "عدد الأطفال"
-              : lang === "ru"
-              ? "Количество детей"
-              : "Number of Children"}
+        <div className="animate-fade-in">
+          <label htmlFor="numberOfChildren" className="mb-1 block text-sm font-medium text-slate-700">
+            {tr(l, "عدد الأطفال", "Number of Children", "Количество детей")}
           </label>
           <input
             id="numberOfChildren"
@@ -275,7 +209,8 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
             name="numberOfChildren"
             value={formData.numberOfChildren}
             onChange={handleChange}
-            className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+            min={0}
+            className="input-elegant"
             lang="en"
             inputMode="numeric"
             pattern="\\d*"
@@ -283,16 +218,17 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({
         </div>
       )}
 
-      {/* Submit Button */}
-      <button
-        type="submit"
-        className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-      >
-        {lang === "ar"
-          ? "إرسال المعلومات"
-          : lang === "ru"
-          ? "Отправить информацию"
-          : "Send Info"}
+      <button type="submit" className="btn-accent w-full">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="w-5 h-5"
+          aria-hidden="true"
+        >
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+        </svg>
+        {tr(l, "إرسال المعلومات", "Send Info", "Отправить информацию")}
       </button>
     </form>
   );

@@ -37,7 +37,7 @@ export default async function WorldClock({
   };
 
   return (
-    <main className="container mx-auto px-4 lg:px-16 pt-4">
+    <main className="container mx-auto px-4 lg:px-16 py-8">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -45,25 +45,28 @@ export default async function WorldClock({
       />
       <h1 className="sr-only">{PAGES_SEO.worldClock.title[locale]}</h1>
       <AnTitle title="World Clock" />
-      <section className="flex flex-wrap gap-4 items-center justify-center">
+      <section className="mt-6 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
         {timeZones.map((zone) => (
           <article
             key={zone.nameEN}
-            className="box flex flex-col justify-center items-center mx-1"
+            className="card-elegant flex flex-col items-start gap-2 p-5"
           >
-            <div className="flex items-center justify-center ps-8">
-              <h2 className="text-2xl font-bold text-litePrimary">
-                {locale === "en"
-                  ? zone.nameEN
-                  : locale === "ar"
-                  ? zone.nameAR
-                  : zone.nameRU}
-                <span className="text-litePrimary text-xl ms-2">
-                  {zone.flag}
-                </span>
-              </h2>
+            <span className="text-2xl" aria-hidden="true">
+              {zone.flag}
+            </span>
+            <h2 className="text-base font-semibold text-primary">
+              {locale === "en"
+                ? zone.nameEN
+                : locale === "ar"
+                ? zone.nameAR
+                : zone.nameRU}
+            </h2>
+            <div
+              className="text-2xl font-bold tracking-tight text-litePrimary tabular-nums"
+              dir="ltr"
+            >
+              <ClockTicker tz={zone.tz} />
             </div>
-            <ClockTicker tz={zone.tz} />
           </article>
         ))}
       </section>

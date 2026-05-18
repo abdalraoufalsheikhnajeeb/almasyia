@@ -1,11 +1,17 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 interface DeliveryFormProps {
   lang: string;
 }
 
+type Lang = "ar" | "en" | "ru";
+
+const tr = (lang: Lang, ar: string, en: string, ru: string): string =>
+  lang === "ar" ? ar : lang === "ru" ? ru : en;
+
 const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
+  const l = lang as Lang;
   const [formData, setFormData] = useState({
     placeOfDelivery: "",
     recipientNumber: "",
@@ -15,22 +21,15 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
     dispatchDate: new Date(),
   });
 
-  // A helper to handle date changes from <input type="date" />
   const handleDateChange = (name: string, dateValue: Date | null) => {
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: dateValue || new Date(),
-    }));
+    setFormData((prev) => ({ ...prev, [name]: dateValue || new Date() }));
   };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -51,16 +50,18 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
     window.open(whatsappUrl, "_blank");
   };
 
-  const renderFormContent = () => (
-    <>
-      {/* Sender Name */}
+  return (
+    <form
+      onSubmit={handleSubmit}
+      className="card-elegant w-full max-w-md p-6 space-y-4"
+    >
+      <h3 className="heading-accent text-xl font-bold text-primary">
+        {tr(l, "توصيل المستندات", "Documents Delivery", "Доставка документов")}
+      </h3>
+
       <div>
-        <label htmlFor="senderName" className="block text-lg text-gray-900">
-          {lang === "ar"
-            ? "اسم المرسل"
-            : lang === "ru"
-            ? "Имя отправителя"
-            : "Sender Name"}
+        <label htmlFor="senderName" className="mb-1 block text-sm font-medium text-slate-700">
+          {tr(l, "اسم المرسل", "Sender Name", "Имя отправителя")}
         </label>
         <input
           id="senderName"
@@ -68,74 +69,50 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
           name="senderName"
           value={formData.senderName}
           onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+          className="input-elegant"
           required
         />
       </div>
 
-      {/* Submission Date */}
       <div>
-        <label htmlFor="submissionDate" className="block text-lg text-gray-900">
-          {lang === "ar"
-            ? "تاريخ الإرسال"
-            : lang === "ru"
-            ? "Дата подачи"
-            : "Submission Date"}
+        <label htmlFor="submissionDate" className="mb-1 block text-sm font-medium text-slate-700">
+          {tr(l, "تاريخ التسليم", "Submission Date", "Дата подачи")}
         </label>
-        <div className="relative mt-2">
-          <input
-            type="date"
-            id="submissionDate"
-            name="submissionDate"
-            // Convert today's date to YYYY-MM-DD as the min
-            min={new Date().toISOString().split("T")[0]}
-            // Convert formData.submissionDate to YYYY-MM-DD string
-            value={formData.submissionDate.toISOString().split("T")[0]}
-            onChange={(e) =>
-              handleDateChange("submissionDate", e.target.valueAsDate)
-            }
-            className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-primary"
-            required
-          />
-        </div>
+        <input
+          type="date"
+          id="submissionDate"
+          name="submissionDate"
+          min={new Date().toISOString().split("T")[0]}
+          value={formData.submissionDate.toISOString().split("T")[0]}
+          onChange={(e) =>
+            handleDateChange("submissionDate", e.target.valueAsDate)
+          }
+          className="input-elegant"
+          required
+        />
       </div>
 
-      {/* Dispatch Date */}
       <div>
-        <label htmlFor="dispatchDate" className="block text-lg text-gray-900">
-          {lang === "ar"
-            ? "تاريخ الإرسال"
-            : lang === "ru"
-            ? "Дата отправки"
-            : "Dispatch Date"}
+        <label htmlFor="dispatchDate" className="mb-1 block text-sm font-medium text-slate-700">
+          {tr(l, "تاريخ الإرسال", "Dispatch Date", "Дата отправки")}
         </label>
-        <div className="relative mt-2">
-          <input
-            type="date"
-            id="dispatchDate"
-            name="dispatchDate"
-            min={new Date().toISOString().split("T")[0]}
-            value={formData.dispatchDate.toISOString().split("T")[0]}
-            onChange={(e) =>
-              handleDateChange("dispatchDate", e.target.valueAsDate)
-            }
-            className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-primary"
-            required
-          />
-        </div>
+        <input
+          type="date"
+          id="dispatchDate"
+          name="dispatchDate"
+          min={new Date().toISOString().split("T")[0]}
+          value={formData.dispatchDate.toISOString().split("T")[0]}
+          onChange={(e) =>
+            handleDateChange("dispatchDate", e.target.valueAsDate)
+          }
+          className="input-elegant"
+          required
+        />
       </div>
 
-      {/* Place Of Delivery */}
       <div>
-        <label
-          htmlFor="placeOfDelivery"
-          className="block text-lg text-gray-900"
-        >
-          {lang === "ar"
-            ? "اختر مكان الإرسال"
-            : lang === "ru"
-            ? "Выберите место отправления"
-            : "Select the place you want to send from"}
+        <label htmlFor="placeOfDelivery" className="mb-1 block text-sm font-medium text-slate-700">
+          {tr(l, "مكان الإرسال", "Place of Delivery", "Место отправления")}
         </label>
         <input
           id="placeOfDelivery"
@@ -143,22 +120,14 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
           name="placeOfDelivery"
           value={formData.placeOfDelivery}
           onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+          className="input-elegant"
           required
         />
       </div>
 
-      {/* Recipient Number */}
       <div>
-        <label
-          htmlFor="recipientNumber"
-          className="block text-lg text-gray-900"
-        >
-          {lang === "ar"
-            ? "رقم المستلم"
-            : lang === "ru"
-            ? "Номер получателя"
-            : "Recipient Number"}
+        <label htmlFor="recipientNumber" className="mb-1 block text-sm font-medium text-slate-700">
+          {tr(l, "رقم المستلم", "Recipient Number", "Номер получателя")}
         </label>
         <input
           id="recipientNumber"
@@ -166,65 +135,56 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
           name="recipientNumber"
           value={formData.recipientNumber}
           onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+          className="input-elegant"
           required
         />
       </div>
 
-      {/* Urgency */}
       <div>
-        <label className="block text-lg text-gray-900">
-          {lang === "ar"
-            ? "نوع الخدمة"
-            : lang === "ru"
-            ? "Срочность"
-            : "Urgency"}
-        </label>
-        <div className="flex items-center mt-2">
-          <input
-            type="radio"
-            name="urgency"
-            value="normal"
-            checked={formData.urgency === "normal"}
-            onChange={handleChange}
-            className="h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
-          />
-          <label className="ms-2 text-lg text-gray-900">
-            {lang === "ar" ? "عادي" : lang === "ru" ? "Обычная" : "Normal"}
+        <span className="mb-1 block text-sm font-medium text-slate-700">
+          {tr(l, "نوع الخدمة", "Urgency", "Срочность")}
+        </span>
+        <div className="mt-1 space-y-2">
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input
+              type="radio"
+              name="urgency"
+              value="normal"
+              checked={formData.urgency === "normal"}
+              onChange={handleChange}
+              className="h-4 w-4 text-litePrimary focus:ring-litePrimary"
+            />
+            <span className="text-sm text-slate-700">
+              {tr(l, "عادي", "Normal", "Обычная")}
+            </span>
           </label>
-        </div>
-        <div className="flex items-center mt-2">
-          <input
-            type="radio"
-            name="urgency"
-            value="urgent"
-            checked={formData.urgency === "urgent"}
-            onChange={handleChange}
-            className="h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500"
-          />
-          <label className="ms-2 text-lg text-gray-900">
-            {lang === "ar" ? "عاجل" : lang === "ru" ? "Срочная" : "Urgent"}
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input
+              type="radio"
+              name="urgency"
+              value="urgent"
+              checked={formData.urgency === "urgent"}
+              onChange={handleChange}
+              className="h-4 w-4 text-litePrimary focus:ring-litePrimary"
+            />
+            <span className="text-sm text-slate-700">
+              {tr(l, "عاجل", "Urgent", "Срочная")}
+            </span>
           </label>
         </div>
       </div>
-    </>
-  );
 
-  return (
-    <form
-      onSubmit={handleSubmit}
-      className="space-y-6 w-96 p-4 flex flex-col backdrop-blur-sm border-2 border-white rounded-lg bg-white bg-opacity-50"
-    >
-      {renderFormContent()}
-      <button
-        type="submit"
-        className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-      >
-        {lang === "ar"
-          ? "إرسال المعلومات"
-          : lang === "ru"
-          ? "Отправить информацию"
-          : "Send Info"}
+      <button type="submit" className="btn-accent w-full">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="w-5 h-5"
+          aria-hidden="true"
+        >
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+        </svg>
+        {tr(l, "إرسال المعلومات", "Send Info", "Отправить информацию")}
       </button>
     </form>
   );

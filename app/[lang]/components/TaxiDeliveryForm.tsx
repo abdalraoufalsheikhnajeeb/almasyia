@@ -5,7 +5,13 @@ interface TaxiDeliveryFormProps {
   lang: string;
 }
 
+type Lang = "ar" | "en" | "ru";
+
+const tr = (lang: Lang, ar: string, en: string, ru: string): string =>
+  lang === "ar" ? ar : lang === "ru" ? ru : en;
+
 const TaxiDeliveryForm: React.FC<TaxiDeliveryFormProps> = ({ lang }) => {
+  const l = lang as Lang;
   const [formData, setFormData] = useState({
     name: "",
     arrivalDate: "",
@@ -17,10 +23,7 @@ const TaxiDeliveryForm: React.FC<TaxiDeliveryFormProps> = ({ lang }) => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -34,11 +37,18 @@ const TaxiDeliveryForm: React.FC<TaxiDeliveryFormProps> = ({ lang }) => {
 
   const today = new Date().toISOString().split("T")[0];
 
-  const renderFormContent = () => (
-    <>
+  return (
+    <form
+      onSubmit={handleSubmit}
+      className="card-elegant w-full max-w-md p-6 space-y-4"
+    >
+      <h3 className="heading-accent text-xl font-bold text-primary">
+        {tr(l, "حجز تاكسي المطار", "Airport Taxi Booking", "Заказ такси в аэропорт")}
+      </h3>
+
       <div>
-        <label htmlFor="name" className="block text-lg  text-gray-900">
-          {lang === "ar" ? "الاسم" : lang === "ru" ? "Имя" : "Name"}
+        <label htmlFor="name" className="mb-1 block text-sm font-medium text-slate-700">
+          {tr(l, "الاسم", "Name", "Имя")}
         </label>
         <input
           id="name"
@@ -46,38 +56,31 @@ const TaxiDeliveryForm: React.FC<TaxiDeliveryFormProps> = ({ lang }) => {
           name="name"
           value={formData.name}
           onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+          className="input-elegant"
           required
         />
       </div>
+
       <div>
-        <label htmlFor="arrivalDate" className="block text-lg  text-gray-900">
-          {lang === "ar"
-            ? "تاريخ الوصول"
-            : lang === "ru"
-            ? "Дата прибытия"
-            : "Arrival Date"}
+        <label htmlFor="arrivalDate" className="mb-1 block text-sm font-medium text-slate-700">
+          {tr(l, "تاريخ الوصول", "Arrival Date", "Дата прибытия")}
         </label>
         <input
           id="arrivalDate"
-          type="text"
+          type="date"
           name="arrivalDate"
           value={formData.arrivalDate}
           onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+          className="input-elegant"
           lang="en"
-          inputMode="numeric"
           required
           min={today}
         />
       </div>
+
       <div>
-        <label htmlFor="arrivalTime" className="block text-lg  text-gray-900">
-          {lang === "ar"
-            ? "وقت الوصول"
-            : lang === "ru"
-            ? "Время прибытия"
-            : "Arrival Time"}
+        <label htmlFor="arrivalTime" className="mb-1 block text-sm font-medium text-slate-700">
+          {tr(l, "وقت الوصول", "Arrival Time", "Время прибытия")}
         </label>
         <input
           id="arrivalTime"
@@ -85,21 +88,15 @@ const TaxiDeliveryForm: React.FC<TaxiDeliveryFormProps> = ({ lang }) => {
           name="arrivalTime"
           value={formData.arrivalTime}
           onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+          className="input-elegant"
           lang="en"
           required
         />
       </div>
+
       <div>
-        <label
-          htmlFor="numberOfPassengers"
-          className="block text-lg  text-gray-900"
-        >
-          {lang === "ar"
-            ? "عدد الركاب"
-            : lang === "ru"
-            ? "Количество пассажиров"
-            : "Number of Passengers"}
+        <label htmlFor="numberOfPassengers" className="mb-1 block text-sm font-medium text-slate-700">
+          {tr(l, "عدد الركاب", "Number of Passengers", "Количество пассажиров")}
         </label>
         <input
           id="numberOfPassengers"
@@ -107,23 +104,18 @@ const TaxiDeliveryForm: React.FC<TaxiDeliveryFormProps> = ({ lang }) => {
           name="numberOfPassengers"
           value={formData.numberOfPassengers}
           onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+          min={1}
+          className="input-elegant"
           lang="en"
           inputMode="numeric"
           pattern="\\d*"
           required
         />
       </div>
+
       <div>
-        <label
-          htmlFor="arrivalAirport"
-          className="block text-lg  text-gray-900"
-        >
-          {lang === "ar"
-            ? "تحديد مطار الوصول"
-            : lang === "ru"
-            ? "Укажите аэропорт прибытия"
-            : "Specify the Arrival Airport"}
+        <label htmlFor="arrivalAirport" className="mb-1 block text-sm font-medium text-slate-700">
+          {tr(l, "تحديد مطار الوصول", "Arrival Airport", "Аэропорт прибытия")}
         </label>
         <input
           id="arrivalAirport"
@@ -131,20 +123,14 @@ const TaxiDeliveryForm: React.FC<TaxiDeliveryFormProps> = ({ lang }) => {
           name="arrivalAirport"
           value={formData.arrivalAirport}
           onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+          className="input-elegant"
           required
         />
       </div>
+
       <div>
-        <label
-          htmlFor="deliveryLocation"
-          className="block text-lg  text-gray-900"
-        >
-          {lang === "ar"
-            ? "اختر العنوان الذي تريد الذهاب إليه"
-            : lang === "ru"
-            ? "Выберите адрес, к которому хотите поехать"
-            : "Select the address you want to go to"}
+        <label htmlFor="deliveryLocation" className="mb-1 block text-sm font-medium text-slate-700">
+          {tr(l, "العنوان المطلوب", "Destination Address", "Адрес назначения")}
         </label>
         <input
           id="deliveryLocation"
@@ -152,28 +138,22 @@ const TaxiDeliveryForm: React.FC<TaxiDeliveryFormProps> = ({ lang }) => {
           name="deliveryLocation"
           value={formData.deliveryLocation}
           onChange={handleChange}
-          className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+          className="input-elegant"
           required
         />
       </div>
-    </>
-  );
 
-  return (
-    <form
-      onSubmit={handleSubmit}
-      className="space-y-6 w-96 p-4 flex flex-col backdrop-blur-sm border-2 border-white rounded-lg bg-white bg-opacity-50"
-    >
-      {renderFormContent()}
-      <button
-        type="submit"
-        className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg  rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-      >
-        {lang === "ar"
-          ? "إرسال المعلومات"
-          : lang === "ru"
-          ? "Отправить информацию"
-          : "Send Info"}
+      <button type="submit" className="btn-accent w-full">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="w-5 h-5"
+          aria-hidden="true"
+        >
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+        </svg>
+        {tr(l, "إرسال المعلومات", "Send Info", "Отправить информацию")}
       </button>
     </form>
   );

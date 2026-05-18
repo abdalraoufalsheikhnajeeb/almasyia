@@ -23,5 +23,5 @@ export default function ClockTicker({ tz }: { tz: string }) {
     () => "--:--:--"
   );
 
-  return <p className="text-xl text-litePrimary ">{time}</p>;
+  return <span>{time}</span>;
 }

@@ -1,13 +1,22 @@
 "use client";
 import { useState } from "react";
-
 import { type getDictionary } from "../../../get-dictionary";
 
 interface FlightBookingFormProps {
   dic: Awaited<ReturnType<typeof getDictionary>>;
 }
 
+type Lang = "ar" | "en" | "ru";
+
+const tr = (
+  lang: Lang,
+  ar: string,
+  en: string,
+  ru: string
+): string => (lang === "ar" ? ar : lang === "ru" ? ru : en);
+
 const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
+  const lang = dic.currLang as Lang;
   const [formData, setFormData] = useState({
     departure: "",
     arrival: "",
@@ -18,35 +27,24 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
     numberOfInfants: "",
     travelClass: "economy",
   });
+
   const formatDate = (date: Date) => date.toISOString().split("T")[0];
 
-  // We'll handle all input changes with a single function
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     const { name, value, valueAsDate } = e.target as HTMLInputElement &
-      HTMLSelectElement & {
-        valueAsDate: Date | null;
-      };
+      HTMLSelectElement & { valueAsDate: Date | null };
 
-    // If it's one of the date fields, store it as a Date object
     if (name === "outboundDate" || name === "returnDate") {
-      setFormData((prevData) => ({
-        ...prevData,
-        [name]: valueAsDate || new Date(),
-      }));
+      setFormData((prev) => ({ ...prev, [name]: valueAsDate || new Date() }));
     } else {
-      // Otherwise, just store as a string
-      setFormData((prevData) => ({
-        ...prevData,
-        [name]: value,
-      }));
+      setFormData((prev) => ({ ...prev, [name]: value }));
     }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
     const message = `*Book a Flight: ✈️*\n\n- *Place of Departure*: ${
       formData.departure
     }\n\n- *Arrival Area*: ${
@@ -66,16 +64,16 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="box">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <form onSubmit={handleSubmit} className="card-elegant p-6 lg:p-8 w-full max-w-5xl">
+      <h2 className="heading-accent text-2xl font-bold text-primary mb-6">
+        {tr(lang, "حجز رحلة طيران", "Book a Flight", "Бронирование рейса")}
+      </h2>
+
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {/* Departure */}
         <div>
-          <label htmlFor="departure" className="block text-lg text-gray-900">
-            {dic.currLang === "ar"
-              ? "مكان المغادرة"
-              : dic.currLang === "ru"
-              ? "Место отправления"
-              : "Place of Departure"}
+          <label htmlFor="departure" className="mb-1 block text-sm font-medium text-slate-700">
+            {tr(lang, "مكان المغادرة", "Place of Departure", "Место отправления")}
           </label>
           <input
             id="departure"
@@ -83,19 +81,15 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             name="departure"
             value={formData.departure}
             onChange={handleChange}
-            className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+            className="input-elegant"
             required
           />
         </div>
 
         {/* Arrival */}
         <div>
-          <label htmlFor="arrival" className="block text-lg text-gray-900">
-            {dic.currLang === "ar"
-              ? "منطقة الوصول"
-              : dic.currLang === "ru"
-              ? "Место прибытия"
-              : "Arrival Area"}
+          <label htmlFor="arrival" className="mb-1 block text-sm font-medium text-slate-700">
+            {tr(lang, "منطقة الوصول", "Arrival Area", "Место прибытия")}
           </label>
           <input
             id="arrival"
@@ -103,92 +97,55 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             name="arrival"
             value={formData.arrival}
             onChange={handleChange}
-            className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+            className="input-elegant"
             required
           />
         </div>
 
         {/* Outbound Date */}
         <div>
-          <label htmlFor="outboundDate" className="block text-lg text-gray-900">
-            {dic.currLang === "ar"
-              ? "تاريخ السفر (ذهاب)"
-              : dic.currLang === "ru"
-              ? "Дата отправления"
-              : "Outbound Date"}
+          <label htmlFor="outboundDate" className="mb-1 block text-sm font-medium text-slate-700">
+            {tr(lang, "تاريخ السفر (ذهاب)", "Outbound Date", "Дата отправления")}
           </label>
-          <div className="relative mt-2">
-            <input
-              type="date"
-              id="outboundDate"
-              name="outboundDate"
-              // This replicates minDate={new Date()}
-              min={new Date().toISOString().split("T")[0]}
-            // Convert the Date object to a "YYYY-MM-DD" string
-              value={formatDate(formData.outboundDate)}
+          <input
+            type="date"
+            id="outboundDate"
+            name="outboundDate"
+            min={new Date().toISOString().split("T")[0]}
+            value={formatDate(formData.outboundDate)}
             onChange={handleChange}
-            className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-primary"
+            className="input-elegant"
             lang="en"
             inputMode="numeric"
             pattern="\\d{4}-\\d{2}-\\d{2}"
-              // Browsers often don't show placeholders for type="date",
-              // but you can still set it
-              placeholder={
-                dic.currLang === "ar"
-                  ? "اختر التاريخ"
-                  : dic.currLang === "ru"
-                  ? "Выберите дату"
-                  : "Select date"
-              }
-              required
-            />
-          </div>
+            required
+          />
         </div>
 
         {/* Return Date */}
         <div>
-          <label htmlFor="returnDate" className="block text-lg text-gray-900">
-            {dic.currLang === "ar"
-              ? "تاريخ العودة"
-              : dic.currLang === "ru"
-              ? "Дата возвращения"
-              : "Return Date"}
+          <label htmlFor="returnDate" className="mb-1 block text-sm font-medium text-slate-700">
+            {tr(lang, "تاريخ العودة", "Return Date", "Дата возвращения")}
           </label>
-          <div className="relative mt-2">
-            <input
-              type="date"
-              id="returnDate"
-              name="returnDate"
+          <input
+            type="date"
+            id="returnDate"
+            name="returnDate"
             min={new Date().toISOString().split("T")[0]}
             value={formatDate(formData.returnDate)}
             onChange={handleChange}
-            className="block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2 bg-white text-primary"
+            className="input-elegant"
             lang="en"
             inputMode="numeric"
             pattern="\\d{4}-\\d{2}-\\d{2}"
-              placeholder={
-                dic.currLang === "ar"
-                  ? "اختر التاريخ"
-                  : dic.currLang === "ru"
-                  ? "Выберите дату"
-                  : "Select date"
-              }
-              required
-            />
-          </div>
+            required
+          />
         </div>
 
         {/* Number of Adults */}
         <div>
-          <label
-            htmlFor="numberOfAdults"
-            className="block text-lg text-gray-900"
-          >
-            {dic.currLang === "ar"
-              ? "عدد البالغين"
-              : dic.currLang === "ru"
-              ? "Количество взрослых"
-              : "Number of Adults"}
+          <label htmlFor="numberOfAdults" className="mb-1 block text-sm font-medium text-slate-700">
+            {tr(lang, "عدد البالغين", "Number of Adults", "Количество взрослых")}
           </label>
           <input
             id="numberOfAdults"
@@ -196,7 +153,8 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             name="numberOfAdults"
             value={formData.numberOfAdults}
             onChange={handleChange}
-            className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+            min={1}
+            className="input-elegant"
             lang="en"
             inputMode="numeric"
             pattern="\\d*"
@@ -206,15 +164,8 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
 
         {/* Number of Children */}
         <div>
-          <label
-            htmlFor="numberOfChildren"
-            className="block text-lg text-gray-900"
-          >
-            {dic.currLang === "ar"
-              ? "عدد الأطفال"
-              : dic.currLang === "ru"
-              ? "Количество детей"
-              : "Number of Children"}
+          <label htmlFor="numberOfChildren" className="mb-1 block text-sm font-medium text-slate-700">
+            {tr(lang, "عدد الأطفال", "Number of Children", "Количество детей")}
           </label>
           <input
             id="numberOfChildren"
@@ -222,7 +173,8 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             name="numberOfChildren"
             value={formData.numberOfChildren}
             onChange={handleChange}
-            className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+            min={0}
+            className="input-elegant"
             lang="en"
             inputMode="numeric"
             pattern="\\d*"
@@ -231,15 +183,8 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
 
         {/* Number of Infants */}
         <div>
-          <label
-            htmlFor="numberOfInfants"
-            className="block text-lg text-gray-900"
-          >
-            {dic.currLang === "ar"
-              ? "عدد الأطفال الرضع"
-              : dic.currLang === "ru"
-              ? "Количество младенцев"
-              : "Number of Infants"}
+          <label htmlFor="numberOfInfants" className="mb-1 block text-sm font-medium text-slate-700">
+            {tr(lang, "عدد الأطفال الرضع", "Number of Infants", "Количество младенцев")}
           </label>
           <input
             id="numberOfInfants"
@@ -247,7 +192,8 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             name="numberOfInfants"
             value={formData.numberOfInfants}
             onChange={handleChange}
-            className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+            min={0}
+            className="input-elegant"
             lang="en"
             inputMode="numeric"
             pattern="\\d*"
@@ -256,48 +202,38 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
 
         {/* Travel Class */}
         <div>
-          <label htmlFor="travelClass" className="block text-lg text-gray-900">
-            {dic.currLang === "ar"
-              ? "فئة السفر"
-              : dic.currLang === "ru"
-              ? "Класс путешествия"
-              : "Travel Class"}
+          <label htmlFor="travelClass" className="mb-1 block text-sm font-medium text-slate-700">
+            {tr(lang, "فئة السفر", "Travel Class", "Класс путешествия")}
           </label>
           <select
             id="travelClass"
             name="travelClass"
             value={formData.travelClass}
             onChange={handleChange}
-            className="mt-2 block w-full border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg p-2"
+            className="input-elegant"
           >
             <option value="economy">
-              {dic.currLang === "ar"
-                ? "سياحية"
-                : dic.currLang === "ru"
-                ? "Туристический"
-                : "Economy"}
+              {tr(lang, "سياحية", "Economy", "Туристический")}
             </option>
             <option value="business">
-              {dic.currLang === "ar"
-                ? "رجال الأعمال"
-                : dic.currLang === "ru"
-                ? "Бизнес"
-                : "Business"}
+              {tr(lang, "رجال الأعمال", "Business", "Бизнес")}
             </option>
           </select>
         </div>
       </div>
 
-      <div className="flex justify-center mt-6">
-        <button
-          type="submit"
-          className="inline-flex justify-center py-3 px-6 border border-transparent shadow-lg text-lg rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-        >
-          {dic.currLang === "ar"
-            ? "إرسال المعلومات"
-            : dic.currLang === "ru"
-            ? "Отправить информацию"
-            : "Send Info"}
+      <div className="mt-6 flex justify-center">
+        <button type="submit" className="btn-accent">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="w-5 h-5"
+            aria-hidden="true"
+          >
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+          </svg>
+          {tr(lang, "إرسال المعلومات", "Send Info", "Отправить информацию")}
         </button>
       </div>
     </form>
