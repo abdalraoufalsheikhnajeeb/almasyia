@@ -8,7 +8,7 @@ import Link from "next/link";
 import { getDictionary } from "../../../get-dictionary.ts";
 import Autoplay from "embla-carousel-autoplay";
 
-type CountrySlider = {
+type CountryCard = {
   id: number;
   src: string;
   titleen: string;
@@ -19,85 +19,95 @@ type CountrySlider = {
 
 type CountrySliderProps = {
   dic: Awaited<ReturnType<typeof getDictionary>>;
-  data: CountrySlider[];
+  data: CountryCard[];
   title: string;
   subtitle?: string;
 };
 
 const CountrySlider = ({ dic, data, title, subtitle }: CountrySliderProps) => {
-  const autoplay = useMemo(() => Autoplay({ delay: 2000 }), []);
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [autoplay]);
+  const autoplay = useMemo(() => Autoplay({ delay: 3000 }), []);
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true, align: "start" },
+    [autoplay]
+  );
 
   useEffect(() => {
     if (!emblaApi) return;
-
-    emblaApi.on("pointerDown", () => emblaApi.plugins().autoplay.stop()); // Stop autoplay on interaction
-    emblaApi.on("pointerUp", () => emblaApi.plugins().autoplay.play()); // Resume autoplay after interaction
-
+    emblaApi.on("pointerDown", () => emblaApi.plugins().autoplay.stop());
+    emblaApi.on("pointerUp", () => emblaApi.plugins().autoplay.play());
     return () => {
       if (emblaApi) emblaApi.destroy();
     };
   }, [emblaApi]);
 
-  return (
-    <section dir="ltr" className="lg:max-w-7xl max-w-[95vw] px-2  mx-auto">
-      <AnTitle title={title} />
-      <h3 className="text-3xl font-bold text-center mb-4 text-primary">
-        {subtitle}
-      </h3>
-      <div className="embla" ref={emblaRef}>
-        <div className="embla__container flex">
-          {data.map((card, index) => {
-            let cardTitle;
+  const isRTL = dic.currLang === "ar";
 
-            if (dic.currLang === "ar") {
-              cardTitle = card.titlear;
-            } else if (dic.currLang === "ru") {
-              cardTitle = card.titleru;
-            } else {
-              cardTitle = card.titleen;
-            }
+  return (
+    <section dir="ltr" className="mx-auto w-full max-w-7xl px-4 py-6">
+      <AnTitle title={title} />
+      {subtitle && (
+        <p className="-mt-4 mb-6 text-center text-base text-slate-600 lg:text-lg">
+          {subtitle}
+        </p>
+      )}
+      <div className="embla overflow-hidden" ref={emblaRef}>
+        <div className="embla__container flex">
+          {data.map((card) => {
+            const cardTitle =
+              dic.currLang === "ar"
+                ? card.titlear
+                : dic.currLang === "ru"
+                ? card.titleru
+                : card.titleen;
 
             return (
-              <div key={index} className="embla__slide p-4 flex-shrink-0 w-1/3">
-                <Link href={`/${dic.currLang}${card.route.toLowerCase()}`}>
-                  <div className=" relative box  transition-transform duration-300 hover:scale-105 hover:shadow-lg h-full flex flex-col justify-center items-center overflow-hidden">
-                    <div className=" flex justify-center items-center w-full">
+              <div
+                key={card.id}
+                className="embla__slide flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 p-2"
+              >
+                <Link
+                  href={`/${dic.currLang}${card.route.toLowerCase()}`}
+                  className="group block h-full"
+                >
+                  <article className="card-elegant flex h-full flex-col overflow-hidden">
+                    <div className="relative h-44 overflow-hidden lg:h-52">
                       <Image
                         loading="lazy"
-                        quality={60}
-                        width={400}
-                        height={200}
-                        className="rounded-t-lg aspect-video w-full scale-[103%]  object-contain"
+                        quality={70}
+                        width={500}
+                        height={300}
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                         src={card.src}
                         alt={cardTitle}
                       />
                     </div>
-                    <div className="p-4 pb-7 flex-grow flex flex-col justify-between h-28">
-                      <h2 className="mb-2 text-2xl font-bold tracking-tight text-litePrimary text-center">
+                    <div
+                      dir={isRTL ? "rtl" : "ltr"}
+                      className="flex flex-1 flex-col justify-between gap-3 p-4"
+                    >
+                      <h3 className="text-base font-bold leading-snug text-primary lg:text-lg">
                         {cardTitle}
-                      </h2>
+                      </h3>
                       <span
-                        className={`flex items-center justify-center font-bold mt-4 absolute ${
-                          dic.currLang == "ar"
-                            ? `left-2 flex-row-reverse`
-                            : `right-2`
-                        } bottom-2`}
+                        className={`inline-flex items-center gap-1.5 text-sm font-semibold text-accent transition-transform duration-300 ${
+                          isRTL
+                            ? "group-hover:-translate-x-1"
+                            : "group-hover:translate-x-1"
+                        }`}
                       >
                         {dic.learnMore}
-                        <Image
-                          width={50}
-                          height={50}
-                          quality={1}
-                          src="/images/arrow.svg"
-                          alt="arrow"
-                          className={`ms-2 h-10 w-10 aspect-square transition-transform  duration-300 hover:translate-x-1 ${
-                            dic.currLang == "ar" ? `rotate-180` : ``
-                          }  `}
-                        />
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          className={`h-4 w-4 ${isRTL ? "rotate-180" : ""}`}
+                          aria-hidden="true"
+                        >
+                          <path d="M13.293 5.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L17.586 13H4a1 1 0 1 1 0-2h13.586l-4.293-4.293a1 1 0 0 1 0-1.414z" />
+                        </svg>
                       </span>
                     </div>
-                  </div>
+                  </article>
                 </Link>
               </div>
             );

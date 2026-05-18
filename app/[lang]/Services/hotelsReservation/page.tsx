@@ -22,6 +22,12 @@ export async function generateMetadata({
   });
 }
 
+const hotelDescription: Record<Locale, string> = {
+  en: "Enjoy a luxurious hotel experience with AlNujoom AlMasiya, offering the best accommodation options in 3, 4, and 5-star hotels with exceptional services and stunning views.",
+  ar: "استمتعوا بتجربة فندقية راقية مع شركة النجوم الماسية، التي تقدم أفضل خيارات الإقامة من فنادق 3,4,5 نجوم، مع خدمات متميزة وإطلالات رائعة.",
+  ru: "Наслаждайтесь роскошным гостиничным опытом с AlNujoom AlMasiya, предлагающим лучшие варианты размещения в 3, 4 и 5-звездочных отелях с исключительным обслуживанием и потрясающими видами.",
+};
+
 export default async function page({
   params,
 }: {
@@ -37,58 +43,38 @@ export default async function page({
   });
 
   return (
-    <main className="max-w-[95vw] mx-auto">
+    <main className="mx-auto max-w-7xl px-4 py-8 lg:py-12">
       <script
         type="application/ld+json"
         suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <h1 className="sr-only">{SERVICES_SEO.hotelsReservation.title[lang]}</h1>
+
       <AnTitle title={dic.hotelReservation} />
-      <h2 className="text-3xl font-bold text-center mb-4 text-primary">
+      <p className="mx-auto max-w-3xl text-center text-base lg:text-lg text-slate-600 mb-8">
         {dic.hoteltext}
-      </h2>
-      <div className=" flex flex-col-reverse lg:flex-row gap-4 box">
-        <div className="flex flex-col lg:w-2/3">
-          <p className="text-center text-2xl mb-6 flex flex-col lg:flex-row items-center gap-4">
-            {lang === "en" && (
-              <>
-                Enjoy a luxurious hotel experience with AlNujoom AlMasiya,
-                offering the best accommodation options in 3, 4, and 5-star
-                hotels with exceptional services and stunning views.
-              </>
-            )}
-            {lang === "ar" && (
-              <>
-                استمتعوا بتجربة فندقية راقية مع شركة النجوم الماسية، التي تقدم
-                أفضل خيارات الإقامة من فنادق 3,4,5 نجوم، مع خدمات متميزة
-                وإطلالات رائعة.
-              </>
-            )}
-            {lang === "ru" && (
-              <>
-                Наслаждайтесь роскошным гостиничным опытом с AlNujoom
-                AlMasiya, предлагающим лучшие варианты размещения в 3, 4 и
-                5-звездочных отелях с исключительным обслуживанием и
-                потрясающими видами.
-              </>
-            )}
-          </p>
+      </p>
+
+      <div className="grid gap-6 lg:grid-cols-5 items-start">
+        <div className="card-elegant overflow-hidden lg:col-span-3">
           <Image
             loading="lazy"
-            quality={100}
-            className="w-full h-full rounded-lg"
+            quality={75}
+            className="w-full h-auto object-cover"
             width={840}
             height={480}
             src="/images/hotelhero.webp"
             alt="Hotel Reservation"
           />
+          <p className="p-6 text-base lg:text-lg text-slate-700 leading-relaxed">
+            {hotelDescription[lang]}
+          </p>
         </div>
-        <div className="flex lg:w-1/3 w-full justify-center items-center">
+        <div className="lg:col-span-2 flex justify-center">
           <HotelReservationForm lang={lang} />
         </div>
       </div>
-      <div className="bg-white  w-full opacity-80 py-16 px-8 bottom-0 h-auto"></div>
     </main>
   );
 }

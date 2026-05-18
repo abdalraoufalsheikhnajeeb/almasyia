@@ -32,7 +32,7 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
   });
 
   return (
-    <main className="max-w-[95vw] mx-auto">
+    <main className="mx-auto max-w-7xl px-4 py-8 lg:py-12">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -40,21 +40,22 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
       />
       <h1 className="sr-only">{SERVICES_SEO["papers-Delivery"].title[lang]}</h1>
       <AnTitle title={dic.delivery} />
-      <h2 className="text-3xl font-bold text-center mb-4 text-primary">
+      <p className="mx-auto max-w-3xl text-center text-base lg:text-lg text-slate-600 mb-8">
         {dic.deliveryText}
-      </h2>
-      <div className="box flex flex-col-reverse lg:flex-row gap-4">
-        <Image
-          loading="lazy"
-          quality={60}
-          className="lg:w-2/3 w-full rounded-lg"
-          width={840}
-          height={480}
-          src="/images/papersDelivery.webp"
-          alt="Papers Delivery"
-        />
-
-        <div className="flex lg:w-1/3 w-full justify-center items-center">
+      </p>
+      <div className="grid gap-6 lg:grid-cols-5 items-start">
+        <div className="card-elegant overflow-hidden lg:col-span-3">
+          <Image
+            loading="lazy"
+            quality={75}
+            className="w-full h-auto object-cover"
+            width={840}
+            height={480}
+            src="/images/papersDelivery.webp"
+            alt="Papers Delivery"
+          />
+        </div>
+        <div className="lg:col-span-2 flex justify-center">
           <DeliveryForm lang={lang} />
         </div>
       </div>

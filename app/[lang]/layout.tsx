@@ -219,7 +219,7 @@ export default async function RootLayout({
         />
         <Whatsapp />
         <PhoneCall />
-        <div className="mt-24">{children}</div>
+        <div className="pt-20 min-h-[60vh]">{children}</div>
         <Footer lang={lang} />
       </body>
     </html>

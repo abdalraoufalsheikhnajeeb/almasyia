@@ -36,7 +36,7 @@ export default async function page({
   });
 
   return (
-    <main className="pt-28 flex flex-col justify-center items-center py-4">
+    <main className="flex flex-col items-center gap-4 pb-12 pt-8">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -45,7 +45,9 @@ export default async function page({
       <h1 className="sr-only">{SERVICES_SEO.airLines.title[lang]}</h1>
       <Slider dic={dic} title={dic.agents} data={agents} />
       <Slider dic={dic} title={dic.OurPartners} data={partners} />
-      <FlightBookingForm dic={dic} />
+      <div className="mt-6 w-full flex justify-center px-4">
+        <FlightBookingForm dic={dic} />
+      </div>
     </main>
   );
 }

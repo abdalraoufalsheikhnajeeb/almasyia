@@ -81,53 +81,66 @@ const Page = async ({ params }: { params: Promise<{ lang: string }> }) => {
             </Link> */}
           {/* </div> */}
         </header>
-        <section className="w-screen flex flex-col items-center">
-          <h2 className="text-primary text-3xl mb-8 text-center font-bold lg:max-w-7xl max-w-[90vw]">
+        <section className="w-full flex flex-col items-center">
+          <p className="text-primary text-xl lg:text-2xl mb-8 text-center max-w-3xl px-4">
             {dic.discover_services}
-          </h2>
+          </p>
 
           <AnTitle title={dic?.someProjects} />
-          <div className="max-w-7xl flex flex-wrap justify-center items-center gap-8 px-4 lg:px-12 pt-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl px-4 pt-4">
             {ourServecis.map((card) => {
-              let title;
-              if (dic.currLang === "ar") {
-                title = card.titlear;
-              } else if (dic.currLang === "ru") {
-                title = card.titleru;
-              } else {
-                title = card.titleen;
-              }
+              const title =
+                dic.currLang === "ar"
+                  ? card.titlear
+                  : dic.currLang === "ru"
+                  ? card.titleru
+                  : card.titleen;
+              const isRTL = dic.currLang === "ar";
               return (
-                <Link href={`/${lang}/Services/${card.route}`} key={card.id}>
-                  <div className="max-w-[90vw] !p-0 relative w-80 flex flex-col justify-center overflow-hidden items-center transition-transform duration-300 box hover:scale-105 hover:shadow-sm">
-                    <Image
-                      loading="lazy"
-                      quality={60}
-                      width={318}
-                      height={256}
-                      className="w-full object-cover aspect-video"
-                      src={card.src}
-                      alt="service image"
-                    />
-                    <div className="p-3 flex-grow flex flex-col justify-between h-32">
-                      <h2 className="mb-2 text-2xl font-bold tracking-tight text-litePrimary text-center">
+                <Link
+                  href={`/${lang}/Services/${card.route}`}
+                  key={card.id}
+                  className="group block"
+                >
+                  <article className="card-elegant flex h-full flex-col overflow-hidden">
+                    <div className="relative overflow-hidden aspect-video">
+                      <Image
+                        loading="lazy"
+                        quality={70}
+                        width={400}
+                        height={225}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        src={card.src}
+                        alt={title}
+                      />
+                    </div>
+                    <div
+                      dir={isRTL ? "rtl" : "ltr"}
+                      className="flex flex-1 flex-col justify-between gap-3 p-4"
+                    >
+                      <h3 className="text-base font-bold leading-snug text-primary lg:text-lg">
                         {title}
-                      </h2>
-                      <span className="flex delay-1000 items-end justify-center font-bold underline underline-offset-4">
+                      </h3>
+                      <span
+                        className={`inline-flex items-center gap-1.5 text-sm font-semibold text-accent transition-transform duration-300 ${
+                          isRTL
+                            ? "group-hover:-translate-x-1"
+                            : "group-hover:translate-x-1"
+                        }`}
+                      >
                         {dic.learnMore}
-                        <Image
-                          width={50}
-                          height={50}
-                          quality={1}
-                          src="/images/arrow.svg"
-                          alt="arrow"
-                          className={`ms-2 h-8 w-8 aspect-square transition-transform duration-300 hover:translate-x-1 ${
-                            dic.currLang === "ar" ? "rotate-180" : ""
-                          }`}
-                        />
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          className={`h-4 w-4 ${isRTL ? "rotate-180" : ""}`}
+                          aria-hidden="true"
+                        >
+                          <path d="M13.293 5.293a1 1 0 0 1 1.414 0l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L17.586 13H4a1 1 0 1 1 0-2h13.586l-4.293-4.293a1 1 0 0 1 0-1.414z" />
+                        </svg>
                       </span>
                     </div>
-                  </div>
+                  </article>
                 </Link>
               );
             })}

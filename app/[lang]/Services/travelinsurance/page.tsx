@@ -38,7 +38,7 @@ export default async function page({
   });
 
   return (
-    <main className="max-w-[95vw] mx-auto">
+    <main className="mx-auto max-w-7xl px-4 py-8 lg:py-12">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -46,22 +46,22 @@ export default async function page({
       />
       <h1 className="sr-only">{SERVICES_SEO.travelinsurance.title[lang]}</h1>
       <AnTitle title={dic.travelInsurance} />
-      <h2 className="text-3xl font-bold text-center mb-4 text-primary">
+      <p className="mx-auto max-w-3xl text-center text-base lg:text-lg text-slate-600 mb-8">
         {dic.insuranceText}
-      </h2>
-      <div className="box flex flex-col-reverse lg:flex-row gap-4">
-        <div className="relative lg:w-2/3">
+      </p>
+      <div className="grid gap-6 lg:grid-cols-5 items-start">
+        <div className="card-elegant overflow-hidden lg:col-span-3">
           <Image
             loading="lazy"
-            quality={100}
-            className="w-full h-full rounded-lg"
+            quality={75}
+            className="w-full h-auto object-cover"
             width={840}
             height={480}
             src="/images/travelInsurancehero.webp"
             alt="Travel Insurance"
           />
         </div>
-        <div className="flex lg:w-1/3 w-full justify-center items-center">
+        <div className="lg:col-span-2 flex justify-center">
           <TravelInsuranceForm lang={lang} />
         </div>
       </div>
