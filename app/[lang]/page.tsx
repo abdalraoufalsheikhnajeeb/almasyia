@@ -4,6 +4,8 @@ import { getDictionary } from "../../get-dictionary";
 import { Locale } from "../../i18n-config";
 import AnTitle from "./components/AnTitle";
 import Locations from "./components/Locations";
+import Testimonials, { buildReviewsJsonLd } from "./components/Testimonials";
+import { SITE_URL } from "./seo";
 import { ourServecis } from "./data";
 
 // No need to import Whatsapp or PhoneCall components here
@@ -146,6 +148,14 @@ const Page = async ({ params }: { params: Promise<{ lang: string }> }) => {
             })}
           </div>
         </section>
+        <Testimonials lang={lang} />
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(buildReviewsJsonLd(SITE_URL)),
+          }}
+        />
         <Locations
           params={{
             lang: lang,
@@ -154,7 +164,7 @@ const Page = async ({ params }: { params: Promise<{ lang: string }> }) => {
         <video
           controls
           preload="metadata"
-          className="w-full max-w-[90vw] mt-4"
+          className="w-full max-w-[90vw] mt-4 rounded-xl shadow-lg"
         >
           <source src="/images/outro.mp4" type="video/mp4" />
           Your browser does not support the video tag.
