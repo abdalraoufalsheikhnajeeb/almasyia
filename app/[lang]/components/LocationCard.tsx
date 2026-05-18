@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useCallback } from "react";
+import { useEffect, useCallback, useMemo } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
@@ -18,48 +18,37 @@ interface LocationCardProps {
   whatsLink: string;
 }
 
-const SampleNextArrow = ({ onClick }: { onClick: () => void }) => (
-  <div
-    className="absolute top-1/2 right-4 transform -translate-y-1/2 z-10 cursor-pointer  p-2 bg-accent rounded-full hover:scale-110 transition-all"
+const ArrowButton = ({
+  direction,
+  onClick,
+}: {
+  direction: "next" | "prev";
+  onClick: () => void;
+}) => (
+  <button
+    type="button"
     onClick={onClick}
+    aria-label={direction === "next" ? "Next slide" : "Previous slide"}
+    className={`absolute top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-primary shadow-md ring-1 ring-slate-200 backdrop-blur transition-all hover:scale-110 hover:bg-white ${
+      direction === "next" ? "right-3" : "left-3"
+    }`}
   >
     <svg
-      className="w-6 h-6 text-primary"
+      className="h-5 w-5"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
     >
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={2}
-        d="M9 5l7 7-7 7"
+        d={direction === "next" ? "M9 5l7 7-7 7" : "M15 19l-7-7 7-7"}
       />
     </svg>
-  </div>
-);
-
-const SamplePrevArrow = ({ onClick }: { onClick: () => void }) => (
-  <div
-    className="absolute top-1/2 left-4 transform -translate-y-1/2 z-10 cursor-pointer  p-2 bg-accent rounded-full hover:scale-110 transition-all"
-    onClick={onClick}
-  >
-    <svg
-      className="w-6 h-6 text-primary"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M15 19l-7-7 7-7"
-      />
-    </svg>
-  </div>
+  </button>
 );
 
 const LocationCard: React.FC<LocationCardProps> = ({
@@ -72,10 +61,8 @@ const LocationCard: React.FC<LocationCardProps> = ({
   addClass,
   whatsLink,
 }) => {
-  const autoplayOptions = { delay: 2000 };
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
-    Autoplay(autoplayOptions),
-  ]);
+  const autoplay = useMemo(() => Autoplay({ delay: 2000 }), []);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [autoplay]);
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -164,16 +151,25 @@ const LocationCard: React.FC<LocationCardProps> = ({
               ))}
             </div>
           </div>
-          <SamplePrevArrow onClick={scrollPrev} />
-          <SampleNextArrow onClick={scrollNext} />
+          <ArrowButton direction="prev" onClick={scrollPrev} />
+          <ArrowButton direction="next" onClick={scrollNext} />
         </div>
         <div className="p-4 flex justify-center items-center">
           <Link
             target="_blank"
             href={googleMapsUrl}
             rel="noopener noreferrer"
-            className="w-auto text-center mt-4 bg-white border-2 border-litePrimary  text-primary font-bold py-4 px-6 rounded-full hover:bg-blue-200 transition duration-300"
+            className="btn-primary mt-4"
           >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="w-5 h-5"
+              aria-hidden="true"
+            >
+              <path d="M12 2a8 8 0 0 0-8 8c0 5.4 7 11.5 7.3 11.7a1 1 0 0 0 1.3 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+            </svg>
             Find Us on Google Maps
           </Link>
         </div>

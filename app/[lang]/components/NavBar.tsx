@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import LocaleSwitcher from "./locale-switcher";
 import { Locale } from "../../../i18n-config";
 
@@ -15,34 +16,58 @@ type NavLabels = {
 type NavItemProps = {
   href: string;
   label: string;
+  active: boolean;
   onClick?: () => void;
 };
 
-const NavItem = ({ href, label, onClick }: NavItemProps) => (
+const NavItem = ({ href, label, active, onClick }: NavItemProps) => (
   <Link
     href={href}
     onClick={onClick}
-    className="block text-primary text-xl hover:bg-primary-500/20 rounded-md px-3 py-2"
+    aria-current={active ? "page" : undefined}
+    className={`group relative inline-block rounded-md px-3 py-2 text-base lg:text-lg font-medium transition-colors ${
+      active ? "text-primary" : "text-slate-600 hover:text-primary"
+    }`}
   >
-    {label}
+    <span>{label}</span>
+    <span
+      className={`pointer-events-none absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-accent transition-transform duration-300 origin-center ${
+        active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+      }`}
+    />
   </Link>
 );
 
 const Navbar = ({ lang, labels }: { lang: Locale; labels: NavLabels }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathName = usePathname() ?? "";
+
+  const isActive = (path: string) => {
+    if (path === `/${lang}`) {
+      return pathName === `/${lang}` || pathName === `/${lang}/`;
+    }
+    return pathName === path || pathName.startsWith(path + "/");
+  };
 
   return (
-    <nav className="bg-white w-full px-[5vw] py-2 flex items-center top-0 justify-between z-50 fixed shadow-sm">
+    <nav
+      className="fixed top-0 z-50 flex w-full items-center justify-between border-b border-slate-100 bg-white/90 px-[5vw] py-2 backdrop-blur-md shadow-sm"
+      aria-label="Primary"
+    >
       {/* Logo */}
-      <Link href={`/${lang}`}>
+      <Link
+        href={`/${lang}`}
+        className="flex-shrink-0"
+        aria-label="Alnujoom Almasiya home"
+      >
         <Image
-          quality={60}
-          className="hidden md:flex md:flex-shrink-0 h-16 w-24 object-cover"
+          quality={70}
+          className="h-14 w-auto object-contain md:h-16"
           priority
           width={200}
           height={136}
           src="/images/logo.webp"
-          alt="Logo"
+          alt="Alnujoom Almasiya logo"
         />
       </Link>
 
@@ -52,14 +77,14 @@ const Navbar = ({ lang, labels }: { lang: Locale; labels: NavLabels }) => {
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={isOpen}
-          className="inline-flex items-center justify-center p-2 rounded-md text-primary hover:bg-primary-500/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-200"
+          className="inline-flex items-center justify-center rounded-lg p-2 text-primary transition-colors hover:bg-slate-100"
         >
-          {/* Simple bars icon */}
           <svg
             className="h-6 w-6"
             stroke="currentColor"
             fill="none"
             viewBox="0 0 24 24"
+            aria-hidden="true"
           >
             <path
               strokeLinecap="round"
@@ -67,8 +92,8 @@ const Navbar = ({ lang, labels }: { lang: Locale; labels: NavLabels }) => {
               strokeWidth={2}
               d={
                 isOpen
-                  ? "M6 18L18 6M6 6l12 12" // X icon
-                  : "M4 6h16M4 12h16M4 18h16" // Bars icon
+                  ? "M6 18L18 6M6 6l12 12"
+                  : "M4 6h16M4 12h16M4 18h16"
               }
             />
           </svg>
@@ -76,44 +101,63 @@ const Navbar = ({ lang, labels }: { lang: Locale; labels: NavLabels }) => {
       </div>
 
       {/* Desktop Nav Items */}
-      <div className="hidden md:flex md:items-center md:gap-4">
-        <NavItem href={`/${lang}`} label={labels.home} />
-        <NavItem href={`/${lang}/about-us`} label={labels.aboutUs} />
-        <NavItem href={`/${lang}/WorldClock`} label={labels.worldClock} />
-        <NavItem href={`/${lang}/contact`} label={labels.contactUs} />
+      <div className="hidden md:flex md:items-center md:gap-1 lg:gap-2">
+        <NavItem
+          href={`/${lang}`}
+          label={labels.home}
+          active={isActive(`/${lang}`)}
+        />
+        <NavItem
+          href={`/${lang}/about-us`}
+          label={labels.aboutUs}
+          active={isActive(`/${lang}/about-us`)}
+        />
+        <NavItem
+          href={`/${lang}/WorldClock`}
+          label={labels.worldClock}
+          active={isActive(`/${lang}/WorldClock`)}
+        />
+        <NavItem
+          href={`/${lang}/contact`}
+          label={labels.contactUs}
+          active={isActive(`/${lang}/contact`)}
+        />
       </div>
 
-      {/* Locale Switcher (Desktop & maybe mobile) */}
-      <div className="hidden md:flex items-center h-14 gap-4">
+      {/* Locale Switcher (Desktop) */}
+      <div className="hidden md:flex items-center gap-4">
         <LocaleSwitcher />
       </div>
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="absolute top-20 left-0 w-full bg-white shadow-md md:hidden flex flex-col items-start px-4 py-4 gap-2 z-40">
+        <div className="animate-fade-in absolute start-0 top-[100%] z-40 flex w-full flex-col items-start gap-1 border-t border-slate-100 bg-white px-4 py-4 shadow-md md:hidden">
           <NavItem
             href={`/${lang}`}
             label={labels.home}
+            active={isActive(`/${lang}`)}
             onClick={() => setIsOpen(false)}
           />
           <NavItem
             href={`/${lang}/about-us`}
             label={labels.aboutUs}
+            active={isActive(`/${lang}/about-us`)}
             onClick={() => setIsOpen(false)}
           />
           <NavItem
             href={`/${lang}/WorldClock`}
             label={labels.worldClock}
+            active={isActive(`/${lang}/WorldClock`)}
             onClick={() => setIsOpen(false)}
           />
           <NavItem
             href={`/${lang}/contact`}
             label={labels.contactUs}
+            active={isActive(`/${lang}/contact`)}
             onClick={() => setIsOpen(false)}
           />
 
-          {/* Locale Switcher (show in mobile menu as well, if desired) */}
-          <div className="mt-2">
+          <div className="mt-3">
             <LocaleSwitcher />
           </div>
         </div>

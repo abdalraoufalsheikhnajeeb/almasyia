@@ -1,84 +1,109 @@
 "use client";
 import Link from "next/link";
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 export default function PhoneCall() {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isOpen]);
 
   return (
     <>
       <style jsx>{`
         @keyframes rippling {
           0% {
-            box-shadow: 0 0 0 0 #316792, 0 0 0 5px rgba(59, 134, 255, 0);
+            box-shadow: 0 0 0 0 rgba(49, 103, 146, 0.45);
+          }
+          70% {
+            box-shadow: 0 0 0 14px rgba(49, 103, 146, 0);
           }
           100% {
-            box-shadow: 0 0 0 20px rgba(59, 134, 255, 0),
-              0 0 0 25px rgba(59, 134, 255, 0);
+            box-shadow: 0 0 0 0 rgba(49, 103, 146, 0);
           }
         }
-
-        .animate-ripple {
-          position: relative;
-          animation: rippling 1.5s infinite;
+        .pulse {
+          animation: rippling 2s infinite;
         }
       `}</style>
 
       <div
-        className=" fixed bottom-4 start-4 cursor-pointer z-50"
-        onClick={toggleDropdown}
         ref={dropdownRef}
-        aria-label="Open phone contact options"
+        className="fixed bottom-5 start-5 z-50 flex flex-col items-start gap-3"
       >
-        <div
-          className={`rounded-full ${
-            !isOpen && " animate-ripple"
-          } p-2 lg:p-4 w-10 h-10 lg:w-20 lg:h-20 flex-shrink-0 flex justify-center items-center bg-[#316792]`}
-        >
-          <Image
-            priority
-            quality={1}
-            width={50}
-            className="object-cover w-full h-full"
-            height={50}
-            alt="phone icon"
-            src={`/images/phone_ic.svg`}
-          />
-        </div>
+        {/* Country options */}
         {isOpen && (
-          <div className="absolute -start-2 -bottom-2 w-14 lg:w-24 lg:pb-24 pb-12 bg-white cursor-pointer border rounded-full shadow-lg -z-10">
-            <div className="flex flex-col items-center gap-2 p-2">
-              <Link target="_blank" href="tel:+971545866066" rel="noopener">
-                <Image
-                  priority
-                  quality={1}
-                  width={78}
-                  height={78}
-                  className="object-cover hover:scale-110 transition-all w-10 h-10 lg:w-20 lg:h-20"
-                  alt="uae flag"
-                  src="/images/emirate-flag.svg"
-                />
-              </Link>
-
-              <Link target="_blank" href="tel:+963950026610" rel="noopener">
-                <Image
-                  priority
-                  quality={1}
-                  width={78}
-                  height={78}
-                  className="object-fill opacity-80 rounded-[100%] hover:scale-110 transition-all w-10 h-10 lg:w-20 lg:h-20"
-                  alt="syria flag"
-                  src="/images/syria-flag.svg"
-                />
-              </Link>
-            </div>
+          <div className="animate-fade-in flex flex-col gap-2 bg-white p-2 rounded-2xl shadow-lg border border-slate-200">
+            <Link
+              href="tel:+971545866066"
+              aria-label="Call UAE"
+              className="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-slate-50 transition-colors"
+            >
+              <Image
+                priority
+                quality={1}
+                width={28}
+                height={28}
+                className="rounded-full object-cover"
+                alt="UAE flag"
+                src="/images/emirate-flag.svg"
+              />
+              <span className="text-sm font-medium text-primary tabular-nums">
+                +971 54 586 6066
+              </span>
+            </Link>
+            <Link
+              href="tel:+963950026610"
+              aria-label="Call Syria"
+              className="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-slate-50 transition-colors"
+            >
+              <Image
+                priority
+                quality={1}
+                width={28}
+                height={28}
+                className="rounded-full object-cover"
+                alt="Syria flag"
+                src="/images/syria-flag.svg"
+              />
+              <span className="text-sm font-medium text-primary tabular-nums">
+                +963 950 026 610
+              </span>
+            </Link>
           </div>
         )}
+
+        {/* FAB toggle */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Open phone contact options"
+          aria-expanded={isOpen}
+          className={`fab bg-litePrimary ${!isOpen ? "pulse" : ""}`}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="w-5 h-5 lg:w-6 lg:h-6"
+            aria-hidden="true"
+          >
+            <path d="M6.62 10.79a15.464 15.464 0 0 0 6.59 6.59l2.2-2.2a1.003 1.003 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.33.03.7-.24 1.02l-2.21 2.2z" />
+          </svg>
+        </button>
       </div>
     </>
   );
