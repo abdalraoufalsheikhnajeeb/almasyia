@@ -147,6 +147,14 @@ export const agents = [
     titlear: "وكيل معتمد للخطوط السورية للطيران",
     titleru: "Авторизованный агент SyrianAir",
   },
+  {
+    route: "jazeera-airways",
+    id: 5,
+    src: "/images/jazeera.webp",
+    titleen: "An authorized agent for Jazeera Airways",
+    titlear: "وكيل معتمد لطيران الجزيرة",
+    titleru: "Авторизованный агент Jazeera Airways",
+  },
 ];
 
 export const countries = [

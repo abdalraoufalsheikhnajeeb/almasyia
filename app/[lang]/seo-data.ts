@@ -577,4 +577,16 @@ export const AIRLINES_SEO: Record<string, SeoEntry> = {
       ru: "Бронируйте рейсы S7 Airlines. Одна из крупнейших российских авиакомпаний.",
     },
   },
+  "jazeera-airways": {
+    title: {
+      en: "Jazeera Airways | Flight Bookings | Alnujoom Almasiya",
+      ar: "طيران الجزيرة | حجوزات الرحلات | النجوم الماسية",
+      ru: "Jazeera Airways | Бронирование рейсов | Alnujoom Almasiya",
+    },
+    description: {
+      en: "Book Jazeera Airways flights from Kuwait. Leading low-cost airline in the Middle East with Alnujoom Almasiya as an authorized agent.",
+      ar: "احجز رحلات طيران الجزيرة من الكويت. شركة الطيران الاقتصادية الرائدة في الشرق الأوسط والنجوم الماسية الوكيل المعتمد.",
+      ru: "Бронируйте рейсы Jazeera Airways из Кувейта. Ведущая бюджетная авиакомпания Ближнего Востока с Alnujoom Almasiya как авторизованным агентом.",
+    },
+  },
 };

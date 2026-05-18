@@ -17,12 +17,6 @@ const phoneNumbers = [
     display: "+963 950 026 610",
     src: "/images/syria-flag.svg",
   },
-  {
-    country: "Russia",
-    href: "tel:+79189239693",
-    display: "+7 918 923 9693",
-    src: "/images/ru.svg",
-  },
 ];
 
 type LocalizedText = Record<Locale, string>;
@@ -95,12 +89,6 @@ const dictionary: Record<string, LocalizedText> = {
     en: "Damascus - Al-Baramka, behind Immigration and Passports",
     ru: "Дамаск - Аль-Барамка за иммиграцией и паспортным столом",
   },
-  ruB: { ar: "روسيا", en: "Russia", ru: "Россия" },
-  locationRU: {
-    ar: "روسيا - جمهورية باشكورتوستان، أوفا",
-    en: "Russia - Republic of Bashkortostan, Ufa",
-    ru: "Россия - Республика Башкортостан, Уфа",
-  },
 };
 
 const locations = [
@@ -119,14 +107,6 @@ const locations = [
     phone: "+96350026610",
     phoneDisplay: "+963 950 026 610",
     googleMapsUrl: "https://maps.app.goo.gl/YYZASxD4UuRLDpRZA",
-  },
-  {
-    countryName: dictionary.ruB,
-    flagSrc: "/images/ru.svg",
-    cityAddress: dictionary.locationRU,
-    phone: "+79189239693",
-    phoneDisplay: "+7 918 923 9693",
-    googleMapsUrl: "https://maps.app.goo.gl/WUgDDt65ZBTW92R99",
   },
 ];
 

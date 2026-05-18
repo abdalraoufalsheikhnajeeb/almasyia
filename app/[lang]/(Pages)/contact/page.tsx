@@ -47,12 +47,6 @@ export default async function ContactPage({
           contactType: "customer support",
           areaServed: ["Damascus", "Syria"],
         },
-        {
-          "@type": "ContactPoint",
-          telephone: "+79189239693",
-          contactType: "customer support",
-          areaServed: ["Russia"],
-        },
       ],
       email: "info@alnujoomalmasiya.com",
     },
