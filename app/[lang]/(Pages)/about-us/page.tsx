@@ -212,7 +212,12 @@ export default async function page({
                     fill
                     sizes="56px"
                     alt={content.founderName}
-                    className="object-cover object-top"
+                    className="object-cover"
+                    style={{
+                      objectPosition: "67% 30%",
+                      transform: "scale(2.6)",
+                      transformOrigin: "67% 30%",
+                    }}
                   />
                 </div>
                 <div className="min-w-0 flex-1">
@@ -389,7 +394,7 @@ export default async function page({
             </div>
 
             {/* ============ Image side ============ */}
-            <div className="relative min-h-[26rem] bg-slate-100 lg:col-span-5 lg:min-h-[44rem]">
+            <div className="relative min-h-[24rem] bg-slate-100 lg:col-span-5 lg:min-h-[38rem]">
               <Image
                 loading="lazy"
                 quality={80}
@@ -397,7 +402,7 @@ export default async function page({
                 fill
                 sizes="(min-width: 1024px) 42vw, 100vw"
                 alt={`${content.founderName} — Founder of AlNujoom AlMasiya`}
-                className="object-cover object-[center_top]"
+                className="object-cover object-[65%_30%]"
               />
               {/* Gradient overlay for tag readability — only at the bottom */}
               <div

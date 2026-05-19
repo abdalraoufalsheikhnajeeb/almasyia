@@ -306,7 +306,7 @@ export default function ContactForm({ lang }: { lang: Locale }) {
         <div className="grid gap-4 sm:grid-cols-3">
           {/* WhatsApp */}
           <a
-            href="https://wa.me/971545866066"
+            href="https://wa.me/963950026610"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative overflow-hidden rounded-2xl border border-emerald-200 bg-white p-5 shadow-md ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:border-emerald-300 hover:shadow-xl"
@@ -327,7 +327,7 @@ export default function ContactForm({ lang }: { lang: Locale }) {
                   {t(dictionary.qaWhatsappDesc, lang)}
                 </p>
                 <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 tabular-nums">
-                  +971 54 586 6066
+                  +963 950 026 610
                   <IconExternal className={`h-3 w-3 ${isRTL ? "rotate-180" : ""}`} />
                 </span>
               </div>
@@ -336,7 +336,7 @@ export default function ContactForm({ lang }: { lang: Locale }) {
 
           {/* Call */}
           <a
-            href="tel:+971545866066"
+            href="tel:+963950026610"
             className="group relative overflow-hidden rounded-2xl border border-sky-200 bg-white p-5 shadow-md ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:border-sky-300 hover:shadow-xl"
           >
             <span
@@ -355,7 +355,7 @@ export default function ContactForm({ lang }: { lang: Locale }) {
                   {t(dictionary.qaCallDesc, lang)}
                 </p>
                 <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-litePrimary tabular-nums">
-                  +971 54 586 6066
+                  +963 950 026 610
                   <IconExternal className={`h-3 w-3 ${isRTL ? "rotate-180" : ""}`} />
                 </span>
               </div>

@@ -123,11 +123,9 @@ const Navbar = ({ lang, labels }: { lang: Locale; labels: NavLabels }) => {
           />
         </div>
 
-        {/* Right side: Locale (desktop) + Burger (mobile) */}
+        {/* Right side: Locale (always visible) + Burger (mobile) */}
         <div className="flex flex-shrink-0 items-center gap-2">
-          <div className="hidden md:flex md:items-center">
-            <LocaleSwitcher />
-          </div>
+          <LocaleSwitcher />
 
           {/* Burger Button (Mobile) */}
           <button
@@ -205,9 +203,6 @@ const Navbar = ({ lang, labels }: { lang: Locale; labels: NavLabels }) => {
             </li>
           </ul>
 
-          <div className="mt-3 border-t border-slate-200/70 pt-3">
-            <LocaleSwitcher variant="mobile" />
-          </div>
         </div>
       )}
     </nav>
