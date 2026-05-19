@@ -224,13 +224,6 @@ export default function ContactForm({ lang }: { lang: Locale }) {
   return (
     <section className="min-h-screen px-4 pt-8 pb-16 lg:px-12">
       <div className="mx-auto max-w-7xl">
-        {/* Page heading */}
-        <header className="mb-8 text-center">
-          <h2 className="heading-accent-center text-3xl lg:text-4xl font-bold text-primary">
-            {t(dictionary.contactUs, lang)}
-          </h2>
-        </header>
-
         <div className="grid gap-6 lg:grid-cols-3">
           {/* LEFT: contact details */}
           <aside className="card-elegant p-6 lg:col-span-1">

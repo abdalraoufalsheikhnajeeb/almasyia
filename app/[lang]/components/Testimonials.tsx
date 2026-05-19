@@ -182,11 +182,11 @@ export default function Testimonials({ lang }: { lang: Locale }) {
   const heading = SECTION_HEADINGS[lang] ?? SECTION_HEADINGS.en;
 
   return (
-    <section className="w-full bg-gradient-to-b from-slate-50/60 via-white to-slate-50/60 py-12 lg:py-16">
+    <section className="bg-ambient w-full py-12 lg:py-16">
       <div className="mx-auto max-w-7xl px-4">
         {/* Header */}
         <div className="mb-10 flex flex-col items-center text-center">
-          <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-1.5 shadow-sm">
+          <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/60 glass-strong px-4 py-1.5 shadow-sm">
             <GoogleLogo className="h-4 w-4" />
             <span className="text-xs font-semibold uppercase tracking-wider text-slate-600">
               {heading.reviewsLabel}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { type Locale } from "../../../../i18n-config";
 import { buildPageMetadata, SITE_URL, SITE_NAME } from "../../seo";
 import { PAGES_SEO } from "../../seo-data";
+import PageHeader from "../../components/PageHeader";
 import ContactForm from "./ContactForm";
 
 export async function generateMetadata({
@@ -18,17 +19,44 @@ export async function generateMetadata({
   });
 }
 
+const headerCopy: Record<
+  Locale,
+  { badge: string; title: string; subtitle: string }
+> = {
+  en: {
+    badge: "Contact Us",
+    title: "Let's Plan Your Next Journey",
+    subtitle:
+      "Reach out anytime — our team is ready to assist with bookings, visas, insurance, or any travel question.",
+  },
+  ar: {
+    badge: "تواصل معنا",
+    title: "لنخطط لرحلتك القادمة",
+    subtitle:
+      "تواصل معنا في أي وقت — فريقنا جاهز لمساعدتك في الحجوزات والتأشيرات والتأمين وأي استفسار يخص السفر.",
+  },
+  ru: {
+    badge: "Связаться с нами",
+    title: "Спланируем ваше следующее путешествие",
+    subtitle:
+      "Свяжитесь с нами в любое время — наша команда готова помочь с бронированиями, визами, страхованием и любыми вопросами о путешествиях.",
+  },
+};
+
 export default async function ContactPage({
   params,
 }: {
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
+  const locale = lang as Locale;
+  const copy = headerCopy[locale] ?? headerCopy.en;
+
   const contactJsonLd = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    name: PAGES_SEO.contact.title[lang as Locale],
-    description: PAGES_SEO.contact.description[lang as Locale],
+    name: PAGES_SEO.contact.title[locale],
+    description: PAGES_SEO.contact.description[locale],
     url: `${SITE_URL}/${lang}/contact`,
     publisher: {
       "@type": "TravelAgency",
@@ -59,7 +87,15 @@ export default async function ContactPage({
         suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactJsonLd) }}
       />
-      <ContactForm lang={lang as Locale} />
+      <PageHeader
+        lang={locale}
+        badge={copy.badge}
+        title={copy.title}
+        subtitle={copy.subtitle}
+      />
+      <div className="-mt-8 lg:-mt-12">
+        <ContactForm lang={locale} />
+      </div>
     </>
   );
 }

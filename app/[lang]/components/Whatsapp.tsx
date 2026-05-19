@@ -47,13 +47,13 @@ export default function Whatsapp() {
       >
         {/* Country options */}
         {isOpen && (
-          <div className="animate-fade-in flex flex-col gap-2 bg-white p-2 rounded-2xl shadow-lg border border-slate-200">
+          <div className="animate-fade-in flex flex-col gap-2 glass-strong p-2 rounded-2xl shadow-lg">
             <Link
               target="_blank"
               rel="noopener noreferrer"
               href="https://wa.me/971545866066"
               aria-label="WhatsApp UAE"
-              className="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-slate-50 transition-colors"
+              className="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-white/50 transition-colors"
             >
               <Image
                 priority
@@ -73,7 +73,7 @@ export default function Whatsapp() {
               rel="noopener noreferrer"
               href="https://wa.me/963950026610"
               aria-label="WhatsApp Syria"
-              className="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-slate-50 transition-colors"
+              className="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-white/50 transition-colors"
             >
               <Image
                 priority

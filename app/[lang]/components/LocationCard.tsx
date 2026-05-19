@@ -109,7 +109,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
   return (
     <article className="card-elegant overflow-hidden">
       {/* Header: flag + country name */}
-      <header className="flex items-center gap-3 border-b border-slate-100 bg-slate-50/60 px-6 py-4">
+      <header className="flex items-center gap-3 border-b border-white/40 bg-gradient-to-r from-litePrimary/10 via-white/40 to-accent/10 px-6 py-4">
         <Image
           width={40}
           height={40}
@@ -129,7 +129,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
             target="_blank"
             href={googleMapsUrl}
             rel="noopener noreferrer"
-            className="group flex items-start gap-3 rounded-xl border border-slate-100 bg-white p-4 transition-all hover:border-litePrimary/30 hover:shadow-sm"
+            className="group flex items-start gap-3 rounded-xl border border-white/60 bg-white/70 backdrop-blur p-4 transition-all hover:border-litePrimary/30 hover:bg-white hover:shadow-sm"
           >
             <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-litePrimary/10 text-litePrimary">
               <IconMapPin className="h-5 w-5" />
@@ -145,7 +145,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
             href={whatsLink}
             rel="noopener noreferrer"
             aria-label={`WhatsApp for ${locationName}`}
-            className="group flex items-center gap-3 rounded-xl border border-slate-100 bg-white p-4 transition-all hover:border-litePrimary/30 hover:shadow-sm"
+            className="group flex items-center gap-3 rounded-xl border border-white/60 bg-white/70 backdrop-blur p-4 transition-all hover:border-litePrimary/30 hover:bg-white hover:shadow-sm"
           >
             <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
               <IconPhone className="h-5 w-5" />

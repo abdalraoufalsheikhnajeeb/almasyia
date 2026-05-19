@@ -50,7 +50,7 @@ const SocialLink = ({ title, href, src, alt }: LinkProps) => (
     target="_blank"
     href={href}
     rel="noopener noreferrer"
-    className="group flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-slate-200 transition-all hover:-translate-y-1 hover:shadow-md"
+    className="group flex h-12 w-12 items-center justify-center rounded-full bg-white/80 backdrop-blur shadow-sm ring-1 ring-white/60 transition-all hover:-translate-y-1 hover:bg-white hover:shadow-md"
     aria-label={title}
   >
     <Image
@@ -70,7 +70,7 @@ const Footer = async ({ lang }: { lang: Locale }) => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-12 border-t border-slate-100 bg-gradient-to-b from-white to-slate-50">
+    <footer className="mt-12 border-t border-white/40 bg-gradient-to-b from-white/60 to-slate-50/40 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-6 py-12">
         <div className="grid gap-10 md:grid-cols-3">
           {/* Brand */}

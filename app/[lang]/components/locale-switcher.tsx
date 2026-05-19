@@ -51,7 +51,7 @@ export default function LocaleSwitcher() {
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm font-medium text-primary shadow-sm transition-all hover:border-slate-300 hover:shadow"
+        className="flex items-center gap-2 rounded-full border border-white/50 bg-white/60 backdrop-blur-md px-3 py-1.5 text-sm font-medium text-primary shadow-sm transition-all hover:border-white/80 hover:bg-white/80 hover:shadow"
         aria-haspopup="listbox"
         aria-expanded={isOpen}
         aria-label="Change language"
@@ -88,7 +88,7 @@ export default function LocaleSwitcher() {
       {isOpen && (
         <ul
           role="listbox"
-          className="animate-fade-in absolute end-0 mt-2 w-44 overflow-hidden rounded-xl border border-slate-200 bg-white py-1 shadow-lg z-50"
+          className="animate-fade-in absolute end-0 mt-2 w-44 overflow-hidden rounded-xl border border-white/50 glass-strong py-1 shadow-lg z-50"
         >
           {i18n.locales.map((locale) => {
             const meta = LOCALE_META[locale as Locale];
@@ -100,8 +100,8 @@ export default function LocaleSwitcher() {
                   onClick={() => setIsOpen(false)}
                   className={`flex items-center gap-3 px-3 py-2 text-sm transition-colors ${
                     isActive
-                      ? "bg-slate-50 font-semibold text-primary"
-                      : "text-slate-700 hover:bg-slate-50"
+                      ? "bg-white/50 font-semibold text-primary"
+                      : "text-slate-700 hover:bg-white/40"
                   }`}
                 >
                   <Image

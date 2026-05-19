@@ -21,10 +21,108 @@
     0 4px 6px -4px rgba(15, 23, 42, 0.08);
   --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.1),
     0 8px 10px -6px rgba(15, 23, 42, 0.06);
+  --shadow-glass: 0 8px 32px rgba(36, 75, 107, 0.1),
+    0 2px 8px rgba(36, 75, 107, 0.06);
   --radius-sm: 0.5rem;
   --radius-md: 0.75rem;
   --radius-lg: 1rem;
   --radius-xl: 1.5rem;
+}
+
+/* ============================================
+   Glassmorphism
+   ============================================ */
+
+/* Light glass — for use over images, gradients, or colored backgrounds */
+.glass {
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: var(--shadow-glass);
+}
+
+/* Stronger light glass — for floating UI elements */
+.glass-strong {
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: var(--shadow-glass);
+}
+
+/* Subtle glass — for primary surfaces on plain bg */
+.glass-soft {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0.55) 100%
+  );
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 24px rgba(36, 75, 107, 0.06);
+}
+
+/* Dark glass — for use on light backgrounds */
+.glass-dark {
+  background-color: rgba(36, 75, 107, 0.6);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(15, 23, 42, 0.2);
+}
+
+/* Glass surface for sections — adds a subtle decorative bg behind it */
+.glass-surface {
+  position: relative;
+  isolation: isolate;
+}
+.glass-surface::before {
+  content: "";
+  position: absolute;
+  inset: -2rem;
+  z-index: -1;
+  background:
+    radial-gradient(
+      circle at 20% 0%,
+      rgba(49, 103, 146, 0.08),
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 100%,
+      rgba(211, 177, 103, 0.08),
+      transparent 50%
+    );
+}
+
+/* Decorative ambient blob backgrounds for sections */
+.bg-ambient {
+  position: relative;
+  isolation: isolate;
+}
+.bg-ambient::before,
+.bg-ambient::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: -1;
+  pointer-events: none;
+}
+.bg-ambient::before {
+  width: 24rem;
+  height: 24rem;
+  top: -6rem;
+  left: -6rem;
+  background: radial-gradient(circle, rgba(49, 103, 146, 0.18), transparent 70%);
+}
+.bg-ambient::after {
+  width: 20rem;
+  height: 20rem;
+  bottom: -4rem;
+  right: -4rem;
+  background: radial-gradient(circle, rgba(211, 177, 103, 0.18), transparent 70%);
 }
 
 /* ============================================
@@ -63,11 +161,13 @@
   box-shadow: var(--shadow-lg);
 }
 
-/* Elegant card variant */
+/* Elegant card variant — glass-enhanced */
 .card-elegant {
-  background-color: var(--color-surface);
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px) saturate(140%);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(255, 255, 255, 0.7);
   box-shadow: var(--shadow-sm);
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -75,7 +175,8 @@
 .card-elegant:hover {
   box-shadow: var(--shadow-xl);
   transform: translateY(-2px);
-  border-color: rgba(36, 75, 107, 0.16);
+  border-color: rgba(36, 75, 107, 0.12);
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
 /* Refined section heading with accent underline */
@@ -187,13 +288,39 @@
   cursor: not-allowed;
 }
 
+/* Glassy ghost button — for use on dark/image backgrounds */
+.btn-glass {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.5rem;
+  border-radius: var(--radius-md);
+  background-color: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.btn-glass:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
 /* Refined inputs */
 .input-elegant {
   width: 100%;
   padding: 0.625rem 0.875rem;
   border-radius: var(--radius-md);
   border: 1px solid #e2e8f0;
-  background-color: var(--color-surface);
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   color: #0f172a;
   font-size: 0.95rem;
   transition: all 200ms ease;
@@ -202,10 +329,12 @@
 
 .input-elegant:hover {
   border-color: #cbd5e1;
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
 .input-elegant:focus {
   border-color: var(--color-primary-lite);
+  background-color: #fff;
   box-shadow: 0 0 0 3px rgba(49, 103, 146, 0.12);
 }
 
@@ -270,6 +399,11 @@
   }
 }
 
+@keyframes floatBlob {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(20px, -20px); }
+}
+
 .animate-fade-in {
   animation: fadeIn 200ms ease-out;
 }
@@ -309,15 +443,33 @@
 }
 
 /* ============================================
-   Global styles
+   Global styles — body with subtle gradient
    ============================================ */
 body {
   font-family: "Tajawal", sans-serif;
-  background-color: var(--color-bg);
   color: var(--color-primary);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Ambient background to make glass effects visible everywhere */
+  background-color: #f5f9fc;
+  background-image:
+    radial-gradient(
+      circle at 0% 0%,
+      rgba(49, 103, 146, 0.06) 0%,
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(211, 177, 103, 0.06) 0%,
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(103, 167, 218, 0.06) 0%,
+      transparent 35%
+    );
+  background-attachment: fixed;
 }
 
 /* Refined scrollbar */

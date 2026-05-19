@@ -51,7 +51,7 @@ const Navbar = ({ lang, labels }: { lang: Locale; labels: NavLabels }) => {
 
   return (
     <nav
-      className="fixed top-0 z-50 flex w-full items-center justify-between border-b border-slate-100 bg-white/90 px-[5vw] py-2 backdrop-blur-md shadow-sm"
+      className="fixed top-0 z-50 flex w-full items-center justify-between border-b border-white/40 bg-white/70 px-[5vw] py-2 backdrop-blur-xl backdrop-saturate-150 shadow-[0_2px_16px_rgba(36,75,107,0.06)]"
       aria-label="Primary"
     >
       {/* Logo */}
@@ -131,7 +131,7 @@ const Navbar = ({ lang, labels }: { lang: Locale; labels: NavLabels }) => {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="animate-fade-in absolute start-0 top-[100%] z-40 flex w-full flex-col items-start gap-1 border-t border-slate-100 bg-white px-4 py-4 shadow-md md:hidden">
+        <div className="animate-fade-in absolute start-0 top-[100%] z-40 flex w-full flex-col items-start gap-1 border-t border-white/40 bg-white/85 backdrop-blur-xl backdrop-saturate-150 px-4 py-4 shadow-lg md:hidden">
           <NavItem
             href={`/${lang}`}
             label={labels.home}

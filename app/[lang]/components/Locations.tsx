@@ -50,7 +50,7 @@ const Locations = async ({ params: { lang } }: LocationsProps) => {
   };
 
   return (
-    <section className="w-full bg-gradient-to-b from-transparent via-slate-50/50 to-transparent py-12">
+    <section className="bg-ambient relative w-full py-12">
       <div className="mx-auto max-w-7xl px-4">
         <AnTitle title={dictionary.OurLocations} />
         <div className="mt-8 flex flex-col gap-8">
