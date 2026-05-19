@@ -55,23 +55,14 @@ const Page = async ({ params }: { params: Promise<{ lang: string }> }) => {
           <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
             {/* Text content */}
             <div className="flex flex-col gap-6 lg:col-span-7">
-              {/* Logo + badge */}
-              <div className="flex items-center gap-4">
-                <Image
-                  quality={70}
-                  src="/images/logo.webp"
-                  alt="Alnujoom Almasiya"
-                  width={200}
-                  height={136}
-                  priority
-                  className="h-16 w-auto rounded-lg bg-white/95 p-2 shadow-lg backdrop-blur lg:h-20"
-                />
-                <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-md">
+              {/* Eyebrow badge (logo lives in the header — no duplicate here) */}
+              <div>
+                <span className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white shadow-sm backdrop-blur-md sm:text-sm">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    className="h-3.5 w-3.5 text-accent"
+                    className="h-4 w-4 text-accent"
                     aria-hidden="true"
                   >
                     <path d="M11.48 3.5a.56.56 0 011.04 0l2.13 5.1a.56.56 0 00.47.35l5.52.45c.5.04.7.66.32.99l-4.2 3.6a.56.56 0 00-.18.56l1.28 5.39a.56.56 0 01-.84.6l-4.72-2.88a.56.56 0 00-.59 0l-4.72 2.88a.56.56 0 01-.84-.6l1.28-5.39a.56.56 0 00-.18-.56l-4.2-3.6a.56.56 0 01.32-.99l5.52-.45a.56.56 0 00.47-.35L11.48 3.5z" />
