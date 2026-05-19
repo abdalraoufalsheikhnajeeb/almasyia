@@ -389,20 +389,20 @@ export default async function page({
             </div>
 
             {/* ============ Image side ============ */}
-            <div className="relative min-h-[24rem] lg:col-span-5 lg:min-h-[40rem]">
+            <div className="relative min-h-[26rem] bg-slate-100 lg:col-span-5 lg:min-h-[44rem]">
               <Image
                 loading="lazy"
-                quality={75}
+                quality={80}
                 src="/images/farouk.webp"
                 fill
                 sizes="(min-width: 1024px) 42vw, 100vw"
                 alt={`${content.founderName} — Founder of AlNujoom AlMasiya`}
-                className="object-cover object-center"
+                className="object-cover object-[center_top]"
               />
-              {/* Gradient overlay for tag readability */}
+              {/* Gradient overlay for tag readability — only at the bottom */}
               <div
                 aria-hidden="true"
-                className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/15 to-transparent"
+                className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent"
               />
               {/* Founder tag overlay at bottom */}
               <div className="absolute bottom-0 inset-x-0 p-6 lg:p-8">
