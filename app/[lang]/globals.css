@@ -635,6 +635,10 @@
 /* ============================================
    Global styles — body with subtle gradient
    ============================================ */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Tajawal", sans-serif;
   color: var(--color-primary);

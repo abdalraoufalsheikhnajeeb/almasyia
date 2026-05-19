@@ -77,21 +77,31 @@ const dictionary: Record<string, LocalizedText> = {
   // Quick actions
   qaWhatsappTitle: { ar: "واتساب", en: "WhatsApp", ru: "WhatsApp" },
   qaWhatsappDesc: {
-    ar: "أسرع طريقة للوصول إلينا",
-    en: "Fastest way to reach us",
-    ru: "Самый быстрый способ",
+    ar: "محادثة فورية مع فريقنا",
+    en: "Instant chat with our team",
+    ru: "Мгновенный чат с командой",
   },
   qaCallTitle: { ar: "اتصل بنا", en: "Call us", ru: "Позвонить" },
   qaCallDesc: {
-    ar: "متاحون 24/7",
-    en: "Available 24/7",
-    ru: "Доступны 24/7",
+    ar: "تحدث معنا مباشرة، 24/7",
+    en: "Speak with us directly, 24/7",
+    ru: "Прямой разговор, 24/7",
   },
   qaEmailTitle: { ar: "البريد", en: "Email", ru: "Email" },
   qaEmailDesc: {
     ar: "نرد عادةً خلال ساعة",
     en: "Reply within an hour",
     ru: "Ответим в течение часа",
+  },
+  qaPickOffice: {
+    ar: "اختر مكتباً",
+    en: "Choose an office",
+    ru: "Выберите офис",
+  },
+  qaBothOffices: {
+    ar: "الإمارات وسوريا",
+    en: "UAE & Syria",
+    ru: "ОАЭ и Сирия",
   },
   // Quick badge for response
   responseHint: {
@@ -219,6 +229,22 @@ const IconCheck = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const IconArrowDown = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 20 20"
+    fill="currentColor"
+    className={className}
+    aria-hidden="true"
+  >
+    <path
+      fillRule="evenodd"
+      d="M10 3a.75.75 0 01.75.75v10.638l3.96-4.158a.75.75 0 111.08 1.04l-5.25 5.5a.75.75 0 01-1.08 0l-5.25-5.5a.75.75 0 111.08-1.04l3.96 4.158V3.75A.75.75 0 0110 3z"
+      clipRule="evenodd"
+    />
+  </svg>
+);
+
 const IconAlert = ({ className }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -302,13 +328,14 @@ export default function ContactForm({ lang }: { lang: Locale }) {
       dir={isRTL ? "rtl" : "ltr"}
     >
       <div className="mx-auto max-w-7xl">
-        {/* ========== Quick action strip ========== */}
+        {/* ========== Quick action strip ==========
+              No specific country numbers shown here — neutral CTAs.
+              WhatsApp/Call link to #offices anchor so users pick a country below.
+              Email is universal (one address for both offices). */}
         <div className="grid gap-4 sm:grid-cols-3">
-          {/* WhatsApp */}
+          {/* WhatsApp — scroll to offices */}
           <a
-            href="https://wa.me/963950026610"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#offices"
             className="group relative overflow-hidden rounded-2xl border border-emerald-200 bg-white p-5 shadow-md ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:border-emerald-300 hover:shadow-xl"
           >
             <span
@@ -319,24 +346,44 @@ export default function ContactForm({ lang }: { lang: Locale }) {
               <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#25d366] to-[#128c7e] text-white shadow-md shadow-emerald-500/30 transition-transform group-hover:scale-110">
                 <IconWhatsapp className="h-6 w-6" />
               </span>
-              <div className="min-w-0">
+              <div className="min-w-0 flex-1">
                 <h3 className="text-base font-bold text-primary">
                   {t(dictionary.qaWhatsappTitle, lang)}
                 </h3>
                 <p className="text-xs text-slate-600 lg:text-sm">
                   {t(dictionary.qaWhatsappDesc, lang)}
                 </p>
-                <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 tabular-nums">
-                  +963 950 026 610
-                  <IconExternal className={`h-3 w-3 ${isRTL ? "rotate-180" : ""}`} />
+                <span className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700">
+                  <span className="flex -space-x-1.5 rtl:space-x-reverse">
+                    <Image
+                      className="h-4 w-4 rounded-full object-cover ring-1 ring-white"
+                      alt=""
+                      aria-hidden="true"
+                      src="/images/emirate-flag.svg"
+                      width={16}
+                      height={16}
+                    />
+                    <Image
+                      className="h-4 w-4 rounded-full object-cover ring-1 ring-white"
+                      alt=""
+                      aria-hidden="true"
+                      src="/images/syria-flag.svg"
+                      width={16}
+                      height={16}
+                    />
+                  </span>
+                  {t(dictionary.qaBothOffices, lang)}
                 </span>
               </div>
+              <IconArrowDown
+                className={`mt-1 h-4 w-4 flex-shrink-0 text-emerald-600 transition-transform group-hover:translate-y-0.5`}
+              />
             </div>
           </a>
 
-          {/* Call */}
+          {/* Call — scroll to offices */}
           <a
-            href="tel:+963950026610"
+            href="#offices"
             className="group relative overflow-hidden rounded-2xl border border-sky-200 bg-white p-5 shadow-md ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:border-sky-300 hover:shadow-xl"
           >
             <span
@@ -347,22 +394,42 @@ export default function ContactForm({ lang }: { lang: Locale }) {
               <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-litePrimary to-primary text-white shadow-md shadow-litePrimary/30 transition-transform group-hover:scale-110">
                 <IconPhone className="h-6 w-6" />
               </span>
-              <div className="min-w-0">
+              <div className="min-w-0 flex-1">
                 <h3 className="text-base font-bold text-primary">
                   {t(dictionary.qaCallTitle, lang)}
                 </h3>
                 <p className="text-xs text-slate-600 lg:text-sm">
                   {t(dictionary.qaCallDesc, lang)}
                 </p>
-                <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-litePrimary tabular-nums">
-                  +963 950 026 610
-                  <IconExternal className={`h-3 w-3 ${isRTL ? "rotate-180" : ""}`} />
+                <span className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-litePrimary">
+                  <span className="flex -space-x-1.5 rtl:space-x-reverse">
+                    <Image
+                      className="h-4 w-4 rounded-full object-cover ring-1 ring-white"
+                      alt=""
+                      aria-hidden="true"
+                      src="/images/emirate-flag.svg"
+                      width={16}
+                      height={16}
+                    />
+                    <Image
+                      className="h-4 w-4 rounded-full object-cover ring-1 ring-white"
+                      alt=""
+                      aria-hidden="true"
+                      src="/images/syria-flag.svg"
+                      width={16}
+                      height={16}
+                    />
+                  </span>
+                  {t(dictionary.qaBothOffices, lang)}
                 </span>
               </div>
+              <IconArrowDown
+                className={`mt-1 h-4 w-4 flex-shrink-0 text-litePrimary transition-transform group-hover:translate-y-0.5`}
+              />
             </div>
           </a>
 
-          {/* Email */}
+          {/* Email — direct mailto (universal, one address for both offices) */}
           <a
             href="mailto:info@alnujoomalmasiya.com"
             className="group relative overflow-hidden rounded-2xl border border-amber-200 bg-white p-5 shadow-md ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:border-amber-300 hover:shadow-xl"
@@ -375,7 +442,7 @@ export default function ContactForm({ lang }: { lang: Locale }) {
               <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-accent to-[#c89e4f] text-white shadow-md shadow-accent/30 transition-transform group-hover:scale-110">
                 <IconMail className="h-6 w-6" />
               </span>
-              <div className="min-w-0">
+              <div className="min-w-0 flex-1">
                 <h3 className="text-base font-bold text-primary">
                   {t(dictionary.qaEmailTitle, lang)}
                 </h3>
@@ -555,7 +622,10 @@ export default function ContactForm({ lang }: { lang: Locale }) {
           </div>
 
           {/* OFFICES sidebar */}
-          <aside className="flex flex-col gap-4 lg:col-span-5">
+          <aside
+            id="offices"
+            className="flex scroll-mt-24 flex-col gap-4 lg:col-span-5"
+          >
             <div className="card-elegant p-6 lg:p-7">
               <div className="flex items-center gap-2">
                 <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-litePrimary/10 text-litePrimary">
