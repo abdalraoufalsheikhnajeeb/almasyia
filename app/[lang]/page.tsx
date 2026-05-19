@@ -32,7 +32,7 @@ const Page = async ({ params }: { params: Promise<{ lang: string }> }) => {
           priority
           quality={75}
           src="/images/hero.webp"
-          className={`absolute inset-0 -z-20 h-full w-full object-cover ${
+          className={`absolute inset-0 -z-20 h-full w-full object-cover object-[center_22%] ${
             isRTL ? "-scale-x-[1]" : ""
           }`}
           sizes="100vw"
