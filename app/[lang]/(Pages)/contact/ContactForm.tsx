@@ -309,9 +309,13 @@ export default function ContactForm({ lang }: { lang: Locale }) {
             href="https://wa.me/971545866066"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative overflow-hidden rounded-2xl border border-emerald-200/60 bg-gradient-to-br from-emerald-50 to-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+            className="group relative overflow-hidden rounded-2xl border border-emerald-200 bg-white p-5 shadow-md ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:border-emerald-300 hover:shadow-xl"
           >
-            <div className="flex items-start gap-4">
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-50/80 via-white to-white"
+            />
+            <div className="relative flex items-start gap-4">
               <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#25d366] to-[#128c7e] text-white shadow-md shadow-emerald-500/30 transition-transform group-hover:scale-110">
                 <IconWhatsapp className="h-6 w-6" />
               </span>
@@ -319,10 +323,10 @@ export default function ContactForm({ lang }: { lang: Locale }) {
                 <h3 className="text-base font-bold text-primary">
                   {t(dictionary.qaWhatsappTitle, lang)}
                 </h3>
-                <p className="text-xs text-slate-500 lg:text-sm">
+                <p className="text-xs text-slate-600 lg:text-sm">
                   {t(dictionary.qaWhatsappDesc, lang)}
                 </p>
-                <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-emerald-600 tabular-nums">
+                <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 tabular-nums">
                   +971 54 586 6066
                   <IconExternal className={`h-3 w-3 ${isRTL ? "rotate-180" : ""}`} />
                 </span>
@@ -333,9 +337,13 @@ export default function ContactForm({ lang }: { lang: Locale }) {
           {/* Call */}
           <a
             href="tel:+971545866066"
-            className="group relative overflow-hidden rounded-2xl border border-litePrimary/20 bg-gradient-to-br from-litePrimary/5 to-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+            className="group relative overflow-hidden rounded-2xl border border-sky-200 bg-white p-5 shadow-md ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:border-sky-300 hover:shadow-xl"
           >
-            <div className="flex items-start gap-4">
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 bg-gradient-to-br from-sky-50/80 via-white to-white"
+            />
+            <div className="relative flex items-start gap-4">
               <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-litePrimary to-primary text-white shadow-md shadow-litePrimary/30 transition-transform group-hover:scale-110">
                 <IconPhone className="h-6 w-6" />
               </span>
@@ -343,7 +351,7 @@ export default function ContactForm({ lang }: { lang: Locale }) {
                 <h3 className="text-base font-bold text-primary">
                   {t(dictionary.qaCallTitle, lang)}
                 </h3>
-                <p className="text-xs text-slate-500 lg:text-sm">
+                <p className="text-xs text-slate-600 lg:text-sm">
                   {t(dictionary.qaCallDesc, lang)}
                 </p>
                 <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-litePrimary tabular-nums">
@@ -357,9 +365,13 @@ export default function ContactForm({ lang }: { lang: Locale }) {
           {/* Email */}
           <a
             href="mailto:info@alnujoomalmasiya.com"
-            className="group relative overflow-hidden rounded-2xl border border-accent/30 bg-gradient-to-br from-accent/5 to-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+            className="group relative overflow-hidden rounded-2xl border border-amber-200 bg-white p-5 shadow-md ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:border-amber-300 hover:shadow-xl"
           >
-            <div className="flex items-start gap-4">
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 bg-gradient-to-br from-amber-50/80 via-white to-white"
+            />
+            <div className="relative flex items-start gap-4">
               <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-accent to-[#c89e4f] text-white shadow-md shadow-accent/30 transition-transform group-hover:scale-110">
                 <IconMail className="h-6 w-6" />
               </span>
@@ -367,10 +379,10 @@ export default function ContactForm({ lang }: { lang: Locale }) {
                 <h3 className="text-base font-bold text-primary">
                   {t(dictionary.qaEmailTitle, lang)}
                 </h3>
-                <p className="text-xs text-slate-500 lg:text-sm">
+                <p className="text-xs text-slate-600 lg:text-sm">
                   {t(dictionary.qaEmailDesc, lang)}
                 </p>
-                <span className="mt-2 inline-block truncate text-xs font-semibold text-accent">
+                <span className="mt-2 inline-block truncate text-xs font-semibold text-[#a37c2a]">
                   info@alnujoomalmasiya.com
                 </span>
               </div>
