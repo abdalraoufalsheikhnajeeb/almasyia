@@ -131,7 +131,7 @@ const Navbar = ({ lang, labels }: { lang: Locale; labels: NavLabels }) => {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="animate-fade-in absolute start-0 top-[100%] z-40 flex w-full flex-col items-start gap-1 border-t border-white/40 bg-white/85 backdrop-blur-xl backdrop-saturate-150 px-4 py-4 shadow-lg md:hidden">
+        <div className="animate-fade-in absolute inset-x-0 top-[100%] z-40 flex w-full flex-col items-stretch gap-1 border-t border-white/40 bg-white px-4 py-4 shadow-lg md:hidden">
           <NavItem
             href={`/${lang}`}
             label={labels.home}
@@ -157,7 +157,7 @@ const Navbar = ({ lang, labels }: { lang: Locale; labels: NavLabels }) => {
             onClick={() => setIsOpen(false)}
           />
 
-          <div className="mt-3">
+          <div className="mt-3 self-start">
             <LocaleSwitcher />
           </div>
         </div>

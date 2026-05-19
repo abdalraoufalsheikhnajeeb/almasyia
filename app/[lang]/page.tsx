@@ -303,14 +303,6 @@ const Page = async ({ params }: { params: Promise<{ lang: string }> }) => {
             lang: lang,
           }}
         />
-        <video
-          controls
-          preload="metadata"
-          className="w-full max-w-[90vw] mt-4 rounded-xl shadow-lg"
-        >
-          <source src="/images/outro.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
       </main>
     </>
   );
