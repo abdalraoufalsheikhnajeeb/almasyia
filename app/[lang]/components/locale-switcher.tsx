@@ -11,7 +11,13 @@ const LOCALE_META: Record<Locale, { label: string; native: string; flag: string 
   ru: { label: "Russian", native: "Русский", flag: "/images/ru.svg" },
 };
 
-export default function LocaleSwitcher() {
+type Variant = "desktop" | "mobile";
+
+export default function LocaleSwitcher({
+  variant = "desktop",
+}: {
+  variant?: Variant;
+} = {}) {
   const [isOpen, setIsOpen] = useState(false);
   const pathName = usePathname();
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -45,6 +51,47 @@ export default function LocaleSwitcher() {
     }
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen]);
+
+  if (variant === "mobile") {
+    // Inline mobile list — no popover, no overflow risks
+    return (
+      <div className="w-full">
+        <p className="mb-2 px-1 text-xs font-semibold uppercase tracking-wider text-slate-500">
+          Language
+        </p>
+        <ul className="grid grid-cols-3 gap-2">
+          {i18n.locales.map((locale) => {
+            const meta = LOCALE_META[locale as Locale];
+            const isActive = locale === currentLocale;
+            return (
+              <li key={locale}>
+                <Link
+                  href={redirectedPathName(locale as Locale)}
+                  aria-current={isActive ? "true" : undefined}
+                  className={`flex flex-col items-center gap-1.5 rounded-xl border px-2 py-2.5 transition-all ${
+                    isActive
+                      ? "border-litePrimary/40 bg-litePrimary/10 text-primary shadow-sm"
+                      : "border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:bg-slate-50"
+                  }`}
+                >
+                  <Image
+                    priority
+                    quality={1}
+                    width={24}
+                    height={24}
+                    className="rounded-full object-cover ring-1 ring-white shadow-sm"
+                    alt={`${meta.label} flag`}
+                    src={meta.flag}
+                  />
+                  <span className="text-xs font-semibold">{meta.native}</span>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    );
+  }
 
   return (
     <div className="relative" ref={dropdownRef}>
