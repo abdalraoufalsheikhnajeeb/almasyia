@@ -4,21 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 import { type Locale } from "../../../../i18n-config";
 
-const phoneNumbers = [
-  {
-    country: "UAE",
-    href: "tel:+971545866066",
-    display: "+971 54 586 6066",
-    src: "/images/emirate-flag.svg",
-  },
-  {
-    country: "Syria",
-    href: "tel:+96350026610",
-    display: "+963 950 026 610",
-    src: "/images/syria-flag.svg",
-  },
-];
-
 type LocalizedText = Record<Locale, string>;
 
 const dictionary: Record<string, LocalizedText> = {
@@ -35,15 +20,15 @@ const dictionary: Record<string, LocalizedText> = {
     ru: "Отправьте нам сообщение",
   },
   sendMessage: {
-    ar: "أرسل الرسالة",
+    ar: "إرسال",
     en: "Send Message",
-    ru: "Отправить сообщение",
+    ru: "Отправить",
   },
   yourName: { ar: "اسمك", en: "Your Name", ru: "Ваше имя" },
   yourEmail: {
     ar: "بريدك الإلكتروني",
     en: "Your Email",
-    ru: "Ваш адрес электронной почты",
+    ru: "Ваш email",
   },
   subject: { ar: "الموضوع", en: "Subject", ru: "Тема" },
   yourMessage: { ar: "رسالتك", en: "Your Message", ru: "Ваше сообщение" },
@@ -54,19 +39,19 @@ const dictionary: Record<string, LocalizedText> = {
   },
   sending: { ar: "جارٍ الإرسال...", en: "Sending...", ru: "Отправка..." },
   thankYou: {
-    ar: "شكرًا على رسالتك!",
-    en: "Thank you for your message!",
-    ru: "Спасибо за ваше сообщение!",
+    ar: "شكراً! وصلتنا رسالتك وسنرد قريباً.",
+    en: "Thanks! We received your message and will reply shortly.",
+    ru: "Спасибо! Мы получили ваше сообщение и скоро ответим.",
   },
   errorOccurred: {
-    ar: "حدث خطأ ما!",
-    en: "Something went wrong!",
-    ru: "Что-то пошло не так!",
+    ar: "حدث خطأ ما! حاول مرة أخرى.",
+    en: "Something went wrong! Please try again.",
+    ru: "Что-то пошло не так! Попробуйте ещё раз.",
   },
   viewOnMaps: {
-    ar: "عرض على خرائط جوجل",
-    en: "View on Google Maps",
-    ru: "Посмотреть на Google Картах",
+    ar: "عرض الموقع",
+    en: "Open in Maps",
+    ru: "Открыть на карте",
   },
   ourOffices: {
     ar: "مكاتبنا",
@@ -76,7 +61,7 @@ const dictionary: Record<string, LocalizedText> = {
   uaeB: {
     ar: "الإمارات العربية المتحدة",
     en: "United Arab Emirates",
-    ru: "Объединённые Арабские Эмираты",
+    ru: "ОАЭ",
   },
   locationUAE: {
     ar: "دبي، ديرة بور سعيد",
@@ -86,10 +71,43 @@ const dictionary: Record<string, LocalizedText> = {
   sarB: { ar: "سوريا", en: "Syria", ru: "Сирия" },
   locationSAR: {
     ar: "دمشق - البرامكة، خلف الهجرة والجوازات",
-    en: "Damascus - Al-Baramka, behind Immigration and Passports",
-    ru: "Дамаск - Аль-Барамка за иммиграцией и паспортным столом",
+    en: "Damascus - Al-Baramka, behind Immigration & Passports",
+    ru: "Дамаск — Аль-Барамка, за иммиграцией",
+  },
+  // Quick actions
+  qaWhatsappTitle: { ar: "واتساب", en: "WhatsApp", ru: "WhatsApp" },
+  qaWhatsappDesc: {
+    ar: "أسرع طريقة للوصول إلينا",
+    en: "Fastest way to reach us",
+    ru: "Самый быстрый способ",
+  },
+  qaCallTitle: { ar: "اتصل بنا", en: "Call us", ru: "Позвонить" },
+  qaCallDesc: {
+    ar: "متاحون 24/7",
+    en: "Available 24/7",
+    ru: "Доступны 24/7",
+  },
+  qaEmailTitle: { ar: "البريد", en: "Email", ru: "Email" },
+  qaEmailDesc: {
+    ar: "نرد عادةً خلال ساعة",
+    en: "Reply within an hour",
+    ru: "Ответим в течение часа",
+  },
+  // Quick badge for response
+  responseHint: {
+    ar: "نرد عادةً خلال ساعة",
+    en: "We usually reply within the hour",
+    ru: "Обычно отвечаем в течение часа",
+  },
+  formIntro: {
+    ar: "املأ النموذج وسيتواصل معك أحد مستشاري السفر",
+    en: "Fill the form and a travel advisor will get back to you",
+    ru: "Заполните форму, и наш консультант скоро свяжется с вами",
   },
 };
+
+const t = (key: LocalizedText, lang: Locale): string =>
+  key?.[lang] ?? key?.en ?? "";
 
 const locations = [
   {
@@ -98,20 +116,19 @@ const locations = [
     cityAddress: dictionary.locationUAE,
     phone: "+971545866066",
     phoneDisplay: "+971 54 586 6066",
+    whatsapp: "https://wa.me/971545866066",
     googleMapsUrl: "https://maps.app.goo.gl/Gw5kDjBM1gKyqBmE6",
   },
   {
     countryName: dictionary.sarB,
     flagSrc: "/images/syria-flag.svg",
     cityAddress: dictionary.locationSAR,
-    phone: "+96350026610",
+    phone: "+963950026610",
     phoneDisplay: "+963 950 026 610",
+    whatsapp: "https://wa.me/963950026610",
     googleMapsUrl: "https://maps.app.goo.gl/YYZASxD4UuRLDpRZA",
   },
 ];
-
-const t = (key: LocalizedText, lang: Locale): string =>
-  key?.[lang] ?? key?.en ?? "";
 
 // Inline SVG icons
 const IconPhone = ({ className }: { className?: string }) => (
@@ -162,7 +179,65 @@ const IconExternal = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const IconWhatsapp = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    aria-hidden="true"
+  >
+    <path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.554-5.338 11.89-11.893 11.89a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z" />
+  </svg>
+);
+
+const IconSend = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    aria-hidden="true"
+  >
+    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+  </svg>
+);
+
+const IconCheck = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 20 20"
+    fill="currentColor"
+    className={className}
+    aria-hidden="true"
+  >
+    <path
+      fillRule="evenodd"
+      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+      clipRule="evenodd"
+    />
+  </svg>
+);
+
+const IconAlert = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 20 20"
+    fill="currentColor"
+    className={className}
+    aria-hidden="true"
+  >
+    <path
+      fillRule="evenodd"
+      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+      clipRule="evenodd"
+    />
+  </svg>
+);
+
 export default function ContactForm({ lang }: { lang: Locale }) {
+  const isRTL = lang === "ar";
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -222,101 +297,313 @@ export default function ContactForm({ lang }: { lang: Locale }) {
   };
 
   return (
-    <section className="min-h-screen px-4 pt-8 pb-16 lg:px-12">
+    <section
+      className="px-4 pt-2 pb-20 lg:px-8"
+      dir={isRTL ? "rtl" : "ltr"}
+    >
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-6 lg:grid-cols-3">
-          {/* LEFT: contact details */}
-          <aside className="card-elegant p-6 lg:col-span-1">
-            <h3 className="text-xl font-semibold text-primary">
-              {t(dictionary.contactUs, lang)}
-            </h3>
+        {/* ========== Quick action strip ========== */}
+        <div className="grid gap-4 sm:grid-cols-3">
+          {/* WhatsApp */}
+          <a
+            href="https://wa.me/971545866066"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative overflow-hidden rounded-2xl border border-emerald-200/60 bg-gradient-to-br from-emerald-50 to-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+          >
+            <div className="flex items-start gap-4">
+              <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#25d366] to-[#128c7e] text-white shadow-md shadow-emerald-500/30 transition-transform group-hover:scale-110">
+                <IconWhatsapp className="h-6 w-6" />
+              </span>
+              <div className="min-w-0">
+                <h3 className="text-base font-bold text-primary">
+                  {t(dictionary.qaWhatsappTitle, lang)}
+                </h3>
+                <p className="text-xs text-slate-500 lg:text-sm">
+                  {t(dictionary.qaWhatsappDesc, lang)}
+                </p>
+                <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-emerald-600 tabular-nums">
+                  +971 54 586 6066
+                  <IconExternal className={`h-3 w-3 ${isRTL ? "rotate-180" : ""}`} />
+                </span>
+              </div>
+            </div>
+          </a>
 
-            {/* Phone numbers */}
-            <div className="mt-5">
-              <h4 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-litePrimary">
-                <IconPhone className="w-4 h-4" />
-                {t(dictionary.officePhone, lang)}
-              </h4>
-              <ul className="mt-3 space-y-2">
-                {phoneNumbers.map((phone) => (
-                  <li key={phone.country}>
-                    <a
-                      href={phone.href}
-                      className="group flex items-center gap-3 rounded-lg px-2 py-1.5 transition-colors hover:bg-slate-50"
+          {/* Call */}
+          <a
+            href="tel:+971545866066"
+            className="group relative overflow-hidden rounded-2xl border border-litePrimary/20 bg-gradient-to-br from-litePrimary/5 to-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+          >
+            <div className="flex items-start gap-4">
+              <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-litePrimary to-primary text-white shadow-md shadow-litePrimary/30 transition-transform group-hover:scale-110">
+                <IconPhone className="h-6 w-6" />
+              </span>
+              <div className="min-w-0">
+                <h3 className="text-base font-bold text-primary">
+                  {t(dictionary.qaCallTitle, lang)}
+                </h3>
+                <p className="text-xs text-slate-500 lg:text-sm">
+                  {t(dictionary.qaCallDesc, lang)}
+                </p>
+                <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-litePrimary tabular-nums">
+                  +971 54 586 6066
+                  <IconExternal className={`h-3 w-3 ${isRTL ? "rotate-180" : ""}`} />
+                </span>
+              </div>
+            </div>
+          </a>
+
+          {/* Email */}
+          <a
+            href="mailto:info@alnujoomalmasiya.com"
+            className="group relative overflow-hidden rounded-2xl border border-accent/30 bg-gradient-to-br from-accent/5 to-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+          >
+            <div className="flex items-start gap-4">
+              <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-accent to-[#c89e4f] text-white shadow-md shadow-accent/30 transition-transform group-hover:scale-110">
+                <IconMail className="h-6 w-6" />
+              </span>
+              <div className="min-w-0">
+                <h3 className="text-base font-bold text-primary">
+                  {t(dictionary.qaEmailTitle, lang)}
+                </h3>
+                <p className="text-xs text-slate-500 lg:text-sm">
+                  {t(dictionary.qaEmailDesc, lang)}
+                </p>
+                <span className="mt-2 inline-block truncate text-xs font-semibold text-accent">
+                  info@alnujoomalmasiya.com
+                </span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        {/* ========== Main grid: form + offices ========== */}
+        <div className="mt-8 grid gap-6 lg:grid-cols-12">
+          {/* FORM card */}
+          <div className="lg:col-span-7">
+            <div className="card-elegant overflow-hidden p-6 lg:p-8">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <h3 className="text-xl font-bold text-primary lg:text-2xl">
+                    {t(dictionary.sendUsMessage, lang)}
+                  </h3>
+                  <p className="mt-1 text-sm text-slate-500">
+                    {t(dictionary.formIntro, lang)}
+                  </p>
+                </div>
+                <span className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700 ring-1 ring-emerald-200">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+                  </span>
+                  {t(dictionary.responseHint, lang)}
+                </span>
+              </div>
+
+              <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+                <div className="grid gap-4 md:grid-cols-2">
+                  <div>
+                    <label
+                      htmlFor="name"
+                      className="mb-1.5 block text-sm font-semibold text-slate-700"
                     >
-                      <Image
-                        className="rounded-full object-cover ring-1 ring-slate-200"
-                        alt={`${phone.country} flag`}
-                        src={phone.src}
-                        width={24}
-                        height={24}
-                      />
-                      <span className="text-sm font-medium text-slate-700 tabular-nums group-hover:text-primary">
-                        {phone.display}
-                      </span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+                      {t(dictionary.yourName, lang)}
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="input-elegant"
+                      placeholder={t(dictionary.yourName, lang)}
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="mb-1.5 block text-sm font-semibold text-slate-700"
+                    >
+                      {t(dictionary.yourEmail, lang)}
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="input-elegant"
+                      placeholder={t(dictionary.yourEmail, lang)}
+                      required
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label
+                    htmlFor="subject"
+                    className="mb-1.5 block text-sm font-semibold text-slate-700"
+                  >
+                    {t(dictionary.subject, lang)}
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className="input-elegant"
+                    placeholder={t(dictionary.subject, lang)}
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="mb-1.5 block text-sm font-semibold text-slate-700"
+                  >
+                    {t(dictionary.yourMessage, lang)}
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="input-elegant min-h-[10rem] resize-y"
+                    placeholder={t(dictionary.writeMessage, lang)}
+                    required
+                  />
+                </div>
 
-            {/* Email */}
-            <div className="mt-5">
-              <h4 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-litePrimary">
-                <IconMail className="w-4 h-4" />
-                {t(dictionary.mailUs, lang)}
-              </h4>
-              <a
-                href="mailto:info@alnujoomalmasiya.com"
-                className="mt-2 inline-block text-sm text-slate-700 hover:text-primary hover:underline underline-offset-2"
-              >
-                info@alnujoomalmasiya.com
-              </a>
-            </div>
+                {/* Status banners */}
+                {status.success && (
+                  <div
+                    role="status"
+                    className="flex items-start gap-3 rounded-xl border border-emerald-200 bg-emerald-50 p-3.5 text-sm font-medium text-emerald-800"
+                  >
+                    <IconCheck className="mt-0.5 h-5 w-5 flex-shrink-0 text-emerald-600" />
+                    <span>{status.success}</span>
+                  </div>
+                )}
+                {status.error && (
+                  <div
+                    role="alert"
+                    className="flex items-start gap-3 rounded-xl border border-rose-200 bg-rose-50 p-3.5 text-sm font-medium text-rose-800"
+                  >
+                    <IconAlert className="mt-0.5 h-5 w-5 flex-shrink-0 text-rose-600" />
+                    <span>{status.error}</span>
+                  </div>
+                )}
 
-            {/* Office locations */}
-            <div className="mt-6 border-t border-slate-100 pt-5">
-              <h4 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-litePrimary">
-                <IconMapPin className="w-4 h-4" />
-                {t(dictionary.ourOffices, lang)}
-              </h4>
-              <ul className="mt-3 space-y-4">
+                <div className="flex items-center justify-end pt-1">
+                  <button
+                    type="submit"
+                    disabled={status.loading}
+                    className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-accent to-[#c89e4f] px-7 py-3 text-sm font-bold text-white shadow-lg shadow-accent/30 transition-all hover:-translate-y-0.5 hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-60"
+                  >
+                    {status.loading ? (
+                      <>
+                        <svg
+                          className="h-4 w-4 animate-spin"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          aria-hidden="true"
+                        >
+                          <circle
+                            className="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            strokeWidth="4"
+                          />
+                          <path
+                            className="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                          />
+                        </svg>
+                        {t(dictionary.sending, lang)}
+                      </>
+                    ) : (
+                      <>
+                        {t(dictionary.sendMessage, lang)}
+                        <IconSend
+                          className={`h-4 w-4 transition-transform group-hover:translate-x-0.5 ${
+                            isRTL ? "-scale-x-100 group-hover:-translate-x-0.5" : ""
+                          }`}
+                        />
+                      </>
+                    )}
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          {/* OFFICES sidebar */}
+          <aside className="flex flex-col gap-4 lg:col-span-5">
+            <div className="card-elegant p-6 lg:p-7">
+              <div className="flex items-center gap-2">
+                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-litePrimary/10 text-litePrimary">
+                  <IconMapPin className="h-4 w-4" />
+                </span>
+                <h3 className="text-lg font-bold text-primary lg:text-xl">
+                  {t(dictionary.ourOffices, lang)}
+                </h3>
+              </div>
+
+              <ul className="mt-5 space-y-4">
                 {locations.map((loc) => (
                   <li
                     key={loc.phone}
-                    className="rounded-lg border border-slate-100 bg-slate-50/60 p-3"
+                    className="rounded-2xl border border-slate-200/70 bg-gradient-to-br from-white to-slate-50/40 p-4 transition-all hover:border-litePrimary/30 hover:shadow-sm"
                   >
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-3">
                       <Image
-                        className="rounded-full object-cover ring-1 ring-slate-200"
+                        className="h-7 w-7 rounded-full object-cover ring-2 ring-white shadow-sm"
                         alt={t(loc.countryName, lang)}
                         src={loc.flagSrc}
-                        width={20}
-                        height={20}
+                        width={28}
+                        height={28}
                       />
-                      <h5 className="text-sm font-semibold text-primary">
+                      <h4 className="text-base font-bold text-primary">
                         {t(loc.countryName, lang)}
-                      </h5>
+                      </h4>
                     </div>
-                    <p className="mt-1.5 text-sm text-slate-600">
-                      {t(loc.cityAddress, lang)}
+                    <p className="mt-3 flex items-start gap-2 text-sm leading-relaxed text-slate-600">
+                      <IconMapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-slate-400" />
+                      <span>{t(loc.cityAddress, lang)}</span>
                     </p>
-                    <div className="mt-2 flex flex-col gap-1">
+                    <a
+                      href={`tel:${loc.phone}`}
+                      className="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-primary tabular-nums hover:text-litePrimary"
+                    >
+                      <IconPhone className="h-4 w-4 text-litePrimary" />
+                      {loc.phoneDisplay}
+                    </a>
+
+                    <div className="mt-3 flex flex-wrap gap-2 border-t border-slate-200/60 pt-3">
                       <a
-                        href={`tel:${loc.phone}`}
-                        className="text-sm font-medium text-slate-700 tabular-nums hover:text-primary"
+                        href={loc.whatsapp}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-50 px-2.5 py-1.5 text-xs font-semibold text-emerald-700 ring-1 ring-emerald-200/60 transition-colors hover:bg-emerald-100"
                       >
-                        {loc.phoneDisplay}
+                        <IconWhatsapp className="h-3.5 w-3.5" />
+                        WhatsApp
                       </a>
                       {loc.googleMapsUrl && (
                         <a
                           href={loc.googleMapsUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-xs font-medium text-litePrimary hover:underline underline-offset-2"
+                          className="inline-flex items-center gap-1.5 rounded-lg bg-litePrimary/10 px-2.5 py-1.5 text-xs font-semibold text-litePrimary ring-1 ring-litePrimary/20 transition-colors hover:bg-litePrimary/15"
                         >
+                          <IconMapPin className="h-3.5 w-3.5" />
                           {t(dictionary.viewOnMaps, lang)}
-                          <IconExternal className="w-3 h-3" />
+                          <IconExternal className={`h-3 w-3 ${isRTL ? "rotate-180" : ""}`} />
                         </a>
                       )}
                     </div>
@@ -325,109 +612,6 @@ export default function ContactForm({ lang }: { lang: Locale }) {
               </ul>
             </div>
           </aside>
-
-          {/* RIGHT: message form */}
-          <div className="card-elegant p-6 lg:col-span-2 lg:p-8">
-            <h3 className="text-xl font-semibold text-primary">
-              {t(dictionary.sendUsMessage, lang)}
-            </h3>
-            <form onSubmit={handleSubmit} className="mt-5 space-y-4">
-              <div className="grid gap-4 md:grid-cols-2">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="mb-1 block text-sm font-medium text-slate-700"
-                  >
-                    {t(dictionary.yourName, lang)}
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="input-elegant"
-                    placeholder={t(dictionary.yourName, lang)}
-                    required
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="mb-1 block text-sm font-medium text-slate-700"
-                  >
-                    {t(dictionary.yourEmail, lang)}
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="input-elegant"
-                    placeholder={t(dictionary.yourEmail, lang)}
-                    required
-                  />
-                </div>
-              </div>
-              <div>
-                <label
-                  htmlFor="subject"
-                  className="mb-1 block text-sm font-medium text-slate-700"
-                >
-                  {t(dictionary.subject, lang)}
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className="input-elegant"
-                  placeholder={t(dictionary.subject, lang)}
-                  required
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="message"
-                  className="mb-1 block text-sm font-medium text-slate-700"
-                >
-                  {t(dictionary.yourMessage, lang)}
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="input-elegant min-h-[8rem] resize-y"
-                  placeholder={t(dictionary.writeMessage, lang)}
-                  required
-                />
-              </div>
-              <div className="flex flex-wrap items-center gap-4">
-                <button
-                  type="submit"
-                  disabled={status.loading}
-                  className="btn-accent"
-                >
-                  {status.loading
-                    ? t(dictionary.sending, lang)
-                    : t(dictionary.sendMessage, lang)}
-                </button>
-                {status.success && (
-                  <p className="text-sm font-medium text-emerald-600">
-                    {status.success}
-                  </p>
-                )}
-                {status.error && (
-                  <p className="text-sm font-medium text-rose-600">
-                    {status.error}
-                  </p>
-                )}
-              </div>
-            </form>
-          </div>
         </div>
       </div>
     </section>
