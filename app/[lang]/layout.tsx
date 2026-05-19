@@ -193,7 +193,6 @@ export default async function RootLayout({
       "https://www.facebook.com/profile.php?id=61561523323618&mibextid=ZbWKwL",
       "https://www.instagram.com/alnujoom_almasiya?igsh=Z3duaThqemhtZXpr&utm_source=qr",
       "https://youtube.com/@alnujoomalmasiya?si=NJz3MMf4d65aRUhV",
-      "https://vk.com/id871743840",
     ],
   };
 

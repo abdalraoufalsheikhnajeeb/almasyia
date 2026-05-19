@@ -36,12 +36,6 @@ const socialLinks: LinkProps[] = [
     src: "/images/email.svg",
     alt: "Email",
   },
-  {
-    title: "VK",
-    href: "https://vk.com/id871743840",
-    src: "/images/vk.svg",
-    alt: "VK",
-  },
 ];
 
 const SocialLink = ({ title, href, src, alt }: LinkProps) => (
