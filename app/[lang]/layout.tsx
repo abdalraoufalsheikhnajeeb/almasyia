@@ -204,11 +204,23 @@ export default async function RootLayout({
       ? "Перейти к основному содержимому"
       : "Skip to main content";
 
+  // Inline theme-init script: runs synchronously BEFORE first paint so the
+  // user never sees a flash of the wrong theme. Reads the user's saved
+  // preference from localStorage, otherwise follows the OS setting.
+  const themeInitScript = `(function(){try{var s=localStorage.getItem('theme');var m=window.matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(!s&&m)||s==='system'&&m){document.documentElement.classList.add('dark')}}catch(e){}})();`;
+
   return (
-    <html lang={lang}>
+    <html lang={lang} suppressHydrationWarning>
+      <head>
+        <script
+          // Runs before React hydrates — prevents flash of wrong theme
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{ __html: themeInitScript }}
+        />
+      </head>
       <body
         dir={isArabic ? "rtl" : "ltr"}
-        className={`overflow-x-hidden text-litePrimary bg-white ${tajawal.className}`}
+        className={`overflow-x-hidden ${tajawal.className}`}
       >
         <script
           type="application/ld+json"

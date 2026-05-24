@@ -6,13 +6,29 @@
    Design tokens
    ============================================ */
 :root {
+  /* Brand colors — kept consistent across themes */
   --color-primary: #244b6b;
   --color-primary-lite: #316792;
   --color-accent: #d3b167;
   --color-accent-soft: #e6c98f;
-  --color-bg: #f8fafc;
+
+  /* Themed surfaces (overridden by .dark) */
+  --color-bg: #f5f9fc;
   --color-surface: #ffffff;
+  --color-surface-2: rgba(255, 255, 255, 0.9);
+  --color-text: #244b6b;
+  --color-text-muted: #475569; /* slate-600 */
+  --color-text-strong: #0f172a; /* slate-900 */
   --color-border: rgba(36, 75, 107, 0.08);
+
+  /* Glass tints — light theme */
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-bg-strong: rgba(255, 255, 255, 0.95);
+  --glass-bg-soft-from: rgba(255, 255, 255, 0.8);
+  --glass-bg-soft-to: rgba(255, 255, 255, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-border-strong: rgba(255, 255, 255, 0.7);
+
   --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04),
     0 1px 3px rgba(15, 23, 42, 0.06);
   --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.06),
@@ -30,37 +46,73 @@
 }
 
 /* ============================================
+   Dark theme overrides
+   Toggled by adding .dark class to <html>
+   ============================================ */
+html.dark {
+  /* Brand stays but text/surfaces invert */
+  --color-bg: #0b1220;          /* deep navy background */
+  --color-surface: #111a2c;     /* main card surface */
+  --color-surface-2: rgba(17, 26, 44, 0.9);
+  --color-text: #e2e8f0;        /* slate-200 */
+  --color-text-muted: #94a3b8;  /* slate-400 */
+  --color-text-strong: #f8fafc; /* slate-50 */
+  --color-border: rgba(148, 163, 184, 0.14);
+
+  /* Glass tints — dark theme: tinted navy panels */
+  --glass-bg: rgba(17, 26, 44, 0.55);
+  --glass-bg-strong: rgba(17, 26, 44, 0.92);
+  --glass-bg-soft-from: rgba(17, 26, 44, 0.85);
+  --glass-bg-soft-to: rgba(17, 26, 44, 0.55);
+  --glass-border: rgba(148, 163, 184, 0.18);
+  --glass-border-strong: rgba(148, 163, 184, 0.28);
+
+  /* Adjusted shadow palette so shadows still register on dark bg */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.35),
+    0 2px 4px -2px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.45),
+    0 4px 6px -4px rgba(0, 0, 0, 0.35);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5),
+    0 8px 10px -6px rgba(0, 0, 0, 0.4);
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.45),
+    0 2px 8px rgba(0, 0, 0, 0.35);
+
+  color-scheme: dark;
+}
+
+/* ============================================
    Glassmorphism
    ============================================ */
 
 /* Light glass — for use over images, gradients, or colored backgrounds */
 .glass {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: var(--glass-bg);
   backdrop-filter: blur(16px) saturate(160%);
   -webkit-backdrop-filter: blur(16px) saturate(160%);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--glass-border);
   box-shadow: var(--shadow-glass);
 }
 
 /* Stronger light glass — for floating UI elements (opaque enough for readability) */
 .glass-strong {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: var(--glass-bg-strong);
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--glass-border-strong);
   box-shadow: var(--shadow-glass);
 }
 
 /* Fallback: when backdrop-filter is not supported, increase opacity */
 @supports not (backdrop-filter: blur(1px)) {
   .glass-strong {
-    background-color: rgba(255, 255, 255, 0.98);
+    background-color: var(--color-surface);
   }
   .glass {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: var(--color-surface);
   }
   .glass-soft {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: var(--color-surface);
   }
 }
 
@@ -68,12 +120,12 @@
 .glass-soft {
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.8) 0%,
-    rgba(255, 255, 255, 0.55) 100%
+    var(--glass-bg-soft-from) 0%,
+    var(--glass-bg-soft-to) 100%
   );
   backdrop-filter: blur(12px) saturate(140%);
   -webkit-backdrop-filter: blur(12px) saturate(140%);
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--glass-border-strong);
   box-shadow: 0 4px 24px rgba(36, 75, 107, 0.06);
 }
 
@@ -176,20 +228,22 @@
 
 /* Elegant card variant — glass-enhanced */
 .card-elegant {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: var(--color-surface-2);
   backdrop-filter: blur(10px) saturate(140%);
   -webkit-backdrop-filter: blur(10px) saturate(140%);
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--glass-border-strong);
   box-shadow: var(--shadow-sm);
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms ease, border-color 250ms ease,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-elegant:hover {
   box-shadow: var(--shadow-xl);
   transform: translateY(-2px);
-  border-color: rgba(36, 75, 107, 0.12);
-  background-color: rgba(255, 255, 255, 0.95);
+  border-color: var(--color-border);
+  background-color: var(--color-surface);
 }
 
 /* Refined section heading with accent underline */
@@ -330,25 +384,31 @@
   width: 100%;
   padding: 0.625rem 0.875rem;
   border-radius: var(--radius-md);
-  border: 1px solid #e2e8f0;
-  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface-2);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  color: #0f172a;
+  color: var(--color-text-strong);
   font-size: 0.95rem;
-  transition: all 200ms ease;
+  transition: background-color 200ms ease, border-color 200ms ease,
+    box-shadow 200ms ease;
   outline: none;
 }
 
 .input-elegant:hover {
-  border-color: #cbd5e1;
-  background-color: rgba(255, 255, 255, 0.95);
+  border-color: var(--color-text-muted);
+  background-color: var(--color-surface);
 }
 
 .input-elegant:focus {
   border-color: var(--color-primary-lite);
-  background-color: #fff;
-  box-shadow: 0 0 0 3px rgba(49, 103, 146, 0.12);
+  background-color: var(--color-surface);
+  box-shadow: 0 0 0 3px rgba(49, 103, 146, 0.2);
+}
+
+/* Date picker icon — invert in dark mode for visibility */
+html.dark .input-elegant::-webkit-calendar-picker-indicator {
+  filter: invert(0.85);
 }
 
 /* Floating action button base (legacy) */
@@ -653,12 +713,12 @@ html {
 
 body {
   font-family: "Tajawal", sans-serif;
-  color: var(--color-primary);
+  color: var(--color-text);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Ambient background to make glass effects visible everywhere */
-  background-color: #f5f9fc;
+  /* Ambient background — driven by tokens, animates between themes */
+  background-color: var(--color-bg);
   background-image:
     radial-gradient(
       circle at 0% 0%,
@@ -676,6 +736,27 @@ body {
       transparent 35%
     );
   background-attachment: fixed;
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+html.dark body {
+  /* Stronger ambient glow on dark to keep depth */
+  background-image:
+    radial-gradient(
+      circle at 0% 0%,
+      rgba(49, 103, 146, 0.18) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(211, 177, 103, 0.1) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(103, 167, 218, 0.12) 0%,
+      transparent 40%
+    );
 }
 
 /* Refined scrollbar */
@@ -700,9 +781,20 @@ body::-webkit-scrollbar-thumb:hover {
   border: 2px solid transparent;
 }
 
+html.dark body::-webkit-scrollbar-thumb {
+  background-color: rgba(148, 163, 184, 0.35);
+}
+html.dark body::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(148, 163, 184, 0.55);
+}
+
 body {
   scrollbar-width: thin;
   scrollbar-color: rgba(49, 103, 146, 0.35) transparent;
+}
+
+html.dark body {
+  scrollbar-color: rgba(148, 163, 184, 0.35) transparent;
 }
 
 /* Force Latin numerals on form controls across locales */
@@ -725,3 +817,152 @@ input[type="number"] {
   outline-offset: 2px;
   border-radius: 4px;
 }
+
+/* ============================================
+   Dark theme — centralized component overrides
+   These reskin common utility-class patterns so we
+   don't need `dark:` variants on every element.
+   ============================================ */
+html.dark {
+  /* Body — already handled via vars, but enforce smooth transitions */
+}
+
+/* Pure white surfaces → dark surface */
+html.dark .bg-white,
+html.dark .bg-slate-50,
+html.dark .bg-slate-100 {
+  background-color: var(--color-surface) !important;
+}
+
+html.dark .bg-white\/85,
+html.dark .bg-white\/80,
+html.dark .bg-white\/70,
+html.dark .bg-white\/60 {
+  background-color: rgba(17, 26, 44, 0.85) !important;
+}
+
+html.dark .bg-white\/50,
+html.dark .bg-white\/40,
+html.dark .bg-white\/30 {
+  background-color: rgba(17, 26, 44, 0.55) !important;
+}
+
+html.dark .bg-white\/20,
+html.dark .bg-white\/15,
+html.dark .bg-white\/10 {
+  background-color: rgba(148, 163, 184, 0.08) !important;
+}
+
+/* Subtle gradients → still readable on dark */
+html.dark .from-white\/60,
+html.dark .from-white\/70,
+html.dark .from-white\/80,
+html.dark .from-slate-50\/40,
+html.dark .from-slate-50\/80 {
+  --tw-gradient-from: rgba(17, 26, 44, 0.6) !important;
+}
+html.dark .to-slate-50\/40,
+html.dark .to-white,
+html.dark .to-slate-50 {
+  --tw-gradient-to: rgba(11, 18, 32, 0) !important;
+}
+html.dark .from-emerald-50\/80,
+html.dark .from-sky-50\/80,
+html.dark .from-amber-50\/80 {
+  --tw-gradient-from: rgba(17, 26, 44, 0.8) !important;
+}
+/* Generic gradient-to-white fallback used inside accent cards */
+html.dark .bg-gradient-to-br.from-white,
+html.dark .bg-gradient-to-br.to-white {
+  --tw-gradient-from: var(--color-surface) !important;
+  --tw-gradient-to: var(--color-surface) !important;
+}
+
+/* Slate text variants → light text in dark mode */
+html.dark .text-slate-900,
+html.dark .text-slate-800,
+html.dark .text-slate-700,
+html.dark .text-litePrimary {
+  color: var(--color-text-strong);
+}
+
+html.dark .text-slate-600,
+html.dark .text-slate-500 {
+  color: var(--color-text-muted);
+}
+
+html.dark .text-slate-400,
+html.dark .text-slate-300 {
+  color: #cbd5e1;
+}
+
+/* Primary brand text — keep accessible on dark */
+html.dark .text-primary {
+  color: #cfe1f5;
+}
+
+/* Borders on dark */
+html.dark .border-slate-200,
+html.dark .border-slate-200\/70,
+html.dark .border-slate-200\/60,
+html.dark .border-slate-300,
+html.dark .border-white\/60,
+html.dark .border-white\/50,
+html.dark .border-white\/40,
+html.dark .border-white\/30 {
+  border-color: var(--color-border) !important;
+}
+
+/* Ring colors on dark */
+html.dark .ring-white,
+html.dark .ring-white\/60,
+html.dark .ring-slate-200,
+html.dark .ring-slate-200\/60,
+html.dark .ring-black\/5 {
+  --tw-ring-color: var(--color-border) !important;
+}
+
+/* Soft accent backgrounds in cards — keep brand glow */
+html.dark .bg-emerald-50 {
+  background-color: rgba(16, 185, 129, 0.12) !important;
+}
+html.dark .bg-rose-50 {
+  background-color: rgba(244, 63, 94, 0.12) !important;
+}
+html.dark .bg-amber-50 {
+  background-color: rgba(245, 158, 11, 0.12) !important;
+}
+html.dark .bg-sky-50,
+html.dark .bg-sky-50\/80 {
+  background-color: rgba(14, 165, 233, 0.12) !important;
+}
+html.dark .bg-litePrimary\/10,
+html.dark .bg-litePrimary\/5 {
+  background-color: rgba(49, 103, 146, 0.18) !important;
+}
+
+/* Navbar — translucent dark */
+html.dark nav.fixed {
+  background-color: rgba(17, 26, 44, 0.85) !important;
+  border-bottom-color: var(--color-border) !important;
+}
+
+/* Footer */
+html.dark footer {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(17, 26, 44, 0.6),
+    rgba(11, 18, 32, 0.4)
+  );
+  border-top-color: var(--color-border);
+}
+
+/* Tables (airline info) — keep rows readable */
+html.dark table tr.border-b {
+  border-bottom-color: var(--color-border) !important;
+}
+html.dark .text-blue-500 {
+  color: #93c5fd;
+}
+
+/* Date input fix already covered above */

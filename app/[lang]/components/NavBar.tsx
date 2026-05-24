@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import LocaleSwitcher from "./locale-switcher";
+import ThemeToggle from "./ThemeToggle";
 import { Locale } from "../../../i18n-config";
 
 type NavLabels = {
@@ -123,8 +124,9 @@ const Navbar = ({ lang, labels }: { lang: Locale; labels: NavLabels }) => {
           />
         </div>
 
-        {/* Right side: Locale (always visible) + Burger (mobile) */}
+        {/* Right side: Theme + Locale (always visible) + Burger (mobile) */}
         <div className="flex flex-shrink-0 items-center gap-2">
+          <ThemeToggle lang={lang} />
           <LocaleSwitcher />
 
           {/* Burger Button (Mobile) */}
