@@ -44,9 +44,11 @@ const AirIndia = async ({ params }: { params: Promise<{ lang: string }> }) => {
           <h2 className="text-2xl font-bold mb-2">History</h2>
           <p className="text-primary mb-4">
             Air India was founded by J. R. D. Tata in 1932 as Tata Airlines. It
-            became Air India in 1946 and was nationalized in 1953. The airline
-            has played a key role in connecting India to the world and has
-            undergone several transformations over the decades.
+            became Air India in 1946 and was nationalized by the Indian
+            government in 1953. In January 2022, Air India was re-acquired by
+            the Tata Group, returning the airline to its founding family after
+            nearly 70 years of state ownership. It joined Star Alliance in 2014
+            and continues a major fleet and brand modernisation programme.
           </p>
           <h2 className="text-2xl font-bold mb-2">Fleet</h2>
           <p className="text-primary mb-4">
@@ -182,9 +184,11 @@ const AirIndia = async ({ params }: { params: Promise<{ lang: string }> }) => {
           <h2 className="text-2xl font-bold mb-2">التاريخ</h2>
           <p className="text-primary mb-4">
             تأسست الخطوط الجوية الهندية من قبل ج. ر. د. تاتا في عام 1932 تحت اسم
-            طيران تاتا. أصبحت الخطوط الجوية الهندية في عام 1946 وتم تأميمها في
-            عام 1953. لعبت الشركة دوراً رئيسياً في ربط الهند بالعالم وخضعت
-            للعديد من التحولات على مر العقود.
+            طيران تاتا. أصبحت الخطوط الجوية الهندية في عام 1946 وتم تأميمها من
+            قبل الحكومة الهندية في عام 1953. وفي كانون الثاني/يناير 2022،
+            أعادت مجموعة تاتا الاستحواذ على الشركة لتعود إلى عائلتها المؤسِّسة
+            بعد قرابة 70 عاماً من الملكية الحكومية. وانضمت إلى تحالف ستار
+            أيلاينس عام 2014، وتنفذ حالياً برنامج تحديث واسع للأسطول والعلامة.
           </p>
           <h2 className="text-2xl font-bold mb-2">الأسطول</h2>
           <p className="text-primary mb-4">
@@ -312,9 +316,12 @@ const AirIndia = async ({ params }: { params: Promise<{ lang: string }> }) => {
           <h2 className="text-2xl font-bold mb-2">История</h2>
           <p className="text-primary mb-4">
             Air India была основана Дж. Р. Д. Тата в 1932 году как Tata
-            Airlines. В 1946 году она стала Air India и была национализирована в
-            1953 году. Авиакомпания сыграла ключевую роль в соединении Индии с
-            миром и за прошедшие десятилетия претерпела несколько трансформаций.
+            Airlines. В 1946 году она стала Air India и была национализирована
+            правительством Индии в 1953 году. В январе 2022 года Tata Group
+            вновь приобрела авиакомпанию, вернув её в семью основателя после
+            почти 70 лет государственной собственности. В 2014 году Air India
+            вступила в Star Alliance и сейчас реализует масштабную программу
+            обновления флота и бренда.
           </p>
           <h2 className="text-2xl font-bold mb-2">Флот</h2>
           <p className="text-primary mb-4">

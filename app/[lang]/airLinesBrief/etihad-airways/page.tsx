@@ -110,8 +110,8 @@ const EtihadAirways = async ({
           <h2 className="text-2xl font-bold mb-2">Contact Information</h2>
           <p className="text-primary">
             For more information or to book a flight, visit the official Etihad
-            Airways website or contact their customer service at +971 600 555
-            666. Follow them on social media for the latest updates and
+            Airways website or contact our office at +971 54 586 6066 for
+            booking assistance. Follow them on social media for the latest updates and
             promotions.
           </p>
           <h2 className="text-2xl font-bold mb-4">General Information</h2>
@@ -241,7 +241,7 @@ const EtihadAirways = async ({
           <h2 className="text-2xl font-bold mb-2">معلومات الاتصال</h2>
           <p className="text-primary">
             لمزيد من المعلومات أو لحجز رحلة، قم بزيارة الموقع الرسمي لطيران
-            الاتحاد أو اتصل بخدمة العملاء على الرقم +971 600 555 666. تابعهم على
+            الاتحاد أو تواصل مع مكتبنا للحجز على +971 54 586 6066. تابعهم على
             وسائل التواصل الاجتماعي للحصول على أحدث التحديثات والعروض.
           </p>
           <h2 className="text-2xl font-bold mb-4">معلومات عامة</h2>
@@ -384,7 +384,7 @@ const EtihadAirways = async ({
           <p className="text-primary">
             Для получения дополнительной информации или бронирования рейса
             посетите официальный сайт Etihad Airways или свяжитесь с их службой
-            поддержки клиентов по телефону +971 600 555 666. Следите за ними в
+            нашим офисом для бронирования по телефону +971 54 586 6066. Следите за ними в
             социальных сетях, чтобы получать последние обновления и акции.
           </p>
           <h2 className="text-2xl font-bold mb-4">Общая информация</h2>

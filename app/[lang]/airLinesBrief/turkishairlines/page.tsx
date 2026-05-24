@@ -110,8 +110,8 @@ const TurkishAirlines = async ({
           <h2 className="text-2xl font-bold mb-2">Contact Information</h2>
           <p className="text-primary">
             For more information or to book a flight, visit the official Turkish
-            Airlines website or contact their customer service at +90 212 444
-            0849. Follow them on social media for the latest updates and
+            Airlines website or contact our office at +971 54 586 6066 for
+            booking assistance. Follow them on social media for the latest updates and
             promotions.
           </p>
 
@@ -373,7 +373,7 @@ const TurkishAirlines = async ({
           <p className="text-primary">
             Для получения дополнительной информации или бронирования рейса
             посетите официальный сайт Turkish Airlines или свяжитесь с их
-            службой поддержки клиентов по телефону +90 212 444 0849. Следите за
+            нашим офисом для бронирования по телефону +971 54 586 6066. Следите за
             ними в социальных сетях, чтобы получать последние обновления и
             акции.
           </p>

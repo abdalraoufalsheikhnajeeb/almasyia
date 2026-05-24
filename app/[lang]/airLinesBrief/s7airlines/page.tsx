@@ -147,7 +147,7 @@ const S7Airlines = async ({
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Alliances</td>
-                  <td className="py-2">Oneworld</td>
+                  <td className="py-2">Suspended from Oneworld (April 2022)</td>
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">
@@ -255,7 +255,7 @@ const S7Airlines = async ({
           <h2 className="text-2xl font-bold mb-2">معلومات الاتصال</h2>
           <p className="text-primary">
             لمزيد من المعلومات أو لحجز رحلة، قم بزيارة الموقع الرسمي لخطوط إس 7
-            الجوية أو اتصل بخدمة العملاء على الرقم +7 495 783 0707. تابعهم على
+            الجوية أو تواصل مع مكتبنا للحجز على +971 54 586 6066. تابعهم على
             وسائل التواصل الاجتماعي للحصول على أحدث التحديثات والعروض.
           </p>
 
@@ -293,7 +293,7 @@ const S7Airlines = async ({
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">التحالفات</td>
-                  <td className="py-2">تحالف عالم واحد</td>
+                  <td className="py-2">معلّقة من تحالف عالم واحد (نيسان 2022)</td>
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">رقم خدمة العملاء</td>
@@ -412,7 +412,7 @@ const S7Airlines = async ({
           <p className="text-primary">
             Для получения дополнительной информации или бронирования рейса
             посетите официальный сайт авиакомпании S7 или свяжитесь с их службой
-            поддержки клиентов по телефону +7 495 783 0707. Следите за ними в
+            нашим офисом для бронирования по телефону +971 54 586 6066. Следите за ними в
             социальных сетях, чтобы получать последние обновления и акции.
           </p>
 
@@ -456,7 +456,7 @@ const S7Airlines = async ({
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">Альянсы</td>
-                  <td className="py-2">Oneworld</td>
+                  <td className="py-2">Приостановлено в Oneworld (апрель 2022)</td>
                 </tr>
                 <tr className="border-b">
                   <td className="font-bold py-2 pe-8">

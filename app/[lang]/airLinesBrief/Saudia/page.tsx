@@ -108,7 +108,7 @@ const SaudiaAir = async ({ params }: { params: Promise<{ lang: string }> }) => {
           <h2 className="text-2xl font-bold mb-2">Contact Information</h2>
           <p className="text-primary">
             For more information or to book a flight, visit the official Saudia
-            website or contact their customer service at+ 971545866066. Follow
+            website or contact their customer service at+971545866066. Follow
             them on social media for the latest updates and promotions.
           </p>
 
@@ -159,10 +159,10 @@ const SaudiaAir = async ({ params }: { params: Promise<{ lang: string }> }) => {
                   <td className="py-2">
                     <a
                       target="_blank"
-                      href="tel:971545866066"
+                      href="tel:+971545866066"
                       className="text-blue-500"
                     >
-                      + 971545866066
+                      +971545866066
                     </a>
                   </td>
                 </tr>
@@ -262,7 +262,7 @@ const SaudiaAir = async ({ params }: { params: Promise<{ lang: string }> }) => {
           <h2 className="text-2xl font-bold mb-2">معلومات الاتصال</h2>
           <p className="text-primary">
             لمزيد من المعلومات أو لحجز رحلة، قم بزيارة الموقع الرسمي للسعودية أو
-            اتصل بخدمة العملاء على الرقم+ 971545866066. تابعهم على وسائل التواصل
+            اتصل بخدمة العملاء على الرقم+971545866066. تابعهم على وسائل التواصل
             الاجتماعي للحصول على أحدث التحديثات والعروض.
           </p>
 
@@ -309,10 +309,10 @@ const SaudiaAir = async ({ params }: { params: Promise<{ lang: string }> }) => {
                   <td className="py-2">
                     <a
                       target="_blank"
-                      href="tel:971545866066"
+                      href="tel:+971545866066"
                       className="text-blue-500"
                     >
-                      + 971545866066
+                      +971545866066
                     </a>
                   </td>
                 </tr>
@@ -424,7 +424,7 @@ const SaudiaAir = async ({ params }: { params: Promise<{ lang: string }> }) => {
           <p className="text-primary">
             Для получения дополнительной информации или бронирования рейса
             посетите официальный сайт Saudia или свяжитесь с их службой
-            поддержки клиентов по телефону+ 971545866066. Следите за ними в
+            поддержки клиентов по телефону+971545866066. Следите за ними в
             социальных сетях, чтобы получать последние обновления и акции.
           </p>
 
@@ -479,10 +479,10 @@ const SaudiaAir = async ({ params }: { params: Promise<{ lang: string }> }) => {
                   <td className="py-2">
                     <a
                       target="_blank"
-                      href="tel:971545866066"
+                      href="tel:+971545866066"
                       className="text-blue-500"
                     >
-                      + 971545866066
+                      +971545866066
                     </a>
                   </td>
                 </tr>
