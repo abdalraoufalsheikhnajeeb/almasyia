@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Tajawal } from "next/font/google";
 import { i18n, Locale } from "../../i18n-config";
 import { getDictionary } from "../../get-dictionary";
+import BookingFab from "./components/BookingFab";
 import Footer from "./components/Footer";
 import Navbar from "./components/NavBar";
 import PhoneCall from "./components/PhoneCall";
@@ -218,6 +219,7 @@ export default async function RootLayout({
         />
         <Whatsapp />
         <PhoneCall />
+        <BookingFab lang={lang} label={dictionary.heroCtaBook} />
         <div className="pt-20 min-h-[60vh]">{children}</div>
         <Footer lang={lang} />
       </body>

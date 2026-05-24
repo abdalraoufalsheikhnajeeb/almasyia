@@ -43,11 +43,11 @@ export default async function page({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <h1 className="sr-only">{SERVICES_SEO.airLines.title[lang]}</h1>
-      <Slider dic={dic} title={dic.agents} data={agents} />
-      <Slider dic={dic} title={dic.OurPartners} data={partners} />
-      <div className="mt-6 w-full flex justify-center px-4">
+      <div className="w-full flex justify-center px-4">
         <FlightBookingForm dic={dic} />
       </div>
+      <Slider dic={dic} title={dic.agents} data={agents} />
+      <Slider dic={dic} title={dic.OurPartners} data={partners} />
     </main>
   );
 }

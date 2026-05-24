@@ -255,7 +255,7 @@ export default function Testimonials({ lang }: { lang: Locale }) {
               </div>
 
               <p
-                dir={lang === "ar" ? "rtl" : review.dir}
+                dir={lang === "ar" ? "rtl" : "ltr"}
                 className="text-sm leading-relaxed text-slate-700"
               >
                 &ldquo;{review.text[lang] ?? review.text.en}&rdquo;
