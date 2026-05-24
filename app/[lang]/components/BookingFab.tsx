@@ -12,8 +12,8 @@ export default function BookingFab({
   label: string;
 }) {
   const pathname = usePathname();
-  // Home page is exactly "/{lang}" — no further segments
   const isHomePage = pathname === `/${lang}` || pathname === `/${lang}/`;
+  const isAirlinesPage = pathname === `/${lang}/Services/airLines`;
 
   const [pastHero, setPastHero] = useState(false);
 
@@ -27,8 +27,8 @@ export default function BookingFab({
     return () => window.removeEventListener("scroll", onScroll);
   }, [isHomePage]);
 
-  // Visible always on non-home pages; on home page only after scrolling past hero
-  const visible = !isHomePage || pastHero;
+  // Hide on the airlines page itself; on home only after hero; everywhere else always show
+  const visible = !isAirlinesPage && (!isHomePage || pastHero);
 
   const isRTL = lang === "ar";
 
