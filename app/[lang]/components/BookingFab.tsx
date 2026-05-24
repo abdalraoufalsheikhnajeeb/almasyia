@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function BookingFab({
@@ -10,16 +11,24 @@ export default function BookingFab({
   lang: string;
   label: string;
 }) {
-  const [visible, setVisible] = useState(false);
+  const pathname = usePathname();
+  // Home page is exactly "/{lang}" — no further segments
+  const isHomePage = pathname === `/${lang}` || pathname === `/${lang}/`;
+
+  const [pastHero, setPastHero] = useState(false);
 
   useEffect(() => {
+    if (!isHomePage) return;
     const onScroll = () => {
-      setVisible(window.scrollY > window.innerHeight * 0.6);
+      setPastHero(window.scrollY > window.innerHeight * 0.6);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [isHomePage]);
+
+  // Visible always on non-home pages; on home page only after scrolling past hero
+  const visible = !isHomePage || pastHero;
 
   const isRTL = lang === "ar";
 
