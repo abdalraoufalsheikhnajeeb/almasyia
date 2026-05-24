@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Locale } from "../../../../i18n-config";
+import { getDictionary } from "../../../../get-dictionary";
 import AnTitle from "../../components/AnTitle";
 import { timeZones } from "../../data";
 import { buildPageMetadata, SITE_URL } from "../../seo";
@@ -27,6 +28,7 @@ export default async function WorldClock({
 }) {
   const { lang } = await params;
   const locale = lang as Locale;
+  const dic = await getDictionary(locale);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -44,7 +46,7 @@ export default async function WorldClock({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <h1 className="sr-only">{PAGES_SEO.worldClock.title[locale]}</h1>
-      <AnTitle title="World Clock" />
+      <AnTitle title={dic.worldClock} />
       <section className="mt-6 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
         {timeZones.map((zone) => (
           <article

@@ -27,6 +27,7 @@ const Locations = async ({ params: { lang } }: LocationsProps) => {
     phoneNumber: "+971 54 586 6066",
     addClass: "uaeLocation",
     whatsLink: "https://wa.me/971545866066",
+    findUsLabel: dictionary.FindUs,
   };
 
   const syriaLocation = {
@@ -47,6 +48,7 @@ const Locations = async ({ params: { lang } }: LocationsProps) => {
     phoneNumber: "+963 950 026 610",
     addClass: "sarLocation",
     whatsLink: "https://wa.me/963950026610",
+    findUsLabel: dictionary.FindUs,
   };
 
   return (

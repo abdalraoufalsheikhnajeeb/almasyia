@@ -38,8 +38,7 @@ export default function Whatsapp() {
             className="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-white/50 transition-colors"
           >
             <Image
-              priority
-              quality={1}
+              quality={75}
               width={28}
               height={28}
               className="rounded-full object-cover"
@@ -58,8 +57,7 @@ export default function Whatsapp() {
             className="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-white/50 transition-colors"
           >
             <Image
-              priority
-              quality={1}
+              quality={75}
               width={28}
               height={28}
               className="rounded-full object-cover"

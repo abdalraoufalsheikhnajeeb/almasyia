@@ -75,8 +75,7 @@ export default function LocaleSwitcher({
                   }`}
                 >
                   <Image
-                    priority
-                    quality={1}
+                    quality={75}
                     width={24}
                     height={24}
                     className="rounded-full object-cover ring-1 ring-white shadow-sm"
@@ -104,8 +103,7 @@ export default function LocaleSwitcher({
         aria-label="Change language"
       >
         <Image
-          priority
-          quality={1}
+          quality={75}
           width={20}
           height={20}
           className="rounded-full object-cover"
@@ -152,8 +150,7 @@ export default function LocaleSwitcher({
                   }`}
                 >
                   <Image
-                    priority
-                    quality={1}
+                    quality={75}
                     width={22}
                     height={22}
                     className="rounded-full object-cover"

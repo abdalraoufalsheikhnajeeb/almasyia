@@ -534,6 +534,18 @@
   .fab-badge {
     animation: none !important;
   }
+  html {
+    scroll-behavior: auto;
+  }
+  /* Disable all CSS animations and transitions site-wide for users who request it */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 @media (min-width: 1024px) {

@@ -71,7 +71,7 @@ export default async function ContactPage({
         },
         {
           "@type": "ContactPoint",
-          telephone: "+96350026610",
+          telephone: "+963950026610",
           contactType: "customer support",
           areaServed: ["Damascus", "Syria"],
         },

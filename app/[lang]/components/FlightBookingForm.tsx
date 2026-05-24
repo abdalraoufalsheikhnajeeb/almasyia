@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { type getDictionary } from "../../../get-dictionary";
 
 interface FlightBookingFormProps {
@@ -15,33 +15,65 @@ const tr = (
   ru: string
 ): string => (lang === "ar" ? ar : lang === "ru" ? ru : en);
 
+// Pure date helpers that produce stable strings (no timezone surprises)
+const todayISO = () => {
+  const d = new Date();
+  // Normalize to local YYYY-MM-DD (avoid UTC drift from toISOString)
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+};
+
 const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
   const lang = dic.currLang as Lang;
+
+  // Use empty string on first render to avoid SSR/client mismatch from new Date()
   const [formData, setFormData] = useState({
     departure: "",
     arrival: "",
-    outboundDate: new Date(),
-    returnDate: new Date(),
-    numberOfAdults: "",
+    outboundDate: "",
+    returnDate: "",
+    numberOfAdults: "1",
     numberOfChildren: "",
     numberOfInfants: "",
     travelClass: "economy",
   });
 
-  const formatDate = (date: Date) => date.toISOString().split("T")[0];
+  // Compute today only on client after mount — avoids SSR/client mismatch from new Date().
+  // Intentional mount-only state initialization; the brief cascade is desired.
+  const [today, setToday] = useState("");
+  useEffect(() => {
+    const t = todayISO();
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setToday(t);
+    setFormData((prev) => ({
+      ...prev,
+      outboundDate: prev.outboundDate || t,
+      returnDate: prev.returnDate || t,
+    }));
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    const { name, value, valueAsDate } = e.target as HTMLInputElement &
-      HTMLSelectElement & { valueAsDate: Date | null };
+    const { name, value } = e.target;
 
-    if (name === "outboundDate" || name === "returnDate") {
-      setFormData((prev) => ({ ...prev, [name]: valueAsDate || new Date() }));
-    } else {
-      setFormData((prev) => ({ ...prev, [name]: value }));
-    }
+    setFormData((prev) => {
+      const next = { ...prev, [name]: value };
+      // If outbound moves past return, push return forward to match
+      if (name === "outboundDate" && next.returnDate && value > next.returnDate) {
+        next.returnDate = value;
+      }
+      return next;
+    });
   };
+
+  // Min for return date is the outbound date (or today if outbound not set)
+  const returnMin = useMemo(
+    () => formData.outboundDate || today,
+    [formData.outboundDate, today]
+  );
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -49,7 +81,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
       formData.departure
     }\n\n- *Arrival Area*: ${
       formData.arrival
-    }\n\n- *Outbound Date*: ${formatDate(formData.outboundDate)}\n\n- *Return Date*: ${formatDate(formData.returnDate)}\n\n- *Number of Adults*: ${
+    }\n\n- *Outbound Date*: ${formData.outboundDate}\n\n- *Return Date*: ${formData.returnDate}\n\n- *Number of Adults*: ${
       formData.numberOfAdults
     }\n\n- *Number of Children*: ${
       formData.numberOfChildren || "None"
@@ -82,6 +114,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             value={formData.departure}
             onChange={handleChange}
             className="input-elegant"
+            autoComplete="off"
             required
           />
         </div>
@@ -98,6 +131,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             value={formData.arrival}
             onChange={handleChange}
             className="input-elegant"
+            autoComplete="off"
             required
           />
         </div>
@@ -111,8 +145,8 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             type="date"
             id="outboundDate"
             name="outboundDate"
-            min={new Date().toISOString().split("T")[0]}
-            value={formatDate(formData.outboundDate)}
+            min={today}
+            value={formData.outboundDate}
             onChange={handleChange}
             className="input-elegant"
             lang="en"
@@ -131,8 +165,8 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             type="date"
             id="returnDate"
             name="returnDate"
-            min={new Date().toISOString().split("T")[0]}
-            value={formatDate(formData.returnDate)}
+            min={returnMin}
+            value={formData.returnDate}
             onChange={handleChange}
             className="input-elegant"
             lang="en"
@@ -154,6 +188,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             value={formData.numberOfAdults}
             onChange={handleChange}
             min={1}
+            max={9}
             className="input-elegant"
             lang="en"
             inputMode="numeric"
@@ -174,6 +209,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             value={formData.numberOfChildren}
             onChange={handleChange}
             min={0}
+            max={9}
             className="input-elegant"
             lang="en"
             inputMode="numeric"
@@ -193,6 +229,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             value={formData.numberOfInfants}
             onChange={handleChange}
             min={0}
+            max={9}
             className="input-elegant"
             lang="en"
             inputMode="numeric"

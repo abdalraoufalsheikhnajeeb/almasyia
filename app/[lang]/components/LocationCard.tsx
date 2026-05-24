@@ -15,6 +15,7 @@ interface LocationCardProps {
   phoneNumber: string;
   addClass: string;
   whatsLink: string;
+  findUsLabel?: string;
 }
 
 const ArrowButton = ({
@@ -82,6 +83,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
   locationDetails,
   phoneNumber,
   whatsLink,
+  findUsLabel = "Find Us on Google Maps",
 }) => {
   const autoplay = useMemo(() => Autoplay({ delay: 3000 }), []);
   const [emblaRef, emblaApi] = useEmblaCarousel(
@@ -99,10 +101,20 @@ const LocationCard: React.FC<LocationCardProps> = ({
 
   useEffect(() => {
     if (!emblaApi) return;
-    emblaApi.on("pointerDown", () => emblaApi.plugins().autoplay.stop());
-    emblaApi.on("pointerUp", () => emblaApi.plugins().autoplay.play());
+    const stop = () => emblaApi.plugins().autoplay?.stop();
+    const play = () => emblaApi.plugins().autoplay?.play();
+
+    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (motionQuery.matches) stop();
+    const onMotionChange = (e: MediaQueryListEvent) => (e.matches ? stop() : play());
+    motionQuery.addEventListener("change", onMotionChange);
+
+    emblaApi.on("pointerDown", stop);
+    emblaApi.on("pointerUp", play);
     return () => {
-      if (emblaApi) emblaApi.destroy();
+      emblaApi.off("pointerDown", stop);
+      emblaApi.off("pointerUp", play);
+      motionQuery.removeEventListener("change", onMotionChange);
     };
   }, [emblaApi]);
 
@@ -166,7 +178,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
             className="btn-primary mt-2 justify-center"
           >
             <IconMapPin className="h-5 w-5" />
-            Find Us on Google Maps
+            {findUsLabel}
           </Link>
         </div>
 
