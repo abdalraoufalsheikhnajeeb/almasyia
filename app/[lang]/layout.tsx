@@ -197,6 +197,13 @@ export default async function RootLayout({
     ],
   };
 
+  const skipLabel =
+    lang === "ar"
+      ? "تخطي إلى المحتوى الرئيسي"
+      : lang === "ru"
+      ? "Перейти к основному содержимому"
+      : "Skip to main content";
+
   return (
     <html lang={lang}>
       <body
@@ -208,6 +215,13 @@ export default async function RootLayout({
           suppressHydrationWarning
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        {/* Skip link — visible only when focused via keyboard */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:start-3 focus:z-[100] focus:rounded-lg focus:bg-primary focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white focus:shadow-xl focus:outline-none focus:ring-2 focus:ring-accent"
+        >
+          {skipLabel}
+        </a>
         <Navbar
           lang={lang}
           labels={{
@@ -220,7 +234,7 @@ export default async function RootLayout({
         <Whatsapp />
         <PhoneCall />
         <BookingFab lang={lang} label={dictionary.heroCtaBook} />
-        <div className="pt-20 min-h-[60vh]">{children}</div>
+        <div id="main-content" className="pt-20 min-h-[60vh]">{children}</div>
         <Footer lang={lang} />
       </body>
     </html>

@@ -1,11 +1,9 @@
 "use client";
 import { useState } from "react";
 import { type getDictionary } from "../../../get-dictionary";
+import { tr } from "./i18n-util";
 
 type Lang = "ar" | "en" | "ru";
-
-const tr = (lang: Lang, ar: string, en: string, ru: string): string =>
-  lang === "ar" ? ar : lang === "ru" ? ru : en;
 
 export default function VisaForm({
   dic,

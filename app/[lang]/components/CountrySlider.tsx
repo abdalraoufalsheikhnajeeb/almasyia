@@ -33,10 +33,20 @@ const CountrySlider = ({ dic, data, title, subtitle }: CountrySliderProps) => {
 
   useEffect(() => {
     if (!emblaApi) return;
-    emblaApi.on("pointerDown", () => emblaApi.plugins().autoplay.stop());
-    emblaApi.on("pointerUp", () => emblaApi.plugins().autoplay.play());
+    const stop = () => emblaApi.plugins().autoplay?.stop();
+    const play = () => emblaApi.plugins().autoplay?.play();
+
+    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (motionQuery.matches) stop();
+    const onMotionChange = (e: MediaQueryListEvent) => (e.matches ? stop() : play());
+    motionQuery.addEventListener("change", onMotionChange);
+
+    emblaApi.on("pointerDown", stop);
+    emblaApi.on("pointerUp", play);
     return () => {
-      if (emblaApi) emblaApi.destroy();
+      emblaApi.off("pointerDown", stop);
+      emblaApi.off("pointerUp", play);
+      motionQuery.removeEventListener("change", onMotionChange);
     };
   }, [emblaApi]);
 

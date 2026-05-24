@@ -1,5 +1,6 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { todayISO, tr } from "./i18n-util";
 
 interface TravelInsuranceFormProps {
   lang: string;
@@ -7,36 +8,50 @@ interface TravelInsuranceFormProps {
 
 type Lang = "ar" | "en" | "ru";
 
-const tr = (lang: Lang, ar: string, en: string, ru: string): string =>
-  lang === "ar" ? ar : lang === "ru" ? ru : en;
-
 const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
   const l = lang as Lang;
   const [formData, setFormData] = useState({
     destination: "",
-    insuranceStartDate: new Date(),
-    insuranceEndDate: new Date(),
-    numberOfPeople: "",
+    insuranceStartDate: "",
+    insuranceEndDate: "",
+    numberOfPeople: "1",
     tripType: "oneTrip",
     otherCountry: "",
   });
-  const formatDate = (date: Date) => date.toISOString().split("T")[0];
+
+  const [today, setToday] = useState("");
+  useEffect(() => {
+    const t = todayISO();
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setToday(t);
+    setFormData((prev) => ({
+      ...prev,
+      insuranceStartDate: prev.insuranceStartDate || t,
+      insuranceEndDate: prev.insuranceEndDate || t,
+    }));
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    if (e.target instanceof HTMLInputElement) {
-      const { name, value, valueAsDate } = e.target;
-      if (name === "insuranceStartDate" || name === "insuranceEndDate") {
-        setFormData((prev) => ({ ...prev, [name]: valueAsDate ?? new Date() }));
-      } else {
-        setFormData((prev) => ({ ...prev, [name]: value }));
+    const { name, value } = e.target;
+    setFormData((prev) => {
+      const next = { ...prev, [name]: value };
+      if (
+        name === "insuranceStartDate" &&
+        next.insuranceEndDate &&
+        value > next.insuranceEndDate
+      ) {
+        next.insuranceEndDate = value;
       }
-    } else {
-      const { name, value } = e.target;
-      setFormData((prev) => ({ ...prev, [name]: value }));
-    }
+      return next;
+    });
   };
+
+  const endMin = useMemo(
+    () => formData.insuranceStartDate || today,
+    [formData.insuranceStartDate, today]
+  );
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -45,7 +60,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
         ? formData.otherCountry
         : formData.destination;
 
-    const message = `*Travel Insurance: 🏖️*\n\n- *Destination*: ${finalDestination} 🌍\n\n- *Insurance Starting Date*: ${formatDate(formData.insuranceStartDate)} 📅\n\n- *Insurance Ending Date*: ${formatDate(formData.insuranceEndDate)} 📅\n\n- *Number of People*: ${
+    const message = `*Travel Insurance: 🏖️*\n\n- *Destination*: ${finalDestination} 🌍\n\n- *Insurance Starting Date*: ${formData.insuranceStartDate} 📅\n\n- *Insurance Ending Date*: ${formData.insuranceEndDate} 📅\n\n- *Number of People*: ${
       formData.numberOfPeople
     } 👥\n\n- *Trip Type*: ${
       formData.tripType === "oneTrip"
@@ -125,8 +140,8 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
           type="date"
           id="insuranceStartDate"
           name="insuranceStartDate"
-          min={new Date().toISOString().split("T")[0]}
-          value={formatDate(formData.insuranceStartDate)}
+          min={today}
+          value={formData.insuranceStartDate}
           onChange={handleChange}
           className="input-elegant"
           required
@@ -142,8 +157,8 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
           type="date"
           id="insuranceEndDate"
           name="insuranceEndDate"
-          min={new Date().toISOString().split("T")[0]}
-          value={formatDate(formData.insuranceEndDate)}
+          min={endMin}
+          value={formData.insuranceEndDate}
           onChange={handleChange}
           className="input-elegant"
           required
@@ -162,6 +177,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
           value={formData.numberOfPeople}
           onChange={handleChange}
           min={1}
+          max={20}
           className="input-elegant"
           lang="en"
           inputMode="numeric"

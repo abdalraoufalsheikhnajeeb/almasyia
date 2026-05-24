@@ -1,6 +1,7 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { CitiesByCountry, citiesByCountry } from "../data";
+import { todayISO, tr } from "./i18n-util";
 
 interface HotelReservationFormProps {
   lang: string;
@@ -8,41 +9,57 @@ interface HotelReservationFormProps {
 
 type Lang = "ar" | "en" | "ru";
 
-const tr = (lang: Lang, ar: string, en: string, ru: string): string =>
-  lang === "ar" ? ar : lang === "ru" ? ru : en;
-
 const HotelReservationForm: React.FC<HotelReservationFormProps> = ({ lang }) => {
   const l = lang as Lang;
   const [formData, setFormData] = useState({
     country: "",
     city: "",
-    arrivalDate: new Date(),
-    departureDate: new Date(),
-    numberOfPeople: "",
+    arrivalDate: "",
+    departureDate: "",
+    numberOfPeople: "1",
     numberOfChildren: "",
   });
   const [hasChildren, setHasChildren] = useState(false);
   const [cities, setCities] = useState<string[]>([]);
 
+  // Set today after mount to avoid SSR mismatch
+  const [today, setToday] = useState("");
+  useEffect(() => {
+    const t = todayISO();
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setToday(t);
+    setFormData((prev) => ({
+      ...prev,
+      arrivalDate: prev.arrivalDate || t,
+      departureDate: prev.departureDate || t,
+    }));
+  }, []);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     if (e.target instanceof HTMLInputElement) {
-      const { name, type, value, valueAsDate, checked } = e.target;
+      const { name, type, value, checked } = e.target;
       if (type === "checkbox") {
         setHasChildren(checked);
         return;
       }
       if (name === "arrivalDate" || name === "departureDate") {
-        setFormData((prev) => ({ ...prev, [name]: valueAsDate || new Date() }));
+        setFormData((prev) => {
+          const next = { ...prev, [name]: value };
+          // Push departure forward if arrival > departure
+          if (name === "arrivalDate" && next.departureDate && value > next.departureDate) {
+            next.departureDate = value;
+          }
+          return next;
+        });
         return;
       }
       setFormData((prev) => ({ ...prev, [name]: value }));
     } else {
       const { name, value } = e.target;
       if (name === "country") {
-        const selectedCountry =
-          citiesByCountry[value as keyof CitiesByCountry];
+        const selectedCountry = citiesByCountry[value as keyof CitiesByCountry];
         const newCities =
           selectedCountry?.[lang as keyof typeof selectedCountry] || [];
         setCities(newCities);
@@ -53,13 +70,20 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({ lang }) => 
     }
   };
 
+  const departureMin = useMemo(
+    () => formData.arrivalDate || today,
+    [formData.arrivalDate, today]
+  );
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const message = `*Hotel Reservation: 🏨*\n\n- *Country*: ${
       formData.country
     } 🌍\n\n- *City*: ${
       formData.city
-    } 🏙️\n\n- *Arrival Date*: ${formData.arrivalDate.toLocaleDateString()} 📅\n\n- *Departure Date*: ${formData.departureDate.toLocaleDateString()} 📅\n\n- *Number of People*: ${
+    } 🏙️\n\n- *Arrival Date*: ${formData.arrivalDate} 📅\n\n- *Departure Date*: ${
+      formData.departureDate
+    } 📅\n\n- *Number of People*: ${
       formData.numberOfPeople
     } 👥\n\n- *Number of Children*: ${
       hasChildren ? formData.numberOfChildren || "None" : "None"
@@ -116,6 +140,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({ lang }) => 
           onChange={handleChange}
           className="input-elegant"
           required
+          disabled={!formData.country}
         >
           <option value="">
             -- {tr(l, "اختر المدينة", "Select City", "Выберите город")} --
@@ -137,8 +162,8 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({ lang }) => 
           type="date"
           id="arrivalDate"
           name="arrivalDate"
-          min={new Date().toISOString().split("T")[0]}
-          value={formData.arrivalDate.toISOString().split("T")[0]}
+          min={today}
+          value={formData.arrivalDate}
           onChange={handleChange}
           className="input-elegant"
           required
@@ -154,8 +179,8 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({ lang }) => 
           type="date"
           id="departureDate"
           name="departureDate"
-          min={new Date().toISOString().split("T")[0]}
-          value={formData.departureDate.toISOString().split("T")[0]}
+          min={departureMin}
+          value={formData.departureDate}
           onChange={handleChange}
           className="input-elegant"
           required
@@ -174,6 +199,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({ lang }) => 
           value={formData.numberOfPeople}
           onChange={handleChange}
           min={1}
+          max={20}
           className="input-elegant"
           lang="en"
           inputMode="numeric"
@@ -210,6 +236,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({ lang }) => 
             value={formData.numberOfChildren}
             onChange={handleChange}
             min={0}
+            max={10}
             className="input-elegant"
             lang="en"
             inputMode="numeric"

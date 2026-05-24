@@ -1,29 +1,13 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import { type getDictionary } from "../../../get-dictionary";
+import { todayISO, tr } from "./i18n-util";
 
 interface FlightBookingFormProps {
   dic: Awaited<ReturnType<typeof getDictionary>>;
 }
 
 type Lang = "ar" | "en" | "ru";
-
-const tr = (
-  lang: Lang,
-  ar: string,
-  en: string,
-  ru: string
-): string => (lang === "ar" ? ar : lang === "ru" ? ru : en);
-
-// Pure date helpers that produce stable strings (no timezone surprises)
-const todayISO = () => {
-  const d = new Date();
-  // Normalize to local YYYY-MM-DD (avoid UTC drift from toISOString)
-  const y = d.getFullYear();
-  const m = String(d.getMonth() + 1).padStart(2, "0");
-  const day = String(d.getDate()).padStart(2, "0");
-  return `${y}-${m}-${day}`;
-};
 
 const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
   const lang = dic.currLang as Lang;

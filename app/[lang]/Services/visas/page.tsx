@@ -36,8 +36,10 @@ export default async function page({
     pageUrl: `${SITE_URL}/${lang}/Services/visas`,
   });
 
+  const isRTL = lang === "ar";
+
   return (
-    <main className="mx-auto px-4 lg:px-28 flex flex-col">
+    <main className="mx-auto max-w-7xl px-4 py-8 lg:py-12">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -86,64 +88,75 @@ export default async function page({
               : descriptionRU;
 
           return (
-            <div
+            <article
               key={index}
-              className="flex flex-col lg:flex-col gap-4 box w-full"
+              className="card-elegant overflow-hidden"
+              dir={isRTL ? "rtl" : "ltr"}
             >
-              <div className="flex flex-col lg:flex-row-reverse w-full justify-between items-center">
-                <Image
-                  width={445}
-                  height={260}
-                  quality={60}
-                  src={image}
-                  alt={country}
-                  className="lg:h-96 w-full lg:w-1/2 object-cover rounded-lg "
-                />
-                <div className="p-4 flex flex-col gap-3 lg:w-1/2">
-                  <div className="p-4 flex flex-col h-full flex-grow justify-between gap-3 ">
-                    <div className="flex gap-3 justify-center items-center">
-                      <h2 className="text-accent text-5xl font-bold text-center">
-                        {country}
-                      </h2>
-                      <Image
-                        width={60}
-                        height={60}
-                        quality={10}
-                        src={icon}
-                        alt={country}
-                        className="w-16 h-16 object-cover rounded-lg "
-                      />
-                    </div>
+              <div className="grid gap-6 lg:grid-cols-2 lg:items-stretch">
+                <div className="relative aspect-[16/10] lg:aspect-auto lg:min-h-[20rem]">
+                  <Image
+                    fill
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    quality={75}
+                    src={image}
+                    alt={country}
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex flex-col gap-5 p-6 lg:p-8">
+                  <div className="flex items-center gap-3">
+                    <Image
+                      width={56}
+                      height={56}
+                      quality={75}
+                      src={icon}
+                      alt=""
+                      aria-hidden="true"
+                      className="h-14 w-14 flex-shrink-0 rounded-lg object-cover"
+                    />
+                    <h2 className="text-3xl font-bold text-accent lg:text-4xl">
+                      {country}
+                    </h2>
                   </div>
+
                   {duration && (
-                    <div className="text-primary text-3xl font-bold list-disc mb-4">
-                      {dic.duration}:
-                      <p className="text-litePrimary font-normal text-xl mt-2">
+                    <div>
+                      <h3 className="text-lg font-bold text-primary">
+                        {dic.duration}
+                      </h3>
+                      <p className="mt-1 text-base text-litePrimary lg:text-lg">
                         {duration}
                       </p>
                     </div>
                   )}
-                  {requirements && (
-                    <div className="text-primary text-3xl font-bold list-disc mb-4">
-                      {dic.requirements}:
-                      <div className="text-litePrimary font-normal text-xl mt-2 ms-6 list-disc">
+
+                  {requirements && requirements.length > 0 && (
+                    <div>
+                      <h3 className="text-lg font-bold text-primary">
+                        {dic.requirements}
+                      </h3>
+                      <ul className="mt-2 ms-5 list-disc space-y-1 text-base text-litePrimary lg:text-lg">
                         {requirements.map((req, i) => (
-                          <div key={i}>{req}</div>
+                          <li key={i}>{req}</li>
                         ))}
-                      </div>
+                      </ul>
                     </div>
                   )}
+
                   {description && (
-                    <div className="text-primary text-3xl font-bold list-disc mb-4">
-                      {dic.description}:
-                      <p className="text-litePrimary font-normal text-xl mt-2">
+                    <div>
+                      <h3 className="text-lg font-bold text-primary">
+                        {dic.description}
+                      </h3>
+                      <p className="mt-1 text-base text-litePrimary lg:text-lg">
                         {description}
                       </p>
                     </div>
                   )}
                 </div>
               </div>
-            </div>
+            </article>
           );
         })}
       </div>

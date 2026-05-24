@@ -1,14 +1,12 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { todayISO, tr } from "./i18n-util";
 
 interface DeliveryFormProps {
   lang: string;
 }
 
 type Lang = "ar" | "en" | "ru";
-
-const tr = (lang: Lang, ar: string, en: string, ru: string): string =>
-  lang === "ar" ? ar : lang === "ru" ? ru : en;
 
 const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
   const l = lang as Lang;
@@ -17,26 +15,48 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
     recipientNumber: "",
     urgency: "normal",
     senderName: "",
-    submissionDate: new Date(),
-    dispatchDate: new Date(),
+    submissionDate: "",
+    dispatchDate: "",
   });
 
-  const handleDateChange = (name: string, dateValue: Date | null) => {
-    setFormData((prev) => ({ ...prev, [name]: dateValue || new Date() }));
-  };
+  const [today, setToday] = useState("");
+  useEffect(() => {
+    const t = todayISO();
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setToday(t);
+    setFormData((prev) => ({
+      ...prev,
+      submissionDate: prev.submissionDate || t,
+      dispatchDate: prev.dispatchDate || t,
+    }));
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData((prev) => {
+      const next = { ...prev, [name]: value };
+      // Push dispatch forward if submission > dispatch
+      if (name === "submissionDate" && next.dispatchDate && value > next.dispatchDate) {
+        next.dispatchDate = value;
+      }
+      return next;
+    });
   };
+
+  const dispatchMin = useMemo(
+    () => formData.submissionDate || today,
+    [formData.submissionDate, today]
+  );
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const message = `*Documents Delivery: 📄*\n\n- *Sender Name*: ${
       formData.senderName
-    }\n- *Submission Date*: ${formData.submissionDate.toLocaleDateString()}\n- *Dispatch Date*: ${formData.dispatchDate.toLocaleDateString()}\n\n- *Place of Delivery*: ${
+    }\n- *Submission Date*: ${formData.submissionDate}\n- *Dispatch Date*: ${
+      formData.dispatchDate
+    }\n\n- *Place of Delivery*: ${
       formData.placeOfDelivery
     } 📍\n\n- *Recipient Number*: ${
       formData.recipientNumber
@@ -70,6 +90,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
           value={formData.senderName}
           onChange={handleChange}
           className="input-elegant"
+          autoComplete="name"
           required
         />
       </div>
@@ -82,11 +103,9 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
           type="date"
           id="submissionDate"
           name="submissionDate"
-          min={new Date().toISOString().split("T")[0]}
-          value={formData.submissionDate.toISOString().split("T")[0]}
-          onChange={(e) =>
-            handleDateChange("submissionDate", e.target.valueAsDate)
-          }
+          min={today}
+          value={formData.submissionDate}
+          onChange={handleChange}
           className="input-elegant"
           required
         />
@@ -100,11 +119,9 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
           type="date"
           id="dispatchDate"
           name="dispatchDate"
-          min={new Date().toISOString().split("T")[0]}
-          value={formData.dispatchDate.toISOString().split("T")[0]}
-          onChange={(e) =>
-            handleDateChange("dispatchDate", e.target.valueAsDate)
-          }
+          min={dispatchMin}
+          value={formData.dispatchDate}
+          onChange={handleChange}
           className="input-elegant"
           required
         />
@@ -131,11 +148,13 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
         </label>
         <input
           id="recipientNumber"
-          type="text"
+          type="tel"
           name="recipientNumber"
           value={formData.recipientNumber}
           onChange={handleChange}
           className="input-elegant"
+          autoComplete="tel"
+          inputMode="tel"
           required
         />
       </div>

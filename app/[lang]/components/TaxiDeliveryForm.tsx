@@ -1,14 +1,12 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { todayISO, tr } from "./i18n-util";
 
 interface TaxiDeliveryFormProps {
   lang: string;
 }
 
 type Lang = "ar" | "en" | "ru";
-
-const tr = (lang: Lang, ar: string, en: string, ru: string): string =>
-  lang === "ar" ? ar : lang === "ru" ? ru : en;
 
 const TaxiDeliveryForm: React.FC<TaxiDeliveryFormProps> = ({ lang }) => {
   const l = lang as Lang;
@@ -35,7 +33,12 @@ const TaxiDeliveryForm: React.FC<TaxiDeliveryFormProps> = ({ lang }) => {
     window.open(whatsappUrl, "_blank");
   };
 
-  const today = new Date().toISOString().split("T")[0];
+  // Set today after mount to avoid SSR mismatch
+  const [today, setToday] = useState("");
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setToday(todayISO());
+  }, []);
 
   return (
     <form
