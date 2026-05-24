@@ -11,6 +11,14 @@ const LOCALE_META: Record<Locale, { label: string; native: string; flag: string 
   ru: { label: "Russian", native: "Русский", flag: "/images/ru.svg" },
 };
 
+/** Persist user's manual locale choice so middleware respects it next visit. */
+const persistLocale = (locale: Locale) => {
+  // 1 year, root path, lax — same shape the middleware writes
+  document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=${
+    60 * 60 * 24 * 365
+  }; samesite=lax`;
+};
+
 type Variant = "desktop" | "mobile";
 
 export default function LocaleSwitcher({
@@ -67,6 +75,7 @@ export default function LocaleSwitcher({
               <li key={locale}>
                 <Link
                   href={redirectedPathName(locale as Locale)}
+                  onClick={() => persistLocale(locale as Locale)}
                   aria-current={isActive ? "true" : undefined}
                   className={`flex flex-col items-center gap-1.5 rounded-xl border px-2 py-2.5 transition-all ${
                     isActive
@@ -142,7 +151,10 @@ export default function LocaleSwitcher({
               <li key={locale} role="option" aria-selected={isActive}>
                 <Link
                   href={redirectedPathName(locale as Locale)}
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    persistLocale(locale as Locale);
+                    setIsOpen(false);
+                  }}
                   className={`flex items-center gap-3 px-3 py-2 text-sm transition-colors ${
                     isActive
                       ? "bg-white/50 font-semibold text-primary"

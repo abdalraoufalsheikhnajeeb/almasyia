@@ -32,15 +32,8 @@ const nextConfig = {
       },
     ];
   },
-  async redirects() {
-    return [
-      {
-        source: "/",
-        destination: "/en",
-        permanent: true,
-      },
-    ];
-  },
+  // Locale redirects are handled by middleware.ts based on the user's
+  // browser preference and saved cookie — see Accept-Language detection.
 };
 
 module.exports = nextConfig;
