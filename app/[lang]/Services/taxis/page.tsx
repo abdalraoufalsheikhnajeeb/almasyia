@@ -34,7 +34,7 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
   });
 
   return (
-    <main className="mx-auto max-w-7xl px-4 py-8 lg:py-12">
+    <div className="mx-auto max-w-7xl px-4 py-8 lg:py-12">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -61,7 +61,7 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
           <TaxiDeliveryForm lang={lang} />
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 export default page;

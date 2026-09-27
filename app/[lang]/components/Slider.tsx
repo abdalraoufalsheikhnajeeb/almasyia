@@ -1,12 +1,11 @@
 "use client";
-import { useEffect, useMemo } from "react";
+import CarouselControls from "./CarouselControls";
 import AnTitle from "./AnTitle.tsx";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import "./Slider.css";
 import Link from "next/link";
 import { getDictionary } from "../../../get-dictionary.ts";
-import Autoplay from "embla-carousel-autoplay";
 
 type SliderCard = {
   id: number;
@@ -24,31 +23,8 @@ type SliderProps = {
 };
 
 const Slider = ({ dic, data, title }: SliderProps) => {
-  const autoplay = useMemo(() => Autoplay({ delay: 3000 }), []);
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true, align: "start" },
-    [autoplay]
-  );
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
 
-  useEffect(() => {
-    if (!emblaApi) return;
-    const stop = () => emblaApi.plugins().autoplay?.stop();
-    const play = () => emblaApi.plugins().autoplay?.play();
-
-    // Honor user preference: pause autoplay if reduced-motion requested
-    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (motionQuery.matches) stop();
-    const onMotionChange = (e: MediaQueryListEvent) => (e.matches ? stop() : play());
-    motionQuery.addEventListener("change", onMotionChange);
-
-    emblaApi.on("pointerDown", stop);
-    emblaApi.on("pointerUp", play);
-    return () => {
-      emblaApi.off("pointerDown", stop);
-      emblaApi.off("pointerUp", play);
-      motionQuery.removeEventListener("change", onMotionChange);
-    };
-  }, [emblaApi]);
 
   const isRTL = dic.currLang === "ar";
 
@@ -58,6 +34,7 @@ const Slider = ({ dic, data, title }: SliderProps) => {
       className="mx-auto w-full max-w-7xl px-4 py-6"
     >
       <AnTitle title={title} />
+      <CarouselControls api={emblaApi} lang={dic.currLang} />
       <div className="embla overflow-hidden" ref={emblaRef}>
         <div className="embla__container flex">
           {data.map((card) => {
@@ -97,7 +74,7 @@ const Slider = ({ dic, data, title }: SliderProps) => {
                         {cardTitle}
                       </h3>
                       <span
-                        className={`inline-flex items-center gap-1.5 text-sm font-semibold text-accent transition-transform duration-300 ${
+                        className={`inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-transform duration-300 ${
                           isRTL
                             ? "group-hover:-translate-x-1"
                             : "group-hover:translate-x-1"

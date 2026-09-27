@@ -1,12 +1,13 @@
 "use client";
-import { useEffect, useCallback, useMemo } from "react";
+import { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import Link from "next/link";
+import { tr } from "./i18n-util";
 import "./Slider.css";
 
 interface LocationCardProps {
+  lang: string;
   flagSrc: string;
   images: string[];
   googleMapsUrl: string;
@@ -21,15 +22,17 @@ interface LocationCardProps {
 const ArrowButton = ({
   direction,
   onClick,
+  lang,
 }: {
+  lang: string;
   direction: "next" | "prev";
   onClick: () => void;
 }) => (
   <button
     type="button"
     onClick={onClick}
-    aria-label={direction === "next" ? "Next slide" : "Previous slide"}
-    className={`absolute top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-primary shadow-md ring-1 ring-slate-200 backdrop-blur transition-all hover:scale-110 hover:bg-white ${
+    aria-label={direction === "next" ? tr(lang, "الصورة التالية", "Next slide", "Следующее фото") : tr(lang, "الصورة السابقة", "Previous slide", "Предыдущее фото")}
+    className={`absolute top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-primary shadow-md ring-1 ring-slate-200 backdrop-blur transition-all hover:scale-110 hover:bg-white ${
       direction === "next" ? "right-3" : "left-3"
     }`}
   >
@@ -76,6 +79,7 @@ const IconPhone = ({ className }: { className?: string }) => (
 );
 
 const LocationCard: React.FC<LocationCardProps> = ({
+  lang,
   flagSrc,
   images,
   googleMapsUrl,
@@ -85,11 +89,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
   whatsLink,
   findUsLabel = "Find Us on Google Maps",
 }) => {
-  const autoplay = useMemo(() => Autoplay({ delay: 3000 }), []);
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true, align: "start" },
-    [autoplay]
-  );
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -99,24 +99,6 @@ const LocationCard: React.FC<LocationCardProps> = ({
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
 
-  useEffect(() => {
-    if (!emblaApi) return;
-    const stop = () => emblaApi.plugins().autoplay?.stop();
-    const play = () => emblaApi.plugins().autoplay?.play();
-
-    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (motionQuery.matches) stop();
-    const onMotionChange = (e: MediaQueryListEvent) => (e.matches ? stop() : play());
-    motionQuery.addEventListener("change", onMotionChange);
-
-    emblaApi.on("pointerDown", stop);
-    emblaApi.on("pointerUp", play);
-    return () => {
-      emblaApi.off("pointerDown", stop);
-      emblaApi.off("pointerUp", play);
-      motionQuery.removeEventListener("change", onMotionChange);
-    };
-  }, [emblaApi]);
 
   return (
     <article className="card-elegant overflow-hidden">
@@ -156,7 +138,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
             target="_blank"
             href={whatsLink}
             rel="noopener noreferrer"
-            aria-label={`WhatsApp for ${locationName}`}
+            aria-label={`WhatsApp ${locationName}: ${phoneNumber}`}
             className="group flex items-center gap-3 rounded-xl border border-white/60 bg-white/70 backdrop-blur p-4 transition-all hover:border-litePrimary/30 hover:bg-white hover:shadow-sm"
           >
             <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
@@ -198,6 +180,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
                     <Image
                       width={600}
                       height={450}
+                      sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
                       quality={70}
                       src={image}
                       alt={`${locationName} office ${index + 1}`}
@@ -208,10 +191,10 @@ const LocationCard: React.FC<LocationCardProps> = ({
               ))}
             </div>
           </div>
-          {images.length > 2 && (
+          {images.length > 1 && (
             <>
-              <ArrowButton direction="prev" onClick={scrollPrev} />
-              <ArrowButton direction="next" onClick={scrollNext} />
+              <ArrowButton lang={lang} direction="prev" onClick={scrollPrev} />
+              <ArrowButton lang={lang} direction="next" onClick={scrollNext} />
             </>
           )}
         </div>

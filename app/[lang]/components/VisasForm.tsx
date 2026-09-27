@@ -1,4 +1,5 @@
 "use client";
+import FormPrivacyNotice from "./FormPrivacyNotice";
 import { useState } from "react";
 import { type getDictionary } from "../../../get-dictionary";
 import { tr } from "./i18n-util";
@@ -49,7 +50,7 @@ export default function VisaForm({
     const whatsappUrl = `https://wa.me/971545866066?text=${encodeURIComponent(
       message
     )}`;
-    window.open(whatsappUrl, "_blank");
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -157,6 +158,7 @@ export default function VisaForm({
           </svg>
           {tr(l, "إرسال المعلومات", "Send Info", "Отправить информацию")}
         </button>
+      <FormPrivacyNotice lang={dic.currLang} />
       </form>
     </div>
   );

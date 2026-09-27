@@ -18,7 +18,7 @@ export type BuildMetadataInput = {
 
 const buildAlternateLanguages = (path: string) =>
   Object.fromEntries(
-    i18n.locales.map((locale) => [locale, `/${locale}${path}`])
+    [...i18n.locales.map((locale) => [locale, `${SITE_URL}/${locale}${path}`]), ["x-default", `${SITE_URL}/en${path}`]]
   ) as Record<Locale, string>;
 
 export function buildPageMetadata({
@@ -27,7 +27,7 @@ export function buildPageMetadata({
   title,
   description,
   keywords,
-  imageUrl = "/images/logo.webp",
+  imageUrl = "/opengraph-image.png",
   noIndex = false,
 }: BuildMetadataInput): Metadata {
   const pageTitle = title[lang] ?? title.en;
@@ -35,8 +35,6 @@ export function buildPageMetadata({
   const canonicalPath = `/${lang}${path}`;
   const ogImage = {
     url: imageUrl,
-    width: 1200,
-    height: 630,
     alt: pageTitle,
   };
 
@@ -54,7 +52,8 @@ export function buildPageMetadata({
       description: pageDescription,
       url: `${SITE_URL}${canonicalPath}`,
       type: "website",
-      locale: lang,
+      locale: { en: "en_US", ar: "ar_AE", ru: "ru_RU" }[lang],
+      alternateLocale: i18n.locales.filter((locale) => locale !== lang).map((locale) => ({ en: "en_US", ar: "ar_AE", ru: "ru_RU" }[locale])),
       siteName: SITE_NAME,
       images: [ogImage],
     },
@@ -129,12 +128,13 @@ export type ServiceSchemaInput = {
 export function buildServiceJsonLd(input: ServiceSchemaInput) {
   return {
     "@context": "https://schema.org",
-    "@type": input.schemaType ?? "Service",
+    "@type": input.schemaType === "TaxiService" ? "TaxiService" : "Service",
     name: input.name,
     description: input.description,
     serviceType: input.serviceType,
     provider: {
       "@type": "TravelAgency",
+      "@id": `${SITE_URL}/#organization`,
       name: SITE_NAME,
       url: SITE_URL,
     },

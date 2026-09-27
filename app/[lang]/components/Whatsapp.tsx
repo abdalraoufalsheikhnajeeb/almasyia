@@ -1,11 +1,14 @@
 "use client";
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useId } from "react";
 import Image from "next/image";
+import { tr } from "./i18n-util";
 
-export default function Whatsapp() {
+export default function Whatsapp({ lang }: { lang: string }) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const panelId = useId();
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -16,10 +19,21 @@ export default function Whatsapp() {
         setIsOpen(false);
       }
     };
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && dropdownRef.current?.contains(event.target as Node)) {
+        event.stopPropagation();
+        setIsOpen(false);
+        triggerRef.current?.focus();
+      }
+    };
     if (isOpen) {
+      document.addEventListener("keydown", handleEscape);
       document.addEventListener("mousedown", handleClickOutside);
     }
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEscape);
+    };
   }, [isOpen]);
 
   return (
@@ -29,12 +43,12 @@ export default function Whatsapp() {
     >
       {/* Country options */}
       {isOpen && (
-        <div className="animate-fade-in flex flex-col gap-2 glass-strong p-2 rounded-2xl shadow-lg">
+        <div id={panelId} className="animate-fade-in flex flex-col gap-2 glass-strong p-2 rounded-2xl shadow-lg">
           <Link
             target="_blank"
             rel="noopener noreferrer"
             href="https://wa.me/971545866066"
-            aria-label="WhatsApp UAE"
+            aria-label={tr(lang, "واتساب الإمارات", "WhatsApp UAE", "WhatsApp ОАЭ") + " +971 54 586 6066"}
             className="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-white/50 transition-colors"
           >
             <Image
@@ -45,7 +59,7 @@ export default function Whatsapp() {
               alt="UAE flag"
               src="/images/emirate-flag.svg"
             />
-            <span className="text-sm font-medium text-primary tabular-nums">
+            <span dir="ltr" className="text-sm font-medium text-primary tabular-nums">
               +971 54 586 6066
             </span>
           </Link>
@@ -53,7 +67,7 @@ export default function Whatsapp() {
             target="_blank"
             rel="noopener noreferrer"
             href="https://wa.me/963950026610"
-            aria-label="WhatsApp Syria"
+            aria-label={tr(lang, "واتساب سوريا", "WhatsApp Syria", "WhatsApp Сирия") + " +963 950 026 610"}
             className="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-white/50 transition-colors"
           >
             <Image
@@ -64,7 +78,7 @@ export default function Whatsapp() {
               alt="Syria flag"
               src="/images/syria-flag.svg"
             />
-            <span className="text-sm font-medium text-primary tabular-nums">
+            <span dir="ltr" className="text-sm font-medium text-primary tabular-nums">
               +963 950 026 610
             </span>
           </Link>
@@ -74,8 +88,11 @@ export default function Whatsapp() {
       {/* Modern FAB toggle */}
       <span className="fab-modern-wrap">
         <button
+          ref={triggerRef}
+          type="button"
+          aria-controls={isOpen ? panelId : undefined}
           onClick={() => setIsOpen(!isOpen)}
-          aria-label="Open WhatsApp contact options"
+          aria-label={tr(lang, "خيارات التواصل عبر واتساب", "Open WhatsApp contact options", "Варианты связи через WhatsApp")}
           aria-expanded={isOpen}
           className="fab-modern fab-whatsapp"
         >

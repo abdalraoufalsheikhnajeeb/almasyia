@@ -26,7 +26,7 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
     pageUrl: `${SITE_URL}/${lang}/tourismprogarams/georgia`,
   });
   return (
-    <main className="container mx-auto  min-h-screen">
+    <div className="container mx-auto  min-h-screen">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -72,7 +72,7 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
           );
         })}
       </div>
-    </main>
+    </div>
   );
 };
 

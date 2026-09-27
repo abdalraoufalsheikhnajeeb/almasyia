@@ -226,7 +226,7 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
   const isRTL = lang === "ar";
 
   return (
-    <main className="mx-auto max-w-5xl px-4 py-8 lg:py-12" dir={isRTL ? "rtl" : "ltr"}>
+    <div className="mx-auto max-w-5xl px-4 py-8 lg:py-12" dir={isRTL ? "rtl" : "ltr"}>
       <article className="card-elegant p-6 lg:p-10">
         <header className="flex flex-col items-center gap-4 text-center">
           <Image
@@ -276,7 +276,7 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
           </div>
         </section>
       </article>
-    </main>
+    </div>
   );
 };
 

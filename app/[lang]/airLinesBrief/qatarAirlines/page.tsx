@@ -16,7 +16,7 @@ export async function generateMetadata({
     path: "/airLinesBrief/qatarAirlines",
     title: AIRLINES_SEO.qatarAirlines.title,
     description: AIRLINES_SEO.qatarAirlines.description,
-    imageUrl: "/images/qatarairlines.webp",
+    imageUrl: "/images/qatarairways.webp",
   });
 }
 

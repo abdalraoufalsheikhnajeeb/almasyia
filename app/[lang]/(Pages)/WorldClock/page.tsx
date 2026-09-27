@@ -39,7 +39,7 @@ export default async function WorldClock({
   };
 
   return (
-    <main className="container mx-auto px-4 lg:px-16 py-8">
+    <div className="container mx-auto px-4 lg:px-16 py-8">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -72,6 +72,6 @@ export default async function WorldClock({
           </article>
         ))}
       </section>
-    </main>
+    </div>
   );
 }

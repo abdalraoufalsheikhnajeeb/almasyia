@@ -11,6 +11,7 @@
   --color-primary-lite: #316792;
   --color-accent: #d3b167;
   --color-accent-soft: #e6c98f;
+  --color-accent-text: #806018;
 
   /* Themed surfaces (overridden by .dark) */
   --color-bg: #f5f9fc;
@@ -165,6 +166,7 @@ html.dark {
 .bg-ambient {
   position: relative;
   isolation: isolate;
+  overflow: clip;
 }
 .bg-ambient::before,
 .bg-ambient::after {
@@ -335,7 +337,7 @@ html.dark {
     var(--color-accent) 0%,
     #c89e4f 100%
   );
-  color: #fff;
+  color: #172b3a;
   font-weight: 600;
   font-size: 0.95rem;
   box-shadow: var(--shadow-sm);
@@ -465,7 +467,6 @@ html.dark .input-elegant::-webkit-calendar-picker-indicator {
   box-shadow:
     0 10px 24px -6px var(--fab-shadow, rgba(15, 23, 42, 0.35)),
     inset 0 1px 0 rgba(255, 255, 255, 0.25);
-  animation: fab-float 5s ease-in-out infinite;
 }
 
 .fab-modern:hover {
@@ -499,7 +500,6 @@ html.dark .input-elegant::-webkit-calendar-picker-indicator {
   );
   opacity: 0;
   z-index: 0;
-  animation: fab-halo 3.6s ease-in-out infinite;
   pointer-events: none;
 }
 
@@ -516,7 +516,6 @@ html.dark .input-elegant::-webkit-calendar-picker-indicator {
     transparent 70%
   );
   transform: translateX(-120%);
-  animation: fab-shine 5s ease-in-out infinite;
   pointer-events: none;
   z-index: 1;
 }
@@ -571,7 +570,6 @@ html.dark .input-elegant::-webkit-calendar-picker-indicator {
   border-radius: 9999px;
   background: #22c55e;
   box-shadow: 0 0 0 2px #fff, 0 0 10px rgba(34, 197, 94, 0.7);
-  animation: fab-badge-blink 1.8s ease-in-out infinite;
   z-index: 3;
 }
 
@@ -966,3 +964,10 @@ html.dark .text-blue-500 {
 }
 
 /* Date input fix already covered above */
+.text-accent {
+  color: var(--color-accent-text);
+}
+
+html.dark .text-accent {
+  color: #e6c98f;
+}

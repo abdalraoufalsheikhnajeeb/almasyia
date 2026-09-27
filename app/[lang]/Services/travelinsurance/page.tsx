@@ -38,7 +38,7 @@ export default async function page({
   });
 
   return (
-    <main className="mx-auto max-w-7xl px-4 py-8 lg:py-12">
+    <div className="mx-auto max-w-7xl px-4 py-8 lg:py-12">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -65,6 +65,6 @@ export default async function page({
           <TravelInsuranceForm lang={lang} />
         </div>
       </div>
-    </main>
+    </div>
   );
 }

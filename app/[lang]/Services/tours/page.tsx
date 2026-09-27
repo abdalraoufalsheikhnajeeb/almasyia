@@ -35,7 +35,7 @@ export default async function page({
   });
 
   return (
-    <main>
+    <div>
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -48,6 +48,6 @@ export default async function page({
         subtitle={dic.ourToursText}
         data={countries}
       />
-    </main>
+    </div>
   );
 }

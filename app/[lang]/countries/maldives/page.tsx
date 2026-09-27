@@ -33,7 +33,7 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
   const heading =
     lang === "ar" ? "السفر إلى المالديف" : lang === "ru" ? "Путешествие на Мальдивы" : "Travel to Maldives";
   return (
-    <main className="container mx-auto pt-4 p-4">
+    <div className="container mx-auto pt-4 p-4">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -53,7 +53,7 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
           descriptionEN,
           descriptionRU,
         } = item;
-        const title = lang === "en" ? nameEN : lang === "ar" ? nameAR : nameRU;
+        const title = (lang === "en" ? nameEN : lang === "ar" ? nameAR : nameRU) || nameEN || nameAR || nameRU;
         const description =
           lang === "en"
             ? descriptionEN
@@ -64,9 +64,9 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
         if (!description && !src) {
           return (
             <div key={index}>
-              <h2 className="text-center text-accent text-2xl font-bold mb-4">
+              {title && <h2 className="text-center text-accent text-2xl font-bold mb-4">
                 {title}
-              </h2>
+              </h2>}
             </div>
           );
         }
@@ -74,10 +74,10 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
         return (
           <div key={index} className="mb-8 box">
             <div className="flex flex-col  gap-4 lg:flex-row items-center ">
-              <div className="flex flex-col lg:w-2/3">
-                <h2 className="text-center text-accent text-2xl font-bold mb-6">
+              <div className="flex min-w-0 max-w-full flex-col break-words [overflow-wrap:anywhere] lg:w-2/3">
+                {title && <h2 className="text-center text-accent text-2xl font-bold mb-6">
                   {title}
-                </h2>
+                </h2>}
                 <p className=" text-start text-lg">{description}</p>
               </div>
 
@@ -89,6 +89,7 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
                     alt={title}
                     width={500}
                     height={300}
+                    sizes="(min-width: 1024px) 33vw, 100vw"
                     className=" w-full  rounded-ee-2xl rounded-es-2xl rounded-lg"
                   />
                 </div>
@@ -182,14 +183,14 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
             : "Лучшие места для шопинга:"}
         </h2>
 
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto" tabIndex={0} role="region" aria-label={lang === "ar" ? "جدول معلومات السفر 1" : lang === "ru" ? "Таблица информации для поездки 1" : "Travel information table 1"}>
           <table className="min-w-full bg-white shadow-md rounded-lg">
             <thead>
               <tr>
-                <th className="px-4 py-2 text-center bg-blue-600 text-litePrimary">
+                <th scope="col" className="px-4 py-2 text-center bg-blue-600 text-white">
                   {lang === "en" ? "Place" : lang === "ar" ? "المكان" : "Место"}
                 </th>
-                <th className="px-4 py-2 text-center bg-blue-600 text-litePrimary">
+                <th scope="col" className="px-4 py-2 text-center bg-blue-600 text-white">
                   {lang === "en"
                     ? "Description"
                     : lang === "ar"
@@ -271,18 +272,18 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
             : "Лучшие рестораны:"}
         </h2>
 
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto" tabIndex={0} role="region" aria-label={lang === "ar" ? "جدول معلومات السفر 2" : lang === "ru" ? "Таблица информации для поездки 2" : "Travel information table 2"}>
           <table className="min-w-full bg-white shadow-md rounded-lg">
             <thead>
               <tr>
-                <th className="px-4 py-2 text-center bg-blue-600 text-litePrimary">
+                <th scope="col" className="px-4 py-2 text-center bg-blue-600 text-white">
                   {lang === "en"
                     ? "Restaurant"
                     : lang === "ar"
                     ? "المطعم"
                     : "Ресторан"}
                 </th>
-                <th className="px-4 py-2 text-center bg-blue-600 text-litePrimary">
+                <th scope="col" className="px-4 py-2 text-center bg-blue-600 text-white">
                   {lang === "en"
                     ? "Description"
                     : lang === "ar"
@@ -356,7 +357,7 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
           </table>
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 

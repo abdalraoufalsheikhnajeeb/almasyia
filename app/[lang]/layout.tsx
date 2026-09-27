@@ -1,3 +1,5 @@
+import { notFound } from "next/navigation";
+import { buildPageMetadata } from "./seo";
 import type { Metadata, Viewport } from "next";
 import { Tajawal } from "next/font/google";
 import { i18n, Locale } from "../../i18n-config";
@@ -12,81 +14,28 @@ import "./globals.css";
 const tajawal = Tajawal({
   subsets: ["latin", "arabic"],
   weight: ["400", "700"],
-  display: "swap",
+  display: "optional",
   preload: true,
   variable: "--font-tajawal",
 });
 
 const siteUrl = new URL("https://www.alnujoomalmasiya.com");
 
-const seoByLocale: Record<
-  Locale,
-  { title: string; description: string; keywords: string[] }
-> = {
-  en: {
-    title: "Alnujoom Almasiya | Travel & Tourism Services",
-    description:
-      "Travel agency led by Farouk Dakkak offering flights, hotels, visas, insurance, airport transfers, and secure document delivery to destinations worldwide.",
-    keywords: [
-      "travel agency",
-      "dubai flights",
-      "hotel booking",
-      "visa assistance",
-      "travel insurance",
-      "airport transfer",
-      "tour packages",
-      "document delivery Dubai Damascus",
-      "paper transfer Dubai",
-      "travel to Dubai from Damascus",
-      "Farouk Dakkak",
-      "Farrouk Dakkak",
-      "Alnujoom Almasiya",
-      "النجوم الماسية",
-    ],
-  },
-  ar: {
-    title: "Alnujoom Almasiya | Travel & Tourism Services",
-    description:
-      "Travel agency led by Farouk Dakkak offering flights, hotels, visas, insurance, airport transfers, and secure document delivery to destinations worldwide.",
-    keywords: [
-      "travel agency",
-      "dubai flights",
-      "hotel booking",
-      "visa assistance",
-      "travel insurance",
-      "airport transfer",
-      "tour packages",
-      "document delivery Dubai Damascus",
-      "paper transfer Dubai",
-      "travel to Dubai from Damascus",
-      "Farouk Dakkak",
-      "Farrouk Dakkak",
-      "Alnujoom Almasiya",
-      "النجوم الماسية",
-    ],
-  },
-  ru: {
-    title: "Alnujoom Almasiya | Travel & Tourism Services",
-    description:
-      "Travel agency led by Farouk Dakkak offering flights, hotels, visas, insurance, airport transfers, and secure document delivery to destinations worldwide.",
-    keywords: [
-      "travel agency",
-      "dubai flights",
-      "hotel booking",
-      "visa assistance",
-      "travel insurance",
-      "airport transfer",
-      "tour packages",
-      "document delivery Dubai Damascus",
-      "paper transfer Dubai",
-      "travel to Dubai from Damascus",
-      "Farouk Dakkak",
-      "Farrouk Dakkak",
-      "Alnujoom Almasiya",
-      "النجوم الماسية",
-    ],
-  },
+const homeTitles = {
+  en: "Damascus to Dubai Travel & Document Delivery | Alnujoom Almasiya",
+  ar: "النجوم الماسية | السفر من دمشق إلى دبي ونقل الوثائق",
+  ru: "Дамаск — Дубай: поездки и доставка документов | Alnujoom Almasiya",
 };
+const homeDescriptions = {
+  en: "Plan travel from Damascus to Dubai with Alnujoom Almasiya: flight and hotel bookings, visa assistance and document delivery. Contact Farouk Dakkak and our team.",
+  ar: "خطط للسفر من دمشق إلى دبي مع النجوم الماسية: حجز الطيران والفنادق، المساعدة في التأشيرات ونقل الأوراق والوثائق. تواصل مع فاروق دكاك وفريقنا لمعرفة التفاصيل.",
+  ru: "Поездки из Дамаска в Дубай с Alnujoom Almasiya: авиабилеты, отели, помощь с визами и доставка документов. Свяжитесь с Фаруком Даккаком и нашей командой.",
+};
+
+function validateLocale(value: string): Locale {
+  if (!i18n.locales.some((locale) => locale === value)) notFound();
+  return value as Locale;
+}
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
@@ -97,51 +46,15 @@ export async function generateMetadata({
 }: {
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
-  const lang = (await params).lang as Locale;
-  const seo = seoByLocale[lang] ?? seoByLocale.en;
-  const ogImage = {
-    url: "/images/logo.webp",
-    width: 1200,
-    height: 630,
-    alt: seo.title,
-  };
-
+  const lang = validateLocale((await params).lang);
   return {
-    metadataBase: siteUrl,
-    title: seo.title,
-    description: seo.description,
-    keywords: seo.keywords,
-    alternates: {
-      canonical: `/${lang}`,
-      languages: {
-        en: "/en",
-        ar: "/ar",
-        ru: "/ru",
-      },
-    },
-    openGraph: {
-      title: seo.title,
-      description: seo.description,
-      url: siteUrl,
-      type: "website",
-      locale: lang,
-      siteName: "Alnujoom Almasiya",
-      images: [ogImage],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: seo.title,
-      description: seo.description,
-      images: [ogImage.url],
-    },
-    robots: {
-      index: true,
-      follow: true,
-    },
-    icons: {
-      icon: "/favicon.ico",
-      apple: "/apple-touch-icon.png",
-    },
+    ...buildPageMetadata({
+      lang,
+      path: "",
+      title: homeTitles,
+      description: homeDescriptions,
+    }),
+    icons: { icon: "/favicon.ico", apple: "/apple-touch-icon.png" },
   };
 }
 
@@ -158,24 +71,18 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: Promise<{ lang: string }>;
 }) {
-  const lang = (await params).lang as Locale;
+  const lang = validateLocale((await params).lang);
   const dictionary = await getDictionary(lang);
   const isArabic = lang === "ar";
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "TravelAgency",
+    "@id": `${siteUrl.href}#organization`,
     name: "Alnujoom Almasiya",
     alternateName: "النجوم الماسية",
     url: siteUrl.href,
-    founder: "Farouk Dakkak",
+    founder: { "@type": "Person", name: "Farouk Dakkak", alternateName: ["Farrouk Dakkak", "فاروق دكاك"] },
     areaServed: ["Dubai", "Damascus", "UAE", "Syria"],
-    serviceOffer: [
-      "Travel to Dubai from Damascus",
-      "Document and paper delivery between Dubai and Damascus",
-      "Visa assistance",
-      "Hotel and flight booking",
-      "Airport transfers",
-    ],
     contactPoint: [
       {
         "@type": "ContactPoint",
@@ -220,12 +127,12 @@ export default async function RootLayout({
       </head>
       <body
         dir={isArabic ? "rtl" : "ltr"}
-        className={`overflow-x-hidden ${tajawal.className}`}
+        className={`overflow-x-hidden ${tajawal.className} ${tajawal.variable}`}
       >
         <script
           type="application/ld+json"
           suppressHydrationWarning
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
         />
         {/* Skip link — visible only when focused via keyboard */}
         <a
@@ -243,10 +150,12 @@ export default async function RootLayout({
             contactUs: dictionary.contact_us,
           }}
         />
-        <Whatsapp />
-        <PhoneCall />
-        <BookingFab lang={lang} label={dictionary.heroCtaBook} />
-        <div id="main-content" className="pt-20 min-h-[60vh]">{children}</div>
+        <aside aria-label={lang === "ar" ? "التواصل والحجز" : lang === "ru" ? "Связь и бронирование" : "Contact and booking"}>
+          <Whatsapp lang={lang} />
+          <PhoneCall lang={lang} />
+          <BookingFab lang={lang} label={dictionary.heroCtaBook} />
+        </aside>
+        <main id="main-content" tabIndex={-1} className="pt-20 min-h-[60vh]">{children}</main>
         <Footer lang={lang} />
       </body>
     </html>

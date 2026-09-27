@@ -29,6 +29,7 @@ export default function BookingFab({
 
   const visible = !isAirlinesPage && (!isHomePage || pastHero);
   const isRTL = lang === "ar";
+  if (!visible) return null;
 
   return (
     <Link
@@ -44,7 +45,7 @@ export default function BookingFab({
         // Sizing
         "px-2 py-3 sm:px-2.5 sm:py-4",
         // Visuals: gold gradient with subtle ring
-        "bg-gradient-to-b from-accent to-[#c89e4f] text-white",
+        "bg-gradient-to-b from-accent to-[#c89e4f] text-[#172b3a]",
         "ring-1 ring-white/30",
         "shadow-[0_8px_28px_rgba(211,177,103,0.45)]",
         // Shape — rounded on inside edge only, flush to viewport edge
@@ -98,7 +99,6 @@ export default function BookingFab({
         aria-hidden="true"
         className="relative mt-0.5 flex h-1.5 w-1.5"
       >
-        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-60" />
         <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-white" />
       </span>
     </Link>

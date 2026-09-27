@@ -4,8 +4,7 @@ import { getDictionary } from "../../get-dictionary";
 import { Locale } from "../../i18n-config";
 import AnTitle from "./components/AnTitle";
 import Locations from "./components/Locations";
-import Testimonials, { buildReviewsJsonLd } from "./components/Testimonials";
-import { SITE_URL } from "./seo";
+import Testimonials from "./components/Testimonials";
 import { ourServecis } from "./data";
 
 const STATS: Array<{
@@ -36,7 +35,7 @@ const Page = async ({ params }: { params: Promise<{ lang: string }> }) => {
             isRTL ? "-scale-x-[1]" : ""
           }`}
           sizes="100vw"
-          alt="Travel destinations worldwide"
+          alt=""
           width={1920}
           height={1080}
         />
@@ -62,7 +61,7 @@ const Page = async ({ params }: { params: Promise<{ lang: string }> }) => {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    className="h-4 w-4 text-accent"
+                    className="h-4 w-4 text-[#e6c98f]"
                     aria-hidden="true"
                   >
                     <path d="M11.48 3.5a.56.56 0 011.04 0l2.13 5.1a.56.56 0 00.47.35l5.52.45c.5.04.7.66.32.99l-4.2 3.6a.56.56 0 00-.18.56l1.28 5.39a.56.56 0 01-.84.6l-4.72-2.88a.56.56 0 00-.59 0l-4.72 2.88a.56.56 0 01-.84-.6l1.28-5.39a.56.56 0 00-.18-.56l-4.2-3.6a.56.56 0 01.32-.99l5.52-.45a.56.56 0 00.47-.35L11.48 3.5z" />
@@ -85,7 +84,7 @@ const Page = async ({ params }: { params: Promise<{ lang: string }> }) => {
               <div className="mt-2 flex flex-wrap items-center gap-3">
                 <Link
                   href={`/${lang}/Services/airLines`}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-6 py-3 text-sm font-bold text-white shadow-lg shadow-accent/30 transition-all hover:-translate-y-0.5 hover:bg-[#c89e4f] hover:shadow-xl"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-6 py-3 text-sm font-bold text-[#172b3a] shadow-lg shadow-accent/30 transition-all hover:-translate-y-0.5 hover:bg-[#c89e4f] hover:shadow-xl"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +118,7 @@ const Page = async ({ params }: { params: Promise<{ lang: string }> }) => {
               <div className="mt-6 grid grid-cols-2 gap-4 border-t border-white/20 pt-6 sm:grid-cols-4">
                 {STATS.map((stat) => (
                   <div key={stat.key} className="flex flex-col">
-                    <span className="text-2xl font-bold text-accent lg:text-3xl">
+                    <span className="text-2xl font-bold text-[#e6c98f] lg:text-3xl">
                       {stat.value}
                     </span>
                     <span className="text-xs font-medium text-white/80 lg:text-sm">
@@ -141,7 +140,7 @@ const Page = async ({ params }: { params: Promise<{ lang: string }> }) => {
                 {/* Floating glass card */}
                 <div className="rounded-3xl border border-white/30 bg-white/10 p-6 shadow-2xl backdrop-blur-xl">
                   <div className="flex items-center gap-3 border-b border-white/20 pb-4">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent text-white">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent text-[#172b3a]">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
@@ -213,7 +212,7 @@ const Page = async ({ params }: { params: Promise<{ lang: string }> }) => {
       </section>
 
       {/* ================= SERVICES SECTION ================= */}
-      <main className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-4">
+      <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-4">
         <section
           id="services"
           className="w-full flex flex-col items-center pt-12"
@@ -244,6 +243,7 @@ const Page = async ({ params }: { params: Promise<{ lang: string }> }) => {
                         quality={70}
                         width={400}
                         height={225}
+                        sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         src={card.src}
                         alt={title}
@@ -257,7 +257,7 @@ const Page = async ({ params }: { params: Promise<{ lang: string }> }) => {
                         {title}
                       </h3>
                       <span
-                        className={`inline-flex items-center gap-1.5 text-sm font-semibold text-accent transition-transform duration-300 ${
+                        className={`inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-transform duration-300 ${
                           isRTL
                             ? "group-hover:-translate-x-1"
                             : "group-hover:translate-x-1"
@@ -282,19 +282,12 @@ const Page = async ({ params }: { params: Promise<{ lang: string }> }) => {
           </div>
         </section>
         <Testimonials lang={lang} />
-        <script
-          type="application/ld+json"
-          suppressHydrationWarning
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(buildReviewsJsonLd(SITE_URL)),
-          }}
-        />
         <Locations
           params={{
             lang: lang,
           }}
         />
-      </main>
+      </div>
     </>
   );
 };

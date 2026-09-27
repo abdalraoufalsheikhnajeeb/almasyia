@@ -16,7 +16,7 @@ export const PAGES_SEO: Record<string, SeoEntry> = {
     },
     description: {
       en: "Learn about Alnujoom Almasiya, a trusted travel agency led by Farouk Dakkak, offering flights, visas, hotels, and document delivery between Damascus and Dubai.",
-      ar: "تعرف على شركة النجوم الماسية للسفر بقيادة فاروق ضكاك، شريكك الموثوق للحجوزات الجوية، التأشيرات، الفنادق، وتوصيل الوثائق بين دمشق ودبي.",
+      ar: "تعرف على شركة النجوم الماسية للسفر بقيادة فاروق دكاك، شريكك الموثوق للحجوزات الجوية، التأشيرات، الفنادق، وتوصيل الوثائق بين دمشق ودبي.",
       ru: "Узнайте о Alnujoom Almasiya — надёжном туристическом агентстве под руководством Фарука Даккака. Авиабилеты, визы, отели и доставка документов между Дамаском и Дубаем.",
     },
   },

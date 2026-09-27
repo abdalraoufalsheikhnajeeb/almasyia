@@ -1,12 +1,11 @@
 "use client";
-import { useEffect, useMemo } from "react";
+import CarouselControls from "./CarouselControls";
 import AnTitle from "./AnTitle.tsx";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import "./Slider.css";
 import Link from "next/link";
 import { getDictionary } from "../../../get-dictionary.ts";
-import Autoplay from "embla-carousel-autoplay";
 
 type CountryCard = {
   id: number;
@@ -25,30 +24,8 @@ type CountrySliderProps = {
 };
 
 const CountrySlider = ({ dic, data, title, subtitle }: CountrySliderProps) => {
-  const autoplay = useMemo(() => Autoplay({ delay: 3000 }), []);
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true, align: "start" },
-    [autoplay]
-  );
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
 
-  useEffect(() => {
-    if (!emblaApi) return;
-    const stop = () => emblaApi.plugins().autoplay?.stop();
-    const play = () => emblaApi.plugins().autoplay?.play();
-
-    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (motionQuery.matches) stop();
-    const onMotionChange = (e: MediaQueryListEvent) => (e.matches ? stop() : play());
-    motionQuery.addEventListener("change", onMotionChange);
-
-    emblaApi.on("pointerDown", stop);
-    emblaApi.on("pointerUp", play);
-    return () => {
-      emblaApi.off("pointerDown", stop);
-      emblaApi.off("pointerUp", play);
-      motionQuery.removeEventListener("change", onMotionChange);
-    };
-  }, [emblaApi]);
 
   const isRTL = dic.currLang === "ar";
 
@@ -60,6 +37,7 @@ const CountrySlider = ({ dic, data, title, subtitle }: CountrySliderProps) => {
           {subtitle}
         </p>
       )}
+      <CarouselControls api={emblaApi} lang={dic.currLang} />
       <div className="embla overflow-hidden" ref={emblaRef}>
         <div className="embla__container flex">
           {data.map((card) => {
@@ -86,6 +64,7 @@ const CountrySlider = ({ dic, data, title, subtitle }: CountrySliderProps) => {
                         quality={70}
                         width={500}
                         height={300}
+                        sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
                         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                         src={card.src}
                         alt={cardTitle}
@@ -99,7 +78,7 @@ const CountrySlider = ({ dic, data, title, subtitle }: CountrySliderProps) => {
                         {cardTitle}
                       </h3>
                       <span
-                        className={`inline-flex items-center gap-1.5 text-sm font-semibold text-accent transition-transform duration-300 ${
+                        className={`inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-transform duration-300 ${
                           isRTL
                             ? "group-hover:-translate-x-1"
                             : "group-hover:translate-x-1"

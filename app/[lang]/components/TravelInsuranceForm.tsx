@@ -1,4 +1,5 @@
 "use client";
+import FormPrivacyNotice from "./FormPrivacyNotice";
 import { useEffect, useMemo, useState } from "react";
 import { todayISO, tr } from "./i18n-util";
 
@@ -71,7 +72,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
     const whatsappUrl = `https://wa.me/971545866066?text=${encodeURIComponent(
       message
     )}`;
-    window.open(whatsappUrl, "_blank");
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -233,6 +234,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
         </svg>
         {tr(l, "إرسال المعلومات", "Send Info", "Отправить информацию")}
       </button>
+      <FormPrivacyNotice lang={lang} />
     </form>
   );
 };

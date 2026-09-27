@@ -1,7 +1,7 @@
 "use client";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useId } from "react";
 import { i18n, type Locale } from "../../../i18n-config";
 import Image from "next/image";
 
@@ -23,12 +23,16 @@ type Variant = "desktop" | "mobile";
 
 export default function LocaleSwitcher({
   variant = "desktop",
+  onSelect,
 }: {
   variant?: Variant;
+  onSelect?: () => void;
 } = {}) {
   const [isOpen, setIsOpen] = useState(false);
   const pathName = usePathname();
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const panelId = useId();
 
   const currentLocale = ((): Locale => {
     if (!pathName) return "en";
@@ -54,10 +58,21 @@ export default function LocaleSwitcher({
         setIsOpen(false);
       }
     };
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && dropdownRef.current?.contains(event.target as Node)) {
+        event.stopPropagation();
+        setIsOpen(false);
+        triggerRef.current?.focus();
+      }
+    };
     if (isOpen) {
+      document.addEventListener("keydown", handleEscape);
       document.addEventListener("mousedown", handleClickOutside);
     }
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEscape);
+    };
   }, [isOpen]);
 
   if (variant === "mobile") {
@@ -75,7 +90,9 @@ export default function LocaleSwitcher({
               <li key={locale}>
                 <Link
                   href={redirectedPathName(locale as Locale)}
-                  onClick={() => persistLocale(locale as Locale)}
+                  lang={locale}
+                  hrefLang={locale}
+                  onClick={() => { persistLocale(locale as Locale); onSelect?.(); }}
                   aria-current={isActive ? "true" : undefined}
                   className={`flex flex-col items-center gap-1.5 rounded-xl border px-2 py-2.5 transition-all ${
                     isActive
@@ -104,12 +121,13 @@ export default function LocaleSwitcher({
   return (
     <div className="relative" ref={dropdownRef}>
       <button
+        ref={triggerRef}
+        aria-controls={isOpen ? panelId : undefined}
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 rounded-full border border-white/50 bg-white/60 backdrop-blur-md px-3 py-1.5 text-sm font-medium text-primary shadow-sm transition-all hover:border-white/80 hover:bg-white/80 hover:shadow"
-        aria-haspopup="listbox"
+        className="flex min-h-11 min-w-11 items-center gap-2 rounded-full border border-white/50 bg-white/60 backdrop-blur-md px-3 py-1.5 text-sm font-medium text-primary shadow-sm transition-all hover:border-white/80 hover:bg-white/80 hover:shadow"
         aria-expanded={isOpen}
-        aria-label="Change language"
+        aria-label={currentLocale === "ar" ? "تغيير اللغة" : currentLocale === "ru" ? "Изменить язык" : "Change language"}
       >
         <Image
           quality={75}
@@ -141,19 +159,21 @@ export default function LocaleSwitcher({
 
       {isOpen && (
         <ul
-          role="listbox"
+          id={panelId}
           className="animate-fade-in absolute end-0 mt-2 w-44 overflow-hidden rounded-xl border border-white/50 glass-strong py-1 shadow-lg z-50"
         >
           {i18n.locales.map((locale) => {
             const meta = LOCALE_META[locale as Locale];
             const isActive = locale === currentLocale;
             return (
-              <li key={locale} role="option" aria-selected={isActive}>
+              <li key={locale} >
                 <Link
                   href={redirectedPathName(locale as Locale)}
+                  aria-current={isActive ? "page" : undefined}
                   onClick={() => {
                     persistLocale(locale as Locale);
                     setIsOpen(false);
+                    onSelect?.();
                   }}
                   className={`flex items-center gap-3 px-3 py-2 text-sm transition-colors ${
                     isActive

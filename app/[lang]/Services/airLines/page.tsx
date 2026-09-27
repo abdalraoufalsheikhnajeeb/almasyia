@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getDictionary } from "../../../../get-dictionary";
 import { Locale } from "../../../../i18n-config";
 import FlightBookingForm from "../../components/FlightBookingForm";
+import ServiceGuide from "../../components/ServiceGuide";
 import Slider from "../../components/Slider";
 import { partners, agents } from "../../data";
 import { buildPageMetadata, buildServiceJsonLd, SITE_URL } from "../../seo";
@@ -36,7 +37,7 @@ export default async function page({
   });
 
   return (
-    <main className="flex flex-col items-center gap-4 pb-12 pt-8">
+    <div className="flex flex-col items-center gap-4 pb-12 pt-8">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -47,7 +48,8 @@ export default async function page({
         <FlightBookingForm dic={dic} />
       </div>
       <Slider dic={dic} title={dic.agents} data={agents} />
+      <ServiceGuide lang={lang} service="travel" />
       <Slider dic={dic} title={dic.OurPartners} data={partners} />
-    </main>
+    </div>
   );
 }

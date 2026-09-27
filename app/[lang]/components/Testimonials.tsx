@@ -267,25 +267,3 @@ export default function Testimonials({ lang }: { lang: Locale }) {
     </section>
   );
 }
-
-// Aggregate rating JSON-LD for SEO
-export function buildReviewsJsonLd(siteUrl: string) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "TravelAgency",
-    name: "Alnujoom Almasiya",
-    url: siteUrl,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      bestRating: "5",
-      ratingCount: String(reviews.length),
-    },
-    review: reviews.map((r) => ({
-      "@type": "Review",
-      author: { "@type": "Person", name: r.name },
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      reviewBody: r.text.en,
-    })),
-  };
-}

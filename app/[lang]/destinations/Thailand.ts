@@ -140,7 +140,7 @@ export const Thailand = [
     url: "https://sofitel.accor.com/en/hotels/5213.html?merchantid",
     nameEN: "Sofitel Bangkok Sukhumvit",
     nameRU: "Софитель Бангкок Сукхумвит",
-    src: "/images/progarams/Thailand/1.webp",
+    src: "/images/Thailand/1.webp",
     descriptionAR:
       "واحدة من السمات الرئيسية لسوفيتيل بانكوك سوخومفيت هو موقعه المتميز في منطقة سوخومفيت الصاخبة والشهيرة في بانكوك. يقع الفندق في قلب مدينة سوخومفيت، ويوفر سهولة الوصول إلى العديد من مناطق الجذب الشهيرة في المدينة وأماكن الحياة الليلية ومراكز التسوق. كما يقع الفندق بالقرب من محطة BTS (قطار بانكوك المعلق)، مما يسهل على الضيوف استكشاف المدينة والمناطق المحيطة بها. يمكن للضيوف زيارة الأماكن القريبة مثل مركز تيرمينال 21 للتسوق ونانا بلازا ومركز بانكوك للفنون والثقافة.",
     descriptionEN:
@@ -153,7 +153,7 @@ export const Thailand = [
     url: "https://solitairebangkok.com/",
     nameEN: "• Bangkok Solitaire Sukhumvit 11",
     nameRU: "• Пасьянс Бангкок Сукхумвит 11",
-    src: "/images/progarams/Thailand/2.webp",
+    src: "/images/Thailand/2.webp",
     descriptionAR:
       "يقع Solitaire Bangkok Sukhumvit 11 في شارع سوخومفيت 13، وهو شارع هادئ يقع بالقرب من شارع سوخومفيت 11 الصاخب. يقع الفندق على بعد خطوات من العديد من المطاعم والمقاهي، ويبعد مسافة قصيرة سيرا على الأقدام عن العديد من المعالم السياحية الشهيرة في بانكوك.",
     descriptionEN:
@@ -172,7 +172,7 @@ export const Thailand = [
     nameEN: "Phang Nga Bay",
     nameAR: "خليج بان ناه",
     nameRU: "Залив Пханг Нга",
-    src: "/images/progarams/Thailand/3.webp",
+    src: "/images/Thailand/3.webp",
     descriptionAR:
       "يعتبر خليج بان ناه من أجمل الاماكن السياحية في بوكيت حيث يمتد على مساحة واسعة تقدر بـ 400 كم في بحر أندامان الواقع بين مدينة بوكيت وشبه جزيرة مالاي بين سولا جنوبي تايلاند، يتميز هذا الخليج باحتوائه على الكثير من الكهوف الرائعة التي يعود تاريخ تكونها الى آلاف السنين.",
     descriptionEN:
@@ -185,7 +185,7 @@ export const Thailand = [
     nameEN: "Bang Pae Waterfall",
     nameAR: "شلال بانغ باي",
     nameRU: "Водопад Банг Пэ",
-    src: "/images/progarams/Thailand/4.webp",
+    src: "/images/Thailand/4.webp",
     descriptionAR:
       "يعد شلال بانغ باي في جزيرة بوكيت من أكثر معالم السياحة في بوكيت تايلند شهرة، يتميز الشلال بهدوئه وسهولة السباحة في مصبه حيث يتكون نهر وعدد من الجداول الرائعة، يبلغ ارتفاع الشلال حوالي 15متر من أعلى جرف من صخور الجرانيت الصلبة ",
     descriptionEN:
@@ -199,7 +199,7 @@ export const Thailand = [
     nameEN: "Phuket FantaSea",
     nameAR: "فنتازيا بوكيت",
     nameRU: "Пхукет ФантаСи",
-    src: "/images/progarams/Thailand/5.webp",
+    src: "/images/Thailand/5.webp",
     descriptionAR:
       "فنتازيا بوكيت Phuket FantaSea  من أشهر معالم السياحة في بوكيت تايلند وهو عرض متكامل يجمع بين حاضر تايلاند بتطوره التكنولوجي المُذهل، وتراثها وحضارتها القديمة الساحرة مصممة على نفس هيئة مدينة الألعاب الشهيرة الموجودة في مدينة لاس فيغاس الأميركية",
     descriptionEN:
@@ -212,7 +212,7 @@ export const Thailand = [
     nameEN: "Jungle Splash Water Park",
     nameAR: "الحديقة المائية جنغل سبلاش بوكيت",
     nameRU: "Аквапарк Джангл Сплэш",
-    src: "/images/progarams/Thailand/6.webp",
+    src: "/images/Thailand/6.webp",
     descriptionAR:
       "فهي عبارة عن حديقة مائية تنفرد بمجموعة كبيرة من نقاط الجذب التي ساهمت في نجاحها الواسع. من بين أنشطة الترفيه التي تُتيحها الحديقة المائية جنغل سبلاش في بوكيت، يوجد مجموعة من الأنشطة ملائمة للأطفال، حيث يوجد ألعاب مائية ملائمة للصغار، كما يوجد مسبح مخصص للأطفال ورشاشات مائية.",
     descriptionEN:
@@ -225,7 +225,7 @@ export const Thailand = [
     nameEN: "Big Buddha",
     nameAR: "تمثال بوذا العملاق",
     nameRU: "Большой Будда",
-    src: "/images/progarams/Thailand/7.webp",
+    src: "/images/Thailand/7.webp",
     descriptionAR:
       "يعد تمثال بوذا الكبير من أبرز معالم السياحة في جزيرة بوكيت يصل ارتفاعه إلى 45 متر ويقع في تلال ناكيرد بين تشالونج وكاتا، يبرز التمثال من مختلف أنحاء الجزيرة فأينما توجهت يمكنك رؤية هذا التمثال الذي يعتبر رمزاً ديناً في الجزيرة.",
     descriptionEN:
@@ -238,7 +238,7 @@ export const Thailand = [
     nameEN: "Wat Chalong",
     nameAR: "معبد وات تشالونج",
     nameRU: "Ват Чалонг",
-    src: "/images/progarams/Thailand/8.webp",
+    src: "/images/Thailand/8.webp",
     descriptionAR:
       "يعتبر وات تشالونج من أهم الأماكن السياحية في بوكيت تايلاند حيث يعكس صورة واضحة عن ثقافة تايلاند بشكل عام، يعد هذا المعبد من أكبر المعابد في العالم و أحد أكبر المعابد البوذية في جزيرة بوكيت، يستقطب المكان الكثير من الزوار سواء السكان المحليين أو السياح ممن يرغبون في التعرف على ثقافة تايلاند",
     descriptionEN:
@@ -257,7 +257,7 @@ export const Thailand = [
     url: "https://www.oceanfrontphuket.com/",
     nameEN: "Oceanfront Beach Resort",
     nameRU: "Пляжный курорт на берегу океана",
-    src: "/images/progarams/Thailand/9.webp",
+    src: "/images/Thailand/9.webp",
     descriptionAR:
       "يقع Oceanfront Beach Resort Phuket في منطقة هادئة على شاطئ باتونغ، على مسافة قريبة من المطاعم والمقاهي والمحلات التجارية. يقع المنتجع أيضا على بعد 10 دقائق بالسيارة من وسط مدينة باتونغ، حيث تتوفر العديد من الأنشطة الترفيهية والتسوق.",
     descriptionEN:
@@ -270,7 +270,7 @@ export const Thailand = [
     url: "https://www.phuketgraceland.com/",
     nameEN: "Phuket Graceland Resort & Spa",
     nameRU: "Пхукет Грейсленд Резорт энд Спа",
-    src: "/images/progarams/Thailand/10.webp",
+    src: "/images/Thailand/10.webp",
     descriptionAR:
       "منتجع بوكيت غريسلاند يتميز بموقعه الاستراتيجي على جزيرة بوكيت، التي تعد واحدة من أجمل الجزر في تايلاند. يقع المنتجع على بُعد مسافة قصيرة من الشواطئ الرملية البيضاء ومياه البحر الزرقاء الفيروزية، مما يجعله مكانًا مثاليًا للاستمتاع بالأنشطة المائية والاسترخاء على الشاطئ.",
     descriptionEN:
@@ -289,7 +289,7 @@ export const Thailand = [
     nameEN: "Doi Inthanon National Park",
     nameAR: "حديقة دوى أنتانون الوطنية شنغماي",
     nameRU: "Национальный парк Дой Интанон",
-    src: "/images/progarams/Thailand/11.webp",
+    src: "/images/Thailand/11.webp",
     descriptionAR:
       "حديقة دوي أنتانون الوطنية تقع في أعلى جبل في تايلاند، وتتمتع بالمناظر الخلابة الطبيعية، وهي من أفضل الأماكن السياحية في شنغماي التي تمتد على مساحة 482 كيلو متر مربع.",
     descriptionEN:
@@ -302,7 +302,7 @@ export const Thailand = [
     nameEN: "Chiang Mai Night Safari",
     nameAR: "حديقة سفاري شنغماي الليلية",
     nameRU: "Ночной сафари-парк Чиангмай",
-    src: "/images/progarams/Thailand/12.webp",
+    src: "/images/Thailand/12.webp",
     descriptionAR:
       "يمكنك الاستمتاع في الحياة الليلية في شنغماي من خلال السفاري الليلية، حيث تمتد الحديقة على مساحة 328 فدان، ويمكن مشاهدة مجموعة واسعة من الحيوانات بما في ذلك الزراف، النمور، الأسود وهي من أفضل الأماكن السياحية في شنغماي تستحق الزيارة. ",
     descriptionEN:
@@ -315,7 +315,7 @@ export const Thailand = [
     nameEN: "Huay Kaew Waterfall",
     nameAR: "شلال هواي كايو شنغماي",
     nameRU: "Водопад Хуай Каев",
-    src: "/images/progarams/Thailand/13.webp",
+    src: "/images/Thailand/13.webp",
     descriptionAR:
       "تعتبر شلال هواي كايو شنغماي من أفضل أماكن السياحة في شنغماي، يمكنك التنزه في رحلة استكشافية لاستكشاف هذا المكان الرائع والاستمتاع بالمياه الجارية الرائعة",
     descriptionEN:
@@ -328,7 +328,7 @@ export const Thailand = [
     nameEN: "Wat Phra Singh",
     nameAR: "معبد وات فرا سينغ شنغماي",
     nameRU: "Ват Пхра Сингх",
-    src: "/images/progarams/Thailand/14.webp",
+    src: "/images/Thailand/14.webp",
     descriptionAR:
       "معبد الجبل الذهبي في شنغماي، أفضل الأماكن السياحية في شنغماي، حيث تعلق على سفح الجبل وسط إطلالات بانورامية على مدينة شنغماي.",
     descriptionEN:
@@ -347,14 +347,14 @@ export const Thailand = [
     url: "http://www.bellanarahotel.com/",
     nameEN: "Bella Nara Hotel",
     nameRU: "Гостиница Белла Нара",
-    src: "/images/progarams/Thailand/15.webp",
+    src: "/images/Thailand/15.webp",
   },
   {
     nameAR: "The Dhara Dhevi Chiang Mai Hotel",
     url: "https://www.agoda.com/the-dhara-dhevi-hotel-chiang",
     nameEN: "The Dhara Dhevi Chiang Mai Hotel",
     nameRU: "Отель Дхара Дхеви Чианг Май",
-    src: "/images/progarams/Thailand/16.webp",
+    src: "/images/Thailand/16.webp",
     descriptionAR:
       "يعد منتجعات ذا دارا ديفي شيانغ ماي الذي يضم 123 غرفة من أفضل الفنادق الفاخرة في شنغماي، وقد تم بناءه ليشابه مملكة لانا القديمة أو مجمع المعابد البورمية، تتكون الفيلات التي تحتوي على أحواض غطس خاصة تطل على حقول الأرز، وتتنوع خيارات تناول الطعام من المطبخ الفرنسي الرائع إلى المأكولات التايلاندية الملكية. يمكن للضيوف أيضًا الوصول إلى مكتبة تضم أكثر من 5000 كتاب.",
     descriptionEN:
@@ -367,7 +367,7 @@ export const Thailand = [
     url: "https://www.shangri-la.com/chiangmai/shangrila/ ",
     nameEN: "Shangri-La Chiang Mai",
     nameRU: "Шангри-Ла Чиангмай",
-    src: "/images/progarams/Thailand/17.webp",
+    src: "/images/Thailand/17.webp",
     descriptionAR:
       "يمتد فندق شانجريلا شنغماي على مساحة كبيرة في وسط المدينة، مما يتيح لك الكثير من الميزات الفاخرة؛ بما في ذلك أكبر حمام سباحة في المدينة، ونادي صحي واسع، ومنتجع صحي شهير، والكثير من خيارات تناول الطعام والشراب، من مطعم صيني أنيق إلى مقهى رائع، كما تحتوي الغرف الواسعة والأنيقة على أحواض استحمام كبيرة وإطلالة رائعة على المدينة والجبل.",
     descriptionEN:
@@ -390,7 +390,7 @@ export const Thailand = [
     nameEN: "Jomtien Beach",
     nameAR: "شاطئ جومتين",
     nameRU: "Пляж Джомтьен",
-    src: "/images/progarams/Thailand/18.webp",
+    src: "/images/Thailand/18.webp",
     descriptionAR:
       "يتميز بموقعه الرائع ورماله الناعمة البيضاء ومياهه النقية وشمسه الدافئة حيث يأتي إليه السياح عند السياحة إلى تايلاند لقضاء أوقات ممتعة والقيام برحلة شيقة لا تنسى.يعتبر شاطئ جومتين من أهم الوجهات السياحية في بتايا حيث يتيح الفرصة للسائح التمتع بالتنزه في الشاطئ ورؤية سحر الطبيعة والاستمتاع بالأمواج المتلاحقة، كما يتيح فرصة ممارسة بعض الرياضات المائية مثل السباحة والغوص في مياهه الدافئة والنقية.",
     descriptionEN:
@@ -403,7 +403,7 @@ export const Thailand = [
     nameEN: "Ramayana Water Park",
     nameAR: "حديقة راميانا المائية",
     nameRU: "Водный парк Рамаяна",
-    src: "/images/progarams/Thailand/19.webp",
+    src: "/images/Thailand/19.webp",
     descriptionAR:
       "تعتبر حديقة راميانا من أكبر الحدائق المائية في بتايا، توجد هذه الحديقة على بعد 15كم في جنوب مدينة باتايا تم افتتاحها بشكل رسمي في عام 2016م، تعتبر من أفضل الأماكن المثالية لقضاء وقت ممتع وعطلة ترفيهية مع الأصدقاء والعائلة",
     descriptionEN:
@@ -416,7 +416,7 @@ export const Thailand = [
     nameEN: "Teddy Bear Museum",
     nameAR: "متحف تيدي بير",
     nameRU: "Музей плюшевых мишек",
-    src: "/images/progarams/Thailand/20.webp",
+    src: "/images/Thailand/20.webp",
     descriptionAR:
       "يعتبر متحف تيدي بير أو ما يطلق عليه أيضاً جزيرة تيدي هو من أجمل الأماكن السياحية في بتايا حيث يذهب إليها السائح لخوض تجربة مثيرة ومدهشة جداً أثناء السياحة في تايلاند. يوجد المتحف في شمال بتايا في نهاية ساحل المدينة، الهيكل الخارجي للمتحف مصمم على هيئة قارب تنين ضخم على ارتفاع 40متراً.",
     descriptionEN:
@@ -429,7 +429,7 @@ export const Thailand = [
     nameEN: "Sanctuary of Truth",
     nameAR: "معبد الحقيقة",
     nameRU: "Святилище Истины",
-    src: "/images/progarams/Thailand/21.webp",
+    src: "/images/Thailand/21.webp",
     descriptionAR:
       "هو من أهم الوجهات السياحية في تايلاند، ومن أشهر معابد بتايا فهو يعتبر تحفة من التحف المصنوعة بالكامل من الخشب بدون مسامير معدنية، حيث تم إنشاؤه بهدف الحفاظ على تقنيات البناء التقليدية ولعرض مهارات الأعمال الخشبية والتي تم حفرها يدوياً. يقع المعبد في شمال بتايا على طريق نا كلوا فهي عبارة عن قلعة خشبية كبيرة ذات اطلالات ساحرة علي البحر.",
     descriptionEN:
@@ -442,7 +442,7 @@ export const Thailand = [
     nameEN: "Sriracha Tiger Zoo",
     nameAR: "حديقة حيوان سريراتشا تايجر",
     nameRU: "Тигровый зоопарк Срирача",
-    src: "/images/progarams/Thailand/22.webp",
+    src: "/images/Thailand/22.webp",
     descriptionAR:
       'تعتبر حديقة حيوان سريراتشا تايجر بتايا "Sriracha Tiger Zoo" من أهم الاماكن السياحية في بتايا، تبلغ مساحتها 400000 متر مربع، وتقع على بعد 30 دقيقة من جنوب بتايا تم افتتاحها رسمياً في عام 1997م.تنقسم الحديقة إلى أربع مناطق رئيسية منها منطقة تتكاثر فيها النمور ومنطقة لعرض المواهب وأخري للحيوانات المختلفة والأخيرة فهي مخصصة للتماسيح.',
     descriptionEN:
@@ -461,7 +461,7 @@ export const Thailand = [
     url: "https://all.accor.com/hotel/8889/index.en.shtml?utm",
     nameEN: "Mercure Pattaya Ocean Resort",
     nameRU: "Меркюр Паттайя Оушен Резорт",
-    src: "/images/progarams/Thailand/23.webp",
+    src: "/images/Thailand/23.webp",
     descriptionAR:
       "يقع هذا المنتجع على بعد 6 دقائق سيرًا من الشاطئ يقع منتجع ميركيور باتايا أوشن على بعد 500 متر من ملهى الكزار، يقع الفندق على بعد 200 متر من Art In Paradise و900 متر من مقهى هارد روك. ويقع مطار سوفارنابومي على بعد 84 كم. يمكن ترتيب خدمات نقل المطار مقابل تكلفة إضافية. وتتوفر مواقف للسيارات في المنتجع.",
     descriptionEN:
@@ -474,7 +474,7 @@ export const Thailand = [
     url: "https://mytthotel.com/",
     nameEN: "Mytt Hotel Pattaya",
     nameRU: "Майтт Отель Паттайя",
-    src: "/images/progarams/Thailand/24.webp",
+    src: "/images/Thailand/24.webp",
     descriptionAR:
       "يقع فندق Mytt Hotel Pattaya في قلب شمال بتايا، يقع على بُعد 1.5 كم من منتجع هيلث لاند ويبعد حوالي 2.5 كم من ميني سيام. يقع مطار يو تابو رايونغ بتايا على مسافة 32 كم من مكان الإقامة.",
     descriptionEN:

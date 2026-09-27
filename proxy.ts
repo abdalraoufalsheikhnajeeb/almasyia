@@ -65,6 +65,8 @@ export function proxy(request: NextRequest) {
   const url = new URL(newPath + search, request.url);
 
   const response = NextResponse.redirect(url);
+  response.headers.set("Cache-Control", "private, no-store");
+  response.headers.set("Vary", "Accept-Language, Cookie");
 
   // Refresh the locale cookie so the choice persists for future visits.
   // If there's no cookie yet, store the detected one so we don't run the

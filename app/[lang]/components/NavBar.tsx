@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -67,6 +67,7 @@ const NavItem = ({
 
 const Navbar = ({ lang, labels }: { lang: Locale; labels: NavLabels }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const triggerRef = useRef<HTMLButtonElement>(null);
   const pathName = usePathname() ?? "";
 
   const isActive = (path: string) => {
@@ -78,8 +79,14 @@ const Navbar = ({ lang, labels }: { lang: Locale; labels: NavLabels }) => {
 
   return (
     <nav
+      onKeyDown={(event) => {
+        if (event.key === "Escape" && !event.defaultPrevented) {
+          setIsOpen(false);
+          triggerRef.current?.focus();
+        }
+      }}
       className="fixed top-0 z-50 w-full border-b border-white/40 bg-white/85 backdrop-blur-xl backdrop-saturate-150 shadow-[0_2px_16px_rgba(36,75,107,0.06)]"
-      aria-label="Primary"
+      aria-label={lang === "ar" ? "التنقل الرئيسي" : lang === "ru" ? "Основная навигация" : "Primary"}
     >
       {/* ===== Top bar ===== */}
       <div className="flex w-full items-center justify-between gap-3 px-4 py-2 sm:px-6 lg:px-[5vw]">
@@ -94,6 +101,7 @@ const Navbar = ({ lang, labels }: { lang: Locale; labels: NavLabels }) => {
             className="h-12 w-auto object-contain sm:h-14 md:h-16"
             priority
             width={200}
+            sizes="(min-width: 768px) 94px, 82px"
             height={136}
             src="/images/logo.webp"
             alt="Alnujoom Almasiya logo"
@@ -127,16 +135,17 @@ const Navbar = ({ lang, labels }: { lang: Locale; labels: NavLabels }) => {
         {/* Right side: Theme + Locale (always visible) + Burger (mobile) */}
         <div className="flex flex-shrink-0 items-center gap-2">
           <ThemeToggle lang={lang} />
-          <LocaleSwitcher />
+          <LocaleSwitcher onSelect={() => setIsOpen(false)} />
 
           {/* Burger Button (Mobile) */}
           <button
+            ref={triggerRef}
             type="button"
             onClick={() => setIsOpen(!isOpen)}
-            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-label={lang === "ar" ? (isOpen ? "إغلاق القائمة" : "فتح القائمة") : lang === "ru" ? (isOpen ? "Закрыть меню" : "Открыть меню") : (isOpen ? "Close navigation menu" : "Open navigation menu")}
             aria-expanded={isOpen}
             aria-controls="mobile-nav"
-            className="inline-flex items-center justify-center rounded-lg p-2 text-primary transition-colors hover:bg-slate-100 md:hidden"
+            className="inline-flex items-center justify-center rounded-lg p-3 text-primary transition-colors hover:bg-slate-100 md:hidden"
           >
             <svg
               className="h-6 w-6"

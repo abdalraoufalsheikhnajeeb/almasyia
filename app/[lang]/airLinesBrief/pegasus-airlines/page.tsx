@@ -16,7 +16,7 @@ export async function generateMetadata({
     path: "/airLinesBrief/pegasus-airlines",
     title: AIRLINES_SEO["pegasus-airlines"].title,
     description: AIRLINES_SEO["pegasus-airlines"].description,
-    imageUrl: "/images/pegasus.webp",
+    imageUrl: "/images/pegasusairlines.webp",
   });
 }
 

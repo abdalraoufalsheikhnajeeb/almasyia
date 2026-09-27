@@ -35,7 +35,7 @@ export default async function Page({
   });
 
   return (
-    <main>
+    <div>
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -48,6 +48,6 @@ export default async function Page({
         subtitle={dic.tourismProgaramsText}
         data={tourismProgarams}
       />
-    </main>
+    </div>
   );
 }

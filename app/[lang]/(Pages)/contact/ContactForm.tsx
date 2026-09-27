@@ -1,4 +1,5 @@
 "use client";
+import FormPrivacyNotice from "../../components/FormPrivacyNotice";
 
 import { useState } from "react";
 import Image from "next/image";
@@ -347,9 +348,9 @@ export default function ContactForm({ lang }: { lang: Locale }) {
                 <IconWhatsapp className="h-6 w-6" />
               </span>
               <div className="min-w-0 flex-1">
-                <h3 className="text-base font-bold text-primary">
+                <h2 className="text-base font-bold text-primary">
                   {t(dictionary.qaWhatsappTitle, lang)}
-                </h3>
+                </h2>
                 <p className="text-xs text-slate-600 lg:text-sm">
                   {t(dictionary.qaWhatsappDesc, lang)}
                 </p>
@@ -395,9 +396,9 @@ export default function ContactForm({ lang }: { lang: Locale }) {
                 <IconPhone className="h-6 w-6" />
               </span>
               <div className="min-w-0 flex-1">
-                <h3 className="text-base font-bold text-primary">
+                <h2 className="text-base font-bold text-primary">
                   {t(dictionary.qaCallTitle, lang)}
-                </h3>
+                </h2>
                 <p className="text-xs text-slate-600 lg:text-sm">
                   {t(dictionary.qaCallDesc, lang)}
                 </p>
@@ -443,9 +444,9 @@ export default function ContactForm({ lang }: { lang: Locale }) {
                 <IconMail className="h-6 w-6" />
               </span>
               <div className="min-w-0 flex-1">
-                <h3 className="text-base font-bold text-primary">
+                <h2 className="text-base font-bold text-primary">
                   {t(dictionary.qaEmailTitle, lang)}
-                </h3>
+                </h2>
                 <p className="text-xs text-slate-600 lg:text-sm">
                   {t(dictionary.qaEmailDesc, lang)}
                 </p>
@@ -464,9 +465,9 @@ export default function ContactForm({ lang }: { lang: Locale }) {
             <div className="card-elegant overflow-hidden p-6 lg:p-8">
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <h3 className="text-xl font-bold text-primary lg:text-2xl">
+                  <h2 className="text-xl font-bold text-primary lg:text-2xl">
                     {t(dictionary.sendUsMessage, lang)}
-                  </h3>
+                  </h2>
                   <p className="mt-1 text-sm text-slate-500">
                     {t(dictionary.formIntro, lang)}
                   </p>
@@ -579,7 +580,7 @@ export default function ContactForm({ lang }: { lang: Locale }) {
                   <button
                     type="submit"
                     disabled={status.loading}
-                    className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-accent to-[#c89e4f] px-7 py-3 text-sm font-bold text-white shadow-lg shadow-accent/30 transition-all hover:-translate-y-0.5 hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-60"
+                    className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-accent to-[#c89e4f] px-7 py-3 text-sm font-bold text-[#172b3a] shadow-lg shadow-accent/30 transition-all hover:-translate-y-0.5 hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-60"
                   >
                     {status.loading ? (
                       <>
@@ -617,6 +618,7 @@ export default function ContactForm({ lang }: { lang: Locale }) {
                     )}
                   </button>
                 </div>
+                <FormPrivacyNotice lang={lang} provider="Formspree" />
               </form>
             </div>
           </div>
@@ -631,9 +633,9 @@ export default function ContactForm({ lang }: { lang: Locale }) {
                 <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-litePrimary/10 text-litePrimary">
                   <IconMapPin className="h-4 w-4" />
                 </span>
-                <h3 className="text-lg font-bold text-primary lg:text-xl">
+                <h2 className="text-lg font-bold text-primary lg:text-xl">
                   {t(dictionary.ourOffices, lang)}
-                </h3>
+                </h2>
               </div>
 
               <ul className="mt-5 space-y-4">
@@ -650,9 +652,9 @@ export default function ContactForm({ lang }: { lang: Locale }) {
                         width={28}
                         height={28}
                       />
-                      <h4 className="text-base font-bold text-primary">
+                      <h3 className="text-base font-bold text-primary">
                         {t(loc.countryName, lang)}
-                      </h4>
+                      </h3>
                     </div>
                     <p className="mt-3 flex items-start gap-2 text-sm leading-relaxed text-slate-600">
                       <IconMapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-slate-400" />

@@ -19,7 +19,8 @@ const nextConfig = {
   compress: true,
   images: {
     formats: ["image/avif", "image/webp"],
-    minimumCacheTTL: 31536000,
+    minimumCacheTTL: 86400,
+    qualities: [50, 60, 70, 75, 80],
   },
   experimental: {
     optimizePackageImports: ["date-fns", "embla-carousel-react"],
@@ -32,8 +33,13 @@ const nextConfig = {
       },
     ];
   },
-  // Locale redirects are handled by middleware.ts based on the user's
-  // browser preference and saved cookie — see Accept-Language detection.
+  async redirects() {
+    return [{
+      source: "/:lang(en|ar|ru)/airLinesBrief/ChamWingsAirlines",
+      destination: "/:lang/airLinesBrief/FlyChamAirlines",
+      permanent: true,
+    }];
+  },
 };
 
 module.exports = nextConfig;

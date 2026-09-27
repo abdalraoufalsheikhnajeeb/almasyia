@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useRef, useState } from "react";
 
 type Theme = "light" | "dark" | "system";
 
@@ -15,8 +15,12 @@ const applyTheme = (theme: Theme) => {
 
 const readSaved = (): Theme => {
   if (typeof window === "undefined") return "system";
-  const v = localStorage.getItem(STORAGE_KEY);
-  if (v === "light" || v === "dark" || v === "system") return v;
+  try {
+    const value = localStorage.getItem(STORAGE_KEY);
+    if (value === "light" || value === "dark" || value === "system") return value;
+  } catch {
+    return "system";
+  }
   return "system";
 };
 
@@ -86,6 +90,8 @@ export default function ThemeToggle({ lang = "en" }: { lang?: string }) {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const panelId = useId();
 
   // After mount, sync state with what the inline script already applied.
   // Intentional mount-time state sync — the brief cascade is desired so we
@@ -123,8 +129,18 @@ export default function ThemeToggle({ lang = "en" }: { lang?: string }) {
     const onClick = (e: MouseEvent) => {
       if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
     };
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && ref.current?.contains(event.target as Node)) {
+        setOpen(false);
+        triggerRef.current?.focus();
+      }
+    };
     document.addEventListener("mousedown", onClick);
-    return () => document.removeEventListener("mousedown", onClick);
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", onClick);
+      document.removeEventListener("keydown", onKeyDown);
+    };
   }, [open]);
 
   const labels = LABELS[lang] ?? LABELS.en;
@@ -137,9 +153,9 @@ export default function ThemeToggle({ lang = "en" }: { lang?: string }) {
       <button
         type="button"
         aria-label={labels.aria}
-        className="flex h-9 w-9 items-center justify-center rounded-full border border-white/50 bg-white/60 text-primary shadow-sm backdrop-blur-md"
+        className="flex h-11 w-11 items-center justify-center rounded-full border border-white/50 bg-white/60 text-primary shadow-sm backdrop-blur-md"
       >
-        <SystemIcon className="h-4 w-4" />
+        <SystemIcon className="h-5 w-5" />
       </button>
     );
   }
@@ -147,26 +163,27 @@ export default function ThemeToggle({ lang = "en" }: { lang?: string }) {
   return (
     <div className="relative" ref={ref}>
       <button
+        ref={triggerRef}
         type="button"
         onClick={() => setOpen((o) => !o)}
-        aria-haspopup="listbox"
+        aria-controls={open ? panelId : undefined}
         aria-expanded={open}
         aria-label={labels.aria}
         title={labels.aria}
-        className="group relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-full border border-white/50 bg-white/60 text-primary shadow-sm backdrop-blur-md transition-all hover:border-white/80 hover:bg-white/80 hover:shadow"
+        className="group relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-full border border-white/50 bg-white/60 text-primary shadow-sm backdrop-blur-md transition-all hover:border-white/80 hover:bg-white/80 hover:shadow"
       >
         {/* Animated icon transition */}
         <span
           key={theme}
           className="animate-fade-in flex items-center justify-center"
         >
-          <ActiveIcon className="h-4 w-4" />
+          <ActiveIcon className="h-5 w-5" />
         </span>
       </button>
 
       {open && (
         <ul
-          role="listbox"
+          id={panelId}
           aria-label={labels.aria}
           className="animate-fade-in glass-strong absolute end-0 z-50 mt-2 w-40 overflow-hidden rounded-xl border border-white/50 py-1 shadow-lg"
         >
@@ -183,11 +200,12 @@ export default function ThemeToggle({ lang = "en" }: { lang?: string }) {
           ).map((opt) => {
             const active = theme === opt.value;
             return (
-              <li key={opt.value} role="option" aria-selected={active}>
+              <li key={opt.value}>
                 <button
                   type="button"
+                  aria-pressed={active}
                   onClick={() => update(opt.value)}
-                  className={`flex w-full items-center gap-3 px-3 py-2 text-sm transition-colors ${
+                  className={`flex min-h-11 w-full items-center gap-3 px-3 py-2 text-sm transition-colors ${
                     active
                       ? "bg-white/50 font-semibold text-primary"
                       : "text-slate-700 hover:bg-white/40"

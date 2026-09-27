@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { Locale } from "../../../../i18n-config";
 import DeliveryForm from "../../components/DeliveryForm";
+import ServiceGuide from "../../components/ServiceGuide";
 import AnTitle from "../../components/AnTitle";
 import { getDictionary } from "../../../../get-dictionary";
 import { buildPageMetadata, buildServiceJsonLd, SITE_URL } from "../../seo";
@@ -32,7 +33,7 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
   });
 
   return (
-    <main className="mx-auto max-w-7xl px-4 py-8 lg:py-12">
+    <div className="mx-auto max-w-7xl px-4 py-8 lg:py-12">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -51,6 +52,7 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
             className="w-full h-auto object-cover"
             width={840}
             height={480}
+            sizes="(min-width: 1024px) 60vw, 100vw"
             src="/images/papersDelivery.webp"
             alt="Papers Delivery"
           />
@@ -59,7 +61,8 @@ const page = async ({ params }: { params: Promise<{ lang: string }> }) => {
           <DeliveryForm lang={lang} />
         </div>
       </div>
-    </main>
+      <ServiceGuide lang={lang} service="documents" />
+    </div>
   );
 };
 export default page;

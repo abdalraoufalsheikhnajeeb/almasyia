@@ -177,7 +177,7 @@ export default async function page({
         subtitle={content.tagline}
       />
 
-      <main
+      <div
         className="relative mx-auto -mt-12 max-w-7xl px-6 pb-16 lg:-mt-16"
         dir={isRTL ? "rtl" : "ltr"}
       >
@@ -261,9 +261,9 @@ export default async function page({
 
               {/* Highlights grid */}
               <div>
-                <h3 className="mb-3 text-sm font-bold uppercase tracking-wider text-primary">
+                <h2 className="mb-3 text-sm font-bold uppercase tracking-wider text-primary">
                   {content.highlightsTitle}
-                </h3>
+                </h2>
                 <div className="grid grid-cols-2 gap-3">
                   {content.highlights.map((item, idx) => (
                     <div
@@ -283,9 +283,9 @@ export default async function page({
 
               {/* Partners chips */}
               <div>
-                <h3 className="text-sm font-bold uppercase tracking-wider text-primary">
+                <h2 className="text-sm font-bold uppercase tracking-wider text-primary">
                   {content.partnersTitle}
-                </h3>
+                </h2>
                 <p className="mt-1 text-xs text-slate-500">
                   {content.partnersSubtitle}
                 </p>
@@ -317,9 +317,9 @@ export default async function page({
               <div className="mt-2 rounded-2xl border border-slate-200/60 bg-gradient-to-br from-primary/5 to-litePrimary/5 p-5">
                 <div className="mb-4 flex items-start justify-between gap-3">
                   <div>
-                    <h3 className="text-base font-bold text-primary lg:text-lg">
+                    <h2 className="text-base font-bold text-primary lg:text-lg">
                       {content.contactTitle}
-                    </h3>
+                    </h2>
                     <p className="text-xs text-slate-500 lg:text-sm">
                       {content.contactSubtitle}
                     </p>
@@ -423,7 +423,7 @@ export default async function page({
             </div>
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
 }
