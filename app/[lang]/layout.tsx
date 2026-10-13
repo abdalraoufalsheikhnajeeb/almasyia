@@ -127,7 +127,7 @@ export default async function RootLayout({
       </head>
       <body
         dir={isArabic ? "rtl" : "ltr"}
-        className={`overflow-x-hidden ${tajawal.className} ${tajawal.variable}`}
+        className={`overflow-x-hidden pb-24 sm:pb-0 ${tajawal.className} ${tajawal.variable}`}
       >
         <script
           type="application/ld+json"

@@ -408,9 +408,11 @@ html.dark {
   box-shadow: 0 0 0 3px rgba(49, 103, 146, 0.2);
 }
 
-/* Date picker icon — invert in dark mode for visibility */
-html.dark .input-elegant::-webkit-calendar-picker-indicator {
-  filter: invert(0.85);
+/* Native date controls inherit color-scheme from html. Inverting the browser's
+   dark icon a second time makes it almost invisible on the input surface. */
+
+html.dark .contact-quick-gradient {
+  background-image: none;
 }
 
 /* Floating action button base (legacy) */

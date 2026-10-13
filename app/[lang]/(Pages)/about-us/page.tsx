@@ -182,9 +182,9 @@ export default async function page({
         dir={isRTL ? "rtl" : "ltr"}
       >
         <div className="glass-strong overflow-hidden rounded-3xl">
-          <div className="grid gap-0 lg:grid-cols-12">
+          <div className="grid grid-cols-1 gap-0 lg:grid-cols-12">
             {/* ============ Text side ============ */}
-            <div className="flex flex-col gap-7 p-7 lg:col-span-7 lg:p-12">
+            <div className="flex min-w-0 flex-col gap-7 p-7 lg:col-span-7 lg:p-12">
               {/* Logo + accent stripe */}
               <div className="flex items-center gap-4">
                 <Image
@@ -224,14 +224,14 @@ export default async function page({
                   <p className="text-xs font-semibold uppercase tracking-wider text-accent">
                     {content.founderTitle}
                   </p>
-                  <p className="truncate text-base font-bold text-primary lg:text-lg">
+                  <p className="break-words text-base font-bold text-primary lg:text-lg">
                     {content.founderName}
                   </p>
-                  <p className="truncate text-xs text-slate-500 lg:text-sm">
+                  <p className="break-words text-xs leading-relaxed text-slate-500 lg:text-sm">
                     {content.founderRole}
                   </p>
                 </div>
-                <span className="hidden sm:inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-700 ring-1 ring-emerald-200">
+                <span className="hidden sm:inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-700 dark:text-emerald-300 ring-1 ring-emerald-200">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"

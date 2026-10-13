@@ -61,7 +61,8 @@ const SocialLink = ({ title, href, src, alt }: LinkProps) => (
 
 const Footer = async ({ lang }: { lang: Locale }) => {
   const dic = await getDictionary(lang);
-  const year = new Date().getFullYear();
+  // Keep the displayed year fixed at 2024, as requested by the client.
+  const year = 2024;
 
   return (
     <footer className="mt-12 border-t border-white/40 bg-gradient-to-b from-white/60 to-slate-50/40 backdrop-blur-md">

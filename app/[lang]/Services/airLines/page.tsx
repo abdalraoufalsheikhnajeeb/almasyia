@@ -44,16 +44,9 @@ export default async function page({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <h1 className="sr-only">{SERVICES_SEO.airLines.title[lang]}</h1>
+      <Slider dic={dic} title={dic.agents} data={agents} compact />
       <div className="w-full flex justify-center px-4">
         <FlightBookingForm dic={dic} />
-      </div>
-      <Slider dic={dic} title={dic.agents} data={agents} compact />
-      <div aria-hidden="true" className="mx-auto flex w-full max-w-3xl items-center gap-4 px-6 text-primary">
-        <span className="h-px flex-1 bg-slate-300" />
-        <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6">
-          <path d="M2.5 19h19v2h-19v-2zm19.07-9.94c-.21-.79-1.02-1.26-1.81-1.05L14.92 9.2 8.46 3.17 6.53 3.68l3.87 6.7-4.66 1.24-1.85-1.45-1.45.39 1.96 3.39.78 1.34 1.6-.43 5.31-1.42 4.31-1.16 5.65-1.51c.79-.22 1.26-1.03 1.05-1.81z" />
-        </svg>
-        <span className="h-px flex-1 bg-slate-300" />
       </div>
       <Slider dic={dic} title={dic.OurPartners} data={partners} compact />
       <ServiceGuide lang={lang} service="travel" />

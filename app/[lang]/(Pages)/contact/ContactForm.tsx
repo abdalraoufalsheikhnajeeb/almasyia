@@ -341,7 +341,7 @@ export default function ContactForm({ lang }: { lang: Locale }) {
           >
             <span
               aria-hidden="true"
-              className="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-50/80 via-white to-white"
+              className="contact-quick-gradient pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-50/80 via-white to-white"
             />
             <div className="relative flex items-start gap-4">
               <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#25d366] to-[#128c7e] text-white shadow-md shadow-emerald-500/30 transition-transform group-hover:scale-110">
@@ -354,7 +354,7 @@ export default function ContactForm({ lang }: { lang: Locale }) {
                 <p className="text-xs text-slate-600 lg:text-sm">
                   {t(dictionary.qaWhatsappDesc, lang)}
                 </p>
-                <span className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700">
+                <span className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 dark:text-emerald-300">
                   <span className="flex -space-x-1.5 rtl:space-x-reverse">
                     <Image
                       className="h-4 w-4 rounded-full object-cover ring-1 ring-white"
@@ -389,7 +389,7 @@ export default function ContactForm({ lang }: { lang: Locale }) {
           >
             <span
               aria-hidden="true"
-              className="pointer-events-none absolute inset-0 bg-gradient-to-br from-sky-50/80 via-white to-white"
+              className="contact-quick-gradient pointer-events-none absolute inset-0 bg-gradient-to-br from-sky-50/80 via-white to-white"
             />
             <div className="relative flex items-start gap-4">
               <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-litePrimary to-primary text-white shadow-md shadow-litePrimary/30 transition-transform group-hover:scale-110">
@@ -437,7 +437,7 @@ export default function ContactForm({ lang }: { lang: Locale }) {
           >
             <span
               aria-hidden="true"
-              className="pointer-events-none absolute inset-0 bg-gradient-to-br from-amber-50/80 via-white to-white"
+              className="contact-quick-gradient pointer-events-none absolute inset-0 bg-gradient-to-br from-amber-50/80 via-white to-white"
             />
             <div className="relative flex items-start gap-4">
               <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-accent to-[#c89e4f] text-white shadow-md shadow-accent/30 transition-transform group-hover:scale-110">
@@ -450,7 +450,7 @@ export default function ContactForm({ lang }: { lang: Locale }) {
                 <p className="text-xs text-slate-600 lg:text-sm">
                   {t(dictionary.qaEmailDesc, lang)}
                 </p>
-                <span className="mt-2 inline-block truncate text-xs font-semibold text-[#a37c2a]">
+                <span className="mt-2 inline-block text-xs font-semibold text-accent [overflow-wrap:anywhere]">
                   info@alnujoomalmasiya.com
                 </span>
               </div>
@@ -472,7 +472,7 @@ export default function ContactForm({ lang }: { lang: Locale }) {
                     {t(dictionary.formIntro, lang)}
                   </p>
                 </div>
-                <span className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700 ring-1 ring-emerald-200">
+                <span className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700 dark:text-emerald-300 ring-1 ring-emerald-200">
                   <span className="relative flex h-2 w-2">
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
                     <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
@@ -560,7 +560,7 @@ export default function ContactForm({ lang }: { lang: Locale }) {
                 {status.success && (
                   <div
                     role="status"
-                    className="flex items-start gap-3 rounded-xl border border-emerald-200 bg-emerald-50 p-3.5 text-sm font-medium text-emerald-800"
+                    className="flex items-start gap-3 rounded-xl border border-emerald-200 bg-emerald-50 p-3.5 text-sm font-medium text-emerald-800 dark:text-emerald-200"
                   >
                     <IconCheck className="mt-0.5 h-5 w-5 flex-shrink-0 text-emerald-600" />
                     <span>{status.success}</span>
@@ -569,7 +569,7 @@ export default function ContactForm({ lang }: { lang: Locale }) {
                 {status.error && (
                   <div
                     role="alert"
-                    className="flex items-start gap-3 rounded-xl border border-rose-200 bg-rose-50 p-3.5 text-sm font-medium text-rose-800"
+                    className="flex items-start gap-3 rounded-xl border border-rose-200 bg-rose-50 p-3.5 text-sm font-medium text-rose-800 dark:text-rose-200"
                   >
                     <IconAlert className="mt-0.5 h-5 w-5 flex-shrink-0 text-rose-600" />
                     <span>{status.error}</span>
@@ -673,7 +673,7 @@ export default function ContactForm({ lang }: { lang: Locale }) {
                         href={loc.whatsapp}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-50 px-2.5 py-1.5 text-xs font-semibold text-emerald-700 ring-1 ring-emerald-200/60 transition-colors hover:bg-emerald-100"
+                        className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-50 px-2.5 py-1.5 text-xs font-semibold text-emerald-700 dark:text-emerald-300 ring-1 ring-emerald-200/60 transition-colors hover:bg-emerald-100"
                       >
                         <IconWhatsapp className="h-3.5 w-3.5" />
                         WhatsApp

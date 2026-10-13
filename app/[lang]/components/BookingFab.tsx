@@ -38,27 +38,23 @@ export default function BookingFab({
       title={label}
       data-visible={visible || undefined}
       className={[
-        // Position: vertically centered, snug against the edge
-        "group fixed top-1/2 z-40 -translate-y-1/2",
-        // Layout: vertical stack on desktop, compact on mobile
-        "flex flex-col items-center justify-center gap-1.5 sm:gap-2",
+        // Keep the middle of small screens clear for form fields and text.
+        "group fixed bottom-5 left-1/2 z-40 -translate-x-1/2 sm:bottom-auto sm:top-1/2 sm:translate-x-0 sm:-translate-y-1/2",
+        "flex flex-row items-center justify-center gap-1.5 sm:flex-col sm:gap-2",
         // Sizing
-        "min-h-11 min-w-11 px-2 py-3 sm:px-2.5 sm:py-4",
+        "min-h-11 min-w-11 max-w-[calc(100vw-10rem)] px-3 py-2 sm:max-w-none sm:px-2.5 sm:py-4",
         // Visuals: gold gradient with subtle ring
         "bg-gradient-to-b from-accent to-[#c89e4f] text-[#172b3a]",
         "ring-1 ring-white/30",
         "shadow-[0_8px_28px_rgba(211,177,103,0.45)]",
-        // Shape — rounded on inside edge only, flush to viewport edge
-        isRTL ? "left-0 rounded-r-2xl" : "right-0 rounded-l-2xl",
+        // Mobile pill; rounded on the inside edge of the desktop tab.
+        isRTL
+          ? "rounded-full sm:left-0 sm:rounded-l-none sm:rounded-r-2xl"
+          : "rounded-full sm:left-auto sm:right-0 sm:rounded-r-none sm:rounded-l-2xl",
         // Smooth transitions
         "transition-[transform,opacity,box-shadow] duration-500 ease-out",
         // Hover micro-interaction
         "hover:shadow-[0_10px_36px_rgba(211,177,103,0.6)] hover:brightness-105",
-        // Show/hide animation
-        visible
-          ? "opacity-100 translate-x-0"
-          : "opacity-0 pointer-events-none " +
-            (isRTL ? "-translate-x-full" : "translate-x-full"),
       ].join(" ")}
     >
       {/* Subtle inner highlight */}
@@ -66,7 +62,7 @@ export default function BookingFab({
         aria-hidden="true"
         className={[
           "pointer-events-none absolute inset-0",
-          isRTL ? "rounded-r-2xl" : "rounded-l-2xl",
+          "rounded-[inherit]",
           "bg-gradient-to-b from-white/25 via-transparent to-transparent",
         ].join(" ")}
       />
@@ -84,12 +80,7 @@ export default function BookingFab({
 
       {/* Keep the booking action readable on mobile too. */}
       <span
-        className="relative text-xs font-bold leading-snug"
-        style={{
-          writingMode: "vertical-rl",
-          textOrientation: "mixed",
-          transform: isRTL ? "rotate(180deg)" : "none",
-        }}
+        className={`relative text-xs font-bold leading-snug [writing-mode:horizontal-tb] sm:[writing-mode:vertical-rl] ${isRTL ? "sm:rotate-180" : ""}`}
       >
         {label}
       </span>
@@ -97,7 +88,7 @@ export default function BookingFab({
       {/* Pulse indicator dot */}
       <span
         aria-hidden="true"
-        className="relative mt-0.5 flex h-1.5 w-1.5"
+        className="relative mt-0.5 hidden h-1.5 w-1.5 sm:flex"
       >
         <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-white" />
       </span>
