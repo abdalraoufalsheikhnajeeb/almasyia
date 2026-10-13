@@ -81,16 +81,16 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="card-elegant p-6 lg:p-8 w-full max-w-5xl">
-      <h2 className="heading-accent text-2xl font-bold text-primary mb-6">
+    <form onSubmit={handleSubmit} className="flight-booking card-elegant w-full max-w-3xl p-4 sm:p-5">
+      <h2 className="heading-accent mb-3 text-xl font-bold text-primary sm:text-2xl">
         {tr(lang, "حجز رحلة طيران", "Book a Flight", "Бронирование рейса")}
       </h2>
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <div className="grid grid-cols-2 gap-x-3 gap-y-3 sm:gap-x-5">
         {/* Departure */}
         <div>
           <label htmlFor="departure" className="mb-1 block text-sm font-medium text-slate-700">
-            {tr(lang, "مكان المغادرة", "Place of Departure", "Место отправления")}
+            {tr(lang, "المغادرة", "From", "Откуда")}
           </label>
           <input
             id="departure"
@@ -100,6 +100,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             onChange={handleChange}
             className="input-elegant"
             autoComplete="off"
+            placeholder={tr(lang, "المدينة أو المطار", "City or airport", "Город или аэропорт")}
             required
           />
         </div>
@@ -107,7 +108,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
         {/* Arrival */}
         <div>
           <label htmlFor="arrival" className="mb-1 block text-sm font-medium text-slate-700">
-            {tr(lang, "منطقة الوصول", "Arrival Area", "Место прибытия")}
+            {tr(lang, "الوصول", "To", "Куда")}
           </label>
           <input
             id="arrival"
@@ -117,6 +118,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             onChange={handleChange}
             className="input-elegant"
             autoComplete="off"
+            placeholder={tr(lang, "المدينة أو المطار", "City or airport", "Город или аэропорт")}
             required
           />
         </div>
@@ -124,7 +126,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
         {/* Outbound Date */}
         <div>
           <label htmlFor="outboundDate" className="mb-1 block text-sm font-medium text-slate-700">
-            {tr(lang, "تاريخ السفر (ذهاب)", "Outbound Date", "Дата отправления")}
+            {tr(lang, "تاريخ الذهاب", "Departure date", "Вылет")}
           </label>
           <input
             type="date"
@@ -136,7 +138,6 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             className="input-elegant"
             lang="en"
             inputMode="numeric"
-            pattern="\\d{4}-\\d{2}-\\d{2}"
             required
           />
         </div>
@@ -144,7 +145,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
         {/* Return Date */}
         <div>
           <label htmlFor="returnDate" className="mb-1 block text-sm font-medium text-slate-700">
-            {tr(lang, "تاريخ العودة", "Return Date", "Дата возвращения")}
+            {tr(lang, "تاريخ العودة", "Return date", "Возвращение")}
           </label>
           <input
             type="date"
@@ -156,7 +157,6 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             className="input-elegant"
             lang="en"
             inputMode="numeric"
-            pattern="\\d{4}-\\d{2}-\\d{2}"
             required
           />
         </div>
@@ -164,7 +164,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
         {/* Number of Adults */}
         <div>
           <label htmlFor="numberOfAdults" className="mb-1 block text-sm font-medium text-slate-700">
-            {tr(lang, "عدد البالغين", "Number of Adults", "Количество взрослых")}
+            {tr(lang, "البالغون", "Adults", "Взрослые")}
           </label>
           <input
             id="numberOfAdults"
@@ -177,7 +177,6 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             className="input-elegant"
             lang="en"
             inputMode="numeric"
-            pattern="\\d*"
             required
           />
         </div>
@@ -185,7 +184,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
         {/* Number of Children */}
         <div>
           <label htmlFor="numberOfChildren" className="mb-1 block text-sm font-medium text-slate-700">
-            {tr(lang, "عدد الأطفال", "Number of Children", "Количество детей")}
+            {tr(lang, "الأطفال", "Children", "Дети")}
           </label>
           <input
             id="numberOfChildren"
@@ -198,14 +197,13 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             className="input-elegant"
             lang="en"
             inputMode="numeric"
-            pattern="\\d*"
           />
         </div>
 
         {/* Number of Infants */}
         <div>
           <label htmlFor="numberOfInfants" className="mb-1 block text-sm font-medium text-slate-700">
-            {tr(lang, "عدد الأطفال الرضع", "Number of Infants", "Количество младенцев")}
+            {tr(lang, "الرضع", "Infants", "Младенцы")}
           </label>
           <input
             id="numberOfInfants"
@@ -218,14 +216,13 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
             className="input-elegant"
             lang="en"
             inputMode="numeric"
-            pattern="\\d*"
           />
         </div>
 
         {/* Travel Class */}
         <div>
           <label htmlFor="travelClass" className="mb-1 block text-sm font-medium text-slate-700">
-            {tr(lang, "فئة السفر", "Travel Class", "Класс путешествия")}
+            {tr(lang, "الدرجة", "Travel class", "Класс")}
           </label>
           <select
             id="travelClass"
@@ -244,7 +241,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
         </div>
       </div>
 
-      <div className="mt-6 flex justify-center">
+      <div className="mt-4 flex justify-center">
         <button type="submit" className="btn-accent">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -258,7 +255,7 @@ const FlightBookingForm: React.FC<FlightBookingFormProps> = ({ dic }) => {
           {tr(lang, "إرسال المعلومات", "Send Info", "Отправить информацию")}
         </button>
       </div>
-      <FormPrivacyNotice lang={lang} />
+      <FormPrivacyNotice lang={lang} compact />
     </form>
   );
 };

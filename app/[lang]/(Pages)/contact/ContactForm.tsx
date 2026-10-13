@@ -289,7 +289,7 @@ export default function ContactForm({ lang }: { lang: Locale }) {
     setStatus({ loading: true, success: null, error: null });
 
     try {
-      const res = await fetch("https://formspree.io/f/manoybrz", {
+      const res = await fetch("https://formspree.io/f/mzedjkyy", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

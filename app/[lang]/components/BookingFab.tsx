@@ -43,7 +43,7 @@ export default function BookingFab({
         // Layout: vertical stack on desktop, compact on mobile
         "flex flex-col items-center justify-center gap-1.5 sm:gap-2",
         // Sizing
-        "px-2 py-3 sm:px-2.5 sm:py-4",
+        "min-h-11 min-w-11 px-2 py-3 sm:px-2.5 sm:py-4",
         // Visuals: gold gradient with subtle ring
         "bg-gradient-to-b from-accent to-[#c89e4f] text-[#172b3a]",
         "ring-1 ring-white/30",
@@ -82,9 +82,9 @@ export default function BookingFab({
         <path d="M2.5 19h19v2h-19v-2zm19.07-9.94c-.21-.79-1.02-1.26-1.81-1.05L14.92 9.2 8.46 3.17 6.53 3.68l3.87 6.7-4.66 1.24-1.85-1.45-1.45.39 1.96 3.39.78 1.34 1.6-.43 5.31-1.42 4.31-1.16 5.65-1.51c.79-.22 1.26-1.03 1.05-1.81z" />
       </svg>
 
-      {/* Vertical label — hidden on very small screens */}
+      {/* Keep the booking action readable on mobile too. */}
       <span
-        className="relative hidden text-[10px] font-bold uppercase tracking-[0.2em] leading-none sm:inline sm:text-[11px]"
+        className="relative text-xs font-bold leading-snug"
         style={{
           writingMode: "vertical-rl",
           textOrientation: "mixed",

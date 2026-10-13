@@ -153,7 +153,7 @@ export default async function RootLayout({
         <aside aria-label={lang === "ar" ? "التواصل والحجز" : lang === "ru" ? "Связь и бронирование" : "Contact and booking"}>
           <Whatsapp lang={lang} />
           <PhoneCall lang={lang} />
-          <BookingFab lang={lang} label={dictionary.heroCtaBook} />
+          <BookingFab lang={lang} label={dictionary.bookFlight} />
         </aside>
         <main id="main-content" tabIndex={-1} className="pt-20 min-h-[60vh]">{children}</main>
         <Footer lang={lang} />

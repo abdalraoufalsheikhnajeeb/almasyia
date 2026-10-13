@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { Locale } from "../../../../i18n-config";
 import HotelReservationForm from "../../components/HotelReservationForm";
+import HotelPlatforms from "../../components/HotelPlatforms";
 import AnTitle from "../../components/AnTitle";
 import { getDictionary } from "../../../../get-dictionary";
 import { buildPageMetadata, buildServiceJsonLd, SITE_URL } from "../../seo";
@@ -64,6 +65,7 @@ export default async function page({
             className="w-full h-auto object-cover"
             width={840}
             height={480}
+            sizes="(min-width: 1024px) 60vw, 100vw"
             src="/images/hotelhero.webp"
             alt="Hotel Reservation"
           />
@@ -75,6 +77,7 @@ export default async function page({
           <HotelReservationForm lang={lang} />
         </div>
       </div>
+      <HotelPlatforms lang={lang} />
     </div>
   );
 }

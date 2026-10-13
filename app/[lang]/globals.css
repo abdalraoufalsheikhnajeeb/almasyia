@@ -964,6 +964,24 @@ html.dark .text-blue-500 {
 }
 
 /* Date input fix already covered above */
+.flight-booking .input-elegant {
+  min-width: 0;
+  min-height: 44px;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.flight-booking label {
+  display: block;
+  min-height: 1.25rem;
+  line-height: 1.25rem;
+}
+
+.flight-booking input[type="date"],
+.flight-booking input[type="number"] {
+  direction: ltr;
+}
+
 .text-accent {
   color: var(--color-accent-text);
 }

@@ -20,9 +20,10 @@ type SliderProps = {
   dic: Awaited<ReturnType<typeof getDictionary>>;
   data: SliderCard[];
   title: string;
+  compact?: boolean;
 };
 
-const Slider = ({ dic, data, title }: SliderProps) => {
+const Slider = ({ dic, data, title, compact = false }: SliderProps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
 
 
@@ -31,9 +32,9 @@ const Slider = ({ dic, data, title }: SliderProps) => {
   return (
     <section
       dir="ltr"
-      className="mx-auto w-full max-w-7xl px-4 py-6"
+      className={`mx-auto w-full max-w-7xl px-4 ${compact ? "py-2" : "py-6"}`}
     >
-      <AnTitle title={title} />
+      {compact ? <h2 dir={isRTL ? "rtl" : "ltr"} className="mb-3 text-center text-xl font-bold text-primary sm:text-2xl">{title}</h2> : <AnTitle title={title} />}
       <CarouselControls api={emblaApi} lang={dic.currLang} />
       <div className="embla overflow-hidden" ref={emblaRef}>
         <div className="embla__container flex">
@@ -55,12 +56,13 @@ const Slider = ({ dic, data, title }: SliderProps) => {
                   className="group block h-full"
                 >
                   <article className="card-elegant flex h-full flex-col overflow-hidden">
-                    <div className="relative flex h-32 items-center justify-center bg-slate-50/60 p-4 lg:h-40">
+                    <div className={`relative flex items-center justify-center bg-slate-50/60 p-3 ${compact ? "h-20 sm:h-24" : "h-32 lg:h-40"}`}>
                       <Image
                         loading="lazy"
                         quality={70}
                         width={300}
                         height={140}
+                        sizes="300px"
                         className="max-h-full w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                         src={card.src}
                         alt={cardTitle}
@@ -68,7 +70,7 @@ const Slider = ({ dic, data, title }: SliderProps) => {
                     </div>
                     <div
                       dir={isRTL ? "rtl" : "ltr"}
-                      className="flex flex-1 flex-col justify-between gap-3 p-4"
+                      className={`flex flex-1 flex-col justify-between ${compact ? "gap-2 p-3" : "gap-3 p-4"}`}
                     >
                       <h3 className="text-base font-bold leading-snug text-primary lg:text-lg">
                         {cardTitle}

@@ -83,7 +83,7 @@ const Page = async ({ params }: { params: Promise<{ lang: string }> }) => {
               {/* CTAs */}
               <div className="mt-2 flex flex-wrap items-center gap-3">
                 <Link
-                  href={`/${lang}/Services/airLines`}
+                  href={`/${lang}/Services/hotelsReservation`}
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-6 py-3 text-sm font-bold text-[#172b3a] shadow-lg shadow-accent/30 transition-all hover:-translate-y-0.5 hover:bg-[#c89e4f] hover:shadow-xl"
                 >
                   <svg
@@ -93,7 +93,7 @@ const Page = async ({ params }: { params: Promise<{ lang: string }> }) => {
                     className="h-5 w-5"
                     aria-hidden="true"
                   >
-                    <path d="M2.5 19h19v2h-19v-2zm19.07-9.94c-.21-.79-1.02-1.26-1.81-1.05L14.92 9.2 8.46 3.17 6.53 3.68l3.87 6.7-4.66 1.24-1.85-1.45-1.45.39 1.96 3.39.78 1.34 1.6-.43 5.31-1.42 4.31-1.16 5.65-1.51c.79-.22 1.26-1.03 1.05-1.81z" />
+                    <path d="M3 3h2v9h14V7h2v14h-2v-5H5v5H3V3zm4 4h4v4H7V7zm6 0h4v4h-4V7z" />
                   </svg>
                   {dic.heroCtaBook}
                 </Link>
