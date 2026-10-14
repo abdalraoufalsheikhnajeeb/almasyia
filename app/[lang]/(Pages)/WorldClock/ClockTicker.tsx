@@ -1,27 +1,43 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useMemo, useSyncExternalStore } from "react";
 
-const getTime = (tz: string) =>
-  new Date().toLocaleString("en-US", {
-    timeZone: tz,
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    hourCycle: "h24",
-  });
+const listeners = new Set<() => void>();
+let now = Date.now();
+let interval: ReturnType<typeof setInterval> | undefined;
+const getSnapshot = () => now;
+const getServerSnapshot = () => null;
 
 const subscribe = (callback: () => void) => {
-  const interval = setInterval(callback, 1000);
-  return () => clearInterval(interval);
+  listeners.add(callback);
+  if (listeners.size === 1) {
+    now = Date.now();
+    interval = setInterval(() => {
+      now = Date.now();
+      listeners.forEach((listener) => listener());
+    }, 1000);
+  }
+  return () => {
+    listeners.delete(callback);
+    if (!listeners.size) {
+      clearInterval(interval);
+      interval = undefined;
+    }
+  };
 };
 
 export default function ClockTicker({ tz }: { tz: string }) {
-  const time = useSyncExternalStore(
-    subscribe,
-    () => getTime(tz),
-    () => "--:--:--"
+  const timestamp = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  const formatter = useMemo(
+    () => new Intl.DateTimeFormat("en-US-u-nu-latn", {
+      timeZone: tz,
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hourCycle: "h23",
+    }),
+    [tz]
   );
 
-  return <span>{time}</span>;
+  return <span>{timestamp === null ? "--:--:--" : formatter.format(timestamp)}</span>;
 }

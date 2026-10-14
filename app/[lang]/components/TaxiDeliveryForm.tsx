@@ -57,6 +57,7 @@ const TaxiDeliveryForm: React.FC<TaxiDeliveryFormProps> = ({ lang }) => {
         <input
           id="name"
           type="text"
+          autoComplete="name"
           name="name"
           value={formData.name}
           onChange={handleChange}
@@ -112,7 +113,6 @@ const TaxiDeliveryForm: React.FC<TaxiDeliveryFormProps> = ({ lang }) => {
           className="input-elegant"
           lang="en"
           inputMode="numeric"
-          pattern="\\d*"
           required
         />
       </div>

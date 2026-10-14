@@ -66,6 +66,7 @@ for (const [path, headers, status, destination] of [
   ["/", { "Accept-Language": "ar" }, 307, "/ar"],
   ["/", { Cookie: "NEXT_LOCALE=ru", "Accept-Language": "ar" }, 307, "/ru"],
   ["/ar/airLinesBrief/ChamWingsAirlines", {}, 308, "/ar/airLinesBrief/FlyChamAirlines"],
+  ["/sitemap-0.xml", {}, 308, "/sitemap.xml"],
   ["/en/__audit_missing_page", {}, 404, null],
 ]) {
   const response = await fetch(baseUrl + path, { headers, redirect: "manual" });
@@ -73,10 +74,21 @@ for (const [path, headers, status, destination] of [
   if (destination && new URL(response.headers.get("location"), baseUrl).pathname !== destination) failures.push(path + ": incorrect redirect");
 }
 
-const sitemap = await (await fetch(baseUrl + "/sitemap-0.xml")).text();
+const sitemapResponse = await fetch(baseUrl + "/sitemap.xml");
+const sitemap = await sitemapResponse.text();
+if (sitemapResponse.status !== 200 || !sitemapResponse.headers.get("content-type")?.includes("xml")) failures.push("Sitemap response is not XML");
+if ((sitemap.match(/<loc>/g) ?? []).length !== routes.length) failures.push("Sitemap has duplicate or unexpected routes");
 for (const route of routes) {
   if (!sitemap.includes(`<loc>${siteUrl}${route}</loc>`)) failures.push("Missing sitemap route: " + route);
+  const suffix = route.replace(/^\/(en|ar|ru)/, "");
+  const entry = sitemap.split("<url>").find((entry) => entry.includes(`<loc>${siteUrl}${route}</loc>`));
+  for (const lang of ["en", "ar", "ru", "x-default"]) {
+    if (!entry?.includes(`hreflang="${lang}" href="${siteUrl}/${lang === "x-default" ? "en" : lang}${suffix}"`)) failures.push(`Missing sitemap alternate ${lang}: ${route}`);
+  }
 }
+const robotsResponse = await fetch(baseUrl + "/robots.txt");
+const robots = await robotsResponse.text();
+if (robotsResponse.status !== 200 || !robots.includes(`Sitemap: ${siteUrl}/sitemap.xml`) || /Disallow:\s*\/(?:\s|$)/.test(robots)) failures.push("Incorrect robots directives");
 const optimized = await fetch(baseUrl + "/_next/image?url=%2Fimages%2Flogo.webp&w=256&q=70");
 if (optimized.status !== 200 || !optimized.headers.get("content-type")?.startsWith("image/")) failures.push("Image optimizer failed");
 

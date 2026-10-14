@@ -21,7 +21,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({ lang }) => 
     numberOfChildren: "",
   });
   const [hasChildren, setHasChildren] = useState(false);
-  const [cities, setCities] = useState<string[]>([]);
+  const cities = citiesByCountry[formData.country as keyof CitiesByCountry]?.[l] ?? [];
 
   // Set today after mount to avoid SSR mismatch
   const [today, setToday] = useState("");
@@ -60,10 +60,6 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({ lang }) => 
     } else {
       const { name, value } = e.target;
       if (name === "country") {
-        const selectedCountry = citiesByCountry[value as keyof CitiesByCountry];
-        const newCities =
-          selectedCountry?.[lang as keyof typeof selectedCountry] || [];
-        setCities(newCities);
         setFormData((prev) => ({ ...prev, country: value, city: "" }));
       } else {
         setFormData((prev) => ({ ...prev, [name]: value }));
@@ -162,6 +158,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({ lang }) => 
         <input
           type="date"
           id="arrivalDate"
+          lang="en"
           name="arrivalDate"
           min={today}
           value={formData.arrivalDate}
@@ -179,6 +176,7 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({ lang }) => 
         <input
           type="date"
           id="departureDate"
+          lang="en"
           name="departureDate"
           min={departureMin}
           value={formData.departureDate}
@@ -204,13 +202,12 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({ lang }) => 
           className="input-elegant"
           lang="en"
           inputMode="numeric"
-          pattern="\\d*"
           required
         />
       </div>
 
       {/* Checkbox */}
-      <label className="flex items-center gap-2 cursor-pointer select-none">
+      <label className="choice-label flex items-center gap-2 cursor-pointer select-none">
         <input
           id="hasChildren"
           type="checkbox"
@@ -236,12 +233,12 @@ const HotelReservationForm: React.FC<HotelReservationFormProps> = ({ lang }) => 
             name="numberOfChildren"
             value={formData.numberOfChildren}
             onChange={handleChange}
-            min={0}
+            min={1}
             max={10}
             className="input-elegant"
             lang="en"
             inputMode="numeric"
-            pattern="\\d*"
+            required
           />
         </div>
       )}

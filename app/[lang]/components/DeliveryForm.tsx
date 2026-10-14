@@ -103,6 +103,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
         <input
           type="date"
           id="submissionDate"
+          lang="en"
           name="submissionDate"
           min={today}
           value={formData.submissionDate}
@@ -119,6 +120,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
         <input
           type="date"
           id="dispatchDate"
+          lang="en"
           name="dispatchDate"
           min={dispatchMin}
           value={formData.dispatchDate}
@@ -160,12 +162,12 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
         />
       </div>
 
-      <div>
-        <span className="mb-1 block text-sm font-medium text-slate-700">
+      <fieldset className="min-w-0">
+        <legend className="mb-1 block text-sm font-medium text-slate-700">
           {tr(l, "نوع الخدمة", "Urgency", "Срочность")}
-        </span>
+        </legend>
         <div className="mt-1 space-y-2">
-          <label className="flex items-center gap-2 cursor-pointer">
+          <label className="choice-label flex items-center gap-2 cursor-pointer">
             <input
               type="radio"
               name="urgency"
@@ -178,7 +180,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
               {tr(l, "عادي", "Normal", "Обычная")}
             </span>
           </label>
-          <label className="flex items-center gap-2 cursor-pointer">
+          <label className="choice-label flex items-center gap-2 cursor-pointer">
             <input
               type="radio"
               name="urgency"
@@ -192,7 +194,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ lang }) => {
             </span>
           </label>
         </div>
-      </div>
+      </fieldset>
 
       <button type="submit" className="btn-accent w-full">
         <svg

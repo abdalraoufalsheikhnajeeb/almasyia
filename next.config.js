@@ -23,7 +23,7 @@ const nextConfig = {
     qualities: [50, 60, 70, 75, 80],
   },
   experimental: {
-    optimizePackageImports: ["date-fns", "embla-carousel-react"],
+    optimizePackageImports: ["embla-carousel-react"],
   },
   async headers() {
     return [
@@ -35,6 +35,10 @@ const nextConfig = {
   },
   async redirects() {
     return [{
+      source: "/sitemap-0.xml",
+      destination: "/sitemap.xml",
+      permanent: true,
+    }, {
       source: "/:lang(en|ar|ru)/airLinesBrief/ChamWingsAirlines",
       destination: "/:lang/airLinesBrief/FlyChamAirlines",
       permanent: true,

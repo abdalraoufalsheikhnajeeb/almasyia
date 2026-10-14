@@ -1,7 +1,7 @@
 "use client";
 import FormPrivacyNotice from "../../components/FormPrivacyNotice";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { type Locale } from "../../../../i18n-config";
 
@@ -48,6 +48,11 @@ const dictionary: Record<string, LocalizedText> = {
     ar: "حدث خطأ ما! حاول مرة أخرى.",
     en: "Something went wrong! Please try again.",
     ru: "Что-то пошло не так! Попробуйте ещё раз.",
+  },
+  deliveryUnconfirmed: {
+    ar: "تعذر تأكيد إرسال الرسالة. يمكنك المحاولة لاحقاً أو التواصل معنا مباشرة.",
+    en: "We couldn't confirm delivery. Please try again later or contact us directly.",
+    ru: "Не удалось подтвердить отправку. Попробуйте позже или свяжитесь с нами напрямую.",
   },
   viewOnMaps: {
     ar: "عرض الموقع",
@@ -264,6 +269,11 @@ const IconAlert = ({ className }: { className?: string }) => (
 
 export default function ContactForm({ lang }: { lang: Locale }) {
   const isRTL = lang === "ar";
+  const requestRef = useRef<AbortController | null>(null);
+  useEffect(() => () => {
+    requestRef.current?.abort();
+    requestRef.current = null;
+  }, []);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -281,11 +291,16 @@ export default function ContactForm({ lang }: { lang: Locale }) {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData({ ...formData, [e.target.id]: e.target.value });
+    const { id, value } = e.target;
+    setFormData((previous) => ({ ...previous, [id]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (requestRef.current) return;
+    const controller = new AbortController();
+    requestRef.current = controller;
+    const timeout = window.setTimeout(() => controller.abort(), 20_000);
     setStatus({ loading: true, success: null, error: null });
 
     try {
@@ -296,9 +311,10 @@ export default function ContactForm({ lang }: { lang: Locale }) {
           Accept: "application/json",
         },
         body: JSON.stringify(formData),
+        signal: controller.signal,
       });
 
-      const result = await res.json();
+      if (requestRef.current !== controller) return;
 
       if (res.ok) {
         setStatus({
@@ -308,18 +324,24 @@ export default function ContactForm({ lang }: { lang: Locale }) {
         });
         setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
+        const result = await res.json().catch(() => null);
+        if (requestRef.current !== controller) return;
         setStatus({
           loading: false,
           success: null,
-          error: result.error || t(dictionary.errorOccurred, lang),
+          error: typeof result?.error === "string" ? result.error : t(dictionary.errorOccurred, lang),
         });
       }
     } catch {
+      if (requestRef.current !== controller) return;
       setStatus({
         loading: false,
         success: null,
-        error: t(dictionary.errorOccurred, lang),
+        error: t(dictionary.deliveryUnconfirmed, lang),
       });
+    } finally {
+      window.clearTimeout(timeout);
+      if (requestRef.current === controller) requestRef.current = null;
     }
   };
 
@@ -481,7 +503,7 @@ export default function ContactForm({ lang }: { lang: Locale }) {
                 </span>
               </div>
 
-              <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+              <form onSubmit={handleSubmit} aria-busy={status.loading} className="mt-6 space-y-4">
                 <div className="grid gap-4 md:grid-cols-2">
                   <div>
                     <label
@@ -494,6 +516,8 @@ export default function ContactForm({ lang }: { lang: Locale }) {
                       type="text"
                       id="name"
                       name="name"
+                      autoComplete="name"
+                      disabled={status.loading}
                       value={formData.name}
                       onChange={handleChange}
                       className="input-elegant"
@@ -512,6 +536,8 @@ export default function ContactForm({ lang }: { lang: Locale }) {
                       type="email"
                       id="email"
                       name="email"
+                      autoComplete="email"
+                      disabled={status.loading}
                       value={formData.email}
                       onChange={handleChange}
                       className="input-elegant"
@@ -531,6 +557,7 @@ export default function ContactForm({ lang }: { lang: Locale }) {
                     type="text"
                     id="subject"
                     name="subject"
+                    disabled={status.loading}
                     value={formData.subject}
                     onChange={handleChange}
                     className="input-elegant"
@@ -548,6 +575,7 @@ export default function ContactForm({ lang }: { lang: Locale }) {
                   <textarea
                     id="message"
                     name="message"
+                    disabled={status.loading}
                     value={formData.message}
                     onChange={handleChange}
                     className="input-elegant min-h-[10rem] resize-y"

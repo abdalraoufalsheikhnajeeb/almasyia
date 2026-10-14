@@ -120,15 +120,21 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
           </option>
         </select>
         {formData.destination === "Other countries" && (
-          <input
-            type="text"
-            name="otherCountry"
-            value={formData.otherCountry}
-            onChange={handleChange}
-            placeholder={tr(l, "ادخل الدولة", "Enter country", "Введите страну")}
-            className="input-elegant mt-2 animate-fade-in"
-            required
-          />
+          <div className="mt-2 animate-fade-in">
+            <label htmlFor="otherCountry" className="mb-1 block text-sm font-medium text-slate-700">
+              {tr(l, "اسم الدولة", "Country name", "Название страны")}
+            </label>
+            <input
+              id="otherCountry"
+              type="text"
+              name="otherCountry"
+              value={formData.otherCountry}
+              onChange={handleChange}
+              placeholder={tr(l, "ادخل الدولة", "Enter country", "Введите страну")}
+              className="input-elegant"
+              required
+            />
+          </div>
         )}
       </div>
 
@@ -140,6 +146,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
         <input
           type="date"
           id="insuranceStartDate"
+          lang="en"
           name="insuranceStartDate"
           min={today}
           value={formData.insuranceStartDate}
@@ -157,6 +164,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
         <input
           type="date"
           id="insuranceEndDate"
+          lang="en"
           name="insuranceEndDate"
           min={endMin}
           value={formData.insuranceEndDate}
@@ -182,18 +190,17 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
           className="input-elegant"
           lang="en"
           inputMode="numeric"
-          pattern="\\d*"
           required
         />
       </div>
 
       {/* Trip Type */}
-      <div>
-        <span className="mb-1 block text-sm font-medium text-slate-700">
+      <fieldset className="min-w-0">
+        <legend className="mb-1 block text-sm font-medium text-slate-700">
           {tr(l, "نوع الرحلة", "Trip Type", "Тип поездки")}
-        </span>
+        </legend>
         <div className="mt-1 space-y-2">
-          <label className="flex items-center gap-2 cursor-pointer">
+          <label className="choice-label flex items-center gap-2 cursor-pointer">
             <input
               type="radio"
               name="tripType"
@@ -206,7 +213,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
               {tr(l, "رحلة واحدة", "One Trip", "Одна поездка")}
             </span>
           </label>
-          <label className="flex items-center gap-2 cursor-pointer">
+          <label className="choice-label flex items-center gap-2 cursor-pointer">
             <input
               type="radio"
               name="tripType"
@@ -220,7 +227,7 @@ const TravelInsuranceForm: React.FC<TravelInsuranceFormProps> = ({ lang }) => {
             </span>
           </label>
         </div>
-      </div>
+      </fieldset>
 
       <button type="submit" className="btn-accent w-full">
         <svg

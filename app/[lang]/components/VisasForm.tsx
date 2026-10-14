@@ -70,6 +70,7 @@ export default function VisaForm({
           <input
             id="visaName"
             type="text"
+            autoComplete="name"
             name="name"
             value={formData.name}
             onChange={handleChange}
@@ -107,12 +108,11 @@ export default function VisaForm({
             className="input-elegant"
             lang="en"
             inputMode="numeric"
-            pattern="\\d*"
             required
           />
         </div>
 
-        <label className="flex items-center gap-2 cursor-pointer select-none">
+        <label className="choice-label flex items-center gap-2 cursor-pointer select-none">
           <input
             type="checkbox"
             name="hasChildren"
@@ -136,11 +136,10 @@ export default function VisaForm({
               name="numberOfChildren"
               value={formData.numberOfChildren}
               onChange={handleChange}
-              min={0}
+              min={1}
               className="input-elegant"
               lang="en"
               inputMode="numeric"
-              pattern="\\d*"
               required
             />
           </div>

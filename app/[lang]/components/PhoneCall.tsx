@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
-import { useState, useEffect, useRef, useId } from "react";
+import { useState, useRef, useId } from "react";
+import { usePopoverDismiss } from "./usePopoverDismiss";
 import Image from "next/image";
 import { tr } from "./i18n-util";
 
@@ -10,37 +11,37 @@ export default function PhoneCall({ lang }: { lang: string }) {
   const triggerRef = useRef<HTMLButtonElement>(null);
   const panelId = useId();
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
-        setIsOpen(false);
-      }
-    };
-    const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape" && dropdownRef.current?.contains(event.target as Node)) {
-        event.stopPropagation();
-        setIsOpen(false);
-        triggerRef.current?.focus();
-      }
-    };
-    if (isOpen) {
-      document.addEventListener("keydown", handleEscape);
-      document.addEventListener("mousedown", handleClickOutside);
-    }
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-      document.removeEventListener("keydown", handleEscape);
-    };
-  }, [isOpen]);
+  usePopoverDismiss({ open: isOpen, setOpen: setIsOpen, containerRef: dropdownRef, triggerRef });
 
   return (
     <div
       ref={dropdownRef}
-      className="fixed bottom-5 start-5 z-50 flex flex-col items-start gap-3"
+      className="fixed bottom-5 start-5 z-50 flex flex-col-reverse items-start gap-3"
     >
+      {/* Modern FAB toggle */}
+      <span className="fab-modern-wrap">
+        <button
+          ref={triggerRef}
+          type="button"
+          aria-controls={isOpen ? panelId : undefined}
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label={tr(lang, "خيارات الاتصال الهاتفي", "Open phone contact options", "Варианты связи по телефону")}
+          aria-expanded={isOpen}
+          className="fab-modern fab-call"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="w-5 h-5 lg:w-6 lg:h-6"
+            aria-hidden="true"
+          >
+            <path d="M6.62 10.79a15.464 15.464 0 0 0 6.59 6.59l2.2-2.2a1.003 1.003 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.33.03.7-.24 1.02l-2.21 2.2z" />
+          </svg>
+          {!isOpen && <span className="fab-badge" aria-hidden="true" />}
+        </button>
+      </span>
+
       {/* Country options */}
       {isOpen && (
         <div id={panelId} className="animate-fade-in flex flex-col gap-2 glass-strong p-2 rounded-2xl shadow-lg">
@@ -80,30 +81,6 @@ export default function PhoneCall({ lang }: { lang: string }) {
           </Link>
         </div>
       )}
-
-      {/* Modern FAB toggle */}
-      <span className="fab-modern-wrap">
-        <button
-          ref={triggerRef}
-          type="button"
-          aria-controls={isOpen ? panelId : undefined}
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label={tr(lang, "خيارات الاتصال الهاتفي", "Open phone contact options", "Варианты связи по телефону")}
-          aria-expanded={isOpen}
-          className="fab-modern fab-call"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            className="w-5 h-5 lg:w-6 lg:h-6"
-            aria-hidden="true"
-          >
-            <path d="M6.62 10.79a15.464 15.464 0 0 0 6.59 6.59l2.2-2.2a1.003 1.003 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.33.03.7-.24 1.02l-2.21 2.2z" />
-          </svg>
-          {!isOpen && <span className="fab-badge" aria-hidden="true" />}
-        </button>
-      </span>
     </div>
   );
 }

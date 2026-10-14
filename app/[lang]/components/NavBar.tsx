@@ -80,7 +80,8 @@ const Navbar = ({ lang, labels }: { lang: Locale; labels: NavLabels }) => {
   return (
     <nav
       onKeyDown={(event) => {
-        if (event.key === "Escape" && !event.defaultPrevented) {
+        if (isOpen && event.key === "Escape" && !event.defaultPrevented) {
+          event.preventDefault();
           setIsOpen(false);
           triggerRef.current?.focus();
         }

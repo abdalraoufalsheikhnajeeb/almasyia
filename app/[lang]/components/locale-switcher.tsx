@@ -1,7 +1,8 @@
 "use client";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { useState, useEffect, useRef, useId } from "react";
+import { useState, useRef, useId } from "react";
+import { usePopoverDismiss } from "./usePopoverDismiss";
 import { i18n, type Locale } from "../../../i18n-config";
 import Image from "next/image";
 
@@ -49,31 +50,7 @@ export default function LocaleSwitcher({
     return segments.join("/");
   };
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
-        setIsOpen(false);
-      }
-    };
-    const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape" && dropdownRef.current?.contains(event.target as Node)) {
-        event.stopPropagation();
-        setIsOpen(false);
-        triggerRef.current?.focus();
-      }
-    };
-    if (isOpen) {
-      document.addEventListener("keydown", handleEscape);
-      document.addEventListener("mousedown", handleClickOutside);
-    }
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-      document.removeEventListener("keydown", handleEscape);
-    };
-  }, [isOpen]);
+  usePopoverDismiss({ open: isOpen, setOpen: setIsOpen, containerRef: dropdownRef, triggerRef });
 
   if (variant === "mobile") {
     // Inline mobile list — no popover, no overflow risks

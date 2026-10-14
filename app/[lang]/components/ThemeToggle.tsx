@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useId, useRef, useState } from "react";
+import { usePopoverDismiss } from "./usePopoverDismiss";
 
 type Theme = "light" | "dark" | "system";
 
@@ -123,25 +124,7 @@ export default function ThemeToggle({ lang = "en" }: { lang?: string }) {
     return () => mq.removeEventListener("change", onChange);
   }, [theme]);
 
-  // Close popover on outside click
-  useEffect(() => {
-    if (!open) return;
-    const onClick = (e: MouseEvent) => {
-      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
-    };
-    const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape" && ref.current?.contains(event.target as Node)) {
-        setOpen(false);
-        triggerRef.current?.focus();
-      }
-    };
-    document.addEventListener("mousedown", onClick);
-    document.addEventListener("keydown", onKeyDown);
-    return () => {
-      document.removeEventListener("mousedown", onClick);
-      document.removeEventListener("keydown", onKeyDown);
-    };
-  }, [open]);
+  usePopoverDismiss({ open, setOpen, containerRef: ref, triggerRef });
 
   const labels = LABELS[lang] ?? LABELS.en;
   const ActiveIcon =

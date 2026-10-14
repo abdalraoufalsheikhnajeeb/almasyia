@@ -21,6 +21,7 @@
   --color-text-muted: #475569; /* slate-600 */
   --color-text-strong: #0f172a; /* slate-900 */
   --color-border: rgba(36, 75, 107, 0.08);
+  --color-focus: #316792;
 
   /* Glass tints — light theme */
   --glass-bg: rgba(255, 255, 255, 0.6);
@@ -59,6 +60,7 @@ html.dark {
   --color-text-muted: #94a3b8;  /* slate-400 */
   --color-text-strong: #f8fafc; /* slate-50 */
   --color-border: rgba(148, 163, 184, 0.14);
+  --color-focus: #e6c98f;
 
   /* Glass tints — dark theme: tinted navy panels */
   --glass-bg: rgba(17, 26, 44, 0.55);
@@ -248,6 +250,26 @@ html.dark {
   background-color: var(--color-surface);
 }
 
+/* Inputs must not move away from the pointer while a form is being filled. */
+form.card-elegant:hover {
+  transform: none;
+}
+
+.choice-label {
+  min-height: 44px;
+  border-radius: var(--radius-sm);
+}
+
+.choice-label:focus-within {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+main td,
+main th {
+  overflow-wrap: anywhere;
+}
+
 /* Refined section heading with accent underline */
 .heading-accent {
   position: relative;
@@ -397,9 +419,14 @@ html.dark {
   outline: none;
 }
 
-.input-elegant:hover {
+.input-elegant:hover:not(:disabled) {
   border-color: var(--color-text-muted);
   background-color: var(--color-surface);
+}
+
+.input-elegant:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
 }
 
 .input-elegant:focus {
@@ -806,14 +833,16 @@ textarea {
 
 input[type="date"],
 input[type="time"],
-input[type="number"] {
+input[type="number"],
+input[type="email"],
+input[type="tel"] {
   direction: ltr;
   text-align: left;
 }
 
 /* Better focus visible across the app for accessibility */
 :focus-visible {
-  outline: 2px solid var(--color-primary-lite);
+  outline: 2px solid var(--color-focus);
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -963,6 +992,25 @@ html.dark table tr.border-b {
 }
 html.dark .text-blue-500 {
   color: #93c5fd;
+}
+
+html.dark .text-blue-600 {
+  color: #93c5fd;
+}
+
+html.dark .box,
+html.dark .box-lite {
+  color: var(--color-text);
+}
+
+html.dark .group:hover .group-hover\:text-primary,
+html.dark .group:hover .group-hover\:text-litePrimary {
+  color: #e6c98f;
+}
+
+html.dark .input-elegant:focus {
+  border-color: var(--color-focus);
+  box-shadow: 0 0 0 3px rgba(230, 201, 143, 0.25);
 }
 
 /* Date input fix already covered above */
