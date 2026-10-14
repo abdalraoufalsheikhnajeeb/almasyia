@@ -1,11 +1,11 @@
 "use client";
 import CarouselControls from "./CarouselControls";
 import AnTitle from "./AnTitle.tsx";
-import useEmblaCarousel from "embla-carousel-react";
+import { useAirlineCarousel } from "./useAirlineCarousel";
 import Image from "next/image";
 import "./Slider.css";
 import Link from "next/link";
-import { getDictionary } from "../../../get-dictionary.ts";
+import type { getDictionary } from "../../../get-dictionary.ts";
 
 type SliderCard = {
   id: number;
@@ -24,18 +24,17 @@ type SliderProps = {
 };
 
 const Slider = ({ dic, data, title, compact = false }: SliderProps) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
-
-
+  const { emblaRef, api, automatic } = useAirlineCarousel();
   const isRTL = dic.currLang === "ar";
 
   return (
     <section
       dir="ltr"
+      aria-label={title}
       className={`mx-auto w-full max-w-7xl px-4 ${compact ? "py-2" : "py-6"}`}
     >
       {compact ? <h2 dir={isRTL ? "rtl" : "ltr"} className="mb-3 text-center text-xl font-bold text-primary sm:text-2xl">{title}</h2> : <AnTitle title={title} />}
-      <CarouselControls api={emblaApi} lang={dic.currLang} />
+      <CarouselControls api={api} lang={dic.currLang} automatic={automatic} />
       <div className="embla overflow-hidden" ref={emblaRef}>
         <div className="embla__container flex">
           {data.map((card) => {
